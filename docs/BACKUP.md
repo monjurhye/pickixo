@@ -3,11 +3,17 @@
 Every Friday at 02:00 this machine packs the whole of pickixo.com into one
 encrypted archive and uploads it to Google Drive (`monjurhye@gmail.com`).
 
-The reason this matters more than it usually would: **there is no git remote.**
-`git remote -v` prints nothing, and the last commit predates the background
-remover, the Facebook agent and the whole of Class 2 English. The working tree
-on this machine is the only copy of that work in existence. Until a remote
-exists, this backup is not a safety net — it is the original.
+Since 18 September 2026 the source has a git remote —
+https://github.com/monjurhye/pickixo — so the working tree on this machine is
+no longer the only copy of the code. That changes what this backup is for
+without making it any less necessary: **the remote carries source, and nothing
+else.** The database, `.env`, the TLS private key and the service definitions
+exist in exactly two places — this machine, and these archives.
+
+The remote is public. Nothing secret may be committed to it; `.gitignore`
+keeps `.env` out, and that is the only thing standing between the repository
+and every credential the platform holds. Secrets travel in the encrypted
+archive described below, never in a commit.
 
 ---
 
@@ -238,9 +244,11 @@ it does is its own kind of risk.
 - **Losing the Google account.** The backup and the account that holds it fail
   together. A second copy somewhere else — an external disk, another cloud —
   removes that shared fate.
-- **The absent git remote.** This backup is weekly. A private GitHub or GitLab
-  remote would push the source within seconds of a commit instead of within a
-  week, and is the single biggest improvement available here.
+- **Anything the git remote does not carry.** The remote holds source, and only
+  as far as the last push. The database, the secrets and the service
+  definitions are in these archives alone — and the archives are weekly. A
+  commit pushed on Monday is safe within seconds; a row written on Monday is
+  not safe until Friday.
 - **Anything between Fridays.** Up to seven days of work is at risk at any
   moment. If that becomes too much, the trigger in
   `scripts/backup/Install-BackupTask.ps1` takes a daily schedule with a

@@ -248,8 +248,9 @@ try {
     # -- 2. source tree -----------------------------------------------------
     #
     # .git is kept: it is half a megabyte and carries the history. What is
-    # excluded is everything a build regenerates — and, because there is no git
-    # remote, the uncommitted working tree here is the only copy that exists.
+    # excluded is everything a build regenerates. The source has a git remote
+    # now, but it only holds what was pushed — uncommitted work in this tree is
+    # still unique to this machine, which is why the whole tree is archived.
 
     $excludeDirs = @('node_modules', '.next', '.venv', 'venv', '__pycache__',
                      '.tmp-test', 'out', 'dist', 'build', '.pytest_cache',
