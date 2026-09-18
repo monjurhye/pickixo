@@ -1,0 +1,4490 @@
+{
+  "id": "u2",
+  "number": 2,
+  "title": "The Alphabet, Words and Numbers",
+  "titleBn": "বর্ণমালা, শব্দ ও সংখ্যা",
+  "colour": "amber",
+  "icon": "abc",
+  "_source": "English for Today, Class Two (NCTB). Unit 2, book pages 6-30.",
+  "_note": "Words and rhymes are transcribed from the textbook. Bangla meanings are Pickixo's addition - the book carries no glosses. Numbers 11-30 appear in the book as figures only, so no English spelling is claimed for them.",
+  "lessons": [
+    {
+      "id": "u2l1",
+      "unitId": "u2",
+      "number": 1,
+      "title": "Words with a A - e E",
+      "titleBn": "a-e অক্ষরের শব্দ",
+      "shape": "vocabulary",
+      "bookPages": [
+        6,
+        7,
+        8
+      ],
+      "objective": "Read and say the words for letters a-e.",
+      "objectiveBn": "a-e অক্ষরের শব্দ পড়া ও বলা।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "ant",
+          "word": "ant",
+          "bangla": "পিঁপড়া",
+          "banglaPronunciation": "অ্যান্ট",
+          "banglaSource": "enrichment",
+          "bookPage": 6,
+          "category": "animal",
+          "image": "ant"
+        },
+        {
+          "id": "boat",
+          "word": "boat",
+          "bangla": "নৌকা",
+          "banglaPronunciation": "বোট",
+          "banglaSource": "enrichment",
+          "bookPage": 6,
+          "category": "vehicle",
+          "image": "boat"
+        },
+        {
+          "id": "crow",
+          "word": "crow",
+          "bangla": "কাক",
+          "banglaPronunciation": "ক্রো",
+          "banglaSource": "enrichment",
+          "bookPage": 6,
+          "category": "bird",
+          "image": "crow"
+        },
+        {
+          "id": "deer",
+          "word": "deer",
+          "bangla": "হরিণ",
+          "banglaPronunciation": "ডিয়ার",
+          "banglaSource": "enrichment",
+          "bookPage": 6,
+          "category": "animal",
+          "image": "deer"
+        },
+        {
+          "id": "ear",
+          "word": "ear",
+          "bangla": "কান",
+          "banglaPronunciation": "ইয়ার",
+          "banglaSource": "enrichment",
+          "bookPage": 6,
+          "category": "body",
+          "image": "ear"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u2l1-intro",
+          "type": "intro",
+          "title": "Letters a-e",
+          "titleBn": "নতুন অক্ষর",
+          "say": "Here are words for a-e.",
+          "sayBn": "এই অক্ষরগুলোর শব্দ শিখি।",
+          "illustration": "ant"
+        },
+        {
+          "id": "u2l1-words",
+          "type": "vocab",
+          "bookActivity": "B",
+          "title": "Look, listen and say",
+          "titleBn": "দেখো, শোনো, বলো",
+          "items": [
+            "ant",
+            "boat",
+            "crow",
+            "deer",
+            "ear"
+          ]
+        },
+        {
+          "id": "u2l1-game",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "F",
+          "title": "Find the word",
+          "titleBn": "শব্দ খুঁজে বের করো",
+          "rounds": [
+            {
+              "id": "r-ant",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "ant",
+              "options": [
+                {
+                  "label": "ear"
+                },
+                {
+                  "label": "boat"
+                },
+                {
+                  "label": "ant"
+                }
+              ],
+              "answer": 2,
+              "hint": "It starts with a.",
+              "tests": "ant"
+            },
+            {
+              "id": "r-boat",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "boat",
+              "options": [
+                {
+                  "label": "boat"
+                },
+                {
+                  "label": "crow"
+                },
+                {
+                  "label": "deer"
+                }
+              ],
+              "answer": 0,
+              "hint": "It starts with b.",
+              "tests": "boat"
+            },
+            {
+              "id": "r-crow",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "crow",
+              "options": [
+                {
+                  "label": "deer"
+                },
+                {
+                  "label": "ear"
+                },
+                {
+                  "label": "crow"
+                }
+              ],
+              "answer": 2,
+              "hint": "It starts with c.",
+              "tests": "crow"
+            },
+            {
+              "id": "r-deer",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "deer",
+              "options": [
+                {
+                  "label": "deer"
+                },
+                {
+                  "label": "boat"
+                },
+                {
+                  "label": "ear"
+                }
+              ],
+              "answer": 0,
+              "hint": "It starts with d.",
+              "tests": "deer"
+            },
+            {
+              "id": "r-ear",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "ear",
+              "options": [
+                {
+                  "label": "ear"
+                },
+                {
+                  "label": "deer"
+                },
+                {
+                  "label": "crow"
+                }
+              ],
+              "answer": 0,
+              "hint": "It starts with e.",
+              "tests": "ear"
+            }
+          ]
+        },
+        {
+          "id": "u2l1-scramble",
+          "type": "game",
+          "kind": "unscramble",
+          "bookActivity": "D",
+          "title": "Make the word",
+          "titleBn": "শব্দ বানাও",
+          "rounds": [
+            {
+              "id": "s-ant",
+              "ask": "Make a word: n t a",
+              "askBn": "অক্ষর সাজিয়ে শব্দ বানাও",
+              "options": [
+                {
+                  "label": "ant"
+                },
+                {
+                  "label": "crow"
+                },
+                {
+                  "label": "deer"
+                }
+              ],
+              "answer": 0,
+              "hint": "It has 3 letters.",
+              "tests": "ant"
+            },
+            {
+              "id": "s-boat",
+              "ask": "Make a word: o b a t",
+              "askBn": "অক্ষর সাজিয়ে শব্দ বানাও",
+              "options": [
+                {
+                  "label": "crow"
+                },
+                {
+                  "label": "ant"
+                },
+                {
+                  "label": "boat"
+                }
+              ],
+              "answer": 2,
+              "hint": "It has 4 letters.",
+              "tests": "boat"
+            },
+            {
+              "id": "s-crow",
+              "ask": "Make a word: o c w r",
+              "askBn": "অক্ষর সাজিয়ে শব্দ বানাও",
+              "options": [
+                {
+                  "label": "crow"
+                },
+                {
+                  "label": "boat"
+                },
+                {
+                  "label": "deer"
+                }
+              ],
+              "answer": 0,
+              "hint": "It has 4 letters.",
+              "tests": "crow"
+            }
+          ]
+        },
+        {
+          "id": "u2l1-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q-ant",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "ant",
+              "options": [
+                {
+                  "label": "ant"
+                },
+                {
+                  "label": "ear"
+                },
+                {
+                  "label": "crow"
+                }
+              ],
+              "answer": 0,
+              "tests": "ant"
+            },
+            {
+              "id": "q-boat",
+              "type": "tap-picture",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "boat",
+              "options": [
+                {
+                  "label": "crow"
+                },
+                {
+                  "label": "boat"
+                },
+                {
+                  "label": "deer"
+                }
+              ],
+              "answer": 1,
+              "explain": "boat = নৌকা",
+              "tests": "boat"
+            },
+            {
+              "id": "q-crow",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "crow",
+              "options": [
+                {
+                  "label": "crow"
+                },
+                {
+                  "label": "ear"
+                },
+                {
+                  "label": "deer"
+                }
+              ],
+              "answer": 0,
+              "tests": "crow"
+            },
+            {
+              "id": "q-deer",
+              "type": "tap-picture",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "deer",
+              "options": [
+                {
+                  "label": "deer"
+                },
+                {
+                  "label": "ear"
+                },
+                {
+                  "label": "boat"
+                }
+              ],
+              "answer": 0,
+              "explain": "deer = হরিণ",
+              "tests": "deer"
+            },
+            {
+              "id": "q-meaning",
+              "type": "tap-word",
+              "ask": "Which word means পিঁপড়া?",
+              "askBn": "কোন শব্দের অর্থ পিঁপড়া?",
+              "options": [
+                {
+                  "label": "ant"
+                },
+                {
+                  "label": "ear"
+                },
+                {
+                  "label": "deer"
+                }
+              ],
+              "answer": 0,
+              "explain": "ant = পিঁপড়া",
+              "tests": "ant"
+            }
+          ]
+        },
+        {
+          "id": "u2l1-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You learned 5 new words!",
+          "sayBn": "তুমি নতুন শব্দ শিখেছ!"
+        }
+      ]
+    },
+    {
+      "id": "u2l2",
+      "unitId": "u2",
+      "number": 2,
+      "title": "Numbers 1-5",
+      "titleBn": "সংখ্যা 1-5",
+      "shape": "numbers",
+      "bookPages": [
+        9
+      ],
+      "objective": "Count and read the numbers 1 to 5.",
+      "objectiveBn": "1 থেকে 5 পর্যন্ত গোনা ও পড়া।",
+      "minutes": 6,
+      "vocabulary": [
+        {
+          "id": "one",
+          "word": "one",
+          "bangla": "এক",
+          "banglaPronunciation": "ওয়ান",
+          "banglaSource": "enrichment",
+          "bookPage": 9,
+          "category": "number",
+          "image": "number-1"
+        },
+        {
+          "id": "two",
+          "word": "two",
+          "bangla": "দুই",
+          "banglaPronunciation": "টু",
+          "banglaSource": "enrichment",
+          "bookPage": 9,
+          "category": "number",
+          "image": "number-2"
+        },
+        {
+          "id": "three",
+          "word": "three",
+          "bangla": "তিন",
+          "banglaPronunciation": "থ্রি",
+          "banglaSource": "enrichment",
+          "bookPage": 9,
+          "category": "number",
+          "image": "number-3"
+        },
+        {
+          "id": "four",
+          "word": "four",
+          "bangla": "চার",
+          "banglaPronunciation": "ফোর",
+          "banglaSource": "enrichment",
+          "bookPage": 9,
+          "category": "number",
+          "image": "number-4"
+        },
+        {
+          "id": "five",
+          "word": "five",
+          "bangla": "পাঁচ",
+          "banglaPronunciation": "ফাইভ",
+          "banglaSource": "enrichment",
+          "bookPage": 9,
+          "category": "number",
+          "image": "number-5"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u2l2-intro",
+          "type": "intro",
+          "title": "Numbers 1 to 5",
+          "titleBn": "সংখ্যা 1-5",
+          "say": "Let us count together.",
+          "sayBn": "চলো একসাথে গুনি।",
+          "illustration": "number-1"
+        },
+        {
+          "id": "u2l2-words",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Listen and count",
+          "titleBn": "শোনো আর গোনো",
+          "items": [
+            "one",
+            "two",
+            "three",
+            "four",
+            "five"
+          ]
+        },
+        {
+          "id": "u2l2-count",
+          "type": "game",
+          "kind": "count-objects",
+          "bookActivity": "A",
+          "title": "Count them!",
+          "titleBn": "গুনে বলো!",
+          "rounds": [
+            {
+              "id": "c1",
+              "image": "count-1",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "1",
+                  "image": "number-1"
+                },
+                {
+                  "label": "5",
+                  "image": "number-5"
+                },
+                {
+                  "label": "3",
+                  "image": "number-3"
+                }
+              ],
+              "answer": 0,
+              "hint": "Count them one by one.",
+              "tests": "one"
+            },
+            {
+              "id": "c2",
+              "image": "count-2",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "2",
+                  "image": "number-2"
+                },
+                {
+                  "label": "1",
+                  "image": "number-1"
+                },
+                {
+                  "label": "3",
+                  "image": "number-3"
+                }
+              ],
+              "answer": 0,
+              "hint": "Count them one by one.",
+              "tests": "two"
+            },
+            {
+              "id": "c3",
+              "image": "count-3",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "1",
+                  "image": "number-1"
+                },
+                {
+                  "label": "3",
+                  "image": "number-3"
+                },
+                {
+                  "label": "4",
+                  "image": "number-4"
+                }
+              ],
+              "answer": 1,
+              "hint": "Count them one by one.",
+              "tests": "three"
+            },
+            {
+              "id": "c4",
+              "image": "count-4",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "6",
+                  "image": "number-6"
+                },
+                {
+                  "label": "4",
+                  "image": "number-4"
+                },
+                {
+                  "label": "7",
+                  "image": "number-7"
+                }
+              ],
+              "answer": 1,
+              "hint": "Count them one by one.",
+              "tests": "four"
+            },
+            {
+              "id": "c5",
+              "image": "count-5",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "2",
+                  "image": "number-2"
+                },
+                {
+                  "label": "5",
+                  "image": "number-5"
+                },
+                {
+                  "label": "4",
+                  "image": "number-4"
+                }
+              ],
+              "answer": 1,
+              "hint": "Count them one by one.",
+              "tests": "five"
+            }
+          ]
+        },
+        {
+          "id": "u2l2-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "listen-choose",
+              "ask": "Listen. Which number is it?",
+              "askBn": "শোনো। কোন সংখ্যা?",
+              "speak": "one",
+              "options": [
+                {
+                  "label": "five"
+                },
+                {
+                  "label": "one"
+                },
+                {
+                  "label": "four"
+                }
+              ],
+              "answer": 1,
+              "tests": "one"
+            },
+            {
+              "id": "q2",
+              "type": "tap-picture",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "image": "count-2",
+              "options": [
+                {
+                  "label": "five"
+                },
+                {
+                  "label": "two"
+                },
+                {
+                  "label": "seven"
+                }
+              ],
+              "answer": 1,
+              "tests": "two"
+            },
+            {
+              "id": "q3",
+              "type": "listen-choose",
+              "ask": "Listen. Which number is it?",
+              "askBn": "শোনো। কোন সংখ্যা?",
+              "speak": "three",
+              "options": [
+                {
+                  "label": "six"
+                },
+                {
+                  "label": "three"
+                },
+                {
+                  "label": "five"
+                }
+              ],
+              "answer": 1,
+              "tests": "three"
+            },
+            {
+              "id": "q4",
+              "type": "tap-picture",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "image": "count-4",
+              "options": [
+                {
+                  "label": "six"
+                },
+                {
+                  "label": "five"
+                },
+                {
+                  "label": "four"
+                }
+              ],
+              "answer": 2,
+              "tests": "four"
+            },
+            {
+              "id": "q-last",
+              "type": "tap-word",
+              "ask": "Which one is পাঁচ?",
+              "askBn": "কোনটি পাঁচ?",
+              "options": [
+                {
+                  "label": "five"
+                },
+                {
+                  "label": "one"
+                }
+              ],
+              "answer": 0,
+              "explain": "five = পাঁচ",
+              "tests": "five"
+            }
+          ]
+        },
+        {
+          "id": "u2l2-done",
+          "type": "done",
+          "title": "Well counted!",
+          "titleBn": "ঠিক গুনেছ!",
+          "say": "You can count to 5!",
+          "sayBn": "তুমি 5 পর্যন্ত গুনতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "u2l3",
+      "unitId": "u2",
+      "number": 3,
+      "title": "Words for f F - j J",
+      "titleBn": "f-j অক্ষরের শব্দ",
+      "shape": "vocabulary",
+      "bookPages": [
+        11,
+        12,
+        13
+      ],
+      "objective": "Read and say the words for letters f-j.",
+      "objectiveBn": "f-j অক্ষরের শব্দ পড়া ও বলা।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "frog",
+          "word": "frog",
+          "bangla": "ব্যাঙ",
+          "banglaPronunciation": "ফ্রগ",
+          "banglaSource": "enrichment",
+          "bookPage": 11,
+          "category": "animal",
+          "image": "frog"
+        },
+        {
+          "id": "garlic",
+          "word": "garlic",
+          "bangla": "রসুন",
+          "banglaPronunciation": "গার্লিক",
+          "banglaSource": "enrichment",
+          "bookPage": 11,
+          "category": "food",
+          "image": "garlic"
+        },
+        {
+          "id": "honey",
+          "word": "honey",
+          "bangla": "মধু",
+          "banglaPronunciation": "হানি",
+          "banglaSource": "enrichment",
+          "bookPage": 11,
+          "category": "food",
+          "image": "honey"
+        },
+        {
+          "id": "island",
+          "word": "island",
+          "bangla": "দ্বীপ",
+          "banglaPronunciation": "আইল্যান্ড",
+          "banglaSource": "enrichment",
+          "bookPage": 11,
+          "category": "place",
+          "image": "island"
+        },
+        {
+          "id": "jute",
+          "word": "jute",
+          "bangla": "পাট",
+          "banglaPronunciation": "জুট",
+          "banglaSource": "enrichment",
+          "bookPage": 11,
+          "category": "plant",
+          "image": "jute"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u2l3-intro",
+          "type": "intro",
+          "title": "Letters f-j",
+          "titleBn": "নতুন অক্ষর",
+          "say": "Here are words for f-j.",
+          "sayBn": "এই অক্ষরগুলোর শব্দ শিখি।",
+          "illustration": "frog"
+        },
+        {
+          "id": "u2l3-words",
+          "type": "vocab",
+          "bookActivity": "B",
+          "title": "Look, listen and say",
+          "titleBn": "দেখো, শোনো, বলো",
+          "items": [
+            "frog",
+            "garlic",
+            "honey",
+            "island",
+            "jute"
+          ]
+        },
+        {
+          "id": "u2l3-game",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "F",
+          "title": "Find the word",
+          "titleBn": "শব্দ খুঁজে বের করো",
+          "rounds": [
+            {
+              "id": "r-frog",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "frog",
+              "options": [
+                {
+                  "label": "frog"
+                },
+                {
+                  "label": "island"
+                },
+                {
+                  "label": "jute"
+                }
+              ],
+              "answer": 0,
+              "hint": "It starts with f.",
+              "tests": "frog"
+            },
+            {
+              "id": "r-garlic",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "garlic",
+              "options": [
+                {
+                  "label": "island"
+                },
+                {
+                  "label": "jute"
+                },
+                {
+                  "label": "garlic"
+                }
+              ],
+              "answer": 2,
+              "hint": "It starts with g.",
+              "tests": "garlic"
+            },
+            {
+              "id": "r-honey",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "honey",
+              "options": [
+                {
+                  "label": "honey"
+                },
+                {
+                  "label": "island"
+                },
+                {
+                  "label": "garlic"
+                }
+              ],
+              "answer": 0,
+              "hint": "It starts with h.",
+              "tests": "honey"
+            },
+            {
+              "id": "r-island",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "island",
+              "options": [
+                {
+                  "label": "island"
+                },
+                {
+                  "label": "honey"
+                },
+                {
+                  "label": "garlic"
+                }
+              ],
+              "answer": 0,
+              "hint": "It starts with i.",
+              "tests": "island"
+            },
+            {
+              "id": "r-jute",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "jute",
+              "options": [
+                {
+                  "label": "island"
+                },
+                {
+                  "label": "honey"
+                },
+                {
+                  "label": "jute"
+                }
+              ],
+              "answer": 2,
+              "hint": "It starts with j.",
+              "tests": "jute"
+            }
+          ]
+        },
+        {
+          "id": "u2l3-scramble",
+          "type": "game",
+          "kind": "unscramble",
+          "bookActivity": "D",
+          "title": "Make the word",
+          "titleBn": "শব্দ বানাও",
+          "rounds": [
+            {
+              "id": "s-frog",
+              "ask": "Make a word: r f g o",
+              "askBn": "অক্ষর সাজিয়ে শব্দ বানাও",
+              "options": [
+                {
+                  "label": "island"
+                },
+                {
+                  "label": "jute"
+                },
+                {
+                  "label": "frog"
+                }
+              ],
+              "answer": 2,
+              "hint": "It has 4 letters.",
+              "tests": "frog"
+            },
+            {
+              "id": "s-garlic",
+              "ask": "Make a word: a l r i g c",
+              "askBn": "অক্ষর সাজিয়ে শব্দ বানাও",
+              "options": [
+                {
+                  "label": "island"
+                },
+                {
+                  "label": "jute"
+                },
+                {
+                  "label": "garlic"
+                }
+              ],
+              "answer": 2,
+              "hint": "It has 6 letters.",
+              "tests": "garlic"
+            },
+            {
+              "id": "s-honey",
+              "ask": "Make a word: n h e o y",
+              "askBn": "অক্ষর সাজিয়ে শব্দ বানাও",
+              "options": [
+                {
+                  "label": "frog"
+                },
+                {
+                  "label": "honey"
+                },
+                {
+                  "label": "garlic"
+                }
+              ],
+              "answer": 1,
+              "hint": "It has 5 letters.",
+              "tests": "honey"
+            }
+          ]
+        },
+        {
+          "id": "u2l3-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q-frog",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "frog",
+              "options": [
+                {
+                  "label": "honey"
+                },
+                {
+                  "label": "frog"
+                },
+                {
+                  "label": "garlic"
+                }
+              ],
+              "answer": 1,
+              "tests": "frog"
+            },
+            {
+              "id": "q-garlic",
+              "type": "tap-picture",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "garlic",
+              "options": [
+                {
+                  "label": "honey"
+                },
+                {
+                  "label": "island"
+                },
+                {
+                  "label": "garlic"
+                }
+              ],
+              "answer": 2,
+              "explain": "garlic = রসুন",
+              "tests": "garlic"
+            },
+            {
+              "id": "q-honey",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "honey",
+              "options": [
+                {
+                  "label": "frog"
+                },
+                {
+                  "label": "jute"
+                },
+                {
+                  "label": "honey"
+                }
+              ],
+              "answer": 2,
+              "tests": "honey"
+            },
+            {
+              "id": "q-island",
+              "type": "tap-picture",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "island",
+              "options": [
+                {
+                  "label": "garlic"
+                },
+                {
+                  "label": "island"
+                },
+                {
+                  "label": "frog"
+                }
+              ],
+              "answer": 1,
+              "explain": "island = দ্বীপ",
+              "tests": "island"
+            },
+            {
+              "id": "q-meaning",
+              "type": "tap-word",
+              "ask": "Which word means ব্যাঙ?",
+              "askBn": "কোন শব্দের অর্থ ব্যাঙ?",
+              "options": [
+                {
+                  "label": "honey"
+                },
+                {
+                  "label": "island"
+                },
+                {
+                  "label": "frog"
+                }
+              ],
+              "answer": 2,
+              "explain": "frog = ব্যাঙ",
+              "tests": "frog"
+            }
+          ]
+        },
+        {
+          "id": "u2l3-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You learned 5 new words!",
+          "sayBn": "তুমি নতুন শব্দ শিখেছ!"
+        }
+      ]
+    },
+    {
+      "id": "u2l4",
+      "unitId": "u2",
+      "number": 4,
+      "title": "Numbers 6-10",
+      "titleBn": "সংখ্যা 6-10",
+      "shape": "numbers",
+      "bookPages": [
+        14
+      ],
+      "objective": "Count and read the numbers 6 to 10.",
+      "objectiveBn": "6 থেকে 10 পর্যন্ত গোনা ও পড়া।",
+      "minutes": 6,
+      "vocabulary": [
+        {
+          "id": "six",
+          "word": "six",
+          "bangla": "ছয়",
+          "banglaPronunciation": "সিক্স",
+          "banglaSource": "enrichment",
+          "bookPage": 14,
+          "category": "number",
+          "image": "number-6"
+        },
+        {
+          "id": "seven",
+          "word": "seven",
+          "bangla": "সাত",
+          "banglaPronunciation": "সেভেন",
+          "banglaSource": "enrichment",
+          "bookPage": 14,
+          "category": "number",
+          "image": "number-7"
+        },
+        {
+          "id": "eight",
+          "word": "eight",
+          "bangla": "আট",
+          "banglaPronunciation": "এইট",
+          "banglaSource": "enrichment",
+          "bookPage": 14,
+          "category": "number",
+          "image": "number-8"
+        },
+        {
+          "id": "nine",
+          "word": "nine",
+          "bangla": "নয়",
+          "banglaPronunciation": "নাইন",
+          "banglaSource": "enrichment",
+          "bookPage": 14,
+          "category": "number",
+          "image": "number-9"
+        },
+        {
+          "id": "ten",
+          "word": "ten",
+          "bangla": "দশ",
+          "banglaPronunciation": "টেন",
+          "banglaSource": "enrichment",
+          "bookPage": 14,
+          "category": "number",
+          "image": "number-10"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u2l4-intro",
+          "type": "intro",
+          "title": "Numbers 6 to 10",
+          "titleBn": "সংখ্যা 6-10",
+          "say": "Let us count together.",
+          "sayBn": "চলো একসাথে গুনি।",
+          "illustration": "number-6"
+        },
+        {
+          "id": "u2l4-words",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Listen and count",
+          "titleBn": "শোনো আর গোনো",
+          "items": [
+            "six",
+            "seven",
+            "eight",
+            "nine",
+            "ten"
+          ]
+        },
+        {
+          "id": "u2l4-count",
+          "type": "game",
+          "kind": "count-objects",
+          "bookActivity": "A",
+          "title": "Count them!",
+          "titleBn": "গুনে বলো!",
+          "rounds": [
+            {
+              "id": "c6",
+              "image": "count-6",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "6",
+                  "image": "number-6"
+                },
+                {
+                  "label": "8",
+                  "image": "number-8"
+                },
+                {
+                  "label": "9",
+                  "image": "number-9"
+                }
+              ],
+              "answer": 0,
+              "hint": "Count them one by one.",
+              "tests": "six"
+            },
+            {
+              "id": "c7",
+              "image": "count-7",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "7",
+                  "image": "number-7"
+                },
+                {
+                  "label": "12",
+                  "image": "number-12"
+                },
+                {
+                  "label": "6",
+                  "image": "number-6"
+                }
+              ],
+              "answer": 0,
+              "hint": "Count them one by one.",
+              "tests": "seven"
+            },
+            {
+              "id": "c8",
+              "image": "count-8",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "5",
+                  "image": "number-5"
+                },
+                {
+                  "label": "8",
+                  "image": "number-8"
+                },
+                {
+                  "label": "11",
+                  "image": "number-11"
+                }
+              ],
+              "answer": 1,
+              "hint": "Count them one by one.",
+              "tests": "eight"
+            },
+            {
+              "id": "c9",
+              "image": "count-9",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "9",
+                  "image": "number-9"
+                },
+                {
+                  "label": "7",
+                  "image": "number-7"
+                },
+                {
+                  "label": "12",
+                  "image": "number-12"
+                }
+              ],
+              "answer": 0,
+              "hint": "Count them one by one.",
+              "tests": "nine"
+            },
+            {
+              "id": "c10",
+              "image": "count-10",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "10",
+                  "image": "number-10"
+                },
+                {
+                  "label": "6",
+                  "image": "number-6"
+                },
+                {
+                  "label": "4",
+                  "image": "number-4"
+                }
+              ],
+              "answer": 0,
+              "hint": "Count them one by one.",
+              "tests": "ten"
+            }
+          ]
+        },
+        {
+          "id": "u2l4-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "listen-choose",
+              "ask": "Listen. Which number is it?",
+              "askBn": "শোনো। কোন সংখ্যা?",
+              "speak": "six",
+              "options": [
+                {
+                  "label": "seven"
+                },
+                {
+                  "label": "11"
+                },
+                {
+                  "label": "six"
+                }
+              ],
+              "answer": 2,
+              "tests": "six"
+            },
+            {
+              "id": "q7",
+              "type": "tap-picture",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "image": "count-7",
+              "options": [
+                {
+                  "label": "seven"
+                },
+                {
+                  "label": "11"
+                },
+                {
+                  "label": "five"
+                }
+              ],
+              "answer": 0,
+              "tests": "seven"
+            },
+            {
+              "id": "q8",
+              "type": "listen-choose",
+              "ask": "Listen. Which number is it?",
+              "askBn": "শোনো। কোন সংখ্যা?",
+              "speak": "eight",
+              "options": [
+                {
+                  "label": "four"
+                },
+                {
+                  "label": "eight"
+                },
+                {
+                  "label": "seven"
+                }
+              ],
+              "answer": 1,
+              "tests": "eight"
+            },
+            {
+              "id": "q9",
+              "type": "tap-picture",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "image": "count-9",
+              "options": [
+                {
+                  "label": "eight"
+                },
+                {
+                  "label": "nine"
+                },
+                {
+                  "label": "ten"
+                }
+              ],
+              "answer": 1,
+              "tests": "nine"
+            },
+            {
+              "id": "q-last",
+              "type": "tap-word",
+              "ask": "Which one is দশ?",
+              "askBn": "কোনটি দশ?",
+              "options": [
+                {
+                  "label": "ten"
+                },
+                {
+                  "label": "six"
+                }
+              ],
+              "answer": 0,
+              "explain": "ten = দশ",
+              "tests": "ten"
+            }
+          ]
+        },
+        {
+          "id": "u2l4-done",
+          "type": "done",
+          "title": "Well counted!",
+          "titleBn": "ঠিক গুনেছ!",
+          "say": "You can count to 10!",
+          "sayBn": "তুমি 10 পর্যন্ত গুনতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "u2l5",
+      "unitId": "u2",
+      "number": 5,
+      "title": "Rhyme - Little seed",
+      "titleBn": "ছড়া - ছোট্ট বীজ",
+      "shape": "rhyme",
+      "bookPages": [
+        16
+      ],
+      "objective": "Say the rhyme and tell how a plant grows.",
+      "objectiveBn": "ছড়া বলা আর গাছ কীভাবে বড় হয় তা বলা।",
+      "minutes": 6,
+      "vocabulary": [
+        {
+          "id": "seed",
+          "word": "seed",
+          "bangla": "বীজ",
+          "banglaPronunciation": "সিড",
+          "banglaSource": "enrichment",
+          "bookPage": 16,
+          "category": "plant",
+          "image": "seed",
+          "example": "I plant a little seed.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "sun",
+          "word": "sun",
+          "bangla": "সূর্য",
+          "banglaPronunciation": "সান",
+          "banglaSource": "enrichment",
+          "bookPage": 16,
+          "category": "nature",
+          "image": "sunrise",
+          "example": "Out comes the sun, big and round.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "rain",
+          "word": "rain",
+          "bangla": "বৃষ্টি",
+          "banglaPronunciation": "রেইন",
+          "banglaSource": "enrichment",
+          "bookPage": 16,
+          "category": "nature",
+          "image": "rain",
+          "example": "Down come the rain drops, soft and slow.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "flower",
+          "word": "flower",
+          "bangla": "ফুল",
+          "banglaPronunciation": "ফ্লাওয়ার",
+          "banglaSource": "enrichment",
+          "bookPage": 16,
+          "category": "plant",
+          "image": "flower",
+          "example": "Up comes a flower, grow, grow, grow!",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u2l5-intro",
+          "type": "intro",
+          "title": "How a plant grows",
+          "titleBn": "গাছ কীভাবে বড় হয়",
+          "say": "A seed grows into a flower.",
+          "sayBn": "একটি বীজ থেকে ফুল হয়।",
+          "illustration": "seed"
+        },
+        {
+          "id": "u2l5-words",
+          "type": "vocab",
+          "title": "New words",
+          "titleBn": "নতুন শব্দ",
+          "items": [
+            "seed",
+            "sun",
+            "rain",
+            "flower"
+          ]
+        },
+        {
+          "id": "u2l5-rhyme",
+          "type": "rhyme",
+          "bookActivity": "B",
+          "title": "Little Seed",
+          "titleBn": "ছড়া: Little Seed",
+          "source": "textbook",
+          "verses": [
+            [
+              "I plant a little seed",
+              "In the ground."
+            ],
+            [
+              "Out comes the sun,",
+              "Big and round."
+            ],
+            [
+              "Down come the rain drops,",
+              "Soft and slow."
+            ],
+            [
+              "Up comes a flower,",
+              "Grow, grow, grow!"
+            ]
+          ]
+        },
+        {
+          "id": "u2l5-order",
+          "type": "game",
+          "kind": "order-the-scenes",
+          "bookActivity": "A",
+          "title": "What comes first?",
+          "titleBn": "কোনটা আগে?",
+          "rounds": [
+            {
+              "id": "o1",
+              "ask": "What do we plant first?",
+              "askBn": "প্রথমে কী লাগাই?",
+              "options": [
+                {
+                  "label": "seed",
+                  "image": "seed"
+                },
+                {
+                  "label": "flower",
+                  "image": "flower"
+                }
+              ],
+              "answer": 0,
+              "hint": "A plant starts very small.",
+              "tests": "seed"
+            },
+            {
+              "id": "o2",
+              "ask": "What comes out big and round?",
+              "askBn": "বড় আর গোল হয়ে কী ওঠে?",
+              "speak": "Out comes the sun, big and round.",
+              "options": [
+                {
+                  "label": "rain",
+                  "image": "rain"
+                },
+                {
+                  "label": "sun",
+                  "image": "sunrise"
+                }
+              ],
+              "answer": 1,
+              "hint": "It is in the sky by day.",
+              "tests": "sun"
+            },
+            {
+              "id": "o3",
+              "ask": "What comes last?",
+              "askBn": "শেষে কী হয়?",
+              "options": [
+                {
+                  "label": "flower",
+                  "image": "flower"
+                },
+                {
+                  "label": "seed",
+                  "image": "seed"
+                }
+              ],
+              "answer": 0,
+              "hint": "Grow, grow, grow!",
+              "tests": "flower"
+            }
+          ]
+        },
+        {
+          "id": "u2l5-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "fill-blank",
+              "ask": "I plant a little ___ .",
+              "options": [
+                {
+                  "label": "seed"
+                },
+                {
+                  "label": "sun"
+                },
+                {
+                  "label": "rain"
+                }
+              ],
+              "answer": 0,
+              "explain": "The rhyme says: I plant a little seed.",
+              "tests": "seed"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word?",
+              "askBn": "শোনো। কোন শব্দ?",
+              "speak": "rain",
+              "options": [
+                {
+                  "label": "rain"
+                },
+                {
+                  "label": "sun"
+                },
+                {
+                  "label": "seed"
+                }
+              ],
+              "answer": 0,
+              "tests": "rain"
+            },
+            {
+              "id": "q3",
+              "type": "true-false",
+              "ask": "A flower comes up at the end.",
+              "askBn": "শেষে ফুল ফোটে।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "Up comes a flower, grow, grow, grow!",
+              "tests": "flower"
+            },
+            {
+              "id": "q4",
+              "type": "tap-word",
+              "ask": "Which word means সূর্য?",
+              "askBn": "কোন শব্দের অর্থ সূর্য?",
+              "options": [
+                {
+                  "label": "sun"
+                },
+                {
+                  "label": "rain"
+                },
+                {
+                  "label": "seed"
+                }
+              ],
+              "answer": 0,
+              "explain": "sun = সূর্য",
+              "tests": "sun"
+            }
+          ]
+        },
+        {
+          "id": "u2l5-done",
+          "type": "done",
+          "title": "Lovely rhyme!",
+          "titleBn": "সুন্দর ছড়া!",
+          "say": "You know how a plant grows!",
+          "sayBn": "গাছ কীভাবে বড় হয় তুমি জানো!"
+        }
+      ]
+    },
+    {
+      "id": "u2l6",
+      "unitId": "u2",
+      "number": 6,
+      "title": "Words for k K - o O",
+      "titleBn": "k-o অক্ষরের শব্দ",
+      "shape": "vocabulary",
+      "bookPages": [
+        17,
+        18,
+        19
+      ],
+      "objective": "Read and say the words for letters k-o.",
+      "objectiveBn": "k-o অক্ষরের শব্দ পড়া ও বলা।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "kitten",
+          "word": "kitten",
+          "bangla": "বিড়ালছানা",
+          "banglaPronunciation": "কিটেন",
+          "banglaSource": "enrichment",
+          "bookPage": 17,
+          "category": "animal",
+          "image": "kitten"
+        },
+        {
+          "id": "ladder",
+          "word": "ladder",
+          "bangla": "মই",
+          "banglaPronunciation": "ল্যাডার",
+          "banglaSource": "enrichment",
+          "bookPage": 17,
+          "category": "object",
+          "image": "ladder"
+        },
+        {
+          "id": "monkey",
+          "word": "monkey",
+          "bangla": "বানর",
+          "banglaPronunciation": "মাংকি",
+          "banglaSource": "enrichment",
+          "bookPage": 17,
+          "category": "animal",
+          "image": "monkey"
+        },
+        {
+          "id": "nest",
+          "word": "nest",
+          "bangla": "পাখির বাসা",
+          "banglaPronunciation": "নেস্ট",
+          "banglaSource": "enrichment",
+          "bookPage": 17,
+          "category": "nature",
+          "image": "nest"
+        },
+        {
+          "id": "orange",
+          "word": "orange",
+          "bangla": "কমলা",
+          "banglaPronunciation": "অরেঞ্জ",
+          "banglaSource": "enrichment",
+          "bookPage": 17,
+          "category": "food",
+          "image": "orange"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u2l6-intro",
+          "type": "intro",
+          "title": "Letters k-o",
+          "titleBn": "নতুন অক্ষর",
+          "say": "Here are words for k-o.",
+          "sayBn": "এই অক্ষরগুলোর শব্দ শিখি।",
+          "illustration": "kitten"
+        },
+        {
+          "id": "u2l6-words",
+          "type": "vocab",
+          "bookActivity": "B",
+          "title": "Look, listen and say",
+          "titleBn": "দেখো, শোনো, বলো",
+          "items": [
+            "kitten",
+            "ladder",
+            "monkey",
+            "nest",
+            "orange"
+          ]
+        },
+        {
+          "id": "u2l6-game",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "F",
+          "title": "Find the word",
+          "titleBn": "শব্দ খুঁজে বের করো",
+          "rounds": [
+            {
+              "id": "r-kitten",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "kitten",
+              "options": [
+                {
+                  "label": "orange"
+                },
+                {
+                  "label": "nest"
+                },
+                {
+                  "label": "kitten"
+                }
+              ],
+              "answer": 2,
+              "hint": "It starts with k.",
+              "tests": "kitten"
+            },
+            {
+              "id": "r-ladder",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "ladder",
+              "options": [
+                {
+                  "label": "kitten"
+                },
+                {
+                  "label": "monkey"
+                },
+                {
+                  "label": "ladder"
+                }
+              ],
+              "answer": 2,
+              "hint": "It starts with l.",
+              "tests": "ladder"
+            },
+            {
+              "id": "r-monkey",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "monkey",
+              "options": [
+                {
+                  "label": "monkey"
+                },
+                {
+                  "label": "ladder"
+                },
+                {
+                  "label": "kitten"
+                }
+              ],
+              "answer": 0,
+              "hint": "It starts with m.",
+              "tests": "monkey"
+            },
+            {
+              "id": "r-nest",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "nest",
+              "options": [
+                {
+                  "label": "ladder"
+                },
+                {
+                  "label": "nest"
+                },
+                {
+                  "label": "kitten"
+                }
+              ],
+              "answer": 1,
+              "hint": "It starts with n.",
+              "tests": "nest"
+            },
+            {
+              "id": "r-orange",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "orange",
+              "options": [
+                {
+                  "label": "monkey"
+                },
+                {
+                  "label": "orange"
+                },
+                {
+                  "label": "ladder"
+                }
+              ],
+              "answer": 1,
+              "hint": "It starts with o.",
+              "tests": "orange"
+            }
+          ]
+        },
+        {
+          "id": "u2l6-scramble",
+          "type": "game",
+          "kind": "unscramble",
+          "bookActivity": "D",
+          "title": "Make the word",
+          "titleBn": "শব্দ বানাও",
+          "rounds": [
+            {
+              "id": "s-kitten",
+              "ask": "Make a word: n e t k i t",
+              "askBn": "অক্ষর সাজিয়ে শব্দ বানাও",
+              "options": [
+                {
+                  "label": "orange"
+                },
+                {
+                  "label": "kitten"
+                },
+                {
+                  "label": "ladder"
+                }
+              ],
+              "answer": 1,
+              "hint": "It has 6 letters.",
+              "tests": "kitten"
+            },
+            {
+              "id": "s-ladder",
+              "ask": "Make a word: l d a d r e",
+              "askBn": "অক্ষর সাজিয়ে শব্দ বানাও",
+              "options": [
+                {
+                  "label": "ladder"
+                },
+                {
+                  "label": "orange"
+                },
+                {
+                  "label": "monkey"
+                }
+              ],
+              "answer": 0,
+              "hint": "It has 6 letters.",
+              "tests": "ladder"
+            },
+            {
+              "id": "s-monkey",
+              "ask": "Make a word: o y n m k e",
+              "askBn": "অক্ষর সাজিয়ে শব্দ বানাও",
+              "options": [
+                {
+                  "label": "kitten"
+                },
+                {
+                  "label": "ladder"
+                },
+                {
+                  "label": "monkey"
+                }
+              ],
+              "answer": 2,
+              "hint": "It has 6 letters.",
+              "tests": "monkey"
+            }
+          ]
+        },
+        {
+          "id": "u2l6-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q-kitten",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "kitten",
+              "options": [
+                {
+                  "label": "ladder"
+                },
+                {
+                  "label": "monkey"
+                },
+                {
+                  "label": "kitten"
+                }
+              ],
+              "answer": 2,
+              "tests": "kitten"
+            },
+            {
+              "id": "q-ladder",
+              "type": "tap-picture",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "ladder",
+              "options": [
+                {
+                  "label": "monkey"
+                },
+                {
+                  "label": "ladder"
+                },
+                {
+                  "label": "nest"
+                }
+              ],
+              "answer": 1,
+              "explain": "ladder = মই",
+              "tests": "ladder"
+            },
+            {
+              "id": "q-monkey",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "monkey",
+              "options": [
+                {
+                  "label": "monkey"
+                },
+                {
+                  "label": "ladder"
+                },
+                {
+                  "label": "kitten"
+                }
+              ],
+              "answer": 0,
+              "tests": "monkey"
+            },
+            {
+              "id": "q-nest",
+              "type": "tap-picture",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "nest",
+              "options": [
+                {
+                  "label": "kitten"
+                },
+                {
+                  "label": "ladder"
+                },
+                {
+                  "label": "nest"
+                }
+              ],
+              "answer": 2,
+              "explain": "nest = পাখির বাসা",
+              "tests": "nest"
+            },
+            {
+              "id": "q-meaning",
+              "type": "tap-word",
+              "ask": "Which word means বিড়ালছানা?",
+              "askBn": "কোন শব্দের অর্থ বিড়ালছানা?",
+              "options": [
+                {
+                  "label": "kitten"
+                },
+                {
+                  "label": "nest"
+                },
+                {
+                  "label": "monkey"
+                }
+              ],
+              "answer": 0,
+              "explain": "kitten = বিড়ালছানা",
+              "tests": "kitten"
+            }
+          ]
+        },
+        {
+          "id": "u2l6-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You learned 5 new words!",
+          "sayBn": "তুমি নতুন শব্দ শিখেছ!"
+        }
+      ]
+    },
+    {
+      "id": "u2l7",
+      "unitId": "u2",
+      "number": 7,
+      "title": "Numbers 11-15",
+      "titleBn": "সংখ্যা 11-15",
+      "shape": "numbers",
+      "bookPages": [
+        20
+      ],
+      "objective": "Count and read the numbers 11 to 15. The textbook shows these as figures only.",
+      "objectiveBn": "11 থেকে 15 পর্যন্ত গোনা ও পড়া।",
+      "minutes": 6,
+      "vocabulary": [
+        {
+          "id": "n11",
+          "word": "11",
+          "bangla": "এগারো",
+          "banglaSource": "enrichment",
+          "bookPage": 20,
+          "category": "number",
+          "image": "number-11"
+        },
+        {
+          "id": "n12",
+          "word": "12",
+          "bangla": "বারো",
+          "banglaSource": "enrichment",
+          "bookPage": 20,
+          "category": "number",
+          "image": "number-12"
+        },
+        {
+          "id": "n13",
+          "word": "13",
+          "bangla": "তেরো",
+          "banglaSource": "enrichment",
+          "bookPage": 20,
+          "category": "number",
+          "image": "number-13"
+        },
+        {
+          "id": "n14",
+          "word": "14",
+          "bangla": "চৌদ্দ",
+          "banglaSource": "enrichment",
+          "bookPage": 20,
+          "category": "number",
+          "image": "number-14"
+        },
+        {
+          "id": "n15",
+          "word": "15",
+          "bangla": "পনেরো",
+          "banglaSource": "enrichment",
+          "bookPage": 20,
+          "category": "number",
+          "image": "number-15"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u2l7-intro",
+          "type": "intro",
+          "title": "Numbers 11 to 15",
+          "titleBn": "সংখ্যা 11-15",
+          "say": "Let us count together.",
+          "sayBn": "চলো একসাথে গুনি।",
+          "illustration": "number-11"
+        },
+        {
+          "id": "u2l7-words",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Listen and count",
+          "titleBn": "শোনো আর গোনো",
+          "items": [
+            "n11",
+            "n12",
+            "n13",
+            "n14",
+            "n15"
+          ]
+        },
+        {
+          "id": "u2l7-count",
+          "type": "game",
+          "kind": "count-objects",
+          "bookActivity": "A",
+          "title": "Count them!",
+          "titleBn": "গুনে বলো!",
+          "rounds": [
+            {
+              "id": "c11",
+              "image": "count-11",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "17",
+                  "image": "number-17"
+                },
+                {
+                  "label": "11",
+                  "image": "number-11"
+                },
+                {
+                  "label": "16",
+                  "image": "number-16"
+                }
+              ],
+              "answer": 1,
+              "hint": "Count them one by one.",
+              "tests": "n11"
+            },
+            {
+              "id": "c12",
+              "image": "count-12",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "12",
+                  "image": "number-12"
+                },
+                {
+                  "label": "9",
+                  "image": "number-9"
+                },
+                {
+                  "label": "14",
+                  "image": "number-14"
+                }
+              ],
+              "answer": 0,
+              "hint": "Count them one by one.",
+              "tests": "n12"
+            },
+            {
+              "id": "c13",
+              "image": "count-13",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "17",
+                  "image": "number-17"
+                },
+                {
+                  "label": "13",
+                  "image": "number-13"
+                },
+                {
+                  "label": "11",
+                  "image": "number-11"
+                }
+              ],
+              "answer": 1,
+              "hint": "Count them one by one.",
+              "tests": "n13"
+            },
+            {
+              "id": "c14",
+              "image": "count-14",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "17",
+                  "image": "number-17"
+                },
+                {
+                  "label": "15",
+                  "image": "number-15"
+                },
+                {
+                  "label": "14",
+                  "image": "number-14"
+                }
+              ],
+              "answer": 2,
+              "hint": "Count them one by one.",
+              "tests": "n14"
+            },
+            {
+              "id": "c15",
+              "image": "count-15",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "9",
+                  "image": "number-9"
+                },
+                {
+                  "label": "15",
+                  "image": "number-15"
+                },
+                {
+                  "label": "14",
+                  "image": "number-14"
+                }
+              ],
+              "answer": 1,
+              "hint": "Count them one by one.",
+              "tests": "n15"
+            }
+          ]
+        },
+        {
+          "id": "u2l7-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q11",
+              "type": "listen-choose",
+              "ask": "Listen. Which number is it?",
+              "askBn": "শোনো। কোন সংখ্যা?",
+              "speak": "11",
+              "options": [
+                {
+                  "label": "11"
+                },
+                {
+                  "label": "15"
+                },
+                {
+                  "label": "17"
+                }
+              ],
+              "answer": 0,
+              "tests": "n11"
+            },
+            {
+              "id": "q12",
+              "type": "tap-picture",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "image": "count-12",
+              "options": [
+                {
+                  "label": "17"
+                },
+                {
+                  "label": "12"
+                },
+                {
+                  "label": "14"
+                }
+              ],
+              "answer": 1,
+              "tests": "n12"
+            },
+            {
+              "id": "q13",
+              "type": "listen-choose",
+              "ask": "Listen. Which number is it?",
+              "askBn": "শোনো। কোন সংখ্যা?",
+              "speak": "13",
+              "options": [
+                {
+                  "label": "14"
+                },
+                {
+                  "label": "13"
+                },
+                {
+                  "label": "10"
+                }
+              ],
+              "answer": 1,
+              "tests": "n13"
+            },
+            {
+              "id": "q14",
+              "type": "tap-picture",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "image": "count-14",
+              "options": [
+                {
+                  "label": "16"
+                },
+                {
+                  "label": "14"
+                },
+                {
+                  "label": "11"
+                }
+              ],
+              "answer": 1,
+              "tests": "n14"
+            },
+            {
+              "id": "q-last",
+              "type": "tap-word",
+              "ask": "Which one is পনেরো?",
+              "askBn": "কোনটি পনেরো?",
+              "options": [
+                {
+                  "label": "15"
+                },
+                {
+                  "label": "11"
+                }
+              ],
+              "answer": 0,
+              "explain": "15 = পনেরো",
+              "tests": "n15"
+            }
+          ]
+        },
+        {
+          "id": "u2l7-done",
+          "type": "done",
+          "title": "Well counted!",
+          "titleBn": "ঠিক গুনেছ!",
+          "say": "You can count to 15!",
+          "sayBn": "তুমি 15 পর্যন্ত গুনতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "u2l8",
+      "unitId": "u2",
+      "number": 8,
+      "title": "Words for p P - t T",
+      "titleBn": "p-t অক্ষরের শব্দ",
+      "shape": "vocabulary",
+      "bookPages": [
+        21,
+        22,
+        23
+      ],
+      "objective": "Read and say the words for letters p-t.",
+      "objectiveBn": "p-t অক্ষরের শব্দ পড়া ও বলা।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "pen",
+          "word": "pen",
+          "bangla": "কলম",
+          "banglaPronunciation": "পেন",
+          "banglaSource": "enrichment",
+          "bookPage": 21,
+          "category": "object",
+          "image": "pen"
+        },
+        {
+          "id": "quilt",
+          "word": "quilt",
+          "bangla": "কাঁথা",
+          "banglaPronunciation": "কুইল্ট",
+          "banglaSource": "enrichment",
+          "bookPage": 21,
+          "category": "object",
+          "image": "quilt"
+        },
+        {
+          "id": "robot",
+          "word": "robot",
+          "bangla": "রোবট",
+          "banglaPronunciation": "রোবট",
+          "banglaSource": "enrichment",
+          "bookPage": 21,
+          "category": "object",
+          "image": "robot"
+        },
+        {
+          "id": "star",
+          "word": "star",
+          "bangla": "তারা",
+          "banglaPronunciation": "স্টার",
+          "banglaSource": "enrichment",
+          "bookPage": 21,
+          "category": "nature",
+          "image": "star"
+        },
+        {
+          "id": "telescope",
+          "word": "telescope",
+          "bangla": "দূরবীন",
+          "banglaPronunciation": "টেলিস্কোপ",
+          "banglaSource": "enrichment",
+          "bookPage": 21,
+          "category": "object",
+          "image": "telescope"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u2l8-intro",
+          "type": "intro",
+          "title": "Letters p-t",
+          "titleBn": "নতুন অক্ষর",
+          "say": "Here are words for p-t.",
+          "sayBn": "এই অক্ষরগুলোর শব্দ শিখি।",
+          "illustration": "pen"
+        },
+        {
+          "id": "u2l8-words",
+          "type": "vocab",
+          "bookActivity": "B",
+          "title": "Look, listen and say",
+          "titleBn": "দেখো, শোনো, বলো",
+          "items": [
+            "pen",
+            "quilt",
+            "robot",
+            "star",
+            "telescope"
+          ]
+        },
+        {
+          "id": "u2l8-game",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "F",
+          "title": "Find the word",
+          "titleBn": "শব্দ খুঁজে বের করো",
+          "rounds": [
+            {
+              "id": "r-pen",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "pen",
+              "options": [
+                {
+                  "label": "star"
+                },
+                {
+                  "label": "telescope"
+                },
+                {
+                  "label": "pen"
+                }
+              ],
+              "answer": 2,
+              "hint": "It starts with p.",
+              "tests": "pen"
+            },
+            {
+              "id": "r-quilt",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "quilt",
+              "options": [
+                {
+                  "label": "robot"
+                },
+                {
+                  "label": "quilt"
+                },
+                {
+                  "label": "pen"
+                }
+              ],
+              "answer": 1,
+              "hint": "It starts with q.",
+              "tests": "quilt"
+            },
+            {
+              "id": "r-robot",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "robot",
+              "options": [
+                {
+                  "label": "pen"
+                },
+                {
+                  "label": "robot"
+                },
+                {
+                  "label": "star"
+                }
+              ],
+              "answer": 1,
+              "hint": "It starts with r.",
+              "tests": "robot"
+            },
+            {
+              "id": "r-star",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "star",
+              "options": [
+                {
+                  "label": "quilt"
+                },
+                {
+                  "label": "pen"
+                },
+                {
+                  "label": "star"
+                }
+              ],
+              "answer": 2,
+              "hint": "It starts with s.",
+              "tests": "star"
+            },
+            {
+              "id": "r-telescope",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "telescope",
+              "options": [
+                {
+                  "label": "quilt"
+                },
+                {
+                  "label": "pen"
+                },
+                {
+                  "label": "telescope"
+                }
+              ],
+              "answer": 2,
+              "hint": "It starts with t.",
+              "tests": "telescope"
+            }
+          ]
+        },
+        {
+          "id": "u2l8-scramble",
+          "type": "game",
+          "kind": "unscramble",
+          "bookActivity": "D",
+          "title": "Make the word",
+          "titleBn": "শব্দ বানাও",
+          "rounds": [
+            {
+              "id": "s-pen",
+              "ask": "Make a word: n e p",
+              "askBn": "অক্ষর সাজিয়ে শব্দ বানাও",
+              "options": [
+                {
+                  "label": "pen"
+                },
+                {
+                  "label": "telescope"
+                },
+                {
+                  "label": "robot"
+                }
+              ],
+              "answer": 0,
+              "hint": "It has 3 letters.",
+              "tests": "pen"
+            },
+            {
+              "id": "s-quilt",
+              "ask": "Make a word: q l i t u",
+              "askBn": "অক্ষর সাজিয়ে শব্দ বানাও",
+              "options": [
+                {
+                  "label": "telescope"
+                },
+                {
+                  "label": "star"
+                },
+                {
+                  "label": "quilt"
+                }
+              ],
+              "answer": 2,
+              "hint": "It has 5 letters.",
+              "tests": "quilt"
+            },
+            {
+              "id": "s-robot",
+              "ask": "Make a word: b t r o o",
+              "askBn": "অক্ষর সাজিয়ে শব্দ বানাও",
+              "options": [
+                {
+                  "label": "star"
+                },
+                {
+                  "label": "robot"
+                },
+                {
+                  "label": "pen"
+                }
+              ],
+              "answer": 1,
+              "hint": "It has 5 letters.",
+              "tests": "robot"
+            }
+          ]
+        },
+        {
+          "id": "u2l8-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q-pen",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "pen",
+              "options": [
+                {
+                  "label": "pen"
+                },
+                {
+                  "label": "star"
+                },
+                {
+                  "label": "robot"
+                }
+              ],
+              "answer": 0,
+              "tests": "pen"
+            },
+            {
+              "id": "q-quilt",
+              "type": "tap-picture",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "quilt",
+              "options": [
+                {
+                  "label": "quilt"
+                },
+                {
+                  "label": "star"
+                },
+                {
+                  "label": "pen"
+                }
+              ],
+              "answer": 0,
+              "explain": "quilt = কাঁথা",
+              "tests": "quilt"
+            },
+            {
+              "id": "q-robot",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "robot",
+              "options": [
+                {
+                  "label": "telescope"
+                },
+                {
+                  "label": "robot"
+                },
+                {
+                  "label": "pen"
+                }
+              ],
+              "answer": 1,
+              "tests": "robot"
+            },
+            {
+              "id": "q-star",
+              "type": "tap-picture",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "star",
+              "options": [
+                {
+                  "label": "quilt"
+                },
+                {
+                  "label": "pen"
+                },
+                {
+                  "label": "star"
+                }
+              ],
+              "answer": 2,
+              "explain": "star = তারা",
+              "tests": "star"
+            },
+            {
+              "id": "q-meaning",
+              "type": "tap-word",
+              "ask": "Which word means কলম?",
+              "askBn": "কোন শব্দের অর্থ কলম?",
+              "options": [
+                {
+                  "label": "telescope"
+                },
+                {
+                  "label": "robot"
+                },
+                {
+                  "label": "pen"
+                }
+              ],
+              "answer": 2,
+              "explain": "pen = কলম",
+              "tests": "pen"
+            }
+          ]
+        },
+        {
+          "id": "u2l8-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You learned 5 new words!",
+          "sayBn": "তুমি নতুন শব্দ শিখেছ!"
+        }
+      ]
+    },
+    {
+      "id": "u2l9",
+      "unitId": "u2",
+      "number": 9,
+      "title": "Numbers 16-20",
+      "titleBn": "সংখ্যা 16-20",
+      "shape": "numbers",
+      "bookPages": [
+        24
+      ],
+      "objective": "Count and read the numbers 16 to 20. The textbook shows these as figures only.",
+      "objectiveBn": "16 থেকে 20 পর্যন্ত গোনা ও পড়া।",
+      "minutes": 6,
+      "vocabulary": [
+        {
+          "id": "n16",
+          "word": "16",
+          "bangla": "ষোলো",
+          "banglaSource": "enrichment",
+          "bookPage": 24,
+          "category": "number",
+          "image": "number-16"
+        },
+        {
+          "id": "n17",
+          "word": "17",
+          "bangla": "সতেরো",
+          "banglaSource": "enrichment",
+          "bookPage": 24,
+          "category": "number",
+          "image": "number-17"
+        },
+        {
+          "id": "n18",
+          "word": "18",
+          "bangla": "আঠারো",
+          "banglaSource": "enrichment",
+          "bookPage": 24,
+          "category": "number",
+          "image": "number-18"
+        },
+        {
+          "id": "n19",
+          "word": "19",
+          "bangla": "উনিশ",
+          "banglaSource": "enrichment",
+          "bookPage": 24,
+          "category": "number",
+          "image": "number-19"
+        },
+        {
+          "id": "n20",
+          "word": "20",
+          "bangla": "বিশ",
+          "banglaSource": "enrichment",
+          "bookPage": 24,
+          "category": "number",
+          "image": "number-20"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u2l9-intro",
+          "type": "intro",
+          "title": "Numbers 16 to 20",
+          "titleBn": "সংখ্যা 16-20",
+          "say": "Let us count together.",
+          "sayBn": "চলো একসাথে গুনি।",
+          "illustration": "number-16"
+        },
+        {
+          "id": "u2l9-words",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Listen and count",
+          "titleBn": "শোনো আর গোনো",
+          "items": [
+            "n16",
+            "n17",
+            "n18",
+            "n19",
+            "n20"
+          ]
+        },
+        {
+          "id": "u2l9-count",
+          "type": "game",
+          "kind": "count-objects",
+          "bookActivity": "A",
+          "title": "Count them!",
+          "titleBn": "গুনে বলো!",
+          "rounds": [
+            {
+              "id": "c16",
+              "image": "count-16",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "16",
+                  "image": "number-16"
+                },
+                {
+                  "label": "15",
+                  "image": "number-15"
+                },
+                {
+                  "label": "14",
+                  "image": "number-14"
+                }
+              ],
+              "answer": 0,
+              "hint": "Count them one by one.",
+              "tests": "n16"
+            },
+            {
+              "id": "c17",
+              "image": "count-17",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "20",
+                  "image": "number-20"
+                },
+                {
+                  "label": "17",
+                  "image": "number-17"
+                },
+                {
+                  "label": "22",
+                  "image": "number-22"
+                }
+              ],
+              "answer": 1,
+              "hint": "Count them one by one.",
+              "tests": "n17"
+            },
+            {
+              "id": "c18",
+              "image": "count-18",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "18",
+                  "image": "number-18"
+                },
+                {
+                  "label": "14",
+                  "image": "number-14"
+                },
+                {
+                  "label": "16",
+                  "image": "number-16"
+                }
+              ],
+              "answer": 0,
+              "hint": "Count them one by one.",
+              "tests": "n18"
+            },
+            {
+              "id": "c19",
+              "image": "count-19",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "16",
+                  "image": "number-16"
+                },
+                {
+                  "label": "14",
+                  "image": "number-14"
+                },
+                {
+                  "label": "19",
+                  "image": "number-19"
+                }
+              ],
+              "answer": 2,
+              "hint": "Count them one by one.",
+              "tests": "n19"
+            },
+            {
+              "id": "c20",
+              "image": "count-20",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "20",
+                  "image": "number-20"
+                },
+                {
+                  "label": "22",
+                  "image": "number-22"
+                },
+                {
+                  "label": "15",
+                  "image": "number-15"
+                }
+              ],
+              "answer": 0,
+              "hint": "Count them one by one.",
+              "tests": "n20"
+            }
+          ]
+        },
+        {
+          "id": "u2l9-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q16",
+              "type": "listen-choose",
+              "ask": "Listen. Which number is it?",
+              "askBn": "শোনো। কোন সংখ্যা?",
+              "speak": "16",
+              "options": [
+                {
+                  "label": "20"
+                },
+                {
+                  "label": "22"
+                },
+                {
+                  "label": "16"
+                }
+              ],
+              "answer": 2,
+              "tests": "n16"
+            },
+            {
+              "id": "q17",
+              "type": "tap-picture",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "image": "count-17",
+              "options": [
+                {
+                  "label": "17"
+                },
+                {
+                  "label": "14"
+                },
+                {
+                  "label": "19"
+                }
+              ],
+              "answer": 0,
+              "tests": "n17"
+            },
+            {
+              "id": "q18",
+              "type": "listen-choose",
+              "ask": "Listen. Which number is it?",
+              "askBn": "শোনো। কোন সংখ্যা?",
+              "speak": "18",
+              "options": [
+                {
+                  "label": "18"
+                },
+                {
+                  "label": "19"
+                },
+                {
+                  "label": "16"
+                }
+              ],
+              "answer": 0,
+              "tests": "n18"
+            },
+            {
+              "id": "q19",
+              "type": "tap-picture",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "image": "count-19",
+              "options": [
+                {
+                  "label": "21"
+                },
+                {
+                  "label": "18"
+                },
+                {
+                  "label": "19"
+                }
+              ],
+              "answer": 2,
+              "tests": "n19"
+            },
+            {
+              "id": "q-last",
+              "type": "tap-word",
+              "ask": "Which one is বিশ?",
+              "askBn": "কোনটি বিশ?",
+              "options": [
+                {
+                  "label": "20"
+                },
+                {
+                  "label": "16"
+                }
+              ],
+              "answer": 0,
+              "explain": "20 = বিশ",
+              "tests": "n20"
+            }
+          ]
+        },
+        {
+          "id": "u2l9-done",
+          "type": "done",
+          "title": "Well counted!",
+          "titleBn": "ঠিক গুনেছ!",
+          "say": "You can count to 20!",
+          "sayBn": "তুমি 20 পর্যন্ত গুনতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "u2l10",
+      "unitId": "u2",
+      "number": 10,
+      "title": "Words for u U - z Z",
+      "titleBn": "u-z অক্ষরের শব্দ",
+      "shape": "vocabulary",
+      "bookPages": [
+        25,
+        26,
+        27
+      ],
+      "objective": "Read and say the words for letters u-z.",
+      "objectiveBn": "u-z অক্ষরের শব্দ পড়া ও বলা।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "uniform",
+          "word": "uniform",
+          "bangla": "স্কুল পোশাক",
+          "banglaPronunciation": "ইউনিফর্ম",
+          "banglaSource": "enrichment",
+          "bookPage": 25,
+          "category": "object",
+          "image": "uniform"
+        },
+        {
+          "id": "vase",
+          "word": "vase",
+          "bangla": "ফুলদানি",
+          "banglaPronunciation": "ভেইজ",
+          "banglaSource": "enrichment",
+          "bookPage": 25,
+          "category": "object",
+          "image": "vase"
+        },
+        {
+          "id": "whale",
+          "word": "whale",
+          "bangla": "তিমি",
+          "banglaPronunciation": "হোয়েল",
+          "banglaSource": "enrichment",
+          "bookPage": 25,
+          "category": "animal",
+          "image": "whale"
+        },
+        {
+          "id": "x-ray",
+          "word": "x-ray",
+          "bangla": "এক্স-রে",
+          "banglaPronunciation": "এক্স-রে",
+          "banglaSource": "enrichment",
+          "bookPage": 25,
+          "category": "object",
+          "image": "x-ray"
+        },
+        {
+          "id": "yoke",
+          "word": "yoke",
+          "bangla": "জোয়াল",
+          "banglaPronunciation": "ইয়োক",
+          "banglaSource": "enrichment",
+          "bookPage": 25,
+          "category": "object",
+          "image": "yoke"
+        },
+        {
+          "id": "zebra",
+          "word": "zebra",
+          "bangla": "জেব্রা",
+          "banglaPronunciation": "জেব্রা",
+          "banglaSource": "enrichment",
+          "bookPage": 25,
+          "category": "animal",
+          "image": "zebra"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u2l10-intro",
+          "type": "intro",
+          "title": "Letters u-z",
+          "titleBn": "নতুন অক্ষর",
+          "say": "Here are words for u-z.",
+          "sayBn": "এই অক্ষরগুলোর শব্দ শিখি।",
+          "illustration": "uniform"
+        },
+        {
+          "id": "u2l10-words",
+          "type": "vocab",
+          "bookActivity": "B",
+          "title": "Look, listen and say",
+          "titleBn": "দেখো, শোনো, বলো",
+          "items": [
+            "uniform",
+            "vase",
+            "whale",
+            "x-ray",
+            "yoke",
+            "zebra"
+          ]
+        },
+        {
+          "id": "u2l10-game",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "F",
+          "title": "Find the word",
+          "titleBn": "শব্দ খুঁজে বের করো",
+          "rounds": [
+            {
+              "id": "r-uniform",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "uniform",
+              "options": [
+                {
+                  "label": "x-ray"
+                },
+                {
+                  "label": "vase"
+                },
+                {
+                  "label": "uniform"
+                }
+              ],
+              "answer": 2,
+              "hint": "It starts with u.",
+              "tests": "uniform"
+            },
+            {
+              "id": "r-vase",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "vase",
+              "options": [
+                {
+                  "label": "uniform"
+                },
+                {
+                  "label": "x-ray"
+                },
+                {
+                  "label": "vase"
+                }
+              ],
+              "answer": 2,
+              "hint": "It starts with v.",
+              "tests": "vase"
+            },
+            {
+              "id": "r-whale",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "whale",
+              "options": [
+                {
+                  "label": "whale"
+                },
+                {
+                  "label": "vase"
+                },
+                {
+                  "label": "uniform"
+                }
+              ],
+              "answer": 0,
+              "hint": "It starts with w.",
+              "tests": "whale"
+            },
+            {
+              "id": "r-x-ray",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "x-ray",
+              "options": [
+                {
+                  "label": "zebra"
+                },
+                {
+                  "label": "yoke"
+                },
+                {
+                  "label": "x-ray"
+                }
+              ],
+              "answer": 2,
+              "hint": "It starts with x.",
+              "tests": "x-ray"
+            },
+            {
+              "id": "r-yoke",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "yoke",
+              "options": [
+                {
+                  "label": "uniform"
+                },
+                {
+                  "label": "yoke"
+                },
+                {
+                  "label": "x-ray"
+                }
+              ],
+              "answer": 1,
+              "hint": "It starts with y.",
+              "tests": "yoke"
+            },
+            {
+              "id": "r-zebra",
+              "ask": "Which word is this?",
+              "askBn": "এটি কোন শব্দ?",
+              "image": "zebra",
+              "options": [
+                {
+                  "label": "zebra"
+                },
+                {
+                  "label": "uniform"
+                },
+                {
+                  "label": "yoke"
+                }
+              ],
+              "answer": 0,
+              "hint": "It starts with z.",
+              "tests": "zebra"
+            }
+          ]
+        },
+        {
+          "id": "u2l10-scramble",
+          "type": "game",
+          "kind": "unscramble",
+          "bookActivity": "D",
+          "title": "Make the word",
+          "titleBn": "শব্দ বানাও",
+          "rounds": [
+            {
+              "id": "s-uniform",
+              "ask": "Make a word: i o m u n f r",
+              "askBn": "অক্ষর সাজিয়ে শব্দ বানাও",
+              "options": [
+                {
+                  "label": "uniform"
+                },
+                {
+                  "label": "yoke"
+                },
+                {
+                  "label": "vase"
+                }
+              ],
+              "answer": 0,
+              "hint": "It has 7 letters.",
+              "tests": "uniform"
+            },
+            {
+              "id": "s-vase",
+              "ask": "Make a word: s a v e",
+              "askBn": "অক্ষর সাজিয়ে শব্দ বানাও",
+              "options": [
+                {
+                  "label": "vase"
+                },
+                {
+                  "label": "x-ray"
+                },
+                {
+                  "label": "yoke"
+                }
+              ],
+              "answer": 0,
+              "hint": "It has 4 letters.",
+              "tests": "vase"
+            },
+            {
+              "id": "s-whale",
+              "ask": "Make a word: w h a e l",
+              "askBn": "অক্ষর সাজিয়ে শব্দ বানাও",
+              "options": [
+                {
+                  "label": "vase"
+                },
+                {
+                  "label": "yoke"
+                },
+                {
+                  "label": "whale"
+                }
+              ],
+              "answer": 2,
+              "hint": "It has 5 letters.",
+              "tests": "whale"
+            }
+          ]
+        },
+        {
+          "id": "u2l10-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q-uniform",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "uniform",
+              "options": [
+                {
+                  "label": "uniform"
+                },
+                {
+                  "label": "zebra"
+                },
+                {
+                  "label": "x-ray"
+                }
+              ],
+              "answer": 0,
+              "tests": "uniform"
+            },
+            {
+              "id": "q-vase",
+              "type": "tap-picture",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "vase",
+              "options": [
+                {
+                  "label": "zebra"
+                },
+                {
+                  "label": "uniform"
+                },
+                {
+                  "label": "vase"
+                }
+              ],
+              "answer": 2,
+              "explain": "vase = ফুলদানি",
+              "tests": "vase"
+            },
+            {
+              "id": "q-whale",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "whale",
+              "options": [
+                {
+                  "label": "zebra"
+                },
+                {
+                  "label": "whale"
+                },
+                {
+                  "label": "vase"
+                }
+              ],
+              "answer": 1,
+              "tests": "whale"
+            },
+            {
+              "id": "q-x-ray",
+              "type": "tap-picture",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "x-ray",
+              "options": [
+                {
+                  "label": "zebra"
+                },
+                {
+                  "label": "uniform"
+                },
+                {
+                  "label": "x-ray"
+                }
+              ],
+              "answer": 2,
+              "explain": "x-ray = এক্স-রে",
+              "tests": "x-ray"
+            },
+            {
+              "id": "q-meaning",
+              "type": "tap-word",
+              "ask": "Which word means স্কুল পোশাক?",
+              "askBn": "কোন শব্দের অর্থ স্কুল পোশাক?",
+              "options": [
+                {
+                  "label": "uniform"
+                },
+                {
+                  "label": "yoke"
+                },
+                {
+                  "label": "whale"
+                }
+              ],
+              "answer": 0,
+              "explain": "uniform = স্কুল পোশাক",
+              "tests": "uniform"
+            }
+          ]
+        },
+        {
+          "id": "u2l10-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You learned 6 new words!",
+          "sayBn": "তুমি নতুন শব্দ শিখেছ!"
+        }
+      ]
+    },
+    {
+      "id": "u2l11",
+      "unitId": "u2",
+      "number": 11,
+      "title": "Numbers 21-25",
+      "titleBn": "সংখ্যা 21-25",
+      "shape": "numbers",
+      "bookPages": [
+        28
+      ],
+      "objective": "Count and read the numbers 21 to 25. The textbook shows these as figures only.",
+      "objectiveBn": "21 থেকে 25 পর্যন্ত গোনা ও পড়া।",
+      "minutes": 6,
+      "vocabulary": [
+        {
+          "id": "n21",
+          "word": "21",
+          "bangla": "একুশ",
+          "banglaSource": "enrichment",
+          "bookPage": 28,
+          "category": "number",
+          "image": "number-21"
+        },
+        {
+          "id": "n22",
+          "word": "22",
+          "bangla": "বাইশ",
+          "banglaSource": "enrichment",
+          "bookPage": 28,
+          "category": "number",
+          "image": "number-22"
+        },
+        {
+          "id": "n23",
+          "word": "23",
+          "bangla": "তেইশ",
+          "banglaSource": "enrichment",
+          "bookPage": 28,
+          "category": "number",
+          "image": "number-23"
+        },
+        {
+          "id": "n24",
+          "word": "24",
+          "bangla": "চব্বিশ",
+          "banglaSource": "enrichment",
+          "bookPage": 28,
+          "category": "number",
+          "image": "number-24"
+        },
+        {
+          "id": "n25",
+          "word": "25",
+          "bangla": "পঁচিশ",
+          "banglaSource": "enrichment",
+          "bookPage": 28,
+          "category": "number",
+          "image": "number-25"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u2l11-intro",
+          "type": "intro",
+          "title": "Numbers 21 to 25",
+          "titleBn": "সংখ্যা 21-25",
+          "say": "Let us count together.",
+          "sayBn": "চলো একসাথে গুনি।",
+          "illustration": "number-21"
+        },
+        {
+          "id": "u2l11-words",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Listen and count",
+          "titleBn": "শোনো আর গোনো",
+          "items": [
+            "n21",
+            "n22",
+            "n23",
+            "n24",
+            "n25"
+          ]
+        },
+        {
+          "id": "u2l11-count",
+          "type": "game",
+          "kind": "count-objects",
+          "bookActivity": "A",
+          "title": "Count them!",
+          "titleBn": "গুনে বলো!",
+          "rounds": [
+            {
+              "id": "c21",
+              "image": "count-21",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "26",
+                  "image": "number-26"
+                },
+                {
+                  "label": "21",
+                  "image": "number-21"
+                },
+                {
+                  "label": "24",
+                  "image": "number-24"
+                }
+              ],
+              "answer": 1,
+              "hint": "Count them one by one.",
+              "tests": "n21"
+            },
+            {
+              "id": "c22",
+              "image": "count-22",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "20",
+                  "image": "number-20"
+                },
+                {
+                  "label": "21",
+                  "image": "number-21"
+                },
+                {
+                  "label": "22",
+                  "image": "number-22"
+                }
+              ],
+              "answer": 2,
+              "hint": "Count them one by one.",
+              "tests": "n22"
+            },
+            {
+              "id": "c23",
+              "image": "count-23",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "24",
+                  "image": "number-24"
+                },
+                {
+                  "label": "27",
+                  "image": "number-27"
+                },
+                {
+                  "label": "23",
+                  "image": "number-23"
+                }
+              ],
+              "answer": 2,
+              "hint": "Count them one by one.",
+              "tests": "n23"
+            },
+            {
+              "id": "c24",
+              "image": "count-24",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "27",
+                  "image": "number-27"
+                },
+                {
+                  "label": "19",
+                  "image": "number-19"
+                },
+                {
+                  "label": "24",
+                  "image": "number-24"
+                }
+              ],
+              "answer": 2,
+              "hint": "Count them one by one.",
+              "tests": "n24"
+            },
+            {
+              "id": "c25",
+              "image": "count-25",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "25",
+                  "image": "number-25"
+                },
+                {
+                  "label": "20",
+                  "image": "number-20"
+                },
+                {
+                  "label": "24",
+                  "image": "number-24"
+                }
+              ],
+              "answer": 0,
+              "hint": "Count them one by one.",
+              "tests": "n25"
+            }
+          ]
+        },
+        {
+          "id": "u2l11-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q21",
+              "type": "listen-choose",
+              "ask": "Listen. Which number is it?",
+              "askBn": "শোনো। কোন সংখ্যা?",
+              "speak": "21",
+              "options": [
+                {
+                  "label": "21"
+                },
+                {
+                  "label": "22"
+                },
+                {
+                  "label": "20"
+                }
+              ],
+              "answer": 0,
+              "tests": "n21"
+            },
+            {
+              "id": "q22",
+              "type": "tap-picture",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "image": "count-22",
+              "options": [
+                {
+                  "label": "22"
+                },
+                {
+                  "label": "23"
+                },
+                {
+                  "label": "21"
+                }
+              ],
+              "answer": 0,
+              "tests": "n22"
+            },
+            {
+              "id": "q23",
+              "type": "listen-choose",
+              "ask": "Listen. Which number is it?",
+              "askBn": "শোনো। কোন সংখ্যা?",
+              "speak": "23",
+              "options": [
+                {
+                  "label": "23"
+                },
+                {
+                  "label": "27"
+                },
+                {
+                  "label": "20"
+                }
+              ],
+              "answer": 0,
+              "tests": "n23"
+            },
+            {
+              "id": "q24",
+              "type": "tap-picture",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "image": "count-24",
+              "options": [
+                {
+                  "label": "21"
+                },
+                {
+                  "label": "24"
+                },
+                {
+                  "label": "22"
+                }
+              ],
+              "answer": 1,
+              "tests": "n24"
+            },
+            {
+              "id": "q-last",
+              "type": "tap-word",
+              "ask": "Which one is পঁচিশ?",
+              "askBn": "কোনটি পঁচিশ?",
+              "options": [
+                {
+                  "label": "25"
+                },
+                {
+                  "label": "21"
+                }
+              ],
+              "answer": 0,
+              "explain": "25 = পঁচিশ",
+              "tests": "n25"
+            }
+          ]
+        },
+        {
+          "id": "u2l11-done",
+          "type": "done",
+          "title": "Well counted!",
+          "titleBn": "ঠিক গুনেছ!",
+          "say": "You can count to 25!",
+          "sayBn": "তুমি 25 পর্যন্ত গুনতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "u2l12",
+      "unitId": "u2",
+      "number": 12,
+      "title": "Eating vegetables",
+      "titleBn": "সবজি খাওয়া",
+      "shape": "rhyme",
+      "bookPages": [
+        29
+      ],
+      "objective": "Name vegetables and say the rhyme.",
+      "objectiveBn": "সবজির নাম বলা আর ছড়া বলা।",
+      "minutes": 6,
+      "vocabulary": [
+        {
+          "id": "tomato",
+          "word": "tomato",
+          "bangla": "টমেটো",
+          "banglaPronunciation": "টমেটো",
+          "banglaSource": "enrichment",
+          "bookPage": 29,
+          "category": "food",
+          "image": "tomato"
+        },
+        {
+          "id": "carrot",
+          "word": "carrot",
+          "bangla": "গাজর",
+          "banglaPronunciation": "ক্যারট",
+          "banglaSource": "enrichment",
+          "bookPage": 29,
+          "category": "food",
+          "image": "carrot"
+        },
+        {
+          "id": "cabbage",
+          "word": "cabbage",
+          "bangla": "বাঁধাকপি",
+          "banglaPronunciation": "ক্যাবেজ",
+          "banglaSource": "enrichment",
+          "bookPage": 29,
+          "category": "food",
+          "image": "cabbage"
+        },
+        {
+          "id": "peas",
+          "word": "peas",
+          "bangla": "মটরশুঁটি",
+          "banglaPronunciation": "পিজ",
+          "banglaSource": "enrichment",
+          "bookPage": 29,
+          "category": "food",
+          "image": "peas"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u2l12-intro",
+          "type": "intro",
+          "title": "Vegetables",
+          "titleBn": "সবজি",
+          "say": "Vegetables help you grow strong.",
+          "sayBn": "সবজি খেলে শরীর শক্ত হয়।",
+          "illustration": "vegetables"
+        },
+        {
+          "id": "u2l12-words",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Name the vegetables",
+          "titleBn": "সবজির নাম বলো",
+          "items": [
+            "tomato",
+            "carrot",
+            "cabbage",
+            "peas"
+          ]
+        },
+        {
+          "id": "u2l12-rhyme",
+          "type": "rhyme",
+          "bookActivity": "B",
+          "title": "Vegetables",
+          "titleBn": "ছড়া: Vegetables",
+          "source": "textbook",
+          "verses": [
+            [
+              "Tomatoes and carrots",
+              "Cabbage and peas",
+              "Look so yummy",
+              "All red and green."
+            ],
+            [
+              "So little children",
+              "Eat them everyday",
+              "To make you grow",
+              "Strong and smart."
+            ]
+          ]
+        },
+        {
+          "id": "u2l12-game",
+          "type": "game",
+          "kind": "picture-to-word",
+          "title": "Find the vegetable",
+          "titleBn": "সবজি খুঁজে বের করো",
+          "rounds": [
+            {
+              "id": "v-tomato",
+              "ask": "Which vegetable is this?",
+              "askBn": "এটি কোন সবজি?",
+              "image": "tomato",
+              "options": [
+                {
+                  "label": "cabbage"
+                },
+                {
+                  "label": "peas"
+                },
+                {
+                  "label": "tomato"
+                }
+              ],
+              "answer": 2,
+              "hint": "Its Bangla name is টমেটো.",
+              "tests": "tomato"
+            },
+            {
+              "id": "v-carrot",
+              "ask": "Which vegetable is this?",
+              "askBn": "এটি কোন সবজি?",
+              "image": "carrot",
+              "options": [
+                {
+                  "label": "cabbage"
+                },
+                {
+                  "label": "tomato"
+                },
+                {
+                  "label": "carrot"
+                }
+              ],
+              "answer": 2,
+              "hint": "Its Bangla name is গাজর.",
+              "tests": "carrot"
+            },
+            {
+              "id": "v-cabbage",
+              "ask": "Which vegetable is this?",
+              "askBn": "এটি কোন সবজি?",
+              "image": "cabbage",
+              "options": [
+                {
+                  "label": "carrot"
+                },
+                {
+                  "label": "tomato"
+                },
+                {
+                  "label": "cabbage"
+                }
+              ],
+              "answer": 2,
+              "hint": "Its Bangla name is বাঁধাকপি.",
+              "tests": "cabbage"
+            },
+            {
+              "id": "v-peas",
+              "ask": "Which vegetable is this?",
+              "askBn": "এটি কোন সবজি?",
+              "image": "peas",
+              "options": [
+                {
+                  "label": "peas"
+                },
+                {
+                  "label": "tomato"
+                },
+                {
+                  "label": "carrot"
+                }
+              ],
+              "answer": 0,
+              "hint": "Its Bangla name is মটরশুঁটি.",
+              "tests": "peas"
+            }
+          ]
+        },
+        {
+          "id": "u2l12-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "fill-blank",
+              "ask": "Tomatoes and ___ .",
+              "options": [
+                {
+                  "label": "carrots"
+                },
+                {
+                  "label": "peas"
+                },
+                {
+                  "label": "cabbage"
+                }
+              ],
+              "answer": 0,
+              "explain": "The rhyme says: Tomatoes and carrots.",
+              "tests": "carrot"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which one?",
+              "askBn": "শোনো। কোনটি?",
+              "speak": "cabbage",
+              "options": [
+                {
+                  "label": "cabbage"
+                },
+                {
+                  "label": "tomato"
+                },
+                {
+                  "label": "peas"
+                }
+              ],
+              "answer": 0,
+              "tests": "cabbage"
+            },
+            {
+              "id": "q3",
+              "type": "tap-word",
+              "ask": "Which word means গাজর?",
+              "askBn": "কোন শব্দের অর্থ গাজর?",
+              "options": [
+                {
+                  "label": "carrot"
+                },
+                {
+                  "label": "peas"
+                },
+                {
+                  "label": "tomato"
+                }
+              ],
+              "answer": 0,
+              "explain": "carrot = গাজর",
+              "tests": "carrot"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "Vegetables help you grow strong.",
+              "askBn": "সবজি খেলে শরীর শক্ত হয়।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "To make you grow strong and smart.",
+              "tests": "peas"
+            }
+          ]
+        },
+        {
+          "id": "u2l12-done",
+          "type": "done",
+          "title": "Yummy!",
+          "titleBn": "মজার!",
+          "say": "You can name four vegetables!",
+          "sayBn": "তুমি চারটি সবজির নাম বলতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "u2l13",
+      "unitId": "u2",
+      "number": 13,
+      "title": "Numbers 26-30",
+      "titleBn": "সংখ্যা 26-30",
+      "shape": "numbers",
+      "bookPages": [
+        30
+      ],
+      "objective": "Count and read the numbers 26 to 30. The textbook shows these as figures only.",
+      "objectiveBn": "26 থেকে 30 পর্যন্ত গোনা ও পড়া।",
+      "minutes": 6,
+      "vocabulary": [
+        {
+          "id": "n26",
+          "word": "26",
+          "bangla": "ছাব্বিশ",
+          "banglaSource": "enrichment",
+          "bookPage": 30,
+          "category": "number",
+          "image": "number-26"
+        },
+        {
+          "id": "n27",
+          "word": "27",
+          "bangla": "সাতাশ",
+          "banglaSource": "enrichment",
+          "bookPage": 30,
+          "category": "number",
+          "image": "number-27"
+        },
+        {
+          "id": "n28",
+          "word": "28",
+          "bangla": "আটাশ",
+          "banglaSource": "enrichment",
+          "bookPage": 30,
+          "category": "number",
+          "image": "number-28"
+        },
+        {
+          "id": "n29",
+          "word": "29",
+          "bangla": "ঊনত্রিশ",
+          "banglaSource": "enrichment",
+          "bookPage": 30,
+          "category": "number",
+          "image": "number-29"
+        },
+        {
+          "id": "n30",
+          "word": "30",
+          "bangla": "ত্রিশ",
+          "banglaSource": "enrichment",
+          "bookPage": 30,
+          "category": "number",
+          "image": "number-30"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u2l13-intro",
+          "type": "intro",
+          "title": "Numbers 26 to 30",
+          "titleBn": "সংখ্যা 26-30",
+          "say": "Let us count together.",
+          "sayBn": "চলো একসাথে গুনি।",
+          "illustration": "number-26"
+        },
+        {
+          "id": "u2l13-words",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Listen and count",
+          "titleBn": "শোনো আর গোনো",
+          "items": [
+            "n26",
+            "n27",
+            "n28",
+            "n29",
+            "n30"
+          ]
+        },
+        {
+          "id": "u2l13-count",
+          "type": "game",
+          "kind": "count-objects",
+          "bookActivity": "A",
+          "title": "Count them!",
+          "titleBn": "গুনে বলো!",
+          "rounds": [
+            {
+              "id": "c26",
+              "image": "count-26",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "32",
+                  "image": "number-32"
+                },
+                {
+                  "label": "26",
+                  "image": "number-26"
+                },
+                {
+                  "label": "25",
+                  "image": "number-25"
+                }
+              ],
+              "answer": 1,
+              "hint": "Count them one by one.",
+              "tests": "n26"
+            },
+            {
+              "id": "c27",
+              "image": "count-27",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "25",
+                  "image": "number-25"
+                },
+                {
+                  "label": "27",
+                  "image": "number-27"
+                },
+                {
+                  "label": "30",
+                  "image": "number-30"
+                }
+              ],
+              "answer": 1,
+              "hint": "Count them one by one.",
+              "tests": "n27"
+            },
+            {
+              "id": "c28",
+              "image": "count-28",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "28",
+                  "image": "number-28"
+                },
+                {
+                  "label": "25",
+                  "image": "number-25"
+                },
+                {
+                  "label": "26",
+                  "image": "number-26"
+                }
+              ],
+              "answer": 0,
+              "hint": "Count them one by one.",
+              "tests": "n28"
+            },
+            {
+              "id": "c29",
+              "image": "count-29",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "29",
+                  "image": "number-29"
+                },
+                {
+                  "label": "31",
+                  "image": "number-31"
+                },
+                {
+                  "label": "32",
+                  "image": "number-32"
+                }
+              ],
+              "answer": 0,
+              "hint": "Count them one by one.",
+              "tests": "n29"
+            },
+            {
+              "id": "c30",
+              "image": "count-30",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "options": [
+                {
+                  "label": "30",
+                  "image": "number-30"
+                },
+                {
+                  "label": "28",
+                  "image": "number-28"
+                },
+                {
+                  "label": "29",
+                  "image": "number-29"
+                }
+              ],
+              "answer": 0,
+              "hint": "Count them one by one.",
+              "tests": "n30"
+            }
+          ]
+        },
+        {
+          "id": "u2l13-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q26",
+              "type": "listen-choose",
+              "ask": "Listen. Which number is it?",
+              "askBn": "শোনো। কোন সংখ্যা?",
+              "speak": "26",
+              "options": [
+                {
+                  "label": "26"
+                },
+                {
+                  "label": "31"
+                },
+                {
+                  "label": "32"
+                }
+              ],
+              "answer": 0,
+              "tests": "n26"
+            },
+            {
+              "id": "q27",
+              "type": "tap-picture",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "image": "count-27",
+              "options": [
+                {
+                  "label": "27"
+                },
+                {
+                  "label": "26"
+                },
+                {
+                  "label": "25"
+                }
+              ],
+              "answer": 0,
+              "tests": "n27"
+            },
+            {
+              "id": "q28",
+              "type": "listen-choose",
+              "ask": "Listen. Which number is it?",
+              "askBn": "শোনো। কোন সংখ্যা?",
+              "speak": "28",
+              "options": [
+                {
+                  "label": "28"
+                },
+                {
+                  "label": "25"
+                },
+                {
+                  "label": "32"
+                }
+              ],
+              "answer": 0,
+              "tests": "n28"
+            },
+            {
+              "id": "q29",
+              "type": "tap-picture",
+              "ask": "How many?",
+              "askBn": "কয়টা আছে?",
+              "image": "count-29",
+              "options": [
+                {
+                  "label": "32"
+                },
+                {
+                  "label": "27"
+                },
+                {
+                  "label": "29"
+                }
+              ],
+              "answer": 2,
+              "tests": "n29"
+            },
+            {
+              "id": "q-last",
+              "type": "tap-word",
+              "ask": "Which one is ত্রিশ?",
+              "askBn": "কোনটি ত্রিশ?",
+              "options": [
+                {
+                  "label": "30"
+                },
+                {
+                  "label": "26"
+                }
+              ],
+              "answer": 0,
+              "explain": "30 = ত্রিশ",
+              "tests": "n30"
+            }
+          ]
+        },
+        {
+          "id": "u2l13-done",
+          "type": "done",
+          "title": "Well counted!",
+          "titleBn": "ঠিক গুনেছ!",
+          "say": "You can count to 30!",
+          "sayBn": "তুমি 30 পর্যন্ত গুনতে পারো!"
+        }
+      ]
+    }
+  ]
+}

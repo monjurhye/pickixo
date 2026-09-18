@@ -1,0 +1,55 @@
+# --- secrets: never commit ---
+# These do go to Google Drive, but only inside the AES-256 archive the
+# weekly backup builds — never in the clear, and never into git.
+# See docs/BACKUP.md.
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.crt
+*.csr
+*.pfx
+certs/
+secrets/
+
+# --- dependencies / build output ---
+node_modules/
+.next/
+out/
+dist/
+build/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.tsbuildinfo
+.tmp-test/
+
+# --- runtime data (not source) ---
+storage/
+logs/
+pgdata/
+backups/
+*.log
+
+# --- os / editor ---
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# ONNX Runtime Web binaries, 42 MB, copied out of node_modules by
+# apps/web/scripts/sync-ort-assets.mjs on every build. Generated from a pinned
+# dependency, so version control is the wrong place for them.
+#
+# The path is spelled out from the repository root on purpose: a pattern
+# containing a slash is anchored to the directory its .gitignore sits in, so a
+# bare `public/ort/` here matches <root>/public/ort and quietly fails to match
+# apps/web/public/ort — which is where the files actually are.
+apps/web/public/ort/

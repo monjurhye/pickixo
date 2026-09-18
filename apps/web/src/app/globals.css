@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm paper rather than pure white — easier on the eye in long sessions
+       and it makes the white cards read as raised surfaces. */
+    --canvas: 40 22% 98%;
+    --surface: 0 0% 100%;
+    --surface-sunken: 40 16% 96%;
+
+    --border: 38 14% 89%;
+    --border-strong: 38 12% 81%;
+
+    --ink: 220 18% 13%;
+    --ink-muted: 220 9% 40%;
+    --ink-subtle: 220 7% 55%;
+    --ink-inverted: 40 22% 98%;
+
+    /* Deep teal: distinctive against the wall of violet "AI" products, and it
+       passes AA on both the canvas and white. */
+    --accent: 176 58% 25%;
+    --accent-hover: 176 60% 20%;
+    --accent-soft: 176 40% 94%;
+    --accent-ink: 176 62% 22%;
+
+    --success: 152 45% 30%;
+    --warning: 32 72% 38%;
+    --danger: 358 58% 43%;
+
+    --shadow: 220 30% 20%;
+
+    color-scheme: light;
+  }
+
+  [data-theme='dark'] {
+    --canvas: 220 16% 9%;
+    --surface: 220 14% 12%;
+    --surface-sunken: 220 16% 10%;
+
+    --border: 220 10% 21%;
+    --border-strong: 220 9% 30%;
+
+    --ink: 40 20% 95%;
+    --ink-muted: 220 8% 66%;
+    --ink-subtle: 220 7% 52%;
+    --ink-inverted: 220 18% 13%;
+
+    /* Lifted and desaturated for dark surfaces — the light-mode teal would
+       vibrate against a near-black background. */
+    --accent: 174 46% 52%;
+    --accent-hover: 174 48% 60%;
+    --accent-soft: 176 30% 17%;
+    --accent-ink: 174 46% 62%;
+
+    --success: 152 40% 55%;
+    --warning: 36 70% 60%;
+    --danger: 358 62% 64%;
+
+    --shadow: 220 40% 2%;
+
+    color-scheme: dark;
+  }
+
+  * { @apply border-border; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    @apply bg-canvas text-ink font-sans text-body antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  /* Bengali needs more vertical room than Latin: its conjuncts and the
+     matra (headline) sit outside the Latin x-height band, so the same
+     line-height that looks generous in English looks cramped in বাংলা. */
+  :lang(bn), [lang='bn'] {
+    @apply font-bengali;
+    line-height: 1.85;
+    letter-spacing: 0;
+    font-feature-settings: normal;
+  }
+  :lang(bn) h1, :lang(bn) h2, :lang(bn) h3,
+  [lang='bn'] h1, [lang='bn'] h2, [lang='bn'] h3 {
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
+
+  /* A visible, consistent focus ring everywhere — never removed. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-canvas;
+  }
+
+  ::selection { @apply bg-accent/15 text-accent-ink; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .skeleton {
+    @apply relative overflow-hidden rounded bg-surface-sunken;
+  }
+  .skeleton::after {
+    content: '';
+    @apply absolute inset-0 -translate-x-full animate-shimmer;
+    background-image: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--ink) / 0.045),
+      transparent
+    );
+  }
+
+  /* Hairline dividers that stay crisp on high-DPI displays. */
+  .hairline { box-shadow: inset 0 -1px 0 hsl(var(--border)); }
+}
+
+/* ---------------------------------------------------------------------------
+   Class 2 English — small, purposeful animations.
+
+   The brief asks for animation where it helps understanding, and explicitly
+   not for heavy animation. These are a few seconds of CSS: a hand that waves,
+   a sun that breathes, a star that pulses when it is earned.
+
+   All of them stop for anyone who has asked their system to reduce motion —
+   a child who finds movement distracting should still be able to learn.
+   --------------------------------------------------------------------------- */
+
+@keyframes c2-wave-arm {
+  0%, 100% { transform: rotate(0deg); }
+  25%      { transform: rotate(-14deg); }
+  75%      { transform: rotate(14deg); }
+}
+
+@keyframes c2-pulse-soft {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.06); }
+}
+
+@keyframes c2-bounce-soft {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
+}
+
+.c2-wave {
+  transform-origin: 64px 66px;
+  animation: c2-wave-arm 1.6s ease-in-out infinite;
+}
+
+.c2-wave-hand {
+  animation: c2-wave-arm 1.4s ease-in-out infinite;
+}
+
+.c2-pulse {
+  transform-origin: center;
+  animation: c2-pulse-soft 2.2s ease-in-out infinite;
+}
+
+.c2-bounce {
+  transform-origin: center;
+  animation: c2-bounce-soft 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c2-wave,
+  .c2-wave-hand,
+  .c2-pulse,
+  .c2-bounce {
+    animation: none;
+  }
+}

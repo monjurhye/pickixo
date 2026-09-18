@@ -1,0 +1,721 @@
+{
+  "id": "u1",
+  "number": 1,
+  "title": "Greetings, Introductions and Farewells",
+  "titleBn": "শুভেচ্ছা, পরিচয় ও বিদায়",
+  "colour": "sky",
+  "icon": "wave",
+  "_source": "English for Today, Class Two (NCTB). Unit 1, book pages 1-5.",
+  "_note": "Dialogues and the rhyme are transcribed word for word from the textbook. Bangla meanings are marked enrichment: the book carries no Bangla glosses.",
+  "lessons": [
+    {
+      "id": "u1l1",
+      "unitId": "u1",
+      "number": 1,
+      "title": "Greetings",
+      "titleBn": "শুভেচ্ছা",
+      "shape": "dialogue",
+      "bookPages": [1, 2],
+      "objective": "Say hello, ask someone's name, and say where you live.",
+      "objectiveBn": "হ্যালো বলা, নাম জিজ্ঞাসা করা আর কোথায় থাকো তা বলা।",
+      "minutes": 6,
+      "vocabulary": [
+        {
+          "id": "hello",
+          "word": "Hello",
+          "bangla": "হ্যালো",
+          "banglaPronunciation": "হ্যালো",
+          "banglaSource": "enrichment",
+          "bookPage": 2,
+          "category": "greeting",
+          "image": "hello",
+          "audio": null,
+          "example": "Hello!",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "good-morning",
+          "word": "Good morning",
+          "bangla": "সুপ্রভাত",
+          "banglaPronunciation": "গুড মর্নিং",
+          "banglaSource": "enrichment",
+          "bookPage": 1,
+          "category": "greeting",
+          "image": "sunrise",
+          "audio": null,
+          "example": "Good morning. What's your name, please?",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "name",
+          "word": "name",
+          "bangla": "নাম",
+          "banglaPronunciation": "নেইম",
+          "banglaSource": "enrichment",
+          "bookPage": 1,
+          "category": "expression",
+          "image": "nametag",
+          "audio": null,
+          "example": "My name's Ashim.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "thank-you",
+          "word": "Thank you",
+          "bangla": "ধন্যবাদ",
+          "banglaPronunciation": "থ্যাংক ইউ",
+          "banglaSource": "enrichment",
+          "bookPage": 1,
+          "category": "expression",
+          "image": "thanks",
+          "audio": null,
+          "example": "Thank you. Where do you live, Ashim?",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "live",
+          "word": "live",
+          "bangla": "বাস করা",
+          "banglaPronunciation": "লিভ",
+          "banglaSource": "enrichment",
+          "bookPage": 1,
+          "category": "action",
+          "image": "house",
+          "audio": null,
+          "example": "I live in Ukilpara.",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u1l1-intro",
+          "type": "intro",
+          "title": "Let's say hello!",
+          "titleBn": "চলো হ্যালো বলি!",
+          "say": "Fatiha and Ashim are meeting for the first time.",
+          "sayBn": "ফাতিহা আর আশিম প্রথমবার দেখা করছে।",
+          "illustration": "two-children-waving"
+        },
+        {
+          "id": "u1l1-words",
+          "type": "vocab",
+          "title": "New words",
+          "titleBn": "নতুন শব্দ",
+          "bookActivity": "B",
+          "items": ["hello", "good-morning", "name", "thank-you", "live"]
+        },
+        {
+          "id": "u1l1-dialogue",
+          "type": "dialogue",
+          "title": "Listen to Fatiha and Ashim",
+          "titleBn": "ফাতিহা আর আশিমের কথা শোনো",
+          "bookActivity": "B",
+          "source": "textbook",
+          "lines": [
+            { "speaker": "Fatiha", "text": "Good morning. What's your name, please?" },
+            { "speaker": "Ashim", "text": "Good morning. My name's Ashim." },
+            { "speaker": "Fatiha", "text": "Thank you. Where do you live, Ashim?" },
+            { "speaker": "Ashim", "text": "I live near the Town Hall. How about you?" },
+            { "speaker": "Fatiha", "text": "I live in Ukilpara." },
+            { "speaker": "Ashim", "text": "Oh, that's quite far away." }
+          ]
+        },
+        {
+          "id": "u1l1-speak",
+          "type": "speak",
+          "title": "Your turn!",
+          "titleBn": "এবার তোমার পালা!",
+          "bookActivity": "C",
+          "prompt": "What's your name?",
+          "promptBn": "তোমার নাম কী?",
+          "modelAnswer": "My name is ..."
+        },
+        {
+          "id": "u1l1-speak2",
+          "type": "speak",
+          "title": "Say where you live",
+          "titleBn": "তুমি কোথায় থাকো বলো",
+          "bookActivity": "C",
+          "prompt": "Where do you live?",
+          "promptBn": "তুমি কোথায় থাকো?",
+          "modelAnswer": "I live in ..."
+        },
+        {
+          "id": "u1l1-game",
+          "type": "game",
+          "title": "Choose the reply",
+          "titleBn": "সঠিক উত্তর বেছে নাও",
+          "kind": "choose-the-reply",
+          "rounds": [
+            {
+              "id": "r1",
+              "ask": "Someone says: Good morning!",
+              "askBn": "কেউ বলল: Good morning!",
+              "speak": "Good morning!",
+              "options": [
+                { "label": "Good morning!" },
+                { "label": "Goodbye!" },
+                { "label": "Thank you." }
+              ],
+              "answer": 0,
+              "hint": "Say the same greeting back. 🌅"
+            },
+            {
+              "id": "r2",
+              "ask": "What's your name?",
+              "askBn": "তোমার নাম কী?",
+              "speak": "What's your name?",
+              "options": [
+                { "label": "I live in Ukilpara." },
+                { "label": "My name is Ashim." },
+                { "label": "I am seven." }
+              ],
+              "answer": 1,
+              "hint": "They asked about your name. 🏷️"
+            },
+            {
+              "id": "r3",
+              "ask": "Where do you live?",
+              "askBn": "তুমি কোথায় থাকো?",
+              "speak": "Where do you live?",
+              "options": [
+                { "label": "My name is Fatiha." },
+                { "label": "Good morning." },
+                { "label": "I live near the Town Hall." }
+              ],
+              "answer": 2,
+              "hint": "They want to know your place. 🏠"
+            }
+          ]
+        },
+        {
+          "id": "u1l1-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-word",
+              "ask": "Which one is a greeting?",
+              "askBn": "কোনটি শুভেচ্ছা?",
+              "options": [{ "label": "Hello" }, { "label": "Ladder" }, { "label": "Orange" }],
+              "answer": 0,
+              "explain": "Hello is how we greet someone.",
+              "tests": "hello"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "Thank you",
+              "options": [{ "label": "Thank you" }, { "label": "Good morning" }, { "label": "Goodbye" }],
+              "answer": 0,
+              "tests": "thank-you"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "My ___ is Ashim.",
+              "askBn": "My ___ is Ashim.",
+              "options": [{ "label": "name" }, { "label": "live" }, { "label": "morning" }],
+              "answer": 0,
+              "explain": "We say 'My name is ...' to tell someone our name.",
+              "tests": "name"
+            },
+            {
+              "id": "q4",
+              "type": "tap-word",
+              "ask": "What do you say in the morning?",
+              "askBn": "সকালে কী বলবে?",
+              "options": [{ "label": "Good night" }, { "label": "Good morning" }],
+              "answer": 1,
+              "explain": "In the morning we say Good morning.",
+              "tests": "good-morning"
+            },
+            {
+              "id": "q5",
+              "type": "true-false",
+              "ask": "Ashim lives near the Town Hall.",
+              "askBn": "আশিম টাউন হলের কাছে থাকে।",
+              "options": [{ "label": "True" }, { "label": "False" }],
+              "answer": 0,
+              "explain": "Ashim said: I live near the Town Hall.",
+              "tests": "live"
+            }
+          ]
+        },
+        {
+          "id": "u1l1-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You can say hello and tell someone your name!",
+          "sayBn": "তুমি এখন হ্যালো বলতে আর নাম বলতে পারো!"
+        }
+      ]
+    },
+
+    {
+      "id": "u1l2",
+      "unitId": "u1",
+      "number": 2,
+      "title": "Introductions",
+      "titleBn": "পরিচয়",
+      "shape": "dialogue",
+      "bookPages": [3],
+      "objective": "Ask how someone is, and say your age.",
+      "objectiveBn": "কেমন আছো জিজ্ঞাসা করা আর নিজের বয়স বলা।",
+      "minutes": 6,
+      "vocabulary": [
+        {
+          "id": "how-are-you",
+          "word": "How are you?",
+          "bangla": "কেমন আছো?",
+          "banglaPronunciation": "হাউ আর ইউ",
+          "banglaSource": "enrichment",
+          "bookPage": 3,
+          "category": "expression",
+          "image": "asking",
+          "audio": null,
+          "example": "Hello, Ashim. How are you today?",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "fine",
+          "word": "fine",
+          "bangla": "ভালো",
+          "banglaPronunciation": "ফাইন",
+          "banglaSource": "enrichment",
+          "bookPage": 3,
+          "category": "expression",
+          "image": "happy-face",
+          "audio": null,
+          "example": "I am fine. Thank you.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "good",
+          "word": "good",
+          "bangla": "ভালো",
+          "banglaPronunciation": "গুড",
+          "banglaSource": "enrichment",
+          "bookPage": 3,
+          "category": "expression",
+          "image": "thumbs-up",
+          "audio": null,
+          "example": "I am good. And you?",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "how-old",
+          "word": "How old are you?",
+          "bangla": "তোমার বয়স কত?",
+          "banglaPronunciation": "হাউ ওল্ড আর ইউ",
+          "banglaSource": "enrichment",
+          "bookPage": 3,
+          "category": "expression",
+          "image": "birthday",
+          "audio": null,
+          "example": "How old are you?",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "seven",
+          "word": "seven",
+          "bangla": "সাত",
+          "banglaPronunciation": "সেভেন",
+          "banglaSource": "enrichment",
+          "bookPage": 3,
+          "category": "number",
+          "image": "number-7",
+          "audio": null,
+          "example": "I am seven.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "eight",
+          "word": "eight",
+          "bangla": "আট",
+          "banglaPronunciation": "এইট",
+          "banglaSource": "enrichment",
+          "bookPage": 3,
+          "category": "number",
+          "image": "number-8",
+          "audio": null,
+          "example": "I am eight. How about you?",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u1l2-intro",
+          "type": "intro",
+          "title": "How are you?",
+          "titleBn": "কেমন আছো?",
+          "say": "Fatiha and Ashim meet again. They are friends now.",
+          "sayBn": "ফাতিহা আর আশিম আবার দেখা করছে। এখন তারা বন্ধু।",
+          "illustration": "two-friends-talking"
+        },
+        {
+          "id": "u1l2-words",
+          "type": "vocab",
+          "title": "New words",
+          "titleBn": "নতুন শব্দ",
+          "items": ["how-are-you", "fine", "good", "how-old", "seven", "eight"]
+        },
+        {
+          "id": "u1l2-dialogue",
+          "type": "dialogue",
+          "title": "Listen and repeat",
+          "titleBn": "শোনো আর বলো",
+          "bookActivity": "A",
+          "source": "textbook",
+          "lines": [
+            { "speaker": "Fatiha", "text": "Hello, Ashim. How are you today?" },
+            { "speaker": "Ashim", "text": "Hi, Fatiha. I am good. And you?" },
+            { "speaker": "Fatiha", "text": "I am fine. Thank you." },
+            { "speaker": "Ashim", "text": "That's great!" },
+            { "speaker": "Fatiha", "text": "How old are you?" },
+            { "speaker": "Ashim", "text": "I am eight. How about you?" },
+            { "speaker": "Fatiha", "text": "I am seven." }
+          ]
+        },
+        {
+          "id": "u1l2-speak",
+          "type": "speak",
+          "title": "Your turn!",
+          "titleBn": "এবার তোমার পালা!",
+          "bookActivity": "B",
+          "prompt": "How old are you?",
+          "promptBn": "তোমার বয়স কত?",
+          "modelAnswer": "I am ..."
+        },
+        {
+          "id": "u1l2-game",
+          "type": "game",
+          "title": "Put the talk in order",
+          "titleBn": "কথাগুলো সাজাও",
+          "kind": "order-the-lines",
+          "rounds": [
+            {
+              "id": "r1",
+              "ask": "Who speaks first?",
+              "askBn": "কে প্রথমে বলে?",
+              "options": [
+                { "label": "Hello, Ashim. How are you today?" },
+                { "label": "I am fine. Thank you." },
+                { "label": "That's great!" }
+              ],
+              "answer": 0,
+              "hint": "A talk starts with a hello. 👋"
+            },
+            {
+              "id": "r2",
+              "ask": "Ashim is eight. How old is Fatiha?",
+              "askBn": "আশিমের বয়স আট। ফাতিহার বয়স কত?",
+              "options": [{ "label": "seven" }, { "label": "eight" }, { "label": "nine" }],
+              "answer": 0,
+              "hint": "Fatiha said: I am seven. 7️⃣"
+            }
+          ]
+        },
+        {
+          "id": "u1l2-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-word",
+              "ask": "How do you ask about someone's age?",
+              "askBn": "বয়স জানতে কী বলবে?",
+              "options": [{ "label": "How old are you?" }, { "label": "Where do you live?" }],
+              "answer": 0,
+              "tests": "how-old"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which number is it?",
+              "askBn": "শোনো। কোন সংখ্যা?",
+              "speak": "eight",
+              "options": [{ "label": "eight" }, { "label": "seven" }],
+              "answer": 0,
+              "tests": "eight"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "I am ___ . Thank you.",
+              "options": [{ "label": "fine" }, { "label": "name" }, { "label": "live" }],
+              "answer": 0,
+              "explain": "We say 'I am fine' when we feel well.",
+              "tests": "fine"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "Ashim is eight years old.",
+              "askBn": "আশিমের বয়স আট বছর।",
+              "options": [{ "label": "True" }, { "label": "False" }],
+              "answer": 0,
+              "explain": "Ashim said: I am eight.",
+              "tests": "eight"
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "Someone says: How are you?",
+              "askBn": "কেউ বলল: How are you?",
+              "options": [{ "label": "I am good." }, { "label": "I am seven." }],
+              "answer": 0,
+              "tests": "how-are-you"
+            }
+          ]
+        },
+        {
+          "id": "u1l2-done",
+          "type": "done",
+          "title": "Well done!",
+          "titleBn": "খুব ভালো!",
+          "say": "You can ask how someone is and say your age!",
+          "sayBn": "তুমি এখন কেমন আছো জিজ্ঞাসা করতে আর বয়স বলতে পারো!"
+        }
+      ]
+    },
+
+    {
+      "id": "u1l3",
+      "unitId": "u1",
+      "number": 3,
+      "title": "Farewells",
+      "titleBn": "বিদায়",
+      "shape": "rhyme",
+      "bookPages": [4, 5],
+      "objective": "Say goodbye in different friendly ways.",
+      "objectiveBn": "নানাভাবে বিদায় জানানো।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "goodbye",
+          "word": "Goodbye",
+          "bangla": "বিদায়",
+          "banglaPronunciation": "গুডবাই",
+          "banglaSource": "enrichment",
+          "bookPage": 4,
+          "category": "greeting",
+          "image": "waving-goodbye",
+          "audio": null,
+          "example": "Goodbye, Ahona.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "bye",
+          "word": "Bye",
+          "bangla": "বাই",
+          "banglaPronunciation": "বাই",
+          "banglaSource": "enrichment",
+          "bookPage": 4,
+          "category": "greeting",
+          "image": "hand-wave",
+          "audio": null,
+          "example": "See you again. Bye.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "see-you-again",
+          "word": "See you again",
+          "bangla": "আবার দেখা হবে",
+          "banglaPronunciation": "সি ইউ এগেইন",
+          "banglaSource": "enrichment",
+          "bookPage": 4,
+          "category": "expression",
+          "image": "see-you",
+          "audio": null,
+          "example": "See you again. Bye.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "take-care",
+          "word": "Take care",
+          "bangla": "সাবধানে থেকো",
+          "banglaPronunciation": "টেক কেয়ার",
+          "banglaSource": "enrichment",
+          "bookPage": 5,
+          "category": "expression",
+          "image": "care",
+          "audio": null,
+          "example": "Take care, polar bear!",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "see-you-later",
+          "word": "See you later",
+          "bangla": "পরে দেখা হবে",
+          "banglaPronunciation": "সি ইউ লেটার",
+          "banglaSource": "enrichment",
+          "bookPage": 5,
+          "category": "expression",
+          "image": "later",
+          "audio": null,
+          "example": "See you later, alligator.",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u1l3-intro",
+          "type": "intro",
+          "title": "Time to say goodbye",
+          "titleBn": "বিদায় বলার সময়",
+          "say": "Ahona has a class now. She says goodbye to Hridi.",
+          "sayBn": "অহনার এখন ক্লাস আছে। সে হৃদিকে বিদায় জানায়।",
+          "illustration": "children-waving-goodbye"
+        },
+        {
+          "id": "u1l3-words",
+          "type": "vocab",
+          "title": "New words",
+          "titleBn": "নতুন শব্দ",
+          "items": ["goodbye", "bye", "see-you-again", "take-care", "see-you-later"]
+        },
+        {
+          "id": "u1l3-dialogue",
+          "type": "dialogue",
+          "title": "Listen and repeat",
+          "titleBn": "শোনো আর বলো",
+          "bookActivity": "A",
+          "source": "textbook",
+          "lines": [
+            { "speaker": "Ahona", "text": "Hello Hridi. How are you?" },
+            { "speaker": "Hridi", "text": "I am good. And you?" },
+            { "speaker": "Ahona", "text": "I am okay. But I have a class now." },
+            { "speaker": "Hridi", "text": "Really!" },
+            { "speaker": "Ahona", "text": "Yes. I think I have to go now." },
+            { "speaker": "Hridi", "text": "Goodbye, Ahona." },
+            { "speaker": "Ahona", "text": "Goodbye, Hridi." },
+            { "speaker": "Hridi", "text": "See you again. Bye." }
+          ]
+        },
+        {
+          "id": "u1l3-rhyme",
+          "type": "rhyme",
+          "title": "Bye Bye",
+          "titleBn": "বাই বাই ছড়া",
+          "bookActivity": "C",
+          "source": "textbook",
+          "verses": [
+            ["Bye bye, butterfly.", "Take care, polar bear!"],
+            ["After a while, crocodile.", "Got to go, buffalo!"],
+            ["See you later, alligator.", "See you soon, penguin."],
+            ["Take a bow, brown cow!", "Give me a hug, lady bug."],
+            ["Out the door, dinosaur.", "On the bus, octopus."],
+            ["So long, King Kong!"]
+          ]
+        },
+        {
+          "id": "u1l3-game",
+          "type": "game",
+          "title": "Finish the rhyme",
+          "titleBn": "ছড়াটি শেষ করো",
+          "kind": "match-pairs",
+          "rounds": [
+            {
+              "id": "r1",
+              "ask": "See you later, ...?",
+              "askBn": "See you later, ...?",
+              "speak": "See you later",
+              "options": [{ "label": "alligator" }, { "label": "butterfly" }, { "label": "penguin" }],
+              "answer": 0,
+              "hint": "It rhymes with 'later'. 🐊"
+            },
+            {
+              "id": "r2",
+              "ask": "Bye bye, ...?",
+              "askBn": "Bye bye, ...?",
+              "speak": "Bye bye",
+              "options": [{ "label": "brown cow" }, { "label": "butterfly" }, { "label": "octopus" }],
+              "answer": 1,
+              "hint": "It rhymes with 'bye'. 🦋"
+            },
+            {
+              "id": "r3",
+              "ask": "Take care, ...?",
+              "askBn": "Take care, ...?",
+              "speak": "Take care",
+              "options": [{ "label": "dinosaur" }, { "label": "lady bug" }, { "label": "polar bear" }],
+              "answer": 2,
+              "hint": "It rhymes with 'care'. 🐻‍❄️"
+            }
+          ]
+        },
+        {
+          "id": "u1l3-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-word",
+              "ask": "Which one means goodbye?",
+              "askBn": "কোনটি বিদায় বোঝায়?",
+              "options": [{ "label": "Bye" }, { "label": "Hello" }, { "label": "Thank you" }],
+              "answer": 0,
+              "tests": "bye"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. What did you hear?",
+              "askBn": "শোনো। কী শুনলে?",
+              "speak": "See you again",
+              "options": [{ "label": "See you again" }, { "label": "Good morning" }],
+              "answer": 0,
+              "tests": "see-you-again"
+            },
+            {
+              "id": "q3",
+              "type": "true-false",
+              "ask": "Ahona has a class now.",
+              "askBn": "অহনার এখন ক্লাস আছে।",
+              "options": [{ "label": "True" }, { "label": "False" }],
+              "answer": 0,
+              "explain": "Ahona said: But I have a class now.",
+              "tests": "goodbye"
+            },
+            {
+              "id": "q4",
+              "type": "fill-blank",
+              "ask": "Take ___ , polar bear!",
+              "options": [{ "label": "care" }, { "label": "bye" }, { "label": "you" }],
+              "answer": 0,
+              "explain": "The rhyme says: Take care, polar bear!",
+              "tests": "take-care"
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "Your friend is going home. What do you say?",
+              "askBn": "বন্ধু বাড়ি যাচ্ছে। তুমি কী বলবে?",
+              "options": [{ "label": "Goodbye!" }, { "label": "How old are you?" }],
+              "answer": 0,
+              "tests": "goodbye"
+            }
+          ]
+        },
+        {
+          "id": "u1l3-done",
+          "type": "done",
+          "title": "Unit 1 finished!",
+          "titleBn": "ইউনিট ১ শেষ!",
+          "say": "You can say hello, tell your name and say goodbye!",
+          "sayBn": "তুমি এখন হ্যালো বলতে, নাম বলতে আর বিদায় জানাতে পারো!"
+        }
+      ]
+    }
+  ]
+}
