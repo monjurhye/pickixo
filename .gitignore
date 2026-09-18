@@ -1,6 +1,6 @@
 # --- secrets: never commit ---
 # These do go to Google Drive, but only inside the AES-256 archive the
-# weekly backup builds — never in the clear, and never into git.
+# nightly backup builds — never in the clear, and never into git.
 # See docs/BACKUP.md.
 .env
 .env.local
