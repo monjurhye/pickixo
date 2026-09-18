@@ -1,6 +1,6 @@
 # Backup and restore
 
-Every Friday at 02:00 this machine packs the whole of pickixo.com into one
+Every night at 02:00 this machine packs the whole of pickixo.com into one
 encrypted archive and uploads it to Google Drive (`monjurhye@gmail.com`).
 
 Since 18 September 2026 the source has a git remote —
@@ -35,14 +35,16 @@ pickixo-YYYY-MM-DD.7z          AES-256, encrypted headers
     └── certs/                 the TLS certificate and private key
 ```
 
-Roughly 1 MB a week, because everything a build can regenerate is left out:
+Roughly 1 MB a night, because everything a build can regenerate is left out:
 `node_modules`, `.next`, `.venv`, `apps/web/public/ort`, `__pycache__`.
 
 The 84 MB ONNX model is handled separately. It never changes, so it is synced
 to `Pickixo-Backups/assets/models/` rather than packed into every archive —
-it uploads once and is skipped every Friday after that.
+it uploads once and is skipped every night after that.
 
-**Retention:** 8 archives in Drive (two months), 3 on local disk.
+**Retention:** 60 archives in Drive (two months of nights), 7 on local disk.
+Both numbers are at the top of `Backup-Pickixo.ps1` as `$KeepRemote` and
+`$KeepLocal`. Sixty nightly archives are about 60 MB in Drive.
 
 ---
 
@@ -61,8 +63,8 @@ setup, and **it exists nowhere else.**
 > somewhere else, every archive in Drive is permanently unopenable. The backup
 > would be complete, uploaded, verified — and useless.
 
-Open `.env`, copy the value, and put it in a password manager. Do it before the
-first Friday.
+Open `.env`, copy the value, and put it in a password manager. Do it before
+tonight.
 
 Changing the passphrase later does not re-encrypt the archives already in
 Drive; those stay on the old one. If you rotate it, keep the old value until
@@ -85,7 +87,7 @@ Steps 1–3 are done. Step 4 is yours, because it signs you into Google.
 
 1. ~~Install rclone and 7-Zip~~ — done (`rclone v1.75.1`, `7-Zip 26.03`)
 2. ~~Create `C:\Pickixo\backup`, restricted to SYSTEM and Administrators~~ — done
-3. ~~Register the scheduled task~~ — done, `Pickixo Weekly Backup`, Fridays 02:00, runs as SYSTEM
+3. ~~Register the scheduled task~~ — done, `Pickixo Backup`, nightly 02:00, runs as SYSTEM
 4. **Connect Google Drive** — below
 
 ### 4. Connect Google Drive
@@ -139,14 +141,14 @@ back and compared by hash. Nothing else earns that wording.
 ## Checking on it
 
 ```powershell
-# Did last Friday run, and what happened?
+# Did last night run, and what happened?
 Get-Content (Get-ChildItem C:\Pickixo\logs\backup-*.log | Sort-Object Name -Desc | Select -First 1)
 
 # When does it next run, and how did it exit last time?
-Get-ScheduledTask -TaskName 'Pickixo Weekly Backup' | Get-ScheduledTaskInfo
+Get-ScheduledTask -TaskName 'Pickixo Backup' | Get-ScheduledTaskInfo
 
 # What is actually in Drive?
-$env:RCLONE_CONFIG = "C:\Pickixo\backup\rclone.conf"; rclone ls gdrive:Pickixo-Backups/weekly
+$env:RCLONE_CONFIG = "C:\Pickixo\backup\rclone.conf"; rclone ls gdrive:Pickixo-Backups/archives
 ```
 
 Exit codes: `0` fine · `2` finished, but parts were missing — see `MANIFEST.txt`
@@ -246,10 +248,10 @@ it does is its own kind of risk.
   removes that shared fate.
 - **Anything the git remote does not carry.** The remote holds source, and only
   as far as the last push. The database, the secrets and the service
-  definitions are in these archives alone — and the archives are weekly. A
-  commit pushed on Monday is safe within seconds; a row written on Monday is
-  not safe until Friday.
-- **Anything between Fridays.** Up to seven days of work is at risk at any
-  moment. If that becomes too much, the trigger in
-  `scripts/backup/Install-BackupTask.ps1` takes a daily schedule with a
-  one-line change.
+  definitions are in these archives alone — and the archives are nightly. A
+  commit pushed at noon is safe within seconds; a row written at noon is not
+  safe until 02:00.
+- **Anything since 02:00.** Up to a day of database writes is at risk at any
+  moment. Closing that gap further is not another schedule change — an archive
+  an hour would be mostly duplicate work — but continuous archiving, which
+  PostgreSQL does with WAL shipping and this setup does not use.

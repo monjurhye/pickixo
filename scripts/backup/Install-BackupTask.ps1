@@ -1,11 +1,11 @@
 ﻿<#
 .SYNOPSIS
-    One-time setup for the weekly pickixo.com backup.
+    One-time setup for the nightly pickixo.com backup.
 
 .DESCRIPTION
     Creates the working directory, locks it to SYSTEM and Administrators,
     generates the archive passphrase if there is not one already, and registers
-    the scheduled task for 02:00 every Friday.
+    the scheduled task for 02:00 every night.
 
     It deliberately does NOT connect Google Drive. That step signs you into a
     Google account, so it is yours to do — this script prints the exact command
@@ -75,7 +75,7 @@ else {
     $block = @(
         '',
         '# --- backup ----------------------------------------------------------------',
-        '# Encrypts the weekly Google Drive archive (7-Zip, AES-256, encrypted headers).',
+        '# Encrypts the nightly Google Drive archive (7-Zip, AES-256, encrypted headers).',
         '# The archive contains this .env and the TLS private key, so this passphrase is',
         '# the only thing standing between a copied archive and every secret here.',
         '#',
@@ -88,7 +88,7 @@ else {
     Remove-Variable generated, bytes
 
     Write-Output 'BACKUP_PASSPHRASE generated and written to .env.'
-    Write-Output '  >> Open .env, copy the value into your password manager, and do it before Friday. <<'
+    Write-Output '  >> Open .env, copy the value into your password manager, and do it before tonight. <<'
 }
 
 # --- 3. scheduled task ------------------------------------------------------
@@ -98,12 +98,25 @@ else {
 # why the backup script points RCLONE_CONFIG at C:\Pickixo\backup rather than
 # using the per-user default under AppData.
 
-$taskName = 'Pickixo Weekly Backup'
+$taskName = 'Pickixo Backup'
+
+# While the schedule was weekly the task was called 'Pickixo Weekly Backup'.
+# Registering under the new name does not replace that one — it would be left
+# behind, still firing every Friday against this same script, as a second copy
+# nobody is watching. So it is removed first. Safe when it is not there.
+$legacyName = 'Pickixo Weekly Backup'
+if (Get-ScheduledTask -TaskName $legacyName -ErrorAction SilentlyContinue) {
+    Unregister-ScheduledTask -TaskName $legacyName -Confirm:$false
+    Write-Output "Removed the superseded weekly task: '$legacyName'"
+}
 
 $action = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument (
     '-NoProfile -NonInteractive -ExecutionPolicy Bypass -File "{0}"' -f $script)
 
-$trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Friday -At $RunAt
+# Every night at $RunAt. -StartWhenAvailable below catches up a run that was
+# missed because the machine was off, which matters more nightly than weekly:
+# a missed night should not quietly become a two-day gap.
+$trigger = New-ScheduledTaskTrigger -Daily -At $RunAt
 
 $settings = New-ScheduledTaskSettingsSet `
     -StartWhenAvailable `

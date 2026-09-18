@@ -1,6 +1,6 @@
 ﻿<#
 .SYNOPSIS
-    Weekly off-machine backup of pickixo.com to Google Drive.
+    Nightly off-machine backup of pickixo.com to Google Drive.
 
 .DESCRIPTION
     Everything that would have to exist again after this machine is gone:
@@ -60,8 +60,14 @@ $SevenZip   = 'C:\Program Files\7-Zip\7z.exe'
 $Rclone     = 'C:\ProgramData\chocolatey\bin\rclone.exe'
 
 $Remote          = 'gdrive:Pickixo-Backups'
-$KeepLocal       = 3     # archives kept on this disk
-$KeepRemote      = 8     # archives kept in Drive — two months of Fridays
+
+# The whole retention policy. On a nightly schedule 60 archives is about 60 MB
+# in Drive, and buys back the same two-month window the weekly schedule had:
+# long enough that corruption noticed late can still be restored from before it
+# happened. Shorten these and that window shortens with them; nothing else in
+# this script depends on the numbers.
+$KeepLocal       = 7     # archives kept on this disk — a week
+$KeepRemote      = 60    # archives kept in Drive — two months of nights
 $env:RCLONE_CONFIG = Join-Path $WorkRoot 'rclone.conf'
 
 $Stamp      = Get-Date -Format 'yyyy-MM-dd'
@@ -387,18 +393,18 @@ try {
     }
     else {
         Invoke-Step -What 'Uploading archive' -Exe $Rclone -Arguments @(
-            'copy', $ArchivePath, "$Remote/weekly", '--transfers', '1', '--retries', '3', '--stats-log-level', 'NOTICE'
+            'copy', $ArchivePath, "$Remote/archives", '--transfers', '1', '--retries', '3', '--stats-log-level', 'NOTICE'
         ) | Out-Null
 
         # Read it back and compare hashes. rclone check exits non-zero on any
         # difference, so this is the line that entitles the log to say the
         # backup is in Drive.
         Invoke-Step -What 'Verifying upload against Drive' -Exe $Rclone -Arguments @(
-            'check', $OutDir, "$Remote/weekly", '--include', $ArchiveName, '--one-way'
+            'check', $OutDir, "$Remote/archives", '--include', $ArchiveName, '--one-way'
         ) | Out-Null
         Write-Log 'Upload verified: Drive holds a byte-identical copy'
 
-        # The model never changes, so sync skips it after the first Friday.
+        # The model never changes, so sync skips it after the first run.
         if (Test-Path $ModelDir) {
             Invoke-Step -What 'Syncing model assets' -Exe $Rclone -Arguments @(
                 'sync', $ModelDir, "$Remote/assets/models", '--transfers', '1', '--retries', '3'
@@ -409,14 +415,14 @@ try {
         }
 
         # -- 8. prune remote -------------------------------------------------
-        $remoteFiles = & $Rclone lsjson "$Remote/weekly" --files-only | ConvertFrom-Json
+        $remoteFiles = & $Rclone lsjson "$Remote/archives" --files-only | ConvertFrom-Json
         $stale = $remoteFiles |
             Where-Object { $_.Name -like 'pickixo-*.7z' } |
             Sort-Object Name -Descending |
             Select-Object -Skip $KeepRemote
         foreach ($old in $stale) {
             Invoke-Step -What "Pruning remote $($old.Name)" -Exe $Rclone `
-                -Arguments @('deletefile', "$Remote/weekly/$($old.Name)") -AllowFailure | Out-Null
+                -Arguments @('deletefile', "$Remote/archives/$($old.Name)") -AllowFailure | Out-Null
         }
         if (-not $stale) { Write-Log "Remote holds $(($remoteFiles | Measure-Object).Count) archives; nothing to prune" }
         $uploaded = $true
