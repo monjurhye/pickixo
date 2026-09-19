@@ -9,7 +9,7 @@ import { formatBn, fromBnDigits, gradeLabel, taka, toBnDigits } from '@/lib/pays
 import { SalaryResult } from './SalaryResult';
 import { FirstAppointmentCalculator } from './FirstAppointmentCalculator';
 import {
-  Card, Field, Warnings, buttonClass, inputClass, secondaryButtonClass, selectClass,
+  Card, Field, ModeSwitch, Warnings, buttonClass, inputClass, secondaryButtonClass, selectClass,
 } from './Ui';
 import type { EmployeeCategory, FixationInput, Grade } from '@/lib/payscale/types';
 
@@ -120,27 +120,15 @@ export function SalaryCalculator({ initialQuery }: { initialQuery?: Record<strin
   }
 
   const modeSwitch = (
-    <div role="tablist" aria-label="কর্মচারীর ধরন" className="ps-no-print flex flex-wrap gap-2">
-      {([
-        ['existing', 'বিদ্যমান কর্মচারী — অনুচ্ছেদ ৫ ও ৯'],
-        ['new-joiner', 'নূতন নিয়োগ (১ জুলাই ২০২৬ বা পরে) — অনুচ্ছেদ ১০'],
-      ] as const).map(([value, label]) => (
-        <button
-          key={value}
-          type="button"
-          role="tab"
-          aria-selected={mode === value}
-          onClick={() => setMode(value)}
-          className={`rounded-control border px-3.5 py-2 text-small font-medium transition ${
-            mode === value
-              ? 'border-accent bg-accent-soft text-accent-ink'
-              : 'border-border bg-surface text-ink-muted hover:border-border-strong'
-          }`}
-        >
-          {label}
-        </button>
-      ))}
-    </div>
+    <ModeSwitch
+      label="কর্মচারীর ধরন"
+      value={mode}
+      onChange={setMode}
+      options={[
+        { value: 'existing', title: 'বিদ্যমান কর্মচারী', sub: '৩০ জুন ২০২৬ পর্যন্ত চাকরিতে আছেন' },
+        { value: 'new-joiner', title: 'নূতন নিয়োগ', sub: '১ জুলাই ২০২৬ বা তাহার পরে যোগদান' },
+      ] as const}
+    />
   );
 
   if (mode === 'new-joiner') {
@@ -156,9 +144,16 @@ export function SalaryCalculator({ initialQuery }: { initialQuery?: Record<strin
     <div className="space-y-5">
       {modeSwitch}
       <Card className="ps-no-print">
-        <form onSubmit={submit} className="space-y-4">
+        <form onSubmit={submit} className="space-y-5">
+          <div>
+            <h2 className="text-subheading text-ink">আপনার তথ্য দিন</h2>
+            <p className="mt-0.5 text-small text-ink-muted">
+              গ্রেড ও ৩০ জুন ২০২৬ তারিখের মূল বেতন দিলেই নতুন বেতন দেখা যাইবে।
+            </p>
+          </div>
+
           <div className="grid gap-4 sm:grid-cols-2">
-            <Field label="বর্তমান Grade" htmlFor="ps-grade" required
+            <Field label="বর্তমান গ্রেড" htmlFor="ps-grade" required
                    hint="৩০ জুন ২০২৬ তারিখে আপনার পদের গ্রেড">
               <select id="ps-grade" className={selectClass} value={grade}
                       onChange={(e) => { setGrade(e.target.value); setBasic(''); }}>
@@ -172,36 +167,41 @@ export function SalaryCalculator({ initialQuery }: { initialQuery?: Record<strin
               </select>
             </Field>
 
-            <Field label="বর্তমান Pay Scale" htmlFor="ps-scale"
-                   hint="গ্রেড নির্বাচন করিলে স্বয়ংক্রিয়ভাবে আসিবে">
-              <input id="ps-scale" readOnly className={`${inputClass} bg-surface-sunken`}
+            <Field label="বর্তমান বেতনস্কেল (২০১৫)" htmlFor="ps-scale"
+                   hint="গ্রেড বাছিলে নিজে নিজে আসিবে">
+              <input id="ps-scale" readOnly tabIndex={-1}
+                     className={`${inputClass} cursor-default bg-surface-sunken text-ink-muted`}
                      value={scale ? `${toBnDigits(scale.minimum)}–${toBnDigits(scale.maximum)}` : ''}
                      placeholder="—" />
             </Field>
           </div>
 
-          {scale && !scale.fixed ? (
-            <Field label="বর্তমান Stage (ধাপ)" htmlFor="ps-step"
-                   hint="২০১৫ স্কেলের কোন ধাপে আছেন — জানা থাকিলে এখান হইতে বাছুন">
-              <select id="ps-step" className={selectClass}
-                      value={basicNumber !== null && scale.steps.includes(basicNumber) ? String(basicNumber) : ''}
-                      onChange={(e) => setBasic(e.target.value)}>
-                <option value="">— ধাপ নির্বাচন করুন, অথবা নিচে অঙ্ক লিখুন —</option>
-                {scale.steps.map((s, i) => (
-                  <option key={s} value={s}>
-                    ধাপ {toBnDigits(i + 1)} — {taka(s)}
-                  </option>
-                ))}
-              </select>
-            </Field>
-          ) : null}
+          <div className="grid gap-4 sm:grid-cols-2">
+            {scale && !scale.fixed ? (
+              <Field label="বর্তমান ধাপ" htmlFor="ps-step"
+                     hint="জানা থাকিলে এখান হইতে বাছুন">
+                <select id="ps-step" className={selectClass}
+                        value={basicNumber !== null && scale.steps.includes(basicNumber) ? String(basicNumber) : ''}
+                        onChange={(e) => setBasic(e.target.value)}>
+                  <option value="">— ধাপ বাছুন —</option>
+                  {scale.steps.map((s, i) => (
+                    <option key={s} value={s}>
+                      ধাপ {toBnDigits(i + 1)} — {taka(s)}
+                    </option>
+                  ))}
+                </select>
+              </Field>
+            ) : null}
 
-          <Field label="বর্তমান Basic (৩০ জুন ২০২৬)" htmlFor="ps-basic" required
-                 hint="শুধু মূল বেতন — বাড়ি ভাড়া, চিকিৎসা বা অন্য কোনও ভাতা যোগ করিবেন না">
-            <input id="ps-basic" inputMode="numeric" className={inputClass}
-                   value={basic} onChange={(e) => setBasic(e.target.value)}
-                   placeholder="যেমন: ১৬০০০" />
-          </Field>
+            <div className={scale && !scale.fixed ? undefined : 'sm:col-span-2'}>
+              <Field label="মূল বেতন (৩০ জুন ২০২৬)" htmlFor="ps-basic" required
+                     hint="শুধু মূল বেতন — বাড়ি ভাড়া, চিকিৎসা বা অন্য ভাতা যোগ করিবেন না">
+                <input id="ps-basic" inputMode="numeric" className={inputClass}
+                       value={basic} onChange={(e) => setBasic(e.target.value)}
+                       placeholder="যেমন: ১৬০০০" />
+              </Field>
+            </div>
+          </div>
 
           {finderHint ? (
             <p className="rounded-control border border-border bg-surface-sunken px-3 py-2 text-small text-ink-muted">
@@ -209,35 +209,37 @@ export function SalaryCalculator({ initialQuery }: { initialQuery?: Record<strin
             </p>
           ) : null}
 
-          <Field label="Employee Category" htmlFor="ps-category"
-                 hint="১ জুলাই ২০২৬ তারিখে আপনার অবস্থা — অনুচ্ছেদ ৫(ঘ)–(ঝ) এ ভিন্ন বিধান রহিয়াছে">
+          <Field label="আপনার অবস্থা" htmlFor="ps-category"
+                 hint="১ জুলাই ২০২৬ তারিখে আপনি কোন অবস্থায় ছিলেন">
             <select id="ps-category" className={selectClass} value={category}
                     onChange={(e) => setCategory(e.target.value as EmployeeCategory)}>
               {CATEGORIES.map((c) => <option key={c.value} value={c.value}>{c.label}</option>)}
             </select>
           </Field>
 
-          <details className="rounded-control border border-border bg-surface-sunken px-3.5 py-3">
-            <summary className="cursor-pointer text-small font-medium text-ink">
+          <details className="group rounded-control border border-border bg-surface-sunken">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-3.5 py-3
+                                text-small font-medium text-ink marker:hidden">
               অতিরিক্ত তথ্য (ঐচ্ছিক)
+              <span aria-hidden="true" className="text-ink-subtle transition-transform group-open:rotate-180">⌄</span>
             </summary>
-            <div className="mt-3 space-y-4">
-              <Field label="২০১৫ সালের অতিরিক্ত সুবিধা (বিশেষ সুবিধা)" htmlFor="ps-benefit"
-                     hint="৩০ জুন ২০২৬ তারিখে যে অঙ্ক আহরণ করিতেন। ইহা বেতন নির্ধারণে যোগ বা বিয়োগ হয় না — অনুচ্ছেদ ১(৩)(ট)।">
+            <div className="space-y-4 border-t border-border px-3.5 py-4">
+              <Field label="২০১৫ সালের বিশেষ সুবিধা" htmlFor="ps-benefit"
+                     hint="৩০ জুন ২০২৬ তারিখে যে অঙ্ক পাইতেন। ইহা বেতন নির্ধারণে যোগ বা বিয়োগ হয় না।">
                 <input id="ps-benefit" inputMode="numeric" className={inputClass}
                        value={specialBenefit} onChange={(e) => setSpecialBenefit(e.target.value)}
                        placeholder="যেমন: ৮০০" />
               </Field>
 
-              <Field label="কোয়ালিফাইং চাকরির মেয়াদ (মাস)" htmlFor="ps-qualifying"
-                     hint="নতুন যোগদানকারী হইলে লিখুন। ৬ মাসের কম হইলে অনুচ্ছেদ ৯(২) অনুযায়ী বেতনবৃদ্ধি প্রাপ্য নহেন।">
+              <Field label="চাকরির মেয়াদ (মাস)" htmlFor="ps-qualifying"
+                     hint="নূতন যোগদানকারী হইলে লিখুন। ৬ মাসের কম হইলে ১ জুলাই ২০২৬ এর বেতনবৃদ্ধি প্রাপ্য নহেন।">
                 <input id="ps-qualifying" inputMode="numeric" className={inputClass}
                        value={qualifying} onChange={(e) => setQualifying(e.target.value)}
                        placeholder="খালি রাখিলে নিয়মিত কর্মচারী ধরা হইবে" />
               </Field>
 
               <Field label="নির্ধারিত বেতনের পদ" htmlFor="ps-fixed"
-                     hint="অনুচ্ছেদ ৩(২) এর অধীন পদ হইলে নির্বাচন করুন">
+                     hint="অনুচ্ছেদ ৩(২) এর অধীন পদ হইলে বাছুন">
                 <select id="ps-fixed" className={selectClass} value={fixedPost}
                         onChange={(e) => setFixedPost(e.target.value)}>
                   <option value="">— প্রযোজ্য নয় —</option>
@@ -249,13 +251,13 @@ export function SalaryCalculator({ initialQuery }: { initialQuery?: Record<strin
             </div>
           </details>
 
-          <div className="flex flex-wrap items-center gap-2.5 pt-1">
-            <button type="submit" className={buttonClass}>বেতন হিসাব করুন</button>
+          <div className="flex flex-col gap-2.5 pt-1 sm:flex-row sm:flex-wrap sm:items-center">
+            <button type="submit" className={`${buttonClass} w-full sm:w-auto`}>বেতন হিসাব করুন</button>
             {submitted ? (
               <>
                 <button type="button" onClick={reset} className={secondaryButtonClass}>নূতন হিসাব</button>
                 <button type="button" onClick={copyLink} className={secondaryButtonClass}>
-                  {copied ? 'লিংক কপি হইয়াছে' : 'ফলাফলের লিংক কপি করুন'}
+                  {copied ? 'লিংক কপি হইয়াছে' : 'লিংক কপি করুন'}
                 </button>
                 <button type="button" onClick={() => window.print()} className={secondaryButtonClass}>
                   প্রিন্ট / PDF

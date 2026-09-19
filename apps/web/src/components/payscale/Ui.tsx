@@ -14,7 +14,7 @@ import type { Certainty, SourceRef, Warning } from '@/lib/payscale/types';
 
 export function Card({ children, className = '' }: { children: ReactNode; className?: string }) {
   return (
-    <div className={`rounded-card border border-border bg-surface p-4 sm:p-5 ${className}`}>
+    <div className={`rounded-card border border-border bg-surface p-4 shadow-card sm:p-6 ${className}`}>
       {children}
     </div>
   );
@@ -154,7 +154,7 @@ export function Field({
 }) {
   return (
     <div>
-      <label htmlFor={htmlFor} className="block text-small font-medium text-ink">
+      <label htmlFor={htmlFor} className="block text-small font-semibold text-ink">
         {label}
         {required ? <span className="ml-0.5 text-danger" aria-hidden="true">*</span> : null}
       </label>
@@ -173,10 +173,99 @@ export const selectClass =
   + 'outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20';
 
 export const buttonClass =
-  'inline-flex items-center justify-center rounded-control bg-accent px-5 py-2.5 text-body '
+  'inline-flex min-h-[2.75rem] items-center justify-center rounded-control bg-accent px-6 py-2.5 text-body '
   + 'font-medium text-ink-inverted transition hover:bg-accent-hover focus:outline-none '
   + 'focus:ring-2 focus:ring-accent/30 disabled:opacity-50';
 
 export const secondaryButtonClass =
-  'inline-flex items-center justify-center rounded-control border border-border bg-surface '
-  + 'px-4 py-2 text-small font-medium text-ink transition hover:border-border-strong';
+  'inline-flex min-h-[2.75rem] items-center justify-center rounded-control border border-border bg-surface '
+  + 'px-4 py-2 text-small font-medium text-ink transition hover:border-border-strong hover:bg-surface-sunken';
+
+/** Two-way switch between calculators. A segmented control rather than two
+ *  loose buttons, so it reads as "one control, pick a side". */
+export function ModeSwitch<T extends string>({
+  value, onChange, options, label,
+}: {
+  value: T;
+  onChange: (next: T) => void;
+  options: readonly { value: T; title: string; sub: string }[];
+  label: string;
+}) {
+  return (
+    <div role="tablist" aria-label={label}
+         className="ps-no-print grid grid-cols-2 gap-1 rounded-card border border-border bg-surface-sunken p-1">
+      {options.map((o) => {
+        const active = o.value === value;
+        return (
+          <button
+            key={o.value}
+            type="button"
+            role="tab"
+            aria-selected={active}
+            onClick={() => onChange(o.value)}
+            className={`rounded-control px-3 py-2.5 text-center transition ${
+              active
+                ? 'bg-surface shadow-card ring-1 ring-border-strong'
+                : 'hover:bg-surface/60'
+            }`}
+          >
+            <span className={`block text-small font-semibold ${active ? 'text-accent-ink' : 'text-ink-muted'}`}>
+              {o.title}
+            </span>
+            <span className="mt-0.5 block text-micro text-ink-subtle">{o.sub}</span>
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+/** The one number a result is about, large, with the comparison underneath.
+ *  Everything else on the card is supporting detail, and looks like it. */
+export function ResultHero({
+  eyebrow, badge, value, caption, compare, footer, children,
+}: {
+  eyebrow: string;
+  badge?: string;
+  value: ReactNode;
+  caption?: string;
+  compare?: ReactNode;
+  footer?: readonly { label: string; value: ReactNode; hint?: ReactNode }[];
+  children?: ReactNode;
+}) {
+  return (
+    <div className="overflow-hidden rounded-card border border-accent/25 bg-surface shadow-card">
+      <div className="bg-accent-soft px-4 py-5 sm:px-6 sm:py-6">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <p className="text-small font-semibold text-accent-ink">{eyebrow}</p>
+          {badge ? (
+            <span className="rounded-full border border-accent/25 bg-surface px-2.5 py-0.5 text-micro font-medium text-accent-ink">
+              {badge}
+            </span>
+          ) : null}
+        </div>
+        <p className="mt-2 font-bengali text-display tabular-nums text-accent-ink">{value}</p>
+        {caption ? <p className="mt-1 text-small text-ink-muted">{caption}</p> : null}
+        {compare ? (
+          <div className="mt-4 flex flex-col items-start gap-1.5 text-small sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-3 sm:gap-y-2">
+            {compare}
+          </div>
+        ) : null}
+      </div>
+      {footer && footer.length > 0 ? (
+        <dl className={`grid divide-y divide-border border-t border-border sm:divide-x sm:divide-y-0 ${
+          footer.length >= 3 ? 'sm:grid-cols-3' : 'sm:grid-cols-2'
+        }`}>
+          {footer.map((f) => (
+            <div key={f.label} className="px-4 py-3.5 sm:px-6">
+              <dt className="text-micro text-ink-subtle">{f.label}</dt>
+              <dd className="mt-0.5 font-bengali text-subheading tabular-nums text-ink">{f.value}</dd>
+              {f.hint ? <p className="mt-0.5 text-micro text-ink-subtle">{f.hint}</p> : null}
+            </div>
+          ))}
+        </dl>
+      ) : null}
+      {children ? <div className="border-t border-border px-4 py-4 sm:px-6">{children}</div> : null}
+    </div>
+  );
+}

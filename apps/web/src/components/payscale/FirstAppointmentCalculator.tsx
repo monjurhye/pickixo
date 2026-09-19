@@ -8,7 +8,7 @@ import type {
 import { GRADES_LIST, getScale2026 } from '@/lib/payscale/payScale';
 import { formatDateBn, gradeLabel, taka, toBnDigits } from '@/lib/payscale/format';
 import {
-  Card, CertaintyTag, Field, Money, Source, Stat, Warnings, buttonClass, secondaryButtonClass, selectClass,
+  Card, CertaintyTag, Field, Money, ResultHero, Source, Warnings, buttonClass, secondaryButtonClass, selectClass,
 } from './Ui';
 import type { Grade } from '@/lib/payscale/types';
 
@@ -71,15 +71,17 @@ export function FirstAppointmentCalculator() {
   return (
     <div className="space-y-5">
       <Card className="ps-no-print">
-        <form onSubmit={submit} className="space-y-4">
-          <p className="text-small text-ink-muted">
-            ১ জুলাই ২০২৬ তারিখে বা তাহার পরে প্রথম নিয়োগ পাইলে অনুচ্ছেদ ১০ অনুযায়ী
-            জাতীয় বেতনস্কেল, ২০২৬ এর প্রারম্ভিক ধাপে বেতন নির্ধারিত হয়; ৯ম গ্রেড ও তদূর্ধ্বে
-            যোগ্যতাভেদে অগ্রিম বেতনবৃদ্ধিও যোগ হয়।
-          </p>
+        <form onSubmit={submit} className="space-y-5">
+          <div>
+            <h2 className="text-subheading text-ink">নিয়োগের তথ্য দিন</h2>
+            <p className="mt-0.5 text-small text-ink-muted">
+              ১ জুলাই ২০২৬ বা তাহার পরে প্রথম নিয়োগে বেতন ২০২৬ স্কেলের প্রথম ধাপ হইতে শুরু হয়।
+              ৯ম গ্রেড ও তদূর্ধ্বে যোগ্যতাভেদে অগ্রিম বেতনবৃদ্ধিও যোগ হয় (অনুচ্ছেদ ১০)।
+            </p>
+          </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
-            <Field label="নিয়োগকৃত পদের Grade" htmlFor="fa-grade" required
+            <Field label="পদের গ্রেড" htmlFor="fa-grade" required
                    hint="জাতীয় বেতনস্কেল, ২০২৬ এর গ্রেড">
               <select id="fa-grade" className={selectClass} value={grade}
                       onChange={(e) => setGrade(e.target.value)}>
@@ -90,8 +92,8 @@ export function FirstAppointmentCalculator() {
               </select>
             </Field>
 
-            <Field label="২০২৬ Pay Scale" htmlFor="fa-scale" hint="গ্রেড নির্বাচন করিলে স্বয়ংক্রিয়ভাবে আসিবে">
-              <input id="fa-scale" readOnly className={`${selectClass} bg-surface-sunken`} placeholder="—"
+            <Field label="২০২৬ বেতনস্কেল" htmlFor="fa-scale" hint="গ্রেড বাছিলে নিজে নিজে আসিবে">
+              <input id="fa-scale" readOnly tabIndex={-1} className={`${selectClass} cursor-default bg-surface-sunken text-ink-muted`} placeholder="—"
                      value={scale
                        ? `${toBnDigits(scale.minimum)}${scale.fixed ? ' (নির্ধারিত)' : `–${toBnDigits(scale.maximum)}`}`
                        : ''} />
@@ -123,8 +125,8 @@ export function FirstAppointmentCalculator() {
             </select>
           </Field>
 
-          <div className="flex flex-wrap items-center gap-2.5 pt-1">
-            <button type="submit" className={buttonClass} disabled={!ready}>বেতন হিসাব করুন</button>
+          <div className="flex flex-col gap-2.5 pt-1 sm:flex-row sm:flex-wrap sm:items-center">
+            <button type="submit" className={`${buttonClass} w-full sm:w-auto`} disabled={!ready}>বেতন হিসাব করুন</button>
             {submitted ? (
               <button type="button" onClick={reset} className={secondaryButtonClass}>নূতন হিসাব</button>
             ) : null}
@@ -157,37 +159,46 @@ function FirstAppointmentResultView({ result }: { result: ReturnType<typeof calc
 
   return (
     <div className="ps-report space-y-4">
-      <Card className="border-accent/25">
-        <div className="flex flex-wrap items-baseline justify-between gap-2">
-          <h3 className="text-subheading text-ink">নতুন নিয়োগে নির্ধারিত মূল বেতন</h3>
-          <span className="rounded-full border border-border bg-surface-sunken px-2.5 py-0.5 text-micro text-ink-muted">
-            {gradeLabel(input.grade)}
-          </span>
-        </div>
-
-        <div className="mt-3 grid gap-2.5 sm:grid-cols-2">
-          <Stat label="প্রারম্ভিক ধাপ (২০২৬ স্কেল)" value={taka(result.startingBasic)} />
-          <Stat
-            label="অগ্রিম বেতনবৃদ্ধি"
-            value={result.advanceIncrements === 0 ? 'নাই' : `${toBnDigits(result.advanceIncrements)}টি`}
-            hint={result.advanceLines.map((l) => l.label).join(' • ') || undefined}
-          />
-          <Stat label="২০২৬ স্কেলে নির্ধারিত Basic" value={taka(result.fixedBasic)} tone="accent"
-                hint={scale && result.fixedStepIndex !== null
-                  ? `ধাপ ${toBnDigits(result.fixedStepIndex + 1)}/${toBnDigits(scale.stepCount)}` : undefined} />
-          <Stat
-            label="যোগদানের সময় প্রাপ্য Basic"
-            value={taka(result.payOnJoining)}
-            hint={inTransition ? `পার্থক্যের ${toBnDigits(result.joiningPercent ?? 0)}% — অনুচ্ছেদ ১০(৪)` : 'পূর্ণ নির্ধারিত বেতন'}
-          />
-          <Stat
-            label="পরবর্তী বেতনবৃদ্ধি"
-            value={result.nextIncrementAmount === null ? 'নির্ধারিত নয়' : taka(result.nextIncrementAmount)}
-            hint="প্রতি ১ জুলাই — অনুচ্ছেদ ৯(১)"
-          />
-        </div>
+      <ResultHero
+        eyebrow="নতুন নিয়োগে যোগদানের সময় প্রাপ্য মূল বেতন"
+        badge={gradeLabel(input.grade)}
+        value={taka(result.payOnJoining)}
+        caption={inTransition
+          ? `২০২৬ স্কেলে নির্ধারিত বেতনের পার্থক্যের ${toBnDigits(result.joiningPercent ?? 0)}% যোগ হইয়াছে — অনুচ্ছেদ ১০(৪)`
+          : 'পূর্ণ নির্ধারিত বেতন — অনুচ্ছেদ ১০(৪) প্রযোজ্য নয়'}
+        compare={(
+          <>
+            <span className="text-ink-muted">
+              প্রারম্ভিক ধাপ <span className="font-semibold text-ink">{taka(result.startingBasic)}</span>
+            </span>
+            <span aria-hidden="true" className="hidden text-ink-subtle sm:inline">→</span>
+            <span className="rounded-full bg-surface px-2.5 py-1 font-semibold text-accent-ink">
+              {result.advanceIncrements === 0
+                ? 'অগ্রিম বেতনবৃদ্ধি নাই'
+                : `${toBnDigits(result.advanceIncrements)}টি অগ্রিম বেতনবৃদ্ধি`}
+            </span>
+            <span aria-hidden="true" className="hidden text-ink-subtle sm:inline">→</span>
+            <span className="text-ink-muted">
+              ২০২৬ স্কেলে <span className="font-semibold text-ink">{taka(result.fixedBasic)}</span>
+              {scale && result.fixedStepIndex !== null
+                ? ` (ধাপ ${toBnDigits(result.fixedStepIndex + 1)}/${toBnDigits(scale.stepCount)})`
+                : ''}
+            </span>
+          </>
+        )}
+        footer={[
+          {
+            label: 'পরবর্তী বেতনবৃদ্ধি',
+            value: result.nextIncrementAmount === null ? 'নির্ধারিত নয়' : `+${taka(result.nextIncrementAmount)}`,
+            hint: 'প্রতি ১ জুলাই — অনুচ্ছেদ ৯(১)',
+          },
+          ...(result.advanceLines.length > 0
+            ? [{ label: 'অগ্রিম বেতনবৃদ্ধির ভিত্তি', value: result.advanceLines.map((l) => l.label.split(' — ')[0]).join(' + ') }]
+            : []),
+        ]}
+      >
         {result.advanceLines.map((l) => <Source key={l.label} source={l.source} compact />)}
-      </Card>
+      </ResultHero>
 
       {inTransition ? (
         <Card>
@@ -198,7 +209,7 @@ function FirstAppointmentResultView({ result }: { result: ReturnType<typeof calc
             প্রযোজ্য শতাংশ যোগ হয়।
           </p>
           <div className="mt-3 -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
-            <table className="w-full min-w-[26rem] border-collapse text-small">
+            <table className="w-full border-collapse text-small">
               <thead>
                 <tr className="border-b border-border text-left text-micro text-ink-subtle">
                   <th scope="col" className="py-2 pr-3 font-medium">সময়কাল</th>
@@ -208,7 +219,10 @@ function FirstAppointmentResultView({ result }: { result: ReturnType<typeof calc
               </thead>
               <tbody>
                 {result.phases.map((phase) => (
-                  <tr key={phase.id} className="border-b border-border last:border-0">
+                  <tr
+                    key={phase.id}
+                    className={`border-b border-border last:border-0 ${phase.id === 'phase-3' ? 'bg-accent-soft/60' : ''}`}
+                  >
                     <td className="py-2.5 pr-3 align-top text-ink">
                       {formatDateBn(phase.from)}{phase.to ? ` – ${formatDateBn(phase.to)}` : ' হইতে'}
                     </td>

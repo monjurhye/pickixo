@@ -1,6 +1,6 @@
 'use client';
 
-import { Card, Money, Source, Stat, Warnings } from './Ui';
+import { Card, Money, ResultHero, Source, Stat, Warnings } from './Ui';
 import { formatBn, formatDateBn, gradeLabel, percentBn, taka, toBnDigits } from '@/lib/payscale/format';
 import { REF } from '@/lib/payscale/sourceReference';
 import type { FixationResult } from '@/lib/payscale/types';
@@ -36,35 +36,35 @@ export function SalaryResult({ result }: { result: FixationResult }) {
   return (
     <div className="ps-report space-y-4">
       {/* --- headline ------------------------------------------------------ */}
-      <Card className="border-accent/25">
-        <div className="flex flex-wrap items-baseline justify-between gap-2">
-          <h3 className="text-subheading text-ink">১ জুলাই ২০২৬ তারিখে নির্ধারিত মূল বেতন</h3>
-          <span className="rounded-full border border-border bg-surface-sunken px-2.5 py-0.5 text-micro text-ink-muted">
-            {gradeLabel(input.grade)}
-          </span>
-        </div>
-
-        <div className="mt-3 grid gap-2.5 sm:grid-cols-2">
-          <Stat label="পুরাতন Basic (৩০ জুন ২০২৬)" value={taka(input.currentBasic)} />
-          <Stat label="নতুন Basic (বেতনবৃদ্ধিসহ)" value={taka(result.newBasic)} tone="accent" />
-          <Stat label="মাসিক বৃদ্ধি" value={taka(result.monthlyIncrease)} />
-          <Stat
-            label="বৃদ্ধির হার"
-            value={percentBn(result.percentIncrease)}
-            hint="মূল বেতনের উপর — গ্রস বেতনের উপর নয়"
-          />
-          <Stat label="বার্ষিক Basic বৃদ্ধি" value={taka(result.annualIncrease)} hint="মাসিক বৃদ্ধি × ১২" />
-          <Stat
-            label="পরবর্তী বেতনবৃদ্ধি"
-            value={result.nextIncrementAmount === null ? 'নির্ধারিত নয়' : taka(result.nextIncrementAmount)}
-            hint={result.nextIncrementDate ? formatDateBn(result.nextIncrementDate) : 'স্কেলের সর্বোচ্চ ধাপ'}
-          />
-        </div>
-
+      <ResultHero
+        eyebrow="১ জুলাই ২০২৬ তারিখে নির্ধারিত নতুন মূল বেতন"
+        badge={gradeLabel(input.grade)}
+        value={taka(result.newBasic)}
+        caption="২০২৬ স্কেলে, ১টি বার্ষিক বেতনবৃদ্ধিসহ"
+        compare={(
+          <>
+            <span className="text-ink-muted">
+              আগের মূল বেতন <span className="font-semibold text-ink">{taka(input.currentBasic)}</span>
+            </span>
+            <span aria-hidden="true" className="hidden text-ink-subtle sm:inline">→</span>
+            <span className="rounded-full bg-surface px-2.5 py-1 font-semibold text-success">
+              মাসে +{taka(result.monthlyIncrease)} ({percentBn(result.percentIncrease)})
+            </span>
+          </>
+        )}
+        footer={[
+          { label: 'বার্ষিক মূল বেতন বৃদ্ধি', value: taka(result.annualIncrease), hint: 'মাসিক বৃদ্ধি × ১২' },
+          {
+            label: 'পরবর্তী বেতনবৃদ্ধি',
+            value: result.nextIncrementAmount === null ? 'নির্ধারিত নয়' : `+${taka(result.nextIncrementAmount)}`,
+            hint: result.nextIncrementDate ? formatDateBn(result.nextIncrementDate) : 'স্কেলের সর্বোচ্চ ধাপ',
+          },
+        ]}
+      >
         {oldScale && newScale ? (
-          <dl className="mt-4 space-y-1.5 border-t border-border pt-3">
+          <dl className="space-y-1.5">
             <div className="flex flex-col gap-0.5 text-small sm:flex-row sm:justify-between sm:gap-4">
-              <dt className="text-ink-muted">২০১৫ স্কেল (বর্তমান বেতনস্কেল)</dt>
+              <dt className="text-ink-muted">২০১৫ স্কেল (বর্তমান)</dt>
               <dd className="font-bengali tabular-nums text-ink">
                 {toBnDigits(oldScale.minimum)}–{toBnDigits(oldScale.maximum)}
               </dd>
@@ -86,9 +86,8 @@ export function SalaryResult({ result }: { result: FixationResult }) {
             </div>
           </dl>
         ) : null}
-
         <Source source={REF.entitlement} />
-      </Card>
+      </ResultHero>
 
       {/* --- what is actually paid, and when ------------------------------- */}
       <PhaseTable result={result} />
@@ -117,26 +116,31 @@ export function PhaseTable({ result }: { result: FixationResult }) {
       </p>
 
       <div className="mt-3 -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
-        <table className="w-full min-w-[30rem] border-collapse text-small">
+        <table className="w-full border-collapse text-small">
           <thead>
-            <tr className="border-b border-border text-left text-micro text-ink-subtle">
+            <tr className="border-b border-border-strong text-left text-micro font-medium text-ink-subtle">
               <th scope="col" className="py-2 pr-3 font-medium">সময়কাল</th>
               <th scope="col" className="py-2 pr-3 font-medium">বৃদ্ধির হার</th>
-              <th scope="col" className="py-2 pr-3 text-right font-medium">যোগ হইবে</th>
+              <th scope="col" className="hidden py-2 pr-3 text-right font-medium sm:table-cell">যোগ হইবে</th>
               <th scope="col" className="py-2 text-right font-medium">প্রাপ্য মূল বেতন</th>
             </tr>
           </thead>
           <tbody>
             {result.phases.map((phase) => (
-              <tr key={phase.id} className="border-b border-border last:border-0">
-                <td className="py-2.5 pr-3 align-top text-ink">
+              <tr
+                key={phase.id}
+                className={`border-b border-border last:border-0 ${
+                  phase.id === 'phase-3' ? 'bg-accent-soft/60' : ''
+                }`}
+              >
+                <td className="py-3 pl-2 pr-3 align-top text-ink">
                   {formatDateBn(phase.from)}
                   {phase.to ? ` – ${formatDateBn(phase.to)}` : ' হইতে'}
                 </td>
                 <td className="py-2.5 pr-3 align-top font-bengali tabular-nums text-ink-muted">
                   {toBnDigits(phase.percent)}%
                 </td>
-                <td className="py-2.5 pr-3 text-right align-top font-bengali tabular-nums text-ink-muted">
+                <td className="hidden py-2.5 pr-3 text-right align-top font-bengali tabular-nums text-ink-muted sm:table-cell">
                   <Money value={phase.addedToCurrentBasic} />
                 </td>
                 <td className="py-2.5 text-right align-top font-bengali tabular-nums font-medium text-ink">
