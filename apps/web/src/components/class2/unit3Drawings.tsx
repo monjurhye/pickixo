@@ -16,7 +16,7 @@ const C = PALETTE;
 
 type Draw = (animate: boolean) => React.ReactNode;
 
-function Bg({ tint, children }: { tint: string; children: React.ReactNode }) {
+export function Bg({ tint, children }: { tint: string; children: React.ReactNode }) {
   return (
     <>
       <rect x="0" y="0" width="100" height="100" rx="18" fill={tint} />
@@ -31,7 +31,7 @@ const HAIR = '#2f2a28';
  * One child, drawn from the front. Only the arms, the legs and the mouth
  * vary, so a set of these reads as the same child doing different things.
  */
-function Person({
+export function Person({
   shirt = C.red, armL = 'M38 54 q-8 8 -8 20', armR = 'M62 54 q8 8 8 20',
   sit = false, mouth = 'smile', dx = 0, dy = 0, armClass,
 }: {

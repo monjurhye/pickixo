@@ -11,6 +11,7 @@ import type { Unit } from '@/data/class2/english/schema';
 import unit01 from '@/data/class2/english/unit01.json';
 import unit02 from '@/data/class2/english/unit02.json';
 import unit03 from '@/data/class2/english/unit03.json';
+import unit04 from '@/data/class2/english/unit04.json';
 
 /**
  * Class 2 English — the child's learning app.
@@ -43,7 +44,7 @@ export const metadata: Metadata = buildMetadata({
  * catches the mistakes that actually happen (a bad answer index, a dangling
  * vocabulary id) and which a structural type could not catch anyway.
  */
-const UNITS = [unit01, unit02, unit03] as unknown as Unit[];
+const UNITS = [unit01, unit02, unit03, unit04] as unknown as Unit[];
 
 const FAQ = [
   {
