@@ -136,6 +136,30 @@ LOCAL ONLY — pickixo-….7z (1.0 MB) built and opened successfully, but NOT up
 "Verified in Drive" is printed only after the uploaded bytes have been read
 back and compared by hash. Nothing else earns that wording.
 
+### The shared client_id retires during 2026
+
+Connecting with `rclone config create gdrive drive` uses rclone's own shared
+Google OAuth client, and rclone says so on every call that touches Drive:
+
+```
+NOTICE: gdrive: This remote uses rclone's shared Google Drive client_id,
+which is being retired and will stop working during 2026.
+```
+
+It is a notice, not an error, and uploads still work. But when it does stop
+working the backup stops with it, and the failure will read like a broken
+credential rather than a deadline that passed — so it is worth doing before
+then. Making your own client is about twenty minutes in the Google Cloud
+console: https://rclone.org/drive/#making-your-own-client-id
+
+```powershell
+$env:RCLONE_CONFIG = "C:\Pickixo\backup\rclone.conf"
+rclone config update gdrive client_id <id> client_secret <secret>
+```
+
+Only the credential used to reach Drive changes. Archives already uploaded are
+encrypted with the passphrase, not with this, and are unaffected.
+
 ---
 
 ## Checking on it

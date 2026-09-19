@@ -121,9 +121,23 @@ function Invoke-Step {
     )
     if ($Quiet) { Write-Log "$What ..." } else { Write-Log "$What ... ($Exe $($Arguments -join ' '))" }
 
-    $ErrorActionPreference = 'Continue'
-    $output = & $Exe @Arguments 2>&1
-    $code = $LASTEXITCODE
+    # Under 2>&1 PowerShell turns a native command's stderr into ErrorRecord
+    # objects, and with $ErrorActionPreference = 'Stop' the first one ends the
+    # run — before $LASTEXITCODE is ever read. A tool that printed a notice and
+    # exited 0 is then reported as a failure, which is exactly what happened:
+    # rclone's warning that its shared client_id is being retired failed a
+    # backup whose archive was already built, verified and uploaded. Get-GitFact
+    # below carries the same scar from a different tool.
+    #
+    # The exit code decides. stderr is still captured, but only as text for the
+    # failure message.
+    $old = $ErrorActionPreference
+    $ErrorActionPreference = 'SilentlyContinue'
+    try {
+        $output = & $Exe @Arguments 2>&1
+        $code = $LASTEXITCODE
+    }
+    finally { $ErrorActionPreference = $old }
 
     if ($code -ne 0) {
         $detail = ($output | Select-Object -Last 8) -join ' | '
