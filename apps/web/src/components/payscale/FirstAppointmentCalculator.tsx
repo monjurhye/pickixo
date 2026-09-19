@@ -8,7 +8,7 @@ import type {
 import { GRADES_LIST, getScale2026 } from '@/lib/payscale/payScale';
 import { formatDateBn, gradeLabel, taka, toBnDigits } from '@/lib/payscale/format';
 import {
-  Card, CertaintyTag, Field, Money, ResultHero, Source, Warnings, buttonClass, secondaryButtonClass, selectClass,
+  Card, CertaintyTag, Field, Money, PhaseThreeDeclaration, ResultHero, Source, Warnings, buttonClass, secondaryButtonClass, selectClass,
 } from './Ui';
 import type { Grade } from '@/lib/payscale/types';
 
@@ -225,6 +225,11 @@ function FirstAppointmentResultView({ result }: { result: ReturnType<typeof calc
                   >
                     <td className="py-2.5 pr-3 align-top text-ink">
                       {formatDateBn(phase.from)}{phase.to ? ` – ${formatDateBn(phase.to)}` : ' হইতে'}
+                  {phase.certainty === 'ASSUMPTION' ? (
+                    <span className="ml-2 rounded-full border border-warning/35 bg-warning/10 px-1.5 py-0.5 text-micro text-warning">
+                      ব্যাখ্যা
+                    </span>
+                  ) : null}
                     </td>
                     <td className="py-2.5 pr-3 align-top font-bengali tabular-nums text-ink-muted">
                       {toBnDigits(phase.percent)}%
@@ -237,6 +242,7 @@ function FirstAppointmentResultView({ result }: { result: ReturnType<typeof calc
               </tbody>
             </table>
           </div>
+          <PhaseThreeDeclaration amount={result.fixedBasic} />
         </Card>
       ) : null}
 

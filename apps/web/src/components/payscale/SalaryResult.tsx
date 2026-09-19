@@ -1,6 +1,6 @@
 'use client';
 
-import { Card, Money, ResultHero, Source, Stat, Warnings } from './Ui';
+import { Card, Money, PhaseThreeDeclaration, ResultHero, Source, Stat, Warnings } from './Ui';
 import { formatBn, formatDateBn, gradeLabel, percentBn, taka, toBnDigits } from '@/lib/payscale/format';
 import { REF } from '@/lib/payscale/sourceReference';
 import type { FixationResult } from '@/lib/payscale/types';
@@ -62,9 +62,9 @@ export function SalaryResult({ result }: { result: FixationResult }) {
         footer={[
           { label: 'বার্ষিক বৃদ্ধি (পূর্ণ হারে)', value: taka(result.annualIncrease), hint: 'মাসিক বৃদ্ধি × ১২' },
           {
-            label: 'পরবর্তী বেতনবৃদ্ধি',
+            label: 'পরবর্তী ধাপে বেতনবৃদ্ধি',
             value: result.nextIncrementAmount === null ? 'নির্ধারিত নয়' : `+${taka(result.nextIncrementAmount)}`,
-            hint: result.nextIncrementDate ? formatDateBn(result.nextIncrementDate) : 'স্কেলের সর্বোচ্চ ধাপ',
+            hint: result.nextIncrementDate ? 'বার্ষিক — প্রতি ১ জুলাই, অনুচ্ছেদ ৯(১)' : 'স্কেলের সর্বোচ্চ ধাপ',
           },
         ]}
       >
@@ -143,6 +143,11 @@ export function PhaseTable({ result }: { result: FixationResult }) {
                 <td className="py-3 pl-2 pr-3 align-top text-ink">
                   {formatDateBn(phase.from)}
                   {phase.to ? ` – ${formatDateBn(phase.to)}` : ' হইতে'}
+                  {phase.certainty === 'ASSUMPTION' ? (
+                    <span className="ml-2 rounded-full border border-warning/35 bg-warning/10 px-1.5 py-0.5 text-micro text-warning">
+                      ব্যাখ্যা
+                    </span>
+                  ) : null}
                 </td>
                 <td className="py-2.5 pr-3 align-top font-bengali tabular-nums text-ink-muted">
                   {toBnDigits(phase.percent)}%
@@ -166,9 +171,7 @@ export function PhaseTable({ result }: { result: FixationResult }) {
         {' '}মোট বৃদ্ধি {taka(result.monthlyIncrease)}, যাহার উপর এই শতাংশ প্রযোজ্য।
       </p>
 
-      {result.phases[2]?.note ? (
-        <p className="mt-2 text-small text-ink-muted">{result.phases[2].note}</p>
-      ) : null}
+      <PhaseThreeDeclaration amount={result.newBasic} />
 
       <p className="mt-3 rounded-control border border-border bg-surface-sunken px-3 py-2.5 text-small text-ink-muted">
         <span className="font-medium text-ink">বকেয়া:</span> অনুচ্ছেদ ১(৩)(ঘ) অনুযায়ী

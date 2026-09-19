@@ -181,6 +181,32 @@ export const secondaryButtonClass =
   'inline-flex min-h-[2.75rem] items-center justify-center rounded-control border border-border bg-surface '
   + 'px-4 py-2 text-small font-medium text-ink transition hover:border-border-strong hover:bg-surface-sunken';
 
+/**
+ * A declaration for the one reading in the calculator that the Gazette does not
+ * settle: ১(৩)(গ), "বার্ষিক বেতনবৃদ্ধিসহ মূল বেতন শতভাগ" from 1 July 2027.
+ * It says what was assumed and sends the reader to the source to check.
+ */
+export function PhaseThreeDeclaration({ amount }: { amount?: number | null }) {
+  return (
+    <aside className="mt-4 rounded-control border border-warning/35 bg-warning/5 px-3.5 py-3">
+      <div className="flex flex-wrap items-center gap-2">
+        <h4 className="text-small font-semibold text-ink">ঘোষণা: ১ জুলাই ২০২৭ এর বেতন — ব্যাখ্যা-সাপেক্ষ</h4>
+        <CertaintyTag value="ASSUMPTION" />
+      </div>
+      <p className="mt-1.5 text-small text-ink-muted">
+        অনুচ্ছেদ ১(৩)(গ) বলিয়াছে, ১ জুলাই ২০২৭ হইতে “বার্ষিক বেতনবৃদ্ধি (increment)সহ মূল বেতন শতভাগ”
+        প্রদান করা হইবে। গেজেটে ইহার কোনও টাকার অঙ্ক বা উদাহরণ নাই। এই ক্যালকুলেটর ইহার অর্থ ধরিয়াছে:
+        নিয়মিত বার্ষিক বেতনবৃদ্ধি চলমান থাকিবে, এবং ঐ তারিখ হইতে মূল বেতন ২০২৬ স্কেলে নির্ধারিত
+        {amount ? ` ${taka(amount)}` : ' অঙ্কে'} পূর্ণ (১০০%) হারে প্রদেয়। ইহা একটি ব্যাখ্যা, গেজেটের সুস্পষ্ট বিধান নয়।
+      </p>
+      <p className="mt-1.5 text-small text-ink">
+        ভিন্ন হইলে মূল গেজেট দেখুন: এস. আর. ও. নং ৩৪৭-আইন/২০২৬, অনুচ্ছেদ ১(৩)(গ), গেজেট পৃষ্ঠা ২৫১৯৪
+        (PDF পৃষ্ঠা ২)। চূড়ান্ত বেতন সংশ্লিষ্ট হিসাবরক্ষণ অফিসের বেতন নির্ধারণী বিবরণী অনুযায়ীই হইবে।
+      </p>
+    </aside>
+  );
+}
+
 /** Two-way switch between calculators. A segmented control rather than two
  *  loose buttons, so it reads as "one control, pick a side". */
 export function ModeSwitch<T extends string>({

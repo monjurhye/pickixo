@@ -79,7 +79,7 @@ export function factBlock(result: FixationResult): string {
     );
   }
   if (result.nextIncrementAmount !== null) {
-    lines.push(`- পরবর্তী বেতনবৃদ্ধি (১ জুলাই ২০২৭): ${taka(result.nextIncrementAmount)}`);
+    lines.push(`- পরবর্তী ধাপে বার্ষিক বেতনবৃদ্ধি (প্রতি ১ জুলাই — অনুচ্ছেদ ৯(১)): ${taka(result.nextIncrementAmount)}`);
   }
   lines.push('- বিশেষ সুবিধা: বেতন নির্ধারণে কোনও প্রভাব নাই (অনুচ্ছেদ ১(৩)(ট) — বিলুপ্ত)।');
   const drawnFromJuly = oldScaleIncrementedBasic(result.input.grade, result.input.currentBasic);

@@ -87,19 +87,18 @@ export function step(
 }
 
 /**
- * `julyIncrement`: অনুচ্ছেদ ১(৩)(গ) pays "বার্ষিক বেতনবৃদ্ধিসহ মূল বেতন" from 1 July 2027,
- * so for someone already fixed under অনুচ্ছেদ ৫ the third window is the fixed pay *plus*
- * the increment falling on that date. New appointees (অনুচ্ছেদ ১০) turn it off: the
- * Gazette does not say whether a joiner of, say, 2027 has the qualifying service for
- * an increment that day, and the calculator does not guess.
+ * The three payment windows of অনুচ্ছেদ ১(৩).
+ *
+ * The third window is the one place the Gazette is not explicit. ১(৩)(গ) says
+ * "১ জুলাই ২০২৭ তারিখ হইতে বার্ষিক বেতনবৃদ্ধি (increment)সহ মূল বেতন শতভাগ
+ * প্রদান করা হইবে" and gives no figure and no worked example. It is read here as:
+ * regular annual increments continue, and from that date the basic pay is paid in
+ * full at the amount fixed in the 2026 scale. That is an interpretation, so the
+ * window is tagged ASSUMPTION and the result carries a declaration pointing the
+ * reader to the Gazette. The alternative reading — the fixed pay *plus* an
+ * increment on 1 July 2027 — is not used.
  */
-export function buildPhases(
-  grade: number,
-  currentBasic: number,
-  newBasic: number,
-  incrementAfter: number | null,
-  julyIncrement = true,
-): PhasePayment[] {
+export function buildPhases(grade: number, currentBasic: number, newBasic: number): PhasePayment[] {
   const increase = newBasic - currentBasic;
   const ninthOrAbove = isNinthGradeOrAbove(grade);
   const out: PhasePayment[] = [];
@@ -121,25 +120,17 @@ export function buildPhases(
     });
   }
 
-  const withIncrement = julyIncrement && incrementAfter !== null;
-  const fullPay = withIncrement ? (incrementAfter as number) : newBasic;
-
   out.push({
     id: 'phase-3',
     label: 'পর্যায় ৩',
     from: '2027-07-01',
     to: null,
     percent: 100,
-    payable: fullPay,
-    addedToCurrentBasic: fullPay - currentBasic,
-    certainty: 'GAZETTE',
+    payable: newBasic,
+    addedToCurrentBasic: increase,
+    certainty: 'ASSUMPTION',
     source: REF.phase3,
-    note:
-      !julyIncrement
-        ? 'অনুচ্ছেদ ১(৩)(গ): ১ জুলাই ২০২৭ হইতে মূল বেতন শতভাগ প্রদেয়। নূতন নিয়োগে ঐ তারিখে বার্ষিক বেতনবৃদ্ধি প্রাপ্য হইবে কি না গেজেটে স্পষ্ট নাই, তাই তাহা যোগ করা হয় নাই।'
-      : incrementAfter === null
-        ? 'অনুচ্ছেদ ১(৩)(গ): ১ জুলাই ২০২৭ হইতে বার্ষিক বেতনবৃদ্ধিসহ মূল বেতন শতভাগ প্রদেয়। এই স্কেলে পরবর্তী ধাপ না থাকায় ২০২৭ সালের বেতনবৃদ্ধির অঙ্ক নির্ণয় করা যায় নাই।'
-        : `অনুচ্ছেদ ১(৩)(গ): ১ জুলাই ২০২৭ হইতে বার্ষিক বেতনবৃদ্ধিসহ মূল বেতন শতভাগ প্রদেয় — অর্থাৎ ${taka(newBasic)} + ${taka(incrementAfter - newBasic)} = ${taka(incrementAfter)}।`,
+    note: `অনুচ্ছেদ ১(৩)(গ): ১ জুলাই ২০২৭ হইতে মূল বেতন শতভাগ প্রদেয় — এই ক্যালকুলেটর ইহা ২০২৬ স্কেলে নির্ধারিত ${taka(newBasic)} ধরিয়াছে। এই অংশটি ব্যাখ্যা-সাপেক্ষ (নিচের ঘোষণা দেখুন)।`,
   });
 
   return out;
@@ -198,7 +189,7 @@ export function fixSalary(input: FixationInput): FixationResult {
       monthlyIncrease: post.amount - input.currentBasic,
       annualIncrease: (post.amount - input.currentBasic) * 12,
       percentIncrease: ((post.amount - input.currentBasic) / input.currentBasic) * 100,
-      phases: buildPhases(input.grade, input.currentBasic, post.amount, null),
+      phases: buildPhases(input.grade, input.currentBasic, post.amount),
       steps: [
         step(1, 'নির্ধারিত বেতনের পদ', `${post.posts} — অনুচ্ছেদ ৩(২) অনুযায়ী বেতন টাকার অঙ্কে নির্ধারিত।`, {
           value: post.amount, source: REF.fixedPayPosts,
@@ -363,7 +354,7 @@ export function fixSalary(input: FixationInput): FixationResult {
     percentIncrease,
     nextIncrementDate: afterNext ? NEXT_INCREMENT_DATE : null,
     nextIncrementAmount: afterNext ? afterNext.value - newBasic : null,
-    phases: buildPhases(input.grade, currentBasic, newBasic, afterNext ? afterNext.value : null),
+    phases: buildPhases(input.grade, currentBasic, newBasic),
     steps,
     warnings,
     sources: [

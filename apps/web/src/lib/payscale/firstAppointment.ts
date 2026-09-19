@@ -265,7 +265,7 @@ export function calculateFirstAppointment(input: FirstAppointmentInput): FirstAp
   // --- ১০(৪): the transition share ---------------------------------------------
   const oldBase = oldScale.minimum;
   const after = nextStep(scale, targetIndex);
-  const allPhases = buildPhases(input.grade, oldBase, fixedBasic, after ? after.value : null, false);
+  const allPhases = buildPhases(input.grade, oldBase, fixedBasic);
   const joinIndex = JOINING_ORDER.indexOf(input.joining);
   const phases = allPhases.slice(joinIndex).map((p) => ({ ...p }));
 
