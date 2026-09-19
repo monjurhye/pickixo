@@ -1,0 +1,2254 @@
+{
+  "id": "u9",
+  "number": 9,
+  "title": "Animals and Birds",
+  "titleBn": "প্রাণী ও পাখি",
+  "colour": "lime",
+  "icon": "paw",
+  "_source": "English for Today, Class Two (NCTB). Unit 9, book pages 84-92.",
+  "_note": "Living places, food, the cow-and-hen passage, Hey Diddle, Diddle and the exercises are transcribed from the textbook. Bangla meanings are Pickixo's addition - the book carries no glosses. Distractor answers are chosen so that none is also correct.",
+  "lessons": [
+    {
+      "id": "u9l1",
+      "unitId": "u9",
+      "number": 1,
+      "title": "Their Living Places",
+      "titleBn": "তাদের বাসস্থান",
+      "shape": "category",
+      "bookPages": [
+        84,
+        85,
+        86
+      ],
+      "objective": "Name seven animals and birds and say where each one lives.",
+      "objectiveBn": "সাতটি প্রাণী ও পাখির নাম বলা আর তারা কোথায় থাকে তা বলা।",
+      "minutes": 8,
+      "vocabulary": [
+        {
+          "id": "an-tiger",
+          "word": "tiger",
+          "bangla": "বাঘ",
+          "banglaPronunciation": "টাইগার",
+          "banglaSource": "enrichment",
+          "bookPage": 84,
+          "category": "animal",
+          "image": "tiger"
+        },
+        {
+          "id": "an-dog",
+          "word": "dog",
+          "bangla": "কুকুর",
+          "banglaPronunciation": "ডগ",
+          "banglaSource": "enrichment",
+          "bookPage": 84,
+          "category": "animal",
+          "image": "dog"
+        },
+        {
+          "id": "an-monkey",
+          "word": "monkey",
+          "bangla": "বানর",
+          "banglaPronunciation": "মাংকি",
+          "banglaSource": "enrichment",
+          "bookPage": 84,
+          "category": "animal",
+          "image": "monkey"
+        },
+        {
+          "id": "an-cow",
+          "word": "cow",
+          "bangla": "গরু",
+          "banglaPronunciation": "কাউ",
+          "banglaSource": "enrichment",
+          "bookPage": 84,
+          "category": "animal",
+          "image": "cow"
+        },
+        {
+          "id": "an-deer",
+          "word": "deer",
+          "bangla": "হরিণ",
+          "banglaPronunciation": "ডিয়ার",
+          "banglaSource": "enrichment",
+          "bookPage": 84,
+          "category": "animal",
+          "image": "deer"
+        },
+        {
+          "id": "an-parrot",
+          "word": "parrot",
+          "bangla": "টিয়া",
+          "banglaPronunciation": "প্যারট",
+          "banglaSource": "enrichment",
+          "bookPage": 84,
+          "category": "bird",
+          "image": "parrot"
+        },
+        {
+          "id": "an-crow",
+          "word": "crow",
+          "bangla": "কাক",
+          "banglaPronunciation": "ক্রো",
+          "banglaSource": "enrichment",
+          "bookPage": 84,
+          "category": "bird",
+          "image": "crow"
+        },
+        {
+          "id": "ho-kennel",
+          "word": "kennel",
+          "bangla": "কুকুরের ঘর",
+          "banglaPronunciation": "কেনেল",
+          "banglaSource": "enrichment",
+          "bookPage": 85,
+          "category": "place",
+          "image": "kennel",
+          "example": "A dog lives in a kennel or doghouse.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "ho-cowshed",
+          "word": "cowshed",
+          "bangla": "গোয়ালঘর",
+          "banglaPronunciation": "কাউশেড",
+          "banglaSource": "enrichment",
+          "bookPage": 85,
+          "category": "place",
+          "image": "cowshed",
+          "example": "A cow lives in a shed or a cowshed.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "ho-tree",
+          "word": "tree",
+          "bangla": "গাছ",
+          "banglaPronunciation": "ট্রি",
+          "banglaSource": "enrichment",
+          "bookPage": 85,
+          "category": "place",
+          "image": "tree",
+          "example": "A monkey lives in a tree.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "ho-nest",
+          "word": "nest",
+          "bangla": "পাখির বাসা",
+          "banglaPronunciation": "নেস্ট",
+          "banglaSource": "enrichment",
+          "bookPage": 85,
+          "category": "place",
+          "image": "bird-nest",
+          "example": "A crow lives in a nest.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "ho-lair",
+          "word": "lair",
+          "bangla": "বাঘের গুহা",
+          "banglaPronunciation": "লেয়ার",
+          "banglaSource": "enrichment",
+          "bookPage": 85,
+          "category": "place",
+          "image": "lair",
+          "example": "A tiger lives in a lair.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "ho-forest",
+          "word": "forest",
+          "bangla": "বন",
+          "banglaPronunciation": "ফরেস্ট",
+          "banglaSource": "enrichment",
+          "bookPage": 85,
+          "category": "place",
+          "image": "forest",
+          "example": "A deer lives in a forest.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "ho-hole",
+          "word": "tree hole",
+          "bangla": "গাছের কোটর",
+          "banglaPronunciation": "ট্রি হোল",
+          "banglaSource": "enrichment",
+          "bookPage": 85,
+          "category": "place",
+          "image": "tree-hole",
+          "example": "A parrot lives in a nest or a tree hole.",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u9l1-intro",
+          "type": "intro",
+          "title": "Where do they live?",
+          "titleBn": "তারা কোথায় থাকে?",
+          "say": "Every animal and bird has a home. Where do they live?",
+          "sayBn": "প্রতিটি প্রাণী ও পাখির একটি বাসস্থান আছে। তারা কোথায় থাকে?",
+          "illustration": "forest"
+        },
+        {
+          "id": "u9l1-animals1",
+          "type": "vocab",
+          "bookActivity": "B",
+          "title": "Animals 1",
+          "titleBn": "প্রাণী ১",
+          "items": [
+            "an-tiger",
+            "an-dog",
+            "an-monkey",
+            "an-cow"
+          ]
+        },
+        {
+          "id": "u9l1-animals2",
+          "type": "vocab",
+          "bookActivity": "B",
+          "title": "Animals and birds 2",
+          "titleBn": "প্রাণী ও পাখি ২",
+          "items": [
+            "an-deer",
+            "an-parrot",
+            "an-crow"
+          ]
+        },
+        {
+          "id": "u9l1-homes1",
+          "type": "vocab",
+          "bookActivity": "C",
+          "title": "Their homes 1",
+          "titleBn": "তাদের বাসস্থান ১",
+          "items": [
+            "ho-kennel",
+            "ho-cowshed",
+            "ho-tree",
+            "ho-nest"
+          ]
+        },
+        {
+          "id": "u9l1-homes2",
+          "type": "vocab",
+          "bookActivity": "C",
+          "title": "Their homes 2",
+          "titleBn": "তাদের বাসস্থান ২",
+          "items": [
+            "ho-lair",
+            "ho-forest",
+            "ho-hole"
+          ]
+        },
+        {
+          "id": "u9l1-speak",
+          "type": "speak",
+          "bookActivity": "D",
+          "title": "Say it!",
+          "titleBn": "বলো!",
+          "prompt": "Say: A dog lives in a kennel.",
+          "promptBn": "বলো: A dog lives in a kennel.",
+          "modelAnswer": "A dog lives in a kennel."
+        },
+        {
+          "id": "u9l1-game1",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "B",
+          "title": "Name the animal",
+          "titleBn": "প্রাণীটির নাম বলো",
+          "rounds": [
+            {
+              "id": "r-tiger",
+              "ask": "Which animal is this?",
+              "askBn": "এটি কোন প্রাণী?",
+              "image": "tiger",
+              "options": [
+                {
+                  "label": "dog"
+                },
+                {
+                  "label": "tiger"
+                },
+                {
+                  "label": "crow"
+                }
+              ],
+              "answer": 1,
+              "hint": "Look at the picture.",
+              "tests": "an-tiger"
+            },
+            {
+              "id": "r-dog",
+              "ask": "Which animal is this?",
+              "askBn": "এটি কোন প্রাণী?",
+              "image": "dog",
+              "options": [
+                {
+                  "label": "deer"
+                },
+                {
+                  "label": "crow"
+                },
+                {
+                  "label": "dog"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the picture.",
+              "tests": "an-dog"
+            },
+            {
+              "id": "r-monkey",
+              "ask": "Which animal is this?",
+              "askBn": "এটি কোন প্রাণী?",
+              "image": "monkey",
+              "options": [
+                {
+                  "label": "dog"
+                },
+                {
+                  "label": "monkey"
+                },
+                {
+                  "label": "deer"
+                }
+              ],
+              "answer": 1,
+              "hint": "Look at the picture.",
+              "tests": "an-monkey"
+            },
+            {
+              "id": "r-cow",
+              "ask": "Which animal is this?",
+              "askBn": "এটি কোন প্রাণী?",
+              "image": "cow",
+              "options": [
+                {
+                  "label": "parrot"
+                },
+                {
+                  "label": "tiger"
+                },
+                {
+                  "label": "cow"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the picture.",
+              "tests": "an-cow"
+            },
+            {
+              "id": "r-deer",
+              "ask": "Which animal is this?",
+              "askBn": "এটি কোন প্রাণী?",
+              "image": "deer",
+              "options": [
+                {
+                  "label": "dog"
+                },
+                {
+                  "label": "monkey"
+                },
+                {
+                  "label": "deer"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the picture.",
+              "tests": "an-deer"
+            },
+            {
+              "id": "r-parrot",
+              "ask": "Which animal is this?",
+              "askBn": "এটি কোন প্রাণী?",
+              "image": "parrot",
+              "options": [
+                {
+                  "label": "dog"
+                },
+                {
+                  "label": "deer"
+                },
+                {
+                  "label": "parrot"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the picture.",
+              "tests": "an-parrot"
+            }
+          ]
+        },
+        {
+          "id": "u9l1-game2",
+          "type": "game",
+          "kind": "match-pairs",
+          "bookActivity": "E",
+          "title": "Where do they live?",
+          "titleBn": "তারা কোথায় থাকে?",
+          "rounds": [
+            {
+              "id": "w-tiger",
+              "ask": "Where does a tiger live?",
+              "askBn": "বাঘ কোথায় থাকে?",
+              "image": "tiger",
+              "options": [
+                {
+                  "label": "tree",
+                  "image": "tree"
+                },
+                {
+                  "label": "lair",
+                  "image": "lair"
+                },
+                {
+                  "label": "nest",
+                  "image": "bird-nest"
+                }
+              ],
+              "answer": 1,
+              "hint": "A tiger lives in a lair.",
+              "tests": "ho-lair"
+            },
+            {
+              "id": "w-dog",
+              "ask": "Where does a dog live?",
+              "askBn": "কুকুর কোথায় থাকে?",
+              "image": "dog",
+              "options": [
+                {
+                  "label": "kennel",
+                  "image": "kennel"
+                },
+                {
+                  "label": "cowshed",
+                  "image": "cowshed"
+                },
+                {
+                  "label": "tree",
+                  "image": "tree"
+                }
+              ],
+              "answer": 0,
+              "hint": "A dog lives in a kennel or doghouse.",
+              "tests": "ho-kennel"
+            },
+            {
+              "id": "w-monkey",
+              "ask": "Where does a monkey live?",
+              "askBn": "বানর কোথায় থাকে?",
+              "image": "monkey",
+              "options": [
+                {
+                  "label": "kennel",
+                  "image": "kennel"
+                },
+                {
+                  "label": "tree",
+                  "image": "tree"
+                },
+                {
+                  "label": "forest",
+                  "image": "forest"
+                }
+              ],
+              "answer": 1,
+              "hint": "A monkey lives in a tree.",
+              "tests": "ho-tree"
+            },
+            {
+              "id": "w-cow",
+              "ask": "Where does a cow live?",
+              "askBn": "গরু কোথায় থাকে?",
+              "image": "cow",
+              "options": [
+                {
+                  "label": "cowshed",
+                  "image": "cowshed"
+                },
+                {
+                  "label": "lair",
+                  "image": "lair"
+                },
+                {
+                  "label": "tree",
+                  "image": "tree"
+                }
+              ],
+              "answer": 0,
+              "hint": "A cow lives in a shed or a cowshed.",
+              "tests": "ho-cowshed"
+            },
+            {
+              "id": "w-deer",
+              "ask": "Where does a deer live?",
+              "askBn": "হরিণ কোথায় থাকে?",
+              "image": "deer",
+              "options": [
+                {
+                  "label": "nest",
+                  "image": "bird-nest"
+                },
+                {
+                  "label": "cowshed",
+                  "image": "cowshed"
+                },
+                {
+                  "label": "forest",
+                  "image": "forest"
+                }
+              ],
+              "answer": 2,
+              "hint": "A deer lives in a forest.",
+              "tests": "ho-forest"
+            },
+            {
+              "id": "w-parrot",
+              "ask": "Where does a parrot live?",
+              "askBn": "টিয়া কোথায় থাকে?",
+              "image": "parrot",
+              "options": [
+                {
+                  "label": "kennel",
+                  "image": "kennel"
+                },
+                {
+                  "label": "forest",
+                  "image": "forest"
+                },
+                {
+                  "label": "nest",
+                  "image": "bird-nest"
+                }
+              ],
+              "answer": 2,
+              "hint": "A parrot lives in a nest or a tree hole.",
+              "tests": "ho-nest"
+            },
+            {
+              "id": "w-crow",
+              "ask": "Where does a crow live?",
+              "askBn": "কাক কোথায় থাকে?",
+              "image": "crow",
+              "options": [
+                {
+                  "label": "kennel",
+                  "image": "kennel"
+                },
+                {
+                  "label": "nest",
+                  "image": "bird-nest"
+                },
+                {
+                  "label": "lair",
+                  "image": "lair"
+                }
+              ],
+              "answer": 1,
+              "hint": "A crow lives in a nest.",
+              "tests": "ho-nest"
+            }
+          ]
+        },
+        {
+          "id": "u9l1-game3",
+          "type": "game",
+          "kind": "true-false",
+          "bookActivity": "F",
+          "title": "True or false?",
+          "titleBn": "সত্য না মিথ্যা?",
+          "rounds": [
+            {
+              "id": "t1",
+              "ask": "The monkey lives in a tree hole.",
+              "askBn": "বানর গাছের কোটরে থাকে।",
+              "speak": "The monkey lives in a tree hole.",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 1,
+              "hint": "No! A monkey lives in a tree.",
+              "tests": "ho-tree"
+            },
+            {
+              "id": "t2",
+              "ask": "The cow lives in a forest.",
+              "askBn": "গরু বনে থাকে।",
+              "speak": "The cow lives in a forest.",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 1,
+              "hint": "No! A cow lives in a shed or a cowshed.",
+              "tests": "ho-cowshed"
+            },
+            {
+              "id": "t3",
+              "ask": "The crow lives in a nest.",
+              "askBn": "কাক বাসায় থাকে।",
+              "speak": "The crow lives in a nest.",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "hint": "Yes! A crow lives in a nest.",
+              "tests": "ho-nest"
+            }
+          ]
+        },
+        {
+          "id": "u9l1-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "Which animal is this?",
+              "askBn": "এটি কোন প্রাণী?",
+              "image": "tiger",
+              "options": [
+                {
+                  "label": "tiger"
+                },
+                {
+                  "label": "crow"
+                },
+                {
+                  "label": "monkey"
+                }
+              ],
+              "answer": 0,
+              "explain": "tiger = বাঘ",
+              "tests": "an-tiger"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "kennel",
+              "options": [
+                {
+                  "label": "nest"
+                },
+                {
+                  "label": "cowshed"
+                },
+                {
+                  "label": "kennel"
+                }
+              ],
+              "answer": 2,
+              "tests": "ho-kennel"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "A deer lives in a ___ .",
+              "askBn": "A deer lives in a ___ .",
+              "options": [
+                {
+                  "label": "forest"
+                },
+                {
+                  "label": "lair"
+                },
+                {
+                  "label": "kennel"
+                }
+              ],
+              "answer": 0,
+              "explain": "A deer lives in a forest.",
+              "tests": "ho-forest"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "A tiger lives in a lair.",
+              "askBn": "বাঘ গুহায় থাকে।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "The book says: A tiger lives in a lair.",
+              "tests": "ho-lair"
+            },
+            {
+              "id": "q5",
+              "type": "tap-picture",
+              "ask": "Who lives here?",
+              "askBn": "এখানে কে থাকে?",
+              "image": "kennel",
+              "options": [
+                {
+                  "label": "a cow"
+                },
+                {
+                  "label": "a crow"
+                },
+                {
+                  "label": "a dog"
+                }
+              ],
+              "answer": 2,
+              "explain": "A dog lives in a kennel.",
+              "tests": "ho-kennel"
+            }
+          ]
+        },
+        {
+          "id": "u9l1-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You know where animals and birds live!",
+          "sayBn": "প্রাণী ও পাখি কোথায় থাকে তুমি জানো!"
+        }
+      ]
+    },
+    {
+      "id": "u9l2",
+      "unitId": "u9",
+      "number": 2,
+      "title": "Their Food",
+      "titleBn": "তাদের খাবার",
+      "shape": "category",
+      "bookPages": [
+        87,
+        88
+      ],
+      "objective": "Say what different animals and birds eat.",
+      "objectiveBn": "কোন প্রাণী ও পাখি কী খায় তা বলা।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "fo-meat",
+          "word": "meat",
+          "bangla": "মাংস",
+          "banglaPronunciation": "মিট",
+          "banglaSource": "enrichment",
+          "bookPage": 87,
+          "category": "food",
+          "image": "meat",
+          "example": "A dog eats meat.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "fo-grass",
+          "word": "grass",
+          "bangla": "ঘাস",
+          "banglaPronunciation": "গ্রাস",
+          "banglaSource": "enrichment",
+          "bookPage": 87,
+          "category": "food",
+          "image": "grass",
+          "example": "A cow eats grass.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "fo-fruits",
+          "word": "fruits",
+          "bangla": "ফল",
+          "banglaPronunciation": "ফ্রুটস",
+          "banglaSource": "enrichment",
+          "bookPage": 87,
+          "category": "food",
+          "image": "fruits",
+          "example": "A parrot eats fruits.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "fo-nuts",
+          "word": "nuts",
+          "bangla": "বাদাম জাতীয় ফল",
+          "banglaPronunciation": "নাটস",
+          "banglaSource": "enrichment",
+          "bookPage": 87,
+          "category": "food",
+          "image": "nuts",
+          "example": "A monkey eats fruits, nuts, etc.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "fo-grains",
+          "word": "grains",
+          "bangla": "শস্যদানা",
+          "banglaPronunciation": "গ্রেইনস",
+          "banglaSource": "enrichment",
+          "bookPage": 87,
+          "category": "food",
+          "image": "grains",
+          "example": "A crow eats grains, insects, etc.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "fo-insects",
+          "word": "insects",
+          "bangla": "পোকামাকড়",
+          "banglaPronunciation": "ইনসেক্টস",
+          "banglaSource": "enrichment",
+          "bookPage": 87,
+          "category": "food",
+          "image": "insects",
+          "example": "A crow eats grains, insects, etc.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "fo-leaves",
+          "word": "leaves",
+          "bangla": "পাতা",
+          "banglaPronunciation": "লিভস",
+          "banglaSource": "enrichment",
+          "bookPage": 87,
+          "category": "food",
+          "image": "leaves",
+          "example": "A deer eats grass, leaves, etc.",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u9l2-intro",
+          "type": "intro",
+          "title": "What do they eat?",
+          "titleBn": "তারা কী খায়?",
+          "say": "Animals and birds eat different food. Let's find out!",
+          "sayBn": "প্রাণী ও পাখি আলাদা আলাদা খাবার খায়। চলো জানি!",
+          "illustration": "grass"
+        },
+        {
+          "id": "u9l2-food1",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Their food 1",
+          "titleBn": "তাদের খাবার ১",
+          "items": [
+            "fo-meat",
+            "fo-grass",
+            "fo-fruits",
+            "fo-nuts"
+          ]
+        },
+        {
+          "id": "u9l2-food2",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Their food 2",
+          "titleBn": "তাদের খাবার ২",
+          "items": [
+            "fo-grains",
+            "fo-insects",
+            "fo-leaves"
+          ]
+        },
+        {
+          "id": "u9l2-speak1",
+          "type": "speak",
+          "bookActivity": "B",
+          "title": "Say it!",
+          "titleBn": "বলো!",
+          "prompt": "Say: A dog eats meat.",
+          "promptBn": "বলো: A dog eats meat.",
+          "modelAnswer": "A dog eats meat."
+        },
+        {
+          "id": "u9l2-game1",
+          "type": "game",
+          "kind": "choose-the-reply",
+          "bookActivity": "B",
+          "title": "What does it eat?",
+          "titleBn": "এটি কী খায়?",
+          "rounds": [
+            {
+              "id": "e-dog",
+              "ask": "What does a dog eat?",
+              "askBn": "কুকুর কী খায়?",
+              "image": "dog",
+              "options": [
+                {
+                  "label": "grass, leaves, etc."
+                },
+                {
+                  "label": "meat"
+                },
+                {
+                  "label": "grass"
+                }
+              ],
+              "answer": 1,
+              "hint": "A dog eats meat",
+              "tests": "fo-meat"
+            },
+            {
+              "id": "e-cow",
+              "ask": "What does a cow eat?",
+              "askBn": "গরু কী খায়?",
+              "image": "cow",
+              "options": [
+                {
+                  "label": "fruits"
+                },
+                {
+                  "label": "grass"
+                },
+                {
+                  "label": "meat"
+                }
+              ],
+              "answer": 1,
+              "hint": "A cow eats grass",
+              "tests": "fo-grass"
+            },
+            {
+              "id": "e-monkey",
+              "ask": "What does a monkey eat?",
+              "askBn": "বানর কী খায়?",
+              "image": "monkey",
+              "options": [
+                {
+                  "label": "grains, insects, etc."
+                },
+                {
+                  "label": "fruits, nuts, etc."
+                },
+                {
+                  "label": "grass, leaves, etc."
+                }
+              ],
+              "answer": 1,
+              "hint": "A monkey eats fruits, nuts, etc.",
+              "tests": "fo-nuts"
+            },
+            {
+              "id": "e-parrot",
+              "ask": "What does a parrot eat?",
+              "askBn": "টিয়া কী খায়?",
+              "image": "parrot",
+              "options": [
+                {
+                  "label": "grass"
+                },
+                {
+                  "label": "fruits"
+                },
+                {
+                  "label": "grass, leaves, etc."
+                }
+              ],
+              "answer": 1,
+              "hint": "A parrot eats fruits",
+              "tests": "fo-fruits"
+            },
+            {
+              "id": "e-tiger",
+              "ask": "What does a tiger eat?",
+              "askBn": "বাঘ কী খায়?",
+              "image": "tiger",
+              "options": [
+                {
+                  "label": "fruits"
+                },
+                {
+                  "label": "meat"
+                },
+                {
+                  "label": "grains, insects, etc."
+                }
+              ],
+              "answer": 1,
+              "hint": "A tiger eats meat",
+              "tests": "fo-meat"
+            },
+            {
+              "id": "e-crow",
+              "ask": "What does a crow eat?",
+              "askBn": "কাক কী খায়?",
+              "image": "crow",
+              "options": [
+                {
+                  "label": "fruits"
+                },
+                {
+                  "label": "grass"
+                },
+                {
+                  "label": "grains, insects, etc."
+                }
+              ],
+              "answer": 2,
+              "hint": "A crow eats grains, insects, etc.",
+              "tests": "fo-insects"
+            },
+            {
+              "id": "e-deer",
+              "ask": "What does a deer eat?",
+              "askBn": "হরিণ কী খায়?",
+              "image": "deer",
+              "options": [
+                {
+                  "label": "fruits, nuts, etc."
+                },
+                {
+                  "label": "grass, leaves, etc."
+                },
+                {
+                  "label": "fruits"
+                }
+              ],
+              "answer": 1,
+              "hint": "A deer eats grass, leaves, etc.",
+              "tests": "fo-leaves"
+            }
+          ]
+        },
+        {
+          "id": "u9l2-game2",
+          "type": "game",
+          "kind": "true-false",
+          "bookActivity": "C",
+          "title": "True or false?",
+          "titleBn": "সত্য না মিথ্যা?",
+          "rounds": [
+            {
+              "id": "c1",
+              "ask": "A tiger eats grass.",
+              "askBn": "বাঘ ঘাস খায়।",
+              "speak": "A tiger eats grass.",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 1,
+              "hint": "No! A tiger eats meat.",
+              "tests": "fo-meat"
+            },
+            {
+              "id": "c2",
+              "ask": "A parrot eats ants.",
+              "askBn": "টিয়া পিঁপড়া খায়।",
+              "speak": "A parrot eats ants.",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 1,
+              "hint": "No! A parrot eats fruits.",
+              "tests": "fo-fruits"
+            },
+            {
+              "id": "c3",
+              "ask": "A monkey eats apples.",
+              "askBn": "বানর আপেল খায়।",
+              "speak": "A monkey eats apples.",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "hint": "Yes! Apples are fruits. A monkey eats fruits, nuts, etc.",
+              "tests": "fo-nuts"
+            },
+            {
+              "id": "c4",
+              "ask": "A deer eats leaves.",
+              "askBn": "হরিণ পাতা খায়।",
+              "speak": "A deer eats leaves.",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "hint": "Yes! A deer eats grass, leaves, etc.",
+              "tests": "fo-leaves"
+            },
+            {
+              "id": "c5",
+              "ask": "A cow eats meat.",
+              "askBn": "গরু মাংস খায়।",
+              "speak": "A cow eats meat.",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 1,
+              "hint": "No! A cow eats grass.",
+              "tests": "fo-grass"
+            }
+          ]
+        },
+        {
+          "id": "u9l2-speak2",
+          "type": "speak",
+          "bookActivity": "D",
+          "title": "A hen",
+          "titleBn": "একটি মুরগি",
+          "prompt": "Say: A hen lives in a hen house. It eats rice, insects, etc.",
+          "promptBn": "বলো: A hen lives in a hen house. It eats rice, insects, etc.",
+          "modelAnswer": "A hen lives in a hen house. It eats rice, insects, etc."
+        },
+        {
+          "id": "u9l2-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "meat",
+              "options": [
+                {
+                  "label": "leaves"
+                },
+                {
+                  "label": "meat"
+                },
+                {
+                  "label": "nuts"
+                }
+              ],
+              "answer": 1,
+              "explain": "meat = মাংস",
+              "tests": "fo-meat"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "insects",
+              "options": [
+                {
+                  "label": "insects"
+                },
+                {
+                  "label": "fruits"
+                },
+                {
+                  "label": "meat"
+                }
+              ],
+              "answer": 0,
+              "tests": "fo-insects"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "A cow eats ___ .",
+              "askBn": "A cow eats ___ .",
+              "options": [
+                {
+                  "label": "insects"
+                },
+                {
+                  "label": "grass"
+                },
+                {
+                  "label": "meat"
+                }
+              ],
+              "answer": 1,
+              "explain": "A cow eats grass.",
+              "tests": "fo-grass"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "A dog eats meat.",
+              "askBn": "কুকুর মাংস খায়।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "The book says: A dog eats meat.",
+              "tests": "fo-meat"
+            },
+            {
+              "id": "q5",
+              "type": "tap-picture",
+              "ask": "Who eats this?",
+              "askBn": "এটি কে খায়?",
+              "image": "grass",
+              "options": [
+                {
+                  "label": "a dog"
+                },
+                {
+                  "label": "a cow"
+                },
+                {
+                  "label": "a tiger"
+                }
+              ],
+              "answer": 1,
+              "explain": "A cow eats grass.",
+              "tests": "fo-grass"
+            }
+          ]
+        },
+        {
+          "id": "u9l2-done",
+          "type": "done",
+          "title": "Well done!",
+          "titleBn": "খুব ভালো!",
+          "say": "You know what animals and birds eat!",
+          "sayBn": "প্রাণী ও পাখি কী খায় তুমি জানো!"
+        }
+      ]
+    },
+    {
+      "id": "u9l3",
+      "unitId": "u9",
+      "number": 3,
+      "title": "Domestic Animals and Birds",
+      "titleBn": "গৃহপালিত প্রাণী ও পাখি",
+      "shape": "story",
+      "bookPages": [
+        89,
+        90
+      ],
+      "objective": "Read about the cow and the hen, and say what they give us.",
+      "objectiveBn": "গরু ও মুরগির কথা পড়া আর তারা আমাদের কী দেয় তা বলা।",
+      "minutes": 8,
+      "vocabulary": [
+        {
+          "id": "do-animal",
+          "word": "domestic animal",
+          "bangla": "গৃহপালিত প্রাণী",
+          "banglaPronunciation": "ডমেস্টিক অ্যানিম্যাল",
+          "banglaSource": "enrichment",
+          "bookPage": 89,
+          "category": "animal",
+          "image": "cow",
+          "example": "A cow is a domestic animal.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "do-bird",
+          "word": "domestic bird",
+          "bangla": "গৃহপালিত পাখি",
+          "banglaPronunciation": "ডমেস্টিক বার্ড",
+          "banglaSource": "enrichment",
+          "bookPage": 89,
+          "category": "bird",
+          "image": "hen",
+          "example": "A hen is a domestic bird.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "do-milk",
+          "word": "milk",
+          "bangla": "দুধ",
+          "banglaPronunciation": "মিল্ক",
+          "banglaSource": "enrichment",
+          "bookPage": 89,
+          "category": "food",
+          "image": "milk",
+          "example": "The cow gives us milk.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "do-eggs",
+          "word": "eggs",
+          "bangla": "ডিম",
+          "banglaPronunciation": "এগস",
+          "banglaSource": "enrichment",
+          "bookPage": 89,
+          "category": "food",
+          "image": "egg",
+          "example": "We eat eggs.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "do-lays",
+          "word": "lays",
+          "bangla": "ডিম পাড়ে",
+          "banglaPronunciation": "লেইজ",
+          "banglaSource": "enrichment",
+          "bookPage": 89,
+          "category": "action",
+          "image": "birds-eggs",
+          "example": "The hen lays eggs for us.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "do-pet",
+          "word": "pet animal",
+          "bangla": "পোষা প্রাণী",
+          "banglaPronunciation": "পেট অ্যানিম্যাল",
+          "banglaSource": "enrichment",
+          "bookPage": 90,
+          "category": "animal",
+          "image": "cat",
+          "example": "Orpa has a pet animal.",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u9l3-intro",
+          "type": "intro",
+          "title": "At home",
+          "titleBn": "বাড়িতে",
+          "say": "A cow and a hen live with us. What do they give us?",
+          "sayBn": "একটি গরু আর একটি মুরগি আমাদের সঙ্গে থাকে। তারা আমাদের কী দেয়?",
+          "illustration": "cow"
+        },
+        {
+          "id": "u9l3-words",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "New words",
+          "titleBn": "নতুন শব্দ",
+          "items": [
+            "do-animal",
+            "do-bird",
+            "do-milk",
+            "do-eggs",
+            "do-lays",
+            "do-pet"
+          ]
+        },
+        {
+          "id": "u9l3-text",
+          "type": "rhyme",
+          "bookActivity": "A",
+          "source": "textbook",
+          "title": "Domestic animals and birds",
+          "titleBn": "গৃহপালিত প্রাণী ও পাখি",
+          "listenLabel": "Listen to the text",
+          "verses": [
+            [
+              "A cow is a domestic animal.",
+              "A hen is a domestic bird.",
+              "We keep them in our houses.",
+              "The cow gives us milk.",
+              "We drink milk.",
+              "The hen lays eggs for us.",
+              "We eat eggs."
+            ]
+          ]
+        },
+        {
+          "id": "u9l3-game1",
+          "type": "game",
+          "kind": "choose-the-reply",
+          "bookActivity": "B",
+          "title": "Ask and answer",
+          "titleBn": "প্রশ্ন আর উত্তর",
+          "rounds": [
+            {
+              "id": "b1",
+              "ask": "What kind of animal is the cow?",
+              "askBn": "গরু কী ধরনের প্রাণী?",
+              "speak": "What kind of animal is the cow?",
+              "options": [
+                {
+                  "label": "A wild animal"
+                },
+                {
+                  "label": "A domestic animal"
+                },
+                {
+                  "label": "A pet bird"
+                }
+              ],
+              "answer": 1,
+              "hint": "Read the first sentence.",
+              "tests": "do-animal"
+            },
+            {
+              "id": "b2",
+              "ask": "What does the cow give us?",
+              "askBn": "গরু আমাদের কী দেয়?",
+              "speak": "What does the cow give us?",
+              "options": [
+                {
+                  "label": "Milk"
+                },
+                {
+                  "label": "Grass"
+                },
+                {
+                  "label": "Eggs"
+                }
+              ],
+              "answer": 0,
+              "hint": "We drink it.",
+              "tests": "do-milk"
+            },
+            {
+              "id": "b3",
+              "ask": "What kind of bird is the hen?",
+              "askBn": "মুরগি কী ধরনের পাখি?",
+              "speak": "What kind of bird is the hen?",
+              "options": [
+                {
+                  "label": "A pet animal"
+                },
+                {
+                  "label": "A wild bird"
+                },
+                {
+                  "label": "A domestic bird"
+                }
+              ],
+              "answer": 2,
+              "hint": "Read the second sentence.",
+              "tests": "do-bird"
+            },
+            {
+              "id": "b4",
+              "ask": "What does the hen give us?",
+              "askBn": "মুরগি আমাদের কী দেয়?",
+              "speak": "What does the hen give us?",
+              "options": [
+                {
+                  "label": "Milk"
+                },
+                {
+                  "label": "Meat"
+                },
+                {
+                  "label": "Eggs"
+                }
+              ],
+              "answer": 2,
+              "hint": "We eat them.",
+              "tests": "do-eggs"
+            }
+          ]
+        },
+        {
+          "id": "u9l3-game2",
+          "type": "game",
+          "kind": "order-the-lines",
+          "bookActivity": "C",
+          "title": "Fill in the blanks",
+          "titleBn": "ফাঁকা জায়গা পূরণ করো",
+          "rounds": [
+            {
+              "id": "f1",
+              "ask": "It lives in our ___ .",
+              "askBn": "It lives in our ___ .",
+              "options": [
+                {
+                  "label": "house"
+                },
+                {
+                  "label": "eggs"
+                },
+                {
+                  "label": "lives"
+                }
+              ],
+              "answer": 0,
+              "hint": "Choose from the box."
+            },
+            {
+              "id": "f2",
+              "ask": "It ___ on grains and insects.",
+              "askBn": "It ___ on grains and insects.",
+              "options": [
+                {
+                  "label": "lives"
+                },
+                {
+                  "label": "animal"
+                },
+                {
+                  "label": "house"
+                }
+              ],
+              "answer": 0,
+              "hint": "Choose from the box."
+            },
+            {
+              "id": "f3",
+              "ask": "It ___ eggs.",
+              "askBn": "It ___ eggs.",
+              "options": [
+                {
+                  "label": "animal"
+                },
+                {
+                  "label": "lives"
+                },
+                {
+                  "label": "lays"
+                }
+              ],
+              "answer": 2,
+              "hint": "Choose from the box.",
+              "tests": "do-lays"
+            },
+            {
+              "id": "f4",
+              "ask": "We eat ___ .",
+              "askBn": "We eat ___ .",
+              "options": [
+                {
+                  "label": "eggs"
+                },
+                {
+                  "label": "lives"
+                },
+                {
+                  "label": "lays"
+                }
+              ],
+              "answer": 0,
+              "hint": "Choose from the box.",
+              "tests": "do-eggs"
+            }
+          ]
+        },
+        {
+          "id": "u9l3-speak1",
+          "type": "speak",
+          "bookActivity": "D",
+          "title": "Domestic animals",
+          "titleBn": "গৃহপালিত প্রাণী",
+          "prompt": "Say a domestic animal and a domestic bird you know.",
+          "promptBn": "তোমার জানা একটি গৃহপালিত প্রাণী আর একটি গৃহপালিত পাখির নাম বলো।",
+          "modelAnswer": "A cow is a domestic animal. A hen is a domestic bird."
+        },
+        {
+          "id": "u9l3-game3",
+          "type": "game",
+          "kind": "order-the-lines",
+          "bookActivity": "E",
+          "title": "Which mark?",
+          "titleBn": "কোন চিহ্ন?",
+          "rounds": [
+            {
+              "id": "p1",
+              "ask": "Orpa has a pet animal ___",
+              "askBn": "Orpa has a pet animal ___",
+              "options": [
+                {
+                  "label": ". (full stop)"
+                },
+                {
+                  "label": "? (question mark)"
+                }
+              ],
+              "answer": 0,
+              "hint": "A question ends with ?. A telling sentence ends with a full stop."
+            },
+            {
+              "id": "p2",
+              "ask": "It is a cat ___",
+              "askBn": "It is a cat ___",
+              "options": [
+                {
+                  "label": "? (question mark)"
+                },
+                {
+                  "label": ". (full stop)"
+                }
+              ],
+              "answer": 1,
+              "hint": "A question ends with ?. A telling sentence ends with a full stop."
+            },
+            {
+              "id": "p3",
+              "ask": "Its name is Nini ___",
+              "askBn": "Its name is Nini ___",
+              "options": [
+                {
+                  "label": "? (question mark)"
+                },
+                {
+                  "label": ". (full stop)"
+                }
+              ],
+              "answer": 1,
+              "hint": "A question ends with ?. A telling sentence ends with a full stop."
+            },
+            {
+              "id": "p4",
+              "ask": "Have you any pet animal ___",
+              "askBn": "Have you any pet animal ___",
+              "options": [
+                {
+                  "label": "? (question mark)"
+                },
+                {
+                  "label": ". (full stop)"
+                }
+              ],
+              "answer": 0,
+              "hint": "A question ends with ?. A telling sentence ends with a full stop."
+            },
+            {
+              "id": "p5",
+              "ask": "Do you love it ___",
+              "askBn": "Do you love it ___",
+              "options": [
+                {
+                  "label": ". (full stop)"
+                },
+                {
+                  "label": "? (question mark)"
+                }
+              ],
+              "answer": 1,
+              "hint": "A question ends with ?. A telling sentence ends with a full stop."
+            },
+            {
+              "id": "p6",
+              "ask": "What is its name ___",
+              "askBn": "What is its name ___",
+              "options": [
+                {
+                  "label": ". (full stop)"
+                },
+                {
+                  "label": "? (question mark)"
+                }
+              ],
+              "answer": 1,
+              "hint": "A question ends with ?. A telling sentence ends with a full stop."
+            }
+          ]
+        },
+        {
+          "id": "u9l3-speak2",
+          "type": "speak",
+          "bookActivity": "F",
+          "title": "Your favourite",
+          "titleBn": "তোমার প্রিয়",
+          "prompt": "Tell us about your favourite animal or bird.",
+          "promptBn": "তোমার প্রিয় প্রাণী বা পাখি সম্পর্কে বলো।",
+          "modelAnswer": "My favourite animal is ..."
+        },
+        {
+          "id": "u9l3-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "milk",
+              "options": [
+                {
+                  "label": "milk"
+                },
+                {
+                  "label": "meat"
+                },
+                {
+                  "label": "eggs"
+                }
+              ],
+              "answer": 0,
+              "explain": "The cow gives us milk.",
+              "tests": "do-milk"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "eggs",
+              "options": [
+                {
+                  "label": "eggs"
+                },
+                {
+                  "label": "milk"
+                },
+                {
+                  "label": "lays"
+                }
+              ],
+              "answer": 0,
+              "tests": "do-eggs"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "The hen ___ eggs for us.",
+              "askBn": "The hen ___ eggs for us.",
+              "options": [
+                {
+                  "label": "drinks"
+                },
+                {
+                  "label": "lives"
+                },
+                {
+                  "label": "lays"
+                }
+              ],
+              "answer": 2,
+              "explain": "The hen lays eggs for us.",
+              "tests": "do-lays"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "A cow is a domestic animal.",
+              "askBn": "গরু একটি গৃহপালিত প্রাণী।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "The text says: A cow is a domestic animal.",
+              "tests": "do-animal"
+            },
+            {
+              "id": "q5",
+              "type": "tap-picture",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "hen",
+              "options": [
+                {
+                  "label": "a cat"
+                },
+                {
+                  "label": "a cow"
+                },
+                {
+                  "label": "a hen"
+                }
+              ],
+              "answer": 2,
+              "explain": "A hen is a domestic bird.",
+              "tests": "do-bird"
+            }
+          ]
+        },
+        {
+          "id": "u9l3-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You know what a cow and a hen give us!",
+          "sayBn": "গরু আর মুরগি আমাদের কী দেয় তুমি জানো!"
+        }
+      ]
+    },
+    {
+      "id": "u9l4",
+      "unitId": "u9",
+      "number": 4,
+      "title": "A Rhyme",
+      "titleBn": "একটি ছড়া",
+      "shape": "rhyme",
+      "bookPages": [
+        91,
+        92
+      ],
+      "objective": "Recite the rhyme Hey Diddle, Diddle and act it out.",
+      "objectiveBn": "\"Hey Diddle, Diddle\" ছড়াটি আবৃত্তি করা আর অভিনয় করে দেখানো।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "ry-fiddle",
+          "word": "fiddle",
+          "bangla": "বেহালা",
+          "banglaPronunciation": "ফিডল",
+          "banglaSource": "enrichment",
+          "bookPage": 91,
+          "category": "object",
+          "image": "fiddle",
+          "example": "The cat, and the fiddle,",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "ry-moon",
+          "word": "moon",
+          "bangla": "চাঁদ",
+          "banglaPronunciation": "মুন",
+          "banglaSource": "enrichment",
+          "bookPage": 91,
+          "category": "nature",
+          "image": "moon",
+          "example": "The cow jumped over the moon.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "ry-dish",
+          "word": "dish",
+          "bangla": "থালা",
+          "banglaPronunciation": "ডিশ",
+          "banglaSource": "enrichment",
+          "bookPage": 91,
+          "category": "object",
+          "image": "dish",
+          "example": "And the dish ran away with the spoon.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "ry-spoon",
+          "word": "spoon",
+          "bangla": "চামচ",
+          "banglaPronunciation": "স্পুন",
+          "banglaSource": "enrichment",
+          "bookPage": 91,
+          "category": "object",
+          "image": "spoon",
+          "example": "And the dish ran away with the spoon.",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u9l4-intro",
+          "type": "intro",
+          "title": "A funny rhyme",
+          "titleBn": "একটি মজার ছড়া",
+          "say": "A cat plays a fiddle. A cow jumps over the moon!",
+          "sayBn": "একটি বিড়াল বেহালা বাজায়। একটি গরু চাঁদের ওপর দিয়ে লাফায়!",
+          "illustration": "rhyme-cow"
+        },
+        {
+          "id": "u9l4-words",
+          "type": "vocab",
+          "bookActivity": "B",
+          "title": "New words",
+          "titleBn": "নতুন শব্দ",
+          "items": [
+            "ry-fiddle",
+            "ry-moon",
+            "ry-dish",
+            "ry-spoon"
+          ]
+        },
+        {
+          "id": "u9l4-rhyme",
+          "type": "story",
+          "bookActivity": "B",
+          "title": "Hey Diddle, Diddle",
+          "titleBn": "হে ডিডল, ডিডল",
+          "source": "textbook",
+          "scenes": [
+            {
+              "id": "s1",
+              "text": "Hey diddle, diddle The cat, and the fiddle,",
+              "illustration": "rhyme-cat"
+            },
+            {
+              "id": "s2",
+              "text": "The cow jumped over the moon.",
+              "illustration": "rhyme-cow"
+            },
+            {
+              "id": "s3",
+              "text": "The little dog laughed to see such sport,",
+              "illustration": "rhyme-dog"
+            },
+            {
+              "id": "s4",
+              "text": "And the dish ran away with the spoon.",
+              "illustration": "rhyme-dish"
+            }
+          ]
+        },
+        {
+          "id": "u9l4-game1",
+          "type": "game",
+          "kind": "choose-the-reply",
+          "bookActivity": "A",
+          "title": "Questions about the rhyme",
+          "titleBn": "ছড়াটি নিয়ে প্রশ্ন",
+          "rounds": [
+            {
+              "id": "a1",
+              "ask": "What is the cat doing?",
+              "askBn": "বিড়ালটি কী করছে?",
+              "speak": "What is the cat doing?",
+              "options": [
+                {
+                  "label": "Sleeping"
+                },
+                {
+                  "label": "Eating a fish"
+                },
+                {
+                  "label": "Playing the fiddle"
+                }
+              ],
+              "answer": 2,
+              "hint": "Read the first two lines.",
+              "tests": "ry-fiddle"
+            },
+            {
+              "id": "a2",
+              "ask": "Where is the cow jumping?",
+              "askBn": "গরুটি কোথায় লাফাচ্ছে?",
+              "speak": "Where is the cow jumping?",
+              "options": [
+                {
+                  "label": "Over the fence"
+                },
+                {
+                  "label": "Over the dish"
+                },
+                {
+                  "label": "Over the moon"
+                }
+              ],
+              "answer": 2,
+              "hint": "Read the third line.",
+              "tests": "ry-moon"
+            },
+            {
+              "id": "a3",
+              "ask": "Who laughed?",
+              "askBn": "কে হাসল?",
+              "speak": "Who laughed?",
+              "options": [
+                {
+                  "label": "The cat"
+                },
+                {
+                  "label": "The cow"
+                },
+                {
+                  "label": "The little dog"
+                }
+              ],
+              "answer": 2,
+              "hint": "Read the fourth line."
+            },
+            {
+              "id": "a4",
+              "ask": "Who ran away with the spoon?",
+              "askBn": "চামচ নিয়ে কে পালিয়ে গেল?",
+              "speak": "Who ran away with the spoon?",
+              "options": [
+                {
+                  "label": "The cat"
+                },
+                {
+                  "label": "The dish"
+                },
+                {
+                  "label": "The moon"
+                }
+              ],
+              "answer": 1,
+              "hint": "Read the last line.",
+              "tests": "ry-dish"
+            }
+          ]
+        },
+        {
+          "id": "u9l4-game2",
+          "type": "game",
+          "kind": "order-the-scenes",
+          "bookActivity": "A",
+          "title": "Find the picture",
+          "titleBn": "ছবিটি খুঁজে বের করো",
+          "rounds": [
+            {
+              "id": "p-cat",
+              "ask": "The cat, and the fiddle,",
+              "askBn": "The cat, and the fiddle,",
+              "options": [
+                {
+                  "label": "the dish and the spoon",
+                  "image": "rhyme-dish"
+                },
+                {
+                  "label": "the cow and the moon",
+                  "image": "rhyme-cow"
+                },
+                {
+                  "label": "the cat and the fiddle",
+                  "image": "rhyme-cat"
+                }
+              ],
+              "answer": 2,
+              "hint": "Find the picture that matches the line."
+            },
+            {
+              "id": "p-cow",
+              "ask": "The cow jumped over the moon.",
+              "askBn": "The cow jumped over the moon.",
+              "options": [
+                {
+                  "label": "the little dog",
+                  "image": "rhyme-dog"
+                },
+                {
+                  "label": "the cow and the moon",
+                  "image": "rhyme-cow"
+                },
+                {
+                  "label": "the cat and the fiddle",
+                  "image": "rhyme-cat"
+                }
+              ],
+              "answer": 1,
+              "hint": "Find the picture that matches the line."
+            },
+            {
+              "id": "p-little",
+              "ask": "The little dog laughed to see such sport,",
+              "askBn": "The little dog laughed to see such sport,",
+              "options": [
+                {
+                  "label": "the dish and the spoon",
+                  "image": "rhyme-dish"
+                },
+                {
+                  "label": "the cow and the moon",
+                  "image": "rhyme-cow"
+                },
+                {
+                  "label": "the little dog",
+                  "image": "rhyme-dog"
+                }
+              ],
+              "answer": 2,
+              "hint": "Find the picture that matches the line."
+            },
+            {
+              "id": "p-dish",
+              "ask": "And the dish ran away with the spoon.",
+              "askBn": "And the dish ran away with the spoon.",
+              "options": [
+                {
+                  "label": "the little dog",
+                  "image": "rhyme-dog"
+                },
+                {
+                  "label": "the cow and the moon",
+                  "image": "rhyme-cow"
+                },
+                {
+                  "label": "the dish and the spoon",
+                  "image": "rhyme-dish"
+                }
+              ],
+              "answer": 2,
+              "hint": "Find the picture that matches the line."
+            }
+          ]
+        },
+        {
+          "id": "u9l4-act",
+          "type": "command",
+          "bookActivity": "D",
+          "source": "textbook",
+          "title": "Act it out",
+          "titleBn": "অভিনয় করো",
+          "commands": [
+            {
+              "text": "Play the fiddle.",
+              "textBn": "বেহালা বাজাও।",
+              "illustration": "fiddle"
+            },
+            {
+              "text": "Jump.",
+              "textBn": "লাফাও।",
+              "illustration": "rhyme-cow"
+            },
+            {
+              "text": "Laugh.",
+              "textBn": "হাসো।",
+              "illustration": "rhyme-dog"
+            },
+            {
+              "text": "Run.",
+              "textBn": "দৌড়াও।",
+              "illustration": "rhyme-dish"
+            }
+          ]
+        },
+        {
+          "id": "u9l4-draw",
+          "type": "command",
+          "bookActivity": "E",
+          "source": "textbook",
+          "title": "Draw your favourite",
+          "titleBn": "তোমার প্রিয়টি আঁকো",
+          "commands": [
+            {
+              "text": "Draw a picture of your favourite animal or bird. Colour it and display it in the class.",
+              "textBn": "তোমার প্রিয় প্রাণী বা পাখির ছবি আঁকো। রং করে শ্রেণিকক্ষে টাঙিয়ে দাও।",
+              "illustration": "colouring"
+            }
+          ]
+        },
+        {
+          "id": "u9l4-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "fiddle",
+              "options": [
+                {
+                  "label": "a fiddle"
+                },
+                {
+                  "label": "a dish"
+                },
+                {
+                  "label": "a spoon"
+                }
+              ],
+              "answer": 0,
+              "explain": "fiddle = বেহালা",
+              "tests": "ry-fiddle"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "moon",
+              "options": [
+                {
+                  "label": "dish"
+                },
+                {
+                  "label": "moon"
+                },
+                {
+                  "label": "spoon"
+                }
+              ],
+              "answer": 1,
+              "tests": "ry-moon"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "The cow jumped over the ___ .",
+              "askBn": "The cow jumped over the ___ .",
+              "options": [
+                {
+                  "label": "spoon"
+                },
+                {
+                  "label": "fiddle"
+                },
+                {
+                  "label": "moon"
+                }
+              ],
+              "answer": 2,
+              "explain": "The cow jumped over the moon.",
+              "tests": "ry-moon"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "The cat played the fiddle.",
+              "askBn": "বিড়ালটি বেহালা বাজাল।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "The rhyme says: The cat, and the fiddle.",
+              "tests": "ry-fiddle"
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "The dish ran away with the ___ .",
+              "askBn": "The dish ran away with the ___ .",
+              "options": [
+                {
+                  "label": "fiddle"
+                },
+                {
+                  "label": "spoon"
+                },
+                {
+                  "label": "moon"
+                }
+              ],
+              "answer": 1,
+              "explain": "And the dish ran away with the spoon.",
+              "tests": "ry-spoon"
+            }
+          ]
+        },
+        {
+          "id": "u9l4-done",
+          "type": "done",
+          "title": "Well done!",
+          "titleBn": "খুব ভালো!",
+          "say": "You can say Hey Diddle, Diddle!",
+          "sayBn": "তুমি Hey Diddle, Diddle বলতে পারো!"
+        }
+      ]
+    }
+  ]
+}

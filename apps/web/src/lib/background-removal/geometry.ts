@@ -101,10 +101,61 @@ export function planLetterbox(
  *
  * A modern phone camera produces images a mobile browser cannot allocate a
  * canvas for, and the failure is an opaque "tainted or oversized" error rather
- * than anything actionable. The output is still written at the original
- * resolution; this only limits the intermediate buffer.
+ * than anything actionable. 4096 x 4096 is the canvas area iOS Safari is
+ * guaranteed to accept, and it also keeps the editor honest: it holds a few
+ * full-resolution canvases at once, so this is roughly 250 MB at the cap.
+ * Anything larger is scaled down to fit, and the page says so.
  */
-export const MAX_SOURCE_PIXELS = 40_000_000;
+export const MAX_SOURCE_PIXELS = 16_777_216;
+
+export interface Rect {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+}
+
+/**
+ * Where the subject is, for "crop to subject".
+ *
+ * Only pixels clearly inside the subject count: the matte has a faint haze
+ * around soft edges and the odd stray speck, and a threshold of 0 would let
+ * either drag the box out to the corners. A little padding is added back so the
+ * crop does not shave hair or an anti-aliased edge. Returns null when nothing
+ * clears the threshold, so the caller keeps the whole image.
+ */
+export function alphaBounds(
+  alpha: Uint8ClampedArray,
+  width: number,
+  height: number,
+  threshold = 40,
+  padding = 0.02,
+): Rect | null {
+  let minX = width;
+  let minY = height;
+  let maxX = -1;
+  let maxY = -1;
+  for (let y = 0; y < height; y++) {
+    const row = y * width;
+    for (let x = 0; x < width; x++) {
+      if (alpha[row + x]! > threshold) {
+        if (x < minX) minX = x;
+        if (x > maxX) maxX = x;
+        if (y < minY) minY = y;
+        if (y > maxY) maxY = y;
+      }
+    }
+  }
+  if (maxX < 0) return null;
+
+  const padX = Math.round((maxX - minX + 1) * padding);
+  const padY = Math.round((maxY - minY + 1) * padding);
+  const x0 = Math.max(0, minX - padX);
+  const y0 = Math.max(0, minY - padY);
+  const x1 = Math.min(width - 1, maxX + padX);
+  const y1 = Math.min(height - 1, maxY + padY);
+  return { x: x0, y: y0, w: x1 - x0 + 1, h: y1 - y0 + 1 };
+}
 
 export function fitWithin(
   width: number,

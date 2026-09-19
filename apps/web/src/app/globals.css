@@ -178,3 +178,46 @@
     animation: none;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Printed pay-fixation report.
+
+   The calculator offers "প্রিন্ট / PDF" so somebody can take the working to an
+   accounts office. A printed page that stops at the headline figure would be
+   useless there, so every <details> is forced open — the step-by-step
+   explanation and the audit trail are the part worth printing — and the parts
+   that mean nothing on paper (site chrome, the form itself, buttons) are
+   dropped.
+   --------------------------------------------------------------------------- */
+@media print {
+  .ps-no-print,
+  header[class*='sticky'],
+  footer {
+    display: none !important;
+  }
+
+  .ps-report details > summary {
+    display: none !important;
+  }
+
+  .ps-report details > *:not(summary) {
+    display: block !important;
+    border-top: 0 !important;
+  }
+
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  /* Keep a result card from being split across two sheets. */
+  main section,
+  main table,
+  main li {
+    break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: '';
+  }
+}

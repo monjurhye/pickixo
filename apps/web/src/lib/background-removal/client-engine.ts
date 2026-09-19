@@ -23,14 +23,21 @@ import {
  *  strategies; see docs/MODELS.md. */
 const PAD = 'rgb(128,128,128)';
 
-const WORKER_URL = '/workers/background-remover.js';
+/**
+ * Both values are injected by next.config.mjs at build time and put in the URL
+ * so the browser can keep these files forever: a new ORT release or an edited
+ * worker is a new URL. Without them the runtime is re-checked on every visit
+ * and a stale worker can outlive the page that expects a newer one.
+ */
+const WORKER_URL =
+  `/workers/background-remover.js?v=${process.env.NEXT_PUBLIC_WORKER_VERSION ?? 'dev'}`;
 
 const WORKER_CONFIG = {
   modelUrl: MODEL_URL,
   modelBytes: MODEL_BYTES,
   cacheName: MODEL_CACHE,
   /** Where sync-ort-assets.mjs puts the runtime. Trailing slash required. */
-  ortBase: '/ort/',
+  ortBase: `/ort/${process.env.NEXT_PUBLIC_ORT_VERSION}/`,
 } as const;
 
 interface Pending {
@@ -223,6 +230,24 @@ export class ClientSideOrmbgEngine implements BackgroundRemovalEngine {
     const alpha = new Uint8ClampedArray(width * height);
     for (let i = 0, p = 0; i < alpha.length; i++, p += 4) alpha[i] = scaled[p]!;
     return alpha;
+  }
+
+  /**
+   * Abandon whatever is in flight.
+   *
+   * Terminating the worker is the only way to stop an inference that is already
+   * running, and it also un-sticks a worker the browser killed silently (an
+   * out-of-memory tab does not fire an error event, so the promise would
+   * otherwise never settle). The next call starts a fresh worker; the model is
+   * in the Cache API by then, so that is quick.
+   */
+  cancel() {
+    const error = new RemovalError('cancelled');
+    for (const [, entry] of this.pending) entry.reject(error);
+    this.pending.clear();
+    this.worker?.terminate();
+    this.worker = null;
+    this.prepared = null;
   }
 
   dispose() {

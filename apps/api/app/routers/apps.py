@@ -19,10 +19,13 @@ router = APIRouter(tags=["apps"])
 @router.get("/apps", response_model=list[AppSummary])
 async def list_apps(
     vertical: Vertical | None = None,
+    category: str | None = Query(default=None, max_length=64, pattern=r"^[a-z0-9-]+$"),
     featured: bool = False,
     limit: int = Query(default=100, ge=1, le=200),
 ) -> list[AppSummary]:
-    rows = await registry.list_apps(vertical=vertical, featured=featured, limit=limit)
+    rows = await registry.list_apps(
+        vertical=vertical, category=category, featured=featured, limit=limit
+    )
     return [AppSummary(**row) for row in rows]
 
 

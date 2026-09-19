@@ -64,6 +64,7 @@ interface LooseStep {
   items?: string[];
   lines?: { speaker: string; text: string }[];
   verses?: string[][];
+  listenLabel?: string;
   prompt?: string;
   promptBn?: string;
   modelAnswer?: string;
@@ -488,7 +489,9 @@ function StepRhyme({ step, onNext }: { step: LooseStep; onNext: () => void }) {
                    px-6 py-4 text-subheading font-semibold text-accent-ink
                    disabled:opacity-70"
       >
-        {playing ? 'Reciting… 🎵' : '▶︎ Listen to the rhyme'}
+        {playing
+          ? (step.listenLabel ? 'Reading… 📖' : 'Reciting… 🎵')
+          : `▶︎ ${step.listenLabel ?? 'Listen to the rhyme'}`}
       </button>
       <BigButton onClick={onNext}>Next →</BigButton>
     </section>

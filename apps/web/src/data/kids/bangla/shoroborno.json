@@ -1,0 +1,424 @@
+{
+  "id": "shoroborno",
+  "subject": "bangla",
+  "number": 1,
+  "title": "স্বরবর্ণ",
+  "icon": "vowel",
+  "colour": "sun",
+  "lessons": [
+    {
+      "id": "shoroborno-1",
+      "subject": "bangla",
+      "unit": "shoroborno",
+      "number": 1,
+      "title": "অ আ ই ঈ",
+      "source": {
+        "book": "আমার বই — প্রাক-প্রাথমিক শিক্ষা (NCTB)",
+        "edition": "2018",
+        "bookPages": [
+          30,
+          31,
+          32
+        ],
+        "pdfPages": [
+          37,
+          38,
+          39
+        ]
+      },
+      "objectives": [
+        {
+          "code": "৪.১.৪",
+          "band": "5+",
+          "text": "ধ্বনির লিখিত রূপ/প্রতীক (বর্ণ) শনাক্ত করতে পারবে।"
+        },
+        {
+          "code": "৪.১.৬",
+          "band": "5+",
+          "text": "শব্দ থেকে বর্ণ শনাক্ত করতে পারবে।"
+        },
+        {
+          "code": "৪.১.২",
+          "band": "4+",
+          "text": "পরিচিত চিহ্ন, সংকেত, ছবি/চিত্র দেখে শনাক্ত করতে পারবে।"
+        }
+      ],
+      "items": [
+        {
+          "id": "vow-অ",
+          "glyph": "অ",
+          "kind": "vowel",
+          "words": [
+            {
+              "text": "অজগর",
+              "image": "অজগর",
+              "initial": true,
+              "bookPage": 30
+            },
+            {
+              "text": "অলঙ্কার",
+              "image": "অলঙ্কার",
+              "initial": true,
+              "bookPage": 30
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "vow-আ",
+          "glyph": "আ",
+          "kind": "vowel",
+          "words": [
+            {
+              "text": "আম",
+              "image": "আম",
+              "initial": true,
+              "bookPage": 30
+            },
+            {
+              "text": "আনারস",
+              "image": "আনারস",
+              "initial": true,
+              "bookPage": 30
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "vow-ই",
+          "glyph": "ই",
+          "kind": "vowel",
+          "words": [
+            {
+              "text": "ইট",
+              "image": "ইট",
+              "initial": true,
+              "bookPage": 31
+            },
+            {
+              "text": "ইলিশ",
+              "image": "ইলিশ",
+              "initial": true,
+              "bookPage": 31
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "vow-ঈ",
+          "glyph": "ঈ",
+          "kind": "vowel",
+          "words": [
+            {
+              "text": "ঈগল",
+              "image": "ঈগল",
+              "initial": true,
+              "bookPage": 31
+            },
+            {
+              "text": "ঈদ",
+              "image": "ঈদ",
+              "initial": true,
+              "bookPage": 31
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        }
+      ],
+      "activities": {
+        "explore": [
+          "listen-look",
+          "picture-quiz",
+          "listen-choose",
+          "spot-difference"
+        ],
+        "learn": [
+          "chart",
+          "match-picture-letter",
+          "trace",
+          "drag-drop"
+        ],
+        "practice": [
+          "find-initial",
+          "tap-answer",
+          "missing-letter",
+          "odd-one-out",
+          "sort"
+        ],
+        "master": [
+          "sequence",
+          "sound-match",
+          "find-initial",
+          "memory"
+        ]
+      },
+      "minutes": 6
+    },
+    {
+      "id": "shoroborno-2",
+      "subject": "bangla",
+      "unit": "shoroborno",
+      "number": 2,
+      "title": "উ ঊ ঋ",
+      "source": {
+        "book": "আমার বই — প্রাক-প্রাথমিক শিক্ষা (NCTB)",
+        "edition": "2018",
+        "bookPages": [
+          33,
+          34
+        ],
+        "pdfPages": [
+          40,
+          41
+        ]
+      },
+      "objectives": [
+        {
+          "code": "৪.১.৪",
+          "band": "5+",
+          "text": "ধ্বনির লিখিত রূপ/প্রতীক (বর্ণ) শনাক্ত করতে পারবে।"
+        },
+        {
+          "code": "৪.১.৬",
+          "band": "5+",
+          "text": "শব্দ থেকে বর্ণ শনাক্ত করতে পারবে।"
+        },
+        {
+          "code": "৪.১.২",
+          "band": "4+",
+          "text": "পরিচিত চিহ্ন, সংকেত, ছবি/চিত্র দেখে শনাক্ত করতে পারবে।"
+        }
+      ],
+      "items": [
+        {
+          "id": "vow-উ",
+          "glyph": "উ",
+          "kind": "vowel",
+          "words": [
+            {
+              "text": "উট",
+              "image": "উট",
+              "initial": true,
+              "bookPage": 33
+            },
+            {
+              "text": "উড়োজাহাজ",
+              "image": "উড়োজাহাজ",
+              "initial": true,
+              "bookPage": 33
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "vow-ঊ",
+          "glyph": "ঊ",
+          "kind": "vowel",
+          "words": [
+            {
+              "text": "ঊর্মিমালা",
+              "image": "ঊর্মিমালা",
+              "initial": true,
+              "bookPage": 33
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "vow-ঋ",
+          "glyph": "ঋ",
+          "kind": "vowel",
+          "words": [
+            {
+              "text": "ঋতু",
+              "image": "ঋতু",
+              "initial": true,
+              "bookPage": 34
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        }
+      ],
+      "activities": {
+        "explore": [
+          "listen-look",
+          "picture-quiz",
+          "listen-choose",
+          "spot-difference"
+        ],
+        "learn": [
+          "chart",
+          "match-picture-letter",
+          "trace",
+          "drag-drop"
+        ],
+        "practice": [
+          "find-initial",
+          "tap-answer",
+          "missing-letter",
+          "odd-one-out",
+          "sort"
+        ],
+        "master": [
+          "sequence",
+          "sound-match",
+          "find-initial",
+          "memory"
+        ]
+      },
+      "minutes": 6
+    },
+    {
+      "id": "shoroborno-3",
+      "subject": "bangla",
+      "unit": "shoroborno",
+      "number": 3,
+      "title": "এ ঐ ও ঔ",
+      "source": {
+        "book": "আমার বই — প্রাক-প্রাথমিক শিক্ষা (NCTB)",
+        "edition": "2018",
+        "bookPages": [
+          35,
+          36,
+          37
+        ],
+        "pdfPages": [
+          42,
+          43,
+          44
+        ]
+      },
+      "objectives": [
+        {
+          "code": "৪.১.৪",
+          "band": "5+",
+          "text": "ধ্বনির লিখিত রূপ/প্রতীক (বর্ণ) শনাক্ত করতে পারবে।"
+        },
+        {
+          "code": "৪.১.৬",
+          "band": "5+",
+          "text": "শব্দ থেকে বর্ণ শনাক্ত করতে পারবে।"
+        },
+        {
+          "code": "৪.১.২",
+          "band": "4+",
+          "text": "পরিচিত চিহ্ন, সংকেত, ছবি/চিত্র দেখে শনাক্ত করতে পারবে।"
+        }
+      ],
+      "items": [
+        {
+          "id": "vow-এ",
+          "glyph": "এ",
+          "kind": "vowel",
+          "words": [
+            {
+              "text": "একতারা",
+              "image": "একতারা",
+              "initial": true,
+              "bookPage": 35
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "vow-ঐ",
+          "glyph": "ঐ",
+          "kind": "vowel",
+          "words": [
+            {
+              "text": "ঐরাবত",
+              "image": "ঐরাবত",
+              "initial": true,
+              "bookPage": 35
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "vow-ও",
+          "glyph": "ও",
+          "kind": "vowel",
+          "words": [
+            {
+              "text": "ওল",
+              "image": "ওল",
+              "initial": true,
+              "bookPage": 36
+            },
+            {
+              "text": "ওড়না",
+              "image": "ওড়না",
+              "initial": true,
+              "bookPage": 36
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "vow-ঔ",
+          "glyph": "ঔ",
+          "kind": "vowel",
+          "words": [
+            {
+              "text": "ঔষধ",
+              "image": "ঔষধ",
+              "initial": true,
+              "bookPage": 36
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        }
+      ],
+      "activities": {
+        "explore": [
+          "listen-look",
+          "picture-quiz",
+          "listen-choose",
+          "spot-difference"
+        ],
+        "learn": [
+          "chart",
+          "match-picture-letter",
+          "trace",
+          "drag-drop"
+        ],
+        "practice": [
+          "find-initial",
+          "tap-answer",
+          "missing-letter",
+          "odd-one-out",
+          "sort"
+        ],
+        "master": [
+          "sequence",
+          "sound-match",
+          "find-initial",
+          "memory"
+        ]
+      },
+      "minutes": 6
+    }
+  ]
+}

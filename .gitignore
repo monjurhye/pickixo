@@ -29,6 +29,8 @@ __pycache__/
 .ruff_cache/
 *.tsbuildinfo
 .tmp-test/
+.tmp-kids/
+.tmp-payscale/
 
 # --- runtime data (not source) ---
 storage/

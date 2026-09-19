@@ -124,6 +124,12 @@ export interface RhymeStep extends StepBase {
   /** Grouped as the book prints them. */
   verses: string[][];
   source: Source;
+  /**
+   * The book also has short prose passages ("Myself", "My mother") that are
+   * read aloud the same way as a rhyme. Setting this changes the button from
+   * "Listen to the rhyme" to something that is true of a passage.
+   */
+  listenLabel?: string;
 }
 
 export interface StoryScene {

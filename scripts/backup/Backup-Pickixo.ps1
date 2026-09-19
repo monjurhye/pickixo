@@ -101,6 +101,16 @@ function Invoke-Step {
         Runs a native command and fails loudly. The argument list is logged
         only when it is known to be free of secrets, which is why $Quiet
         exists: the 7-Zip call passes a passphrase and must never be echoed.
+
+        $ErrorActionPreference is set to 'Continue' for the duration of the
+        call, and only inside this function's own scope, so it never leaks to
+        the caller. Without it, a script running under 'Stop' (as this one
+        does) turns every line a native command writes to stderr into a
+        terminating error the moment 2>&1 merges it into the output stream —
+        so a merely informational line (rclone's shared client_id NOTICE, a
+        pg_restore warning, ...) aborts the run even though the command itself
+        exited 0. Real failure is judged below by $LASTEXITCODE, which this
+        does not affect.
     #>
     param(
         [string]$What,
@@ -111,6 +121,7 @@ function Invoke-Step {
     )
     if ($Quiet) { Write-Log "$What ..." } else { Write-Log "$What ... ($Exe $($Arguments -join ' '))" }
 
+    $ErrorActionPreference = 'Continue'
     $output = & $Exe @Arguments 2>&1
     $code = $LASTEXITCODE
 
@@ -284,7 +295,7 @@ try {
     # How the services are wired. Enough to rebuild them on a new machine.
     $svcLines = foreach ($name in @('Pickixo-Web', 'Pickixo-API', 'Pickixo-Postgres', 'Pickixo-Ollama', 'nginx')) {
         $svc = Get-CimInstance Win32_Service -Filter "Name='$name'" -ErrorAction SilentlyContinue
-        if ($svc) { '{0}`t{1}`t{2}' -f $svc.Name, $svc.StartMode, $svc.PathName }
+        if ($svc) { "{0}`t{1}`t{2}" -f $svc.Name, $svc.StartMode, $svc.PathName }
     }
     $svcLines | Set-Content (Join-Path $StageDir 'config\services.txt') -Encoding utf8
 

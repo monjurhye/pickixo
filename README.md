@@ -32,6 +32,7 @@ is worse than no checklist.
 | SEO: canonical, sitemap, robots, JSON-LD | Verified | Self-referencing canonicals; every sitemap URL 200 |
 | IndexNow | Working | Key file live; one URL accepted, dedup verified |
 | Dark mode, mobile nav, keyboard reorder | Working | Checked in a browser at 375px and desktop |
+| Pickixo Kids: NCTB pre-primary, adaptive | Beta, playable | 82 checks pass; every game played in a browser at 375px |
 
 ### Not built yet
 
@@ -40,10 +41,23 @@ until an OAuth client is supplied — it is not faked), every vertical beyond it
 registry entries, i18n string extraction, login rate limiting, row-level
 security, Google Drive backup, IndexNow, and the admin UI.
 
-**16 of 17 products in the catalogue are `planned`** and say so on their own
+**16 of 21 products in the catalogue are `planned`** and say so on their own
 pages. They are listed so the shape of the platform is visible and so navigation,
 search and the sitemap have something real to be tested against — they are
-excluded from the sitemap and carry `noindex`.
+excluded from the sitemap and carry `noindex`. Three more are `beta`, which
+here means genuinely usable with gaps that are named on the page rather than
+papered over.
+
+**Pickixo Kids** (`/kids`) is the newest of those. It teaches the Bangla
+alphabet and numbers 0–20 to 4+ and 5+ children from the NCTB pre-primary
+curriculum, as **one** platform: the child is never asked their age, and
+difficulty adapts per letter from how they are actually doing. What is not
+there yet is stated in [docs/PICKIXO-KIDS.md](docs/PICKIXO-KIDS.md) — the
+remaining gap is audio: there are no recordings, so it uses browser `bn-BD`
+speech synthesis and stays usable and silent where no Bangla voice exists.
+**All 99 picture-words are drawn** as original inline SVG, and **all 18 game
+types are playable**; tests fail the build if a lesson gains a word without a
+drawing, or lists a game that cannot actually be built from its own content.
 
 ### Honest about AI
 
@@ -117,6 +131,9 @@ because moving is a restart for no functional gain.
 ## Tests
 
 ```bash
+cd apps/web
+npm run test:kids                                         # 78 — Kids content + engine
+
 cd apps/api
 .venv/Scripts/python.exe -m tests.test_provider_manager   # 23 — AI failover
 .venv/Scripts/python.exe -m tests.test_openai_compatible  # 24 — adapter

@@ -118,7 +118,7 @@ export async function apiFetchOrNull<T>(
 // Types mirroring the API schemas
 // ---------------------------------------------------------------------------
 export type Vertical =
-  | 'ai' | 'apps' | 'tools' | 'games' | 'jobs' | 'education' | 'bangladesh';
+  | 'ai' | 'apps' | 'tools' | 'games' | 'jobs' | 'education' | 'banking' | 'bangladesh';
 
 export type AppStatus = 'live' | 'beta' | 'planned' | 'disabled';
 

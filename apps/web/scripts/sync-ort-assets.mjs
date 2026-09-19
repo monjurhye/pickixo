@@ -1,5 +1,14 @@
 /**
- * Copy the ONNX Runtime Web binaries out of node_modules into public/ort/.
+ * Copy the ONNX Runtime Web binaries out of node_modules into
+ * public/ort/<version>/.
+ *
+ * The version is in the path so the files can be cached forever. They are
+ * ~42 MB, they never change for a given version, and a browser that had to
+ * revalidate them on every visit was doing so for nothing — worse, it meant the
+ * page could not honestly say the tool works without a connection once loaded.
+ * A new ORT release is a new URL, so nothing ever has to be invalidated.
+ * next.config.mjs sends the long-lived header and exposes the same version to
+ * the client, which builds its /ort/<version>/ base from it.
  *
  * ORT fetches its WebAssembly binary at runtime. Left alone it pulls it from a
  * public CDN, which would make the background remover depend on a third party
@@ -20,7 +29,8 @@ import { createRequire } from 'node:module';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  copyFileSync, existsSync, mkdirSync, readFileSync, statSync, writeFileSync,
+  copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync,
+  writeFileSync,
 } from 'node:fs';
 
 const require = createRequire(import.meta.url);
@@ -34,7 +44,20 @@ if (!existsSync(pkgPath)) {
 }
 const version = JSON.parse(readFileSync(pkgPath, 'utf8')).version;
 const dist = join(webRoot, 'node_modules', 'onnxruntime-web', 'dist');
-const target = join(webRoot, 'public', 'ort');
+const ortRoot = join(webRoot, 'public', 'ort');
+const target = join(ortRoot, version);
+
+// Anything in public/ort that is not the current version is left over: an older
+// release, or the flat layout this script produced before versioned paths. All
+// of it is generated, so nothing here is lost by removing it, and leaving it
+// would ship 42 MB of dead binaries with every build.
+if (existsSync(ortRoot)) {
+  for (const entry of readdirSync(ortRoot)) {
+    if (entry === version) continue;
+    rmSync(join(ortRoot, entry), { recursive: true, force: true });
+    console.log(`[ort] removed stale public/ort/${entry}`);
+  }
+}
 
 /**
  * Only the two builds actually used.
@@ -65,7 +88,7 @@ const FILES = [
 const stamp = join(target, '.version');
 if (existsSync(stamp) && readFileSync(stamp, 'utf8').trim() === version
     && FILES.every((f) => existsSync(join(target, f)))) {
-  console.log(`[ort] public/ort already at ${version}`);
+  console.log(`[ort] public/ort/${version} already in place`);
   process.exit(0);
 }
 
@@ -83,4 +106,4 @@ for (const file of FILES) {
 }
 writeFileSync(stamp, `${version}\n`, 'utf8');
 console.log(`[ort] copied ${FILES.length} files (${(total / 1e6).toFixed(1)} MB) `
-  + `from onnxruntime-web@${version} -> public/ort/`);
+  + `from onnxruntime-web@${version} -> public/ort/${version}/`);

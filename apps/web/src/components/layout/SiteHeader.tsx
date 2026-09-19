@@ -7,7 +7,7 @@ import { Logo } from '@/components/Logo';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { SearchBox } from '@/components/layout/SearchBox';
 import { Button } from '@/components/ui/Button';
-import { PRIMARY_NAV } from '@/lib/verticals';
+import { PRIMARY_NAV, SUBMENUS } from '@/lib/verticals';
 import type { User } from '@/lib/api';
 import { cn } from '@/lib/utils';
 
@@ -15,7 +15,7 @@ import { cn } from '@/lib/utils';
  * The one header, on every page (§6): the user should always know where they
  * are, how to search, and how to get back.
  *
- * Kept to five sections plus search and account. Putting all seven verticals up
+ * Kept to six sections plus search and account. Putting all eight verticals up
  * here would leave no room for the search field, which is the thing people
  * actually arrive wanting.
  */
@@ -40,26 +40,70 @@ export function SiteHeader({ user }: { user: User | null }) {
         <nav aria-label="Sections" className="hidden md:flex md:items-center md:gap-1">
           {PRIMARY_NAV.map((v) => {
             const active = pathname.startsWith(`/${v.slug}`);
-            return (
+            const sub = SUBMENUS[v.slug];
+            const link = (
               <Link
-                key={v.slug}
                 href={`/${v.slug}`}
                 aria-current={active ? 'page' : undefined}
                 className={cn(
-                  'rounded-control px-3 py-1.5 text-small font-medium transition-colors',
+                  'inline-flex items-center gap-1 whitespace-nowrap rounded-control px-2 py-1.5 text-small font-medium transition-colors lg:px-3',
                   active
                     ? 'bg-surface-sunken text-ink'
                     : 'text-ink-muted hover:bg-surface-sunken hover:text-ink',
                 )}
               >
                 {v.name}
+                {sub ? (
+                  <svg viewBox="0 0 20 20" className="h-3.5 w-3.5" aria-hidden="true">
+                    <path
+                      d="M5 8l5 5 5-5"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                ) : null}
               </Link>
+            );
+
+            if (!sub) return <span key={v.slug}>{link}</span>;
+
+            // CSS-only dropdown: opens on hover and on keyboard focus, and the
+            // parent link still goes to the section page, which lists the same
+            // entries — that is the route for touch devices with no hover.
+            return (
+              <div key={v.slug} className="group relative">
+                {link}
+                <div
+                  className="invisible absolute left-0 top-full z-50 w-64 pt-1 opacity-0
+                             transition-opacity group-focus-within:visible
+                             group-focus-within:opacity-100 group-hover:visible
+                             group-hover:opacity-100"
+                >
+                  <ul className="rounded-card border border-border bg-surface p-1 shadow-raised">
+                    {sub.map((s) => (
+                      <li key={s.slug}>
+                        <Link
+                          href={`/${v.slug}/${s.slug}`}
+                          className="block rounded-control px-3 py-2 text-small text-ink-muted
+                                     hover:bg-surface-sunken hover:text-ink"
+                        >
+                          <span className="font-medium text-ink">{s.name}</span>
+                          <span className="ml-2 text-ink-subtle">{s.nameBn}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             );
           })}
         </nav>
 
         <div className="ml-auto flex items-center gap-2">
-          <div className="hidden sm:block sm:w-56 lg:w-72">
+          <div className="hidden sm:block sm:w-56 md:w-28 lg:w-52 xl:w-72">
             <SearchBox />
           </div>
           <ThemeToggle />
@@ -88,11 +132,11 @@ export function SiteHeader({ user }: { user: User | null }) {
               </Link>
             </>
           ) : (
-            <div className="hidden items-center gap-2 md:flex">
+            <div className="hidden items-center gap-2 whitespace-nowrap md:flex">
               <Link href="/sign-in">
                 <Button variant="ghost" size="sm">Sign in</Button>
               </Link>
-              <Link href="/sign-up">
+              <Link href="/sign-up" className="hidden xl:block">
                 <Button size="sm">Create account</Button>
               </Link>
             </div>
@@ -136,15 +180,35 @@ export function SiteHeader({ user }: { user: User | null }) {
             <SearchBox onNavigate={() => setMobileOpen(false)} />
             <nav aria-label="Sections" className="grid grid-cols-2 gap-1">
               {PRIMARY_NAV.map((v) => (
-                <Link
+                <div
                   key={v.slug}
-                  href={`/${v.slug}`}
-                  onClick={() => setMobileOpen(false)}
-                  className="rounded-control px-3 py-2 text-body text-ink-muted
-                             hover:bg-surface-sunken hover:text-ink"
+                  className={SUBMENUS[v.slug] ? 'col-span-2' : undefined}
                 >
-                  {v.name}
-                </Link>
+                  <Link
+                    href={`/${v.slug}`}
+                    onClick={() => setMobileOpen(false)}
+                    className="block rounded-control px-3 py-2 text-body text-ink-muted
+                               hover:bg-surface-sunken hover:text-ink"
+                  >
+                    {v.name}
+                  </Link>
+                  {SUBMENUS[v.slug] ? (
+                    <ul className="ml-3 grid grid-cols-2 gap-1 border-l border-border pl-2">
+                      {SUBMENUS[v.slug]!.map((s) => (
+                        <li key={s.slug}>
+                          <Link
+                            href={`/${v.slug}/${s.slug}`}
+                            onClick={() => setMobileOpen(false)}
+                            className="block rounded-control px-3 py-1.5 text-small text-ink-muted
+                                       hover:bg-surface-sunken hover:text-ink"
+                          >
+                            {s.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </div>
               ))}
             </nav>
             <div className="flex gap-2 border-t border-border pt-3">

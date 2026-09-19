@@ -1,0 +1,1974 @@
+{
+  "id": "u6",
+  "number": 6,
+  "title": "Let's Play with Sounds",
+  "titleBn": "চলো ধ্বনি নিয়ে খেলি",
+  "colour": "pink",
+  "icon": "sound",
+  "_source": "English for Today, Class Two (NCTB). Unit 6, book pages 55-62.",
+  "_note": "Words, sound-letters and the same/different pairs are transcribed from the textbook; every S/D answer is computed from a table of sounds, not typed. Bangla meanings are Pickixo's addition - the book carries no glosses. Sounds are taught through whole words because browser speech cannot say an isolated sound.",
+  "lessons": [
+    {
+      "id": "u6l1",
+      "unitId": "u6",
+      "number": 1,
+      "title": "Initial Sounds 1",
+      "titleBn": "শুরুর ধ্বনি ১",
+      "shape": "phonics",
+      "bookPages": [
+        55,
+        56
+      ],
+      "objective": "Hear the beginning sound of a word and tell whether two words begin alike.",
+      "objectiveBn": "শব্দের শুরুর ধ্বনি শোনা আর দুটি শব্দ একই ধ্বনি দিয়ে শুরু কি না বলা।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "s-ant",
+          "word": "ant",
+          "bangla": "পিঁপড়া",
+          "banglaPronunciation": "অ্যান্ট",
+          "banglaSource": "enrichment",
+          "bookPage": 55,
+          "category": "animal",
+          "image": "ant",
+          "example": "a (/æ/)—ant",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "s-apple",
+          "word": "apple",
+          "bangla": "আপেল",
+          "banglaPronunciation": "অ্যাপল",
+          "banglaSource": "enrichment",
+          "bookPage": 55,
+          "category": "food",
+          "image": "apple",
+          "example": "a—apple",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "s-mat",
+          "word": "mat",
+          "bangla": "মাদুর",
+          "banglaPronunciation": "ম্যাট",
+          "banglaSource": "enrichment",
+          "bookPage": 55,
+          "category": "object",
+          "image": "mat",
+          "example": "m (/m/)—mat",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "s-man",
+          "word": "man",
+          "bangla": "পুরুষ মানুষ",
+          "banglaPronunciation": "ম্যান",
+          "banglaSource": "enrichment",
+          "bookPage": 55,
+          "category": "person",
+          "image": "man",
+          "example": "m—man",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "s-ash",
+          "word": "ash",
+          "bangla": "ছাই",
+          "banglaPronunciation": "অ্যাশ",
+          "banglaSource": "enrichment",
+          "bookPage": 55,
+          "category": "nature",
+          "image": "ash"
+        },
+        {
+          "id": "s-milk",
+          "word": "milk",
+          "bangla": "দুধ",
+          "banglaPronunciation": "মিল্ক",
+          "banglaSource": "enrichment",
+          "bookPage": 55,
+          "category": "food",
+          "image": "milk"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u6l1-intro",
+          "type": "intro",
+          "title": "Beginning sounds",
+          "titleBn": "শুরুর ধ্বনি",
+          "say": "Every word begins with a sound. Listen for it!",
+          "sayBn": "প্রতিটি শব্দ একটি ধ্বনি দিয়ে শুরু হয়। মন দিয়ে শোনো!",
+          "illustration": "apple"
+        },
+        {
+          "id": "u6l1-words",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Look, listen and say",
+          "titleBn": "দেখো, শোনো আর বলো",
+          "items": [
+            "s-ant",
+            "s-apple",
+            "s-mat",
+            "s-man",
+            "s-ash",
+            "s-milk"
+          ]
+        },
+        {
+          "id": "u6l1-speak1",
+          "type": "speak",
+          "bookActivity": "B",
+          "title": "Say the sound and the word",
+          "titleBn": "ধ্বনি আর শব্দ বলো",
+          "prompt": "Say: a, ant.",
+          "promptBn": "বলো: a, ant.",
+          "modelAnswer": "a. ant."
+        },
+        {
+          "id": "u6l1-speak2",
+          "type": "speak",
+          "bookActivity": "B",
+          "title": "Now with m",
+          "titleBn": "এবার m দিয়ে",
+          "prompt": "Say: m, mat.",
+          "promptBn": "বলো: m, mat.",
+          "modelAnswer": "m. mat."
+        },
+        {
+          "id": "u6l1-game1",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "C",
+          "title": "What is the first sound?",
+          "titleBn": "শুরুর ধ্বনি কোনটি?",
+          "rounds": [
+            {
+              "id": "r-s-ant",
+              "ask": "What is the first sound?",
+              "askBn": "শুরুর ধ্বনি কোনটি?",
+              "image": "ant",
+              "options": [
+                {
+                  "label": "c"
+                },
+                {
+                  "label": "f"
+                },
+                {
+                  "label": "a"
+                }
+              ],
+              "answer": 2,
+              "hint": "Say the word slowly. Listen to the start.",
+              "tests": "s-ant"
+            },
+            {
+              "id": "r-s-apple",
+              "ask": "What is the first sound?",
+              "askBn": "শুরুর ধ্বনি কোনটি?",
+              "image": "apple",
+              "options": [
+                {
+                  "label": "a"
+                },
+                {
+                  "label": "t"
+                },
+                {
+                  "label": "b"
+                }
+              ],
+              "answer": 0,
+              "hint": "Say the word slowly. Listen to the start.",
+              "tests": "s-apple"
+            },
+            {
+              "id": "r-s-mat",
+              "ask": "What is the first sound?",
+              "askBn": "শুরুর ধ্বনি কোনটি?",
+              "image": "mat",
+              "options": [
+                {
+                  "label": "a"
+                },
+                {
+                  "label": "c"
+                },
+                {
+                  "label": "m"
+                }
+              ],
+              "answer": 2,
+              "hint": "Say the word slowly. Listen to the start.",
+              "tests": "s-mat"
+            },
+            {
+              "id": "r-s-man",
+              "ask": "What is the first sound?",
+              "askBn": "শুরুর ধ্বনি কোনটি?",
+              "image": "man",
+              "options": [
+                {
+                  "label": "m"
+                },
+                {
+                  "label": "a"
+                },
+                {
+                  "label": "c"
+                }
+              ],
+              "answer": 0,
+              "hint": "Say the word slowly. Listen to the start.",
+              "tests": "s-man"
+            },
+            {
+              "id": "r-s-ash",
+              "ask": "What is the first sound?",
+              "askBn": "শুরুর ধ্বনি কোনটি?",
+              "image": "ash",
+              "options": [
+                {
+                  "label": "a"
+                },
+                {
+                  "label": "f"
+                },
+                {
+                  "label": "m"
+                }
+              ],
+              "answer": 0,
+              "hint": "Say the word slowly. Listen to the start.",
+              "tests": "s-ash"
+            },
+            {
+              "id": "r-s-milk",
+              "ask": "What is the first sound?",
+              "askBn": "শুরুর ধ্বনি কোনটি?",
+              "image": "milk",
+              "options": [
+                {
+                  "label": "a"
+                },
+                {
+                  "label": "t"
+                },
+                {
+                  "label": "m"
+                }
+              ],
+              "answer": 2,
+              "hint": "Say the word slowly. Listen to the start.",
+              "tests": "s-milk"
+            }
+          ]
+        },
+        {
+          "id": "u6l1-game2",
+          "type": "game",
+          "kind": "same-sound",
+          "bookActivity": "E",
+          "title": "Same or different?",
+          "titleBn": "একই না আলাদা?",
+          "rounds": [
+            {
+              "id": "p1",
+              "ask": "Do apple and mat begin with the same sound?",
+              "askBn": "apple আর mat — শুরুর ধ্বনি কি একই?",
+              "speak": "apple. mat.",
+              "options": [
+                {
+                  "label": "S (same)"
+                },
+                {
+                  "label": "D (different)"
+                }
+              ],
+              "answer": 1,
+              "hint": "They start with different sounds.",
+              "tests": "s-apple"
+            },
+            {
+              "id": "p2",
+              "ask": "Do man and mat begin with the same sound?",
+              "askBn": "man আর mat — শুরুর ধ্বনি কি একই?",
+              "speak": "man. mat.",
+              "options": [
+                {
+                  "label": "S (same)"
+                },
+                {
+                  "label": "D (different)"
+                }
+              ],
+              "answer": 0,
+              "hint": "They start with the same sound.",
+              "tests": "s-man"
+            },
+            {
+              "id": "p3",
+              "ask": "Do apple and fan begin with the same sound?",
+              "askBn": "apple আর fan — শুরুর ধ্বনি কি একই?",
+              "speak": "apple. fan.",
+              "options": [
+                {
+                  "label": "S (same)"
+                },
+                {
+                  "label": "D (different)"
+                }
+              ],
+              "answer": 1,
+              "hint": "They start with different sounds.",
+              "tests": "s-apple"
+            },
+            {
+              "id": "p4",
+              "ask": "Do ant and ash begin with the same sound?",
+              "askBn": "ant আর ash — শুরুর ধ্বনি কি একই?",
+              "speak": "ant. ash.",
+              "options": [
+                {
+                  "label": "S (same)"
+                },
+                {
+                  "label": "D (different)"
+                }
+              ],
+              "answer": 0,
+              "hint": "They start with the same sound.",
+              "tests": "s-ant"
+            },
+            {
+              "id": "p5",
+              "ask": "Do man and fan begin with the same sound?",
+              "askBn": "man আর fan — শুরুর ধ্বনি কি একই?",
+              "speak": "man. fan.",
+              "options": [
+                {
+                  "label": "S (same)"
+                },
+                {
+                  "label": "D (different)"
+                }
+              ],
+              "answer": 1,
+              "hint": "They start with different sounds.",
+              "tests": "s-man"
+            }
+          ]
+        },
+        {
+          "id": "u6l1-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "What is the first sound?",
+              "askBn": "শুরুর ধ্বনি কোনটি?",
+              "image": "mat",
+              "options": [
+                {
+                  "label": "a"
+                },
+                {
+                  "label": "m"
+                },
+                {
+                  "label": "f"
+                }
+              ],
+              "answer": 1,
+              "explain": "m—mat",
+              "tests": "s-mat"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "apple",
+              "options": [
+                {
+                  "label": "apple"
+                },
+                {
+                  "label": "man"
+                },
+                {
+                  "label": "ant"
+                }
+              ],
+              "answer": 0,
+              "tests": "s-apple"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "___ pple",
+              "askBn": "___ pple",
+              "options": [
+                {
+                  "label": "m"
+                },
+                {
+                  "label": "f"
+                },
+                {
+                  "label": "a"
+                }
+              ],
+              "answer": 2,
+              "explain": "a—apple",
+              "tests": "s-apple"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "Ant and apple begin with the same sound.",
+              "askBn": "ant আর apple একই ধ্বনি দিয়ে শুরু হয়।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "Both begin with a.",
+              "tests": "s-ant"
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "Which word begins with the same sound as man?",
+              "askBn": "কোন শব্দটি man-এর মতো একই ধ্বনি দিয়ে শুরু?",
+              "options": [
+                {
+                  "label": "ash"
+                },
+                {
+                  "label": "apple"
+                },
+                {
+                  "label": "mat"
+                }
+              ],
+              "answer": 2,
+              "explain": "man and mat both begin with m.",
+              "tests": "s-man"
+            }
+          ]
+        },
+        {
+          "id": "u6l1-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You can hear the beginning of a word!",
+          "sayBn": "তুমি শব্দের শুরুর ধ্বনি শুনতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "u6l2",
+      "unitId": "u6",
+      "number": 2,
+      "title": "Initial Sounds 2",
+      "titleBn": "শুরুর ধ্বনি ২",
+      "shape": "phonics",
+      "bookPages": [
+        57,
+        58
+      ],
+      "objective": "Say more words by their beginning sound: b, f, t and c.",
+      "objectiveBn": "শুরুর ধ্বনি অনুযায়ী আরও শব্দ বলা: b, f, t আর c।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "s-bag",
+          "word": "bag",
+          "bangla": "ব্যাগ",
+          "banglaPronunciation": "ব্যাগ",
+          "banglaSource": "enrichment",
+          "bookPage": 57,
+          "category": "object",
+          "image": "bag",
+          "example": "b—bag",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "s-fan",
+          "word": "fan",
+          "bangla": "পাখা",
+          "banglaPronunciation": "ফ্যান",
+          "banglaSource": "enrichment",
+          "bookPage": 57,
+          "category": "object",
+          "image": "fan",
+          "example": "f—fan",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "s-top",
+          "word": "top",
+          "bangla": "লাটিম",
+          "banglaPronunciation": "টপ",
+          "banglaSource": "enrichment",
+          "bookPage": 57,
+          "category": "object",
+          "image": "top",
+          "example": "t—top",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "s-cake",
+          "word": "cake",
+          "bangla": "কেক",
+          "banglaPronunciation": "কেক",
+          "banglaSource": "enrichment",
+          "bookPage": 57,
+          "category": "food",
+          "image": "cake",
+          "example": "c—cake",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "s-tap",
+          "word": "tap",
+          "bangla": "কল",
+          "banglaPronunciation": "ট্যাপ",
+          "banglaSource": "enrichment",
+          "bookPage": 58,
+          "category": "object",
+          "image": "tap"
+        },
+        {
+          "id": "s-book",
+          "word": "book",
+          "bangla": "বই",
+          "banglaPronunciation": "বুক",
+          "banglaSource": "enrichment",
+          "bookPage": 58,
+          "category": "object",
+          "image": "book"
+        },
+        {
+          "id": "s-cap",
+          "word": "cap",
+          "bangla": "টুপি",
+          "banglaPronunciation": "ক্যাপ",
+          "banglaSource": "enrichment",
+          "bookPage": 58,
+          "category": "object",
+          "image": "cap"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u6l2-intro",
+          "type": "intro",
+          "title": "More beginning sounds",
+          "titleBn": "আরও শুরুর ধ্বনি",
+          "say": "Listen to the first sound of each word.",
+          "sayBn": "প্রতিটি শব্দের প্রথম ধ্বনি শোনো।",
+          "illustration": "bag"
+        },
+        {
+          "id": "u6l2-words1",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Look, listen and say 1",
+          "titleBn": "দেখো, শোনো আর বলো ১",
+          "items": [
+            "s-bag",
+            "s-fan",
+            "s-top",
+            "s-cake"
+          ]
+        },
+        {
+          "id": "u6l2-words2",
+          "type": "vocab",
+          "bookActivity": "D",
+          "title": "Look, listen and say 2",
+          "titleBn": "দেখো, শোনো আর বলো ২",
+          "items": [
+            "s-tap",
+            "s-book",
+            "s-cap"
+          ]
+        },
+        {
+          "id": "u6l2-speak",
+          "type": "speak",
+          "bookActivity": "B",
+          "title": "Say the sounds and the words",
+          "titleBn": "ধ্বনি আর শব্দ বলো",
+          "prompt": "Say: b, bag. f, fan. t, top. c, cake.",
+          "promptBn": "বলো: b, bag. f, fan. t, top. c, cake.",
+          "modelAnswer": "b, bag. f, fan. t, top. c, cake."
+        },
+        {
+          "id": "u6l2-game1",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "B",
+          "title": "What is the first sound?",
+          "titleBn": "শুরুর ধ্বনি কোনটি?",
+          "rounds": [
+            {
+              "id": "r-s-bag",
+              "ask": "What is the first sound?",
+              "askBn": "শুরুর ধ্বনি কোনটি?",
+              "image": "bag",
+              "options": [
+                {
+                  "label": "b"
+                },
+                {
+                  "label": "c"
+                },
+                {
+                  "label": "a"
+                }
+              ],
+              "answer": 0,
+              "hint": "Say the word slowly. Listen to the start.",
+              "tests": "s-bag"
+            },
+            {
+              "id": "r-s-fan",
+              "ask": "What is the first sound?",
+              "askBn": "শুরুর ধ্বনি কোনটি?",
+              "image": "fan",
+              "options": [
+                {
+                  "label": "f"
+                },
+                {
+                  "label": "t"
+                },
+                {
+                  "label": "m"
+                }
+              ],
+              "answer": 0,
+              "hint": "Say the word slowly. Listen to the start.",
+              "tests": "s-fan"
+            },
+            {
+              "id": "r-s-top",
+              "ask": "What is the first sound?",
+              "askBn": "শুরুর ধ্বনি কোনটি?",
+              "image": "top",
+              "options": [
+                {
+                  "label": "c"
+                },
+                {
+                  "label": "a"
+                },
+                {
+                  "label": "t"
+                }
+              ],
+              "answer": 2,
+              "hint": "Say the word slowly. Listen to the start.",
+              "tests": "s-top"
+            },
+            {
+              "id": "r-s-cake",
+              "ask": "What is the first sound?",
+              "askBn": "শুরুর ধ্বনি কোনটি?",
+              "image": "cake",
+              "options": [
+                {
+                  "label": "b"
+                },
+                {
+                  "label": "c"
+                },
+                {
+                  "label": "a"
+                }
+              ],
+              "answer": 1,
+              "hint": "Say the word slowly. Listen to the start.",
+              "tests": "s-cake"
+            },
+            {
+              "id": "r-s-tap",
+              "ask": "What is the first sound?",
+              "askBn": "শুরুর ধ্বনি কোনটি?",
+              "image": "tap",
+              "options": [
+                {
+                  "label": "f"
+                },
+                {
+                  "label": "c"
+                },
+                {
+                  "label": "t"
+                }
+              ],
+              "answer": 2,
+              "hint": "Say the word slowly. Listen to the start.",
+              "tests": "s-tap"
+            },
+            {
+              "id": "r-s-book",
+              "ask": "What is the first sound?",
+              "askBn": "শুরুর ধ্বনি কোনটি?",
+              "image": "book",
+              "options": [
+                {
+                  "label": "c"
+                },
+                {
+                  "label": "b"
+                },
+                {
+                  "label": "m"
+                }
+              ],
+              "answer": 1,
+              "hint": "Say the word slowly. Listen to the start.",
+              "tests": "s-book"
+            },
+            {
+              "id": "r-s-cap",
+              "ask": "What is the first sound?",
+              "askBn": "শুরুর ধ্বনি কোনটি?",
+              "image": "cap",
+              "options": [
+                {
+                  "label": "t"
+                },
+                {
+                  "label": "m"
+                },
+                {
+                  "label": "c"
+                }
+              ],
+              "answer": 2,
+              "hint": "Say the word slowly. Listen to the start.",
+              "tests": "s-cap"
+            }
+          ]
+        },
+        {
+          "id": "u6l2-game2",
+          "type": "game",
+          "kind": "same-sound",
+          "bookActivity": "C",
+          "title": "Same or different?",
+          "titleBn": "একই না আলাদা?",
+          "rounds": [
+            {
+              "id": "p1",
+              "ask": "Do cot and cat begin with the same sound?",
+              "askBn": "cot আর cat — শুরুর ধ্বনি কি একই?",
+              "speak": "cot. cat.",
+              "options": [
+                {
+                  "label": "S (same)"
+                },
+                {
+                  "label": "D (different)"
+                }
+              ],
+              "answer": 0,
+              "hint": "They start with the same sound."
+            },
+            {
+              "id": "p2",
+              "ask": "Do fan and apple begin with the same sound?",
+              "askBn": "fan আর apple — শুরুর ধ্বনি কি একই?",
+              "speak": "fan. apple.",
+              "options": [
+                {
+                  "label": "S (same)"
+                },
+                {
+                  "label": "D (different)"
+                }
+              ],
+              "answer": 1,
+              "hint": "They start with different sounds.",
+              "tests": "s-fan"
+            },
+            {
+              "id": "p3",
+              "ask": "Do bag and bed begin with the same sound?",
+              "askBn": "bag আর bed — শুরুর ধ্বনি কি একই?",
+              "speak": "bag. bed.",
+              "options": [
+                {
+                  "label": "S (same)"
+                },
+                {
+                  "label": "D (different)"
+                }
+              ],
+              "answer": 0,
+              "hint": "They start with the same sound.",
+              "tests": "s-bag"
+            },
+            {
+              "id": "p4",
+              "ask": "Do cake and take begin with the same sound?",
+              "askBn": "cake আর take — শুরুর ধ্বনি কি একই?",
+              "speak": "cake. take.",
+              "options": [
+                {
+                  "label": "S (same)"
+                },
+                {
+                  "label": "D (different)"
+                }
+              ],
+              "answer": 1,
+              "hint": "They start with different sounds.",
+              "tests": "s-cake"
+            },
+            {
+              "id": "p5",
+              "ask": "Do man and men begin with the same sound?",
+              "askBn": "man আর men — শুরুর ধ্বনি কি একই?",
+              "speak": "man. men.",
+              "options": [
+                {
+                  "label": "S (same)"
+                },
+                {
+                  "label": "D (different)"
+                }
+              ],
+              "answer": 0,
+              "hint": "They start with the same sound."
+            }
+          ]
+        },
+        {
+          "id": "u6l2-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "What is the first sound?",
+              "askBn": "শুরুর ধ্বনি কোনটি?",
+              "image": "bag",
+              "options": [
+                {
+                  "label": "f"
+                },
+                {
+                  "label": "t"
+                },
+                {
+                  "label": "b"
+                }
+              ],
+              "answer": 2,
+              "explain": "b—bag",
+              "tests": "s-bag"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "cake",
+              "options": [
+                {
+                  "label": "cap"
+                },
+                {
+                  "label": "cake"
+                },
+                {
+                  "label": "tap"
+                }
+              ],
+              "answer": 1,
+              "tests": "s-cake"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "___ op",
+              "askBn": "___ op",
+              "options": [
+                {
+                  "label": "t"
+                },
+                {
+                  "label": "b"
+                },
+                {
+                  "label": "f"
+                }
+              ],
+              "answer": 0,
+              "explain": "t—top",
+              "tests": "s-top"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "Bag and bed begin with the same sound.",
+              "askBn": "bag আর bed একই ধ্বনি দিয়ে শুরু হয়।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "Both begin with b.",
+              "tests": "s-bag"
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "Which word begins with the same sound as tap?",
+              "askBn": "কোন শব্দটি tap-এর মতো একই ধ্বনি দিয়ে শুরু?",
+              "options": [
+                {
+                  "label": "fan"
+                },
+                {
+                  "label": "top"
+                },
+                {
+                  "label": "book"
+                }
+              ],
+              "answer": 1,
+              "explain": "tap and top both begin with t.",
+              "tests": "s-tap"
+            }
+          ]
+        },
+        {
+          "id": "u6l2-done",
+          "type": "done",
+          "title": "Well done!",
+          "titleBn": "খুব ভালো!",
+          "say": "You can match words by their first sound!",
+          "sayBn": "তুমি প্রথম ধ্বনি দেখে শব্দ মেলাতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "u6l3",
+      "unitId": "u6",
+      "number": 3,
+      "title": "Final Sounds 1",
+      "titleBn": "শেষের ধ্বনি ১",
+      "shape": "phonics",
+      "bookPages": [
+        59,
+        60
+      ],
+      "objective": "Hear the ending sound of a word and complete words with their last letter.",
+      "objectiveBn": "শব্দের শেষ ধ্বনি শোনা আর শেষ অক্ষর দিয়ে শব্দ সম্পূর্ণ করা।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "e-cat",
+          "word": "cat",
+          "bangla": "বিড়াল",
+          "banglaPronunciation": "ক্যাট",
+          "banglaSource": "enrichment",
+          "bookPage": 59,
+          "category": "animal",
+          "image": "cat",
+          "example": "cat—t",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "e-bat",
+          "word": "bat",
+          "bangla": "ব্যাট",
+          "banglaPronunciation": "ব্যাট",
+          "banglaSource": "enrichment",
+          "bookPage": 59,
+          "category": "object",
+          "image": "bat",
+          "example": "bat—t",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "e-fan",
+          "word": "fan",
+          "bangla": "পাখা",
+          "banglaPronunciation": "ফ্যান",
+          "banglaSource": "enrichment",
+          "bookPage": 59,
+          "category": "object",
+          "image": "fan",
+          "example": "fan—n",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "e-van",
+          "word": "van",
+          "bangla": "ভ্যান",
+          "banglaPronunciation": "ভ্যান",
+          "banglaSource": "enrichment",
+          "bookPage": 59,
+          "category": "vehicle",
+          "image": "van",
+          "example": "van—n",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u6l3-intro",
+          "type": "intro",
+          "title": "Ending sounds",
+          "titleBn": "শেষের ধ্বনি",
+          "say": "Words end with a sound too. Listen for it!",
+          "sayBn": "শব্দের শেষেও একটি ধ্বনি থাকে। মন দিয়ে শোনো!",
+          "illustration": "cat"
+        },
+        {
+          "id": "u6l3-words",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Look, listen and say",
+          "titleBn": "দেখো, শোনো আর বলো",
+          "items": [
+            "e-cat",
+            "e-bat",
+            "e-fan",
+            "e-van"
+          ]
+        },
+        {
+          "id": "u6l3-speak",
+          "type": "speak",
+          "bookActivity": "B",
+          "title": "Say the word and its end",
+          "titleBn": "শব্দ আর তার শেষ ধ্বনি বলো",
+          "prompt": "Say: cat, t. bat, t.",
+          "promptBn": "বলো: cat, t. bat, t.",
+          "modelAnswer": "cat, t. bat, t."
+        },
+        {
+          "id": "u6l3-game1",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "B",
+          "title": "What is the last sound?",
+          "titleBn": "শেষ ধ্বনি কোনটি?",
+          "rounds": [
+            {
+              "id": "r-e-cat",
+              "ask": "What is the last sound?",
+              "askBn": "শেষ ধ্বনি কোনটি?",
+              "image": "cat",
+              "options": [
+                {
+                  "label": "t"
+                },
+                {
+                  "label": "s"
+                },
+                {
+                  "label": "n"
+                }
+              ],
+              "answer": 0,
+              "hint": "Say the word slowly. Listen to the end.",
+              "tests": "e-cat"
+            },
+            {
+              "id": "r-e-bat",
+              "ask": "What is the last sound?",
+              "askBn": "শেষ ধ্বনি কোনটি?",
+              "image": "bat",
+              "options": [
+                {
+                  "label": "l"
+                },
+                {
+                  "label": "g"
+                },
+                {
+                  "label": "t"
+                }
+              ],
+              "answer": 2,
+              "hint": "Say the word slowly. Listen to the end.",
+              "tests": "e-bat"
+            },
+            {
+              "id": "r-e-fan",
+              "ask": "What is the last sound?",
+              "askBn": "শেষ ধ্বনি কোনটি?",
+              "image": "fan",
+              "options": [
+                {
+                  "label": "n"
+                },
+                {
+                  "label": "l"
+                },
+                {
+                  "label": "p"
+                }
+              ],
+              "answer": 0,
+              "hint": "Say the word slowly. Listen to the end.",
+              "tests": "e-fan"
+            },
+            {
+              "id": "r-e-van",
+              "ask": "What is the last sound?",
+              "askBn": "শেষ ধ্বনি কোনটি?",
+              "image": "van",
+              "options": [
+                {
+                  "label": "p"
+                },
+                {
+                  "label": "d"
+                },
+                {
+                  "label": "n"
+                }
+              ],
+              "answer": 2,
+              "hint": "Say the word slowly. Listen to the end.",
+              "tests": "e-van"
+            }
+          ]
+        },
+        {
+          "id": "u6l3-game2",
+          "type": "game",
+          "kind": "missing-letter",
+          "bookActivity": "C",
+          "title": "Finish the word",
+          "titleBn": "শব্দটি শেষ করো",
+          "rounds": [
+            {
+              "id": "c-fan",
+              "ask": "fa___",
+              "askBn": "fa___",
+              "image": "fan",
+              "options": [
+                {
+                  "label": "n"
+                },
+                {
+                  "label": "s"
+                },
+                {
+                  "label": "p"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the picture. Say the word.",
+              "tests": "e-fan"
+            },
+            {
+              "id": "c-cat",
+              "ask": "ca___",
+              "askBn": "ca___",
+              "image": "cat",
+              "options": [
+                {
+                  "label": "t"
+                },
+                {
+                  "label": "l"
+                },
+                {
+                  "label": "g"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the picture. Say the word.",
+              "tests": "e-cat"
+            },
+            {
+              "id": "c-van",
+              "ask": "va___",
+              "askBn": "va___",
+              "image": "van",
+              "options": [
+                {
+                  "label": "n"
+                },
+                {
+                  "label": "l"
+                },
+                {
+                  "label": "d"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the picture. Say the word.",
+              "tests": "e-van"
+            },
+            {
+              "id": "c-bat",
+              "ask": "ba___",
+              "askBn": "ba___",
+              "image": "bat",
+              "options": [
+                {
+                  "label": "t"
+                },
+                {
+                  "label": "d"
+                },
+                {
+                  "label": "n"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the picture. Say the word.",
+              "tests": "e-bat"
+            }
+          ]
+        },
+        {
+          "id": "u6l3-game3",
+          "type": "game",
+          "kind": "same-sound",
+          "bookActivity": "D",
+          "title": "Same or different?",
+          "titleBn": "একই না আলাদা?",
+          "rounds": [
+            {
+              "id": "p1",
+              "ask": "Do bat and van end with the same sound?",
+              "askBn": "bat আর van — শেষের ধ্বনি কি একই?",
+              "speak": "bat. van.",
+              "options": [
+                {
+                  "label": "S (same)"
+                },
+                {
+                  "label": "D (different)"
+                }
+              ],
+              "answer": 1,
+              "hint": "They end with different sounds.",
+              "tests": "e-bat"
+            },
+            {
+              "id": "p2",
+              "ask": "Do vat and rat end with the same sound?",
+              "askBn": "vat আর rat — শেষের ধ্বনি কি একই?",
+              "speak": "vat. rat.",
+              "options": [
+                {
+                  "label": "S (same)"
+                },
+                {
+                  "label": "D (different)"
+                }
+              ],
+              "answer": 0,
+              "hint": "They end with the same sound."
+            },
+            {
+              "id": "p3",
+              "ask": "Do fan and fat end with the same sound?",
+              "askBn": "fan আর fat — শেষের ধ্বনি কি একই?",
+              "speak": "fan. fat.",
+              "options": [
+                {
+                  "label": "S (same)"
+                },
+                {
+                  "label": "D (different)"
+                }
+              ],
+              "answer": 1,
+              "hint": "They end with different sounds.",
+              "tests": "e-fan"
+            },
+            {
+              "id": "p4",
+              "ask": "Do mat and hat end with the same sound?",
+              "askBn": "mat আর hat — শেষের ধ্বনি কি একই?",
+              "speak": "mat. hat.",
+              "options": [
+                {
+                  "label": "S (same)"
+                },
+                {
+                  "label": "D (different)"
+                }
+              ],
+              "answer": 0,
+              "hint": "They end with the same sound."
+            },
+            {
+              "id": "p5",
+              "ask": "Do pan and pet end with the same sound?",
+              "askBn": "pan আর pet — শেষের ধ্বনি কি একই?",
+              "speak": "pan. pet.",
+              "options": [
+                {
+                  "label": "S (same)"
+                },
+                {
+                  "label": "D (different)"
+                }
+              ],
+              "answer": 1,
+              "hint": "They end with different sounds."
+            }
+          ]
+        },
+        {
+          "id": "u6l3-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "What is the last sound?",
+              "askBn": "শেষ ধ্বনি কোনটি?",
+              "image": "van",
+              "options": [
+                {
+                  "label": "d"
+                },
+                {
+                  "label": "t"
+                },
+                {
+                  "label": "n"
+                }
+              ],
+              "answer": 2,
+              "explain": "van—n",
+              "tests": "e-van"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "bat",
+              "options": [
+                {
+                  "label": "cat"
+                },
+                {
+                  "label": "van"
+                },
+                {
+                  "label": "bat"
+                }
+              ],
+              "answer": 2,
+              "tests": "e-bat"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "ca___",
+              "askBn": "ca___",
+              "options": [
+                {
+                  "label": "t"
+                },
+                {
+                  "label": "n"
+                },
+                {
+                  "label": "d"
+                }
+              ],
+              "answer": 0,
+              "explain": "cat—t",
+              "tests": "e-cat"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "Cat and bat end with the same sound.",
+              "askBn": "cat আর bat একই ধ্বনি দিয়ে শেষ হয়।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "Both end with t.",
+              "tests": "e-cat"
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "Which word ends with the same sound as fan?",
+              "askBn": "কোন শব্দটি fan-এর মতো একই ধ্বনি দিয়ে শেষ?",
+              "options": [
+                {
+                  "label": "van"
+                },
+                {
+                  "label": "bat"
+                },
+                {
+                  "label": "cat"
+                }
+              ],
+              "answer": 0,
+              "explain": "fan and van both end with n.",
+              "tests": "e-fan"
+            }
+          ]
+        },
+        {
+          "id": "u6l3-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You can hear the end of a word!",
+          "sayBn": "তুমি শব্দের শেষ ধ্বনি শুনতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "u6l4",
+      "unitId": "u6",
+      "number": 4,
+      "title": "Final Sounds 2",
+      "titleBn": "শেষের ধ্বনি ২",
+      "shape": "phonics",
+      "bookPages": [
+        61,
+        62
+      ],
+      "objective": "Say the final sounds of more words: d, l, g and s.",
+      "objectiveBn": "আরও শব্দের শেষ ধ্বনি বলা: d, l, g আর s।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "e-red",
+          "word": "red",
+          "bangla": "লাল",
+          "banglaPronunciation": "রেড",
+          "banglaSource": "enrichment",
+          "bookPage": 61,
+          "category": "colour",
+          "image": "red",
+          "example": "red—d",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "e-ball",
+          "word": "ball",
+          "bangla": "বল",
+          "banglaPronunciation": "বল",
+          "banglaSource": "enrichment",
+          "bookPage": 61,
+          "category": "object",
+          "image": "football",
+          "example": "ball—l",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "e-dog",
+          "word": "dog",
+          "bangla": "কুকুর",
+          "banglaPronunciation": "ডগ",
+          "banglaSource": "enrichment",
+          "bookPage": 61,
+          "category": "animal",
+          "image": "dog",
+          "example": "dog—g",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "e-bus",
+          "word": "bus",
+          "bangla": "বাস",
+          "banglaPronunciation": "বাস",
+          "banglaSource": "enrichment",
+          "bookPage": 61,
+          "category": "vehicle",
+          "image": "bus",
+          "example": "bus—s",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u6l4-intro",
+          "type": "intro",
+          "title": "More ending sounds",
+          "titleBn": "আরও শেষের ধ্বনি",
+          "say": "Listen to the last sound of each word.",
+          "sayBn": "প্রতিটি শব্দের শেষ ধ্বনি শোনো।",
+          "illustration": "dog"
+        },
+        {
+          "id": "u6l4-words",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Look, listen and say",
+          "titleBn": "দেখো, শোনো আর বলো",
+          "items": [
+            "e-red",
+            "e-ball",
+            "e-dog",
+            "e-bus"
+          ]
+        },
+        {
+          "id": "u6l4-speak1",
+          "type": "speak",
+          "bookActivity": "B",
+          "title": "Say the word and its end",
+          "titleBn": "শব্দ আর তার শেষ ধ্বনি বলো",
+          "prompt": "Say: red, d. ball, l. dog, g. bus, s.",
+          "promptBn": "বলো: red, d. ball, l. dog, g. bus, s.",
+          "modelAnswer": "red, d. ball, l. dog, g. bus, s."
+        },
+        {
+          "id": "u6l4-speak2",
+          "type": "speak",
+          "bookActivity": "D",
+          "title": "Read the words aloud",
+          "titleBn": "শব্দগুলো জোরে পড়ো",
+          "prompt": "Read aloud: road, frog, net, shop, jeep, goat, pass, make.",
+          "promptBn": "জোরে পড়ো: road, frog, net, shop, jeep, goat, pass, make।",
+          "modelAnswer": "road, frog, net, shop, jeep, goat, pass, make."
+        },
+        {
+          "id": "u6l4-game1",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "B",
+          "title": "What is the last sound?",
+          "titleBn": "শেষ ধ্বনি কোনটি?",
+          "rounds": [
+            {
+              "id": "r-e-red",
+              "ask": "What is the last sound?",
+              "askBn": "শেষ ধ্বনি কোনটি?",
+              "image": "red",
+              "options": [
+                {
+                  "label": "d"
+                },
+                {
+                  "label": "g"
+                },
+                {
+                  "label": "p"
+                }
+              ],
+              "answer": 0,
+              "hint": "Say the word slowly. Listen to the end.",
+              "tests": "e-red"
+            },
+            {
+              "id": "r-e-ball",
+              "ask": "What is the last sound?",
+              "askBn": "শেষ ধ্বনি কোনটি?",
+              "image": "football",
+              "options": [
+                {
+                  "label": "l"
+                },
+                {
+                  "label": "p"
+                },
+                {
+                  "label": "n"
+                }
+              ],
+              "answer": 0,
+              "hint": "Say the word slowly. Listen to the end.",
+              "tests": "e-ball"
+            },
+            {
+              "id": "r-e-dog",
+              "ask": "What is the last sound?",
+              "askBn": "শেষ ধ্বনি কোনটি?",
+              "image": "dog",
+              "options": [
+                {
+                  "label": "g"
+                },
+                {
+                  "label": "s"
+                },
+                {
+                  "label": "p"
+                }
+              ],
+              "answer": 0,
+              "hint": "Say the word slowly. Listen to the end.",
+              "tests": "e-dog"
+            },
+            {
+              "id": "r-e-bus",
+              "ask": "What is the last sound?",
+              "askBn": "শেষ ধ্বনি কোনটি?",
+              "image": "bus",
+              "options": [
+                {
+                  "label": "l"
+                },
+                {
+                  "label": "s"
+                },
+                {
+                  "label": "p"
+                }
+              ],
+              "answer": 1,
+              "hint": "Say the word slowly. Listen to the end.",
+              "tests": "e-bus"
+            }
+          ]
+        },
+        {
+          "id": "u6l4-game2",
+          "type": "game",
+          "kind": "missing-letter",
+          "bookActivity": "C",
+          "title": "Finish the word",
+          "titleBn": "শব্দটি শেষ করো",
+          "rounds": [
+            {
+              "id": "c-ball",
+              "ask": "ba___",
+              "askBn": "ba___",
+              "image": "football",
+              "options": [
+                {
+                  "label": "ll"
+                },
+                {
+                  "label": "d"
+                },
+                {
+                  "label": "n"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the picture. Say the word.",
+              "tests": "e-ball"
+            },
+            {
+              "id": "c-red",
+              "ask": "re___",
+              "askBn": "re___",
+              "image": "red",
+              "options": [
+                {
+                  "label": "d"
+                },
+                {
+                  "label": "s"
+                },
+                {
+                  "label": "g"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the picture. Say the word.",
+              "tests": "e-red"
+            },
+            {
+              "id": "c-bus",
+              "ask": "bu___",
+              "askBn": "bu___",
+              "image": "bus",
+              "options": [
+                {
+                  "label": "s"
+                },
+                {
+                  "label": "n"
+                },
+                {
+                  "label": "g"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the picture. Say the word.",
+              "tests": "e-bus"
+            },
+            {
+              "id": "c-dog",
+              "ask": "do___",
+              "askBn": "do___",
+              "image": "dog",
+              "options": [
+                {
+                  "label": "g"
+                },
+                {
+                  "label": "t"
+                },
+                {
+                  "label": "n"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the picture. Say the word.",
+              "tests": "e-dog"
+            }
+          ]
+        },
+        {
+          "id": "u6l4-game3",
+          "type": "game",
+          "kind": "same-sound",
+          "bookActivity": "E",
+          "title": "Same or different?",
+          "titleBn": "একই না আলাদা?",
+          "rounds": [
+            {
+              "id": "p1",
+              "ask": "Do jug and flag end with the same sound?",
+              "askBn": "jug আর flag — শেষের ধ্বনি কি একই?",
+              "speak": "jug. flag.",
+              "options": [
+                {
+                  "label": "S (same)"
+                },
+                {
+                  "label": "D (different)"
+                }
+              ],
+              "answer": 0,
+              "hint": "They end with the same sound."
+            },
+            {
+              "id": "p2",
+              "ask": "Do mug and map end with the same sound?",
+              "askBn": "mug আর map — শেষের ধ্বনি কি একই?",
+              "speak": "mug. map.",
+              "options": [
+                {
+                  "label": "S (same)"
+                },
+                {
+                  "label": "D (different)"
+                }
+              ],
+              "answer": 1,
+              "hint": "They end with different sounds."
+            },
+            {
+              "id": "p3",
+              "ask": "Do lotus and bus end with the same sound?",
+              "askBn": "lotus আর bus — শেষের ধ্বনি কি একই?",
+              "speak": "lotus. bus.",
+              "options": [
+                {
+                  "label": "S (same)"
+                },
+                {
+                  "label": "D (different)"
+                }
+              ],
+              "answer": 0,
+              "hint": "They end with the same sound.",
+              "tests": "e-bus"
+            },
+            {
+              "id": "p4",
+              "ask": "Do rod and cot end with the same sound?",
+              "askBn": "rod আর cot — শেষের ধ্বনি কি একই?",
+              "speak": "rod. cot.",
+              "options": [
+                {
+                  "label": "S (same)"
+                },
+                {
+                  "label": "D (different)"
+                }
+              ],
+              "answer": 1,
+              "hint": "They end with different sounds."
+            },
+            {
+              "id": "p5",
+              "ask": "Do goat and road end with the same sound?",
+              "askBn": "goat আর road — শেষের ধ্বনি কি একই?",
+              "speak": "goat. road.",
+              "options": [
+                {
+                  "label": "S (same)"
+                },
+                {
+                  "label": "D (different)"
+                }
+              ],
+              "answer": 1,
+              "hint": "They end with different sounds."
+            },
+            {
+              "id": "p6",
+              "ask": "Do tall and bell end with the same sound?",
+              "askBn": "tall আর bell — শেষের ধ্বনি কি একই?",
+              "speak": "tall. bell.",
+              "options": [
+                {
+                  "label": "S (same)"
+                },
+                {
+                  "label": "D (different)"
+                }
+              ],
+              "answer": 0,
+              "hint": "They end with the same sound."
+            }
+          ]
+        },
+        {
+          "id": "u6l4-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "What is the last sound?",
+              "askBn": "শেষ ধ্বনি কোনটি?",
+              "image": "dog",
+              "options": [
+                {
+                  "label": "g"
+                },
+                {
+                  "label": "s"
+                },
+                {
+                  "label": "d"
+                }
+              ],
+              "answer": 0,
+              "explain": "dog—g",
+              "tests": "e-dog"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "bus",
+              "options": [
+                {
+                  "label": "dog"
+                },
+                {
+                  "label": "bus"
+                },
+                {
+                  "label": "red"
+                }
+              ],
+              "answer": 1,
+              "tests": "e-bus"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "re___",
+              "askBn": "re___",
+              "options": [
+                {
+                  "label": "d"
+                },
+                {
+                  "label": "s"
+                },
+                {
+                  "label": "g"
+                }
+              ],
+              "answer": 0,
+              "explain": "red—d",
+              "tests": "e-red"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "Goat and road end with the same sound.",
+              "askBn": "goat আর road একই ধ্বনি দিয়ে শেষ হয়।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 1,
+              "explain": "goat ends with t. road ends with d."
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "Which word ends with the same sound as ball?",
+              "askBn": "কোন শব্দটি ball-এর মতো একই ধ্বনি দিয়ে শেষ?",
+              "options": [
+                {
+                  "label": "bell"
+                },
+                {
+                  "label": "dog"
+                },
+                {
+                  "label": "bus"
+                }
+              ],
+              "answer": 0,
+              "explain": "ball and bell both end with l.",
+              "tests": "e-ball"
+            }
+          ]
+        },
+        {
+          "id": "u6l4-done",
+          "type": "done",
+          "title": "Well done!",
+          "titleBn": "খুব ভালো!",
+          "say": "You can hear how words end!",
+          "sayBn": "শব্দ কীভাবে শেষ হয় তুমি শুনতে পারো!"
+        }
+      ]
+    }
+  ]
+}

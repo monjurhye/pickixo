@@ -53,7 +53,9 @@ class UserResponse(BaseModel):
 # ===========================================================================
 # Registry
 # ===========================================================================
-Vertical = Literal["ai", "apps", "tools", "games", "jobs", "education", "bangladesh"]
+Vertical = Literal[
+    "ai", "apps", "tools", "games", "jobs", "education", "banking", "bangladesh"
+]
 AppStatus = Literal["live", "beta", "planned", "disabled"]
 
 

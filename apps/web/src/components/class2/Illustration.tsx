@@ -20,6 +20,10 @@ import { ALPHABET_DRAWINGS, CountingDots } from './alphabetDrawings';
 import { UNIT3_DRAWINGS } from './unit3Drawings';
 import { UNIT4_DRAWINGS } from './unit4Drawings';
 import { UNIT5_DRAWINGS } from './unit5Drawings';
+import { UNIT6_DRAWINGS } from './unit6Drawings';
+import { UNIT7_DRAWINGS } from './unit7Drawings';
+import { UNIT8_DRAWINGS } from './unit8Drawings';
+import { UNIT9_DRAWINGS } from './unit9Drawings';
 
 const C = {
   ink: '#2b3440',
@@ -358,7 +362,10 @@ export function Illustration({
   name, size = 96, animate = false, className, label,
 }: Props) {
   const draw = DRAWINGS[name] ?? ALPHABET_DRAWINGS[name]
-    ?? UNIT3_DRAWINGS[name] ?? UNIT4_DRAWINGS[name] ?? UNIT5_DRAWINGS[name];
+    ?? UNIT3_DRAWINGS[name] ?? UNIT4_DRAWINGS[name] ?? UNIT5_DRAWINGS[name]
+    ?? UNIT6_DRAWINGS[name] ?? UNIT7_DRAWINGS[name]
+    ?? UNIT8_DRAWINGS[name]
+    ?? UNIT9_DRAWINGS[name];
   const generated = draw ? null : dynamicDrawing(name);
   const style: CSSProperties = { width: size, height: size, flexShrink: 0 };
 
@@ -380,5 +387,8 @@ export function hasIllustration(name: string | null | undefined): boolean {
   if (!name) return false;
   return name in DRAWINGS || name in ALPHABET_DRAWINGS || name in UNIT3_DRAWINGS
     || name in UNIT4_DRAWINGS || name in UNIT5_DRAWINGS
+    || name in UNIT6_DRAWINGS || name in UNIT7_DRAWINGS
+    || name in UNIT8_DRAWINGS
+    || name in UNIT9_DRAWINGS
     || dynamicDrawing(name) !== null;
 }

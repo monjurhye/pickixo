@@ -7,7 +7,7 @@ import { AppCard } from '@/components/apps/AppCard';
 import { EmptyState } from '@/components/ui/States';
 import { apiFetchOrNull, type AppSummary } from '@/lib/api';
 import { getCurrentUser } from '@/lib/session';
-import { VERTICALS, getVertical, isVertical } from '@/lib/verticals';
+import { SUBMENUS, VERTICALS, getVertical, isVertical } from '@/lib/verticals';
 import { buildMetadata, jsonLd, breadcrumbSchema } from '@/lib/seo';
 
 /**
@@ -50,6 +50,7 @@ export default async function VerticalPage(
     ),
   ]);
 
+  const submenu = SUBMENUS[vertical.slug];
   const list = apps ?? [];
   const ready = list.filter((a) => a.status !== 'planned');
   const planned = list.filter((a) => a.status === 'planned');
@@ -79,6 +80,26 @@ export default async function VerticalPage(
         <p className="mt-2 max-w-2xl text-body text-ink-muted">
           {vertical.description}
         </p>
+
+        {submenu ? (
+          <section className="mt-8" aria-labelledby="browse-heading">
+            <h2 id="browse-heading" className="sr-only">Browse {vertical.name}</h2>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {submenu.map((s) => (
+                <Link
+                  key={s.slug}
+                  href={`/${vertical.slug}/${s.slug}`}
+                  className="rounded-card border border-border bg-surface p-4 transition-colors
+                             hover:bg-surface-sunken"
+                >
+                  <span className="text-subheading text-ink">{s.name}</span>
+                  <span className="ml-2 text-small text-ink-subtle">{s.nameBn}</span>
+                  <p className="mt-1 text-small text-ink-muted">{s.description}</p>
+                </Link>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         {list.length === 0 ? (
           <EmptyState

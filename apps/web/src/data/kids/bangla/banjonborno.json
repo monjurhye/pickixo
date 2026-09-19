@@ -1,0 +1,1370 @@
+{
+  "id": "banjonborno",
+  "subject": "bangla",
+  "number": 2,
+  "title": "ব্যঞ্জনবর্ণ",
+  "icon": "consonant",
+  "colour": "leaf",
+  "lessons": [
+    {
+      "id": "banjonborno-1",
+      "subject": "bangla",
+      "unit": "banjonborno",
+      "number": 1,
+      "title": "ক খ গ ঘ ঙ",
+      "source": {
+        "book": "আমার বই — প্রাক-প্রাথমিক শিক্ষা (NCTB)",
+        "edition": "2018",
+        "bookPages": [
+          41,
+          42,
+          43,
+          44
+        ],
+        "pdfPages": [
+          48,
+          49,
+          50,
+          51
+        ]
+      },
+      "objectives": [
+        {
+          "code": "৪.১.৪",
+          "band": "5+",
+          "text": "ধ্বনির লিখিত রূপ/প্রতীক (বর্ণ) শনাক্ত করতে পারবে।"
+        },
+        {
+          "code": "৪.১.৬",
+          "band": "5+",
+          "text": "শব্দ থেকে বর্ণ শনাক্ত করতে পারবে।"
+        }
+      ],
+      "items": [
+        {
+          "id": "con-ক",
+          "glyph": "ক",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "কলম",
+              "image": "কলম",
+              "initial": true,
+              "bookPage": 41
+            },
+            {
+              "text": "কলা",
+              "image": "কলা",
+              "initial": true,
+              "bookPage": 41
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-খ",
+          "glyph": "খ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "খরগোশ",
+              "image": "খরগোশ",
+              "initial": true,
+              "bookPage": 41
+            },
+            {
+              "text": "খাতা",
+              "image": "খাতা",
+              "initial": true,
+              "bookPage": 41
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-গ",
+          "glyph": "গ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "গাছ",
+              "image": "গাছ",
+              "initial": true,
+              "bookPage": 42
+            },
+            {
+              "text": "গাড়ি",
+              "image": "গাড়ি",
+              "initial": true,
+              "bookPage": 42
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-ঘ",
+          "glyph": "ঘ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "ঘর",
+              "image": "ঘর",
+              "initial": true,
+              "bookPage": 42
+            },
+            {
+              "text": "ঘড়ি",
+              "image": "ঘড়ি",
+              "initial": true,
+              "bookPage": 42
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-ঙ",
+          "glyph": "ঙ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "ব্যাঙ",
+              "image": "ব্যাঙ",
+              "initial": false,
+              "bookPage": 43
+            },
+            {
+              "text": "ঝিঙা",
+              "image": "ঝিঙা",
+              "initial": false,
+              "bookPage": 43
+            }
+          ],
+          "audio": null,
+          "wordInitial": false,
+          "strokes": null
+        }
+      ],
+      "activities": {
+        "explore": [
+          "listen-look",
+          "picture-quiz",
+          "listen-choose",
+          "spot-difference"
+        ],
+        "learn": [
+          "chart",
+          "match-picture-letter",
+          "trace",
+          "drag-drop"
+        ],
+        "practice": [
+          "find-initial",
+          "tap-answer",
+          "missing-letter",
+          "odd-one-out",
+          "sort"
+        ],
+        "master": [
+          "sequence",
+          "sound-match",
+          "find-initial",
+          "memory"
+        ]
+      },
+      "minutes": 6
+    },
+    {
+      "id": "banjonborno-2",
+      "subject": "bangla",
+      "unit": "banjonborno",
+      "number": 2,
+      "title": "চ ছ জ ঝ ঞ",
+      "source": {
+        "book": "আমার বই — প্রাক-প্রাথমিক শিক্ষা (NCTB)",
+        "edition": "2018",
+        "bookPages": [
+          45,
+          46,
+          47,
+          48
+        ],
+        "pdfPages": [
+          52,
+          53,
+          54,
+          55
+        ]
+      },
+      "objectives": [
+        {
+          "code": "৪.১.৪",
+          "band": "5+",
+          "text": "ধ্বনির লিখিত রূপ/প্রতীক (বর্ণ) শনাক্ত করতে পারবে।"
+        },
+        {
+          "code": "৪.১.৬",
+          "band": "5+",
+          "text": "শব্দ থেকে বর্ণ শনাক্ত করতে পারবে।"
+        }
+      ],
+      "items": [
+        {
+          "id": "con-চ",
+          "glyph": "চ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "চড়ুই",
+              "image": "চড়ুই",
+              "initial": true,
+              "bookPage": 45
+            },
+            {
+              "text": "চশমা",
+              "image": "চশমা",
+              "initial": true,
+              "bookPage": 45
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-ছ",
+          "glyph": "ছ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "ছাগল",
+              "image": "ছাগল",
+              "initial": true,
+              "bookPage": 45
+            },
+            {
+              "text": "ছাতা",
+              "image": "ছাতা",
+              "initial": true,
+              "bookPage": 45
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-জ",
+          "glyph": "জ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "জাহাজ",
+              "image": "জাহাজ",
+              "initial": true,
+              "bookPage": 46
+            },
+            {
+              "text": "জবা",
+              "image": "জবা",
+              "initial": true,
+              "bookPage": 46
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-ঝ",
+          "glyph": "ঝ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "ঝড়",
+              "image": "ঝড়",
+              "initial": true,
+              "bookPage": 46
+            },
+            {
+              "text": "ঝর্ণা",
+              "image": "ঝর্ণা",
+              "initial": true,
+              "bookPage": 46
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-ঞ",
+          "glyph": "ঞ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "মিঞসাহেব",
+              "image": "মিঞসাহেব",
+              "initial": false,
+              "bookPage": 47
+            },
+            {
+              "text": "মিঞ",
+              "image": "মিঞ",
+              "initial": false,
+              "bookPage": 47
+            }
+          ],
+          "audio": null,
+          "wordInitial": false,
+          "strokes": null
+        }
+      ],
+      "activities": {
+        "explore": [
+          "listen-look",
+          "picture-quiz",
+          "listen-choose",
+          "spot-difference"
+        ],
+        "learn": [
+          "chart",
+          "match-picture-letter",
+          "trace",
+          "drag-drop"
+        ],
+        "practice": [
+          "find-initial",
+          "tap-answer",
+          "missing-letter",
+          "odd-one-out",
+          "sort"
+        ],
+        "master": [
+          "sequence",
+          "sound-match",
+          "find-initial",
+          "memory"
+        ]
+      },
+      "minutes": 6
+    },
+    {
+      "id": "banjonborno-3",
+      "subject": "bangla",
+      "unit": "banjonborno",
+      "number": 3,
+      "title": "ট ঠ ড ঢ ণ",
+      "source": {
+        "book": "আমার বই — প্রাক-প্রাথমিক শিক্ষা (NCTB)",
+        "edition": "2018",
+        "bookPages": [
+          49,
+          50,
+          51,
+          52
+        ],
+        "pdfPages": [
+          56,
+          57,
+          58,
+          59
+        ]
+      },
+      "objectives": [
+        {
+          "code": "৪.১.৪",
+          "band": "5+",
+          "text": "ধ্বনির লিখিত রূপ/প্রতীক (বর্ণ) শনাক্ত করতে পারবে।"
+        },
+        {
+          "code": "৪.১.৬",
+          "band": "5+",
+          "text": "শব্দ থেকে বর্ণ শনাক্ত করতে পারবে।"
+        }
+      ],
+      "items": [
+        {
+          "id": "con-ট",
+          "glyph": "ট",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "টিয়া",
+              "image": "টিয়া",
+              "initial": true,
+              "bookPage": 49
+            },
+            {
+              "text": "টমেটো",
+              "image": "টমেটো",
+              "initial": true,
+              "bookPage": 49
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-ঠ",
+          "glyph": "ঠ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "ঠোঁট",
+              "image": "ঠোঁট",
+              "initial": true,
+              "bookPage": 49
+            },
+            {
+              "text": "ঠেলাগাড়ি",
+              "image": "ঠেলাগাড়ি",
+              "initial": true,
+              "bookPage": 49
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-ড",
+          "glyph": "ড",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "ডাব",
+              "image": "ডাব",
+              "initial": true,
+              "bookPage": 50
+            },
+            {
+              "text": "ডিম",
+              "image": "ডিম",
+              "initial": true,
+              "bookPage": 50
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-ঢ",
+          "glyph": "ঢ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "ঢোল",
+              "image": "ঢোল",
+              "initial": true,
+              "bookPage": 50
+            },
+            {
+              "text": "ঢাকনা",
+              "image": "ঢাকনা",
+              "initial": true,
+              "bookPage": 50
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-ণ",
+          "glyph": "ণ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "হরিণ",
+              "image": "হরিণ",
+              "initial": false,
+              "bookPage": 51
+            },
+            {
+              "text": "বীণা",
+              "image": "বীণা",
+              "initial": false,
+              "bookPage": 51
+            }
+          ],
+          "audio": null,
+          "wordInitial": false,
+          "strokes": null
+        }
+      ],
+      "activities": {
+        "explore": [
+          "listen-look",
+          "picture-quiz",
+          "listen-choose",
+          "spot-difference"
+        ],
+        "learn": [
+          "chart",
+          "match-picture-letter",
+          "trace",
+          "drag-drop"
+        ],
+        "practice": [
+          "find-initial",
+          "tap-answer",
+          "missing-letter",
+          "odd-one-out",
+          "sort"
+        ],
+        "master": [
+          "sequence",
+          "sound-match",
+          "find-initial",
+          "memory"
+        ]
+      },
+      "minutes": 6
+    },
+    {
+      "id": "banjonborno-4",
+      "subject": "bangla",
+      "unit": "banjonborno",
+      "number": 4,
+      "title": "ত থ দ ধ ন",
+      "source": {
+        "book": "আমার বই — প্রাক-প্রাথমিক শিক্ষা (NCTB)",
+        "edition": "2018",
+        "bookPages": [
+          53,
+          54,
+          55
+        ],
+        "pdfPages": [
+          60,
+          61,
+          62
+        ]
+      },
+      "objectives": [
+        {
+          "code": "৪.১.৪",
+          "band": "5+",
+          "text": "ধ্বনির লিখিত রূপ/প্রতীক (বর্ণ) শনাক্ত করতে পারবে।"
+        },
+        {
+          "code": "৪.১.৬",
+          "band": "5+",
+          "text": "শব্দ থেকে বর্ণ শনাক্ত করতে পারবে।"
+        }
+      ],
+      "items": [
+        {
+          "id": "con-ত",
+          "glyph": "ত",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "তবলা",
+              "image": "তবলা",
+              "initial": true,
+              "bookPage": 53
+            },
+            {
+              "text": "তিমি",
+              "image": "তিমি",
+              "initial": true,
+              "bookPage": 53
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-থ",
+          "glyph": "থ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "থালা",
+              "image": "থালা",
+              "initial": true,
+              "bookPage": 53
+            },
+            {
+              "text": "থলে",
+              "image": "থলে",
+              "initial": true,
+              "bookPage": 53
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-দ",
+          "glyph": "দ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "দোয়েল",
+              "image": "দোয়েল",
+              "initial": true,
+              "bookPage": 54
+            },
+            {
+              "text": "দরজা",
+              "image": "দরজা",
+              "initial": true,
+              "bookPage": 54
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-ধ",
+          "glyph": "ধ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "ধান",
+              "image": "ধান",
+              "initial": true,
+              "bookPage": 54
+            },
+            {
+              "text": "ধনুক",
+              "image": "ধনুক",
+              "initial": true,
+              "bookPage": 54
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-ন",
+          "glyph": "ন",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "নদী",
+              "image": "নদী",
+              "initial": true,
+              "bookPage": 54
+            },
+            {
+              "text": "নৌকা",
+              "image": "নৌকা",
+              "initial": true,
+              "bookPage": 54
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        }
+      ],
+      "activities": {
+        "explore": [
+          "listen-look",
+          "picture-quiz",
+          "listen-choose",
+          "spot-difference"
+        ],
+        "learn": [
+          "chart",
+          "match-picture-letter",
+          "trace",
+          "drag-drop"
+        ],
+        "practice": [
+          "find-initial",
+          "tap-answer",
+          "missing-letter",
+          "odd-one-out",
+          "sort"
+        ],
+        "master": [
+          "sequence",
+          "sound-match",
+          "find-initial",
+          "memory"
+        ]
+      },
+      "minutes": 6
+    },
+    {
+      "id": "banjonborno-5",
+      "subject": "bangla",
+      "unit": "banjonborno",
+      "number": 5,
+      "title": "প ফ ব ভ ম",
+      "source": {
+        "book": "আমার বই — প্রাক-প্রাথমিক শিক্ষা (NCTB)",
+        "edition": "2018",
+        "bookPages": [
+          56,
+          57,
+          58,
+          59
+        ],
+        "pdfPages": [
+          63,
+          64,
+          65,
+          66
+        ]
+      },
+      "objectives": [
+        {
+          "code": "৪.১.৪",
+          "band": "5+",
+          "text": "ধ্বনির লিখিত রূপ/প্রতীক (বর্ণ) শনাক্ত করতে পারবে।"
+        },
+        {
+          "code": "৪.১.৬",
+          "band": "5+",
+          "text": "শব্দ থেকে বর্ণ শনাক্ত করতে পারবে।"
+        }
+      ],
+      "items": [
+        {
+          "id": "con-প",
+          "glyph": "প",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "পাখি",
+              "image": "পাখি",
+              "initial": true,
+              "bookPage": 56
+            },
+            {
+              "text": "পাতা",
+              "image": "পাতা",
+              "initial": true,
+              "bookPage": 56
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-ফ",
+          "glyph": "ফ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "ফুল",
+              "image": "ফুল",
+              "initial": true,
+              "bookPage": 56
+            },
+            {
+              "text": "ফড়িং",
+              "image": "ফড়িং",
+              "initial": true,
+              "bookPage": 56
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-ব",
+          "glyph": "ব",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "বানর",
+              "image": "বানর",
+              "initial": true,
+              "bookPage": 57
+            },
+            {
+              "text": "বক",
+              "image": "বক",
+              "initial": true,
+              "bookPage": 57
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-ভ",
+          "glyph": "ভ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "ভালুক",
+              "image": "ভালুক",
+              "initial": true,
+              "bookPage": 57
+            },
+            {
+              "text": "ভেড়া",
+              "image": "ভেড়া",
+              "initial": true,
+              "bookPage": 57
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-ম",
+          "glyph": "ম",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "ময়ূর",
+              "image": "ময়ূর",
+              "initial": true,
+              "bookPage": 58
+            },
+            {
+              "text": "মাছি",
+              "image": "মাছি",
+              "initial": true,
+              "bookPage": 58
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        }
+      ],
+      "activities": {
+        "explore": [
+          "listen-look",
+          "picture-quiz",
+          "listen-choose",
+          "spot-difference"
+        ],
+        "learn": [
+          "chart",
+          "match-picture-letter",
+          "trace",
+          "drag-drop"
+        ],
+        "practice": [
+          "find-initial",
+          "tap-answer",
+          "missing-letter",
+          "odd-one-out",
+          "sort"
+        ],
+        "master": [
+          "sequence",
+          "sound-match",
+          "find-initial",
+          "memory"
+        ]
+      },
+      "minutes": 6
+    },
+    {
+      "id": "banjonborno-6",
+      "subject": "bangla",
+      "unit": "banjonborno",
+      "number": 6,
+      "title": "য র ল শ",
+      "source": {
+        "book": "আমার বই — প্রাক-প্রাথমিক শিক্ষা (NCTB)",
+        "edition": "2018",
+        "bookPages": [
+          60,
+          61,
+          62
+        ],
+        "pdfPages": [
+          67,
+          68,
+          69
+        ]
+      },
+      "objectives": [
+        {
+          "code": "৪.১.৪",
+          "band": "5+",
+          "text": "ধ্বনির লিখিত রূপ/প্রতীক (বর্ণ) শনাক্ত করতে পারবে।"
+        },
+        {
+          "code": "৪.১.৬",
+          "band": "5+",
+          "text": "শব্দ থেকে বর্ণ শনাক্ত করতে পারবে।"
+        }
+      ],
+      "items": [
+        {
+          "id": "con-য",
+          "glyph": "য",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "যব",
+              "image": "যব",
+              "initial": true,
+              "bookPage": 60
+            },
+            {
+              "text": "যাঁতা",
+              "image": "যাঁতা",
+              "initial": true,
+              "bookPage": 60
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-র",
+          "glyph": "র",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "রাজহাঁস",
+              "image": "রাজহাঁস",
+              "initial": true,
+              "bookPage": 60
+            },
+            {
+              "text": "রংধনু",
+              "image": "রংধনু",
+              "initial": true,
+              "bookPage": 60
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-ল",
+          "glyph": "ল",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "লাটিম",
+              "image": "লাটিম",
+              "initial": true,
+              "bookPage": 61
+            },
+            {
+              "text": "লিচু",
+              "image": "লিচু",
+              "initial": true,
+              "bookPage": 61
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-শ",
+          "glyph": "শ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "শাপলা",
+              "image": "শাপলা",
+              "initial": true,
+              "bookPage": 61
+            },
+            {
+              "text": "শসা",
+              "image": "শসা",
+              "initial": true,
+              "bookPage": 61
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        }
+      ],
+      "activities": {
+        "explore": [
+          "listen-look",
+          "picture-quiz",
+          "listen-choose",
+          "spot-difference"
+        ],
+        "learn": [
+          "chart",
+          "match-picture-letter",
+          "trace",
+          "drag-drop"
+        ],
+        "practice": [
+          "find-initial",
+          "tap-answer",
+          "missing-letter",
+          "odd-one-out",
+          "sort"
+        ],
+        "master": [
+          "sequence",
+          "sound-match",
+          "find-initial",
+          "memory"
+        ]
+      },
+      "minutes": 6
+    },
+    {
+      "id": "banjonborno-7",
+      "subject": "bangla",
+      "unit": "banjonborno",
+      "number": 7,
+      "title": "ষ স হ ড় ঢ়",
+      "source": {
+        "book": "আমার বই — প্রাক-প্রাথমিক শিক্ষা (NCTB)",
+        "edition": "2018",
+        "bookPages": [
+          63,
+          64,
+          65,
+          66
+        ],
+        "pdfPages": [
+          70,
+          71,
+          72,
+          73
+        ]
+      },
+      "objectives": [
+        {
+          "code": "৪.১.৪",
+          "band": "5+",
+          "text": "ধ্বনির লিখিত রূপ/প্রতীক (বর্ণ) শনাক্ত করতে পারবে।"
+        },
+        {
+          "code": "৪.১.৬",
+          "band": "5+",
+          "text": "শব্দ থেকে বর্ণ শনাক্ত করতে পারবে।"
+        }
+      ],
+      "items": [
+        {
+          "id": "con-ষ",
+          "glyph": "ষ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "ষাঁড়",
+              "image": "ষাঁড়",
+              "initial": true,
+              "bookPage": 63
+            },
+            {
+              "text": "মহিষ",
+              "image": "মহিষ",
+              "initial": false,
+              "bookPage": 63
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-স",
+          "glyph": "স",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "সিংহ",
+              "image": "সিংহ",
+              "initial": true,
+              "bookPage": 63
+            },
+            {
+              "text": "সাবান",
+              "image": "সাবান",
+              "initial": true,
+              "bookPage": 63
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-হ",
+          "glyph": "হ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "হাঁস",
+              "image": "হাঁস",
+              "initial": true,
+              "bookPage": 64
+            },
+            {
+              "text": "হাতি",
+              "image": "হাতি",
+              "initial": true,
+              "bookPage": 64
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "con-ড়",
+          "glyph": "ড়",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "বিড়াল",
+              "image": "বিড়াল",
+              "initial": false,
+              "bookPage": 64
+            },
+            {
+              "text": "ঘড়ি",
+              "image": "ঘড়ি",
+              "initial": false,
+              "bookPage": 64
+            }
+          ],
+          "audio": null,
+          "wordInitial": false,
+          "strokes": null
+        },
+        {
+          "id": "con-ঢ়",
+          "glyph": "ঢ়",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "আষাঢ়",
+              "image": "আষাঢ়",
+              "initial": false,
+              "bookPage": 65
+            }
+          ],
+          "audio": null,
+          "wordInitial": false,
+          "strokes": null
+        }
+      ],
+      "activities": {
+        "explore": [
+          "listen-look",
+          "picture-quiz",
+          "listen-choose",
+          "spot-difference"
+        ],
+        "learn": [
+          "chart",
+          "match-picture-letter",
+          "trace",
+          "drag-drop"
+        ],
+        "practice": [
+          "find-initial",
+          "tap-answer",
+          "missing-letter",
+          "odd-one-out",
+          "sort"
+        ],
+        "master": [
+          "sequence",
+          "sound-match",
+          "find-initial",
+          "memory"
+        ]
+      },
+      "minutes": 6
+    },
+    {
+      "id": "banjonborno-8",
+      "subject": "bangla",
+      "unit": "banjonborno",
+      "number": 8,
+      "title": "য় ৎ ং ঃ ঁ",
+      "source": {
+        "book": "আমার বই — প্রাক-প্রাথমিক শিক্ষা (NCTB)",
+        "edition": "2018",
+        "bookPages": [
+          67,
+          68,
+          69,
+          70
+        ],
+        "pdfPages": [
+          74,
+          75,
+          76,
+          77
+        ]
+      },
+      "objectives": [
+        {
+          "code": "৪.১.৪",
+          "band": "5+",
+          "text": "ধ্বনির লিখিত রূপ/প্রতীক (বর্ণ) শনাক্ত করতে পারবে।"
+        },
+        {
+          "code": "৪.১.৬",
+          "band": "5+",
+          "text": "শব্দ থেকে বর্ণ শনাক্ত করতে পারবে।"
+        }
+      ],
+      "items": [
+        {
+          "id": "con-য়",
+          "glyph": "য়",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "ময়না",
+              "image": "ময়না",
+              "initial": false,
+              "bookPage": 67
+            },
+            {
+              "text": "আয়না",
+              "image": "আয়না",
+              "initial": false,
+              "bookPage": 67
+            }
+          ],
+          "audio": null,
+          "wordInitial": false,
+          "strokes": null
+        },
+        {
+          "id": "con-ৎ",
+          "glyph": "ৎ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "মৎস্য",
+              "image": "মৎস্য",
+              "initial": false,
+              "bookPage": 67
+            },
+            {
+              "text": "চিৎপটাং",
+              "image": "চিৎপটাং",
+              "initial": false,
+              "bookPage": 67
+            }
+          ],
+          "audio": null,
+          "wordInitial": false,
+          "strokes": null
+        },
+        {
+          "id": "con-ং",
+          "glyph": "ং",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "শিং",
+              "image": "শিং",
+              "initial": false,
+              "bookPage": 68
+            },
+            {
+              "text": "আংটি",
+              "image": "আংটি",
+              "initial": false,
+              "bookPage": 68
+            }
+          ],
+          "audio": null,
+          "wordInitial": false,
+          "strokes": null
+        },
+        {
+          "id": "con-ঃ",
+          "glyph": "ঃ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "দুঃখী",
+              "image": "দুঃখী",
+              "initial": false,
+              "bookPage": 68
+            }
+          ],
+          "audio": null,
+          "wordInitial": false,
+          "strokes": null
+        },
+        {
+          "id": "con-ঁ",
+          "glyph": "ঁ",
+          "kind": "consonant",
+          "words": [
+            {
+              "text": "চাঁদ",
+              "image": "চাঁদ",
+              "initial": false,
+              "bookPage": 69
+            },
+            {
+              "text": "কাঁঠাল",
+              "image": "কাঁঠাল",
+              "initial": false,
+              "bookPage": 69
+            }
+          ],
+          "audio": null,
+          "wordInitial": false,
+          "strokes": null
+        }
+      ],
+      "activities": {
+        "explore": [
+          "listen-look",
+          "picture-quiz",
+          "listen-choose",
+          "spot-difference"
+        ],
+        "learn": [
+          "chart",
+          "match-picture-letter",
+          "trace",
+          "drag-drop"
+        ],
+        "practice": [
+          "find-letter",
+          "tap-answer",
+          "missing-letter"
+        ],
+        "master": [
+          "sequence",
+          "sound-match",
+          "missing-letter",
+          "memory"
+        ]
+      },
+      "minutes": 6
+    }
+  ]
+}

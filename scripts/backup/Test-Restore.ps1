@@ -42,6 +42,24 @@ $SevenZip = 'C:\Program Files\7-Zip\7z.exe'
 $PgBin    = 'C:\Pickixo\pgsql\bin'
 $OutDir   = 'C:\Pickixo\backup\archives'
 
+function Invoke-Quiet {
+    <#
+        Runs a native command with stderr merged into stdout via 2>&1.
+
+        $ErrorActionPreference is set to 'Continue' here, scoped to this
+        function only, so it never leaks to the caller. Without it, this
+        script's global 'Stop' turns every stderr line a native command
+        writes — including a routine warning, like pg_restore's about absent
+        roles — into a terminating error the instant 2>&1 merges it in, which
+        aborts the test even though the command itself exited 0. Real failure
+        is judged by the caller from the returned exit code, not by this.
+    #>
+    param([string]$Exe, [string[]]$Arguments)
+    $ErrorActionPreference = 'Continue'
+    $output = & $Exe @Arguments 2>&1
+    return @{ Output = $output; Code = $LASTEXITCODE }
+}
+
 $pass = 0
 $fail = 0
 function Check {
@@ -81,9 +99,9 @@ New-Item -ItemType Directory -Force -Path $work | Out-Null
 try {
     # --- 1. does it open, and is everything in it? --------------------------
 
-    & $SevenZip x "-p$passphrase" "-o$work" -y -bso0 -bsp0 $Archive 2>&1 | Out-Null
-    Check 'archive opens with the passphrase from .env' ($LASTEXITCODE -eq 0)
-    if ($LASTEXITCODE -ne 0) { throw 'Cannot open the archive — nothing else can be checked' }
+    $extract = Invoke-Quiet -Exe $SevenZip -Arguments @('x', "-p$passphrase", "-o$work", '-y', '-bso0', '-bsp0', $Archive)
+    Check 'archive opens with the passphrase from .env' ($extract.Code -eq 0)
+    if ($extract.Code -ne 0) { throw 'Cannot open the archive — nothing else can be checked' }
 
     $root = Get-ChildItem $work -Directory | Select-Object -First 1
     if (-not $root) { throw 'Archive is empty' }
@@ -119,8 +137,9 @@ try {
 
     # --- 2. is the dump readable and complete? ------------------------------
 
-    $toc = & (Join-Path $PgBin 'pg_restore.exe') --list $dump 2>&1
-    Check 'pg_restore can read the dump' ($LASTEXITCODE -eq 0) (($toc | Select-Object -Last 3) -join ' ')
+    $listResult = Invoke-Quiet -Exe (Join-Path $PgBin 'pg_restore.exe') -Arguments @('--list', $dump)
+    $toc = $listResult.Output
+    Check 'pg_restore can read the dump' ($listResult.Code -eq 0) (($toc | Select-Object -Last 3) -join ' ')
 
     $dumpedTables = $toc |
         Where-Object { $_ -match '\sTABLE DATA\s+public\s+(\S+)' } |
@@ -154,7 +173,7 @@ try {
 
         try {
             $scratchUrl = ($AdminUrl -replace '/[^/]*$', "/$scratch")
-            & (Join-Path $PgBin 'pg_restore.exe') --dbname $scratchUrl --no-owner --no-privileges $dump 2>&1 | Out-Null
+            Invoke-Quiet -Exe (Join-Path $PgBin 'pg_restore.exe') -Arguments @('--dbname', $scratchUrl, '--no-owner', '--no-privileges', $dump) | Out-Null
             # pg_restore warns about absent roles even on a clean restore, so
             # judge it by what landed, not by the exit code.
             $countSql = "SELECT count(*) FROM pg_tables WHERE schemaname='public';"

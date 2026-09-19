@@ -153,11 +153,11 @@ else {
     Write-Output 'and secret, choose scope 1 (full access), then let it open a browser'
     Write-Output 'and sign in as monjurhye@gmail.com:'
     Write-Output ''
-    Write-Output '    $env:RCLONE_CONFIG = "' + $rcloneConf + '"; rclone config'
+    Write-Output "    `$env:RCLONE_CONFIG = ""$rcloneConf""; rclone config"
     Write-Output ''
     Write-Output 'Then check it and run the first backup by hand:'
     Write-Output ''
-    Write-Output '    $env:RCLONE_CONFIG = "' + $rcloneConf + '"; rclone lsd gdrive:'
-    Write-Output '    powershell -ExecutionPolicy Bypass -File "' + $script + '"'
+    Write-Output "    `$env:RCLONE_CONFIG = ""$rcloneConf""; rclone lsd gdrive:"
+    Write-Output "    powershell -ExecutionPolicy Bypass -File ""$script"""
     Write-Output '--------------------------------------------------------------------'
 }

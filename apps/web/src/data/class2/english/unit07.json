@@ -1,0 +1,3063 @@
+{
+  "id": "u7",
+  "number": 7,
+  "title": "Colours, Shapes and Signs",
+  "titleBn": "রং, আকার ও চিহ্ন",
+  "colour": "teal",
+  "icon": "palette",
+  "_source": "English for Today, Class Two (NCTB). Unit 7, book pages 63-74.",
+  "_note": "Colour sentences, both rhymes, the size words and the road-sign names are transcribed from the textbook. Bangla meanings are Pickixo's addition - the book carries no glosses. Drawing, project and word-match activities are pen-and-paper and are offered as 'listen and do' steps where they make sense.",
+  "lessons": [
+    {
+      "id": "u7l1",
+      "unitId": "u7",
+      "number": 1,
+      "title": "Colours",
+      "titleBn": "রং",
+      "shape": "category",
+      "bookPages": [
+        63,
+        64
+      ],
+      "objective": "Name the seven colours and say what colour things are.",
+      "objectiveBn": "সাতটি রঙের নাম বলা আর জিনিসের রং বলা।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "c-red",
+          "word": "red",
+          "bangla": "লাল",
+          "banglaPronunciation": "রেড",
+          "banglaSource": "enrichment",
+          "bookPage": 63,
+          "category": "colour",
+          "image": "colour-red",
+          "example": "The rose is red.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "c-green",
+          "word": "green",
+          "bangla": "সবুজ",
+          "banglaPronunciation": "গ্রিন",
+          "banglaSource": "enrichment",
+          "bookPage": 63,
+          "category": "colour",
+          "image": "colour-green",
+          "example": "The parrot is green.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "c-blue",
+          "word": "blue",
+          "bangla": "নীল",
+          "banglaPronunciation": "ব্লু",
+          "banglaSource": "enrichment",
+          "bookPage": 63,
+          "category": "colour",
+          "image": "colour-blue",
+          "example": "The sky is blue.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "c-violet",
+          "word": "violet",
+          "bangla": "বেগুনি",
+          "banglaPronunciation": "ভায়োলেট",
+          "banglaSource": "enrichment",
+          "bookPage": 63,
+          "category": "colour",
+          "image": "colour-violet",
+          "example": "The balloon is violet.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "c-orange",
+          "word": "orange",
+          "bangla": "কমলা",
+          "banglaPronunciation": "অরেঞ্জ",
+          "banglaSource": "enrichment",
+          "bookPage": 63,
+          "category": "colour",
+          "image": "colour-orange",
+          "example": "The carrot is orange.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "c-yellow",
+          "word": "yellow",
+          "bangla": "হলুদ",
+          "banglaPronunciation": "ইয়েলো",
+          "banglaSource": "enrichment",
+          "bookPage": 63,
+          "category": "colour",
+          "image": "colour-yellow",
+          "example": "The banana is yellow.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "c-indigo",
+          "word": "indigo",
+          "bangla": "ঘন নীল",
+          "banglaPronunciation": "ইন্ডিগো",
+          "banglaSource": "enrichment",
+          "bookPage": 63,
+          "category": "colour",
+          "image": "colour-indigo",
+          "example": "The kite is indigo.",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u7l1-intro",
+          "type": "intro",
+          "title": "Colours all around",
+          "titleBn": "চারপাশের রং",
+          "say": "Look around you. What colours can you see?",
+          "sayBn": "চারদিকে তাকাও। তুমি কী কী রং দেখতে পাও?",
+          "illustration": "rainbow"
+        },
+        {
+          "id": "u7l1-words1",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Colours 1",
+          "titleBn": "রং ১",
+          "items": [
+            "c-red",
+            "c-green",
+            "c-blue",
+            "c-violet"
+          ]
+        },
+        {
+          "id": "u7l1-words2",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Colours 2",
+          "titleBn": "রং ২",
+          "items": [
+            "c-orange",
+            "c-yellow",
+            "c-indigo"
+          ]
+        },
+        {
+          "id": "u7l1-speak",
+          "type": "speak",
+          "bookActivity": "A",
+          "title": "Say it!",
+          "titleBn": "বলো!",
+          "prompt": "Say: The rose is red.",
+          "promptBn": "বলো: The rose is red.",
+          "modelAnswer": "The rose is red."
+        },
+        {
+          "id": "u7l1-game1",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "C",
+          "title": "What colour is it?",
+          "titleBn": "এটি কী রঙের?",
+          "rounds": [
+            {
+              "id": "o-rose",
+              "ask": "What colour is this?",
+              "askBn": "এটি কী রঙের?",
+              "image": "rose",
+              "options": [
+                {
+                  "label": "blue"
+                },
+                {
+                  "label": "red"
+                },
+                {
+                  "label": "violet"
+                }
+              ],
+              "answer": 1,
+              "hint": "Look at the picture. Which colour do you see?",
+              "tests": "c-red"
+            },
+            {
+              "id": "o-parrot",
+              "ask": "What colour is this?",
+              "askBn": "এটি কী রঙের?",
+              "image": "parrot",
+              "options": [
+                {
+                  "label": "yellow"
+                },
+                {
+                  "label": "red"
+                },
+                {
+                  "label": "green"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the picture. Which colour do you see?",
+              "tests": "c-green"
+            },
+            {
+              "id": "o-sky",
+              "ask": "What colour is this?",
+              "askBn": "এটি কী রঙের?",
+              "image": "sky",
+              "options": [
+                {
+                  "label": "yellow"
+                },
+                {
+                  "label": "blue"
+                },
+                {
+                  "label": "red"
+                }
+              ],
+              "answer": 1,
+              "hint": "Look at the picture. Which colour do you see?",
+              "tests": "c-blue"
+            },
+            {
+              "id": "o-balloon",
+              "ask": "What colour is this?",
+              "askBn": "এটি কী রঙের?",
+              "image": "balloon",
+              "options": [
+                {
+                  "label": "violet"
+                },
+                {
+                  "label": "indigo"
+                },
+                {
+                  "label": "red"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the picture. Which colour do you see?",
+              "tests": "c-violet"
+            },
+            {
+              "id": "o-carrot",
+              "ask": "What colour is this?",
+              "askBn": "এটি কী রঙের?",
+              "image": "carrot",
+              "options": [
+                {
+                  "label": "green"
+                },
+                {
+                  "label": "red"
+                },
+                {
+                  "label": "orange"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the picture. Which colour do you see?",
+              "tests": "c-orange"
+            },
+            {
+              "id": "o-banana",
+              "ask": "What colour is this?",
+              "askBn": "এটি কী রঙের?",
+              "image": "banana",
+              "options": [
+                {
+                  "label": "red"
+                },
+                {
+                  "label": "orange"
+                },
+                {
+                  "label": "yellow"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the picture. Which colour do you see?",
+              "tests": "c-yellow"
+            },
+            {
+              "id": "o-kite",
+              "ask": "What colour is this?",
+              "askBn": "এটি কী রঙের?",
+              "image": "kite",
+              "options": [
+                {
+                  "label": "orange"
+                },
+                {
+                  "label": "yellow"
+                },
+                {
+                  "label": "indigo"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the picture. Which colour do you see?",
+              "tests": "c-indigo"
+            }
+          ]
+        },
+        {
+          "id": "u7l1-game2",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "D",
+          "title": "Name the colour",
+          "titleBn": "রঙের নাম বলো",
+          "rounds": [
+            {
+              "id": "s-yellow",
+              "ask": "Which colour is this?",
+              "askBn": "এটি কোন রং?",
+              "image": "colour-yellow",
+              "options": [
+                {
+                  "label": "blue"
+                },
+                {
+                  "label": "yellow"
+                },
+                {
+                  "label": "red"
+                }
+              ],
+              "answer": 1,
+              "hint": "Say the colours you know.",
+              "tests": "c-yellow"
+            },
+            {
+              "id": "s-violet",
+              "ask": "Which colour is this?",
+              "askBn": "এটি কোন রং?",
+              "image": "colour-violet",
+              "options": [
+                {
+                  "label": "yellow"
+                },
+                {
+                  "label": "violet"
+                },
+                {
+                  "label": "red"
+                }
+              ],
+              "answer": 1,
+              "hint": "Say the colours you know.",
+              "tests": "c-violet"
+            },
+            {
+              "id": "s-red",
+              "ask": "Which colour is this?",
+              "askBn": "এটি কোন রং?",
+              "image": "colour-red",
+              "options": [
+                {
+                  "label": "red"
+                },
+                {
+                  "label": "yellow"
+                },
+                {
+                  "label": "orange"
+                }
+              ],
+              "answer": 0,
+              "hint": "Say the colours you know.",
+              "tests": "c-red"
+            },
+            {
+              "id": "s-green",
+              "ask": "Which colour is this?",
+              "askBn": "এটি কোন রং?",
+              "image": "colour-green",
+              "options": [
+                {
+                  "label": "green"
+                },
+                {
+                  "label": "yellow"
+                },
+                {
+                  "label": "orange"
+                }
+              ],
+              "answer": 0,
+              "hint": "Say the colours you know.",
+              "tests": "c-green"
+            },
+            {
+              "id": "s-indigo",
+              "ask": "Which colour is this?",
+              "askBn": "এটি কোন রং?",
+              "image": "colour-indigo",
+              "options": [
+                {
+                  "label": "blue"
+                },
+                {
+                  "label": "green"
+                },
+                {
+                  "label": "indigo"
+                }
+              ],
+              "answer": 2,
+              "hint": "Say the colours you know.",
+              "tests": "c-indigo"
+            }
+          ]
+        },
+        {
+          "id": "u7l1-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "What colour is the parrot?",
+              "askBn": "টিয়া পাখিটি কী রঙের?",
+              "image": "parrot",
+              "options": [
+                {
+                  "label": "red"
+                },
+                {
+                  "label": "blue"
+                },
+                {
+                  "label": "green"
+                }
+              ],
+              "answer": 2,
+              "explain": "The parrot is green.",
+              "tests": "c-green"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which colour did you hear?",
+              "askBn": "শোনো। কোন রংটি শুনলে?",
+              "speak": "indigo",
+              "options": [
+                {
+                  "label": "blue"
+                },
+                {
+                  "label": "violet"
+                },
+                {
+                  "label": "indigo"
+                }
+              ],
+              "answer": 2,
+              "tests": "c-indigo"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "The sky is ___ .",
+              "askBn": "The sky is ___ .",
+              "options": [
+                {
+                  "label": "yellow"
+                },
+                {
+                  "label": "blue"
+                },
+                {
+                  "label": "violet"
+                }
+              ],
+              "answer": 1,
+              "explain": "The sky is blue.",
+              "tests": "c-blue"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "The banana is yellow.",
+              "askBn": "কলাটি হলুদ।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "The banana is yellow.",
+              "tests": "c-yellow"
+            },
+            {
+              "id": "q5",
+              "type": "tap-picture",
+              "ask": "Which colour is this?",
+              "askBn": "এটি কোন রং?",
+              "image": "colour-orange",
+              "options": [
+                {
+                  "label": "red"
+                },
+                {
+                  "label": "orange"
+                },
+                {
+                  "label": "yellow"
+                }
+              ],
+              "answer": 1,
+              "explain": "orange = কমলা",
+              "tests": "c-orange"
+            }
+          ]
+        },
+        {
+          "id": "u7l1-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You can name the seven colours!",
+          "sayBn": "তুমি সাতটি রঙের নাম বলতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "u7l2",
+      "unitId": "u7",
+      "number": 2,
+      "title": "Rainbow",
+      "titleBn": "রংধনু",
+      "shape": "rhyme",
+      "bookPages": [
+        65,
+        66
+      ],
+      "objective": "Recite the rhyme about the seven colours of the rainbow.",
+      "objectiveBn": "রংধনুর সাতটি রঙের ছড়া আবৃত্তি করা।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "rainbow",
+          "word": "rainbow",
+          "bangla": "রংধনু",
+          "banglaPronunciation": "রেইনবো",
+          "banglaSource": "enrichment",
+          "bookPage": 65,
+          "category": "nature",
+          "image": "rainbow",
+          "example": "Seven colours make a rainbow?",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "raindrops",
+          "word": "raindrops",
+          "bangla": "বৃষ্টির ফোঁটা",
+          "banglaPronunciation": "রেইনড্রপস",
+          "banglaSource": "enrichment",
+          "bookPage": 65,
+          "category": "nature",
+          "image": "rain",
+          "example": "Raindrops and sunlight",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "sunlight",
+          "word": "sunlight",
+          "bangla": "সূর্যের আলো",
+          "banglaPronunciation": "সানলাইট",
+          "banglaSource": "enrichment",
+          "bookPage": 65,
+          "category": "nature",
+          "image": "the-sun",
+          "example": "Raindrops and sunlight",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u7l2-intro",
+          "type": "intro",
+          "title": "Seven colours",
+          "titleBn": "সাতটি রং",
+          "say": "Seven colours make a rainbow. Can you say them?",
+          "sayBn": "সাতটি রং মিলে রংধনু হয়। তুমি বলতে পারো?",
+          "illustration": "rainbow"
+        },
+        {
+          "id": "u7l2-words",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "New words",
+          "titleBn": "নতুন শব্দ",
+          "items": [
+            "rainbow",
+            "raindrops",
+            "sunlight"
+          ]
+        },
+        {
+          "id": "u7l2-rhyme",
+          "type": "rhyme",
+          "bookActivity": "A",
+          "source": "textbook",
+          "title": "Seven Colours Make a Rainbow",
+          "titleBn": "সাত রঙে রংধনু",
+          "verses": [
+            [
+              "Do you know? Do you know?",
+              "Seven colours make a rainbow?",
+              "Red, orange and yellow,",
+              "Green and blue,",
+              "Violet, indigo too!",
+              "Raindrops and sunlight",
+              "Make the colours look so bright!"
+            ]
+          ]
+        },
+        {
+          "id": "u7l2-draw",
+          "type": "command",
+          "bookActivity": "C",
+          "source": "textbook",
+          "title": "Draw a rainbow",
+          "titleBn": "একটি রংধনু আঁকো",
+          "commands": [
+            {
+              "text": "Draw a rainbow and colour it. Say the rhyme as you draw.",
+              "textBn": "একটি রংধনু এঁকে রং করো। আঁকতে আঁকতে ছড়াটি বলো।",
+              "illustration": "rainbow"
+            }
+          ]
+        },
+        {
+          "id": "u7l2-game1",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "D",
+          "title": "Write the colour",
+          "titleBn": "রঙের নাম বলো",
+          "rounds": [
+            {
+              "id": "k-green",
+              "ask": "Which colour is this?",
+              "askBn": "এটি কোন রং?",
+              "image": "colour-green",
+              "options": [
+                {
+                  "label": "yellow"
+                },
+                {
+                  "label": "green"
+                },
+                {
+                  "label": "red"
+                }
+              ],
+              "answer": 1,
+              "hint": "You know these colours!"
+            },
+            {
+              "id": "k-yellow",
+              "ask": "Which colour is this?",
+              "askBn": "এটি কোন রং?",
+              "image": "colour-yellow",
+              "options": [
+                {
+                  "label": "yellow"
+                },
+                {
+                  "label": "green"
+                },
+                {
+                  "label": "blue"
+                }
+              ],
+              "answer": 0,
+              "hint": "You know these colours!"
+            },
+            {
+              "id": "k-indigo",
+              "ask": "Which colour is this?",
+              "askBn": "এটি কোন রং?",
+              "image": "colour-indigo",
+              "options": [
+                {
+                  "label": "indigo"
+                },
+                {
+                  "label": "red"
+                },
+                {
+                  "label": "yellow"
+                }
+              ],
+              "answer": 0,
+              "hint": "You know these colours!"
+            },
+            {
+              "id": "k-orange",
+              "ask": "Which colour is this?",
+              "askBn": "এটি কোন রং?",
+              "image": "colour-orange",
+              "options": [
+                {
+                  "label": "orange"
+                },
+                {
+                  "label": "blue"
+                },
+                {
+                  "label": "indigo"
+                }
+              ],
+              "answer": 0,
+              "hint": "You know these colours!"
+            },
+            {
+              "id": "k-red",
+              "ask": "Which colour is this?",
+              "askBn": "এটি কোন রং?",
+              "image": "colour-red",
+              "options": [
+                {
+                  "label": "yellow"
+                },
+                {
+                  "label": "orange"
+                },
+                {
+                  "label": "red"
+                }
+              ],
+              "answer": 2,
+              "hint": "You know these colours!"
+            }
+          ]
+        },
+        {
+          "id": "u7l2-game2",
+          "type": "game",
+          "kind": "order-the-lines",
+          "bookActivity": "A",
+          "title": "Finish the rhyme",
+          "titleBn": "ছড়াটি শেষ করো",
+          "rounds": [
+            {
+              "id": "m1",
+              "ask": "Red, ___ and yellow,",
+              "askBn": "Red, ___ and yellow,",
+              "options": [
+                {
+                  "label": "orange"
+                },
+                {
+                  "label": "violet"
+                },
+                {
+                  "label": "blue"
+                }
+              ],
+              "answer": 0,
+              "hint": "Red, ... and yellow."
+            },
+            {
+              "id": "m2",
+              "ask": "Green and ___ ,",
+              "askBn": "Green and ___ ,",
+              "options": [
+                {
+                  "label": "red"
+                },
+                {
+                  "label": "blue"
+                },
+                {
+                  "label": "orange"
+                }
+              ],
+              "answer": 1,
+              "hint": "Green and ... ."
+            },
+            {
+              "id": "m3",
+              "ask": "Violet, ___ too!",
+              "askBn": "Violet, ___ too!",
+              "options": [
+                {
+                  "label": "yellow"
+                },
+                {
+                  "label": "green"
+                },
+                {
+                  "label": "indigo"
+                }
+              ],
+              "answer": 2,
+              "hint": "Violet, ... too!"
+            },
+            {
+              "id": "m4",
+              "ask": "Seven colours make a ___ ?",
+              "askBn": "Seven colours make a ___ ?",
+              "options": [
+                {
+                  "label": "rainbow"
+                },
+                {
+                  "label": "raindrop"
+                },
+                {
+                  "label": "sunlight"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look up after the rain.",
+              "tests": "rainbow"
+            }
+          ]
+        },
+        {
+          "id": "u7l2-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "rainbow",
+              "options": [
+                {
+                  "label": "balloon"
+                },
+                {
+                  "label": "kite"
+                },
+                {
+                  "label": "rainbow"
+                }
+              ],
+              "answer": 2,
+              "explain": "rainbow = রংধনু",
+              "tests": "rainbow"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "sunlight",
+              "options": [
+                {
+                  "label": "sunlight"
+                },
+                {
+                  "label": "raindrops"
+                },
+                {
+                  "label": "rainbow"
+                }
+              ],
+              "answer": 0,
+              "tests": "sunlight"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "Seven colours make a ___ .",
+              "askBn": "Seven colours make a ___ .",
+              "options": [
+                {
+                  "label": "rainbow"
+                },
+                {
+                  "label": "carrot"
+                },
+                {
+                  "label": "parrot"
+                }
+              ],
+              "answer": 0,
+              "explain": "Seven colours make a rainbow.",
+              "tests": "rainbow"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "A rainbow has seven colours.",
+              "askBn": "রংধনুতে সাতটি রং আছে।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "The rhyme says: Seven colours make a rainbow.",
+              "tests": "rainbow"
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "Raindrops and ___ make the colours look so bright!",
+              "askBn": "Raindrops and ___ make the colours look so bright!",
+              "options": [
+                {
+                  "label": "rainbows"
+                },
+                {
+                  "label": "sunlight"
+                },
+                {
+                  "label": "shadows"
+                }
+              ],
+              "answer": 1,
+              "explain": "Raindrops and sunlight make the colours bright.",
+              "tests": "sunlight"
+            }
+          ]
+        },
+        {
+          "id": "u7l2-done",
+          "type": "done",
+          "title": "Well done!",
+          "titleBn": "খুব ভালো!",
+          "say": "You can say the rainbow rhyme!",
+          "sayBn": "তুমি রংধনুর ছড়াটি বলতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "u7l3",
+      "unitId": "u7",
+      "number": 3,
+      "title": "Shapes and Sizes",
+      "titleBn": "আকার ও মাপ",
+      "shape": "category",
+      "bookPages": [
+        67,
+        68
+      ],
+      "objective": "Name a circle, a square, a triangle and a rectangle.",
+      "objectiveBn": "বৃত্ত, বর্গ, ত্রিভুজ আর আয়তক্ষেত্রের নাম বলা।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "sh-circle",
+          "word": "circle",
+          "bangla": "বৃত্ত",
+          "banglaPronunciation": "সার্কল",
+          "banglaSource": "enrichment",
+          "bookPage": 67,
+          "category": "shape",
+          "image": "shape-circle"
+        },
+        {
+          "id": "sh-square",
+          "word": "square",
+          "bangla": "বর্গ",
+          "banglaPronunciation": "স্কয়ার",
+          "banglaSource": "enrichment",
+          "bookPage": 67,
+          "category": "shape",
+          "image": "shape-square"
+        },
+        {
+          "id": "sh-triangle",
+          "word": "triangle",
+          "bangla": "ত্রিভুজ",
+          "banglaPronunciation": "ট্রায়াঙ্গল",
+          "banglaSource": "enrichment",
+          "bookPage": 67,
+          "category": "shape",
+          "image": "shape-triangle"
+        },
+        {
+          "id": "sh-rectangle",
+          "word": "rectangle",
+          "bangla": "আয়তক্ষেত্র",
+          "banglaPronunciation": "রেক্টাঙ্গল",
+          "banglaSource": "enrichment",
+          "bookPage": 67,
+          "category": "shape",
+          "image": "shape-rectangle"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u7l3-intro",
+          "type": "intro",
+          "title": "Shapes",
+          "titleBn": "আকার",
+          "say": "Look around the room. What shapes can you see?",
+          "sayBn": "ঘরের চারদিকে তাকাও। কী কী আকার দেখতে পাও?",
+          "illustration": "grand-clock"
+        },
+        {
+          "id": "u7l3-words",
+          "type": "vocab",
+          "bookActivity": "C",
+          "title": "Look, listen and say",
+          "titleBn": "দেখো, শোনো আর বলো",
+          "items": [
+            "sh-circle",
+            "sh-square",
+            "sh-triangle",
+            "sh-rectangle"
+          ]
+        },
+        {
+          "id": "u7l3-trace",
+          "type": "command",
+          "bookActivity": "C",
+          "source": "textbook",
+          "title": "Trace the shapes in the air",
+          "titleBn": "বাতাসে আকারগুলো আঁকো",
+          "commands": [
+            {
+              "text": "Trace a circle in the air.",
+              "textBn": "বাতাসে একটি বৃত্ত আঁকো।",
+              "illustration": "shape-circle"
+            },
+            {
+              "text": "Trace a square in the air.",
+              "textBn": "বাতাসে একটি বর্গ আঁকো।",
+              "illustration": "shape-square"
+            },
+            {
+              "text": "Trace a triangle in the air.",
+              "textBn": "বাতাসে একটি ত্রিভুজ আঁকো।",
+              "illustration": "shape-triangle"
+            },
+            {
+              "text": "Trace a rectangle in the air.",
+              "textBn": "বাতাসে একটি আয়তক্ষেত্র আঁকো।",
+              "illustration": "shape-rectangle"
+            }
+          ]
+        },
+        {
+          "id": "u7l3-clock",
+          "type": "command",
+          "bookActivity": "B",
+          "source": "textbook",
+          "title": "The grand clock",
+          "titleBn": "বিশাল ঘড়ি",
+          "commands": [
+            {
+              "text": "Draw the grand clock and colour it.",
+              "textBn": "বিশাল ঘড়িটি এঁকে রং করো।",
+              "illustration": "grand-clock"
+            }
+          ]
+        },
+        {
+          "id": "u7l3-speak",
+          "type": "speak",
+          "bookActivity": "F",
+          "title": "Shapes in my classroom",
+          "titleBn": "আমার শ্রেণিকক্ষের আকার",
+          "prompt": "Say a shape you can see in your classroom.",
+          "promptBn": "শ্রেণিকক্ষে দেখা একটি আকারের নাম বলো।",
+          "modelAnswer": "I see a rectangle."
+        },
+        {
+          "id": "u7l3-game1",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "E",
+          "title": "What shape is it?",
+          "titleBn": "এটি কোন আকার?",
+          "rounds": [
+            {
+              "id": "r-sh-circle",
+              "ask": "What shape is this?",
+              "askBn": "এটি কোন আকার?",
+              "image": "shape-circle",
+              "options": [
+                {
+                  "label": "triangle"
+                },
+                {
+                  "label": "rectangle"
+                },
+                {
+                  "label": "circle"
+                }
+              ],
+              "answer": 2,
+              "hint": "Count the sides. Is it round?",
+              "tests": "sh-circle"
+            },
+            {
+              "id": "r-sh-square",
+              "ask": "What shape is this?",
+              "askBn": "এটি কোন আকার?",
+              "image": "shape-square",
+              "options": [
+                {
+                  "label": "circle"
+                },
+                {
+                  "label": "rectangle"
+                },
+                {
+                  "label": "square"
+                }
+              ],
+              "answer": 2,
+              "hint": "Count the sides. Is it round?",
+              "tests": "sh-square"
+            },
+            {
+              "id": "r-sh-triangle",
+              "ask": "What shape is this?",
+              "askBn": "এটি কোন আকার?",
+              "image": "shape-triangle",
+              "options": [
+                {
+                  "label": "circle"
+                },
+                {
+                  "label": "rectangle"
+                },
+                {
+                  "label": "triangle"
+                }
+              ],
+              "answer": 2,
+              "hint": "Count the sides. Is it round?",
+              "tests": "sh-triangle"
+            },
+            {
+              "id": "r-sh-rectangle",
+              "ask": "What shape is this?",
+              "askBn": "এটি কোন আকার?",
+              "image": "shape-rectangle",
+              "options": [
+                {
+                  "label": "rectangle"
+                },
+                {
+                  "label": "circle"
+                },
+                {
+                  "label": "triangle"
+                }
+              ],
+              "answer": 0,
+              "hint": "Count the sides. Is it round?",
+              "tests": "sh-rectangle"
+            }
+          ]
+        },
+        {
+          "id": "u7l3-game2",
+          "type": "game",
+          "kind": "match-pairs",
+          "bookActivity": "E",
+          "title": "Read and match",
+          "titleBn": "পড়ো আর মেলাও",
+          "rounds": [
+            {
+              "id": "m-circle",
+              "ask": "Find the circle.",
+              "askBn": "circle খুঁজে বের করো।",
+              "options": [
+                {
+                  "image": "shape-circle"
+                },
+                {
+                  "image": "shape-triangle"
+                },
+                {
+                  "image": "shape-rectangle"
+                }
+              ],
+              "answer": 0,
+              "hint": "Read the word. Look at each shape.",
+              "tests": "sh-circle"
+            },
+            {
+              "id": "m-square",
+              "ask": "Find the square.",
+              "askBn": "square খুঁজে বের করো।",
+              "options": [
+                {
+                  "image": "shape-triangle"
+                },
+                {
+                  "image": "shape-square"
+                },
+                {
+                  "image": "shape-circle"
+                }
+              ],
+              "answer": 1,
+              "hint": "Read the word. Look at each shape.",
+              "tests": "sh-square"
+            },
+            {
+              "id": "m-triangle",
+              "ask": "Find the triangle.",
+              "askBn": "triangle খুঁজে বের করো।",
+              "options": [
+                {
+                  "image": "shape-circle"
+                },
+                {
+                  "image": "shape-triangle"
+                },
+                {
+                  "image": "shape-rectangle"
+                }
+              ],
+              "answer": 1,
+              "hint": "Read the word. Look at each shape.",
+              "tests": "sh-triangle"
+            },
+            {
+              "id": "m-rectangle",
+              "ask": "Find the rectangle.",
+              "askBn": "rectangle খুঁজে বের করো।",
+              "options": [
+                {
+                  "image": "shape-circle"
+                },
+                {
+                  "image": "shape-square"
+                },
+                {
+                  "image": "shape-rectangle"
+                }
+              ],
+              "answer": 2,
+              "hint": "Read the word. Look at each shape.",
+              "tests": "sh-rectangle"
+            }
+          ]
+        },
+        {
+          "id": "u7l3-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "What shape is this?",
+              "askBn": "এটি কোন আকার?",
+              "image": "shape-triangle",
+              "options": [
+                {
+                  "label": "rectangle"
+                },
+                {
+                  "label": "triangle"
+                },
+                {
+                  "label": "square"
+                }
+              ],
+              "answer": 1,
+              "explain": "triangle = ত্রিভুজ",
+              "tests": "sh-triangle"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which shape did you hear?",
+              "askBn": "শোনো। কোন আকারটি শুনলে?",
+              "speak": "rectangle",
+              "options": [
+                {
+                  "label": "rectangle"
+                },
+                {
+                  "label": "square"
+                },
+                {
+                  "label": "circle"
+                }
+              ],
+              "answer": 0,
+              "tests": "sh-rectangle"
+            },
+            {
+              "id": "q3",
+              "type": "tap-word",
+              "ask": "Which shape is round?",
+              "askBn": "কোন আকারটি গোল?",
+              "options": [
+                {
+                  "label": "triangle"
+                },
+                {
+                  "label": "square"
+                },
+                {
+                  "label": "circle"
+                }
+              ],
+              "answer": 2,
+              "explain": "A circle is round.",
+              "tests": "sh-circle"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "A triangle has three sides.",
+              "askBn": "ত্রিভুজের তিনটি বাহু থাকে।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "A triangle has three sides.",
+              "tests": "sh-triangle"
+            },
+            {
+              "id": "q5",
+              "type": "tap-picture",
+              "ask": "What shape is this?",
+              "askBn": "এটি কোন আকার?",
+              "image": "shape-square",
+              "options": [
+                {
+                  "label": "square"
+                },
+                {
+                  "label": "rectangle"
+                },
+                {
+                  "label": "triangle"
+                }
+              ],
+              "answer": 0,
+              "explain": "square = বর্গ",
+              "tests": "sh-square"
+            }
+          ]
+        },
+        {
+          "id": "u7l3-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You know four shapes now!",
+          "sayBn": "তুমি এখন চারটি আকার চেনো!"
+        }
+      ]
+    },
+    {
+      "id": "u7l4",
+      "unitId": "u7",
+      "number": 4,
+      "title": "More About Shapes",
+      "titleBn": "আকার নিয়ে আরও",
+      "shape": "rhyme",
+      "bookPages": [
+        69
+      ],
+      "objective": "Say what shapes Mr. Shape is made of and count them.",
+      "objectiveBn": "মিস্টার শেপ কোন কোন আকার দিয়ে তৈরি তা বলা ও গোনা।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "part-face",
+          "word": "face",
+          "bangla": "মুখ",
+          "banglaPronunciation": "ফেইস",
+          "banglaSource": "enrichment",
+          "bookPage": 69,
+          "category": "body",
+          "image": "part-face",
+          "example": "My eyes are round and so is my face,",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "part-body",
+          "word": "body",
+          "bangla": "শরীর",
+          "banglaPronunciation": "বডি",
+          "banglaSource": "enrichment",
+          "bookPage": 69,
+          "category": "body",
+          "image": "part-body",
+          "example": "My body is square if you haven't noticed, in case.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "part-arms",
+          "word": "arms",
+          "bangla": "বাহু",
+          "banglaPronunciation": "আর্মস",
+          "banglaSource": "enrichment",
+          "bookPage": 69,
+          "category": "body",
+          "image": "part-arms",
+          "example": "My arms are rectangles and so are my legs.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "part-legs",
+          "word": "legs",
+          "bangla": "পা",
+          "banglaPronunciation": "লেগস",
+          "banglaSource": "enrichment",
+          "bookPage": 69,
+          "category": "body",
+          "image": "part-legs",
+          "example": "My arms are rectangles and so are my legs.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "part-hands",
+          "word": "hands",
+          "bangla": "হাতের পাতা",
+          "banglaPronunciation": "হ্যান্ডস",
+          "banglaSource": "enrichment",
+          "bookPage": 69,
+          "category": "body",
+          "image": "part-hands",
+          "example": "My hands are circles and my feet are triangles, you see.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "part-feet",
+          "word": "feet",
+          "bangla": "পায়ের পাতা",
+          "banglaPronunciation": "ফিট",
+          "banglaSource": "enrichment",
+          "bookPage": 69,
+          "category": "body",
+          "image": "part-feet",
+          "example": "My hands are circles and my feet are triangles, you see.",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u7l4-intro",
+          "type": "intro",
+          "title": "Meet Mr. Shape",
+          "titleBn": "মিস্টার শেপের সঙ্গে দেখা",
+          "say": "Mr. Shape is made of shapes. Can you see them?",
+          "sayBn": "মিস্টার শেপ কয়েকটি আকার দিয়ে তৈরি। তুমি দেখতে পাও?",
+          "illustration": "mr-shape"
+        },
+        {
+          "id": "u7l4-words1",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Mr. Shape's parts 1",
+          "titleBn": "মিস্টার শেপের অংশ ১",
+          "items": [
+            "part-face",
+            "part-body",
+            "part-arms"
+          ]
+        },
+        {
+          "id": "u7l4-words2",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Mr. Shape's parts 2",
+          "titleBn": "মিস্টার শেপের অংশ ২",
+          "items": [
+            "part-legs",
+            "part-hands",
+            "part-feet"
+          ]
+        },
+        {
+          "id": "u7l4-rhyme",
+          "type": "rhyme",
+          "bookActivity": "A",
+          "source": "textbook",
+          "title": "Mr. Shape",
+          "titleBn": "মিস্টার শেপ",
+          "verses": [
+            [
+              "I am Mr. Shape, look at me.",
+              "I have circles, squares, triangles and rectangles",
+              "As many as there could be.",
+              "My eyes are round and so is my face,",
+              "My body is square if you haven't noticed, in case.",
+              "My arms are rectangles and so are my legs.",
+              "My hands are circles and my feet are triangles, you see."
+            ]
+          ]
+        },
+        {
+          "id": "u7l4-game1",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "A",
+          "title": "Which part?",
+          "titleBn": "কোন অংশ?",
+          "rounds": [
+            {
+              "id": "r-part-face",
+              "ask": "Which part is coloured?",
+              "askBn": "কোন অংশটি রং করা?",
+              "image": "part-face",
+              "options": [
+                {
+                  "label": "face"
+                },
+                {
+                  "label": "body"
+                },
+                {
+                  "label": "legs"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at Mr. Shape.",
+              "tests": "part-face"
+            },
+            {
+              "id": "r-part-body",
+              "ask": "Which part is coloured?",
+              "askBn": "কোন অংশটি রং করা?",
+              "image": "part-body",
+              "options": [
+                {
+                  "label": "hands"
+                },
+                {
+                  "label": "body"
+                },
+                {
+                  "label": "arms"
+                }
+              ],
+              "answer": 1,
+              "hint": "Look at Mr. Shape.",
+              "tests": "part-body"
+            },
+            {
+              "id": "r-part-arms",
+              "ask": "Which part is coloured?",
+              "askBn": "কোন অংশটি রং করা?",
+              "image": "part-arms",
+              "options": [
+                {
+                  "label": "body"
+                },
+                {
+                  "label": "legs"
+                },
+                {
+                  "label": "arms"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at Mr. Shape.",
+              "tests": "part-arms"
+            },
+            {
+              "id": "r-part-legs",
+              "ask": "Which part is coloured?",
+              "askBn": "কোন অংশটি রং করা?",
+              "image": "part-legs",
+              "options": [
+                {
+                  "label": "feet"
+                },
+                {
+                  "label": "legs"
+                },
+                {
+                  "label": "arms"
+                }
+              ],
+              "answer": 1,
+              "hint": "Look at Mr. Shape.",
+              "tests": "part-legs"
+            },
+            {
+              "id": "r-part-hands",
+              "ask": "Which part is coloured?",
+              "askBn": "কোন অংশটি রং করা?",
+              "image": "part-hands",
+              "options": [
+                {
+                  "label": "feet"
+                },
+                {
+                  "label": "arms"
+                },
+                {
+                  "label": "hands"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at Mr. Shape.",
+              "tests": "part-hands"
+            },
+            {
+              "id": "r-part-feet",
+              "ask": "Which part is coloured?",
+              "askBn": "কোন অংশটি রং করা?",
+              "image": "part-feet",
+              "options": [
+                {
+                  "label": "body"
+                },
+                {
+                  "label": "feet"
+                },
+                {
+                  "label": "arms"
+                }
+              ],
+              "answer": 1,
+              "hint": "Look at Mr. Shape.",
+              "tests": "part-feet"
+            }
+          ]
+        },
+        {
+          "id": "u7l4-game2",
+          "type": "game",
+          "kind": "choose-the-reply",
+          "bookActivity": "A",
+          "title": "What shape is it?",
+          "titleBn": "কোন আকার?",
+          "rounds": [
+            {
+              "id": "sp-face",
+              "ask": "What shape is Mr. Shape's face?",
+              "askBn": "মিস্টার শেপের মুখ কোন আকারের?",
+              "image": "part-face",
+              "options": [
+                {
+                  "label": "a circle"
+                },
+                {
+                  "label": "a rectangle"
+                },
+                {
+                  "label": "a square"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the coloured part.",
+              "tests": "part-face"
+            },
+            {
+              "id": "sp-body",
+              "ask": "What shape is Mr. Shape's body?",
+              "askBn": "মিস্টার শেপের শরীর কোন আকারের?",
+              "image": "part-body",
+              "options": [
+                {
+                  "label": "a rectangle"
+                },
+                {
+                  "label": "a triangle"
+                },
+                {
+                  "label": "a square"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the coloured part.",
+              "tests": "part-body"
+            },
+            {
+              "id": "sp-arms",
+              "ask": "What shape are Mr. Shape's arms?",
+              "askBn": "মিস্টার শেপের বাহু কোন আকারের?",
+              "image": "part-arms",
+              "options": [
+                {
+                  "label": "rectangles"
+                },
+                {
+                  "label": "triangles"
+                },
+                {
+                  "label": "squares"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the coloured part.",
+              "tests": "part-arms"
+            },
+            {
+              "id": "sp-legs",
+              "ask": "What shape are Mr. Shape's legs?",
+              "askBn": "মিস্টার শেপের পা কোন আকারের?",
+              "image": "part-legs",
+              "options": [
+                {
+                  "label": "rectangles"
+                },
+                {
+                  "label": "circles"
+                },
+                {
+                  "label": "squares"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the coloured part.",
+              "tests": "part-legs"
+            },
+            {
+              "id": "sp-hands",
+              "ask": "What shape are Mr. Shape's hands?",
+              "askBn": "মিস্টার শেপের হাতের পাতা কোন আকারের?",
+              "image": "part-hands",
+              "options": [
+                {
+                  "label": "squares"
+                },
+                {
+                  "label": "rectangles"
+                },
+                {
+                  "label": "circles"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the coloured part.",
+              "tests": "part-hands"
+            },
+            {
+              "id": "sp-feet",
+              "ask": "What shape are Mr. Shape's feet?",
+              "askBn": "মিস্টার শেপের পায়ের পাতা কোন আকারের?",
+              "image": "part-feet",
+              "options": [
+                {
+                  "label": "circles"
+                },
+                {
+                  "label": "squares"
+                },
+                {
+                  "label": "triangles"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the coloured part.",
+              "tests": "part-feet"
+            }
+          ]
+        },
+        {
+          "id": "u7l4-game3",
+          "type": "game",
+          "kind": "count-objects",
+          "bookActivity": "B",
+          "title": "Count the shapes",
+          "titleBn": "আকারগুলো গোনো",
+          "rounds": [
+            {
+              "id": "n-circles",
+              "ask": "How many circles does Mr. Shape have?",
+              "askBn": "মিস্টার শেপের কয়টি বৃত্ত আছে?",
+              "image": "mr-shape",
+              "options": [
+                {
+                  "label": "6"
+                },
+                {
+                  "label": "1"
+                },
+                {
+                  "label": "5"
+                }
+              ],
+              "answer": 2,
+              "hint": "Count them one by one. Look at the eyes and the nose too!"
+            },
+            {
+              "id": "n-squares",
+              "ask": "How many squares does Mr. Shape have?",
+              "askBn": "মিস্টার শেপের কয়টি বর্গ আছে?",
+              "image": "mr-shape",
+              "options": [
+                {
+                  "label": "6"
+                },
+                {
+                  "label": "1"
+                },
+                {
+                  "label": "3"
+                }
+              ],
+              "answer": 1,
+              "hint": "Count them one by one. Look at the eyes and the nose too!"
+            },
+            {
+              "id": "n-triangles",
+              "ask": "How many triangles does Mr. Shape have?",
+              "askBn": "মিস্টার শেপের কয়টি ত্রিভুজ আছে?",
+              "image": "mr-shape",
+              "options": [
+                {
+                  "label": "4"
+                },
+                {
+                  "label": "1"
+                },
+                {
+                  "label": "3"
+                }
+              ],
+              "answer": 2,
+              "hint": "Count them one by one. Look at the eyes and the nose too!"
+            },
+            {
+              "id": "n-rectangles",
+              "ask": "How many rectangles does Mr. Shape have?",
+              "askBn": "মিস্টার শেপের কয়টি আয়তক্ষেত্র আছে?",
+              "image": "mr-shape",
+              "options": [
+                {
+                  "label": "5"
+                },
+                {
+                  "label": "6"
+                },
+                {
+                  "label": "4"
+                }
+              ],
+              "answer": 2,
+              "hint": "Count them one by one. Look at the eyes and the nose too!"
+            }
+          ]
+        },
+        {
+          "id": "u7l4-colour",
+          "type": "command",
+          "bookActivity": "C",
+          "source": "textbook",
+          "title": "Colour and make",
+          "titleBn": "রং করো আর বানাও",
+          "commands": [
+            {
+              "text": "Colour Mr. Shape.",
+              "textBn": "মিস্টার শেপকে রং করো।",
+              "illustration": "mr-shape"
+            },
+            {
+              "text": "Make the grand clock with paper. Colour it and put it on the classroom wall.",
+              "textBn": "কাগজ দিয়ে বিশাল ঘড়ি বানাও। রং করে শ্রেণিকক্ষের দেয়ালে লাগাও।",
+              "illustration": "grand-clock"
+            }
+          ]
+        },
+        {
+          "id": "u7l4-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "Which part is coloured?",
+              "askBn": "কোন অংশটি রং করা?",
+              "image": "part-arms",
+              "options": [
+                {
+                  "label": "feet"
+                },
+                {
+                  "label": "arms"
+                },
+                {
+                  "label": "legs"
+                }
+              ],
+              "answer": 1,
+              "explain": "arms = বাহু",
+              "tests": "part-arms"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "feet",
+              "options": [
+                {
+                  "label": "feet"
+                },
+                {
+                  "label": "legs"
+                },
+                {
+                  "label": "face"
+                }
+              ],
+              "answer": 0,
+              "tests": "part-feet"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "My body is ___ .",
+              "askBn": "My body is ___ .",
+              "options": [
+                {
+                  "label": "square"
+                },
+                {
+                  "label": "short"
+                },
+                {
+                  "label": "round"
+                }
+              ],
+              "answer": 0,
+              "explain": "My body is square.",
+              "tests": "part-body"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "Mr. Shape's feet are triangles.",
+              "askBn": "মিস্টার শেপের পা-এর পাতা ত্রিভুজ।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "The rhyme says: my feet are triangles.",
+              "tests": "part-feet"
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "What shape are Mr. Shape's hands?",
+              "askBn": "মিস্টার শেপের হাতের পাতা কোন আকারের?",
+              "options": [
+                {
+                  "label": "squares"
+                },
+                {
+                  "label": "triangles"
+                },
+                {
+                  "label": "circles"
+                }
+              ],
+              "answer": 2,
+              "explain": "My hands are circles.",
+              "tests": "part-hands"
+            }
+          ]
+        },
+        {
+          "id": "u7l4-done",
+          "type": "done",
+          "title": "Well done!",
+          "titleBn": "খুব ভালো!",
+          "say": "You know Mr. Shape's shapes!",
+          "sayBn": "তুমি মিস্টার শেপের আকারগুলো জানো!"
+        }
+      ]
+    },
+    {
+      "id": "u7l5",
+      "unitId": "u7",
+      "number": 5,
+      "title": "Sizes",
+      "titleBn": "আকারে বড়-ছোট",
+      "shape": "category",
+      "bookPages": [
+        70,
+        71
+      ],
+      "objective": "Say whether things are tall or short, big or small, fat or thin.",
+      "objectiveBn": "কোনটি লম্বা না খাটো, বড় না ছোট, মোটা না রোগা তা বলা।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "sz-tall",
+          "word": "tall",
+          "bangla": "লম্বা",
+          "banglaPronunciation": "টল",
+          "banglaSource": "enrichment",
+          "bookPage": 70,
+          "category": "expression",
+          "image": "size-tall",
+          "example": "a tall man",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "sz-short",
+          "word": "short",
+          "bangla": "খাটো",
+          "banglaPronunciation": "শর্ট",
+          "banglaSource": "enrichment",
+          "bookPage": 70,
+          "category": "expression",
+          "image": "size-short",
+          "example": "a short man",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "sz-big",
+          "word": "big",
+          "bangla": "বড়",
+          "banglaPronunciation": "বিগ",
+          "banglaSource": "enrichment",
+          "bookPage": 70,
+          "category": "expression",
+          "image": "size-big",
+          "example": "It's a big tree.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "sz-small",
+          "word": "small",
+          "bangla": "ছোট",
+          "banglaPronunciation": "স্মল",
+          "banglaSource": "enrichment",
+          "bookPage": 70,
+          "category": "expression",
+          "image": "size-small",
+          "example": "It's small.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "sz-fat",
+          "word": "fat",
+          "bangla": "মোটা",
+          "banglaPronunciation": "ফ্যাট",
+          "banglaSource": "enrichment",
+          "bookPage": 70,
+          "category": "expression",
+          "image": "size-fat",
+          "example": "It's a fat cow.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "sz-thin",
+          "word": "thin",
+          "bangla": "রোগা",
+          "banglaPronunciation": "থিন",
+          "banglaSource": "enrichment",
+          "bookPage": 70,
+          "category": "expression",
+          "image": "size-thin",
+          "example": "It's a thin cow.",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u7l5-intro",
+          "type": "intro",
+          "title": "Big and small",
+          "titleBn": "বড় আর ছোট",
+          "say": "Some things are big. Some are small. Let's look!",
+          "sayBn": "কিছু জিনিস বড়। কিছু ছোট। চলো দেখি!",
+          "illustration": "size-big"
+        },
+        {
+          "id": "u7l5-words1",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Look, listen and say 1",
+          "titleBn": "দেখো, শোনো আর বলো ১",
+          "items": [
+            "sz-tall",
+            "sz-short",
+            "sz-big"
+          ]
+        },
+        {
+          "id": "u7l5-words2",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Look, listen and say 2",
+          "titleBn": "দেখো, শোনো আর বলো ২",
+          "items": [
+            "sz-small",
+            "sz-fat",
+            "sz-thin"
+          ]
+        },
+        {
+          "id": "u7l5-speak1",
+          "type": "speak",
+          "bookActivity": "B",
+          "title": "Point and say",
+          "titleBn": "দেখাও আর বলো",
+          "prompt": "Point to the elephant. Say: It's big.",
+          "promptBn": "হাতিটিকে দেখাও। বলো: It's big.",
+          "modelAnswer": "It's big."
+        },
+        {
+          "id": "u7l5-game1",
+          "type": "game",
+          "kind": "listen-and-choose",
+          "bookActivity": "C",
+          "title": "Listen and circle",
+          "titleBn": "শোনো আর বেছে নাও",
+          "rounds": [
+            {
+              "id": "l-tall",
+              "ask": "Listen. Circle the picture.",
+              "askBn": "শোনো। ছবিটি বেছে নাও।",
+              "speak": "a tall man",
+              "options": [
+                {
+                  "label": "a short man",
+                  "image": "man-short"
+                },
+                {
+                  "label": "a tall man",
+                  "image": "man-tall"
+                }
+              ],
+              "answer": 1,
+              "hint": "Listen again. Which one is it?",
+              "tests": "sz-tall"
+            },
+            {
+              "id": "l-short",
+              "ask": "Listen. Circle the picture.",
+              "askBn": "শোনো। ছবিটি বেছে নাও।",
+              "speak": "a short man",
+              "options": [
+                {
+                  "label": "a tall man",
+                  "image": "man-tall"
+                },
+                {
+                  "label": "a short man",
+                  "image": "man-short"
+                }
+              ],
+              "answer": 1,
+              "hint": "Listen again. Which one is it?",
+              "tests": "sz-short"
+            },
+            {
+              "id": "l-big",
+              "ask": "Listen. Circle the picture.",
+              "askBn": "শোনো। ছবিটি বেছে নাও।",
+              "speak": "a big pot",
+              "options": [
+                {
+                  "label": "a big pot",
+                  "image": "pot-big"
+                },
+                {
+                  "label": "a small pot",
+                  "image": "pot-small"
+                }
+              ],
+              "answer": 0,
+              "hint": "Listen again. Which one is it?",
+              "tests": "sz-big"
+            },
+            {
+              "id": "l-small",
+              "ask": "Listen. Circle the picture.",
+              "askBn": "শোনো। ছবিটি বেছে নাও।",
+              "speak": "a small pot",
+              "options": [
+                {
+                  "label": "a big pot",
+                  "image": "pot-big"
+                },
+                {
+                  "label": "a small pot",
+                  "image": "pot-small"
+                }
+              ],
+              "answer": 1,
+              "hint": "Listen again. Which one is it?",
+              "tests": "sz-small"
+            },
+            {
+              "id": "l-fat",
+              "ask": "Listen. Circle the picture.",
+              "askBn": "শোনো। ছবিটি বেছে নাও।",
+              "speak": "a fat cow",
+              "options": [
+                {
+                  "label": "a thin cow",
+                  "image": "cow-thin"
+                },
+                {
+                  "label": "a fat cow",
+                  "image": "cow-fat"
+                }
+              ],
+              "answer": 1,
+              "hint": "Listen again. Which one is it?",
+              "tests": "sz-fat"
+            },
+            {
+              "id": "l-thin",
+              "ask": "Listen. Circle the picture.",
+              "askBn": "শোনো। ছবিটি বেছে নাও।",
+              "speak": "a thin cow",
+              "options": [
+                {
+                  "label": "a thin cow",
+                  "image": "cow-thin"
+                },
+                {
+                  "label": "a fat cow",
+                  "image": "cow-fat"
+                }
+              ],
+              "answer": 0,
+              "hint": "Listen again. Which one is it?",
+              "tests": "sz-thin"
+            }
+          ]
+        },
+        {
+          "id": "u7l5-talk",
+          "type": "dialogue",
+          "bookActivity": "D",
+          "title": "Talk about the picture",
+          "titleBn": "ছবি নিয়ে কথা বলো",
+          "source": "textbook",
+          "lines": [
+            {
+              "speaker": "Boy",
+              "text": "What is it?"
+            },
+            {
+              "speaker": "Girl",
+              "text": "Is it a cow?"
+            },
+            {
+              "speaker": "Boy",
+              "text": "Yes, it is! It's fat."
+            },
+            {
+              "speaker": "Girl",
+              "text": "Now, it's my turn. It's small."
+            }
+          ]
+        },
+        {
+          "id": "u7l5-speak2",
+          "type": "speak",
+          "bookActivity": "D",
+          "title": "Say it about a cow",
+          "titleBn": "গরুটি নিয়ে বলো",
+          "prompt": "Look at the thin cow. Say: It's a thin cow.",
+          "promptBn": "রোগা গরুটি দেখো। বলো: It's a thin cow.",
+          "modelAnswer": "It's a thin cow."
+        },
+        {
+          "id": "u7l5-game2",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "A",
+          "title": "What is it like?",
+          "titleBn": "এটি কেমন?",
+          "rounds": [
+            {
+              "id": "o-tall",
+              "ask": "What is it like?",
+              "askBn": "এটি কেমন?",
+              "image": "size-tall",
+              "options": [
+                {
+                  "label": "tall"
+                },
+                {
+                  "label": "short"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the picture.",
+              "tests": "sz-tall"
+            },
+            {
+              "id": "o-big",
+              "ask": "What is it like?",
+              "askBn": "এটি কেমন?",
+              "image": "size-big",
+              "options": [
+                {
+                  "label": "small"
+                },
+                {
+                  "label": "big"
+                }
+              ],
+              "answer": 1,
+              "hint": "Look at the picture.",
+              "tests": "sz-big"
+            },
+            {
+              "id": "o-fat",
+              "ask": "What is it like?",
+              "askBn": "এটি কেমন?",
+              "image": "size-fat",
+              "options": [
+                {
+                  "label": "thin"
+                },
+                {
+                  "label": "fat"
+                }
+              ],
+              "answer": 1,
+              "hint": "Look at the picture.",
+              "tests": "sz-fat"
+            },
+            {
+              "id": "o-short",
+              "ask": "What is it like?",
+              "askBn": "এটি কেমন?",
+              "image": "size-short",
+              "options": [
+                {
+                  "label": "short"
+                },
+                {
+                  "label": "tall"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the picture.",
+              "tests": "sz-short"
+            },
+            {
+              "id": "o-small",
+              "ask": "What is it like?",
+              "askBn": "এটি কেমন?",
+              "image": "size-small",
+              "options": [
+                {
+                  "label": "small"
+                },
+                {
+                  "label": "big"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the picture.",
+              "tests": "sz-small"
+            },
+            {
+              "id": "o-thin",
+              "ask": "What is it like?",
+              "askBn": "এটি কেমন?",
+              "image": "size-thin",
+              "options": [
+                {
+                  "label": "thin"
+                },
+                {
+                  "label": "fat"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the picture.",
+              "tests": "sz-thin"
+            }
+          ]
+        },
+        {
+          "id": "u7l5-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "What is it like?",
+              "askBn": "এটি কেমন?",
+              "image": "size-big",
+              "options": [
+                {
+                  "label": "thin"
+                },
+                {
+                  "label": "small"
+                },
+                {
+                  "label": "big"
+                }
+              ],
+              "answer": 2,
+              "explain": "An elephant is big.",
+              "tests": "sz-big"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "thin",
+              "options": [
+                {
+                  "label": "thin"
+                },
+                {
+                  "label": "tall"
+                },
+                {
+                  "label": "fat"
+                }
+              ],
+              "answer": 0,
+              "tests": "sz-thin"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "It's a ___ cow.",
+              "askBn": "It's a ___ cow.",
+              "options": [
+                {
+                  "label": "big"
+                },
+                {
+                  "label": "fat"
+                },
+                {
+                  "label": "tall"
+                }
+              ],
+              "answer": 1,
+              "explain": "The book says: It's a fat cow.",
+              "tests": "sz-fat"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "A short tree is tall.",
+              "askBn": "একটি খাটো গাছ লম্বা।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 1,
+              "explain": "A short tree is not tall.",
+              "tests": "sz-short"
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "Which word is the opposite of big?",
+              "askBn": "big-এর উল্টো শব্দ কোনটি?",
+              "options": [
+                {
+                  "label": "fat"
+                },
+                {
+                  "label": "tall"
+                },
+                {
+                  "label": "small"
+                }
+              ],
+              "answer": 2,
+              "explain": "big ↔ small",
+              "tests": "sz-small"
+            }
+          ]
+        },
+        {
+          "id": "u7l5-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You can say big, small, tall and short!",
+          "sayBn": "তুমি big, small, tall আর short বলতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "u7l6",
+      "unitId": "u7",
+      "number": 6,
+      "title": "Road Signs",
+      "titleBn": "রাস্তার চিহ্ন",
+      "shape": "category",
+      "bookPages": [
+        72,
+        73,
+        74
+      ],
+      "objective": "Know what the traffic lights say and recognise nine road signs.",
+      "objectiveBn": "ট্রাফিক বাতি কী বলে তা জানা আর নয়টি রাস্তার চিহ্ন চেনা।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "l-stop",
+          "word": "stop",
+          "bangla": "থামো",
+          "banglaPronunciation": "স্টপ",
+          "banglaSource": "enrichment",
+          "bookPage": 73,
+          "category": "sign",
+          "image": "light-red",
+          "example": "I say stop, and stop right away.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "l-wait",
+          "word": "wait",
+          "bangla": "অপেক্ষা করো",
+          "banglaPronunciation": "ওয়েট",
+          "banglaSource": "enrichment",
+          "bookPage": 73,
+          "category": "sign",
+          "image": "light-yellow",
+          "example": "I mean wait, till the light is green.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "l-go",
+          "word": "go",
+          "bangla": "যাও",
+          "banglaPronunciation": "গো",
+          "banglaSource": "enrichment",
+          "bookPage": 73,
+          "category": "sign",
+          "image": "light-green",
+          "example": "I say go, go right away.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "rs-signal",
+          "word": "Signal Ahead",
+          "bangla": "সামনে সিগন্যাল",
+          "banglaPronunciation": "সিগন্যাল অ্যাহেড",
+          "banglaSource": "enrichment",
+          "bookPage": 73,
+          "category": "sign",
+          "image": "road-signal-ahead"
+        },
+        {
+          "id": "rs-horn",
+          "word": "No horn",
+          "bangla": "হর্ন বাজানো নিষেধ",
+          "banglaPronunciation": "নো হর্ন",
+          "banglaSource": "enrichment",
+          "bookPage": 73,
+          "category": "sign",
+          "image": "road-no-horn"
+        },
+        {
+          "id": "rs-enter",
+          "word": "Do not enter",
+          "bangla": "প্রবেশ নিষেধ",
+          "banglaPronunciation": "ডু নট এন্টার",
+          "banglaSource": "enrichment",
+          "bookPage": 73,
+          "category": "sign",
+          "image": "road-do-not-enter"
+        },
+        {
+          "id": "rs-school",
+          "word": "School ahead",
+          "bangla": "সামনে স্কুল",
+          "banglaPronunciation": "স্কুল অ্যাহেড",
+          "banglaSource": "enrichment",
+          "bookPage": 73,
+          "category": "sign",
+          "image": "road-school-ahead"
+        },
+        {
+          "id": "rs-uturn",
+          "word": "U-Turn",
+          "bangla": "ইউ-টার্ন",
+          "banglaPronunciation": "ইউ-টার্ন",
+          "banglaSource": "enrichment",
+          "bookPage": 73,
+          "category": "sign",
+          "image": "road-u-turn"
+        },
+        {
+          "id": "rs-nouturn",
+          "word": "No U-Turn",
+          "bangla": "ইউ-টার্ন নিষেধ",
+          "banglaPronunciation": "নো ইউ-টার্ন",
+          "banglaSource": "enrichment",
+          "bookPage": 73,
+          "category": "sign",
+          "image": "road-no-u-turn"
+        },
+        {
+          "id": "rs-parking",
+          "word": "No parking",
+          "bangla": "পার্কিং নিষেধ",
+          "banglaPronunciation": "নো পার্কিং",
+          "banglaSource": "enrichment",
+          "bookPage": 73,
+          "category": "sign",
+          "image": "road-no-parking"
+        },
+        {
+          "id": "rs-turn",
+          "word": "Turn right / Turn left",
+          "bangla": "ডানে ঘোরো / বাঁয়ে ঘোরো",
+          "banglaPronunciation": "টার্ন রাইট / টার্ন লেফট",
+          "banglaSource": "enrichment",
+          "bookPage": 73,
+          "category": "sign",
+          "image": "road-turn"
+        },
+        {
+          "id": "rs-zebra",
+          "word": "Zebra crossing",
+          "bangla": "জেব্রা ক্রসিং",
+          "banglaPronunciation": "জেব্রা ক্রসিং",
+          "banglaSource": "enrichment",
+          "bookPage": 73,
+          "category": "sign",
+          "image": "road-zebra-crossing"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u7l6-intro",
+          "type": "intro",
+          "title": "Traffic lights",
+          "titleBn": "ট্রাফিক বাতি",
+          "say": "Traffic lights tell cars when to stop and go.",
+          "sayBn": "ট্রাফিক বাতি গাড়িকে কখন থামতে আর যেতে হবে বলে।",
+          "illustration": "traffic-light"
+        },
+        {
+          "id": "u7l6-lights",
+          "type": "vocab",
+          "bookActivity": "B",
+          "title": "What the lights say",
+          "titleBn": "বাতিগুলো কী বলে",
+          "items": [
+            "l-stop",
+            "l-wait",
+            "l-go"
+          ]
+        },
+        {
+          "id": "u7l6-rhyme",
+          "type": "rhyme",
+          "bookActivity": "A",
+          "source": "textbook",
+          "title": "Red light, red light",
+          "titleBn": "লাল বাতি, লাল বাতি",
+          "verses": [
+            [
+              "Red light, red light,",
+              "What do you say?",
+              "I say stop, and stop right away."
+            ],
+            [
+              "Yellow light, yellow light,",
+              "What do you mean?",
+              "I mean wait, till the light is green."
+            ],
+            [
+              "Green light, green light,",
+              "What do you say?",
+              "I say go, go right away."
+            ]
+          ]
+        },
+        {
+          "id": "u7l6-speak1",
+          "type": "speak",
+          "bookActivity": "B",
+          "title": "Say what the light says",
+          "titleBn": "বাতি কী বলে তা বলো",
+          "prompt": "Say: Red light says stop.",
+          "promptBn": "বলো: Red light says stop.",
+          "modelAnswer": "Red light says stop."
+        },
+        {
+          "id": "u7l6-game1",
+          "type": "game",
+          "kind": "choose-the-reply",
+          "bookActivity": "C",
+          "title": "Which light?",
+          "titleBn": "কোন বাতি?",
+          "rounds": [
+            {
+              "id": "c1",
+              "ask": "Which light tells a car to stop?",
+              "askBn": "কোন বাতি গাড়িকে থামতে বলে?",
+              "options": [
+                {
+                  "label": "green light",
+                  "image": "light-green"
+                },
+                {
+                  "label": "yellow light",
+                  "image": "light-yellow"
+                },
+                {
+                  "label": "red light",
+                  "image": "light-red"
+                }
+              ],
+              "answer": 2,
+              "hint": "Red, yellow, green: stop, wait, go.",
+              "tests": "l-stop"
+            },
+            {
+              "id": "c2",
+              "ask": "Which light tells a car to wait?",
+              "askBn": "কোন বাতি গাড়িকে অপেক্ষা করতে বলে?",
+              "options": [
+                {
+                  "label": "red light",
+                  "image": "light-red"
+                },
+                {
+                  "label": "yellow light",
+                  "image": "light-yellow"
+                },
+                {
+                  "label": "green light",
+                  "image": "light-green"
+                }
+              ],
+              "answer": 1,
+              "hint": "Red, yellow, green: stop, wait, go.",
+              "tests": "l-wait"
+            },
+            {
+              "id": "c3",
+              "ask": "Which light tells a car to go?",
+              "askBn": "কোন বাতি গাড়িকে যেতে বলে?",
+              "options": [
+                {
+                  "label": "yellow light",
+                  "image": "light-yellow"
+                },
+                {
+                  "label": "green light",
+                  "image": "light-green"
+                },
+                {
+                  "label": "red light",
+                  "image": "light-red"
+                }
+              ],
+              "answer": 1,
+              "hint": "Red, yellow, green: stop, wait, go.",
+              "tests": "l-go"
+            }
+          ]
+        },
+        {
+          "id": "u7l6-signs1",
+          "type": "vocab",
+          "bookActivity": "E",
+          "title": "Road signs 1",
+          "titleBn": "রাস্তার চিহ্ন ১",
+          "items": [
+            "rs-signal",
+            "rs-horn",
+            "rs-enter",
+            "rs-school",
+            "rs-uturn"
+          ]
+        },
+        {
+          "id": "u7l6-signs2",
+          "type": "vocab",
+          "bookActivity": "E",
+          "title": "Road signs 2",
+          "titleBn": "রাস্তার চিহ্ন ২",
+          "items": [
+            "rs-nouturn",
+            "rs-parking",
+            "rs-turn",
+            "rs-zebra"
+          ]
+        },
+        {
+          "id": "u7l6-game2",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "E",
+          "title": "Name the sign",
+          "titleBn": "চিহ্নটির নাম বলো",
+          "rounds": [
+            {
+              "id": "r-rs-signal",
+              "ask": "What does this sign say?",
+              "askBn": "এই চিহ্নে কী লেখা আছে?",
+              "image": "road-signal-ahead",
+              "options": [
+                {
+                  "label": "Do not enter"
+                },
+                {
+                  "label": "No parking"
+                },
+                {
+                  "label": "Signal Ahead"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the picture on the sign.",
+              "tests": "rs-signal"
+            },
+            {
+              "id": "r-rs-horn",
+              "ask": "What does this sign say?",
+              "askBn": "এই চিহ্নে কী লেখা আছে?",
+              "image": "road-no-horn",
+              "options": [
+                {
+                  "label": "Signal Ahead"
+                },
+                {
+                  "label": "School ahead"
+                },
+                {
+                  "label": "No horn"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the picture on the sign.",
+              "tests": "rs-horn"
+            },
+            {
+              "id": "r-rs-enter",
+              "ask": "What does this sign say?",
+              "askBn": "এই চিহ্নে কী লেখা আছে?",
+              "image": "road-do-not-enter",
+              "options": [
+                {
+                  "label": "Do not enter"
+                },
+                {
+                  "label": "School ahead"
+                },
+                {
+                  "label": "No U-Turn"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the picture on the sign.",
+              "tests": "rs-enter"
+            },
+            {
+              "id": "r-rs-school",
+              "ask": "What does this sign say?",
+              "askBn": "এই চিহ্নে কী লেখা আছে?",
+              "image": "road-school-ahead",
+              "options": [
+                {
+                  "label": "No parking"
+                },
+                {
+                  "label": "School ahead"
+                },
+                {
+                  "label": "No horn"
+                }
+              ],
+              "answer": 1,
+              "hint": "Look at the picture on the sign.",
+              "tests": "rs-school"
+            },
+            {
+              "id": "r-rs-uturn",
+              "ask": "What does this sign say?",
+              "askBn": "এই চিহ্নে কী লেখা আছে?",
+              "image": "road-u-turn",
+              "options": [
+                {
+                  "label": "Signal Ahead"
+                },
+                {
+                  "label": "U-Turn"
+                },
+                {
+                  "label": "Zebra crossing"
+                }
+              ],
+              "answer": 1,
+              "hint": "Look at the picture on the sign.",
+              "tests": "rs-uturn"
+            },
+            {
+              "id": "r-rs-parking",
+              "ask": "What does this sign say?",
+              "askBn": "এই চিহ্নে কী লেখা আছে?",
+              "image": "road-no-parking",
+              "options": [
+                {
+                  "label": "Do not enter"
+                },
+                {
+                  "label": "School ahead"
+                },
+                {
+                  "label": "No parking"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the picture on the sign.",
+              "tests": "rs-parking"
+            }
+          ]
+        },
+        {
+          "id": "u7l6-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "What does this sign say?",
+              "askBn": "এই চিহ্নে কী লেখা আছে?",
+              "image": "road-do-not-enter",
+              "options": [
+                {
+                  "label": "No horn"
+                },
+                {
+                  "label": "Do not enter"
+                },
+                {
+                  "label": "U-Turn"
+                }
+              ],
+              "answer": 1,
+              "tests": "rs-enter"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which sign did you hear?",
+              "askBn": "শোনো। কোন চিহ্নটি শুনলে?",
+              "speak": "Zebra crossing",
+              "options": [
+                {
+                  "label": "Zebra crossing"
+                },
+                {
+                  "label": "No horn"
+                },
+                {
+                  "label": "Turn right / Turn left"
+                }
+              ],
+              "answer": 0,
+              "tests": "rs-zebra"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "Red light says ___ .",
+              "askBn": "Red light says ___ .",
+              "options": [
+                {
+                  "label": "wait"
+                },
+                {
+                  "label": "go"
+                },
+                {
+                  "label": "stop"
+                }
+              ],
+              "answer": 2,
+              "explain": "Red light says stop.",
+              "tests": "l-stop"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "Yellow light says go.",
+              "askBn": "হলুদ বাতি বলে go।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 1,
+              "explain": "Yellow light says wait. Green light says go.",
+              "tests": "l-wait"
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "Which light tells a car to go?",
+              "askBn": "কোন বাতি গাড়িকে যেতে বলে?",
+              "options": [
+                {
+                  "label": "green light"
+                },
+                {
+                  "label": "yellow light"
+                },
+                {
+                  "label": "red light"
+                }
+              ],
+              "answer": 0,
+              "explain": "Green light says go.",
+              "tests": "l-go"
+            }
+          ]
+        },
+        {
+          "id": "u7l6-done",
+          "type": "done",
+          "title": "Well done!",
+          "titleBn": "খুব ভালো!",
+          "say": "You know the road signs and the lights!",
+          "sayBn": "তুমি রাস্তার চিহ্ন আর বাতিগুলো চেনো!"
+        }
+      ]
+    }
+  ]
+}

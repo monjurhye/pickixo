@@ -1,0 +1,284 @@
+{
+  "id": "shobdo-gothon",
+  "subject": "bangla",
+  "number": 3,
+  "title": "শব্দ গঠন",
+  "icon": "word",
+  "colour": "sky",
+  "lessons": [
+    {
+      "id": "shobdo-gothon-1",
+      "subject": "bangla",
+      "unit": "shobdo-gothon",
+      "number": 1,
+      "title": "দুই বর্ণের শব্দ",
+      "source": {
+        "book": "আমার বই — প্রাক-প্রাথমিক শিক্ষা (NCTB)",
+        "edition": "2018",
+        "bookPages": [
+          76,
+          78,
+          79
+        ],
+        "pdfPages": [
+          83,
+          85,
+          86
+        ]
+      },
+      "objectives": [
+        {
+          "code": "৪.১.৫",
+          "band": "5+",
+          "text": "দুই বা তিন বর্ণের ছোট ছোট শব্দ শুনে বলতে পারবে।"
+        },
+        {
+          "code": "৪.১.১১",
+          "band": "5+",
+          "text": "বর্ণাংশ ও বর্ণ লিখতে পারবে।"
+        }
+      ],
+      "items": [
+        {
+          "id": "wrd-বল",
+          "glyph": "বল",
+          "kind": "word",
+          "words": [
+            {
+              "text": "বল",
+              "image": "বল",
+              "initial": true,
+              "bookPage": 76
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "wrd-বই",
+          "glyph": "বই",
+          "kind": "word",
+          "words": [
+            {
+              "text": "বই",
+              "image": "বই",
+              "initial": true,
+              "bookPage": 76
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "wrd-মই",
+          "glyph": "মই",
+          "kind": "word",
+          "words": [
+            {
+              "text": "মই",
+              "image": "মই",
+              "initial": true,
+              "bookPage": 76
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "wrd-ঘর",
+          "glyph": "ঘর",
+          "kind": "word",
+          "words": [
+            {
+              "text": "ঘর",
+              "image": "ঘর",
+              "initial": true,
+              "bookPage": 76
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "wrd-বক",
+          "glyph": "বক",
+          "kind": "word",
+          "words": [
+            {
+              "text": "বক",
+              "image": "বক",
+              "initial": true,
+              "bookPage": 76
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "wrd-ফল",
+          "glyph": "ফল",
+          "kind": "word",
+          "words": [
+            {
+              "text": "ফল",
+              "image": "ফল",
+              "initial": true,
+              "bookPage": 76
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "wrd-জগ",
+          "glyph": "জগ",
+          "kind": "word",
+          "words": [
+            {
+              "text": "জগ",
+              "image": "জগ",
+              "initial": true,
+              "bookPage": 77
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "wrd-খই",
+          "glyph": "খই",
+          "kind": "word",
+          "words": [
+            {
+              "text": "খই",
+              "image": "খই",
+              "initial": true,
+              "bookPage": 77
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        }
+      ],
+      "activities": {
+        "explore": [
+          "listen-look",
+          "picture-quiz",
+          "listen-choose"
+        ],
+        "learn": [
+          "match-picture-word",
+          "build-word",
+          "drag-drop"
+        ],
+        "practice": [
+          "build-word",
+          "missing-letter",
+          "match-picture-word"
+        ],
+        "master": [
+          "build-word",
+          "memory"
+        ]
+      },
+      "minutes": 7
+    },
+    {
+      "id": "shobdo-gothon-2",
+      "subject": "bangla",
+      "unit": "shobdo-gothon",
+      "number": 2,
+      "title": "তিন বর্ণের শব্দ",
+      "source": {
+        "book": "আমার বই — প্রাক-প্রাথমিক শিক্ষা (NCTB)",
+        "edition": "2018",
+        "bookPages": [
+          77,
+          80,
+          81
+        ],
+        "pdfPages": [
+          84,
+          87,
+          88
+        ]
+      },
+      "objectives": [
+        {
+          "code": "৪.১.৫",
+          "band": "5+",
+          "text": "দুই বা তিন বর্ণের ছোট ছোট শব্দ শুনে বলতে পারবে।"
+        },
+        {
+          "code": "৪.১.১১",
+          "band": "5+",
+          "text": "বর্ণাংশ ও বর্ণ লিখতে পারবে।"
+        }
+      ],
+      "items": [
+        {
+          "id": "wrd-কলম",
+          "glyph": "কলম",
+          "kind": "word",
+          "words": [
+            {
+              "text": "কলম",
+              "image": "কলম",
+              "initial": true,
+              "bookPage": 77
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        },
+        {
+          "id": "wrd-কলস",
+          "glyph": "কলস",
+          "kind": "word",
+          "words": [
+            {
+              "text": "কলস",
+              "image": "কলস",
+              "initial": true,
+              "bookPage": 77
+            }
+          ],
+          "audio": null,
+          "wordInitial": true,
+          "strokes": null
+        }
+      ],
+      "activities": {
+        "explore": [
+          "listen-look",
+          "picture-quiz",
+          "listen-choose"
+        ],
+        "learn": [
+          "match-picture-word",
+          "build-word",
+          "drag-drop"
+        ],
+        "practice": [
+          "build-word",
+          "missing-letter",
+          "match-picture-word"
+        ],
+        "master": [
+          "build-word",
+          "memory"
+        ]
+      },
+      "minutes": 6
+    }
+  ]
+}

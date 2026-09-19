@@ -56,6 +56,14 @@ export const VERTICALS = [
       'Courses, scholarships and study tools that connect to where they lead: a career.',
   },
   {
+    slug: 'banking',
+    name: 'Banking Services',
+    nameBn: 'ব্যাংকিং সেবা',
+    tagline: 'Money matters, made simple',
+    description:
+      'Calculators, guides and tools for everyday banking: loans, savings, deposits and more.',
+  },
+  {
     slug: 'bangladesh',
     name: 'Bangladesh',
     nameBn: 'বাংলাদেশ',
@@ -75,8 +83,67 @@ export function getVertical(slug: string) {
   return VERTICALS.find((v) => v.slug === slug);
 }
 
+export interface SubMenuItem {
+  slug: string;
+  name: string;
+  nameBn: string;
+  description: string;
+}
+
+/**
+ * Second-level menu entries for a section, shown as a dropdown in the header.
+ *
+ * Each `slug` is also the `app_categories.slug` for that vertical (seeded in
+ * 015_banking_vertical.sql) and the route `/<vertical>/<slug>`. Only Banking
+ * Services has any today; a section without an entry here is a plain link.
+ */
+export const SUBMENUS: Partial<Record<Vertical, readonly SubMenuItem[]>> = {
+  banking: [
+    {
+      slug: 'loans',
+      name: 'Loans',
+      nameBn: 'ঋণ',
+      description: 'Home, personal, car and SME loans: rates, EMI and eligibility.',
+    },
+    {
+      slug: 'savings',
+      name: 'Savings & Deposits',
+      nameBn: 'সঞ্চয় ও আমানত',
+      description: 'FDR, DPS and savings accounts: what they pay and how to compare them.',
+    },
+    {
+      slug: 'cards',
+      name: 'Cards',
+      nameBn: 'কার্ড',
+      description: 'Debit, credit and prepaid cards: fees, limits and how to choose.',
+    },
+    {
+      slug: 'mobile-banking',
+      name: 'Mobile Banking',
+      nameBn: 'মোবাইল ব্যাংকিং',
+      description: 'bKash, Nagad, Rocket and bank apps: charges and how to use them.',
+    },
+    {
+      slug: 'bank-directory',
+      name: 'Bank Directory',
+      nameBn: 'ব্যাংক ডিরেক্টরি',
+      description: 'Banks, branches, routing numbers and SWIFT codes in Bangladesh.',
+    },
+    {
+      slug: 'calculators',
+      name: 'Calculators',
+      nameBn: 'ক্যালকুলেটর',
+      description: 'EMI, interest, FDR maturity and currency conversion.',
+    },
+  ],
+};
+
+export function getSubMenu(vertical: string, slug: string) {
+  return SUBMENUS[vertical as Vertical]?.find((s) => s.slug === slug);
+}
+
 /** Sections shown in the main navigation. Bangladesh and Apps live in the
  *  footer until they have enough behind them to earn a top-level slot. */
 export const PRIMARY_NAV = VERTICALS.filter((v) =>
-  ['ai', 'tools', 'games', 'jobs', 'education'].includes(v.slug),
+  ['ai', 'tools', 'games', 'jobs', 'education', 'banking'].includes(v.slug),
 );

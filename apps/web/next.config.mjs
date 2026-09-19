@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import { readFileSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -36,9 +37,51 @@ if (existsSync(rootEnvPath)) {
   }
 }
 
+const webRoot = dirname(fileURLToPath(import.meta.url));
+
+/**
+ * Two values the background remover puts in URLs so those URLs can be cached
+ * forever, both computed here so they cannot drift from the files they name.
+ *
+ *   ORT version    -> /ort/<version>/...       (scripts/sync-ort-assets.mjs
+ *                                               writes the files there)
+ *   worker hash    -> /workers/background-remover.js?v=<hash>
+ *
+ * The worker is not fingerprinted by the bundler because it is a plain script in
+ * public/, so it is fingerprinted by hand: edit the file and the hash, and so
+ * the URL, changes. Without that, Cloudflare's default four-hour cache could
+ * serve last week's worker to a page that expects this week's.
+ */
+function ortVersion() {
+  try {
+    const pkg = join(webRoot, 'node_modules', 'onnxruntime-web', 'package.json');
+    return JSON.parse(readFileSync(pkg, 'utf8')).version;
+  } catch {
+    return 'unknown';
+  }
+}
+
+function fileHash(relativePath) {
+  try {
+    return createHash('sha1')
+      .update(readFileSync(join(webRoot, relativePath)))
+      .digest('hex')
+      .slice(0, 10);
+  } catch {
+    return 'dev';
+  }
+}
+
+const IMMUTABLE = 'public, max-age=31536000, immutable';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+
+  env: {
+    NEXT_PUBLIC_ORT_VERSION: ortVersion(),
+    NEXT_PUBLIC_WORKER_VERSION: fileHash('public/workers/background-remover.js'),
+  },
 
   // NOTE: `output: 'standalone'` is deliberately NOT set.
   //
@@ -79,6 +122,25 @@ const nextConfig = {
 
   async headers() {
     return [
+      // The ONNX Runtime binaries: 14 to 28 MB each, and unchanging for a given
+      // version, which is in the path.
+      {
+        source: '/ort/:path*',
+        headers: [{ key: 'Cache-Control', value: IMMUTABLE }],
+      },
+      // The worker is addressed with its content hash, so that URL can be
+      // immutable. A request without the hash (an old page still open in a tab)
+      // must revalidate instead, or it would be pinned to whatever it fetched.
+      {
+        source: '/workers/:path*',
+        has: [{ type: 'query', key: 'v' }],
+        headers: [{ key: 'Cache-Control', value: IMMUTABLE }],
+      },
+      {
+        source: '/workers/:path*',
+        missing: [{ type: 'query', key: 'v' }],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' }],
+      },
       {
         source: '/:path*',
         headers: [

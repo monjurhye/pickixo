@@ -18,9 +18,9 @@
 CREATE TABLE IF NOT EXISTS app_categories (
     id          uuid PRIMARY KEY DEFAULT gen_random_uuid(),
     -- Matches the top-level route segment: ai | apps | tools | games | jobs |
-    -- education | bangladesh.
+    -- education | banking | bangladesh.
     vertical    text NOT NULL CHECK (vertical IN
-                ('ai', 'apps', 'tools', 'games', 'jobs', 'education', 'bangladesh')),
+                ('ai', 'apps', 'tools', 'games', 'jobs', 'education', 'banking', 'bangladesh')),
     slug        text NOT NULL,
     name        text NOT NULL,
     name_bn     text,
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS apps (
     -- product is named in My Apps, activity and search, and those are global.
     slug                text NOT NULL UNIQUE,
     vertical            text NOT NULL CHECK (vertical IN
-                        ('ai', 'apps', 'tools', 'games', 'jobs', 'education', 'bangladesh')),
+                        ('ai', 'apps', 'tools', 'games', 'jobs', 'education', 'banking', 'bangladesh')),
     category_id         uuid REFERENCES app_categories (id) ON DELETE SET NULL,
 
     name                text NOT NULL,

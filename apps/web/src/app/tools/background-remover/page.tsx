@@ -23,8 +23,8 @@ import {
 const TITLE = 'AI Background Remover – Remove Image Backgrounds Free';
 const DESCRIPTION =
   'Remove the background from a photo in your browser. The image never leaves '
-  + 'your device, there is no sign-up, and you get a transparent PNG at full '
-  + 'resolution.';
+  + 'your device, there is no sign-up, and you get a transparent PNG, JPG or '
+  + 'WebP. Fix the edges, swap the background, do a whole batch at once.';
 
 export const metadata: Metadata = buildMetadata({
   title: TITLE,
@@ -37,16 +37,20 @@ export const dynamic = 'force-dynamic';
 const FAQ = [
   {
     q: 'How do I remove the background from an image?',
-    a: 'Drop a photo into the box above, or press Choose image. The background '
-       + 'is removed automatically and you can download the result as a PNG '
-       + 'with a transparent background. There is nothing to sign up for.',
+    a: 'Press Choose images above (on a computer you can also drag photos into '
+       + 'the box or paste one with Ctrl+V). The background is removed '
+       + 'automatically and you can download '
+       + 'the result as a PNG with a transparent background. There is nothing '
+       + 'to sign up for.',
   },
   {
     q: 'Are my photos uploaded anywhere?',
     a: 'No. The whole thing runs inside your browser on your own device. Your '
        + 'image is never sent to Pickixo or to anyone else, and nothing is '
-       + 'stored on our servers. You can check this yourself: turn off your '
-       + 'internet connection after the first use and the tool still works.',
+       + 'stored on our servers. You can check this yourself: remove one '
+       + 'background, then turn off your internet connection. The tool keeps '
+       + 'working, because nothing it does needs a connection. Only loading or '
+       + 'reloading the page itself does.',
   },
   {
     q: 'Why is there a download the first time?',
@@ -71,16 +75,35 @@ const FAQ = [
        + 'when a result came out uncertain rather than leaving you guessing.',
   },
   {
-    q: 'Is the download a transparent PNG?',
-    a: 'Yes, at the original resolution of the image you gave it — not a '
-       + 'shrunken preview. You can also preview the cutout on white or black, '
-       + 'and download it that way instead if you prefer.',
+    q: 'What can I download?',
+    a: 'A PNG with a transparent background by default, or a JPG or WebP if you '
+       + 'prefer (JPG cannot be transparent, so it gets a white background). '
+       + 'You can also put white, black, any colour or a picture of your own '
+       + 'behind the subject, and crop the file to the subject. The result is '
+       + 'the size of your original, up to about 16 megapixels — larger photos '
+       + 'are scaled down to fit in the memory of your browser, and the tool '
+       + 'tells you when that happens.',
+  },
+  {
+    q: 'Can I fix mistakes in the cutout?',
+    a: 'Yes. Press Refine edges and paint on the picture: Erase removes '
+       + 'background that was left behind, Restore brings back parts of the '
+       + 'subject that were cut away. There is undo, and Reset returns to what '
+       + 'the model produced.',
+  },
+  {
+    q: 'Does it work with iPhone HEIC photos?',
+    a: 'In Safari, yes. Chrome, Edge and Firefox usually cannot open HEIC '
+       + 'files, and the tool will say so rather than fail silently. On an '
+       + 'iPhone you can avoid the problem by choosing Settings, Camera, '
+       + 'Formats, Most Compatible, or convert the photo to JPG first.',
   },
   {
     q: 'Is there a limit on how many images I can do?',
-    a: 'No. Because your device does the work rather than our servers, there is '
-       + 'nothing for us to ration. There is no daily limit and no account '
-       + 'needed.',
+    a: 'No daily limit and no account. Because your device does the work rather '
+       + 'than our servers, there is nothing for us to ration. You can add up '
+       + 'to 20 images at a time; they are processed one after another and you '
+       + 'can download them all together as a zip.',
   },
   {
     q: 'Which browsers work?',
@@ -92,10 +115,10 @@ const FAQ = [
 ];
 
 const STEPS = [
-  'Drop an image into the box above, or press Choose image.',
+  'Press Choose images (on a computer you can also drag them in or paste with Ctrl+V).',
   'Wait for the background to be removed — the first run also downloads the model.',
-  'Compare the before and after with the slider.',
-  'Download the transparent PNG.',
+  'Compare the before and after with the slider, and touch up any edges with Refine edges.',
+  'Choose what goes behind the subject, then download the image — or all of them as a zip.',
 ];
 
 export default async function BackgroundRemoverPage() {
@@ -228,7 +251,8 @@ export default async function BackgroundRemoverPage() {
             The trade is an 84 MB download the first time, in exchange for your
             images never leaving your device, no usage limit, and no account. The
             model is kept by your browser afterwards, so it only happens once —
-            and once it is there, the tool works with the internet switched off.
+            and once it is there, removing a background needs no internet
+            connection at all. Only loading the page itself does.
           </p>
         </section>
 

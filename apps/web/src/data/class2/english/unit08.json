@@ -1,0 +1,2208 @@
+{
+  "id": "u8",
+  "number": 8,
+  "title": "My Family, friends and I",
+  "titleBn": "আমার পরিবার, বন্ধু ও আমি",
+  "colour": "rose",
+  "icon": "family",
+  "_source": "English for Today, Class Two (NCTB). Unit 8, book pages 75-83.",
+  "_note": "Mita's passage, her mother, father and brother, the Family rhyme and the exercises are transcribed from the textbook. Bangla meanings are Pickixo's addition - the book carries no glosses. The 'who is who' kinship rounds in Lesson 5 are Pickixo's teaching addition.",
+  "lessons": [
+    {
+      "id": "u8l1",
+      "unitId": "u8",
+      "number": 1,
+      "title": "Myself",
+      "titleBn": "আমার কথা",
+      "shape": "dialogue",
+      "bookPages": [
+        75,
+        76
+      ],
+      "objective": "Say your name, age and class, and read about Mita.",
+      "objectiveBn": "নিজের নাম, বয়স ও শ্রেণি বলা এবং মিতার কথা পড়া।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "m-student",
+          "word": "student",
+          "bangla": "শিক্ষার্থী",
+          "banglaPronunciation": "স্টুডেন্ট",
+          "banglaSource": "enrichment",
+          "bookPage": 75,
+          "category": "person",
+          "image": "mita",
+          "example": "I am a student.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "m-class",
+          "word": "class",
+          "bangla": "শ্রেণি",
+          "banglaPronunciation": "ক্লাস",
+          "banglaSource": "enrichment",
+          "bookPage": 75,
+          "category": "place",
+          "image": "classroom",
+          "example": "I am in class 2.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "m-homework",
+          "word": "homework",
+          "bangla": "বাড়ির কাজ",
+          "banglaPronunciation": "হোমওয়ার্ক",
+          "banglaSource": "enrichment",
+          "bookPage": 75,
+          "category": "object",
+          "image": "read-book",
+          "example": "I do my homework in the evening.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "m-draw",
+          "word": "draw pictures",
+          "bangla": "ছবি আঁকা",
+          "banglaPronunciation": "ড্র পিকচার্স",
+          "banglaSource": "enrichment",
+          "bookPage": 75,
+          "category": "action",
+          "image": "colouring",
+          "example": "I like to draw pictures and colour them.",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u8l1-intro",
+          "type": "intro",
+          "title": "Meet Mita",
+          "titleBn": "মিতার সঙ্গে দেখা",
+          "say": "Mita tells us about herself. Let's listen!",
+          "sayBn": "মিতা নিজের কথা বলছে। চলো শুনি!",
+          "illustration": "mita"
+        },
+        {
+          "id": "u8l1-words",
+          "type": "vocab",
+          "bookActivity": "C",
+          "title": "New words",
+          "titleBn": "নতুন শব্দ",
+          "items": [
+            "m-student",
+            "m-class",
+            "m-homework",
+            "m-draw"
+          ]
+        },
+        {
+          "id": "u8l1-text",
+          "type": "rhyme",
+          "bookActivity": "C",
+          "source": "textbook",
+          "title": "Myself",
+          "titleBn": "আমার কথা",
+          "listenLabel": "Listen to the text",
+          "verses": [
+            [
+              "My name is Mita.",
+              "I am seven years old.",
+              "I am a student.",
+              "I am in class 2.",
+              "I go to school everyday.",
+              "I do my homework in the evening.",
+              "I like to draw pictures and colour them.",
+              "I have a brother.",
+              "I love to play with him."
+            ]
+          ]
+        },
+        {
+          "id": "u8l1-speak1",
+          "type": "speak",
+          "bookActivity": "B",
+          "title": "Tell us about you",
+          "titleBn": "নিজের কথা বলো",
+          "prompt": "Say: Hello, I am ... I am 7 years old. I am a student. Who are you?",
+          "promptBn": "বলো: Hello, I am ... I am 7 years old. I am a student. Who are you?",
+          "modelAnswer": "Hello, I am ... I am 7 years old. I am a student. Who are you?"
+        },
+        {
+          "id": "u8l1-speak2",
+          "type": "speak",
+          "bookActivity": "F",
+          "title": "Your class",
+          "titleBn": "তোমার শ্রেণি",
+          "prompt": "Which class are you in?",
+          "promptBn": "তুমি কোন শ্রেণিতে পড়ো?",
+          "modelAnswer": "I am in class ..."
+        },
+        {
+          "id": "u8l1-game",
+          "type": "game",
+          "kind": "choose-the-reply",
+          "bookActivity": "E",
+          "title": "Questions about Mita",
+          "titleBn": "মিতাকে নিয়ে প্রশ্ন",
+          "rounds": [
+            {
+              "id": "e1",
+              "ask": "Who is Mita?",
+              "askBn": "মিতা কে?",
+              "speak": "Who is Mita?",
+              "options": [
+                {
+                  "label": "A health worker"
+                },
+                {
+                  "label": "A farmer"
+                },
+                {
+                  "label": "A student"
+                }
+              ],
+              "answer": 2,
+              "hint": "Read the text about Mita again.",
+              "tests": "m-student"
+            },
+            {
+              "id": "e2",
+              "ask": "How old is she?",
+              "askBn": "তার বয়স কত?",
+              "speak": "How old is she?",
+              "options": [
+                {
+                  "label": "Ten"
+                },
+                {
+                  "label": "Seven"
+                },
+                {
+                  "label": "Six"
+                }
+              ],
+              "answer": 1,
+              "hint": "Read the text about Mita again."
+            },
+            {
+              "id": "e3",
+              "ask": "Which class is she in?",
+              "askBn": "সে কোন শ্রেণিতে পড়ে?",
+              "speak": "Which class is she in?",
+              "options": [
+                {
+                  "label": "Class 5"
+                },
+                {
+                  "label": "Class 3"
+                },
+                {
+                  "label": "Class 2"
+                }
+              ],
+              "answer": 2,
+              "hint": "Read the text about Mita again.",
+              "tests": "m-class"
+            },
+            {
+              "id": "e4",
+              "ask": "When does she do her homework?",
+              "askBn": "সে কখন বাড়ির কাজ করে?",
+              "speak": "When does she do her homework?",
+              "options": [
+                {
+                  "label": "In the morning"
+                },
+                {
+                  "label": "At night"
+                },
+                {
+                  "label": "In the evening"
+                }
+              ],
+              "answer": 2,
+              "hint": "Read the text about Mita again.",
+              "tests": "m-homework"
+            },
+            {
+              "id": "e5",
+              "ask": "What does she like to do?",
+              "askBn": "সে কী করতে ভালোবাসে?",
+              "speak": "What does she like to do?",
+              "options": [
+                {
+                  "label": "Play football"
+                },
+                {
+                  "label": "Cook food"
+                },
+                {
+                  "label": "Draw pictures and colour them"
+                }
+              ],
+              "answer": 2,
+              "hint": "Read the text about Mita again.",
+              "tests": "m-draw"
+            }
+          ]
+        },
+        {
+          "id": "u8l1-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "Who is this?",
+              "askBn": "ইনি কে?",
+              "image": "mita",
+              "options": [
+                {
+                  "label": "Rima"
+                },
+                {
+                  "label": "Mita"
+                },
+                {
+                  "label": "Kamal"
+                }
+              ],
+              "answer": 1,
+              "explain": "This is Mita."
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "homework",
+              "options": [
+                {
+                  "label": "homework"
+                },
+                {
+                  "label": "class"
+                },
+                {
+                  "label": "student"
+                }
+              ],
+              "answer": 0,
+              "tests": "m-homework"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "I am in ___ 2 .",
+              "askBn": "I am in ___ 2 .",
+              "options": [
+                {
+                  "label": "class"
+                },
+                {
+                  "label": "evening"
+                },
+                {
+                  "label": "draw"
+                }
+              ],
+              "answer": 0,
+              "explain": "I am in class 2.",
+              "tests": "m-class"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "Mita is seven years old.",
+              "askBn": "মিতার বয়স সাত বছর।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "Mita says: I am seven years old."
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "Who does Mita love to play with?",
+              "askBn": "মিতা কার সঙ্গে খেলতে ভালোবাসে?",
+              "options": [
+                {
+                  "label": "Her teacher"
+                },
+                {
+                  "label": "Her brother"
+                },
+                {
+                  "label": "Her mother"
+                }
+              ],
+              "answer": 1,
+              "explain": "I have a brother. I love to play with him."
+            }
+          ]
+        },
+        {
+          "id": "u8l1-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You can tell about yourself!",
+          "sayBn": "তুমি নিজের কথা বলতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "u8l2",
+      "unitId": "u8",
+      "number": 2,
+      "title": "My Mother",
+      "titleBn": "আমার মা",
+      "shape": "story",
+      "bookPages": [
+        77,
+        78
+      ],
+      "objective": "Read about Mita's mother and answer questions about her.",
+      "objectiveBn": "মিতার মায়ের কথা পড়া আর তাঁকে নিয়ে প্রশ্নের উত্তর দেওয়া।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "mo-health",
+          "word": "health worker",
+          "bangla": "স্বাস্থ্যকর্মী",
+          "banglaPronunciation": "হেলথ ওয়ার্কার",
+          "banglaSource": "enrichment",
+          "bookPage": 77,
+          "category": "person",
+          "image": "health-worker",
+          "example": "She is a health worker.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "mo-bike",
+          "word": "motorbike",
+          "bangla": "মোটরবাইক",
+          "banglaPronunciation": "মোটরবাইক",
+          "banglaSource": "enrichment",
+          "bookPage": 77,
+          "category": "vehicle",
+          "image": "motorbike",
+          "example": "She rides a motorbike.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "mo-village",
+          "word": "village",
+          "bangla": "গ্রাম",
+          "banglaPronunciation": "ভিলেজ",
+          "banglaSource": "enrichment",
+          "bookPage": 77,
+          "category": "place",
+          "image": "village",
+          "example": "…the health of the women in the village.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "mo-care",
+          "word": "takes care of",
+          "bangla": "যত্ন নেয়",
+          "banglaPronunciation": "টেকস কেয়ার অভ",
+          "banglaSource": "enrichment",
+          "bookPage": 77,
+          "category": "action",
+          "image": "care",
+          "example": "She takes care of our family.",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u8l2-intro",
+          "type": "intro",
+          "title": "Mita's mother",
+          "titleBn": "মিতার মা",
+          "say": "Mita tells us about her mother. Let's listen!",
+          "sayBn": "মিতা তার মায়ের কথা বলছে। চলো শুনি!",
+          "illustration": "health-worker"
+        },
+        {
+          "id": "u8l2-words",
+          "type": "vocab",
+          "bookActivity": "B",
+          "title": "New words",
+          "titleBn": "নতুন শব্দ",
+          "items": [
+            "mo-health",
+            "mo-bike",
+            "mo-village",
+            "mo-care"
+          ]
+        },
+        {
+          "id": "u8l2-text",
+          "type": "rhyme",
+          "bookActivity": "B",
+          "source": "textbook",
+          "title": "My mother",
+          "titleBn": "আমার মা",
+          "listenLabel": "Listen to the text",
+          "verses": [
+            [
+              "My mother's name is Rahela Khatun.",
+              "She is a health worker.",
+              "She rides a motorbike.",
+              "She goes from one house to another to monitor the health of the women in the village.",
+              "She takes care of our family.",
+              "She is a very good person.",
+              "I love my mother."
+            ]
+          ]
+        },
+        {
+          "id": "u8l2-game1",
+          "type": "game",
+          "kind": "choose-the-reply",
+          "bookActivity": "C",
+          "title": "Questions about the text",
+          "titleBn": "লেখাটি নিয়ে প্রশ্ন",
+          "rounds": [
+            {
+              "id": "c1",
+              "ask": "Who is Mita's mother?",
+              "askBn": "মিতার মা কে?",
+              "speak": "Who is Mita's mother?",
+              "options": [
+                {
+                  "label": "Mita"
+                },
+                {
+                  "label": "Rahela Khatun"
+                },
+                {
+                  "label": "Akbar Ali"
+                }
+              ],
+              "answer": 1,
+              "hint": "Read the text about Mita's mother again."
+            },
+            {
+              "id": "c2",
+              "ask": "What does she do?",
+              "askBn": "তিনি কী করেন?",
+              "speak": "What does she do?",
+              "options": [
+                {
+                  "label": "She is a student."
+                },
+                {
+                  "label": "She is a health worker."
+                },
+                {
+                  "label": "She is a farmer."
+                }
+              ],
+              "answer": 1,
+              "hint": "Read the text about Mita's mother again.",
+              "tests": "mo-health"
+            },
+            {
+              "id": "c3",
+              "ask": "What does she ride on?",
+              "askBn": "তিনি কীসে চড়েন?",
+              "speak": "What does she ride on?",
+              "options": [
+                {
+                  "label": "A bus"
+                },
+                {
+                  "label": "A bicycle"
+                },
+                {
+                  "label": "A motorbike"
+                }
+              ],
+              "answer": 2,
+              "hint": "Read the text about Mita's mother again.",
+              "tests": "mo-bike"
+            },
+            {
+              "id": "c4",
+              "ask": "What does she take care of?",
+              "askBn": "তিনি কার যত্ন নেন?",
+              "speak": "What does she take care of?",
+              "options": [
+                {
+                  "label": "Our family"
+                },
+                {
+                  "label": "Our school"
+                },
+                {
+                  "label": "Our village"
+                }
+              ],
+              "answer": 0,
+              "hint": "Read the text about Mita's mother again.",
+              "tests": "mo-care"
+            }
+          ]
+        },
+        {
+          "id": "u8l2-speak",
+          "type": "speak",
+          "bookActivity": "D",
+          "title": "Your mother",
+          "titleBn": "তোমার মা",
+          "prompt": "What's your mother's name? What does she do?",
+          "promptBn": "তোমার মায়ের নাম কী? তিনি কী করেন?",
+          "modelAnswer": "My mother's name is ... She is a ..."
+        },
+        {
+          "id": "u8l2-game2",
+          "type": "game",
+          "kind": "order-the-lines",
+          "bookActivity": "E",
+          "title": "Fill in the blanks",
+          "titleBn": "ফাঁকা জায়গা পূরণ করো",
+          "rounds": [
+            {
+              "id": "f1",
+              "ask": "Rahela Khatun is a ___ .",
+              "askBn": "Rahela Khatun is a ___ .",
+              "options": [
+                {
+                  "label": "health worker"
+                },
+                {
+                  "label": "student"
+                },
+                {
+                  "label": "farmer"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the text.",
+              "tests": "mo-health"
+            },
+            {
+              "id": "f2",
+              "ask": "She ___ a motorbike.",
+              "askBn": "She ___ a motorbike.",
+              "options": [
+                {
+                  "label": "eats"
+                },
+                {
+                  "label": "rides"
+                },
+                {
+                  "label": "draws"
+                }
+              ],
+              "answer": 1,
+              "hint": "What does she do with a motorbike?",
+              "tests": "mo-bike"
+            },
+            {
+              "id": "f3",
+              "ask": "She monitors the health of the ___ in the village.",
+              "askBn": "She monitors the health of the ___ in the village.",
+              "options": [
+                {
+                  "label": "women"
+                },
+                {
+                  "label": "cows"
+                },
+                {
+                  "label": "boys"
+                }
+              ],
+              "answer": 0,
+              "hint": "Read the fourth sentence.",
+              "tests": "mo-village"
+            },
+            {
+              "id": "f4",
+              "ask": "Rahela Khatun takes care of her ___ .",
+              "askBn": "Rahela Khatun takes care of her ___ .",
+              "options": [
+                {
+                  "label": "school"
+                },
+                {
+                  "label": "bike"
+                },
+                {
+                  "label": "family"
+                }
+              ],
+              "answer": 2,
+              "hint": "Read the fifth sentence.",
+              "tests": "mo-care"
+            }
+          ]
+        },
+        {
+          "id": "u8l2-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "motorbike",
+              "options": [
+                {
+                  "label": "motorbike"
+                },
+                {
+                  "label": "village"
+                },
+                {
+                  "label": "umbrella"
+                }
+              ],
+              "answer": 0,
+              "explain": "motorbike = মোটরবাইক",
+              "tests": "mo-bike"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "village",
+              "options": [
+                {
+                  "label": "motorbike"
+                },
+                {
+                  "label": "family"
+                },
+                {
+                  "label": "village"
+                }
+              ],
+              "answer": 2,
+              "tests": "mo-village"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "She is a health ___ .",
+              "askBn": "She is a health ___ .",
+              "options": [
+                {
+                  "label": "student"
+                },
+                {
+                  "label": "worker"
+                },
+                {
+                  "label": "farmer"
+                }
+              ],
+              "answer": 1,
+              "explain": "She is a health worker.",
+              "tests": "mo-health"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "Mita's mother rides a bus.",
+              "askBn": "মিতার মা বাসে চড়েন।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 1,
+              "explain": "She rides a motorbike.",
+              "tests": "mo-bike"
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "Mita says: She is a very good ___ .",
+              "askBn": "মিতা বলে: She is a very good ___ .",
+              "options": [
+                {
+                  "label": "motorbike"
+                },
+                {
+                  "label": "person"
+                },
+                {
+                  "label": "village"
+                }
+              ],
+              "answer": 1,
+              "explain": "She is a very good person."
+            }
+          ]
+        },
+        {
+          "id": "u8l2-done",
+          "type": "done",
+          "title": "Well done!",
+          "titleBn": "খুব ভালো!",
+          "say": "You can tell about your mother!",
+          "sayBn": "তুমি তোমার মায়ের কথা বলতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "u8l3",
+      "unitId": "u8",
+      "number": 3,
+      "title": "My Father",
+      "titleBn": "আমার বাবা",
+      "shape": "story",
+      "bookPages": [
+        79,
+        80
+      ],
+      "objective": "Read about Mita's father and answer questions about him.",
+      "objectiveBn": "মিতার বাবার কথা পড়া আর তাঁকে নিয়ে প্রশ্নের উত্তর দেওয়া।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "fa-farmer",
+          "word": "farmer",
+          "bangla": "কৃষক",
+          "banglaPronunciation": "ফার্মার",
+          "banglaSource": "enrichment",
+          "bookPage": 79,
+          "category": "person",
+          "image": "farmer",
+          "example": "He is a farmer.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "fa-land",
+          "word": "land",
+          "bangla": "জমি",
+          "banglaPronunciation": "ল্যান্ড",
+          "banglaSource": "enrichment",
+          "bookPage": 79,
+          "category": "place",
+          "image": "field",
+          "example": "He has no land to cultivate.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "fa-chores",
+          "word": "household chores",
+          "bangla": "ঘরের কাজ",
+          "banglaPronunciation": "হাউসহোল্ড চোর্স",
+          "banglaSource": "enrichment",
+          "bookPage": 79,
+          "category": "action",
+          "image": "cooking",
+          "example": "He helps my mother at household chores.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "fa-look",
+          "word": "looks after",
+          "bangla": "দেখাশোনা করে",
+          "banglaPronunciation": "লুকস আফটার",
+          "banglaSource": "enrichment",
+          "bookPage": 79,
+          "category": "action",
+          "image": "care",
+          "example": "He looks after our animals too.",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u8l3-intro",
+          "type": "intro",
+          "title": "Mita's father",
+          "titleBn": "মিতার বাবা",
+          "say": "Mita tells us about her father. Let's listen!",
+          "sayBn": "মিতা তার বাবার কথা বলছে। চলো শুনি!",
+          "illustration": "farmer"
+        },
+        {
+          "id": "u8l3-words",
+          "type": "vocab",
+          "bookActivity": "B",
+          "title": "New words",
+          "titleBn": "নতুন শব্দ",
+          "items": [
+            "fa-farmer",
+            "fa-land",
+            "fa-chores",
+            "fa-look"
+          ]
+        },
+        {
+          "id": "u8l3-text",
+          "type": "rhyme",
+          "bookActivity": "B",
+          "source": "textbook",
+          "title": "My Father",
+          "titleBn": "আমার বাবা",
+          "listenLabel": "Listen to the text",
+          "verses": [
+            [
+              "My father's name is Akbar Ali.",
+              "He is a farmer.",
+              "He has no land to cultivate.",
+              "He works on others' land.",
+              "He helps my mother at household chores.",
+              "He takes care of all the family members.",
+              "He looks after our animals too."
+            ]
+          ]
+        },
+        {
+          "id": "u8l3-game",
+          "type": "game",
+          "kind": "choose-the-reply",
+          "bookActivity": "C",
+          "title": "Questions about the text",
+          "titleBn": "লেখাটি নিয়ে প্রশ্ন",
+          "rounds": [
+            {
+              "id": "c1",
+              "ask": "What's the name of Mita's father?",
+              "askBn": "মিতার বাবার নাম কী?",
+              "speak": "What's the name of Mita's father?",
+              "options": [
+                {
+                  "label": "Rahela Khatun"
+                },
+                {
+                  "label": "Akbar Ali"
+                },
+                {
+                  "label": "Kamal"
+                }
+              ],
+              "answer": 1,
+              "hint": "Read the text about Mita's father again."
+            },
+            {
+              "id": "c2",
+              "ask": "What does he do?",
+              "askBn": "তিনি কী করেন?",
+              "speak": "What does he do?",
+              "options": [
+                {
+                  "label": "He is a student."
+                },
+                {
+                  "label": "He is a farmer."
+                },
+                {
+                  "label": "He is a health worker."
+                }
+              ],
+              "answer": 1,
+              "hint": "Read the text about Mita's father again.",
+              "tests": "fa-farmer"
+            },
+            {
+              "id": "c3",
+              "ask": "Where does he work?",
+              "askBn": "তিনি কোথায় কাজ করেন?",
+              "speak": "Where does he work?",
+              "options": [
+                {
+                  "label": "In a school"
+                },
+                {
+                  "label": "On others' land"
+                },
+                {
+                  "label": "In a shop"
+                }
+              ],
+              "answer": 1,
+              "hint": "Read the text about Mita's father again.",
+              "tests": "fa-land"
+            },
+            {
+              "id": "c4",
+              "ask": "How does he help her mother?",
+              "askBn": "তিনি মিতার মাকে কীভাবে সাহায্য করেন?",
+              "speak": "How does he help her mother?",
+              "options": [
+                {
+                  "label": "By riding a motorbike"
+                },
+                {
+                  "label": "At household chores"
+                },
+                {
+                  "label": "By teaching Mita"
+                }
+              ],
+              "answer": 1,
+              "hint": "Read the text about Mita's father again.",
+              "tests": "fa-chores"
+            }
+          ]
+        },
+        {
+          "id": "u8l3-speak1",
+          "type": "speak",
+          "bookActivity": "D",
+          "title": "Your father",
+          "titleBn": "তোমার বাবা",
+          "prompt": "What's your father's name? What does he do?",
+          "promptBn": "তোমার বাবার নাম কী? তিনি কী করেন?",
+          "modelAnswer": "My father's name is ... He is a ..."
+        },
+        {
+          "id": "u8l3-speak2",
+          "type": "speak",
+          "bookActivity": "D",
+          "title": "Helping the family",
+          "titleBn": "পরিবারে সাহায্য",
+          "prompt": "How does he help in the family?",
+          "promptBn": "তিনি পরিবারে কীভাবে সাহায্য করেন?",
+          "modelAnswer": "He helps ..."
+        },
+        {
+          "id": "u8l3-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "Who is this?",
+              "askBn": "ইনি কে?",
+              "image": "farmer",
+              "options": [
+                {
+                  "label": "a health worker"
+                },
+                {
+                  "label": "a farmer"
+                },
+                {
+                  "label": "a student"
+                }
+              ],
+              "answer": 1,
+              "explain": "farmer = কৃষক",
+              "tests": "fa-farmer"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "land",
+              "options": [
+                {
+                  "label": "animals"
+                },
+                {
+                  "label": "farmer"
+                },
+                {
+                  "label": "land"
+                }
+              ],
+              "answer": 2,
+              "tests": "fa-land"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "He helps my mother at household ___ .",
+              "askBn": "He helps my mother at household ___ .",
+              "options": [
+                {
+                  "label": "chores"
+                },
+                {
+                  "label": "village"
+                },
+                {
+                  "label": "umbrella"
+                }
+              ],
+              "answer": 0,
+              "explain": "He helps my mother at household chores.",
+              "tests": "fa-chores"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "Mita's father has no land to cultivate.",
+              "askBn": "মিতার বাবার চাষ করার মতো জমি নেই।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "The text says: He has no land to cultivate.",
+              "tests": "fa-land"
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "What is Mita's father's name?",
+              "askBn": "মিতার বাবার নাম কী?",
+              "options": [
+                {
+                  "label": "Akbar Ali"
+                },
+                {
+                  "label": "Rahela Khatun"
+                },
+                {
+                  "label": "Kamal"
+                }
+              ],
+              "answer": 0,
+              "explain": "My father's name is Akbar Ali."
+            }
+          ]
+        },
+        {
+          "id": "u8l3-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You can tell about your father!",
+          "sayBn": "তুমি তোমার বাবার কথা বলতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "u8l4",
+      "unitId": "u8",
+      "number": 4,
+      "title": "My Brother",
+      "titleBn": "আমার ভাই",
+      "shape": "story",
+      "bookPages": [
+        81,
+        82
+      ],
+      "objective": "Read about Kamal, and use a / an and punctuation correctly.",
+      "objectiveBn": "কামালের কথা পড়া আর a / an ও যতিচিহ্ন ঠিকভাবে ব্যবহার করা।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "br-brother",
+          "word": "brother",
+          "bangla": "ভাই",
+          "banglaPronunciation": "ব্রাদার",
+          "banglaSource": "enrichment",
+          "bookPage": 81,
+          "category": "family",
+          "image": "fam-brother",
+          "example": "This is my brother Kamal.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "br-parents",
+          "word": "parents",
+          "bangla": "মা-বাবা",
+          "banglaPronunciation": "প্যারেন্টস",
+          "banglaSource": "enrichment",
+          "bookPage": 81,
+          "category": "family",
+          "image": "fam-parents",
+          "example": "Our parents love us very much.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "br-together",
+          "word": "together",
+          "bangla": "একসঙ্গে",
+          "banglaPronunciation": "টুগেদার",
+          "banglaSource": "enrichment",
+          "bookPage": 81,
+          "category": "expression",
+          "image": "two-children-waving",
+          "example": "We play together.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "br-happy",
+          "word": "happy family",
+          "bangla": "সুখী পরিবার",
+          "banglaPronunciation": "হ্যাপি ফ্যামিলি",
+          "banglaSource": "enrichment",
+          "bookPage": 81,
+          "category": "expression",
+          "image": "happy-face",
+          "example": "We are a happy family.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "br-umbrella",
+          "word": "umbrella",
+          "bangla": "ছাতা",
+          "banglaPronunciation": "আম্ব্রেলা",
+          "banglaSource": "enrichment",
+          "bookPage": 82,
+          "category": "object",
+          "image": "umbrella",
+          "example": "He needs an umbrella to go to work.",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u8l4-intro",
+          "type": "intro",
+          "title": "Mita's brother",
+          "titleBn": "মিতার ভাই",
+          "say": "Mita tells us about her brother Kamal.",
+          "sayBn": "মিতা তার ভাই কামালের কথা বলছে।",
+          "illustration": "kamal"
+        },
+        {
+          "id": "u8l4-words",
+          "type": "vocab",
+          "bookActivity": "B",
+          "title": "New words",
+          "titleBn": "নতুন শব্দ",
+          "items": [
+            "br-brother",
+            "br-parents",
+            "br-together",
+            "br-happy",
+            "br-umbrella"
+          ]
+        },
+        {
+          "id": "u8l4-text",
+          "type": "rhyme",
+          "bookActivity": "B",
+          "source": "textbook",
+          "title": "My brother",
+          "titleBn": "আমার ভাই",
+          "listenLabel": "Listen to the text",
+          "verses": [
+            [
+              "This is my brother Kamal.",
+              "He is ten years old.",
+              "He is in class five.",
+              "He helps me with my homework.",
+              "He loves to play.",
+              "We play together.",
+              "My brother helps our parents.",
+              "Our parents love us very much.",
+              "We are a happy family."
+            ]
+          ]
+        },
+        {
+          "id": "u8l4-game1",
+          "type": "game",
+          "kind": "order-the-lines",
+          "bookActivity": "C",
+          "title": "Fill in the blanks",
+          "titleBn": "ফাঁকা জায়গা পূরণ করো",
+          "rounds": [
+            {
+              "id": "k1",
+              "ask": "Kamal is ___ old.",
+              "askBn": "Kamal is ___ old.",
+              "options": [
+                {
+                  "label": "seven years"
+                },
+                {
+                  "label": "ten years"
+                },
+                {
+                  "label": "five years"
+                }
+              ],
+              "answer": 1,
+              "hint": "Read the second sentence."
+            },
+            {
+              "id": "k2",
+              "ask": "He is in class ___ .",
+              "askBn": "He is in class ___ .",
+              "options": [
+                {
+                  "label": "two"
+                },
+                {
+                  "label": "ten"
+                },
+                {
+                  "label": "five"
+                }
+              ],
+              "answer": 2,
+              "hint": "Read the third sentence."
+            },
+            {
+              "id": "k3",
+              "ask": "He helps Mita with her ___ .",
+              "askBn": "He helps Mita with her ___ .",
+              "options": [
+                {
+                  "label": "homework"
+                },
+                {
+                  "label": "umbrella"
+                },
+                {
+                  "label": "village"
+                }
+              ],
+              "answer": 0,
+              "hint": "Read the fourth sentence."
+            }
+          ]
+        },
+        {
+          "id": "u8l4-speak1",
+          "type": "speak",
+          "bookActivity": "D",
+          "title": "Your brothers and sisters",
+          "titleBn": "তোমার ভাইবোন",
+          "prompt": "How many brothers and sisters do you have?",
+          "promptBn": "তোমার কয়জন ভাইবোন?",
+          "modelAnswer": "I have ... brothers and ... sisters."
+        },
+        {
+          "id": "u8l4-speak2",
+          "type": "speak",
+          "bookActivity": "D",
+          "title": "Who helps you?",
+          "titleBn": "কে তোমাকে সাহায্য করে?",
+          "prompt": "Who helps you with your homework?",
+          "promptBn": "বাড়ির কাজে কে তোমাকে সাহায্য করে?",
+          "modelAnswer": "My ... helps me."
+        },
+        {
+          "id": "u8l4-game2",
+          "type": "game",
+          "kind": "order-the-lines",
+          "bookActivity": "F",
+          "title": "a or an?",
+          "titleBn": "a না an?",
+          "rounds": [
+            {
+              "id": "a1",
+              "ask": "Mita is ___ girl.",
+              "askBn": "Mita is ___ girl.",
+              "options": [
+                {
+                  "label": "a"
+                },
+                {
+                  "label": "an"
+                }
+              ],
+              "answer": 0,
+              "hint": "Use a before other sounds."
+            },
+            {
+              "id": "a2",
+              "ask": "She has ___ brother.",
+              "askBn": "She has ___ brother.",
+              "options": [
+                {
+                  "label": "a"
+                },
+                {
+                  "label": "an"
+                }
+              ],
+              "answer": 0,
+              "hint": "Use a before other sounds."
+            },
+            {
+              "id": "a3",
+              "ask": "Mita eats ___ egg every morning.",
+              "askBn": "Mita eats ___ egg every morning.",
+              "options": [
+                {
+                  "label": "a"
+                },
+                {
+                  "label": "an"
+                }
+              ],
+              "answer": 1,
+              "hint": "Use an before a, e, i, o, u sounds."
+            },
+            {
+              "id": "a4",
+              "ask": "Their mother is ___ health worker.",
+              "askBn": "Their mother is ___ health worker.",
+              "options": [
+                {
+                  "label": "a"
+                },
+                {
+                  "label": "an"
+                }
+              ],
+              "answer": 0,
+              "hint": "Use a before other sounds."
+            },
+            {
+              "id": "a5",
+              "ask": "Their father is ___ farmer.",
+              "askBn": "Their father is ___ farmer.",
+              "options": [
+                {
+                  "label": "an"
+                },
+                {
+                  "label": "a"
+                }
+              ],
+              "answer": 1,
+              "hint": "Use a before other sounds."
+            },
+            {
+              "id": "a6",
+              "ask": "He needs ___ umbrella to go to work.",
+              "askBn": "He needs ___ umbrella to go to work.",
+              "options": [
+                {
+                  "label": "an"
+                },
+                {
+                  "label": "a"
+                }
+              ],
+              "answer": 0,
+              "hint": "Use an before a, e, i, o, u sounds."
+            }
+          ]
+        },
+        {
+          "id": "u8l4-game3",
+          "type": "game",
+          "kind": "order-the-lines",
+          "bookActivity": "G",
+          "title": "Which mark?",
+          "titleBn": "কোন চিহ্ন?",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "How many animals do you have ___",
+              "askBn": "How many animals do you have ___",
+              "options": [
+                {
+                  "label": "? (question mark)"
+                },
+                {
+                  "label": ", (comma)"
+                },
+                {
+                  "label": ". (full stop)"
+                }
+              ],
+              "answer": 0,
+              "hint": "A question ends with ?. A telling sentence ends with a full stop."
+            },
+            {
+              "id": "g2",
+              "ask": "We have twenty six animals ___",
+              "askBn": "We have twenty six animals ___",
+              "options": [
+                {
+                  "label": ", (comma)"
+                },
+                {
+                  "label": ". (full stop)"
+                },
+                {
+                  "label": "? (question mark)"
+                }
+              ],
+              "answer": 1,
+              "hint": "A question ends with ?. A telling sentence ends with a full stop."
+            },
+            {
+              "id": "g3",
+              "ask": "What domestic animals do you have ___",
+              "askBn": "What domestic animals do you have ___",
+              "options": [
+                {
+                  "label": ", (comma)"
+                },
+                {
+                  "label": "? (question mark)"
+                },
+                {
+                  "label": ". (full stop)"
+                }
+              ],
+              "answer": 1,
+              "hint": "A question ends with ?. A telling sentence ends with a full stop."
+            },
+            {
+              "id": "g4",
+              "ask": "We have cows ___ ducks, chickens and goats.",
+              "askBn": "We have cows ___ ducks, chickens and goats.",
+              "options": [
+                {
+                  "label": "? (question mark)"
+                },
+                {
+                  "label": ", (comma)"
+                },
+                {
+                  "label": ". (full stop)"
+                }
+              ],
+              "answer": 1,
+              "hint": "A question ends with ?. A telling sentence ends with a full stop."
+            }
+          ]
+        },
+        {
+          "id": "u8l4-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "Who is this?",
+              "askBn": "ইনি কে?",
+              "image": "kamal",
+              "options": [
+                {
+                  "label": "Akbar Ali"
+                },
+                {
+                  "label": "Mita"
+                },
+                {
+                  "label": "Kamal"
+                }
+              ],
+              "answer": 2,
+              "explain": "This is Mita's brother Kamal."
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "parents",
+              "options": [
+                {
+                  "label": "together"
+                },
+                {
+                  "label": "parents"
+                },
+                {
+                  "label": "brother"
+                }
+              ],
+              "answer": 1,
+              "tests": "br-parents"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "Mita eats ___ egg every morning.",
+              "askBn": "Mita eats ___ egg every morning.",
+              "options": [
+                {
+                  "label": "many"
+                },
+                {
+                  "label": "an"
+                },
+                {
+                  "label": "a"
+                }
+              ],
+              "answer": 1,
+              "explain": "We say an egg."
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "Kamal is ten years old.",
+              "askBn": "কামালের বয়স দশ বছর।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "The text says: He is ten years old."
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "What does Kamal love to do?",
+              "askBn": "কামাল কী করতে ভালোবাসে?",
+              "options": [
+                {
+                  "label": "Play"
+                },
+                {
+                  "label": "Cook"
+                },
+                {
+                  "label": "Sleep"
+                }
+              ],
+              "answer": 0,
+              "explain": "He loves to play."
+            }
+          ]
+        },
+        {
+          "id": "u8l4-done",
+          "type": "done",
+          "title": "Well done!",
+          "titleBn": "খুব ভালো!",
+          "say": "You can tell about your brother!",
+          "sayBn": "তুমি তোমার ভাইয়ের কথা বলতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "u8l5",
+      "unitId": "u8",
+      "number": 5,
+      "title": "A Rhyme: Family",
+      "titleBn": "একটি ছড়া: পরিবার",
+      "shape": "rhyme",
+      "bookPages": [
+        83
+      ],
+      "objective": "Name the members of a family and recite the family rhyme.",
+      "objectiveBn": "পরিবারের সদস্যদের নাম বলা আর পরিবারের ছড়া আবৃত্তি করা।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "f-mother",
+          "word": "mother",
+          "bangla": "মা",
+          "banglaPronunciation": "মাদার",
+          "banglaSource": "enrichment",
+          "bookPage": 83,
+          "category": "family",
+          "image": "fam-mother",
+          "example": "Mother, father, sister, brother and me.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "f-father",
+          "word": "father",
+          "bangla": "বাবা",
+          "banglaPronunciation": "ফাদার",
+          "banglaSource": "enrichment",
+          "bookPage": 83,
+          "category": "family",
+          "image": "fam-father",
+          "example": "Mother, father, sister, brother and me.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "f-sister",
+          "word": "sister",
+          "bangla": "বোন",
+          "banglaPronunciation": "সিস্টার",
+          "banglaSource": "enrichment",
+          "bookPage": 83,
+          "category": "family",
+          "image": "fam-sister",
+          "example": "Mother, father, sister, brother and me.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "f-brother",
+          "word": "brother",
+          "bangla": "ভাই",
+          "banglaPronunciation": "ব্রাদার",
+          "banglaSource": "enrichment",
+          "bookPage": 83,
+          "category": "family",
+          "image": "fam-brother",
+          "example": "Mother, father, sister, brother and me.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "f-me",
+          "word": "me",
+          "bangla": "আমি",
+          "banglaPronunciation": "মি",
+          "banglaSource": "enrichment",
+          "bookPage": 83,
+          "category": "family",
+          "image": "fam-me",
+          "example": "Mother, father, sister, brother and me.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "f-grandpa",
+          "word": "grandpa",
+          "bangla": "দাদা / নানা",
+          "banglaPronunciation": "গ্র্যান্ডপা",
+          "banglaSource": "enrichment",
+          "bookPage": 83,
+          "category": "family",
+          "image": "fam-grandpa",
+          "example": "Grandpa, grandma, uncle, aunt and cousins too",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "f-grandma",
+          "word": "grandma",
+          "bangla": "দাদি / নানি",
+          "banglaPronunciation": "গ্র্যান্ডমা",
+          "banglaSource": "enrichment",
+          "bookPage": 83,
+          "category": "family",
+          "image": "fam-grandma",
+          "example": "Grandpa, grandma, uncle, aunt and cousins too",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "f-uncle",
+          "word": "uncle",
+          "bangla": "চাচা / মামা",
+          "banglaPronunciation": "আঙ্কল",
+          "banglaSource": "enrichment",
+          "bookPage": 83,
+          "category": "family",
+          "image": "fam-uncle",
+          "example": "Grandpa, grandma, uncle, aunt and cousins too",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "f-aunt",
+          "word": "aunt",
+          "bangla": "চাচি / খালা / ফুফু",
+          "banglaPronunciation": "আন্ট",
+          "banglaSource": "enrichment",
+          "bookPage": 83,
+          "category": "family",
+          "image": "fam-aunt",
+          "example": "Grandpa, grandma, uncle, aunt and cousins too",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "f-cousins",
+          "word": "cousins",
+          "bangla": "চাচাতো / মামাতো ভাইবোন",
+          "banglaPronunciation": "কাজিনস",
+          "banglaSource": "enrichment",
+          "bookPage": 83,
+          "category": "family",
+          "image": "fam-cousins",
+          "example": "Grandpa, grandma, uncle, aunt and cousins too",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u8l5-intro",
+          "type": "intro",
+          "title": "My family",
+          "titleBn": "আমার পরিবার",
+          "say": "Come with me, and meet my family!",
+          "sayBn": "এসো আমার সঙ্গে, আমার পরিবারের সঙ্গে দেখা করো!",
+          "illustration": "family-tree"
+        },
+        {
+          "id": "u8l5-words1",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "My family 1",
+          "titleBn": "আমার পরিবার ১",
+          "items": [
+            "f-mother",
+            "f-father",
+            "f-sister",
+            "f-brother",
+            "f-me"
+          ]
+        },
+        {
+          "id": "u8l5-words2",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "My family 2",
+          "titleBn": "আমার পরিবার ২",
+          "items": [
+            "f-grandpa",
+            "f-grandma",
+            "f-uncle",
+            "f-aunt",
+            "f-cousins"
+          ]
+        },
+        {
+          "id": "u8l5-rhyme",
+          "type": "rhyme",
+          "bookActivity": "A",
+          "source": "textbook",
+          "title": "Family",
+          "titleBn": "পরিবার",
+          "verses": [
+            [
+              "Come with me, and meet my family",
+              "Mother, father, sister, brother and me."
+            ],
+            [
+              "There are some more members I tell you",
+              "Grandpa, grandma, uncle, aunt and cousins too"
+            ],
+            [
+              "We spend time together",
+              "And help one another."
+            ],
+            [
+              "I love them, and they love me",
+              "We are all a happy family."
+            ]
+          ]
+        },
+        {
+          "id": "u8l5-speak",
+          "type": "speak",
+          "bookActivity": "C",
+          "title": "Say the family words",
+          "titleBn": "পরিবারের শব্দগুলো বলো",
+          "prompt": "Say: Mother, father, sister, brother and me.",
+          "promptBn": "বলো: Mother, father, sister, brother and me.",
+          "modelAnswer": "Mother, father, sister, brother and me."
+        },
+        {
+          "id": "u8l5-game1",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "A",
+          "title": "Who is it?",
+          "titleBn": "ইনি কে?",
+          "rounds": [
+            {
+              "id": "w-f-mother",
+              "ask": "Who is this?",
+              "askBn": "ইনি কে?",
+              "image": "fam-mother",
+              "options": [
+                {
+                  "label": "brother"
+                },
+                {
+                  "label": "sister"
+                },
+                {
+                  "label": "mother"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the picture.",
+              "tests": "f-mother"
+            },
+            {
+              "id": "w-f-father",
+              "ask": "Who is this?",
+              "askBn": "ইনি কে?",
+              "image": "fam-father",
+              "options": [
+                {
+                  "label": "grandma"
+                },
+                {
+                  "label": "father"
+                },
+                {
+                  "label": "brother"
+                }
+              ],
+              "answer": 1,
+              "hint": "Look at the picture.",
+              "tests": "f-father"
+            },
+            {
+              "id": "w-f-grandpa",
+              "ask": "Who is this?",
+              "askBn": "ইনি কে?",
+              "image": "fam-grandpa",
+              "options": [
+                {
+                  "label": "grandpa"
+                },
+                {
+                  "label": "grandma"
+                },
+                {
+                  "label": "me"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the picture.",
+              "tests": "f-grandpa"
+            },
+            {
+              "id": "w-f-grandma",
+              "ask": "Who is this?",
+              "askBn": "ইনি কে?",
+              "image": "fam-grandma",
+              "options": [
+                {
+                  "label": "mother"
+                },
+                {
+                  "label": "aunt"
+                },
+                {
+                  "label": "grandma"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the picture.",
+              "tests": "f-grandma"
+            },
+            {
+              "id": "w-f-uncle",
+              "ask": "Who is this?",
+              "askBn": "ইনি কে?",
+              "image": "fam-uncle",
+              "options": [
+                {
+                  "label": "sister"
+                },
+                {
+                  "label": "mother"
+                },
+                {
+                  "label": "uncle"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the picture.",
+              "tests": "f-uncle"
+            },
+            {
+              "id": "w-f-aunt",
+              "ask": "Who is this?",
+              "askBn": "ইনি কে?",
+              "image": "fam-aunt",
+              "options": [
+                {
+                  "label": "grandma"
+                },
+                {
+                  "label": "uncle"
+                },
+                {
+                  "label": "aunt"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the picture.",
+              "tests": "f-aunt"
+            }
+          ]
+        },
+        {
+          "id": "u8l5-game2",
+          "type": "game",
+          "kind": "count-objects",
+          "bookActivity": "B",
+          "title": "How many members?",
+          "titleBn": "কয়জন সদস্য?",
+          "rounds": [
+            {
+              "id": "n1",
+              "ask": "Mother, father, sister, brother and me. How many?",
+              "askBn": "মা, বাবা, বোন, ভাই আর আমি। কয়জন?",
+              "image": "family-tree",
+              "options": [
+                {
+                  "label": "5"
+                },
+                {
+                  "label": "6"
+                },
+                {
+                  "label": "4"
+                }
+              ],
+              "answer": 0,
+              "hint": "Count the words in the second line."
+            },
+            {
+              "id": "n2",
+              "ask": "Grandpa, grandma, uncle, aunt and cousins. How many?",
+              "askBn": "দাদা, দাদি, চাচা, চাচি আর কাজিনরা। কয়টি নাম?",
+              "image": "family-tree",
+              "options": [
+                {
+                  "label": "5"
+                },
+                {
+                  "label": "4"
+                },
+                {
+                  "label": "6"
+                }
+              ],
+              "answer": 0,
+              "hint": "Count the words in the fourth line."
+            },
+            {
+              "id": "n3",
+              "ask": "How many family members does the rhyme name in all?",
+              "askBn": "ছড়ায় সব মিলিয়ে কয়জন সদস্যের নাম আছে?",
+              "image": "family-tree",
+              "options": [
+                {
+                  "label": "12"
+                },
+                {
+                  "label": "8"
+                },
+                {
+                  "label": "10"
+                }
+              ],
+              "answer": 2,
+              "hint": "Add the two lines together: 5 and 5."
+            }
+          ]
+        },
+        {
+          "id": "u8l5-game3",
+          "type": "game",
+          "kind": "choose-the-reply",
+          "bookActivity": "A",
+          "title": "Who is who?",
+          "titleBn": "কে কে?",
+          "rounds": [
+            {
+              "id": "k1",
+              "ask": "Your mother's mother is your ___ .",
+              "askBn": "Your mother's mother is your ___ .",
+              "options": [
+                {
+                  "label": "father"
+                },
+                {
+                  "label": "grandma"
+                },
+                {
+                  "label": "sister"
+                }
+              ],
+              "answer": 1,
+              "hint": "Think of the family tree.",
+              "tests": "f-grandma"
+            },
+            {
+              "id": "k2",
+              "ask": "Your father's brother is your ___ .",
+              "askBn": "Your father's brother is your ___ .",
+              "options": [
+                {
+                  "label": "sister"
+                },
+                {
+                  "label": "uncle"
+                },
+                {
+                  "label": "brother"
+                }
+              ],
+              "answer": 1,
+              "hint": "Think of the family tree.",
+              "tests": "f-uncle"
+            },
+            {
+              "id": "k3",
+              "ask": "Your father's sister is your ___ .",
+              "askBn": "Your father's sister is your ___ .",
+              "options": [
+                {
+                  "label": "grandma"
+                },
+                {
+                  "label": "aunt"
+                },
+                {
+                  "label": "mother"
+                }
+              ],
+              "answer": 1,
+              "hint": "Think of the family tree.",
+              "tests": "f-aunt"
+            },
+            {
+              "id": "k4",
+              "ask": "Your uncle's children are your ___ .",
+              "askBn": "Your uncle's children are your ___ .",
+              "options": [
+                {
+                  "label": "brother"
+                },
+                {
+                  "label": "grandma"
+                },
+                {
+                  "label": "cousins"
+                }
+              ],
+              "answer": 2,
+              "hint": "Think of the family tree.",
+              "tests": "f-cousins"
+            }
+          ]
+        },
+        {
+          "id": "u8l5-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "Who is this?",
+              "askBn": "ইনি কে?",
+              "image": "fam-grandpa",
+              "options": [
+                {
+                  "label": "uncle"
+                },
+                {
+                  "label": "grandpa"
+                },
+                {
+                  "label": "aunt"
+                }
+              ],
+              "answer": 1,
+              "explain": "grandpa = দাদা / নানা",
+              "tests": "f-grandpa"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "cousins",
+              "options": [
+                {
+                  "label": "father"
+                },
+                {
+                  "label": "cousins"
+                },
+                {
+                  "label": "me"
+                }
+              ],
+              "answer": 1,
+              "tests": "f-cousins"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "We are all a happy ___ .",
+              "askBn": "We are all a happy ___ .",
+              "options": [
+                {
+                  "label": "mother"
+                },
+                {
+                  "label": "cousins"
+                },
+                {
+                  "label": "family"
+                }
+              ],
+              "answer": 2,
+              "explain": "We are all a happy family."
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "In the rhyme, they help one another.",
+              "askBn": "ছড়ায় তারা একে অপরকে সাহায্য করে।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "The rhyme says: And help one another."
+            },
+            {
+              "id": "q5",
+              "type": "tap-picture",
+              "ask": "Who is this?",
+              "askBn": "ইনি কে?",
+              "image": "fam-aunt",
+              "options": [
+                {
+                  "label": "grandpa"
+                },
+                {
+                  "label": "father"
+                },
+                {
+                  "label": "aunt"
+                }
+              ],
+              "answer": 2,
+              "explain": "aunt = চাচি / খালা / ফুফু",
+              "tests": "f-aunt"
+            }
+          ]
+        },
+        {
+          "id": "u8l5-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You can name everyone in a family!",
+          "sayBn": "তুমি পরিবারের সবার নাম বলতে পারো!"
+        }
+      ]
+    }
+  ]
+}

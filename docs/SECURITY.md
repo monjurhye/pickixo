@@ -122,4 +122,13 @@ Listed plainly rather than omitted.
    should be exposed directly. The Node HTTPS server in `apps/web/server.mjs` is
    for local development, not for terminating public traffic.
 4. Rotate `JWT_SECRET` and `GUEST_KEY_SALT` away from the development values.
-5. Confirm `.env` is absent from every backup destination (§94).
+5. `.env` is deliberately *inside* the nightly Google Drive backup
+   (`secrets/.env` in the archive), not absent from it — a conscious tradeoff,
+   not an oversight. Losing this machine without an off-machine copy of
+   `.env` (the database password, JWT secret, OAuth client secret, ...) would
+   be worse than the risk this accepts, so it travels encrypted (7-Zip,
+   AES-256, encrypted headers) instead of not travelling at all. See
+   `scripts/backup/Backup-Pickixo.ps1` for the reasoning and `docs/BACKUP.md`
+   for the mechanism. What must genuinely never be backed up anywhere is the
+   small set of credentials that unlock the backup itself — see
+   `docs/RESTORE-CREDENTIALS-CHECKLIST.txt`.

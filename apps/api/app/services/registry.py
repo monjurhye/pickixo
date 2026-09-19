@@ -25,18 +25,30 @@ _SUMMARY_COLUMNS = """
 
 
 async def list_apps(
-    *, vertical: str | None = None, featured: bool = False, limit: int = 100
+    *,
+    vertical: str | None = None,
+    category: str | None = None,
+    featured: bool = False,
+    limit: int = 100,
 ) -> list[dict]:
-    """Public products, optionally filtered to one vertical.
+    """Public products, optionally filtered to one vertical and category.
 
     Disabled products are excluded here rather than at the call site, so no
-    caller can forget and leak one into a listing.
+    caller can forget and leak one into a listing. ``category`` is the
+    ``app_categories.slug`` and is only meaningful alongside ``vertical``
+    (slugs are unique per vertical, not globally).
     """
     clauses = ["a.is_public", "a.status <> 'disabled'"]
     params: list[Any] = []
     if vertical:
         clauses.append("a.vertical = %s")
         params.append(vertical)
+        if category:
+            clauses.append(
+                "a.category_id = (SELECT id FROM app_categories"
+                " WHERE vertical = %s AND slug = %s)"
+            )
+            params.extend([vertical, category])
     if featured:
         clauses.append("a.is_featured")
     params.append(limit)

@@ -1,0 +1,912 @@
+{
+  "id": "shongkha",
+  "subject": "numbers",
+  "number": 1,
+  "title": "সংখ্যার ধারণা",
+  "icon": "number",
+  "colour": "berry",
+  "lessons": [
+    {
+      "id": "shongkha-1",
+      "subject": "numbers",
+      "unit": "shongkha",
+      "number": 1,
+      "title": "১ ২ ৩ ৪ ৫",
+      "source": {
+        "book": "আমার বই — প্রাক-প্রাথমিক শিক্ষা (NCTB)",
+        "edition": "2018",
+        "bookPages": [
+          109,
+          110,
+          111,
+          112,
+          113
+        ],
+        "pdfPages": [
+          116,
+          117,
+          118,
+          119,
+          120
+        ]
+      },
+      "objectives": [
+        {
+          "code": "৫.১.৩",
+          "band": "4+",
+          "text": "বাস্তব ও অর্ধবাস্তব উপকরণ গণনা করতে পারবে।"
+        },
+        {
+          "code": "৫.২.১",
+          "band": "5+",
+          "text": "বাস্তব ও অর্ধবাস্তব উপকরণ গণনা (১ থেকে ২০ পর্যন্ত) করতে পারবে।"
+        },
+        {
+          "code": "৫.২.২",
+          "band": "5+",
+          "text": "সংখ্যা প্রতীক শনাক্ত করতে পারবে।"
+        },
+        {
+          "code": "৫.২.৩",
+          "band": "5+",
+          "text": "বাস্তব ও অর্ধবাস্তব উপকরণের সঙ্গে সংখ্যা প্রতীক মিলাতে পারবে।"
+        },
+        {
+          "code": "৫.২.৭",
+          "band": "5+",
+          "text": "১-২০ পর্যন্ত সংখ্যা লিখতে পারবে।"
+        }
+      ],
+      "items": [
+        {
+          "id": "num-1",
+          "glyph": "১",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 1,
+          "strokes": null
+        },
+        {
+          "id": "num-2",
+          "glyph": "২",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 2,
+          "strokes": null
+        },
+        {
+          "id": "num-3",
+          "glyph": "৩",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 3,
+          "strokes": null
+        },
+        {
+          "id": "num-4",
+          "glyph": "৪",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 4,
+          "strokes": null
+        },
+        {
+          "id": "num-5",
+          "glyph": "৫",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 5,
+          "strokes": null
+        }
+      ],
+      "activities": {
+        "explore": [
+          "count",
+          "match-count"
+        ],
+        "learn": [
+          "count",
+          "match-count",
+          "trace"
+        ],
+        "practice": [
+          "fill-dots",
+          "tap-answer",
+          "order-numbers",
+          "sort"
+        ],
+        "master": [
+          "order-numbers",
+          "sequence",
+          "tap-answer",
+          "memory"
+        ]
+      },
+      "minutes": 6
+    },
+    {
+      "id": "shongkha-2",
+      "subject": "numbers",
+      "unit": "shongkha",
+      "number": 2,
+      "title": "৬ ৭ ৮ ৯ ১০",
+      "source": {
+        "book": "আমার বই — প্রাক-প্রাথমিক শিক্ষা (NCTB)",
+        "edition": "2018",
+        "bookPages": [
+          114,
+          115,
+          116,
+          117,
+          123
+        ],
+        "pdfPages": [
+          121,
+          122,
+          123,
+          124,
+          130
+        ]
+      },
+      "objectives": [
+        {
+          "code": "৫.১.৩",
+          "band": "4+",
+          "text": "বাস্তব ও অর্ধবাস্তব উপকরণ গণনা করতে পারবে।"
+        },
+        {
+          "code": "৫.২.১",
+          "band": "5+",
+          "text": "বাস্তব ও অর্ধবাস্তব উপকরণ গণনা (১ থেকে ২০ পর্যন্ত) করতে পারবে।"
+        },
+        {
+          "code": "৫.২.২",
+          "band": "5+",
+          "text": "সংখ্যা প্রতীক শনাক্ত করতে পারবে।"
+        },
+        {
+          "code": "৫.২.৩",
+          "band": "5+",
+          "text": "বাস্তব ও অর্ধবাস্তব উপকরণের সঙ্গে সংখ্যা প্রতীক মিলাতে পারবে।"
+        },
+        {
+          "code": "৫.২.৭",
+          "band": "5+",
+          "text": "১-২০ পর্যন্ত সংখ্যা লিখতে পারবে।"
+        }
+      ],
+      "items": [
+        {
+          "id": "num-6",
+          "glyph": "৬",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 6,
+          "strokes": null
+        },
+        {
+          "id": "num-7",
+          "glyph": "৭",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 7,
+          "strokes": null
+        },
+        {
+          "id": "num-8",
+          "glyph": "৮",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 8,
+          "strokes": null
+        },
+        {
+          "id": "num-9",
+          "glyph": "৯",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 9,
+          "strokes": null
+        },
+        {
+          "id": "num-10",
+          "glyph": "১০",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 10,
+          "strokes": null
+        }
+      ],
+      "activities": {
+        "explore": [
+          "count",
+          "match-count"
+        ],
+        "learn": [
+          "count",
+          "match-count",
+          "trace"
+        ],
+        "practice": [
+          "fill-dots",
+          "tap-answer",
+          "order-numbers",
+          "sort"
+        ],
+        "master": [
+          "order-numbers",
+          "sequence",
+          "tap-answer",
+          "memory"
+        ]
+      },
+      "minutes": 6
+    },
+    {
+      "id": "shongkha-3",
+      "subject": "numbers",
+      "unit": "shongkha",
+      "number": 3,
+      "title": "শূন্য ০",
+      "source": {
+        "book": "আমার বই — প্রাক-প্রাথমিক শিক্ষা (NCTB)",
+        "edition": "2018",
+        "bookPages": [
+          109,
+          110,
+          111,
+          128
+        ],
+        "pdfPages": [
+          116,
+          117,
+          118,
+          135
+        ]
+      },
+      "objectives": [
+        {
+          "code": "৫.২.৪",
+          "band": "5+",
+          "text": "শূন্য (০)- এর সহজ ধারণা দিতে পারবে।"
+        },
+        {
+          "code": "৫.২.২",
+          "band": "5+",
+          "text": "সংখ্যা প্রতীক শনাক্ত করতে পারবে।"
+        },
+        {
+          "code": "৫.২.১",
+          "band": "5+",
+          "text": "বাস্তব ও অর্ধবাস্তব উপকরণ গণনা (১ থেকে ২০ পর্যন্ত) করতে পারবে।"
+        }
+      ],
+      "items": [
+        {
+          "id": "num-0",
+          "glyph": "০",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 0,
+          "strokes": null
+        },
+        {
+          "id": "num-1",
+          "glyph": "১",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 1,
+          "strokes": null
+        },
+        {
+          "id": "num-2",
+          "glyph": "২",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 2,
+          "strokes": null
+        },
+        {
+          "id": "num-3",
+          "glyph": "৩",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 3,
+          "strokes": null
+        }
+      ],
+      "activities": {
+        "explore": [
+          "count",
+          "match-count"
+        ],
+        "learn": [
+          "count",
+          "match-count",
+          "trace"
+        ],
+        "practice": [
+          "fill-dots",
+          "tap-answer",
+          "order-numbers",
+          "sort"
+        ],
+        "master": [
+          "order-numbers",
+          "sequence",
+          "tap-answer",
+          "memory"
+        ]
+      },
+      "minutes": 5
+    },
+    {
+      "id": "shongkha-4",
+      "subject": "numbers",
+      "unit": "shongkha",
+      "number": 4,
+      "title": "১১ ১২ ১৩ ১৪ ১৫",
+      "source": {
+        "book": "আমার বই — প্রাক-প্রাথমিক শিক্ষা (NCTB)",
+        "edition": "2018",
+        "bookPages": [
+          132,
+          133,
+          134,
+          135,
+          136
+        ],
+        "pdfPages": [
+          139,
+          140,
+          141,
+          142,
+          143
+        ]
+      },
+      "objectives": [
+        {
+          "code": "৫.১.৩",
+          "band": "4+",
+          "text": "বাস্তব ও অর্ধবাস্তব উপকরণ গণনা করতে পারবে।"
+        },
+        {
+          "code": "৫.২.১",
+          "band": "5+",
+          "text": "বাস্তব ও অর্ধবাস্তব উপকরণ গণনা (১ থেকে ২০ পর্যন্ত) করতে পারবে।"
+        },
+        {
+          "code": "৫.২.২",
+          "band": "5+",
+          "text": "সংখ্যা প্রতীক শনাক্ত করতে পারবে।"
+        },
+        {
+          "code": "৫.২.৩",
+          "band": "5+",
+          "text": "বাস্তব ও অর্ধবাস্তব উপকরণের সঙ্গে সংখ্যা প্রতীক মিলাতে পারবে।"
+        },
+        {
+          "code": "৫.২.৭",
+          "band": "5+",
+          "text": "১-২০ পর্যন্ত সংখ্যা লিখতে পারবে।"
+        }
+      ],
+      "items": [
+        {
+          "id": "num-11",
+          "glyph": "১১",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 11,
+          "strokes": null
+        },
+        {
+          "id": "num-12",
+          "glyph": "১২",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 12,
+          "strokes": null
+        },
+        {
+          "id": "num-13",
+          "glyph": "১৩",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 13,
+          "strokes": null
+        },
+        {
+          "id": "num-14",
+          "glyph": "১৪",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 14,
+          "strokes": null
+        },
+        {
+          "id": "num-15",
+          "glyph": "১৫",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 15,
+          "strokes": null
+        }
+      ],
+      "activities": {
+        "explore": [
+          "count",
+          "match-count"
+        ],
+        "learn": [
+          "count",
+          "match-count",
+          "trace"
+        ],
+        "practice": [
+          "fill-dots",
+          "tap-answer",
+          "order-numbers",
+          "sort"
+        ],
+        "master": [
+          "order-numbers",
+          "sequence",
+          "tap-answer",
+          "memory"
+        ]
+      },
+      "minutes": 6
+    },
+    {
+      "id": "shongkha-5",
+      "subject": "numbers",
+      "unit": "shongkha",
+      "number": 5,
+      "title": "১৬ ১৭ ১৮ ১৯ ২০",
+      "source": {
+        "book": "আমার বই — প্রাক-প্রাথমিক শিক্ষা (NCTB)",
+        "edition": "2018",
+        "bookPages": [
+          137,
+          138,
+          139,
+          140,
+          141
+        ],
+        "pdfPages": [
+          144,
+          145,
+          146,
+          147,
+          148
+        ]
+      },
+      "objectives": [
+        {
+          "code": "৫.১.৩",
+          "band": "4+",
+          "text": "বাস্তব ও অর্ধবাস্তব উপকরণ গণনা করতে পারবে।"
+        },
+        {
+          "code": "৫.২.১",
+          "band": "5+",
+          "text": "বাস্তব ও অর্ধবাস্তব উপকরণ গণনা (১ থেকে ২০ পর্যন্ত) করতে পারবে।"
+        },
+        {
+          "code": "৫.২.২",
+          "band": "5+",
+          "text": "সংখ্যা প্রতীক শনাক্ত করতে পারবে।"
+        },
+        {
+          "code": "৫.২.৩",
+          "band": "5+",
+          "text": "বাস্তব ও অর্ধবাস্তব উপকরণের সঙ্গে সংখ্যা প্রতীক মিলাতে পারবে।"
+        },
+        {
+          "code": "৫.২.৭",
+          "band": "5+",
+          "text": "১-২০ পর্যন্ত সংখ্যা লিখতে পারবে।"
+        }
+      ],
+      "items": [
+        {
+          "id": "num-16",
+          "glyph": "১৬",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 16,
+          "strokes": null
+        },
+        {
+          "id": "num-17",
+          "glyph": "১৭",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 17,
+          "strokes": null
+        },
+        {
+          "id": "num-18",
+          "glyph": "১৮",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 18,
+          "strokes": null
+        },
+        {
+          "id": "num-19",
+          "glyph": "১৯",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 19,
+          "strokes": null
+        },
+        {
+          "id": "num-20",
+          "glyph": "২০",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 20,
+          "strokes": null
+        }
+      ],
+      "activities": {
+        "explore": [
+          "count",
+          "match-count"
+        ],
+        "learn": [
+          "count",
+          "match-count",
+          "trace"
+        ],
+        "practice": [
+          "fill-dots",
+          "tap-answer",
+          "order-numbers",
+          "sort"
+        ],
+        "master": [
+          "order-numbers",
+          "sequence",
+          "tap-answer",
+          "memory"
+        ]
+      },
+      "minutes": 6
+    },
+    {
+      "id": "shongkha-6",
+      "subject": "numbers",
+      "unit": "shongkha",
+      "number": 6,
+      "title": "ছোট থেকে বড়",
+      "source": {
+        "book": "আমার বই — প্রাক-প্রাথমিক শিক্ষা (NCTB)",
+        "edition": "2018",
+        "bookPages": [
+          144,
+          148,
+          150
+        ],
+        "pdfPages": [
+          151,
+          155,
+          157
+        ]
+      },
+      "objectives": [
+        {
+          "code": "৫.২.৮",
+          "band": "5+",
+          "text": "বাস্তব ও অর্ধবাস্তব উপকরণ গণনা করে সংখ্যা কম-বেশি নির্ণয় করতে পারবে।"
+        }
+      ],
+      "items": [
+        {
+          "id": "num-1",
+          "glyph": "১",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 1,
+          "strokes": null
+        },
+        {
+          "id": "num-2",
+          "glyph": "২",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 2,
+          "strokes": null
+        },
+        {
+          "id": "num-3",
+          "glyph": "৩",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 3,
+          "strokes": null
+        },
+        {
+          "id": "num-4",
+          "glyph": "৪",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 4,
+          "strokes": null
+        },
+        {
+          "id": "num-5",
+          "glyph": "৫",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 5,
+          "strokes": null
+        },
+        {
+          "id": "num-6",
+          "glyph": "৬",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 6,
+          "strokes": null
+        },
+        {
+          "id": "num-7",
+          "glyph": "৭",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 7,
+          "strokes": null
+        },
+        {
+          "id": "num-8",
+          "glyph": "৮",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 8,
+          "strokes": null
+        },
+        {
+          "id": "num-9",
+          "glyph": "৯",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 9,
+          "strokes": null
+        }
+      ],
+      "activities": {
+        "explore": [
+          "match-count",
+          "count"
+        ],
+        "learn": [
+          "order-numbers",
+          "match-count"
+        ],
+        "practice": [
+          "order-numbers",
+          "tap-answer",
+          "sort"
+        ],
+        "master": [
+          "order-numbers",
+          "sequence",
+          "sort"
+        ]
+      },
+      "minutes": 6
+    },
+    {
+      "id": "shongkha-7",
+      "subject": "numbers",
+      "unit": "shongkha",
+      "number": 7,
+      "title": "যোগ ও বিয়োগ",
+      "source": {
+        "book": "আমার বই — প্রাক-প্রাথমিক শিক্ষা (NCTB)",
+        "edition": "2018",
+        "bookPages": [
+          153,
+          156,
+          158
+        ],
+        "pdfPages": [
+          160,
+          163,
+          165
+        ]
+      },
+      "objectives": [
+        {
+          "code": "৫.২.৯",
+          "band": "5+",
+          "text": "বাস্তব ও অর্ধবাস্তব উপকরণের সাহায্যে যোগ করতে পারবে।"
+        },
+        {
+          "code": "৫.২.১০",
+          "band": "5+",
+          "text": "বাস্তব ও অর্ধবাস্তব উপকরণের সাহায্যে এক অঙ্কের সংখ্যা বিয়োগ করতে পারবে।"
+        }
+      ],
+      "items": [
+        {
+          "id": "num-1",
+          "glyph": "১",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 1,
+          "strokes": null
+        },
+        {
+          "id": "num-2",
+          "glyph": "২",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 2,
+          "strokes": null
+        },
+        {
+          "id": "num-3",
+          "glyph": "৩",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 3,
+          "strokes": null
+        },
+        {
+          "id": "num-4",
+          "glyph": "৪",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 4,
+          "strokes": null
+        },
+        {
+          "id": "num-5",
+          "glyph": "৫",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 5,
+          "strokes": null
+        },
+        {
+          "id": "num-6",
+          "glyph": "৬",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 6,
+          "strokes": null
+        },
+        {
+          "id": "num-7",
+          "glyph": "৭",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 7,
+          "strokes": null
+        },
+        {
+          "id": "num-8",
+          "glyph": "৮",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 8,
+          "strokes": null
+        },
+        {
+          "id": "num-9",
+          "glyph": "৯",
+          "kind": "number",
+          "words": [],
+          "audio": null,
+          "wordInitial": false,
+          "count": 9,
+          "strokes": null
+        }
+      ],
+      "activities": {
+        "explore": [
+          "count",
+          "match-count"
+        ],
+        "learn": [
+          "add-subtract",
+          "count"
+        ],
+        "practice": [
+          "add-subtract",
+          "tap-answer"
+        ],
+        "master": [
+          "add-subtract"
+        ]
+      },
+      "minutes": 7
+    }
+  ]
+}

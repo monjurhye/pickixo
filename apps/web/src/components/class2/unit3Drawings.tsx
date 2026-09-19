@@ -33,10 +33,10 @@ const HAIR = '#2f2a28';
  */
 export function Person({
   shirt = C.red, armL = 'M38 54 q-8 8 -8 20', armR = 'M62 54 q8 8 8 20',
-  sit = false, mouth = 'smile', dx = 0, dy = 0, armClass,
+  sit = false, mouth = 'smile', dx = 0, dy = 0, armClass, hair = HAIR,
 }: {
   shirt?: string; armL?: string; armR?: string; sit?: boolean;
-  mouth?: 'smile' | 'flat'; dx?: number; dy?: number; armClass?: string;
+  mouth?: 'smile' | 'flat'; dx?: number; dy?: number; armClass?: string; hair?: string;
 }) {
   return (
     <g transform={`translate(${dx} ${dy})`}>
@@ -56,7 +56,7 @@ export function Person({
       <path d={armR} stroke={C.skin} strokeWidth="6" strokeLinecap="round" fill="none"
             className={armClass} />
       <circle cx="50" cy="32" r="15" fill={C.skin} />
-      <path d="M35 30 q2 -16 15 -16 q13 0 15 16 q-7 -6 -15 -6 q-8 0 -15 6 Z" fill={HAIR} />
+      <path d="M35 30 q2 -16 15 -16 q13 0 15 16 q-7 -6 -15 -6 q-8 0 -15 6 Z" fill={hair} />
       <circle cx="44" cy="34" r="2.2" fill={C.ink} />
       <circle cx="56" cy="34" r="2.2" fill={C.ink} />
       {mouth === 'smile' ? (

@@ -1,0 +1,115 @@
+/**
+ * Pickixo Kids — its own skin.
+ *
+ * Scoped to `.kids-root` rather than layered onto the site theme, because the
+ * two want opposite things: pickixo.com is a restrained warm-paper tool, and
+ * this is a bright playground for a four-year-old. Keeping them apart means
+ * neither has to compromise, and the site's dark mode cannot turn a child's
+ * learning screen into something unreadable.
+ *
+ * The animations are all CSS. No animation library, no Lottie runtime — §26
+ * targets a 2018 Android phone on 3G, where a JavaScript animation dependency
+ * costs more than every drawing in the app put together.
+ */
+
+.kids-root {
+  /* Fixed light palette. A child's screen does not follow the site theme. */
+  color-scheme: light;
+  background:
+    radial-gradient(circle at 15% 0%, #fff3c9 0%, transparent 45%),
+    radial-gradient(circle at 85% 8%, #d8f3ef 0%, transparent 45%),
+    #fdf8ef;
+  color: #2b3440;
+  /* Long-press select and double-tap zoom both fire constantly under small
+     hands and both look like the app misbehaving. */
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/**
+ * The child's column.
+ *
+ * Capped well below the site's usual content width. Every child screen is
+ * designed for a phone held in two small hands, and letting a 150px-tall card
+ * stretch to 700px on a monitor does not make it easier to tap — it makes a
+ * short wide slab that no longer reads as a card, and pushes the two columns
+ * so far apart that they stop looking like a pair.
+ *
+ * 32rem keeps the cards roughly square and the touch targets the same size
+ * they are on a phone, which is the size they were designed at.
+ *
+ * The parent area deliberately does not use this: it is read by an adult, it
+ * is denser, and it has tables and a chart that genuinely benefit from width.
+ */
+.kids-shell {
+  width: 100%;
+  max-width: 32rem;
+  margin-inline: auto;
+}
+
+/**
+ * Centre a short screen vertically on a tall monitor.
+ *
+ * `margin-block: auto` on the flex child rather than `justify-content: center`
+ * on the parent: when the content is taller than the viewport, centring with
+ * justify-content clips the top and makes it unscrollable, while auto margins
+ * collapse and the content simply scrolls from the top.
+ */
+.kids-center {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+.kids-center > * {
+  margin-block: auto;
+}
+
+.kids-root button {
+  /* Every interactive thing a child touches clears 56px, well above the 44px
+     platform minimum. Individual components set larger targets than this. */
+  min-height: 56px;
+  font-family: inherit;
+}
+
+/* Bobbing picture — the banana that "gently moves" in §24. */
+@keyframes kids-bob {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50%      { transform: translateY(-7px) rotate(1deg); }
+}
+.kids-bob { animation: kids-bob 2.8s ease-in-out infinite; }
+
+/* A wrong tap. A wobble, not a shake: the difference between "not that one"
+   and "you got it wrong", which is the whole tone of §4. */
+@keyframes kids-wobble {
+  0%, 100% { transform: translateX(0); }
+  25%      { transform: translateX(-5px) rotate(-1.5deg); }
+  75%      { transform: translateX(5px) rotate(1.5deg); }
+}
+.kids-wobble { animation: kids-wobble 0.34s ease-in-out; }
+
+/* The celebration. */
+@keyframes kids-pop {
+  0%   { transform: scale(0.4); opacity: 0; }
+  60%  { transform: scale(1.18); opacity: 1; }
+  100% { transform: scale(1); }
+}
+.kids-pop { animation: kids-pop 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
+
+/**
+ * Reduced motion.
+ *
+ * Everything above is decoration — the app teaches identically with all of it
+ * switched off, which is the test for whether an animation may be removed
+ * safely (§21).
+ */
+@media (prefers-reduced-motion: reduce) {
+  .kids-root *,
+  .kids-root *::before,
+  .kids-root *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

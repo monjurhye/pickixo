@@ -150,6 +150,46 @@ async function hasWebGPU() {
   }
 }
 
+/** Try each execution provider in order and keep the first that works. */
+async function createSession(model, order) {
+  let lastError = null;
+  for (let i = 0; i < order.length; i++) {
+    try {
+      session = await ort.InferenceSession.create(model, {
+        executionProviders: [order[i]],
+        graphOptimizationLevel: 'all',
+      });
+      backend = order[i];
+      return;
+    } catch (error) {
+      // A WebGPU adapter can exist and still fail to compile the shaders, on
+      // older drivers in particular. Falling back is the whole point of
+      // having an order; failing here would strand those devices.
+      lastError = error;
+      session = null;
+    }
+  }
+  throw WorkerFailure('unsupported-browser',
+    'no execution provider worked: ' + String(lastError).slice(0, 200));
+}
+
+/**
+ * Rebuild the session on the CPU provider after WebGPU failed mid-run.
+ *
+ * The GPU device can be lost after a session was created successfully (driver
+ * reset, tab backgrounded on a laptop, another tab hogging the GPU). The
+ * session is then dead for good, so without this every later image fails until
+ * the page is reloaded. The model comes from the Cache API, so this is not a
+ * second download in the normal case.
+ */
+async function recoverOnWasm() {
+  const dead = session;
+  session = null;
+  try { if (dead && dead.release) await dead.release(); } catch (e) { /* already gone */ }
+  const model = await fetchModel(function () {});
+  await createSession(model, ['wasm']);
+}
+
 async function prepare(id) {
   if (session) return;
   if (preparing) return preparing;
@@ -184,28 +224,7 @@ async function prepare(id) {
 
     post({ id: id, type: 'progress', phase: 'starting', ratio: null });
 
-    const order = webgpu ? ['webgpu', 'wasm'] : ['wasm'];
-    let lastError = null;
-    for (let i = 0; i < order.length; i++) {
-      try {
-        session = await ort.InferenceSession.create(model, {
-          executionProviders: [order[i]],
-          graphOptimizationLevel: 'all',
-        });
-        backend = order[i];
-        break;
-      } catch (error) {
-        // A WebGPU adapter can exist and still fail to compile the shaders, on
-        // older drivers in particular. Falling back is the whole point of
-        // having an order; failing here would strand those devices.
-        lastError = error;
-        session = null;
-      }
-    }
-    if (!session) {
-      throw WorkerFailure('unsupported-browser',
-        'no execution provider worked: ' + String(lastError).slice(0, 200));
-    }
+    await createSession(model, webgpu ? ['webgpu', 'wasm'] : ['wasm']);
   })();
 
   try {
@@ -246,16 +265,32 @@ async function run(id, pixels, side) {
     'float32', toTensor(pixels, side), [1, 3, side, side]);
 
   const started = (self.performance || Date).now();
+  const isMemory = function (text) { return /memory|allocat|OOM/i.test(text); };
+
   let output;
   try {
     output = await session.run(feeds);
   } catch (error) {
-    const text = String(error);
-    // A failed allocation on a phone is the common case, and it is worth
-    // distinguishing: the answer to it is "try a smaller image", which is not
-    // the answer to anything else.
-    const code = /memory|allocat|OOM/i.test(text) ? 'out-of-memory' : 'inference-failed';
-    throw WorkerFailure(code, text.slice(0, 200));
+    let text = String(error);
+    // Anything other than running out of memory on the GPU is treated as a lost
+    // or broken device and retried once on the CPU. An out-of-memory error
+    // would only repeat there, so it is reported as it is.
+    if (backend === 'webgpu' && !isMemory(text)) {
+      try {
+        await recoverOnWasm();
+        output = await session.run(feeds);
+      } catch (retryError) {
+        text = String(retryError);
+        output = null;
+      }
+    }
+    if (!output) {
+      // A failed allocation on a phone is the common case, and it is worth
+      // distinguishing: the answer to it is "try a smaller image", which is not
+      // the answer to anything else.
+      const code = isMemory(text) ? 'out-of-memory' : 'inference-failed';
+      throw WorkerFailure(code, text.slice(0, 200));
+    }
   }
   const inferenceMs = (self.performance || Date).now() - started;
 

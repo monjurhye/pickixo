@@ -174,6 +174,34 @@ a running nginx returning 502 is a better outcome than no listener at all.
 
 Logs go to `C:\Pickixo\logs\`, rotating at 16 MB so they cannot fill the disk.
 
+### Deploying a web change
+
+```powershell
+cd C:\Users\Administrator\Desktop\Pickixo\apps\web
+npm run build                      # prebuild also syncs public/ort/<version>/
+Restart-Service Pickixo-Web        # NOT optional
+```
+
+**Always restart straight after a build.** `next start` keeps the previous
+build's chunk manifest in memory. Rebuilding underneath it leaves the running
+server handing out HTML that names chunk files which no longer exist: the page
+loads but is not interactive, the stylesheet and `webpack-*.js` come back as
+400 with an HTML body, and routes it had not served yet (`/sitemap.xml` was the
+first casualty) fail with `TypeError: e[o] is not a function` in
+`C:\Pickixo\logs\web.err.log`. Cloudflare's cache can hide this for a while,
+which makes it worse. Check `/tools/background-remover` and `/sitemap.xml`
+after every deploy.
+
+**Never run `next dev` in `apps/web` while the service is up.** It writes to the
+same `.next` directory and does the same damage. Test in a copy of the app
+instead.
+
+The background remover's runtime files are cached for a year and are safe to be,
+because their URLs change when their content does: `/ort/<onnxruntime-web
+version>/...` and `/workers/background-remover.js?v=<content hash>`, both set by
+`next.config.mjs`. A new ORT release or an edited worker therefore needs only the
+build above; there is nothing to purge.
+
 ### Running by hand instead
 
 ```powershell

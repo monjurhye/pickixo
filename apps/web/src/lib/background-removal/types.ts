@@ -83,7 +83,41 @@ export type RemovalErrorCode =
   | 'inference-failed'
   | 'image-too-large'
   | 'image-decode-failed'
+  | 'heic-unsupported'
   | 'cancelled';
+
+/**
+ * One image in the queue.
+ *
+ * Deliberately holds the matte and the source *file*, not decoded pixels: a
+ * batch of twenty full-size photos decoded at once would not fit in a phone's
+ * memory. The pixels are decoded again for whichever image is open in the
+ * editor, or being exported, and dropped straight after.
+ */
+export interface RemovalItem {
+  id: number;
+  file: File;
+  /** The original file name, used to name downloads. */
+  name: string;
+  /** Object URL of the source file, for the list thumbnail. */
+  thumbUrl: string;
+  status: 'queued' | 'processing' | 'done' | 'error';
+  error?: string;
+  width: number;
+  height: number;
+  /** The matte. Edited in place by the brush. Null until processed. */
+  alpha: Uint8ClampedArray | null;
+  /** The matte exactly as the model produced it, set on the first brush stroke
+   *  so "Reset" can put it back. */
+  modelAlpha: Uint8ClampedArray | null;
+  edited: boolean;
+  inferenceMs: number;
+  backend: string;
+  tier: number;
+  /** Fraction of the matte that is neither clearly subject nor background. */
+  soft: number;
+  downscaled: boolean;
+}
 
 export class RemovalError extends Error {
   readonly code: RemovalErrorCode;
