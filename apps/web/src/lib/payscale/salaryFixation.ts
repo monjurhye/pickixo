@@ -86,7 +86,20 @@ export function step(
   };
 }
 
-export function buildPhases(grade: number, currentBasic: number, newBasic: number, incrementAfter: number | null): PhasePayment[] {
+/**
+ * `julyIncrement`: অনুচ্ছেদ ১(৩)(গ) pays "বার্ষিক বেতনবৃদ্ধিসহ মূল বেতন" from 1 July 2027,
+ * so for someone already fixed under অনুচ্ছেদ ৫ the third window is the fixed pay *plus*
+ * the increment falling on that date. New appointees (অনুচ্ছেদ ১০) turn it off: the
+ * Gazette does not say whether a joiner of, say, 2027 has the qualifying service for
+ * an increment that day, and the calculator does not guess.
+ */
+export function buildPhases(
+  grade: number,
+  currentBasic: number,
+  newBasic: number,
+  incrementAfter: number | null,
+  julyIncrement = true,
+): PhasePayment[] {
   const increase = newBasic - currentBasic;
   const ninthOrAbove = isNinthGradeOrAbove(grade);
   const out: PhasePayment[] = [];
@@ -108,18 +121,23 @@ export function buildPhases(grade: number, currentBasic: number, newBasic: numbe
     });
   }
 
+  const withIncrement = julyIncrement && incrementAfter !== null;
+  const fullPay = withIncrement ? (incrementAfter as number) : newBasic;
+
   out.push({
     id: 'phase-3',
     label: 'পর্যায় ৩',
     from: '2027-07-01',
     to: null,
     percent: 100,
-    payable: newBasic,
-    addedToCurrentBasic: increase,
+    payable: fullPay,
+    addedToCurrentBasic: fullPay - currentBasic,
     certainty: 'GAZETTE',
     source: REF.phase3,
     note:
-      incrementAfter === null
+      !julyIncrement
+        ? 'অনুচ্ছেদ ১(৩)(গ): ১ জুলাই ২০২৭ হইতে মূল বেতন শতভাগ প্রদেয়। নূতন নিয়োগে ঐ তারিখে বার্ষিক বেতনবৃদ্ধি প্রাপ্য হইবে কি না গেজেটে স্পষ্ট নাই, তাই তাহা যোগ করা হয় নাই।'
+      : incrementAfter === null
         ? 'অনুচ্ছেদ ১(৩)(গ): ১ জুলাই ২০২৭ হইতে বার্ষিক বেতনবৃদ্ধিসহ মূল বেতন শতভাগ প্রদেয়। এই স্কেলে পরবর্তী ধাপ না থাকায় ২০২৭ সালের বেতনবৃদ্ধির অঙ্ক নির্ণয় করা যায় নাই।'
         : `অনুচ্ছেদ ১(৩)(গ): ১ জুলাই ২০২৭ হইতে বার্ষিক বেতনবৃদ্ধিসহ মূল বেতন শতভাগ প্রদেয় — অর্থাৎ ${taka(newBasic)} + ${taka(incrementAfter - newBasic)} = ${taka(incrementAfter)}।`,
   });

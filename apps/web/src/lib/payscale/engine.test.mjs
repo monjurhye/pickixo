@@ -277,7 +277,22 @@ test('অনুচ্ছেদ ১(৩)', 'the percentage applies to the increas
   // The phase-1 figure must be well below the new basic — if anyone ever makes
   // it a percentage of basic instead, this is what catches it.
   assert.ok(r.phases[0].payable < r.newBasic);
-  assert.equal(r.phases[2].payable, r.newBasic, 'phase 3 is the full new basic');
+  // অনুচ্ছেদ ১(৩)(গ): from 1 July 2027 the *full* pay comes "বার্ষিক বেতনবৃদ্ধিসহ" —
+  // the fixed pay plus the increment falling on that date.
+  const after = payScale.nextStep(r.newScale, r.newScale.steps.indexOf(r.newBasic));
+  assert.equal(r.phases[2].payable, after.value, 'phase 3 is the fixed pay plus the 1 July 2027 increment');
+  assert.equal(r.phases[2].addedToCurrentBasic, after.value - 9300);
+});
+
+test('অনুচ্ছেদ ১(৩)(গ)', 'a grade 6 employee on the 4th step: 41,110 → 82,200 → 86,400 from July 2027', () => {
+  // Hand-checked against the Gazette: 5(খ) 41110−35500 = 5610; 71000+5610 = 76610 → next step 78300;
+  // 9(২) +1 increment → 82200; 1(৩)(ক) 40% of (82200−41110) = 16436; 1(৩)(খ) 70% = 28763;
+  // 1(৩)(গ) with the 2027 increment → 86400.
+  const r = fixSalary({ grade: 6, currentBasic: 41110, category: 'regular' });
+  assert.equal(r.fixedBasic, 78300);
+  assert.equal(r.newBasic, 82200);
+  assert.equal(r.monthlyIncrease, 41090);
+  assert.deepEqual(r.phases.map((p) => p.payable), [41110 + 16436, 41110 + 28763, 86400]);
 });
 
 test('অনুচ্ছেদ ১(৩)(গ)', 'phase 3 runs from 1 July 2027 with no end date', () => {

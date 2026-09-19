@@ -37,10 +37,10 @@ export function SalaryResult({ result }: { result: FixationResult }) {
     <div className="ps-report space-y-4">
       {/* --- headline ------------------------------------------------------ */}
       <ResultHero
-        eyebrow="১ জুলাই ২০২৬ তারিখে নির্ধারিত নতুন মূল বেতন"
+        eyebrow="২০২৬ স্কেলে নির্ধারিত মূল বেতন (পূর্ণ হারে)"
         badge={gradeLabel(input.grade)}
         value={taka(result.newBasic)}
-        caption="২০২৬ স্কেলে, ১টি বার্ষিক বেতনবৃদ্ধিসহ"
+        caption="১ জুলাই ২০২৬ তারিখে ১টি বার্ষিক বেতনবৃদ্ধিসহ। এই অঙ্ক একবারে নয়, পর্যায়ক্রমে প্রদেয় — নিচের টেবিল দেখুন।"
         compare={(
           <>
             <span className="text-ink-muted">
@@ -48,12 +48,19 @@ export function SalaryResult({ result }: { result: FixationResult }) {
             </span>
             <span aria-hidden="true" className="hidden text-ink-subtle sm:inline">→</span>
             <span className="rounded-full bg-surface px-2.5 py-1 font-semibold text-success">
-              মাসে +{taka(result.monthlyIncrease)} ({percentBn(result.percentIncrease)})
+              পূর্ণ হারে +{taka(result.monthlyIncrease)} ({percentBn(result.percentIncrease)})
             </span>
+            {result.phases[0] ? (
+              <span className="text-ink-muted">
+                ৩১ ডিসেম্বর ২০২৬ পর্যন্ত হাতে পাইবেন{' '}
+                <span className="font-semibold text-ink">{taka(result.phases[0].payable)}</span>
+                {' '}({toBnDigits(result.phases[0].percent)}%)
+              </span>
+            ) : null}
           </>
         )}
         footer={[
-          { label: 'বার্ষিক মূল বেতন বৃদ্ধি', value: taka(result.annualIncrease), hint: 'মাসিক বৃদ্ধি × ১২' },
+          { label: 'বার্ষিক বৃদ্ধি (পূর্ণ হারে)', value: taka(result.annualIncrease), hint: 'মাসিক বৃদ্ধি × ১২' },
           {
             label: 'পরবর্তী বেতনবৃদ্ধি',
             value: result.nextIncrementAmount === null ? 'নির্ধারিত নয়' : `+${taka(result.nextIncrementAmount)}`,
