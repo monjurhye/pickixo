@@ -7,7 +7,7 @@ import { AppCard } from '@/components/apps/AppCard';
 import { EmptyState } from '@/components/ui/States';
 import { apiFetchOrNull, type AppSummary } from '@/lib/api';
 import { getCurrentUser } from '@/lib/session';
-import { SUBMENUS, VERTICALS, getVertical, isVertical } from '@/lib/verticals';
+import { SUBMENUS, VERTICALS, getVertical, isVertical, submenuHref } from '@/lib/verticals';
 import { buildMetadata, jsonLd, breadcrumbSchema } from '@/lib/seo';
 
 /**
@@ -88,7 +88,7 @@ export default async function VerticalPage(
               {submenu.map((s) => (
                 <Link
                   key={s.slug}
-                  href={`/${vertical.slug}/${s.slug}`}
+                  href={submenuHref(vertical.slug, s)}
                   className="rounded-card border border-border bg-surface p-4 transition-colors
                              hover:bg-surface-sunken"
                 >

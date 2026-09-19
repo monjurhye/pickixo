@@ -73,7 +73,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       };
     }),
     ...Object.entries(SUBMENUS).flatMap(([vertical, items]) =>
-      (items ?? []).map((s) => ({
+      (items ?? []).filter((s) => !s.href).map((s) => ({
         url: absoluteUrl(`/${vertical}/${s.slug}`),
         changeFrequency: 'weekly' as const,
         priority: 0.5,

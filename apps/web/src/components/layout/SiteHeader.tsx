@@ -7,7 +7,7 @@ import { Logo } from '@/components/Logo';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { SearchBox } from '@/components/layout/SearchBox';
 import { Button } from '@/components/ui/Button';
-import { PRIMARY_NAV, SUBMENUS } from '@/lib/verticals';
+import { PRIMARY_NAV, SUBMENUS, submenuHref } from '@/lib/verticals';
 import type { User } from '@/lib/api';
 import { cn } from '@/lib/utils';
 
@@ -86,7 +86,7 @@ export function SiteHeader({ user }: { user: User | null }) {
                     {sub.map((s) => (
                       <li key={s.slug}>
                         <Link
-                          href={`/${v.slug}/${s.slug}`}
+                          href={submenuHref(v.slug, s)}
                           className="block rounded-control px-3 py-2 text-small text-ink-muted
                                      hover:bg-surface-sunken hover:text-ink"
                         >
@@ -197,7 +197,7 @@ export function SiteHeader({ user }: { user: User | null }) {
                       {SUBMENUS[v.slug]!.map((s) => (
                         <li key={s.slug}>
                           <Link
-                            href={`/${v.slug}/${s.slug}`}
+                            href={submenuHref(v.slug, s)}
                             onClick={() => setMobileOpen(false)}
                             className="block rounded-control px-3 py-1.5 text-small text-ink-muted
                                        hover:bg-surface-sunken hover:text-ink"

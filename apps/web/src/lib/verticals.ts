@@ -88,6 +88,14 @@ export interface SubMenuItem {
   name: string;
   nameBn: string;
   description: string;
+  /** For an entry that points at an existing page outside `/<vertical>/<slug>`
+   *  (e.g. the pay-scale calculators). Such entries have no registry category
+   *  and no route of their own, so they are also left out of the sitemap. */
+  href?: string;
+}
+
+export function submenuHref(vertical: string, item: SubMenuItem): string {
+  return item.href ?? `/${vertical}/${item.slug}`;
 }
 
 /**
@@ -98,6 +106,36 @@ export interface SubMenuItem {
  * Services has any today; a section without an entry here is a plain link.
  */
 export const SUBMENUS: Partial<Record<Vertical, readonly SubMenuItem[]>> = {
+  jobs: [
+    {
+      slug: 'salary-calculator',
+      name: 'Govt Salary Calculator',
+      nameBn: 'সরকারি বেতন ক্যালকুলেটর',
+      description: 'National Pay Scale 2026: fixed pay for serving staff and new appointees.',
+      href: '/salary-calculator',
+    },
+    {
+      slug: 'pay-scale-2026',
+      name: 'Pay Scale 2026',
+      nameBn: 'জাতীয় বেতনস্কেল ২০২৬',
+      description: 'Every grade and step of the 2026 scale, from the Gazette.',
+      href: '/pay-scale-2026',
+    },
+    {
+      slug: 'increment-calculator',
+      name: 'Increment Calculator',
+      nameBn: 'বেতনবৃদ্ধি ক্যালকুলেটর',
+      description: 'Your next annual increments in the 2026 scale.',
+      href: '/increment-calculator',
+    },
+    {
+      slug: 'pay-scale-comparison',
+      name: '2015 vs 2026',
+      nameBn: '২০১৫ বনাম ২০২৬',
+      description: 'How basic pay changes between the two scales.',
+      href: '/2015-vs-2026-pay-scale',
+    },
+  ],
   banking: [
     {
       slug: 'loans',

@@ -7,7 +7,7 @@ import { AppCard } from '@/components/apps/AppCard';
 import { EmptyState } from '@/components/ui/States';
 import { apiFetchOrNull, type AppSummary } from '@/lib/api';
 import { getCurrentUser } from '@/lib/session';
-import { SUBMENUS, getSubMenu, getVertical } from '@/lib/verticals';
+import { SUBMENUS, getSubMenu, getVertical, submenuHref } from '@/lib/verticals';
 import { buildMetadata, jsonLd, breadcrumbSchema } from '@/lib/seo';
 
 /**
@@ -80,7 +80,7 @@ export async function SubMenuPage(
           {siblings.map((s) => (
             <Link
               key={s.slug}
-              href={`/${parent.slug}/${s.slug}`}
+              href={submenuHref(parent.slug, s)}
               aria-current={s.slug === sub.slug ? 'page' : undefined}
               className={
                 s.slug === sub.slug
