@@ -1,11 +1,6 @@
 'use client';
 
 import { Card, Money, Source, Stat, Warnings } from './Ui';
-import { SalaryFixationDetails, FormulaViewer } from './SalaryFixationDetails';
-import { BenefitAdjustment } from './BenefitAdjustment';
-import { AuditTrailView } from './AuditTrail';
-import { AiExplainer } from './AiExplainer';
-import { ArrearsCalculator } from './ArrearsCalculator';
 import { formatBn, formatDateBn, gradeLabel, percentBn, taka, toBnDigits } from '@/lib/payscale/format';
 import { REF } from '@/lib/payscale/sourceReference';
 import type { FixationResult } from '@/lib/payscale/types';
@@ -97,22 +92,6 @@ export function SalaryResult({ result }: { result: FixationResult }) {
 
       {/* --- what is actually paid, and when ------------------------------- */}
       <PhaseTable result={result} />
-
-      {/* --- what is actually owed for July 2026 onwards ------------------- */}
-      <ArrearsCalculator result={result} />
-
-      {/* --- the 10% / 15% question --------------------------------------- */}
-      <BenefitAdjustment amount={input.specialBenefitAmount} />
-
-      {/* --- how we got there ---------------------------------------------- */}
-      <SalaryFixationDetails result={result} />
-      <FormulaViewer result={result} />
-
-      <Warnings items={result.warnings} title="সতর্কতা ও তথ্য" />
-
-      <AuditTrailView result={result} />
-
-      <AiExplainer result={result} />
     </div>
   );
 }
