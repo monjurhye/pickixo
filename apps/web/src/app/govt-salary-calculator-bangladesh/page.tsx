@@ -22,9 +22,9 @@ import {
  */
 
 const PATH = '/govt-salary-calculator-bangladesh';
-const TITLE = 'Government Salary Calculator Bangladesh — Pay Scale 2026';
+const TITLE = 'Salary Calculator Bangladesh — National Pay Scale 2026';
 const DESCRIPTION =
-  'Free government salary calculator for Bangladesh, built from the National Pay Scale '
+  'Free salary calculator for Bangladesh, built from the National Pay Scale '
   + '2026 gazette (S.R.O. 347-Ain/2026, 17 September 2026). Grade 1–20 pay fixation, '
   + 'annual increment, phased 40%/50% payment and allowance rates, with the gazette '
   + 'article cited for every figure.';
@@ -40,10 +40,10 @@ export default function Page() {
           __html: jsonLd(
             breadcrumbSchema([
               { name: 'Home', path: '/' },
-              { name: 'Government Salary Calculator', path: PATH },
+              { name: 'Salary Calculator', path: PATH },
             ]),
             softwareApplicationSchema({
-              name: 'Bangladesh Government Salary Calculator 2026',
+              name: 'Bangladesh Salary Calculator 2026',
               description: DESCRIPTION,
               url: PATH,
               category: 'FinanceApplication',
@@ -62,8 +62,8 @@ export default function Page() {
       />
 
       <PayScaleShell
-        title="Government Salary Calculator, Bangladesh"
-        crumb="Government salary calculator"
+        title="Salary Calculator, Bangladesh"
+        crumb="Salary calculator"
         activeHref={PATH}
         lead={
           <>

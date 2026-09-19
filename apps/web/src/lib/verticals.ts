@@ -109,8 +109,8 @@ export const SUBMENUS: Partial<Record<Vertical, readonly SubMenuItem[]>> = {
   jobs: [
     {
       slug: 'salary-calculator',
-      name: 'Govt Salary Calculator',
-      nameBn: 'সরকারি বেতন ক্যালকুলেটর',
+      name: 'Salary Calculator',
+      nameBn: 'বেতন ক্যালকুলেটর',
       description: 'National Pay Scale 2026: fixed pay for serving staff and new appointees.',
       href: '/salary-calculator',
     },

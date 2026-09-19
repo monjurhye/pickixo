@@ -44,7 +44,7 @@ export async function PayScaleShell({
         <nav aria-label="Breadcrumb" className="ps-no-print text-small text-ink-subtle">
           <Link href="/" className="hover:text-ink">হোম</Link>
           <span className="mx-1.5" aria-hidden="true">›</span>
-          <Link href="/salary-calculator" className="hover:text-ink">সরকারি বেতন</Link>
+          <Link href="/salary-calculator" className="hover:text-ink">বেতন ক্যালকুলেটর</Link>
           <span className="mx-1.5" aria-hidden="true">›</span>
           <span className="text-ink-muted">{crumb}</span>
         </nav>
@@ -54,7 +54,7 @@ export async function PayScaleShell({
           {lead ? <p className="mt-2.5 text-body text-ink-muted">{lead}</p> : null}
         </header>
 
-        <nav aria-label="সরকারি বেতন সংক্রান্ত পাতা" className="ps-no-print mt-5 -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+        <nav aria-label="বেতন সংক্রান্ত পাতা" className="ps-no-print mt-5 -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
           <ul className="flex min-w-max gap-2 pb-1">
             {PAY_SCALE_LINKS.map((link) => {
               const active = link.href === activeHref;
