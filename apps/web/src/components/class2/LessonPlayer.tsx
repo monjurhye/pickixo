@@ -70,6 +70,7 @@ interface LooseStep {
   kind?: string;
   rounds?: GameRoundLike[];
   questions?: QuestionLike[];
+  commands?: { text: string; textBn?: string; illustration: string | null }[];
 }
 
 interface Props {
@@ -180,6 +181,7 @@ export function LessonPlayer({ lesson, unitTitle, onExit, onFinished }: Props) {
         )}
         {step.type === 'dialogue' && <StepDialogue step={step} onNext={next} />}
         {step.type === 'rhyme' && <StepRhyme step={step} onNext={next} />}
+        {step.type === 'command' && <StepCommand step={step} onNext={next} />}
         {step.type === 'speak' && <StepSpeak step={step} onNext={next} />}
         {step.type === 'game' && (
           <StepGame step={step} vocabById={vocabById} onNext={next}
@@ -487,6 +489,66 @@ function StepRhyme({ step, onNext }: { step: LooseStep; onNext: () => void }) {
         {playing ? 'Reciting… 🎵' : '▶︎ Listen to the rhyme'}
       </button>
       <BigButton onClick={onNext}>Next →</BigButton>
+    </section>
+  );
+}
+
+/**
+ * "Listen and do" — the classroom-commands lesson is about acting, not
+ * answering, so this is the one step with no right or wrong.
+ *
+ * One command at a time, spoken as it appears, with the picture large. The
+ * child does it (stands up, claps, draws on paper) and taps to say so. There
+ * is nothing to mark, so there is nothing to get wrong: the only thing that
+ * could go badly is a child having no way to hear the command again, which is
+ * why 🔊 and 🐢 stay on screen.
+ */
+function StepCommand({ step, onNext }: { step: LooseStep; onNext: () => void }) {
+  const commands = step.commands ?? [];
+  const [index, setIndex] = useState(0);
+  const current = commands[index];
+  const last = index + 1 >= commands.length;
+
+  useEffect(() => { if (current) void say(current.text); }, [current]);
+
+  if (!current) {
+    return (
+      <section className="pt-2">
+        <Title step={step} />
+        <BigButton onClick={onNext}>Next →</BigButton>
+      </section>
+    );
+  }
+
+  return (
+    <section className="flex flex-col items-center pt-2 text-center">
+      <Title step={step} />
+      <p className="mt-1 text-small text-ink-subtle">{index + 1} of {commands.length}</p>
+
+      <div className="mt-4">
+        <Illustration name={current.illustration ?? 'unknown'} size={180} animate
+                      label={current.text} />
+      </div>
+
+      <div className="mt-4 flex items-center justify-center gap-3">
+        <p className="text-title text-ink">{current.text}</p>
+        <Speaker text={current.text} />
+        <Speaker text={current.text} slow size="sm" />
+      </div>
+      {current.textBn ? (
+        <div className="mt-1 flex items-center justify-center gap-2">
+          <p className="text-subheading text-ink-muted">{current.textBn}</p>
+          <BanglaSpeaker text={current.textBn} size="sm" />
+        </div>
+      ) : null}
+
+      <p className="mt-4 rounded-control bg-accent-soft px-4 py-2 text-body text-accent-ink">
+        Do it now! 🙌
+      </p>
+
+      <BigButton onClick={() => (last ? onNext() : setIndex((i) => i + 1))}>
+        {last ? 'All done →' : 'I did it! ✓'}
+      </BigButton>
     </section>
   );
 }

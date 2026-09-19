@@ -142,7 +142,11 @@ export interface StoryStep extends StepBase {
 
 export interface CommandStep extends StepBase {
   type: 'command';
-  commands: { text: string; illustration: string | null }[];
+  /**
+   * Each command is spoken aloud and acted out. `textBn` is Pickixo's own
+   * gloss (enrichment), like every Bangla meaning in this file.
+   */
+  commands: { text: string; textBn?: string; illustration: string | null }[];
   source: Source;
 }
 
@@ -369,6 +373,15 @@ export function validateUnit(unit: Unit): ValidationIssue[] {
         // Somewhere in every quiz there has to be a question you can see.
         if (step.questions.length && needsEars === step.questions.length) {
           add(sAt, 'every question needs sound — add one the child can see');
+        }
+      }
+
+      if (step.type === 'command') {
+        // A "listen and do" step with nothing to do leaves the child looking
+        // at an empty screen with a button that says they have done it.
+        if (!step.commands.length) add(sAt, 'command step has no commands');
+        for (const [i, c] of step.commands.entries()) {
+          if (!c.text) add(`${sAt}/${i}`, 'command has no text');
         }
       }
 

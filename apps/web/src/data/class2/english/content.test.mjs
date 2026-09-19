@@ -163,6 +163,14 @@ check('validator rejects a lesson that never ends', () => {
   assert.ok(validateUnit(broken).length > 0, 'a lesson with no ending slipped through');
 });
 
+check('validator rejects a command step with nothing to do', () => {
+  const unit3 = unitFiles.find((f) => f.startsWith('unit03'));
+  const broken = JSON.parse(fs.readFileSync(path.join(here, unit3), 'utf8'));
+  const cmd = broken.lessons[0].steps.find((s) => s.type === 'command');
+  cmd.commands = [];
+  assert.ok(validateUnit(broken).length > 0, 'an empty "listen and do" step slipped through');
+});
+
 check('validator rejects an unmarked Bangla meaning', () => {
   const broken = JSON.parse(fs.readFileSync(path.join(here, unitFiles[0]), 'utf8'));
   broken.lessons[0].vocabulary[0].banglaSource = 'textbook';

@@ -1,0 +1,1759 @@
+{
+  "id": "u3",
+  "number": 3,
+  "title": "Commands, Instructions and Requests",
+  "titleBn": "আদেশ, নির্দেশ ও অনুরোধ",
+  "colour": "violet",
+  "icon": "hand",
+  "_source": "English for Today, Class Two (NCTB). Unit 3, book pages 31-35.",
+  "_note": "Commands, dialogues, rules and requests are transcribed word for word from the textbook. Bangla meanings are Pickixo's addition - the book carries no glosses. Drawing activities are done on paper, as in the book.",
+  "lessons": [
+    {
+      "id": "u3l1",
+      "unitId": "u3",
+      "number": 1,
+      "title": "Classroom Commands",
+      "titleBn": "শ্রেণিকক্ষের আদেশ",
+      "shape": "command",
+      "bookPages": [
+        31,
+        32
+      ],
+      "objective": "Understand ten classroom commands and act on them.",
+      "objectiveBn": "শ্রেণিকক্ষের দশটি আদেশ বুঝে সেই অনুযায়ী কাজ করা।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "raise-hand",
+          "word": "Raise your hand",
+          "bangla": "হাত তোলো",
+          "banglaPronunciation": "রেইজ ইয়োর হ্যান্ড",
+          "banglaSource": "enrichment",
+          "bookPage": 31,
+          "category": "action",
+          "image": "raise-hand"
+        },
+        {
+          "id": "sit-down",
+          "word": "Sit down",
+          "bangla": "বসো",
+          "banglaPronunciation": "সিট ডাউন",
+          "banglaSource": "enrichment",
+          "bookPage": 31,
+          "category": "action",
+          "image": "sit-down"
+        },
+        {
+          "id": "stand-up",
+          "word": "Stand up",
+          "bangla": "দাঁড়াও",
+          "banglaPronunciation": "স্ট্যান্ড আপ",
+          "banglaSource": "enrichment",
+          "bookPage": 31,
+          "category": "action",
+          "image": "stand-up"
+        },
+        {
+          "id": "clean-board",
+          "word": "Clean the board",
+          "bangla": "বোর্ড মোছো",
+          "banglaPronunciation": "ক্লিন দ্য বোর্ড",
+          "banglaSource": "enrichment",
+          "bookPage": 32,
+          "category": "action",
+          "image": "clean-board",
+          "example": "Clean the board and go back to your seat.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "be-quiet",
+          "word": "Be quiet",
+          "bangla": "চুপ করো",
+          "banglaPronunciation": "বি কোয়াইট",
+          "banglaSource": "enrichment",
+          "bookPage": 31,
+          "category": "action",
+          "image": "be-quiet"
+        },
+        {
+          "id": "close-book",
+          "word": "Close your book",
+          "bangla": "তোমার বই বন্ধ করো",
+          "banglaPronunciation": "ক্লোজ ইয়োর বুক",
+          "banglaSource": "enrichment",
+          "bookPage": 31,
+          "category": "action",
+          "image": "close-book"
+        },
+        {
+          "id": "come-here",
+          "word": "Come here",
+          "bangla": "এখানে এসো",
+          "banglaPronunciation": "কাম হিয়ার",
+          "banglaSource": "enrichment",
+          "bookPage": 31,
+          "category": "action",
+          "image": "come-here"
+        },
+        {
+          "id": "write-name",
+          "word": "Write your name",
+          "bangla": "তোমার নাম লেখো",
+          "banglaPronunciation": "রাইট ইয়োর নেইম",
+          "banglaSource": "enrichment",
+          "bookPage": 32,
+          "category": "action",
+          "image": "write-name",
+          "example": "Write your name on the board.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "clap-hands",
+          "word": "Clap your hands",
+          "bangla": "হাততালি দাও",
+          "banglaPronunciation": "ক্ল্যাপ ইয়োর হ্যান্ডস",
+          "banglaSource": "enrichment",
+          "bookPage": 31,
+          "category": "action",
+          "image": "clap-hands"
+        },
+        {
+          "id": "open-book",
+          "word": "Open your book",
+          "bangla": "তোমার বই খোলো",
+          "banglaPronunciation": "ওপেন ইয়োর বুক",
+          "banglaSource": "enrichment",
+          "bookPage": 31,
+          "category": "action",
+          "image": "open-book"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u3l1-intro",
+          "type": "intro",
+          "title": "Listen and do!",
+          "titleBn": "শোনো আর করো!",
+          "say": "Listen to your teacher's commands. Then do them.",
+          "sayBn": "শিক্ষক আদেশ দেন। শোনো আর সেটা করো।",
+          "illustration": "classroom"
+        },
+        {
+          "id": "u3l1-words1",
+          "type": "vocab",
+          "bookActivity": "B",
+          "title": "Commands 1",
+          "titleBn": "আদেশ ১",
+          "items": [
+            "raise-hand",
+            "sit-down",
+            "stand-up",
+            "clean-board",
+            "be-quiet"
+          ]
+        },
+        {
+          "id": "u3l1-words2",
+          "type": "vocab",
+          "bookActivity": "B",
+          "title": "Commands 2",
+          "titleBn": "আদেশ ২",
+          "items": [
+            "close-book",
+            "come-here",
+            "write-name",
+            "clap-hands",
+            "open-book"
+          ]
+        },
+        {
+          "id": "u3l1-do",
+          "type": "command",
+          "bookActivity": "B",
+          "title": "Listen and do",
+          "titleBn": "শোনো আর করো",
+          "source": "textbook",
+          "commands": [
+            {
+              "text": "Raise your hand",
+              "textBn": "হাত তোলো",
+              "illustration": "raise-hand"
+            },
+            {
+              "text": "Sit down",
+              "textBn": "বসো",
+              "illustration": "sit-down"
+            },
+            {
+              "text": "Stand up",
+              "textBn": "দাঁড়াও",
+              "illustration": "stand-up"
+            },
+            {
+              "text": "Clean the board",
+              "textBn": "বোর্ড মোছো",
+              "illustration": "clean-board"
+            },
+            {
+              "text": "Be quiet",
+              "textBn": "চুপ করো",
+              "illustration": "be-quiet"
+            },
+            {
+              "text": "Close your book",
+              "textBn": "তোমার বই বন্ধ করো",
+              "illustration": "close-book"
+            },
+            {
+              "text": "Come here",
+              "textBn": "এখানে এসো",
+              "illustration": "come-here"
+            },
+            {
+              "text": "Write your name",
+              "textBn": "তোমার নাম লেখো",
+              "illustration": "write-name"
+            },
+            {
+              "text": "Clap your hands",
+              "textBn": "হাততালি দাও",
+              "illustration": "clap-hands"
+            },
+            {
+              "text": "Open your book",
+              "textBn": "তোমার বই খোলো",
+              "illustration": "open-book"
+            }
+          ]
+        },
+        {
+          "id": "u3l1-talk1",
+          "type": "dialogue",
+          "bookActivity": "D",
+          "title": "Listen carefully!",
+          "titleBn": "মন দিয়ে শোনো!",
+          "source": "textbook",
+          "lines": [
+            {
+              "speaker": "Teacher",
+              "text": "Hello, students! Listen carefully."
+            },
+            {
+              "speaker": "Students",
+              "text": "Sure, teacher."
+            },
+            {
+              "speaker": "Teacher",
+              "text": "Hello Noboni, show me your book."
+            },
+            {
+              "speaker": "Noboni",
+              "text": "Here it is, teacher."
+            }
+          ]
+        },
+        {
+          "id": "u3l1-talk2",
+          "type": "dialogue",
+          "bookActivity": "D",
+          "title": "Write on the board",
+          "titleBn": "বোর্ডে লেখো",
+          "source": "textbook",
+          "lines": [
+            {
+              "speaker": "Teacher",
+              "text": "Hello, Abeer, come here. Write your name on the board."
+            },
+            {
+              "speaker": "Abeer",
+              "text": "Sure, I will."
+            },
+            {
+              "speaker": "Teacher",
+              "text": "Well done, Abeer. Clean the board and go back to your seat."
+            },
+            {
+              "speaker": "Abeer",
+              "text": "Thank you, teacher."
+            },
+            {
+              "speaker": "Teacher",
+              "text": "Monali, come to the front. Now, draw a circle on the board."
+            },
+            {
+              "speaker": "Monali",
+              "text": "Here we go, teacher."
+            },
+            {
+              "speaker": "Teacher",
+              "text": "Good job, Monali. Thank you."
+            },
+            {
+              "speaker": "Monali",
+              "text": "You're welcome, teacher."
+            }
+          ]
+        },
+        {
+          "id": "u3l1-speak1",
+          "type": "speak",
+          "bookActivity": "E",
+          "title": "Be the teacher!",
+          "titleBn": "তুমি শিক্ষক হও!",
+          "prompt": "Tell a friend to sit down.",
+          "promptBn": "বন্ধুকে বসতে বলো।",
+          "modelAnswer": "Sit down."
+        },
+        {
+          "id": "u3l1-speak2",
+          "type": "speak",
+          "bookActivity": "E",
+          "title": "Answer your teacher",
+          "titleBn": "শিক্ষককে উত্তর দাও",
+          "prompt": "Teacher says: Show me your book.",
+          "promptBn": "শিক্ষক বললেন: তোমার বইটা দেখাও।",
+          "modelAnswer": "Here it is, teacher."
+        },
+        {
+          "id": "u3l1-game1",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "C",
+          "title": "Name the command",
+          "titleBn": "আদেশটির নাম বলো",
+          "rounds": [
+            {
+              "id": "r-stand-up",
+              "ask": "What is the command?",
+              "askBn": "আদেশটি কী?",
+              "image": "stand-up",
+              "options": [
+                {
+                  "label": "Stand up"
+                },
+                {
+                  "label": "Clean the board"
+                },
+                {
+                  "label": "Be quiet"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at what the child is doing.",
+              "tests": "stand-up"
+            },
+            {
+              "id": "r-sit-down",
+              "ask": "What is the command?",
+              "askBn": "আদেশটি কী?",
+              "image": "sit-down",
+              "options": [
+                {
+                  "label": "Sit down"
+                },
+                {
+                  "label": "Raise your hand"
+                },
+                {
+                  "label": "Stand up"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at what the child is doing.",
+              "tests": "sit-down"
+            },
+            {
+              "id": "r-raise-hand",
+              "ask": "What is the command?",
+              "askBn": "আদেশটি কী?",
+              "image": "raise-hand",
+              "options": [
+                {
+                  "label": "Be quiet"
+                },
+                {
+                  "label": "Open your book"
+                },
+                {
+                  "label": "Raise your hand"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at what the child is doing.",
+              "tests": "raise-hand"
+            },
+            {
+              "id": "r-clean-board",
+              "ask": "What is the command?",
+              "askBn": "আদেশটি কী?",
+              "image": "clean-board",
+              "options": [
+                {
+                  "label": "Clap your hands"
+                },
+                {
+                  "label": "Clean the board"
+                },
+                {
+                  "label": "Open your book"
+                }
+              ],
+              "answer": 1,
+              "hint": "Look at what the child is doing.",
+              "tests": "clean-board"
+            },
+            {
+              "id": "r-be-quiet",
+              "ask": "What is the command?",
+              "askBn": "আদেশটি কী?",
+              "image": "be-quiet",
+              "options": [
+                {
+                  "label": "Be quiet"
+                },
+                {
+                  "label": "Clean the board"
+                },
+                {
+                  "label": "Stand up"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at what the child is doing.",
+              "tests": "be-quiet"
+            }
+          ]
+        },
+        {
+          "id": "u3l1-game2",
+          "type": "game",
+          "kind": "listen-and-choose",
+          "bookActivity": "C",
+          "title": "Listen and choose",
+          "titleBn": "শোনো আর বেছে নাও",
+          "rounds": [
+            {
+              "id": "l-clap-hands",
+              "ask": "Listen. Which picture?",
+              "askBn": "শোনো। কোন ছবি?",
+              "speak": "Clap your hands",
+              "options": [
+                {
+                  "label": "Raise your hand",
+                  "image": "raise-hand"
+                },
+                {
+                  "label": "Sit down",
+                  "image": "sit-down"
+                },
+                {
+                  "label": "Clap your hands",
+                  "image": "clap-hands"
+                }
+              ],
+              "answer": 2,
+              "hint": "Listen once more. Then look at each picture.",
+              "tests": "clap-hands"
+            },
+            {
+              "id": "l-come-here",
+              "ask": "Listen. Which picture?",
+              "askBn": "শোনো। কোন ছবি?",
+              "speak": "Come here",
+              "options": [
+                {
+                  "label": "Come here",
+                  "image": "come-here"
+                },
+                {
+                  "label": "Raise your hand",
+                  "image": "raise-hand"
+                },
+                {
+                  "label": "Be quiet",
+                  "image": "be-quiet"
+                }
+              ],
+              "answer": 0,
+              "hint": "Listen once more. Then look at each picture.",
+              "tests": "come-here"
+            },
+            {
+              "id": "l-write-name",
+              "ask": "Listen. Which picture?",
+              "askBn": "শোনো। কোন ছবি?",
+              "speak": "Write your name",
+              "options": [
+                {
+                  "label": "Write your name",
+                  "image": "write-name"
+                },
+                {
+                  "label": "Open your book",
+                  "image": "open-book"
+                },
+                {
+                  "label": "Come here",
+                  "image": "come-here"
+                }
+              ],
+              "answer": 0,
+              "hint": "Listen once more. Then look at each picture.",
+              "tests": "write-name"
+            },
+            {
+              "id": "l-open-book",
+              "ask": "Listen. Which picture?",
+              "askBn": "শোনো। কোন ছবি?",
+              "speak": "Open your book",
+              "options": [
+                {
+                  "label": "Stand up",
+                  "image": "stand-up"
+                },
+                {
+                  "label": "Close your book",
+                  "image": "close-book"
+                },
+                {
+                  "label": "Open your book",
+                  "image": "open-book"
+                }
+              ],
+              "answer": 2,
+              "hint": "Listen once more. Then look at each picture.",
+              "tests": "open-book"
+            },
+            {
+              "id": "l-close-book",
+              "ask": "Listen. Which picture?",
+              "askBn": "শোনো। কোন ছবি?",
+              "speak": "Close your book",
+              "options": [
+                {
+                  "label": "Clap your hands",
+                  "image": "clap-hands"
+                },
+                {
+                  "label": "Stand up",
+                  "image": "stand-up"
+                },
+                {
+                  "label": "Close your book",
+                  "image": "close-book"
+                }
+              ],
+              "answer": 2,
+              "hint": "Listen once more. Then look at each picture.",
+              "tests": "close-book"
+            }
+          ]
+        },
+        {
+          "id": "u3l1-quiz",
+          "type": "quiz",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "What is the command?",
+              "askBn": "আদেশটি কী?",
+              "image": "stand-up",
+              "options": [
+                {
+                  "label": "Stand up"
+                },
+                {
+                  "label": "Sit down"
+                },
+                {
+                  "label": "Be quiet"
+                }
+              ],
+              "answer": 0,
+              "explain": "Stand up = দাঁড়াও",
+              "tests": "stand-up"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which command did you hear?",
+              "askBn": "শোনো। কোন আদেশটি শুনলে?",
+              "speak": "Clap your hands",
+              "options": [
+                {
+                  "label": "Clap your hands"
+                },
+                {
+                  "label": "Close your book"
+                },
+                {
+                  "label": "Come here"
+                }
+              ],
+              "answer": 0,
+              "tests": "clap-hands"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "Clap your ___ .",
+              "askBn": "Clap your ___ .",
+              "options": [
+                {
+                  "label": "hands"
+                },
+                {
+                  "label": "book"
+                },
+                {
+                  "label": "name"
+                }
+              ],
+              "answer": 0,
+              "explain": "We clap our hands.",
+              "tests": "clap-hands"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "Your teacher says: Come here. You go to your teacher.",
+              "askBn": "শিক্ষক বললেন: Come here. তুমি শিক্ষকের কাছে যাও।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "Come here means come to me.",
+              "tests": "come-here"
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "Your teacher says: Be quiet. What do you do?",
+              "askBn": "শিক্ষক বললেন: Be quiet. তুমি কী করবে?",
+              "options": [
+                {
+                  "label": "Stop talking"
+                },
+                {
+                  "label": "Clap your hands"
+                },
+                {
+                  "label": "Stand up"
+                }
+              ],
+              "answer": 0,
+              "explain": "Be quiet means do not talk.",
+              "tests": "be-quiet"
+            }
+          ],
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ"
+        },
+        {
+          "id": "u3l1-done",
+          "type": "done",
+          "title": "Well done!",
+          "titleBn": "খুব ভালো!",
+          "say": "You know ten classroom commands now!",
+          "sayBn": "তুমি এখন শ্রেণিকক্ষের দশটি আদেশ জানো!"
+        }
+      ]
+    },
+    {
+      "id": "u3l2",
+      "unitId": "u3",
+      "number": 2,
+      "title": "Instructions",
+      "titleBn": "নির্দেশ",
+      "shape": "command",
+      "bookPages": [
+        33,
+        34
+      ],
+      "objective": "Follow simple drawing instructions and read the classroom rules.",
+      "objectiveBn": "সহজ আঁকার নির্দেশ মেনে চলা আর শ্রেণিকক্ষের নিয়ম পড়া।",
+      "minutes": 8,
+      "vocabulary": [
+        {
+          "id": "draw-line",
+          "word": "straight line",
+          "bangla": "সরল রেখা",
+          "banglaPronunciation": "স্ট্রেইট লাইন",
+          "banglaSource": "enrichment",
+          "bookPage": 33,
+          "category": "object",
+          "image": "draw-line",
+          "example": "Draw a straight line.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "draw-arrow",
+          "word": "arrow",
+          "bangla": "তীর",
+          "banglaPronunciation": "অ্যারো",
+          "banglaSource": "enrichment",
+          "bookPage": 33,
+          "category": "object",
+          "image": "draw-arrow",
+          "example": "Draw an arrow below the line.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "draw-circle",
+          "word": "circle",
+          "bangla": "বৃত্ত",
+          "banglaPronunciation": "সার্কল",
+          "banglaSource": "enrichment",
+          "bookPage": 33,
+          "category": "shape",
+          "image": "draw-circle",
+          "example": "Draw a circle.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "draw-flower",
+          "word": "flower",
+          "bangla": "ফুল",
+          "banglaPronunciation": "ফ্লাওয়ার",
+          "banglaSource": "enrichment",
+          "bookPage": 33,
+          "category": "plant",
+          "image": "draw-flower",
+          "example": "Draw a flower.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "rule-on-time",
+          "word": "Come on time",
+          "bangla": "সময়মতো এসো",
+          "banglaPronunciation": "কাম অন টাইম",
+          "banglaSource": "enrichment",
+          "bookPage": 34,
+          "category": "action",
+          "image": "come-on-time"
+        },
+        {
+          "id": "rule-prepare",
+          "word": "Prepare for class",
+          "bangla": "ক্লাসের জন্য তৈরি হও",
+          "banglaPronunciation": "প্রিপেয়ার ফর ক্লাস",
+          "banglaSource": "enrichment",
+          "bookPage": 34,
+          "category": "action",
+          "image": "prepare"
+        },
+        {
+          "id": "rule-listen",
+          "word": "Listen to others",
+          "bangla": "অন্যদের কথা শোনো",
+          "banglaPronunciation": "লিসেন টু আদারস",
+          "banglaSource": "enrichment",
+          "bookPage": 34,
+          "category": "action",
+          "image": "listen"
+        },
+        {
+          "id": "rule-raise-hand",
+          "word": "Raise hand to speak",
+          "bangla": "কথা বলতে হাত তোলো",
+          "banglaPronunciation": "রেইজ হ্যান্ড টু স্পিক",
+          "banglaSource": "enrichment",
+          "bookPage": 34,
+          "category": "action",
+          "image": "raise-hand"
+        },
+        {
+          "id": "rule-kind",
+          "word": "Be kind",
+          "bangla": "দয়ালু হও",
+          "banglaPronunciation": "বি কাইন্ড",
+          "banglaSource": "enrichment",
+          "bookPage": 34,
+          "category": "action",
+          "image": "kind"
+        },
+        {
+          "id": "rule-please",
+          "word": "Say 'please'",
+          "bangla": "'প্লিজ' বলো",
+          "banglaPronunciation": "সে প্লিজ",
+          "banglaSource": "enrichment",
+          "bookPage": 34,
+          "category": "action",
+          "image": "say-please"
+        },
+        {
+          "id": "rule-thanks",
+          "word": "Say, 'Thank you'",
+          "bangla": "'ধন্যবাদ' বলো",
+          "banglaPronunciation": "সে থ্যাংক ইউ",
+          "banglaSource": "enrichment",
+          "bookPage": 34,
+          "category": "action",
+          "image": "say-thanks"
+        },
+        {
+          "id": "rule-clean-up",
+          "word": "Clean up and help out",
+          "bangla": "পরিষ্কার করো আর সাহায্য করো",
+          "banglaPronunciation": "ক্লিন আপ অ্যান্ড হেল্প আউট",
+          "banglaSource": "enrichment",
+          "bookPage": 34,
+          "category": "action",
+          "image": "clean-up"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u3l2-intro",
+          "type": "intro",
+          "title": "Follow the instructions",
+          "titleBn": "নির্দেশ মেনে চলো",
+          "say": "Listen to each instruction. Then do it.",
+          "sayBn": "প্রতিটি নির্দেশ শোনো। তারপর সেটা করো।",
+          "illustration": "listen"
+        },
+        {
+          "id": "u3l2-words0",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Drawing words",
+          "titleBn": "আঁকার শব্দ",
+          "items": [
+            "draw-line",
+            "draw-arrow",
+            "draw-circle",
+            "draw-flower"
+          ]
+        },
+        {
+          "id": "u3l2-draw",
+          "type": "command",
+          "bookActivity": "A",
+          "title": "Listen and draw",
+          "titleBn": "শোনো আর আঁকো (খাতায়)",
+          "source": "textbook",
+          "commands": [
+            {
+              "text": "Draw a straight line. Draw an arrow below the line.",
+              "textBn": "একটা সরল রেখা আঁকো। রেখার নিচে একটা তীর আঁকো।",
+              "illustration": "draw-arrow"
+            },
+            {
+              "text": "Draw a circle.",
+              "textBn": "একটা বৃত্ত আঁকো।",
+              "illustration": "draw-circle"
+            },
+            {
+              "text": "Draw a flower. Colour it green and red.",
+              "textBn": "একটা ফুল আঁকো। সবুজ আর লাল রং করো।",
+              "illustration": "draw-flower"
+            }
+          ]
+        },
+        {
+          "id": "u3l2-words1",
+          "type": "vocab",
+          "bookActivity": "B",
+          "title": "Classroom rules 1",
+          "titleBn": "শ্রেণিকক্ষের নিয়ম ১",
+          "items": [
+            "rule-on-time",
+            "rule-prepare",
+            "rule-listen",
+            "rule-raise-hand"
+          ]
+        },
+        {
+          "id": "u3l2-words2",
+          "type": "vocab",
+          "bookActivity": "B",
+          "title": "Classroom rules 2",
+          "titleBn": "শ্রেণিকক্ষের নিয়ম ২",
+          "items": [
+            "rule-kind",
+            "rule-please",
+            "rule-thanks",
+            "rule-clean-up"
+          ]
+        },
+        {
+          "id": "u3l2-speak",
+          "type": "speak",
+          "bookActivity": "B",
+          "title": "Read a rule aloud",
+          "titleBn": "একটি নিয়ম জোরে পড়ো",
+          "prompt": "Read a rule aloud.",
+          "promptBn": "একটি নিয়ম জোরে পড়ো।",
+          "modelAnswer": "Come on time."
+        },
+        {
+          "id": "u3l2-golden",
+          "type": "command",
+          "bookActivity": "C",
+          "title": "Five golden rules",
+          "titleBn": "পাঁচটি সোনালি নিয়ম",
+          "source": "textbook",
+          "commands": [
+            {
+              "text": "Try hard",
+              "textBn": "চেষ্টা করো",
+              "illustration": "try-hard"
+            },
+            {
+              "text": "Listen",
+              "textBn": "মন দিয়ে শোনো",
+              "illustration": "listen"
+            },
+            {
+              "text": "Share",
+              "textBn": "ভাগ করে নাও",
+              "illustration": "share"
+            },
+            {
+              "text": "Care",
+              "textBn": "যত্ন নাও",
+              "illustration": "care"
+            },
+            {
+              "text": "Be safe",
+              "textBn": "নিরাপদ থাকো",
+              "illustration": "be-safe"
+            }
+          ]
+        },
+        {
+          "id": "u3l2-project",
+          "type": "intro",
+          "bookActivity": "C",
+          "title": "Make a poster!",
+          "titleBn": "একটি পোস্টার বানাও!",
+          "say": "Draw the five golden rules and put your poster on the class wall.",
+          "sayBn": "পাঁচটি সোনালি নিয়ম এঁকে পোস্টারটি ক্লাসের দেয়ালে লাগাও।",
+          "illustration": "poster"
+        },
+        {
+          "id": "u3l2-game1",
+          "type": "game",
+          "kind": "picture-to-word",
+          "title": "Which rule?",
+          "titleBn": "কোন নিয়ম?",
+          "rounds": [
+            {
+              "id": "r-rule-on-time",
+              "ask": "Which rule is this?",
+              "askBn": "এটি কোন নিয়ম?",
+              "image": "come-on-time",
+              "options": [
+                {
+                  "label": "Clean up and help out"
+                },
+                {
+                  "label": "Come on time"
+                },
+                {
+                  "label": "Say 'please'"
+                }
+              ],
+              "answer": 1,
+              "hint": "Look at the little picture.",
+              "tests": "rule-on-time"
+            },
+            {
+              "id": "r-rule-prepare",
+              "ask": "Which rule is this?",
+              "askBn": "এটি কোন নিয়ম?",
+              "image": "prepare",
+              "options": [
+                {
+                  "label": "Say, 'Thank you'"
+                },
+                {
+                  "label": "Raise hand to speak"
+                },
+                {
+                  "label": "Prepare for class"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the little picture.",
+              "tests": "rule-prepare"
+            },
+            {
+              "id": "r-rule-please",
+              "ask": "Which rule is this?",
+              "askBn": "এটি কোন নিয়ম?",
+              "image": "say-please",
+              "options": [
+                {
+                  "label": "Be kind"
+                },
+                {
+                  "label": "Say 'please'"
+                },
+                {
+                  "label": "Say, 'Thank you'"
+                }
+              ],
+              "answer": 1,
+              "hint": "Look at the little picture.",
+              "tests": "rule-please"
+            },
+            {
+              "id": "r-rule-clean-up",
+              "ask": "Which rule is this?",
+              "askBn": "এটি কোন নিয়ম?",
+              "image": "clean-up",
+              "options": [
+                {
+                  "label": "Say 'please'"
+                },
+                {
+                  "label": "Clean up and help out"
+                },
+                {
+                  "label": "Listen to others"
+                }
+              ],
+              "answer": 1,
+              "hint": "Look at the little picture.",
+              "tests": "rule-clean-up"
+            },
+            {
+              "id": "r-rule-kind",
+              "ask": "Which rule is this?",
+              "askBn": "এটি কোন নিয়ম?",
+              "image": "kind",
+              "options": [
+                {
+                  "label": "Clean up and help out"
+                },
+                {
+                  "label": "Say, 'Thank you'"
+                },
+                {
+                  "label": "Be kind"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the little picture.",
+              "tests": "rule-kind"
+            },
+            {
+              "id": "r-rule-raise-hand",
+              "ask": "Which rule is this?",
+              "askBn": "এটি কোন নিয়ম?",
+              "image": "raise-hand",
+              "options": [
+                {
+                  "label": "Come on time"
+                },
+                {
+                  "label": "Listen to others"
+                },
+                {
+                  "label": "Raise hand to speak"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the little picture.",
+              "tests": "rule-raise-hand"
+            }
+          ]
+        },
+        {
+          "id": "u3l2-game2",
+          "type": "game",
+          "kind": "choose-the-reply",
+          "title": "What should you do?",
+          "titleBn": "তুমি কী করবে?",
+          "rounds": [
+            {
+              "id": "s-rule-raise-hand",
+              "ask": "You want to ask a question in class.",
+              "askBn": "ক্লাসে তুমি একটা প্রশ্ন করতে চাও।",
+              "options": [
+                {
+                  "label": "Say, 'Thank you'"
+                },
+                {
+                  "label": "Raise hand to speak"
+                },
+                {
+                  "label": "Clean up and help out"
+                }
+              ],
+              "answer": 1,
+              "hint": "Think about the rules on the list.",
+              "tests": "rule-raise-hand"
+            },
+            {
+              "id": "s-rule-thanks",
+              "ask": "Your friend helps you.",
+              "askBn": "তোমার বন্ধু তোমাকে সাহায্য করল।",
+              "options": [
+                {
+                  "label": "Come on time"
+                },
+                {
+                  "label": "Say, 'Thank you'"
+                },
+                {
+                  "label": "Listen to others"
+                }
+              ],
+              "answer": 1,
+              "hint": "Think about the rules on the list.",
+              "tests": "rule-thanks"
+            },
+            {
+              "id": "s-rule-on-time",
+              "ask": "School starts at nine. When do you come?",
+              "askBn": "স্কুল শুরু হয় নয়টায়। তুমি কখন আসবে?",
+              "options": [
+                {
+                  "label": "Come on time"
+                },
+                {
+                  "label": "Raise hand to speak"
+                },
+                {
+                  "label": "Prepare for class"
+                }
+              ],
+              "answer": 0,
+              "hint": "Think about the rules on the list.",
+              "tests": "rule-on-time"
+            },
+            {
+              "id": "s-rule-please",
+              "ask": "You want to ask for a pencil.",
+              "askBn": "তুমি একটা পেনসিল চাইতে চাও।",
+              "options": [
+                {
+                  "label": "Clean up and help out"
+                },
+                {
+                  "label": "Come on time"
+                },
+                {
+                  "label": "Say 'please'"
+                }
+              ],
+              "answer": 2,
+              "hint": "Think about the rules on the list.",
+              "tests": "rule-please"
+            }
+          ]
+        },
+        {
+          "id": "u3l2-quiz",
+          "type": "quiz",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "Which rule is this?",
+              "askBn": "এটি কোন নিয়ম?",
+              "image": "come-on-time",
+              "options": [
+                {
+                  "label": "Come on time"
+                },
+                {
+                  "label": "Be kind"
+                },
+                {
+                  "label": "Say, 'Thank you'"
+                }
+              ],
+              "answer": 0,
+              "explain": "Come on time = সময়মতো এসো",
+              "tests": "rule-on-time"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which rule did you hear?",
+              "askBn": "শোনো। কোন নিয়মটি শুনলে?",
+              "speak": "Listen to others",
+              "options": [
+                {
+                  "label": "Say 'please'"
+                },
+                {
+                  "label": "Listen to others"
+                },
+                {
+                  "label": "Raise hand to speak"
+                }
+              ],
+              "answer": 1,
+              "tests": "rule-listen"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "Raise ___ to speak.",
+              "askBn": "Raise ___ to speak.",
+              "options": [
+                {
+                  "label": "name"
+                },
+                {
+                  "label": "book"
+                },
+                {
+                  "label": "hand"
+                }
+              ],
+              "answer": 2,
+              "explain": "Raise hand to speak.",
+              "tests": "rule-raise-hand"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "You can shout in class.",
+              "askBn": "তুমি ক্লাসে চিৎকার করতে পারো।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 1,
+              "explain": "The rule says: Raise hand to speak.",
+              "tests": "rule-raise-hand"
+            },
+            {
+              "id": "q5",
+              "type": "tap-picture",
+              "ask": "What did you draw?",
+              "askBn": "তুমি কী এঁকেছ?",
+              "image": "draw-circle",
+              "options": [
+                {
+                  "label": "arrow"
+                },
+                {
+                  "label": "flower"
+                },
+                {
+                  "label": "circle"
+                }
+              ],
+              "answer": 2,
+              "explain": "circle = বৃত্ত",
+              "tests": "draw-circle"
+            }
+          ],
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ"
+        },
+        {
+          "id": "u3l2-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You can follow instructions and keep the class rules!",
+          "sayBn": "তুমি নির্দেশ মানতে আর ক্লাসের নিয়ম মেনে চলতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "u3l3",
+      "unitId": "u3",
+      "number": 3,
+      "title": "Making Requests",
+      "titleBn": "অনুরোধ করা",
+      "shape": "dialogue",
+      "bookPages": [
+        35
+      ],
+      "objective": "Ask politely for something, thank someone, and read simple request signs.",
+      "objectiveBn": "ভদ্রভাবে কিছু চাওয়া, ধন্যবাদ জানানো আর সহজ অনুরোধের চিহ্ন পড়া।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "excuse-me",
+          "word": "Excuse me",
+          "bangla": "মাফ করবেন",
+          "banglaPronunciation": "এক্সকিউজ মি",
+          "banglaSource": "enrichment",
+          "bookPage": 35,
+          "category": "expression",
+          "image": "excuse-me",
+          "example": "Excuse me Rita.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "borrow",
+          "word": "borrow",
+          "bangla": "ধার নেওয়া",
+          "banglaPronunciation": "বরো",
+          "banglaSource": "enrichment",
+          "bookPage": 35,
+          "category": "action",
+          "image": "borrow",
+          "example": "Can I borrow your eraser, please?",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "eraser",
+          "word": "eraser",
+          "bangla": "রাবার",
+          "banglaPronunciation": "ইরেজার",
+          "banglaSource": "enrichment",
+          "bookPage": 35,
+          "category": "object",
+          "image": "eraser",
+          "example": "Can I borrow your eraser, please?",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "please-ask",
+          "word": "please",
+          "bangla": "দয়া করে",
+          "banglaPronunciation": "প্লিজ",
+          "banglaSource": "enrichment",
+          "bookPage": 35,
+          "category": "expression",
+          "image": "say-please",
+          "example": "Can I borrow your eraser, please?",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "thank-you-so-much",
+          "word": "Thank you so much",
+          "bangla": "অনেক ধন্যবাদ",
+          "banglaPronunciation": "থ্যাংক ইউ সো মাচ",
+          "banglaSource": "enrichment",
+          "bookPage": 35,
+          "category": "expression",
+          "image": "thanks",
+          "example": "Thank you so much.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "my-pleasure",
+          "word": "My pleasure",
+          "bangla": "এটা আমার আনন্দ",
+          "banglaPronunciation": "মাই প্লেজার",
+          "banglaSource": "enrichment",
+          "bookPage": 35,
+          "category": "expression",
+          "image": "happy-face",
+          "example": "My pleasure.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "req-ticket",
+          "word": "Please show your ticket.",
+          "bangla": "দয়া করে আপনার টিকিট দেখান",
+          "banglaPronunciation": "প্লিজ শো ইয়োর টিকিট",
+          "banglaSource": "enrichment",
+          "bookPage": 35,
+          "category": "sign",
+          "image": "sign-show-ticket"
+        },
+        {
+          "id": "req-no-litter",
+          "word": "No littering, please.",
+          "bangla": "দয়া করে ময়লা ফেলবেন না",
+          "banglaPronunciation": "নো লিটারিং, প্লিজ",
+          "banglaSource": "enrichment",
+          "bookPage": 35,
+          "category": "sign",
+          "image": "sign-no-litter"
+        },
+        {
+          "id": "req-phone",
+          "word": "Please turn off your phone here.",
+          "bangla": "দয়া করে এখানে ফোন বন্ধ রাখুন",
+          "banglaPronunciation": "প্লিজ টার্ন অফ ইয়োর ফোন হিয়ার",
+          "banglaSource": "enrichment",
+          "bookPage": 35,
+          "category": "sign",
+          "image": "sign-phone-off"
+        },
+        {
+          "id": "req-wash-hands",
+          "word": "Please wash your hands clean.",
+          "bangla": "দয়া করে হাত পরিষ্কার করে ধুয়ে নিন",
+          "banglaPronunciation": "প্লিজ ওয়াশ ইয়োর হ্যান্ডস ক্লিন",
+          "banglaSource": "enrichment",
+          "bookPage": 35,
+          "category": "sign",
+          "image": "sign-wash-hands"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u3l3-intro",
+          "type": "intro",
+          "title": "In the library",
+          "titleBn": "পাঠাগারে",
+          "say": "Hillol wants to borrow an eraser. Listen to how he asks.",
+          "sayBn": "হিল্লোল একটা রাবার ধার নিতে চায়। সে কীভাবে চায় শোনো।",
+          "illustration": "library"
+        },
+        {
+          "id": "u3l3-words1",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Polite words",
+          "titleBn": "ভদ্র কথা",
+          "items": [
+            "excuse-me",
+            "borrow",
+            "eraser",
+            "please-ask",
+            "thank-you-so-much",
+            "my-pleasure"
+          ]
+        },
+        {
+          "id": "u3l3-talk",
+          "type": "dialogue",
+          "bookActivity": "A",
+          "title": "Dialogue 1: In the library",
+          "titleBn": "কথোপকথন ১: পাঠাগারে",
+          "source": "textbook",
+          "lines": [
+            {
+              "speaker": "Hillol",
+              "text": "Excuse me Rita. Can I borrow your eraser, please?"
+            },
+            {
+              "speaker": "Rita",
+              "text": "Oh, yes. Why not? Here it is."
+            },
+            {
+              "speaker": "Hillol",
+              "text": "Thank you so much."
+            },
+            {
+              "speaker": "Rita",
+              "text": "My pleasure."
+            }
+          ]
+        },
+        {
+          "id": "u3l3-speak1",
+          "type": "speak",
+          "bookActivity": "A",
+          "title": "Ask nicely!",
+          "titleBn": "ভদ্রভাবে চাও!",
+          "prompt": "Ask a friend for a pencil.",
+          "promptBn": "বন্ধুর কাছে একটা পেনসিল চাও।",
+          "modelAnswer": "Excuse me. Can I borrow your pencil, please?"
+        },
+        {
+          "id": "u3l3-speak2",
+          "type": "speak",
+          "bookActivity": "A",
+          "title": "Say thank you",
+          "titleBn": "ধন্যবাদ বলো",
+          "prompt": "Your friend gives you the pencil. What do you say?",
+          "promptBn": "বন্ধু তোমাকে পেনসিলটা দিল। তুমি কী বলবে?",
+          "modelAnswer": "Thank you so much."
+        },
+        {
+          "id": "u3l3-words2",
+          "type": "vocab",
+          "bookActivity": "B",
+          "title": "Requests and signs",
+          "titleBn": "অনুরোধ ও চিহ্ন",
+          "items": [
+            "req-ticket",
+            "req-no-litter",
+            "req-phone",
+            "req-wash-hands"
+          ]
+        },
+        {
+          "id": "u3l3-game1",
+          "type": "game",
+          "kind": "match-pairs",
+          "bookActivity": "B",
+          "title": "Match the sign",
+          "titleBn": "চিহ্নটি মেলাও",
+          "rounds": [
+            {
+              "id": "m-req-ticket",
+              "ask": "Which request matches this sign?",
+              "askBn": "কোন অনুরোধটি এই চিহ্নের সঙ্গে মেলে?",
+              "image": "sign-show-ticket",
+              "options": [
+                {
+                  "label": "Please wash your hands clean."
+                },
+                {
+                  "label": "No littering, please."
+                },
+                {
+                  "label": "Please show your ticket."
+                }
+              ],
+              "answer": 2,
+              "hint": "Read the words on the sign.",
+              "tests": "req-ticket"
+            },
+            {
+              "id": "m-req-no-litter",
+              "ask": "Which request matches this sign?",
+              "askBn": "কোন অনুরোধটি এই চিহ্নের সঙ্গে মেলে?",
+              "image": "sign-no-litter",
+              "options": [
+                {
+                  "label": "Please turn off your phone here."
+                },
+                {
+                  "label": "Please wash your hands clean."
+                },
+                {
+                  "label": "No littering, please."
+                }
+              ],
+              "answer": 2,
+              "hint": "Read the words on the sign.",
+              "tests": "req-no-litter"
+            },
+            {
+              "id": "m-req-phone",
+              "ask": "Which request matches this sign?",
+              "askBn": "কোন অনুরোধটি এই চিহ্নের সঙ্গে মেলে?",
+              "image": "sign-phone-off",
+              "options": [
+                {
+                  "label": "Please wash your hands clean."
+                },
+                {
+                  "label": "Please turn off your phone here."
+                },
+                {
+                  "label": "No littering, please."
+                }
+              ],
+              "answer": 1,
+              "hint": "Read the words on the sign.",
+              "tests": "req-phone"
+            },
+            {
+              "id": "m-req-wash-hands",
+              "ask": "Which request matches this sign?",
+              "askBn": "কোন অনুরোধটি এই চিহ্নের সঙ্গে মেলে?",
+              "image": "sign-wash-hands",
+              "options": [
+                {
+                  "label": "Please wash your hands clean."
+                },
+                {
+                  "label": "Please turn off your phone here."
+                },
+                {
+                  "label": "No littering, please."
+                }
+              ],
+              "answer": 0,
+              "hint": "Read the words on the sign.",
+              "tests": "req-wash-hands"
+            }
+          ]
+        },
+        {
+          "id": "u3l3-game2",
+          "type": "game",
+          "kind": "choose-the-reply",
+          "title": "Choose the reply",
+          "titleBn": "সঠিক উত্তর বেছে নাও",
+          "rounds": [
+            {
+              "id": "p1",
+              "ask": "Someone says: Thank you so much.",
+              "askBn": "কেউ বলল: Thank you so much.",
+              "speak": "Thank you so much.",
+              "options": [
+                {
+                  "label": "Excuse me."
+                },
+                {
+                  "label": "My pleasure."
+                },
+                {
+                  "label": "No littering, please."
+                }
+              ],
+              "answer": 1,
+              "hint": "When someone thanks you, be polite back.",
+              "tests": "my-pleasure"
+            },
+            {
+              "id": "p2",
+              "ask": "Hillol asks: Can I borrow your eraser, please?",
+              "askBn": "হিল্লোল জিজ্ঞাসা করল: Can I borrow your eraser, please?",
+              "speak": "Can I borrow your eraser, please?",
+              "options": [
+                {
+                  "label": "Oh, yes. Why not? Here it is."
+                },
+                {
+                  "label": "Please show your ticket."
+                },
+                {
+                  "label": "Sit down."
+                }
+              ],
+              "answer": 0,
+              "hint": "Rita said yes and gave the eraser.",
+              "tests": "borrow"
+            },
+            {
+              "id": "p3",
+              "ask": "You want to borrow a book. What do you say?",
+              "askBn": "তুমি একটা বই ধার নিতে চাও। কী বলবে?",
+              "options": [
+                {
+                  "label": "Clap your hands."
+                },
+                {
+                  "label": "Excuse me. Can I borrow your book, please?"
+                },
+                {
+                  "label": "Be quiet."
+                }
+              ],
+              "answer": 1,
+              "hint": "Start with Excuse me. End with please.",
+              "tests": "excuse-me"
+            }
+          ]
+        },
+        {
+          "id": "u3l3-quiz",
+          "type": "quiz",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "eraser",
+              "options": [
+                {
+                  "label": "eraser"
+                },
+                {
+                  "label": "ticket"
+                },
+                {
+                  "label": "phone"
+                }
+              ],
+              "answer": 0,
+              "explain": "eraser = রাবার",
+              "tests": "eraser"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which one did you hear?",
+              "askBn": "শোনো। কোনটি শুনলে?",
+              "speak": "My pleasure",
+              "options": [
+                {
+                  "label": "My pleasure"
+                },
+                {
+                  "label": "Thank you so much"
+                },
+                {
+                  "label": "Excuse me"
+                }
+              ],
+              "answer": 0,
+              "tests": "my-pleasure"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "Can I ___ your eraser, please?",
+              "askBn": "Can I ___ your eraser, please?",
+              "options": [
+                {
+                  "label": "borrow"
+                },
+                {
+                  "label": "write"
+                },
+                {
+                  "label": "clean"
+                }
+              ],
+              "answer": 0,
+              "explain": "borrow = ধার নেওয়া",
+              "tests": "borrow"
+            },
+            {
+              "id": "q4",
+              "type": "tap-picture",
+              "ask": "What does this sign say?",
+              "askBn": "এই চিহ্নে কী লেখা আছে?",
+              "image": "sign-no-litter",
+              "options": [
+                {
+                  "label": "No littering, please."
+                },
+                {
+                  "label": "Please show your ticket."
+                },
+                {
+                  "label": "Please turn off your phone here."
+                }
+              ],
+              "answer": 0,
+              "tests": "req-no-litter"
+            },
+            {
+              "id": "q5",
+              "type": "true-false",
+              "ask": "This sign says: Please wash your hands clean.",
+              "askBn": "এই চিহ্নে লেখা: Please wash your hands clean.",
+              "image": "sign-phone-off",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 1,
+              "explain": "It says: Please turn off your phone here.",
+              "tests": "req-phone"
+            }
+          ],
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ"
+        },
+        {
+          "id": "u3l3-done",
+          "type": "done",
+          "title": "Well done!",
+          "titleBn": "খুব ভালো!",
+          "say": "You can ask politely and say thank you!",
+          "sayBn": "তুমি ভদ্রভাবে চাইতে আর ধন্যবাদ বলতে পারো!"
+        }
+      ]
+    }
+  ]
+}
