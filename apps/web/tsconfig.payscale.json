@@ -1,0 +1,21 @@
+{
+  // Build config for the pay-scale engine tests. The engine is plain TypeScript
+  // with no React and no Next.js runtime, so it can be compiled to CommonJS and
+  // exercised directly by node — see src/lib/payscale/engine.test.mjs.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": ".tmp-payscale",
+    "rootDir": "src",
+    "incremental": false,
+    "jsx": "react-jsx",
+    "types": ["node"]
+  },
+  "include": [
+    "src/lib/payscale/**/*.ts",
+    "src/data/payscale/**/*.json"
+  ],
+  "exclude": ["node_modules"]
+}

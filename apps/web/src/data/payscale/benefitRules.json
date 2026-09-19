@@ -1,0 +1,283 @@
+{
+  "gazette": {
+    "title": "চাকরি (বেতন ও ভাতাদি) আদেশ, ২০২৬",
+    "sro": "এস. আর. ও. নং ৩৪৭-আইন/২০২৬",
+    "gazetteDate": "2026-09-17",
+    "sourceFile": "gazet.pdf"
+  },
+
+  "readMeFirst": "এই ফাইলে গেজেটে উল্লিখিত প্রতিটি শতকরা হার আলাদা নিয়ম হিসাবে রাখা হইয়াছে। কোনও দুইটি হারকে একত্র করিয়া ‘সাধারণ শতাংশ’ বানানো হয় নাই। গেজেটে যাহা নাই, তাহা এই ফাইলেও নাই।",
+
+  "specialBenefit2015": {
+    "ruleId": "BEN-SPECIAL-ABOLISHED",
+    "ruleName": "বিশেষ সুবিধা (২০১৫ বেতনস্কেলের অধীন) — বিলুপ্তি",
+    "percentage": null,
+    "percentageType": "NOT_STATED_IN_GAZETTE",
+    "baseAmount": "প্রযোজ্য নহে",
+    "operation": "ABOLISH_AND_ADJUST_AGAINST_ARREARS",
+    "applicableTo": ["সকল কর্মচারী", "নিট পেনশনপ্রাপ্ত অবসরভোগী", "আজীবন পারিবারিক পেনশনভোগী"],
+    "notApplicableTo": ["১ জুলাই ২০২৬ তারিখে অবসর-উত্তর ছুটিতে থাকা কর্মচারী (ছুটি শেষ না হওয়া পর্যন্ত)"],
+    "effectiveDate": "2026-07-01",
+    "affectsBasic": false,
+    "affectsPayFixation": false,
+    "affectsCorrespondingScale": false,
+    "isSeparateBenefit": true,
+    "transition2015To2026": true,
+    "conditions": [
+      "জাতীয় বেতনস্কেল, ২০২৬ কার্যকর হইবার তারিখ (১ জুলাই ২০২৬) হইতে বিশেষ সুবিধা বিলুপ্ত হইয়াছে বলিয়া গণ্য হইবে।",
+      "১ জুলাই ২০২৬ তারিখ হইতে এই আদেশ জারির তারিখ পর্যন্ত আহরিত বিশেষ সুবিধা অনুচ্ছেদ ১(৩) এর দফা (ঘ) ও (জ) এর অধীন প্রাপ্য বকেয়ার সহিত সমন্বয় করিতে হইবে।",
+      "নিট পেনশনপ্রাপ্ত অবসরভোগী ও আজীবন পারিবারিক পেনশনভোগীর ক্ষেত্রেও কার্যকর হইবার তারিখ হইতে বিশেষ সুবিধা বিলুপ্ত হইবে।"
+    ],
+    "exception": {
+      "ruleId": "BEN-SPECIAL-PRL",
+      "statement": "দফা (ট) তে ভিন্নতর যাহা কিছুই থাকুক না কেন, যে কর্মচারী ১ জুলাই ২০২৬ তারিখে অবসর-উত্তর ছুটিতে রহিয়াছেন তিনি ৩০ জুন ২০২৬ তারিখে যে হারে বিশেষ সুবিধা পাইতেন অবসর-উত্তর ছুটি শেষ না হওয়া পর্যন্ত সেই হারে প্রাপ্য হইবেন।",
+      "sourceSection": "অনুচ্ছেদ ১(৩)(ঠ)"
+    },
+    "sourcePdfPage": 3,
+    "sourcePage": "25195",
+    "sourceSection": "অনুচ্ছেদ ১(৩)(ট) ও (ঠ); অনুচ্ছেদ ৮(১)(গ)",
+    "sourceText": "জাতীয় বেতনস্কেল, ২০২৬ কার্যকর হইবার তারিখ হইতে বিশেষ সুবিধা বিলুপ্ত হইয়াছে বলিয়া গণ্য হইবে এবং ১ জুলাই ২০২৬ তারিখ হইতে এই আদেশ জারির তারিখ পর্যন্ত আহরিত বিশেষ সুবিধা দফা (ঘ) এবং দফা (জ) এর অধীন প্রাপ্য বকেয়ার সহিত সমন্বয় করিতে হইবে;",
+    "plainAnswer": "২০১৫ বেতনস্কেলের সহিত প্রদত্ত ‘বিশেষ সুবিধা’ ২০২৬ সালের বেতন নির্ধারণের কোনও ধাপে যোগ বা বিয়োগ হয় না। ইহা মূল বেতনের অংশ নয়, অনুরূপ স্কেল নির্ধারণে প্রভাব ফেলে না, এবং ১ জুলাই ২০২৬ হইতে বিলুপ্ত। গেজেটে ইহার কোনও শতকরা হার (৫%/১০%/১৫%) উল্লেখ নাই।"
+  },
+
+  "percentageRules": [
+    {
+      "ruleId": "PCT-TRANS-40",
+      "ruleName": "পর্যায়-১ বেতনবৃদ্ধি প্রদান — ৯ম গ্রেড ও তদূর্ধ্ব",
+      "percentage": 40,
+      "percentageType": "OF_PAY_INCREASE",
+      "baseAmount": "জাতীয় বেতনস্কেল, ২০২৬ এ নির্ধারিত বেতন ও বর্তমান বেতনের পার্থক্য",
+      "operation": "ADD",
+      "applicableTo": ["গ্রেড ১-৯"],
+      "notApplicableTo": ["গ্রেড ১০-২০"],
+      "effectiveDate": "2026-07-01",
+      "endDate": "2026-12-31",
+      "affectsBasic": false,
+      "affectsPayFixation": false,
+      "affectsCorrespondingScale": false,
+      "isSeparateBenefit": false,
+      "transition2015To2026": true,
+      "conditions": ["অনুচ্ছেদ ৫ ও ৯ অনুযায়ী বেতন নির্ধারণের পর প্রযোজ্য"],
+      "sourcePdfPage": 1,
+      "sourcePage": "25193",
+      "sourceSection": "অনুচ্ছেদ ১(৩)(ক)"
+    },
+    {
+      "ruleId": "PCT-TRANS-50",
+      "ruleName": "পর্যায়-১ বেতনবৃদ্ধি প্রদান — ১০ম-২০তম গ্রেড",
+      "percentage": 50,
+      "percentageType": "OF_PAY_INCREASE",
+      "baseAmount": "জাতীয় বেতনস্কেল, ২০২৬ এ নির্ধারিত বেতন ও বর্তমান বেতনের পার্থক্য",
+      "operation": "ADD",
+      "applicableTo": ["গ্রেড ১০-২০"],
+      "notApplicableTo": ["গ্রেড ১-৯"],
+      "effectiveDate": "2026-07-01",
+      "endDate": "2026-12-31",
+      "affectsBasic": false,
+      "affectsPayFixation": false,
+      "affectsCorrespondingScale": false,
+      "isSeparateBenefit": false,
+      "transition2015To2026": true,
+      "conditions": ["অনুচ্ছেদ ৫ ও ৯ অনুযায়ী বেতন নির্ধারণের পর প্রযোজ্য"],
+      "sourcePdfPage": 1,
+      "sourcePage": "25193",
+      "sourceSection": "অনুচ্ছেদ ১(৩)(ক)"
+    },
+    {
+      "ruleId": "PCT-TRANS-70",
+      "ruleName": "পর্যায়-২ বেতনবৃদ্ধি প্রদান — ৯ম গ্রেড ও তদূর্ধ্ব",
+      "percentage": 70,
+      "percentageType": "OF_PAY_INCREASE",
+      "baseAmount": "জাতীয় বেতনস্কেল, ২০২৬ এ নির্ধারিত বেতন ও বর্তমান বেতনের পার্থক্য",
+      "operation": "ADD",
+      "applicableTo": ["গ্রেড ১-৯"],
+      "notApplicableTo": ["গ্রেড ১০-২০"],
+      "effectiveDate": "2027-01-01",
+      "endDate": "2027-06-30",
+      "affectsBasic": false,
+      "affectsPayFixation": false,
+      "affectsCorrespondingScale": false,
+      "isSeparateBenefit": false,
+      "transition2015To2026": true,
+      "conditions": [],
+      "sourcePdfPage": 2,
+      "sourcePage": "25194",
+      "sourceSection": "অনুচ্ছেদ ১(৩)(খ)"
+    },
+    {
+      "ruleId": "PCT-TRANS-75",
+      "ruleName": "পর্যায়-২ বেতনবৃদ্ধি প্রদান — ১০ম-২০তম গ্রেড",
+      "percentage": 75,
+      "percentageType": "OF_PAY_INCREASE",
+      "baseAmount": "জাতীয় বেতনস্কেল, ২০২৬ এ নির্ধারিত বেতন ও বর্তমান বেতনের পার্থক্য",
+      "operation": "ADD",
+      "applicableTo": ["গ্রেড ১০-২০"],
+      "notApplicableTo": ["গ্রেড ১-৯"],
+      "effectiveDate": "2027-01-01",
+      "endDate": "2027-06-30",
+      "affectsBasic": false,
+      "affectsPayFixation": false,
+      "affectsCorrespondingScale": false,
+      "isSeparateBenefit": false,
+      "transition2015To2026": true,
+      "conditions": [],
+      "sourcePdfPage": 2,
+      "sourcePage": "25194",
+      "sourceSection": "অনুচ্ছেদ ১(৩)(খ)"
+    },
+    {
+      "ruleId": "PCT-NOBOBORSHO-15",
+      "ruleName": "বাংলা নববর্ষ ভাতা",
+      "percentage": 15,
+      "percentageType": "OF_BASIC_PAY",
+      "baseAmount": "আহরিত মূল বেতন",
+      "operation": "SEPARATE_ALLOWANCE",
+      "applicableTo": [
+        "সকল কর্মচারী",
+        "মাসিক নিট পেনশনগ্রহণকারী অবসরভোগী ও আজীবন পারিবারিক পেনশনভোগী (মূল পেনশনভোগীর প্রাপ্ত নিট পেনশনকে ভিত্তি ধরিয়া)"
+      ],
+      "notApplicableTo": [],
+      "effectiveDate": "2028-01-01",
+      "affectsBasic": false,
+      "affectsPayFixation": false,
+      "affectsCorrespondingScale": false,
+      "isSeparateBenefit": true,
+      "transition2015To2026": false,
+      "conditions": [
+        "অনুচ্ছেদ ১(৩)(ঞ) অনুযায়ী ৩১ ডিসেম্বর ২০২৭ পর্যন্ত ৩০ জুন ২০২৬ তারিখে প্রাপ্য অঙ্কেই প্রদেয়; নূতন হার ১ জানুয়ারি ২০২৮ হইতে।"
+      ],
+      "sourcePdfPage": 13,
+      "sourcePage": "25205",
+      "sourceSection": "অনুচ্ছেদ ১৪(১) ও (২)",
+      "sourceText": "সকল কর্মচারী আহরিত মূল বেতনের ১৫% হারে বাংলা নববর্ষ ভাতা প্রাপ্য হইবেন।"
+    },
+    {
+      "ruleId": "PCT-DEPUTATION-10",
+      "ruleName": "প্রশিক্ষণ প্রতিষ্ঠানে প্রেষণ ভাতা",
+      "percentage": 10,
+      "percentageType": "OF_BASIC_PAY",
+      "baseAmount": "মূল বেতন",
+      "operation": "SEPARATE_ALLOWANCE",
+      "applicableTo": ["প্রশিক্ষণ প্রতিষ্ঠানে শুধু প্রশিক্ষণ কাজে প্রেষণে কর্মরত ৯ম গ্রেড ও তদূর্ধ্ব পর্যায়ের কর্মচারী"],
+      "notApplicableTo": ["১০ম-২০তম গ্রেড", "প্রশিক্ষণ কাজ ব্যতীত অন্য কাজে প্রেষণে কর্মরত কর্মচারী"],
+      "effectiveDate": "2028-01-01",
+      "affectsBasic": false,
+      "affectsPayFixation": false,
+      "affectsCorrespondingScale": false,
+      "isSeparateBenefit": true,
+      "transition2015To2026": false,
+      "conditions": ["অনুচ্ছেদ ১(৩)(ঞ) অনুযায়ী ৩১ ডিসেম্বর ২০২৭ পর্যন্ত পুরাতন অঙ্কে প্রদেয়।"],
+      "sourcePdfPage": 16,
+      "sourcePage": "25208",
+      "sourceSection": "অনুচ্ছেদ ২৭",
+      "sourceText": "প্রশিক্ষণ প্রতিষ্ঠানে শুধু প্রশিক্ষণ কাজে প্রেষণে কর্মরত ৯ম গ্রেড ও তদূর্ধ্ব পর্যায়ের কর্মচারীগণ মূল বেতনের ১০% হারে মাসিক প্রেষণ ভাতা প্রাপ্য হইবেন।"
+    },
+    {
+      "ruleId": "PCT-PAHARI-20",
+      "ruleName": "পাহাড়ি ভাতা",
+      "percentage": 20,
+      "percentageType": "OF_BASIC_PAY",
+      "baseAmount": "মূল বেতন",
+      "operation": "SEPARATE_ALLOWANCE",
+      "caps": [
+        { "area": "পার্বত্য জেলাসমূহের জেলা সদর ও সদর উপজেলা", "maxAmount": 5000 },
+        { "area": "অন্যান্য উপজেলা", "maxAmount": 5500 }
+      ],
+      "applicableTo": ["পার্বত্য জেলাসমূহে নিযুক্ত সকল কর্মচারী"],
+      "notApplicableTo": [],
+      "effectiveDate": "2028-01-01",
+      "affectsBasic": false,
+      "affectsPayFixation": false,
+      "affectsCorrespondingScale": false,
+      "isSeparateBenefit": true,
+      "transition2015To2026": false,
+      "conditions": [],
+      "sourcePdfPage": 16,
+      "sourcePage": "25208",
+      "sourceSection": "অনুচ্ছেদ ২৫"
+    },
+    {
+      "ruleId": "PCT-HAOR-20",
+      "ruleName": "হাওড়/দ্বীপ/চর ভাতা",
+      "percentage": 20,
+      "percentageType": "OF_BASIC_PAY",
+      "baseAmount": "মূল বেতন",
+      "operation": "SEPARATE_ALLOWANCE",
+      "caps": [{ "area": "হাওড়/দ্বীপ/চর এলাকা", "maxAmount": 5000 }],
+      "applicableTo": ["হাওড়/দ্বীপ/চর এলাকায় নিযুক্ত সকল কর্মচারী"],
+      "notApplicableTo": [],
+      "effectiveDate": "2028-01-01",
+      "affectsBasic": false,
+      "affectsPayFixation": false,
+      "affectsCorrespondingScale": false,
+      "isSeparateBenefit": true,
+      "transition2015To2026": false,
+      "conditions": [
+        "মন্ত্রিপরিষদ বিভাগের ১৮ ফেব্রুয়ারি ২০১৯ তারিখের ০৪.০০.০০০০.৫১২.৩৫.০১১.১৭.৭৬ নং প্রজ্ঞাপন ও অর্থ বিভাগের ২৬ মে ২০২৫ তারিখের ০৭.০০.০০০০.১৭৩.৪১.০২৭.১৫-১৩৫ নং প্রজ্ঞাপন প্রযোজ্য।"
+      ],
+      "sourcePdfPage": 16,
+      "sourcePage": "25208",
+      "sourceSection": "অনুচ্ছেদ ২৬"
+    },
+    {
+      "ruleId": "PCT-RISK-20",
+      "ruleName": "বিশেষ ভাতা/বিশেষ গার্ড ভাতা/ক্ষতিপূরণ ভাতা/ঝুঁকি ভাতার উপর অতিরিক্ত ২০%",
+      "percentage": 20,
+      "percentageType": "OF_EXISTING_ALLOWANCE_AMOUNT",
+      "baseAmount": "৩০ জুন ২০২৬ তারিখে টাকার অঙ্কে আহরিত বিশেষ ভাতা/বিশেষ গার্ড ভাতা/ক্ষতিপূরণ ভাতা/ঝুঁকি ভাতা",
+      "operation": "ADD",
+      "applicableTo": [
+        "এনএসআই, ডিজিএফআই, এসএসএফ, পিজিআর, আন্তর্জাতিক অপরাধ ট্রাইব্যুনালের কর্মচারী",
+        "লেজিসলেটিভ ও সংসদ বিষয়ক বিভাগের ৯ম গ্রেড ও তদূর্ধ্ব পর্যায়ের কর্মচারী",
+        "পরিবেশ, বন ও জলবায়ু পরিবর্তন মন্ত্রণালয়ের অধীন সুন্দরবন পূর্ব ও পশ্চিম বন বিভাগের ১১-২০ গ্রেডভুক্ত কর্মচারী"
+      ],
+      "notApplicableTo": ["প্রেষণে নিয়োজিত কর্মচারীগণ (স্ব স্ব প্রতিষ্ঠান বা বাহিনীর নির্ধারিত ভাতা)"],
+      "effectiveDate": "2026-07-01",
+      "affectsBasic": false,
+      "affectsPayFixation": false,
+      "affectsCorrespondingScale": false,
+      "isSeparateBenefit": true,
+      "transition2015To2026": false,
+      "conditions": [
+        "জাতীয় বেতনস্কেল, ২০২৬ অনুযায়ী মূল বেতনের শতাংশ হিসাবে এই ভাতার হার বা পরিমাণ নির্ধারিত হইবে না।"
+      ],
+      "sourcePdfPage": 17,
+      "sourcePage": "25209-25210",
+      "sourceSection": "অনুচ্ছেদ ৩০(১) ও (ক)"
+    }
+  ],
+
+  "riskAllowanceRule": {
+    "ruleId": "BEN-RISK-29",
+    "ruleName": "ঝুঁকি ভাতা ও অন্যান্য ভাতা",
+    "percentage": null,
+    "percentageType": "EXPLICITLY_NOT_A_PERCENTAGE_OF_BASIC",
+    "operation": "PER_SEPARATE_MEMORANDA",
+    "conditions": [
+      "মূল বেতনের শতাংশ হিসাবে এই ভাতার হার বা পরিমাণ নির্ধারিত হইবে না।",
+      "প্রেষণে নিয়োজিত কর্মচারীগণ স্ব স্ব প্রতিষ্ঠান বা বাহিনীর জন্য নির্ধারিত ঝুঁকি ভাতা বা বিশেষ ভাতা কিংবা প্রতিরক্ষা সার্ভিস ভাতা প্রাপ্য হইবেন না।"
+    ],
+    "note": "তালিকাভুক্ত ২৪ ক্যাটাগরির কর্মচারীদের ঝুঁকি ভাতার পরিমাণ অর্থ বিভাগের ২ সেপ্টেম্বর ২০২৬ তারিখের পৃথক স্মারকে নির্ধারিত — এই গেজেটে অঙ্ক দেওয়া নাই।",
+    "sourcePdfPage": 17,
+    "sourcePage": "25209",
+    "sourceSection": "অনুচ্ছেদ ২৯"
+  },
+
+  "notInThisGazette": [
+    {
+      "claim": "২০১৫ স্কেলের ১০% বা ১৫% ‘অতিরিক্ত সুবিধা’ ২০২৬ এর বেতন নির্ধারণে যোগ/বিয়োগ হয়",
+      "verdict": "গেজেটে এইরূপ কোনও বিধান নাই",
+      "whatTheGazetteActuallySays": "অনুচ্ছেদ ১(৩)(ট) অনুযায়ী বিশেষ সুবিধা ১ জুলাই ২০২৬ হইতে বিলুপ্ত এবং বকেয়ার সহিত সমন্বয়যোগ্য। বেতন নির্ধারণ (অনুচ্ছেদ ৫) সম্পূর্ণরূপে মূল বেতন ও স্কেলের ধাপের উপর ভিত্তি করিয়া হয়।"
+    },
+    {
+      "claim": "সবার বেতন একই শতাংশে বাড়ে",
+      "verdict": "সঠিক নয়",
+      "whatTheGazetteActuallySays": "বৃদ্ধি নির্ভর করে গ্রেড, বর্তমান ধাপ এবং অনুরূপ স্কেলের ধাপ-কাঠামোর উপর। গ্রেড ১-১১ এর প্রারম্ভিক ধাপ ঠিক দ্বিগুণ হইয়াছে, গ্রেড ১২-২০ এর প্রারম্ভিক ধাপ দ্বিগুণের অধিক হইয়াছে।"
+    },
+    {
+      "claim": "ভাতা মূল বেতনের অংশ",
+      "verdict": "সঠিক নয়",
+      "whatTheGazetteActuallySays": "ভাতাদি অনুচ্ছেদ ১২-৩০ এ পৃথকভাবে নির্ধারিত এবং মূল বেতনের সহিত যোগ হইয়া গ্রস বেতন হয়; বেতন নির্ধারণে ভাতা ব্যবহৃত হয় না।"
+    }
+  ]
+}
