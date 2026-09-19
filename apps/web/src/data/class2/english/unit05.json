@@ -1,0 +1,2433 @@
+{
+  "id": "u5",
+  "number": 5,
+  "title": "Days of The Week",
+  "titleBn": "সপ্তাহের দিন",
+  "colour": "orange",
+  "icon": "calendar",
+  "_source": "English for Today, Class Two (NCTB). Unit 5, book pages 42-54.",
+  "_note": "Day names, the rhyme, Rima's story, the birds' rhyme and the questions are transcribed from the textbook. Bangla meanings are Pickixo's addition - the book carries no glosses. Pen-and-paper activities (tracing, copying, the word search) are not reproduced as screens.",
+  "lessons": [
+    {
+      "id": "u5l1",
+      "unitId": "u5",
+      "number": 1,
+      "title": "Days",
+      "titleBn": "দিন",
+      "shape": "vocabulary",
+      "bookPages": [
+        42,
+        43
+      ],
+      "objective": "Say the seven days of the week in order.",
+      "objectiveBn": "সপ্তাহের সাতটি দিন ক্রমানুসারে বলা।",
+      "minutes": 6,
+      "vocabulary": [
+        {
+          "id": "sunday",
+          "word": "Sunday",
+          "bangla": "রবিবার",
+          "banglaPronunciation": "সানডে",
+          "banglaSource": "enrichment",
+          "bookPage": 42,
+          "category": "day",
+          "image": "day-sunday"
+        },
+        {
+          "id": "monday",
+          "word": "Monday",
+          "bangla": "সোমবার",
+          "banglaPronunciation": "মানডে",
+          "banglaSource": "enrichment",
+          "bookPage": 42,
+          "category": "day",
+          "image": "day-monday"
+        },
+        {
+          "id": "tuesday",
+          "word": "Tuesday",
+          "bangla": "মঙ্গলবার",
+          "banglaPronunciation": "টিউজডে",
+          "banglaSource": "enrichment",
+          "bookPage": 42,
+          "category": "day",
+          "image": "day-tuesday"
+        },
+        {
+          "id": "wednesday",
+          "word": "Wednesday",
+          "bangla": "বুধবার",
+          "banglaPronunciation": "ওয়েডনেসডে",
+          "banglaSource": "enrichment",
+          "bookPage": 42,
+          "category": "day",
+          "image": "day-wednesday"
+        },
+        {
+          "id": "thursday",
+          "word": "Thursday",
+          "bangla": "বৃহস্পতিবার",
+          "banglaPronunciation": "থার্সডে",
+          "banglaSource": "enrichment",
+          "bookPage": 42,
+          "category": "day",
+          "image": "day-thursday"
+        },
+        {
+          "id": "friday",
+          "word": "Friday",
+          "bangla": "শুক্রবার",
+          "banglaPronunciation": "ফ্রাইডে",
+          "banglaSource": "enrichment",
+          "bookPage": 42,
+          "category": "day",
+          "image": "day-friday"
+        },
+        {
+          "id": "saturday",
+          "word": "Saturday",
+          "bangla": "শনিবার",
+          "banglaPronunciation": "স্যাটারডে",
+          "banglaSource": "enrichment",
+          "bookPage": 42,
+          "category": "day",
+          "image": "day-saturday"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u5l1-intro",
+          "type": "intro",
+          "title": "Seven days",
+          "titleBn": "সাতটি দিন",
+          "say": "There are seven days in a week. Let's say them!",
+          "sayBn": "সপ্তাহে সাতটি দিন। চলো বলি!",
+          "illustration": "week"
+        },
+        {
+          "id": "u5l1-words1",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Days of the week 1",
+          "titleBn": "সপ্তাহের দিন ১",
+          "items": [
+            "sunday",
+            "monday",
+            "tuesday",
+            "wednesday"
+          ]
+        },
+        {
+          "id": "u5l1-words2",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Days of the week 2",
+          "titleBn": "সপ্তাহের দিন ২",
+          "items": [
+            "thursday",
+            "friday",
+            "saturday"
+          ]
+        },
+        {
+          "id": "u5l1-speak",
+          "type": "speak",
+          "bookActivity": "B",
+          "title": "Say the weekdays",
+          "titleBn": "সপ্তাহের দিনগুলো বলো",
+          "prompt": "Say the days of the week.",
+          "promptBn": "সপ্তাহের দিনগুলোর নাম বলো।",
+          "modelAnswer": "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday."
+        },
+        {
+          "id": "u5l1-game1",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "A",
+          "title": "Which day?",
+          "titleBn": "কোন দিন?",
+          "rounds": [
+            {
+              "id": "r-sunday",
+              "ask": "Which day is this?",
+              "askBn": "এটি কোন দিন?",
+              "image": "day-sunday",
+              "options": [
+                {
+                  "label": "Thursday"
+                },
+                {
+                  "label": "Wednesday"
+                },
+                {
+                  "label": "Sunday"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the box that is coloured.",
+              "tests": "sunday"
+            },
+            {
+              "id": "r-tuesday",
+              "ask": "Which day is this?",
+              "askBn": "এটি কোন দিন?",
+              "image": "day-tuesday",
+              "options": [
+                {
+                  "label": "Friday"
+                },
+                {
+                  "label": "Tuesday"
+                },
+                {
+                  "label": "Sunday"
+                }
+              ],
+              "answer": 1,
+              "hint": "Look at the box that is coloured.",
+              "tests": "tuesday"
+            },
+            {
+              "id": "r-wednesday",
+              "ask": "Which day is this?",
+              "askBn": "এটি কোন দিন?",
+              "image": "day-wednesday",
+              "options": [
+                {
+                  "label": "Wednesday"
+                },
+                {
+                  "label": "Monday"
+                },
+                {
+                  "label": "Sunday"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the box that is coloured.",
+              "tests": "wednesday"
+            },
+            {
+              "id": "r-friday",
+              "ask": "Which day is this?",
+              "askBn": "এটি কোন দিন?",
+              "image": "day-friday",
+              "options": [
+                {
+                  "label": "Monday"
+                },
+                {
+                  "label": "Wednesday"
+                },
+                {
+                  "label": "Friday"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the box that is coloured.",
+              "tests": "friday"
+            },
+            {
+              "id": "r-saturday",
+              "ask": "Which day is this?",
+              "askBn": "এটি কোন দিন?",
+              "image": "day-saturday",
+              "options": [
+                {
+                  "label": "Saturday"
+                },
+                {
+                  "label": "Monday"
+                },
+                {
+                  "label": "Thursday"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the box that is coloured.",
+              "tests": "saturday"
+            }
+          ]
+        },
+        {
+          "id": "u5l1-game2",
+          "type": "game",
+          "kind": "order-the-lines",
+          "bookActivity": "B",
+          "title": "First and last",
+          "titleBn": "প্রথম আর শেষ",
+          "rounds": [
+            {
+              "id": "o1",
+              "ask": "Which day comes first on the list?",
+              "askBn": "তালিকায় কোন দিনটি প্রথমে?",
+              "options": [
+                {
+                  "label": "Tuesday"
+                },
+                {
+                  "label": "Saturday"
+                },
+                {
+                  "label": "Sunday"
+                }
+              ],
+              "answer": 2,
+              "hint": "The list starts with Sunday.",
+              "tests": "sunday"
+            },
+            {
+              "id": "o2",
+              "ask": "Which day comes last on the list?",
+              "askBn": "তালিকায় কোন দিনটি শেষে?",
+              "options": [
+                {
+                  "label": "Monday"
+                },
+                {
+                  "label": "Friday"
+                },
+                {
+                  "label": "Saturday"
+                }
+              ],
+              "answer": 2,
+              "hint": "Then Sunday comes again.",
+              "tests": "saturday"
+            },
+            {
+              "id": "o3",
+              "ask": "Which day comes after Monday?",
+              "askBn": "সোমবারের পরে কোন দিন?",
+              "options": [
+                {
+                  "label": "Wednesday"
+                },
+                {
+                  "label": "Saturday"
+                },
+                {
+                  "label": "Tuesday"
+                }
+              ],
+              "answer": 2,
+              "hint": "Monday, ... ?",
+              "tests": "tuesday"
+            }
+          ]
+        },
+        {
+          "id": "u5l1-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "Which day is this?",
+              "askBn": "এটি কোন দিন?",
+              "image": "day-thursday",
+              "options": [
+                {
+                  "label": "Thursday"
+                },
+                {
+                  "label": "Friday"
+                },
+                {
+                  "label": "Tuesday"
+                }
+              ],
+              "answer": 0,
+              "explain": "Thursday = বৃহস্পতিবার",
+              "tests": "thursday"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which day did you hear?",
+              "askBn": "শোনো। কোন দিনটি শুনলে?",
+              "speak": "Wednesday",
+              "options": [
+                {
+                  "label": "Friday"
+                },
+                {
+                  "label": "Saturday"
+                },
+                {
+                  "label": "Wednesday"
+                }
+              ],
+              "answer": 2,
+              "tests": "wednesday"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "Sunday, Monday, ___",
+              "askBn": "Sunday, Monday, ___",
+              "options": [
+                {
+                  "label": "Friday"
+                },
+                {
+                  "label": "Saturday"
+                },
+                {
+                  "label": "Tuesday"
+                }
+              ],
+              "answer": 2,
+              "explain": "After Monday comes Tuesday.",
+              "tests": "tuesday"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "Friday comes after Thursday.",
+              "askBn": "শুক্রবার বৃহস্পতিবারের পরে আসে।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "The days go: Thursday, Friday.",
+              "tests": "friday"
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "Which day is the last on the list?",
+              "askBn": "তালিকার শেষ দিন কোনটি?",
+              "options": [
+                {
+                  "label": "Sunday"
+                },
+                {
+                  "label": "Monday"
+                },
+                {
+                  "label": "Saturday"
+                }
+              ],
+              "answer": 2,
+              "explain": "The list ends with Saturday. Then Sunday comes again.",
+              "tests": "saturday"
+            }
+          ]
+        },
+        {
+          "id": "u5l1-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You can say all seven days!",
+          "sayBn": "তুমি সাতটি দিনই বলতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "u5l2",
+      "unitId": "u5",
+      "number": 2,
+      "title": "Seven Days in a Week",
+      "titleBn": "সপ্তাহে সাত দিন",
+      "shape": "rhyme",
+      "bookPages": [
+        44,
+        45
+      ],
+      "objective": "Recite the rhyme about the seven days.",
+      "objectiveBn": "সাত দিনের ছড়াটি আবৃত্তি করা।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "calendar",
+          "word": "calendar",
+          "bangla": "ক্যালেন্ডার",
+          "banglaPronunciation": "ক্যালেন্ডার",
+          "banglaSource": "enrichment",
+          "bookPage": 44,
+          "category": "object",
+          "image": "calendar",
+          "example": "I look at my calendar and what do I see?",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "week",
+          "word": "week",
+          "bangla": "সপ্তাহ",
+          "banglaPronunciation": "উইক",
+          "banglaSource": "enrichment",
+          "bookPage": 44,
+          "category": "day",
+          "image": "week",
+          "example": "There are seven days in a row for me.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "today",
+          "word": "today",
+          "bangla": "আজ",
+          "banglaPronunciation": "টুডে",
+          "banglaSource": "enrichment",
+          "bookPage": 45,
+          "category": "day",
+          "image": "today"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u5l2-intro",
+          "type": "intro",
+          "title": "Look at the calendar",
+          "titleBn": "ক্যালেন্ডার দেখো",
+          "say": "Look at the calendar. How many days are in a week?",
+          "sayBn": "ক্যালেন্ডার দেখো। সপ্তাহে কয়টি দিন?",
+          "illustration": "calendar"
+        },
+        {
+          "id": "u5l2-words",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "New words",
+          "titleBn": "নতুন শব্দ",
+          "items": [
+            "calendar",
+            "week",
+            "today"
+          ]
+        },
+        {
+          "id": "u5l2-rhyme",
+          "type": "rhyme",
+          "bookActivity": "A",
+          "source": "textbook",
+          "title": "Seven Days in a Week",
+          "titleBn": "সপ্তাহে সাত দিন",
+          "verses": [
+            [
+              "I look at my calendar and what do I see?",
+              "There are seven days in a row for me.",
+              "Sunday, Monday, Tuesday too",
+              "Wednesday, Thursday is next true.",
+              "Friday, Saturday come and then",
+              "Sunday comes around again."
+            ]
+          ]
+        },
+        {
+          "id": "u5l2-write",
+          "type": "command",
+          "bookActivity": "B",
+          "source": "textbook",
+          "title": "Write the days",
+          "titleBn": "দিনগুলো লেখো (খাতায়)",
+          "commands": [
+            {
+              "text": "Sunday",
+              "textBn": "খাতায় লেখো: রবিবার",
+              "illustration": "day-sunday"
+            },
+            {
+              "text": "Monday",
+              "textBn": "খাতায় লেখো: সোমবার",
+              "illustration": "day-monday"
+            },
+            {
+              "text": "Tuesday",
+              "textBn": "খাতায় লেখো: মঙ্গলবার",
+              "illustration": "day-tuesday"
+            },
+            {
+              "text": "Wednesday",
+              "textBn": "খাতায় লেখো: বুধবার",
+              "illustration": "day-wednesday"
+            },
+            {
+              "text": "Thursday",
+              "textBn": "খাতায় লেখো: বৃহস্পতিবার",
+              "illustration": "day-thursday"
+            },
+            {
+              "text": "Friday",
+              "textBn": "খাতায় লেখো: শুক্রবার",
+              "illustration": "day-friday"
+            },
+            {
+              "text": "Saturday",
+              "textBn": "খাতায় লেখো: শনিবার",
+              "illustration": "day-saturday"
+            }
+          ]
+        },
+        {
+          "id": "u5l2-game",
+          "type": "game",
+          "kind": "order-the-lines",
+          "bookActivity": "A",
+          "title": "Finish the rhyme",
+          "titleBn": "ছড়াটি শেষ করো",
+          "rounds": [
+            {
+              "id": "m1",
+              "ask": "There are ___ days in a row for me.",
+              "askBn": "There are ___ days in a row for me.",
+              "options": [
+                {
+                  "label": "ten"
+                },
+                {
+                  "label": "five"
+                },
+                {
+                  "label": "seven"
+                }
+              ],
+              "answer": 2,
+              "hint": "How many days are in a week?",
+              "tests": "week"
+            },
+            {
+              "id": "m2",
+              "ask": "Sunday, Monday, ___ too",
+              "askBn": "Sunday, Monday, ___ too",
+              "options": [
+                {
+                  "label": "Saturday"
+                },
+                {
+                  "label": "Friday"
+                },
+                {
+                  "label": "Tuesday"
+                }
+              ],
+              "answer": 2,
+              "hint": "After Monday comes ... ?"
+            },
+            {
+              "id": "m3",
+              "ask": "Friday, Saturday come and then ___ comes around again.",
+              "askBn": "Friday, Saturday come and then ___ comes around again.",
+              "options": [
+                {
+                  "label": "Wednesday"
+                },
+                {
+                  "label": "Sunday"
+                },
+                {
+                  "label": "Monday"
+                }
+              ],
+              "answer": 1,
+              "hint": "A new week begins.",
+              "tests": "week"
+            }
+          ]
+        },
+        {
+          "id": "u5l2-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "calendar",
+              "options": [
+                {
+                  "label": "clock"
+                },
+                {
+                  "label": "book"
+                },
+                {
+                  "label": "calendar"
+                }
+              ],
+              "answer": 2,
+              "explain": "calendar = ক্যালেন্ডার",
+              "tests": "calendar"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "calendar",
+              "options": [
+                {
+                  "label": "calendar"
+                },
+                {
+                  "label": "week"
+                },
+                {
+                  "label": "clock"
+                }
+              ],
+              "answer": 0,
+              "tests": "calendar"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "There are ___ days in a week.",
+              "askBn": "There are ___ days in a week.",
+              "options": [
+                {
+                  "label": "ten"
+                },
+                {
+                  "label": "five"
+                },
+                {
+                  "label": "seven"
+                }
+              ],
+              "answer": 2,
+              "explain": "A week has seven days.",
+              "tests": "week"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "After Saturday, Sunday comes around again.",
+              "askBn": "শনিবারের পরে আবার রবিবার আসে।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "The rhyme says: Sunday comes around again.",
+              "tests": "week"
+            },
+            {
+              "id": "q5",
+              "type": "tap-picture",
+              "ask": "How many days are in the week?",
+              "askBn": "সপ্তাহে কয়টি দিন?",
+              "image": "week",
+              "options": [
+                {
+                  "label": "10"
+                },
+                {
+                  "label": "7"
+                },
+                {
+                  "label": "5"
+                }
+              ],
+              "answer": 1,
+              "explain": "One box for each day: 7.",
+              "tests": "week"
+            }
+          ]
+        },
+        {
+          "id": "u5l2-done",
+          "type": "done",
+          "title": "Well done!",
+          "titleBn": "খুব ভালো!",
+          "say": "You can say the rhyme about the week!",
+          "sayBn": "তুমি সপ্তাহের ছড়াটি বলতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "u5l3",
+      "unitId": "u5",
+      "number": 3,
+      "title": "What Day Is Today?",
+      "titleBn": "আজ কী বার?",
+      "shape": "dialogue",
+      "bookPages": [
+        46,
+        47
+      ],
+      "objective": "Ask and say what day it is, and which day comes next.",
+      "objectiveBn": "আজ কী বার আর তার পরের দিন কোনটি তা জিজ্ঞাসা করা ও বলা।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "how-many-days",
+          "word": "How many days are there in a week?",
+          "bangla": "সপ্তাহে কয়টি দিন?",
+          "banglaPronunciation": "হাউ ম্যানি ডেইজ আর দেয়ার ইন আ উইক",
+          "banglaSource": "enrichment",
+          "bookPage": 46,
+          "category": "expression",
+          "image": "week",
+          "example": "How many days are there in a week?",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "what-day-today",
+          "word": "What day is today?",
+          "bangla": "আজ কী বার?",
+          "banglaPronunciation": "হোয়াট ডে ইজ টুডে",
+          "banglaSource": "enrichment",
+          "bookPage": 46,
+          "category": "expression",
+          "image": "today",
+          "example": "What day is today?",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "comes-after",
+          "word": "What day comes after Monday?",
+          "bangla": "সোমবারের পরে কোন দিন?",
+          "banglaPronunciation": "হোয়াট ডে কামস আফটার মানডে",
+          "banglaSource": "enrichment",
+          "bookPage": 47,
+          "category": "expression",
+          "image": "day-tuesday",
+          "example": "What day comes after Monday?",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u5l3-intro",
+          "type": "intro",
+          "title": "What day is it?",
+          "titleBn": "আজ কী বার?",
+          "say": "Do you know what day it is today?",
+          "sayBn": "আজ কী বার তুমি জানো?",
+          "illustration": "today"
+        },
+        {
+          "id": "u5l3-words",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Asking about days",
+          "titleBn": "দিন নিয়ে প্রশ্ন",
+          "items": [
+            "how-many-days",
+            "what-day-today",
+            "comes-after"
+          ]
+        },
+        {
+          "id": "u5l3-talk1",
+          "type": "dialogue",
+          "bookActivity": "A",
+          "title": "Listen and say",
+          "titleBn": "শোনো আর বলো",
+          "source": "textbook",
+          "lines": [
+            {
+              "speaker": "Teacher",
+              "text": "How many days are there in a week?"
+            },
+            {
+              "speaker": "Boy",
+              "text": "7 days"
+            }
+          ]
+        },
+        {
+          "id": "u5l3-speak1",
+          "type": "speak",
+          "bookActivity": "B",
+          "title": "Your turn!",
+          "titleBn": "এবার তোমার পালা!",
+          "prompt": "How many days are there in a week?",
+          "promptBn": "সপ্তাহে কয়টি দিন?",
+          "modelAnswer": "Seven days."
+        },
+        {
+          "id": "u5l3-speak2",
+          "type": "speak",
+          "bookActivity": "B",
+          "title": "What day is it?",
+          "titleBn": "আজ কী বার?",
+          "prompt": "What day is today?",
+          "promptBn": "আজ কী বার?",
+          "modelAnswer": "It's ..."
+        },
+        {
+          "id": "u5l3-talk2",
+          "type": "dialogue",
+          "bookActivity": "C",
+          "title": "Ask and answer",
+          "titleBn": "প্রশ্ন করো আর উত্তর দাও",
+          "source": "textbook",
+          "lines": [
+            {
+              "speaker": "Student 1",
+              "text": "What day is today?"
+            },
+            {
+              "speaker": "Student 2",
+              "text": "It is Monday."
+            },
+            {
+              "speaker": "Student 2",
+              "text": "What day comes after Monday?"
+            },
+            {
+              "speaker": "Student 3",
+              "text": "Tuesday."
+            }
+          ]
+        },
+        {
+          "id": "u5l3-game1",
+          "type": "game",
+          "kind": "choose-the-reply",
+          "bookActivity": "C",
+          "title": "What comes after?",
+          "titleBn": "এর পরে কোনটি?",
+          "rounds": [
+            {
+              "id": "a-monday",
+              "ask": "What day comes after Monday?",
+              "askBn": "সোমবারের পরে কোন দিন?",
+              "speak": "What day comes after Monday?",
+              "options": [
+                {
+                  "label": "Wednesday"
+                },
+                {
+                  "label": "Friday"
+                },
+                {
+                  "label": "Tuesday"
+                }
+              ],
+              "answer": 2,
+              "hint": "Say the days in order."
+            },
+            {
+              "id": "a-tuesday",
+              "ask": "What day comes after Tuesday?",
+              "askBn": "মঙ্গলবারের পরে কোন দিন?",
+              "speak": "What day comes after Tuesday?",
+              "options": [
+                {
+                  "label": "Wednesday"
+                },
+                {
+                  "label": "Saturday"
+                },
+                {
+                  "label": "Tuesday"
+                }
+              ],
+              "answer": 0,
+              "hint": "Say the days in order."
+            },
+            {
+              "id": "a-thursday",
+              "ask": "What day comes after Thursday?",
+              "askBn": "বৃহস্পতিবারের পরে কোন দিন?",
+              "speak": "What day comes after Thursday?",
+              "options": [
+                {
+                  "label": "Wednesday"
+                },
+                {
+                  "label": "Friday"
+                },
+                {
+                  "label": "Monday"
+                }
+              ],
+              "answer": 1,
+              "hint": "Say the days in order."
+            },
+            {
+              "id": "a-saturday",
+              "ask": "What day comes after Saturday?",
+              "askBn": "শনিবারের পরে কোন দিন?",
+              "speak": "What day comes after Saturday?",
+              "options": [
+                {
+                  "label": "Wednesday"
+                },
+                {
+                  "label": "Monday"
+                },
+                {
+                  "label": "Sunday"
+                }
+              ],
+              "answer": 2,
+              "hint": "Say the days in order."
+            }
+          ]
+        },
+        {
+          "id": "u5l3-game2",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "D",
+          "title": "Which day is coloured?",
+          "titleBn": "কোন দিনটি রং করা?",
+          "rounds": [
+            {
+              "id": "d-monday",
+              "ask": "Which day is coloured?",
+              "askBn": "কোন দিনটি রং করা?",
+              "image": "day-monday",
+              "options": [
+                {
+                  "label": "Friday"
+                },
+                {
+                  "label": "Tuesday"
+                },
+                {
+                  "label": "Monday"
+                }
+              ],
+              "answer": 2,
+              "hint": "Count the boxes from Sunday."
+            },
+            {
+              "id": "d-wednesday",
+              "ask": "Which day is coloured?",
+              "askBn": "কোন দিনটি রং করা?",
+              "image": "day-wednesday",
+              "options": [
+                {
+                  "label": "Wednesday"
+                },
+                {
+                  "label": "Thursday"
+                },
+                {
+                  "label": "Tuesday"
+                }
+              ],
+              "answer": 0,
+              "hint": "Count the boxes from Sunday."
+            },
+            {
+              "id": "d-friday",
+              "ask": "Which day is coloured?",
+              "askBn": "কোন দিনটি রং করা?",
+              "image": "day-friday",
+              "options": [
+                {
+                  "label": "Tuesday"
+                },
+                {
+                  "label": "Friday"
+                },
+                {
+                  "label": "Thursday"
+                }
+              ],
+              "answer": 1,
+              "hint": "Count the boxes from Sunday."
+            }
+          ]
+        },
+        {
+          "id": "u5l3-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-word",
+              "ask": "How many days are there in a week?",
+              "askBn": "সপ্তাহে কয়টি দিন?",
+              "options": [
+                {
+                  "label": "10 days"
+                },
+                {
+                  "label": "7 days"
+                },
+                {
+                  "label": "5 days"
+                }
+              ],
+              "answer": 1,
+              "explain": "There are 7 days in a week.",
+              "tests": "how-many-days"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which day did you hear?",
+              "askBn": "শোনো। কোন দিনটি শুনলে?",
+              "speak": "Thursday",
+              "options": [
+                {
+                  "label": "Thursday"
+                },
+                {
+                  "label": "Wednesday"
+                },
+                {
+                  "label": "Friday"
+                }
+              ],
+              "answer": 0
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "What day comes ___ Monday?",
+              "askBn": "What day comes ___ Monday?",
+              "options": [
+                {
+                  "label": "blue"
+                },
+                {
+                  "label": "after"
+                },
+                {
+                  "label": "under"
+                }
+              ],
+              "answer": 1,
+              "explain": "We ask: What day comes after Monday?",
+              "tests": "comes-after"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "Tuesday comes after Monday.",
+              "askBn": "মঙ্গলবার সোমবারের পরে আসে।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "In the book: What day comes after Monday? Tuesday.",
+              "tests": "comes-after"
+            },
+            {
+              "id": "q5",
+              "type": "tap-picture",
+              "ask": "Which day is coloured?",
+              "askBn": "কোন দিনটি রং করা?",
+              "image": "day-friday",
+              "options": [
+                {
+                  "label": "Wednesday"
+                },
+                {
+                  "label": "Friday"
+                },
+                {
+                  "label": "Sunday"
+                }
+              ],
+              "answer": 1,
+              "explain": "The coloured box is Friday."
+            }
+          ]
+        },
+        {
+          "id": "u5l3-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You can say what day it is!",
+          "sayBn": "আজ কী বার তুমি বলতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "u5l4",
+      "unitId": "u5",
+      "number": 4,
+      "title": "Rima and the Seed",
+      "titleBn": "রিমা আর বীজ",
+      "shape": "category",
+      "bookPages": [
+        48
+      ],
+      "objective": "Name the things a seed needs, and put the pictures in order.",
+      "objectiveBn": "বীজের যা যা দরকার তার নাম বলা আর ছবিগুলো ক্রমানুসারে সাজানো।",
+      "minutes": 7,
+      "vocabulary": [
+        {
+          "id": "a-seed",
+          "word": "a seed",
+          "bangla": "একটি বীজ",
+          "banglaPronunciation": "আ সিড",
+          "banglaSource": "enrichment",
+          "bookPage": 48,
+          "category": "plant",
+          "image": "seed"
+        },
+        {
+          "id": "a-flower-pot",
+          "word": "a flower pot",
+          "bangla": "একটি ফুলের টব",
+          "banglaPronunciation": "আ ফ্লাওয়ার পট",
+          "banglaSource": "enrichment",
+          "bookPage": 48,
+          "category": "object",
+          "image": "flower-pot"
+        },
+        {
+          "id": "the-sun",
+          "word": "the sun",
+          "bangla": "সূর্য",
+          "banglaPronunciation": "দ্য সান",
+          "banglaSource": "enrichment",
+          "bookPage": 48,
+          "category": "nature",
+          "image": "the-sun"
+        },
+        {
+          "id": "a-water-can",
+          "word": "a water can",
+          "bangla": "একটি জলের ঝারি",
+          "banglaPronunciation": "আ ওয়াটার ক্যান",
+          "banglaSource": "enrichment",
+          "bookPage": 48,
+          "category": "object",
+          "image": "water-can"
+        },
+        {
+          "id": "a-plant",
+          "word": "a plant",
+          "bangla": "একটি চারাগাছ",
+          "banglaPronunciation": "আ প্ল্যান্ট",
+          "banglaSource": "enrichment",
+          "bookPage": 48,
+          "category": "plant",
+          "image": "plant"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u5l4-intro",
+          "type": "intro",
+          "title": "Rima and the seed",
+          "titleBn": "রিমা আর বীজ",
+          "say": "Rima wants to grow a plant. What does she need?",
+          "sayBn": "রিমা একটি গাছ লাগাতে চায়। তার কী কী দরকার?",
+          "illustration": "seed"
+        },
+        {
+          "id": "u5l4-words",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "Look, listen and say",
+          "titleBn": "দেখো, শোনো আর বলো",
+          "items": [
+            "a-seed",
+            "a-flower-pot",
+            "the-sun",
+            "a-water-can",
+            "a-plant"
+          ]
+        },
+        {
+          "id": "u5l4-game1",
+          "type": "game",
+          "kind": "picture-to-word",
+          "bookActivity": "A",
+          "title": "Name the picture",
+          "titleBn": "ছবিটির নাম বলো",
+          "rounds": [
+            {
+              "id": "r-a-seed",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "seed",
+              "options": [
+                {
+                  "label": "a seed"
+                },
+                {
+                  "label": "the sun"
+                },
+                {
+                  "label": "a water can"
+                }
+              ],
+              "answer": 0,
+              "hint": "Look at the picture.",
+              "tests": "a-seed"
+            },
+            {
+              "id": "r-a-flower-pot",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "flower-pot",
+              "options": [
+                {
+                  "label": "the sun"
+                },
+                {
+                  "label": "a flower pot"
+                },
+                {
+                  "label": "a seed"
+                }
+              ],
+              "answer": 1,
+              "hint": "Look at the picture.",
+              "tests": "a-flower-pot"
+            },
+            {
+              "id": "r-the-sun",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "the-sun",
+              "options": [
+                {
+                  "label": "a plant"
+                },
+                {
+                  "label": "a flower pot"
+                },
+                {
+                  "label": "the sun"
+                }
+              ],
+              "answer": 2,
+              "hint": "Look at the picture.",
+              "tests": "the-sun"
+            },
+            {
+              "id": "r-a-water-can",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "water-can",
+              "options": [
+                {
+                  "label": "the sun"
+                },
+                {
+                  "label": "a water can"
+                },
+                {
+                  "label": "a flower pot"
+                }
+              ],
+              "answer": 1,
+              "hint": "Look at the picture.",
+              "tests": "a-water-can"
+            },
+            {
+              "id": "r-a-plant",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "plant",
+              "options": [
+                {
+                  "label": "a water can"
+                },
+                {
+                  "label": "a plant"
+                },
+                {
+                  "label": "a flower pot"
+                }
+              ],
+              "answer": 1,
+              "hint": "Look at the picture.",
+              "tests": "a-plant"
+            }
+          ]
+        },
+        {
+          "id": "u5l4-game2",
+          "type": "game",
+          "kind": "order-the-scenes",
+          "bookActivity": "B",
+          "title": "Number the pictures",
+          "titleBn": "ছবিগুলোর নম্বর দাও",
+          "rounds": [
+            {
+              "id": "n1",
+              "ask": "Which picture is number 1?",
+              "askBn": "1 নম্বর ছবিটি কোনটি?",
+              "options": [
+                {
+                  "label": "watering the pot",
+                  "image": "watering"
+                },
+                {
+                  "label": "an empty pot",
+                  "image": "pot-empty"
+                },
+                {
+                  "label": "a small plant",
+                  "image": "pot-sprout"
+                }
+              ],
+              "answer": 1,
+              "hint": "Think: what comes first, then next?"
+            },
+            {
+              "id": "n2",
+              "ask": "Which picture is number 2?",
+              "askBn": "2 নম্বর ছবিটি কোনটি?",
+              "options": [
+                {
+                  "label": "an empty pot",
+                  "image": "pot-empty"
+                },
+                {
+                  "label": "watering the pot",
+                  "image": "watering"
+                },
+                {
+                  "label": "a pot with soil",
+                  "image": "pot-soil"
+                }
+              ],
+              "answer": 2,
+              "hint": "Think: what comes first, then next?"
+            },
+            {
+              "id": "n3",
+              "ask": "Which picture is number 3?",
+              "askBn": "3 নম্বর ছবিটি কোনটি?",
+              "options": [
+                {
+                  "label": "a pot with soil",
+                  "image": "pot-soil"
+                },
+                {
+                  "label": "a small plant",
+                  "image": "pot-sprout"
+                },
+                {
+                  "label": "watering the pot",
+                  "image": "watering"
+                }
+              ],
+              "answer": 2,
+              "hint": "Think: what comes first, then next?"
+            },
+            {
+              "id": "n4",
+              "ask": "Which picture is number 4?",
+              "askBn": "4 নম্বর ছবিটি কোনটি?",
+              "options": [
+                {
+                  "label": "a small plant",
+                  "image": "pot-sprout"
+                },
+                {
+                  "label": "an empty pot",
+                  "image": "pot-empty"
+                },
+                {
+                  "label": "a pot with soil",
+                  "image": "pot-soil"
+                }
+              ],
+              "answer": 0,
+              "hint": "Think: what comes first, then next?"
+            }
+          ]
+        },
+        {
+          "id": "u5l4-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "What is this?",
+              "askBn": "এটি কী?",
+              "image": "water-can",
+              "options": [
+                {
+                  "label": "the sun"
+                },
+                {
+                  "label": "a seed"
+                },
+                {
+                  "label": "a water can"
+                }
+              ],
+              "answer": 2,
+              "explain": "a water can = একটি জলের ঝারি",
+              "tests": "a-water-can"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which one did you hear?",
+              "askBn": "শোনো। কোনটি শুনলে?",
+              "speak": "a flower pot",
+              "options": [
+                {
+                  "label": "a water can"
+                },
+                {
+                  "label": "the sun"
+                },
+                {
+                  "label": "a flower pot"
+                }
+              ],
+              "answer": 2,
+              "tests": "a-flower-pot"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "a flower ___",
+              "askBn": "a flower ___",
+              "options": [
+                {
+                  "label": "sun"
+                },
+                {
+                  "label": "can"
+                },
+                {
+                  "label": "pot"
+                }
+              ],
+              "answer": 2,
+              "explain": "We say: a flower pot.",
+              "tests": "a-flower-pot"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "A seed can grow into a plant.",
+              "askBn": "একটি বীজ থেকে চারাগাছ হতে পারে।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "Rima's seed grows into a plant.",
+              "tests": "a-seed"
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "What do we use to water a plant?",
+              "askBn": "গাছে জল দিতে আমরা কী ব্যবহার করি?",
+              "options": [
+                {
+                  "label": "the sun"
+                },
+                {
+                  "label": "a seed"
+                },
+                {
+                  "label": "a water can"
+                }
+              ],
+              "answer": 2,
+              "explain": "We water a plant with a water can.",
+              "tests": "a-water-can"
+            }
+          ]
+        },
+        {
+          "id": "u5l4-done",
+          "type": "done",
+          "title": "Well done!",
+          "titleBn": "খুব ভালো!",
+          "say": "You know what a seed needs to grow!",
+          "sayBn": "বীজ বড় হতে কী লাগে তুমি জানো!"
+        }
+      ]
+    },
+    {
+      "id": "u5l5",
+      "unitId": "u5",
+      "number": 5,
+      "title": "How Does a Plant Grow?",
+      "titleBn": "গাছ কীভাবে বড় হয়?",
+      "shape": "story",
+      "bookPages": [
+        49,
+        50,
+        51
+      ],
+      "objective": "Follow Rima's story through the week and say what happens on each day.",
+      "objectiveBn": "সপ্তাহের প্রতিদিন রিমার গল্পে কী ঘটে তা অনুসরণ করা ও বলা।",
+      "minutes": 8,
+      "vocabulary": [
+        {
+          "id": "soil",
+          "word": "soil",
+          "bangla": "মাটি",
+          "banglaPronunciation": "সয়েল",
+          "banglaSource": "enrichment",
+          "bookPage": 49,
+          "category": "nature",
+          "image": "soil",
+          "example": "On Monday, Rima puts soil in a pot.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "pot",
+          "word": "pot",
+          "bangla": "টব",
+          "banglaPronunciation": "পট",
+          "banglaSource": "enrichment",
+          "bookPage": 49,
+          "category": "object",
+          "image": "flower-pot",
+          "example": "On Monday, Rima puts soil in a pot.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "water-seed",
+          "word": "water",
+          "bangla": "জল দেওয়া",
+          "banglaPronunciation": "ওয়াটার",
+          "banglaSource": "enrichment",
+          "bookPage": 49,
+          "category": "action",
+          "image": "water-can",
+          "example": "Rima waters the seed on Tuesday.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "wait",
+          "word": "wait",
+          "bangla": "অপেক্ষা করা",
+          "banglaPronunciation": "ওয়েট",
+          "banglaSource": "enrichment",
+          "bookPage": 50,
+          "category": "action",
+          "image": "later",
+          "example": "On Friday, Rima waits.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "leaves",
+          "word": "leaves",
+          "bangla": "পাতা",
+          "banglaPronunciation": "লিভস",
+          "banglaSource": "enrichment",
+          "bookPage": 50,
+          "category": "plant",
+          "image": "leaves",
+          "example": "It's a small plant with two leaves!",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u5l5-intro",
+          "type": "intro",
+          "title": "Rima's plant",
+          "titleBn": "রিমার গাছ",
+          "say": "Rima gets a seed on Sunday. What happens next?",
+          "sayBn": "রবিবার রিমা একটি বীজ পায়। তারপর কী হয়?",
+          "illustration": "rima-seed"
+        },
+        {
+          "id": "u5l5-words",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "New words",
+          "titleBn": "নতুন শব্দ",
+          "items": [
+            "soil",
+            "pot",
+            "water-seed",
+            "wait",
+            "leaves"
+          ]
+        },
+        {
+          "id": "u5l5-story",
+          "type": "story",
+          "bookActivity": "A",
+          "title": "Rima and her seed",
+          "titleBn": "রিমা আর তার বীজ",
+          "source": "textbook",
+          "scenes": [
+            {
+              "id": "s1",
+              "text": "On Sunday, Rima's father gives her a seed.",
+              "illustration": "rima-seed"
+            },
+            {
+              "id": "s2",
+              "text": "On Monday, Rima puts soil in a pot.",
+              "illustration": "rima-soil"
+            },
+            {
+              "id": "s3",
+              "text": "She then puts the seed into the soil.",
+              "illustration": "rima-put-seed"
+            },
+            {
+              "id": "s4",
+              "text": "Rima waters the seed on Tuesday.",
+              "illustration": "rima-water"
+            },
+            {
+              "id": "s5",
+              "text": "On Wednesday, Rima puts the pot in the sun.",
+              "illustration": "rima-sun"
+            },
+            {
+              "id": "s6",
+              "text": "Rima waters the seed again on Thursday.",
+              "illustration": "rima-water"
+            },
+            {
+              "id": "s7",
+              "text": "On Friday, Rima waits.",
+              "illustration": "rima-wait"
+            },
+            {
+              "id": "s8",
+              "text": "On Saturday, Rima sees something in the pot. It's a small plant with two leaves!",
+              "illustration": "rima-sprout"
+            }
+          ]
+        },
+        {
+          "id": "u5l5-speak",
+          "type": "speak",
+          "bookActivity": "B",
+          "title": "Retell it",
+          "titleBn": "আবার বলো",
+          "prompt": "What does Rima see on Saturday?",
+          "promptBn": "শনিবার রিমা কী দেখে?",
+          "modelAnswer": "A small plant with two leaves!"
+        },
+        {
+          "id": "u5l5-game1",
+          "type": "game",
+          "kind": "order-the-scenes",
+          "bookActivity": "C",
+          "title": "Put the story in order",
+          "titleBn": "গল্পটি সাজাও",
+          "rounds": [
+            {
+              "id": "c1",
+              "ask": "Which sentence is number 1?",
+              "askBn": "1 নম্বর বাক্যটি কোনটি?",
+              "options": [
+                {
+                  "label": "Rima puts the pot in the sun."
+                },
+                {
+                  "label": "Rima's father gives her a seed."
+                },
+                {
+                  "label": "Rima puts the seed in the pot."
+                }
+              ],
+              "answer": 1,
+              "hint": "Follow Rima's story from Sunday."
+            },
+            {
+              "id": "c2",
+              "ask": "Which sentence is number 2?",
+              "askBn": "2 নম্বর বাক্যটি কোনটি?",
+              "options": [
+                {
+                  "label": "Rima puts the seed in the pot."
+                },
+                {
+                  "label": "Rima puts the pot in the sun."
+                },
+                {
+                  "label": "Rima's father gives her a seed."
+                }
+              ],
+              "answer": 0,
+              "hint": "Follow Rima's story from Sunday."
+            },
+            {
+              "id": "c3",
+              "ask": "Which sentence is number 3?",
+              "askBn": "3 নম্বর বাক্যটি কোনটি?",
+              "options": [
+                {
+                  "label": "Rima puts the pot in the sun."
+                },
+                {
+                  "label": "There's a small plant!"
+                },
+                {
+                  "label": "Rima puts the seed in the pot."
+                }
+              ],
+              "answer": 0,
+              "hint": "Follow Rima's story from Sunday."
+            },
+            {
+              "id": "c4",
+              "ask": "Which sentence is number 4?",
+              "askBn": "4 নম্বর বাক্যটি কোনটি?",
+              "options": [
+                {
+                  "label": "Rima puts the pot in the sun."
+                },
+                {
+                  "label": "There's a small plant!"
+                },
+                {
+                  "label": "Rima puts the seed in the pot."
+                }
+              ],
+              "answer": 1,
+              "hint": "Follow Rima's story from Sunday."
+            }
+          ]
+        },
+        {
+          "id": "u5l5-game2",
+          "type": "game",
+          "kind": "order-the-lines",
+          "bookActivity": "D",
+          "title": "Say the missing days",
+          "titleBn": "বাদ পড়া দিনগুলো বলো",
+          "rounds": [
+            {
+              "id": "d1",
+              "ask": "Sunday, ___, Tuesday",
+              "askBn": "Sunday, ___, Tuesday",
+              "options": [
+                {
+                  "label": "Sunday"
+                },
+                {
+                  "label": "Monday"
+                },
+                {
+                  "label": "Thursday"
+                }
+              ],
+              "answer": 1,
+              "hint": "Say the days in order."
+            },
+            {
+              "id": "d2",
+              "ask": "Tuesday, ___, Thursday",
+              "askBn": "Tuesday, ___, Thursday",
+              "options": [
+                {
+                  "label": "Thursday"
+                },
+                {
+                  "label": "Wednesday"
+                },
+                {
+                  "label": "Saturday"
+                }
+              ],
+              "answer": 1,
+              "hint": "Say the days in order."
+            },
+            {
+              "id": "d3",
+              "ask": "Thursday, ___, Saturday",
+              "askBn": "Thursday, ___, Saturday",
+              "options": [
+                {
+                  "label": "Friday"
+                },
+                {
+                  "label": "Wednesday"
+                },
+                {
+                  "label": "Sunday"
+                }
+              ],
+              "answer": 0,
+              "hint": "Say the days in order."
+            },
+            {
+              "id": "d4",
+              "ask": "Friday, ___",
+              "askBn": "Friday, ___",
+              "options": [
+                {
+                  "label": "Sunday"
+                },
+                {
+                  "label": "Saturday"
+                },
+                {
+                  "label": "Tuesday"
+                }
+              ],
+              "answer": 1,
+              "hint": "Say the days in order."
+            }
+          ]
+        },
+        {
+          "id": "u5l5-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "What does Rima see on Saturday?",
+              "askBn": "শনিবার রিমা কী দেখে?",
+              "image": "rima-sprout",
+              "options": [
+                {
+                  "label": "a small plant"
+                },
+                {
+                  "label": "a bird"
+                },
+                {
+                  "label": "a big tree"
+                }
+              ],
+              "answer": 0,
+              "explain": "It's a small plant with two leaves!"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "soil",
+              "options": [
+                {
+                  "label": "soil"
+                },
+                {
+                  "label": "seed"
+                },
+                {
+                  "label": "sun"
+                }
+              ],
+              "answer": 0,
+              "tests": "soil"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "Rima puts soil in a ___ .",
+              "askBn": "Rima puts soil in a ___ .",
+              "options": [
+                {
+                  "label": "pot"
+                },
+                {
+                  "label": "bird"
+                },
+                {
+                  "label": "book"
+                }
+              ],
+              "answer": 0,
+              "explain": "On Monday, Rima puts soil in a pot.",
+              "tests": "pot"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "Rima waters the seed on Tuesday.",
+              "askBn": "রিমা মঙ্গলবার বীজে জল দেয়।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "The book says: Rima waters the seed on Tuesday.",
+              "tests": "water-seed"
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "What does Rima do on Friday?",
+              "askBn": "শুক্রবার রিমা কী করে?",
+              "options": [
+                {
+                  "label": "Rima waits."
+                },
+                {
+                  "label": "Rima waters the seed."
+                },
+                {
+                  "label": "Rima puts the pot in the sun."
+                }
+              ],
+              "answer": 0,
+              "explain": "On Friday, Rima waits.",
+              "tests": "wait"
+            }
+          ]
+        },
+        {
+          "id": "u5l5-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You can tell how Rima's plant grew!",
+          "sayBn": "রিমার গাছ কীভাবে বড় হলো তুমি বলতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "u5l6",
+      "unitId": "u5",
+      "number": 6,
+      "title": "Two Little Birds",
+      "titleBn": "দুটি ছোট পাখি",
+      "shape": "rhyme",
+      "bookPages": [
+        52,
+        53,
+        54
+      ],
+      "objective": "Recite the rhyme about two little birds and answer questions about it.",
+      "objectiveBn": "দুটি ছোট পাখির ছড়া আবৃত্তি করা আর তার প্রশ্নের উত্তর দেওয়া।",
+      "minutes": 8,
+      "vocabulary": [
+        {
+          "id": "egg",
+          "word": "egg",
+          "bangla": "ডিম",
+          "banglaPronunciation": "এগ",
+          "banglaSource": "enrichment",
+          "bookPage": 52,
+          "category": "nature",
+          "image": "egg",
+          "example": "On Sunday, I saw two eggs in the nest.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "bird-nest",
+          "word": "nest",
+          "bangla": "পাখির বাসা",
+          "banglaPronunciation": "নেস্ট",
+          "banglaSource": "enrichment",
+          "bookPage": 52,
+          "category": "nature",
+          "image": "bird-nest",
+          "example": "On Sunday, I saw two eggs in the nest.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "little-bird",
+          "word": "little bird",
+          "bangla": "ছোট পাখি",
+          "banglaPronunciation": "লিটল বার্ড",
+          "banglaSource": "enrichment",
+          "bookPage": 52,
+          "category": "bird",
+          "image": "bird",
+          "example": "On Monday, there were two little birds instead.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "branch",
+          "word": "branch",
+          "bangla": "ডাল",
+          "banglaPronunciation": "ব্রাঞ্চ",
+          "banglaSource": "enrichment",
+          "bookPage": 53,
+          "category": "nature",
+          "image": "branch",
+          "example": "On Thursday, the little birds sat on a branch.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "fly-away",
+          "word": "fly away",
+          "bangla": "উড়ে যাওয়া",
+          "banglaPronunciation": "ফ্লাই অ্যাওয়ে",
+          "banglaSource": "enrichment",
+          "bookPage": 53,
+          "category": "action",
+          "image": "birds-flyaway",
+          "example": "On Saturday, the little birds happily flew away.",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u5l6-intro",
+          "type": "intro",
+          "title": "Two little birds",
+          "titleBn": "দুটি ছোট পাখি",
+          "say": "Two little birds live in a nest. Let's meet them!",
+          "sayBn": "দুটি ছোট পাখি বাসায় থাকে। চলো তাদের সঙ্গে দেখা করি!",
+          "illustration": "birds-hatch"
+        },
+        {
+          "id": "u5l6-words",
+          "type": "vocab",
+          "bookActivity": "A",
+          "title": "New words",
+          "titleBn": "নতুন শব্দ",
+          "items": [
+            "egg",
+            "bird-nest",
+            "little-bird",
+            "branch",
+            "fly-away"
+          ]
+        },
+        {
+          "id": "u5l6-rhyme",
+          "type": "story",
+          "bookActivity": "A",
+          "title": "Two little birds",
+          "titleBn": "দুটি ছোট পাখি",
+          "source": "textbook",
+          "scenes": [
+            {
+              "id": "s1",
+              "text": "On Sunday, I saw two eggs in the nest.",
+              "illustration": "birds-eggs"
+            },
+            {
+              "id": "s2",
+              "text": "On Monday, there were two little birds instead.",
+              "illustration": "birds-hatch"
+            },
+            {
+              "id": "s3",
+              "text": "On Tuesday, as the day began the little birds twittered and sang.",
+              "illustration": "birds-sing"
+            },
+            {
+              "id": "s4",
+              "text": "On Wednesday, the little birds hopped and danced.",
+              "illustration": "birds-hop"
+            },
+            {
+              "id": "s5",
+              "text": "On Thursday, the little birds sat on a branch.",
+              "illustration": "birds-branch"
+            },
+            {
+              "id": "s6",
+              "text": "On Friday, the little birds began to play.",
+              "illustration": "birds-play"
+            },
+            {
+              "id": "s7",
+              "text": "On Saturday, the little birds happily flew away.",
+              "illustration": "birds-flyaway"
+            }
+          ]
+        },
+        {
+          "id": "u5l6-game1",
+          "type": "game",
+          "kind": "choose-the-reply",
+          "bookActivity": "C",
+          "title": "Ask and answer",
+          "titleBn": "প্রশ্ন আর উত্তর",
+          "rounds": [
+            {
+              "id": "k1",
+              "ask": "What was in the nest on Sunday?",
+              "askBn": "রবিবার বাসায় কী ছিল?",
+              "speak": "What was in the nest on Sunday?",
+              "options": [
+                {
+                  "label": "A branch"
+                },
+                {
+                  "label": "Two eggs"
+                },
+                {
+                  "label": "Two little birds"
+                }
+              ],
+              "answer": 1,
+              "hint": "Read the first line of the rhyme.",
+              "tests": "egg"
+            },
+            {
+              "id": "k2",
+              "ask": "When did the two birds come out of the eggs?",
+              "askBn": "দুটি পাখি কখন ডিম থেকে বের হলো?",
+              "speak": "When did the two birds come out of the eggs?",
+              "options": [
+                {
+                  "label": "On Sunday"
+                },
+                {
+                  "label": "On Monday"
+                },
+                {
+                  "label": "On Saturday"
+                }
+              ],
+              "answer": 1,
+              "hint": "There were two little birds instead.",
+              "tests": "little-bird"
+            },
+            {
+              "id": "k3",
+              "ask": "What did the birds do on Thursday?",
+              "askBn": "বৃহস্পতিবার পাখিরা কী করল?",
+              "speak": "What did the birds do on Thursday?",
+              "options": [
+                {
+                  "label": "They sat on a branch."
+                },
+                {
+                  "label": "They began to play."
+                },
+                {
+                  "label": "They flew away."
+                }
+              ],
+              "answer": 0,
+              "hint": "Find Thursday in the rhyme.",
+              "tests": "branch"
+            },
+            {
+              "id": "k4",
+              "ask": "When did the birds fly away?",
+              "askBn": "পাখিরা কখন উড়ে গেল?",
+              "speak": "When did the birds fly away?",
+              "options": [
+                {
+                  "label": "On Saturday"
+                },
+                {
+                  "label": "On Friday"
+                },
+                {
+                  "label": "On Sunday"
+                }
+              ],
+              "answer": 0,
+              "hint": "It is the last day of the rhyme.",
+              "tests": "fly-away"
+            }
+          ]
+        },
+        {
+          "id": "u5l6-game2",
+          "type": "game",
+          "kind": "order-the-scenes",
+          "bookActivity": "A",
+          "title": "Find the picture",
+          "titleBn": "ছবিটি খুঁজে বের করো",
+          "rounds": [
+            {
+              "id": "p-sunday",
+              "ask": "Which picture is Sunday?",
+              "askBn": "Sunday কোন ছবিটি?",
+              "options": [
+                {
+                  "label": "eggs in the nest",
+                  "image": "birds-eggs"
+                },
+                {
+                  "label": "birds flying away",
+                  "image": "birds-flyaway"
+                },
+                {
+                  "label": "birds singing",
+                  "image": "birds-sing"
+                }
+              ],
+              "answer": 0,
+              "hint": "Follow the rhyme day by day."
+            },
+            {
+              "id": "p-thursday",
+              "ask": "Which picture is Thursday?",
+              "askBn": "Thursday কোন ছবিটি?",
+              "options": [
+                {
+                  "label": "birds on a branch",
+                  "image": "birds-branch"
+                },
+                {
+                  "label": "birds flying away",
+                  "image": "birds-flyaway"
+                },
+                {
+                  "label": "birds singing",
+                  "image": "birds-sing"
+                }
+              ],
+              "answer": 0,
+              "hint": "Follow the rhyme day by day."
+            },
+            {
+              "id": "p-saturday",
+              "ask": "Which picture is Saturday?",
+              "askBn": "Saturday কোন ছবিটি?",
+              "options": [
+                {
+                  "label": "birds on a branch",
+                  "image": "birds-branch"
+                },
+                {
+                  "label": "birds flying away",
+                  "image": "birds-flyaway"
+                },
+                {
+                  "label": "birds singing",
+                  "image": "birds-sing"
+                }
+              ],
+              "answer": 1,
+              "hint": "Follow the rhyme day by day."
+            }
+          ]
+        },
+        {
+          "id": "u5l6-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "What happened on Saturday?",
+              "askBn": "শনিবার কী হলো?",
+              "image": "birds-flyaway",
+              "options": [
+                {
+                  "label": "The birds flew away."
+                },
+                {
+                  "label": "The birds sang."
+                },
+                {
+                  "label": "The birds played."
+                }
+              ],
+              "answer": 0,
+              "explain": "On Saturday, the little birds happily flew away.",
+              "tests": "fly-away"
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "branch",
+              "options": [
+                {
+                  "label": "branch"
+                },
+                {
+                  "label": "egg"
+                },
+                {
+                  "label": "nest"
+                }
+              ],
+              "answer": 0,
+              "tests": "branch"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "On Sunday, I saw two ___ in the nest.",
+              "askBn": "On Sunday, I saw two ___ in the nest.",
+              "options": [
+                {
+                  "label": "books"
+                },
+                {
+                  "label": "eggs"
+                },
+                {
+                  "label": "frogs"
+                }
+              ],
+              "answer": 1,
+              "explain": "On Sunday, I saw two eggs in the nest.",
+              "tests": "egg"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "The birds flew away on Monday.",
+              "askBn": "পাখিরা সোমবার উড়ে গেল।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 1,
+              "explain": "They flew away on Saturday.",
+              "tests": "fly-away"
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "What did the little birds do on Friday?",
+              "askBn": "শুক্রবার ছোট পাখিরা কী করল?",
+              "options": [
+                {
+                  "label": "They sat on a branch."
+                },
+                {
+                  "label": "They began to play."
+                },
+                {
+                  "label": "They flew away."
+                }
+              ],
+              "answer": 1,
+              "explain": "On Friday, the little birds began to play.",
+              "tests": "little-bird"
+            }
+          ]
+        },
+        {
+          "id": "u5l6-done",
+          "type": "done",
+          "title": "Well done!",
+          "titleBn": "খুব ভালো!",
+          "say": "You know the rhyme about the two little birds!",
+          "sayBn": "তুমি দুটি ছোট পাখির ছড়াটি জানো!"
+        }
+      ]
+    }
+  ]
+}

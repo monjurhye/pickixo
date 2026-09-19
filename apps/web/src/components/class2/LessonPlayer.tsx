@@ -71,6 +71,7 @@ interface LooseStep {
   rounds?: GameRoundLike[];
   questions?: QuestionLike[];
   commands?: { text: string; textBn?: string; illustration: string | null }[];
+  scenes?: { id: string; text: string; illustration: string | null }[];
 }
 
 interface Props {
@@ -181,6 +182,7 @@ export function LessonPlayer({ lesson, unitTitle, onExit, onFinished }: Props) {
         )}
         {step.type === 'dialogue' && <StepDialogue step={step} onNext={next} />}
         {step.type === 'rhyme' && <StepRhyme step={step} onNext={next} />}
+        {step.type === 'story' && <StepStory step={step} onNext={next} />}
         {step.type === 'command' && <StepCommand step={step} onNext={next} />}
         {step.type === 'speak' && <StepSpeak step={step} onNext={next} />}
         {step.type === 'game' && (
@@ -489,6 +491,91 @@ function StepRhyme({ step, onNext }: { step: LooseStep; onNext: () => void }) {
         {playing ? 'Reciting… 🎵' : '▶︎ Listen to the rhyme'}
       </button>
       <BigButton onClick={onNext}>Next →</BigButton>
+    </section>
+  );
+}
+
+/**
+ * A story told one panel at a time, as the book does it.
+ *
+ * The textbook's stories are already cut into pictures with a sentence or two
+ * each, so this follows the book's own panels rather than re-cutting them. The
+ * sentence is spoken as the panel appears; the child can go back, hear it
+ * again, or have the whole story read through. Nothing here can be got wrong,
+ * so nothing is scored — the games after it check that the story was followed.
+ */
+function StepStory({ step, onNext }: { step: LooseStep; onNext: () => void }) {
+  const scenes = step.scenes ?? [];
+  const [index, setIndex] = useState(0);
+  const [playing, setPlaying] = useState(false);
+  const cancelled = useRef(false);
+  const current = scenes[index];
+  const last = index + 1 >= scenes.length;
+
+  useEffect(() => () => { cancelled.current = true; }, []);
+  useEffect(() => {
+    if (current && !playing) void say(current.text);
+    // Only when the panel changes; the read-through drives its own speech.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [index]);
+
+  const readAll = async () => {
+    setPlaying(true);
+    for (let i = 0; i < scenes.length; i++) {
+      if (cancelled.current) break;
+      setIndex(i);
+      await say(scenes[i]!.text);
+    }
+    setPlaying(false);
+  };
+
+  if (!current) {
+    return (
+      <section className="pt-2">
+        <Title step={step} />
+        <BigButton onClick={onNext}>Next →</BigButton>
+      </section>
+    );
+  }
+
+  return (
+    <section className="flex flex-col items-center pt-2 text-center">
+      <Title step={step} />
+      <p className="mt-1 text-small text-ink-subtle">{index + 1} of {scenes.length}</p>
+
+      <div className="mt-4">
+        <Illustration name={current.illustration ?? 'unknown'} size={200} animate
+                      label={current.text} />
+      </div>
+      <div className="mt-4 flex items-center justify-center gap-3">
+        <p className="text-heading text-ink">{current.text}</p>
+        <Speaker text={current.text} />
+      </div>
+
+      <div className="mt-5 flex w-full gap-3">
+        <button
+          type="button"
+          disabled={index === 0 || playing}
+          onClick={() => setIndex((i) => Math.max(0, i - 1))}
+          className="w-1/3 rounded-card border-2 border-border-strong bg-surface px-4 py-4
+                     text-subheading text-ink disabled:opacity-40"
+        >
+          ← Back
+        </button>
+        <button
+          type="button"
+          disabled={playing}
+          onClick={readAll}
+          className="flex-1 rounded-card border-2 border-accent bg-accent-soft px-4 py-4
+                     text-subheading font-semibold text-accent-ink disabled:opacity-70"
+        >
+          {playing ? 'Listening… 👂' : '▶︎ Read it all'}
+        </button>
+      </div>
+
+      <BigButton onClick={() => (last ? onNext() : setIndex((i) => i + 1))}>
+        {last ? 'Next →' : 'Next picture →'}
+      </BigButton>
     </section>
   );
 }
