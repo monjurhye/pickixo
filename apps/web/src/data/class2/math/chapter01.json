@@ -1,0 +1,6652 @@
+{
+  "id": "c1",
+  "number": 1,
+  "title": "সংখ্যা ও স্থানীয় মান",
+  "colour": "sky",
+  "icon": "hash",
+  "_source": "প্রাথমিক গণিত, দ্বিতীয় শ্রেণি (এনসিটিবি)। অধ্যায় ১, বই পৃষ্ঠা ১-৩৯।",
+  "_note": "সংখ্যা, শব্দ, রুকের হিসাব, তুলি-রাফির কথোপকথন এবং নিজে করি-র সংখ্যাগুলো বইয়ের পাতা থেকে হুবহু নেওয়া। কয়েকটি জায়গায় নিজস্ব সংযোজন আছে, প্রতিটি সংশ্লিষ্ট স্ক্রিপ্টের মন্তব্যে চিহ্নিত: (ক) পাঠ ২-এর 'রুক গণনা করে লিখি' অনুশীলনের সংখ্যাগুলো (১২৮, ২০৬...) — বইয়ের ছবির নির্দিষ্ট রুক-সংখ্যা স্ক্যান থেকে নিশ্চিতভাবে পড়া যায়নি বলে; (খ) পাঠ ৪-এ ১০০-এর বেশি সংখ্যার বাংলা বানান একটি নিয়ম দিয়ে তৈরি (শতক-শব্দ + \"শত\" + বাকি অংশ) — বইয়ের ৬টি উদাহরণের বিপরীতে নিয়মটি যাচাই করে সবকটি হুবহু মিলেছে। ক্রমবাচক সংখ্যার (পাঠ ৭) সংযোজন-নির্ভর শব্দসমস্যাগুলো (পৃ.৩৫-৩৬, ৩৮-৩৯, যেগুলোয় যোগ লাগে) এই সংস্করণে বাদ দেওয়া হয়েছে, কারণ সেগুলোর জন্য যোগ (অধ্যায় ২) লাগে। অধ্যায় ১-এর সবগুলো পাঠ (৭টি) এখন সম্পূর্ণ।",
+  "topics": [
+    {
+      "id": "c1t1",
+      "chapterId": "c1",
+      "number": 1,
+      "title": "সংখ্যা পড়ি ও কথায় লিখি (২১ থেকে ১০০)",
+      "shape": "number",
+      "bookPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "objective": "রুক (ব্লক) দেখে ২১ থেকে ১০০ পর্যন্ত সংখ্যা পড়া ও কথায় লেখা।",
+      "minutes": 10,
+      "numbers": [
+        {
+          "id": "n21",
+          "value": 21,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 1
+          },
+          "wordBn": "একুশ",
+          "bookPage": 1
+        },
+        {
+          "id": "n22",
+          "value": 22,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 2
+          },
+          "wordBn": "বাইশ",
+          "bookPage": 1
+        },
+        {
+          "id": "n23",
+          "value": 23,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 3
+          },
+          "wordBn": "তেইশ",
+          "bookPage": 1
+        },
+        {
+          "id": "n24",
+          "value": 24,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 4
+          },
+          "wordBn": "চব্বিশ",
+          "bookPage": 1
+        },
+        {
+          "id": "n25",
+          "value": 25,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 5
+          },
+          "wordBn": "পঁচিশ",
+          "bookPage": 2
+        },
+        {
+          "id": "n26",
+          "value": 26,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 6
+          },
+          "wordBn": "ছাব্বিশ",
+          "bookPage": 2
+        },
+        {
+          "id": "n27",
+          "value": 27,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 7
+          },
+          "wordBn": "সাতাশ",
+          "bookPage": 2
+        },
+        {
+          "id": "n28",
+          "value": 28,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 8
+          },
+          "wordBn": "আটাশ",
+          "bookPage": 2
+        },
+        {
+          "id": "n29",
+          "value": 29,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 9
+          },
+          "wordBn": "উনত্রিশ",
+          "bookPage": 2
+        },
+        {
+          "id": "n30",
+          "value": 30,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 0
+          },
+          "wordBn": "ত্রিশ",
+          "bookPage": 2
+        },
+        {
+          "id": "n31",
+          "value": 31,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 1
+          },
+          "wordBn": "একত্রিশ",
+          "bookPage": 3
+        },
+        {
+          "id": "n32",
+          "value": 32,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 2
+          },
+          "wordBn": "বত্রিশ",
+          "bookPage": 3
+        },
+        {
+          "id": "n33",
+          "value": 33,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 3
+          },
+          "wordBn": "তেত্রিশ",
+          "bookPage": 3
+        },
+        {
+          "id": "n34",
+          "value": 34,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 4
+          },
+          "wordBn": "চৌত্রিশ",
+          "bookPage": 3
+        },
+        {
+          "id": "n35",
+          "value": 35,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 5
+          },
+          "wordBn": "পঁয়ত্রিশ",
+          "bookPage": 3
+        },
+        {
+          "id": "n36",
+          "value": 36,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 6
+          },
+          "wordBn": "ছত্রিশ",
+          "bookPage": 3
+        },
+        {
+          "id": "n37",
+          "value": 37,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 7
+          },
+          "wordBn": "সাঁইত্রিশ",
+          "bookPage": 4
+        },
+        {
+          "id": "n38",
+          "value": 38,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 8
+          },
+          "wordBn": "আটত্রিশ",
+          "bookPage": 4
+        },
+        {
+          "id": "n39",
+          "value": 39,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 9
+          },
+          "wordBn": "উনচল্লিশ",
+          "bookPage": 4
+        },
+        {
+          "id": "n40",
+          "value": 40,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 0
+          },
+          "wordBn": "চল্লিশ",
+          "bookPage": 4
+        },
+        {
+          "id": "n41",
+          "value": 41,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 1
+          },
+          "wordBn": "একচল্লিশ",
+          "bookPage": 4
+        },
+        {
+          "id": "n42",
+          "value": 42,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 2
+          },
+          "wordBn": "বিয়াল্লিশ",
+          "bookPage": 4
+        },
+        {
+          "id": "n43",
+          "value": 43,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 3
+          },
+          "wordBn": "তেতাল্লিশ",
+          "bookPage": 5
+        },
+        {
+          "id": "n44",
+          "value": 44,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 4
+          },
+          "wordBn": "চুয়াল্লিশ",
+          "bookPage": 5
+        },
+        {
+          "id": "n45",
+          "value": 45,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 5
+          },
+          "wordBn": "পঁয়তাল্লিশ",
+          "bookPage": 5
+        },
+        {
+          "id": "n46",
+          "value": 46,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 6
+          },
+          "wordBn": "ছেচল্লিশ",
+          "bookPage": 5
+        },
+        {
+          "id": "n47",
+          "value": 47,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 7
+          },
+          "wordBn": "সাতচল্লিশ",
+          "bookPage": 5
+        },
+        {
+          "id": "n48",
+          "value": 48,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 8
+          },
+          "wordBn": "আটচল্লিশ",
+          "bookPage": 5
+        },
+        {
+          "id": "n49",
+          "value": 49,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 9
+          },
+          "wordBn": "ঊনপঞ্চাশ",
+          "bookPage": 6
+        },
+        {
+          "id": "n50",
+          "value": 50,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 5,
+            "ones": 0
+          },
+          "wordBn": "পঞ্চাশ",
+          "bookPage": 6
+        },
+        {
+          "id": "n51",
+          "value": 51,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 5,
+            "ones": 1
+          },
+          "wordBn": "একান্ন",
+          "bookPage": 6
+        },
+        {
+          "id": "n52",
+          "value": 52,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 5,
+            "ones": 2
+          },
+          "wordBn": "বায়ান্ন",
+          "bookPage": 6
+        },
+        {
+          "id": "n53",
+          "value": 53,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 5,
+            "ones": 3
+          },
+          "wordBn": "তিপ্পান্ন",
+          "bookPage": 6
+        },
+        {
+          "id": "n54",
+          "value": 54,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 5,
+            "ones": 4
+          },
+          "wordBn": "চুয়ান্ন",
+          "bookPage": 6
+        },
+        {
+          "id": "n55",
+          "value": 55,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 5,
+            "ones": 5
+          },
+          "wordBn": "পঞ্চান্ন",
+          "bookPage": 6
+        },
+        {
+          "id": "n56",
+          "value": 56,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 5,
+            "ones": 6
+          },
+          "wordBn": "ছাপ্পান্ন",
+          "bookPage": 6
+        },
+        {
+          "id": "n57",
+          "value": 57,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 5,
+            "ones": 7
+          },
+          "wordBn": "সাতান্ন",
+          "bookPage": 6
+        },
+        {
+          "id": "n58",
+          "value": 58,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 5,
+            "ones": 8
+          },
+          "wordBn": "আটান্ন",
+          "bookPage": 6
+        },
+        {
+          "id": "n59",
+          "value": 59,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 5,
+            "ones": 9
+          },
+          "wordBn": "উনষাট",
+          "bookPage": 6
+        },
+        {
+          "id": "n60",
+          "value": 60,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 6,
+            "ones": 0
+          },
+          "wordBn": "ষাট",
+          "bookPage": 6
+        },
+        {
+          "id": "n61",
+          "value": 61,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 6,
+            "ones": 1
+          },
+          "wordBn": "একষট্টি",
+          "bookPage": 6
+        },
+        {
+          "id": "n62",
+          "value": 62,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 6,
+            "ones": 2
+          },
+          "wordBn": "বাষট্টি",
+          "bookPage": 6
+        },
+        {
+          "id": "n63",
+          "value": 63,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 6,
+            "ones": 3
+          },
+          "wordBn": "তেষট্টি",
+          "bookPage": 6
+        },
+        {
+          "id": "n64",
+          "value": 64,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 6,
+            "ones": 4
+          },
+          "wordBn": "চৌষট্টি",
+          "bookPage": 6
+        },
+        {
+          "id": "n65",
+          "value": 65,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 6,
+            "ones": 5
+          },
+          "wordBn": "পঁয়ষট্টি",
+          "bookPage": 6
+        },
+        {
+          "id": "n66",
+          "value": 66,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 6,
+            "ones": 6
+          },
+          "wordBn": "ছেষট্টি",
+          "bookPage": 6
+        },
+        {
+          "id": "n67",
+          "value": 67,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 6,
+            "ones": 7
+          },
+          "wordBn": "সাতষট্টি",
+          "bookPage": 6
+        },
+        {
+          "id": "n68",
+          "value": 68,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 6,
+            "ones": 8
+          },
+          "wordBn": "আটষট্টি",
+          "bookPage": 6
+        },
+        {
+          "id": "n69",
+          "value": 69,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 6,
+            "ones": 9
+          },
+          "wordBn": "ঊনসত্তর",
+          "bookPage": 6
+        },
+        {
+          "id": "n70",
+          "value": 70,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 7,
+            "ones": 0
+          },
+          "wordBn": "সত্তর",
+          "bookPage": 6
+        },
+        {
+          "id": "n71",
+          "value": 71,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 7,
+            "ones": 1
+          },
+          "wordBn": "একাত্তর",
+          "bookPage": 6
+        },
+        {
+          "id": "n72",
+          "value": 72,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 7,
+            "ones": 2
+          },
+          "wordBn": "বাহাত্তর",
+          "bookPage": 6
+        },
+        {
+          "id": "n73",
+          "value": 73,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 7,
+            "ones": 3
+          },
+          "wordBn": "তিয়াত্তর",
+          "bookPage": 6
+        },
+        {
+          "id": "n74",
+          "value": 74,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 7,
+            "ones": 4
+          },
+          "wordBn": "চুয়াত্তর",
+          "bookPage": 6
+        },
+        {
+          "id": "n75",
+          "value": 75,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 7,
+            "ones": 5
+          },
+          "wordBn": "পঁচাত্তর",
+          "bookPage": 6
+        },
+        {
+          "id": "n76",
+          "value": 76,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 7,
+            "ones": 6
+          },
+          "wordBn": "ছিয়াত্তর",
+          "bookPage": 6
+        },
+        {
+          "id": "n77",
+          "value": 77,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 7,
+            "ones": 7
+          },
+          "wordBn": "সাতাত্তর",
+          "bookPage": 6
+        },
+        {
+          "id": "n78",
+          "value": 78,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 7,
+            "ones": 8
+          },
+          "wordBn": "আটাত্তর",
+          "bookPage": 6
+        },
+        {
+          "id": "n79",
+          "value": 79,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 7,
+            "ones": 9
+          },
+          "wordBn": "উনআশি",
+          "bookPage": 6
+        },
+        {
+          "id": "n80",
+          "value": 80,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 8,
+            "ones": 0
+          },
+          "wordBn": "আশি",
+          "bookPage": 6
+        },
+        {
+          "id": "n81",
+          "value": 81,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 8,
+            "ones": 1
+          },
+          "wordBn": "একাশি",
+          "bookPage": 6
+        },
+        {
+          "id": "n82",
+          "value": 82,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 8,
+            "ones": 2
+          },
+          "wordBn": "বিরাশি",
+          "bookPage": 6
+        },
+        {
+          "id": "n83",
+          "value": 83,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 8,
+            "ones": 3
+          },
+          "wordBn": "তিরাশি",
+          "bookPage": 6
+        },
+        {
+          "id": "n84",
+          "value": 84,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 8,
+            "ones": 4
+          },
+          "wordBn": "চুরাশি",
+          "bookPage": 6
+        },
+        {
+          "id": "n85",
+          "value": 85,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 8,
+            "ones": 5
+          },
+          "wordBn": "পঁচাশি",
+          "bookPage": 6
+        },
+        {
+          "id": "n86",
+          "value": 86,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 8,
+            "ones": 6
+          },
+          "wordBn": "ছিয়াশি",
+          "bookPage": 6
+        },
+        {
+          "id": "n87",
+          "value": 87,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 8,
+            "ones": 7
+          },
+          "wordBn": "সাতাশি",
+          "bookPage": 6
+        },
+        {
+          "id": "n88",
+          "value": 88,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 8,
+            "ones": 8
+          },
+          "wordBn": "আটাশি",
+          "bookPage": 6
+        },
+        {
+          "id": "n89",
+          "value": 89,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 8,
+            "ones": 9
+          },
+          "wordBn": "উননব্বই",
+          "bookPage": 6
+        },
+        {
+          "id": "n90",
+          "value": 90,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 9,
+            "ones": 0
+          },
+          "wordBn": "নব্বই",
+          "bookPage": 6
+        },
+        {
+          "id": "n91",
+          "value": 91,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 9,
+            "ones": 1
+          },
+          "wordBn": "একানব্বই",
+          "bookPage": 6
+        },
+        {
+          "id": "n92",
+          "value": 92,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 9,
+            "ones": 2
+          },
+          "wordBn": "বিরানব্বই",
+          "bookPage": 6
+        },
+        {
+          "id": "n93",
+          "value": 93,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 9,
+            "ones": 3
+          },
+          "wordBn": "তিরানব্বই",
+          "bookPage": 6
+        },
+        {
+          "id": "n94",
+          "value": 94,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 9,
+            "ones": 4
+          },
+          "wordBn": "চুরানব্বই",
+          "bookPage": 6
+        },
+        {
+          "id": "n95",
+          "value": 95,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 9,
+            "ones": 5
+          },
+          "wordBn": "পঁচানব্বই",
+          "bookPage": 6
+        },
+        {
+          "id": "n96",
+          "value": 96,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 9,
+            "ones": 6
+          },
+          "wordBn": "ছিয়ানব্বই",
+          "bookPage": 6
+        },
+        {
+          "id": "n97",
+          "value": 97,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 9,
+            "ones": 7
+          },
+          "wordBn": "সাতানব্বই",
+          "bookPage": 6
+        },
+        {
+          "id": "n98",
+          "value": 98,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 9,
+            "ones": 8
+          },
+          "wordBn": "আটানব্বই",
+          "bookPage": 6
+        },
+        {
+          "id": "n99",
+          "value": 99,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 9,
+            "ones": 9
+          },
+          "wordBn": "নিরানব্বই",
+          "bookPage": 6
+        },
+        {
+          "id": "n100",
+          "value": 100,
+          "blocks": {
+            "hundreds": 1,
+            "tens": 0,
+            "ones": 0
+          },
+          "wordBn": "একশত",
+          "bookPage": 6
+        }
+      ],
+      "steps": [
+        {
+          "id": "c1t1-intro",
+          "type": "intro",
+          "title": "চলো সংখ্যা পড়ি!",
+          "say": "রুকগুলো গণনা করে সংখ্যাটি পড়ি ও কথায় লিখি।",
+          "illustration": "blocks-0-5-4"
+        },
+        {
+          "id": "c1t1-t21",
+          "type": "table",
+          "bookActivity": "গণনা করি",
+          "title": "২১ থেকে ৩০",
+          "rows": [
+            {
+              "id": "row21",
+              "illustration": "blocks-0-2-1",
+              "text": "২১ = একুশ",
+              "tests": "n21"
+            },
+            {
+              "id": "row22",
+              "illustration": "blocks-0-2-2",
+              "text": "২২ = বাইশ",
+              "tests": "n22"
+            },
+            {
+              "id": "row23",
+              "illustration": "blocks-0-2-3",
+              "text": "২৩ = তেইশ",
+              "tests": "n23"
+            },
+            {
+              "id": "row24",
+              "illustration": "blocks-0-2-4",
+              "text": "২৪ = চব্বিশ",
+              "tests": "n24"
+            },
+            {
+              "id": "row25",
+              "illustration": "blocks-0-2-5",
+              "text": "২৫ = পঁচিশ",
+              "tests": "n25"
+            },
+            {
+              "id": "row26",
+              "illustration": "blocks-0-2-6",
+              "text": "২৬ = ছাব্বিশ",
+              "tests": "n26"
+            },
+            {
+              "id": "row27",
+              "illustration": "blocks-0-2-7",
+              "text": "২৭ = সাতাশ",
+              "tests": "n27"
+            },
+            {
+              "id": "row28",
+              "illustration": "blocks-0-2-8",
+              "text": "২৮ = আটাশ",
+              "tests": "n28"
+            },
+            {
+              "id": "row29",
+              "illustration": "blocks-0-2-9",
+              "text": "২৯ = উনত্রিশ",
+              "tests": "n29"
+            },
+            {
+              "id": "row30",
+              "illustration": "blocks-0-3-0",
+              "text": "৩০ = ত্রিশ",
+              "tests": "n30"
+            }
+          ]
+        },
+        {
+          "id": "c1t1-t31",
+          "type": "table",
+          "bookActivity": "গণনা করি",
+          "title": "৩১ থেকে ৪০",
+          "rows": [
+            {
+              "id": "row31",
+              "illustration": "blocks-0-3-1",
+              "text": "৩১ = একত্রিশ",
+              "tests": "n31"
+            },
+            {
+              "id": "row32",
+              "illustration": "blocks-0-3-2",
+              "text": "৩২ = বত্রিশ",
+              "tests": "n32"
+            },
+            {
+              "id": "row33",
+              "illustration": "blocks-0-3-3",
+              "text": "৩৩ = তেত্রিশ",
+              "tests": "n33"
+            },
+            {
+              "id": "row34",
+              "illustration": "blocks-0-3-4",
+              "text": "৩৪ = চৌত্রিশ",
+              "tests": "n34"
+            },
+            {
+              "id": "row35",
+              "illustration": "blocks-0-3-5",
+              "text": "৩৫ = পঁয়ত্রিশ",
+              "tests": "n35"
+            },
+            {
+              "id": "row36",
+              "illustration": "blocks-0-3-6",
+              "text": "৩৬ = ছত্রিশ",
+              "tests": "n36"
+            },
+            {
+              "id": "row37",
+              "illustration": "blocks-0-3-7",
+              "text": "৩৭ = সাঁইত্রিশ",
+              "tests": "n37"
+            },
+            {
+              "id": "row38",
+              "illustration": "blocks-0-3-8",
+              "text": "৩৮ = আটত্রিশ",
+              "tests": "n38"
+            },
+            {
+              "id": "row39",
+              "illustration": "blocks-0-3-9",
+              "text": "৩৯ = উনচল্লিশ",
+              "tests": "n39"
+            },
+            {
+              "id": "row40",
+              "illustration": "blocks-0-4-0",
+              "text": "৪০ = চল্লিশ",
+              "tests": "n40"
+            }
+          ]
+        },
+        {
+          "id": "c1t1-t41",
+          "type": "table",
+          "bookActivity": "গণনা করি",
+          "title": "৪১ থেকে ৫০",
+          "rows": [
+            {
+              "id": "row41",
+              "illustration": "blocks-0-4-1",
+              "text": "৪১ = একচল্লিশ",
+              "tests": "n41"
+            },
+            {
+              "id": "row42",
+              "illustration": "blocks-0-4-2",
+              "text": "৪২ = বিয়াল্লিশ",
+              "tests": "n42"
+            },
+            {
+              "id": "row43",
+              "illustration": "blocks-0-4-3",
+              "text": "৪৩ = তেতাল্লিশ",
+              "tests": "n43"
+            },
+            {
+              "id": "row44",
+              "illustration": "blocks-0-4-4",
+              "text": "৪৪ = চুয়াল্লিশ",
+              "tests": "n44"
+            },
+            {
+              "id": "row45",
+              "illustration": "blocks-0-4-5",
+              "text": "৪৫ = পঁয়তাল্লিশ",
+              "tests": "n45"
+            },
+            {
+              "id": "row46",
+              "illustration": "blocks-0-4-6",
+              "text": "৪৬ = ছেচল্লিশ",
+              "tests": "n46"
+            },
+            {
+              "id": "row47",
+              "illustration": "blocks-0-4-7",
+              "text": "৪৭ = সাতচল্লিশ",
+              "tests": "n47"
+            },
+            {
+              "id": "row48",
+              "illustration": "blocks-0-4-8",
+              "text": "৪৮ = আটচল্লিশ",
+              "tests": "n48"
+            },
+            {
+              "id": "row49",
+              "illustration": "blocks-0-4-9",
+              "text": "৪৯ = ঊনপঞ্চাশ",
+              "tests": "n49"
+            },
+            {
+              "id": "row50",
+              "illustration": "blocks-0-5-0",
+              "text": "৫০ = পঞ্চাশ",
+              "tests": "n50"
+            }
+          ]
+        },
+        {
+          "id": "c1t1-t51",
+          "type": "table",
+          "bookActivity": "৫১ থেকে ১০০ পর্যন্ত",
+          "title": "৫১ থেকে ৬০",
+          "rows": [
+            {
+              "id": "row51",
+              "illustration": "blocks-0-5-1",
+              "text": "৫১ = একান্ন",
+              "tests": "n51"
+            },
+            {
+              "id": "row52",
+              "illustration": "blocks-0-5-2",
+              "text": "৫২ = বায়ান্ন",
+              "tests": "n52"
+            },
+            {
+              "id": "row53",
+              "illustration": "blocks-0-5-3",
+              "text": "৫৩ = তিপ্পান্ন",
+              "tests": "n53"
+            },
+            {
+              "id": "row54",
+              "illustration": "blocks-0-5-4",
+              "text": "৫৪ = চুয়ান্ন",
+              "tests": "n54"
+            },
+            {
+              "id": "row55",
+              "illustration": "blocks-0-5-5",
+              "text": "৫৫ = পঞ্চান্ন",
+              "tests": "n55"
+            },
+            {
+              "id": "row56",
+              "illustration": "blocks-0-5-6",
+              "text": "৫৬ = ছাপ্পান্ন",
+              "tests": "n56"
+            },
+            {
+              "id": "row57",
+              "illustration": "blocks-0-5-7",
+              "text": "৫৭ = সাতান্ন",
+              "tests": "n57"
+            },
+            {
+              "id": "row58",
+              "illustration": "blocks-0-5-8",
+              "text": "৫৮ = আটান্ন",
+              "tests": "n58"
+            },
+            {
+              "id": "row59",
+              "illustration": "blocks-0-5-9",
+              "text": "৫৯ = উনষাট",
+              "tests": "n59"
+            },
+            {
+              "id": "row60",
+              "illustration": "blocks-0-6-0",
+              "text": "৬০ = ষাট",
+              "tests": "n60"
+            }
+          ]
+        },
+        {
+          "id": "c1t1-t61",
+          "type": "table",
+          "bookActivity": "৫১ থেকে ১০০ পর্যন্ত",
+          "title": "৬১ থেকে ৭০",
+          "rows": [
+            {
+              "id": "row61",
+              "illustration": "blocks-0-6-1",
+              "text": "৬১ = একষট্টি",
+              "tests": "n61"
+            },
+            {
+              "id": "row62",
+              "illustration": "blocks-0-6-2",
+              "text": "৬২ = বাষট্টি",
+              "tests": "n62"
+            },
+            {
+              "id": "row63",
+              "illustration": "blocks-0-6-3",
+              "text": "৬৩ = তেষট্টি",
+              "tests": "n63"
+            },
+            {
+              "id": "row64",
+              "illustration": "blocks-0-6-4",
+              "text": "৬৪ = চৌষট্টি",
+              "tests": "n64"
+            },
+            {
+              "id": "row65",
+              "illustration": "blocks-0-6-5",
+              "text": "৬৫ = পঁয়ষট্টি",
+              "tests": "n65"
+            },
+            {
+              "id": "row66",
+              "illustration": "blocks-0-6-6",
+              "text": "৬৬ = ছেষট্টি",
+              "tests": "n66"
+            },
+            {
+              "id": "row67",
+              "illustration": "blocks-0-6-7",
+              "text": "৬৭ = সাতষট্টি",
+              "tests": "n67"
+            },
+            {
+              "id": "row68",
+              "illustration": "blocks-0-6-8",
+              "text": "৬৮ = আটষট্টি",
+              "tests": "n68"
+            },
+            {
+              "id": "row69",
+              "illustration": "blocks-0-6-9",
+              "text": "৬৯ = ঊনসত্তর",
+              "tests": "n69"
+            },
+            {
+              "id": "row70",
+              "illustration": "blocks-0-7-0",
+              "text": "৭০ = সত্তর",
+              "tests": "n70"
+            }
+          ]
+        },
+        {
+          "id": "c1t1-t71",
+          "type": "table",
+          "bookActivity": "৫১ থেকে ১০০ পর্যন্ত",
+          "title": "৭১ থেকে ৮০",
+          "rows": [
+            {
+              "id": "row71",
+              "illustration": "blocks-0-7-1",
+              "text": "৭১ = একাত্তর",
+              "tests": "n71"
+            },
+            {
+              "id": "row72",
+              "illustration": "blocks-0-7-2",
+              "text": "৭২ = বাহাত্তর",
+              "tests": "n72"
+            },
+            {
+              "id": "row73",
+              "illustration": "blocks-0-7-3",
+              "text": "৭৩ = তিয়াত্তর",
+              "tests": "n73"
+            },
+            {
+              "id": "row74",
+              "illustration": "blocks-0-7-4",
+              "text": "৭৪ = চুয়াত্তর",
+              "tests": "n74"
+            },
+            {
+              "id": "row75",
+              "illustration": "blocks-0-7-5",
+              "text": "৭৫ = পঁচাত্তর",
+              "tests": "n75"
+            },
+            {
+              "id": "row76",
+              "illustration": "blocks-0-7-6",
+              "text": "৭৬ = ছিয়াত্তর",
+              "tests": "n76"
+            },
+            {
+              "id": "row77",
+              "illustration": "blocks-0-7-7",
+              "text": "৭৭ = সাতাত্তর",
+              "tests": "n77"
+            },
+            {
+              "id": "row78",
+              "illustration": "blocks-0-7-8",
+              "text": "৭৮ = আটাত্তর",
+              "tests": "n78"
+            },
+            {
+              "id": "row79",
+              "illustration": "blocks-0-7-9",
+              "text": "৭৯ = উনআশি",
+              "tests": "n79"
+            },
+            {
+              "id": "row80",
+              "illustration": "blocks-0-8-0",
+              "text": "৮০ = আশি",
+              "tests": "n80"
+            }
+          ]
+        },
+        {
+          "id": "c1t1-t81",
+          "type": "table",
+          "bookActivity": "৫১ থেকে ১০০ পর্যন্ত",
+          "title": "৮১ থেকে ৯০",
+          "rows": [
+            {
+              "id": "row81",
+              "illustration": "blocks-0-8-1",
+              "text": "৮১ = একাশি",
+              "tests": "n81"
+            },
+            {
+              "id": "row82",
+              "illustration": "blocks-0-8-2",
+              "text": "৮২ = বিরাশি",
+              "tests": "n82"
+            },
+            {
+              "id": "row83",
+              "illustration": "blocks-0-8-3",
+              "text": "৮৩ = তিরাশি",
+              "tests": "n83"
+            },
+            {
+              "id": "row84",
+              "illustration": "blocks-0-8-4",
+              "text": "৮৪ = চুরাশি",
+              "tests": "n84"
+            },
+            {
+              "id": "row85",
+              "illustration": "blocks-0-8-5",
+              "text": "৮৫ = পঁচাশি",
+              "tests": "n85"
+            },
+            {
+              "id": "row86",
+              "illustration": "blocks-0-8-6",
+              "text": "৮৬ = ছিয়াশি",
+              "tests": "n86"
+            },
+            {
+              "id": "row87",
+              "illustration": "blocks-0-8-7",
+              "text": "৮৭ = সাতাশি",
+              "tests": "n87"
+            },
+            {
+              "id": "row88",
+              "illustration": "blocks-0-8-8",
+              "text": "৮৮ = আটাশি",
+              "tests": "n88"
+            },
+            {
+              "id": "row89",
+              "illustration": "blocks-0-8-9",
+              "text": "৮৯ = উননব্বই",
+              "tests": "n89"
+            },
+            {
+              "id": "row90",
+              "illustration": "blocks-0-9-0",
+              "text": "৯০ = নব্বই",
+              "tests": "n90"
+            }
+          ]
+        },
+        {
+          "id": "c1t1-t91",
+          "type": "table",
+          "bookActivity": "৫১ থেকে ১০০ পর্যন্ত",
+          "title": "৯১ থেকে ১০০",
+          "rows": [
+            {
+              "id": "row91",
+              "illustration": "blocks-0-9-1",
+              "text": "৯১ = একানব্বই",
+              "tests": "n91"
+            },
+            {
+              "id": "row92",
+              "illustration": "blocks-0-9-2",
+              "text": "৯২ = বিরানব্বই",
+              "tests": "n92"
+            },
+            {
+              "id": "row93",
+              "illustration": "blocks-0-9-3",
+              "text": "৯৩ = তিরানব্বই",
+              "tests": "n93"
+            },
+            {
+              "id": "row94",
+              "illustration": "blocks-0-9-4",
+              "text": "৯৪ = চুরানব্বই",
+              "tests": "n94"
+            },
+            {
+              "id": "row95",
+              "illustration": "blocks-0-9-5",
+              "text": "৯৫ = পঁচানব্বই",
+              "tests": "n95"
+            },
+            {
+              "id": "row96",
+              "illustration": "blocks-0-9-6",
+              "text": "৯৬ = ছিয়ানব্বই",
+              "tests": "n96"
+            },
+            {
+              "id": "row97",
+              "illustration": "blocks-0-9-7",
+              "text": "৯৭ = সাতানব্বই",
+              "tests": "n97"
+            },
+            {
+              "id": "row98",
+              "illustration": "blocks-0-9-8",
+              "text": "৯৮ = আটানব্বই",
+              "tests": "n98"
+            },
+            {
+              "id": "row99",
+              "illustration": "blocks-0-9-9",
+              "text": "৯৯ = নিরানব্বই",
+              "tests": "n99"
+            },
+            {
+              "id": "row100",
+              "illustration": "blocks-1-0-0",
+              "text": "১০০ = একশত",
+              "tests": "n100"
+            }
+          ]
+        },
+        {
+          "id": "c1t1-game1",
+          "type": "game",
+          "kind": "count-blocks",
+          "bookActivity": "রুক দেখে সংখ্যা",
+          "title": "রুক দেখে সংখ্যাটি বলো",
+          "rounds": [
+            {
+              "id": "g24",
+              "ask": "কয়টি রুক আছে?",
+              "illustration": "blocks-0-2-4",
+              "options": [
+                {
+                  "label": "চব্বিশ"
+                },
+                {
+                  "label": "ছিয়ানব্বই"
+                },
+                {
+                  "label": "ছেচল্লিশ"
+                }
+              ],
+              "answer": 0,
+              "hint": "আগে দশ-এর দল গণনা করো, তারপর এক।",
+              "tests": "n24"
+            },
+            {
+              "id": "g36",
+              "ask": "কয়টি রুক আছে?",
+              "illustration": "blocks-0-3-6",
+              "options": [
+                {
+                  "label": "একাশি"
+                },
+                {
+                  "label": "ছত্রিশ"
+                },
+                {
+                  "label": "সাতাশ"
+                }
+              ],
+              "answer": 1,
+              "hint": "আগে দশ-এর দল গণনা করো, তারপর এক।",
+              "tests": "n36"
+            },
+            {
+              "id": "g45",
+              "ask": "কয়টি রুক আছে?",
+              "illustration": "blocks-0-4-5",
+              "options": [
+                {
+                  "label": "পঁয়তাল্লিশ"
+                },
+                {
+                  "label": "পঞ্চাশ"
+                },
+                {
+                  "label": "নিরানব্বই"
+                }
+              ],
+              "answer": 0,
+              "hint": "আগে দশ-এর দল গণনা করো, তারপর এক।",
+              "tests": "n45"
+            },
+            {
+              "id": "g58",
+              "ask": "কয়টি রুক আছে?",
+              "illustration": "blocks-0-5-8",
+              "options": [
+                {
+                  "label": "চৌষট্টি"
+                },
+                {
+                  "label": "আটান্ন"
+                },
+                {
+                  "label": "আটচল্লিশ"
+                }
+              ],
+              "answer": 1,
+              "hint": "আগে দশ-এর দল গণনা করো, তারপর এক।",
+              "tests": "n58"
+            },
+            {
+              "id": "g67",
+              "ask": "কয়টি রুক আছে?",
+              "illustration": "blocks-0-6-7",
+              "options": [
+                {
+                  "label": "তিপ্পান্ন"
+                },
+                {
+                  "label": "পঁয়তাল্লিশ"
+                },
+                {
+                  "label": "সাতষট্টি"
+                }
+              ],
+              "answer": 2,
+              "hint": "আগে দশ-এর দল গণনা করো, তারপর এক।",
+              "tests": "n67"
+            },
+            {
+              "id": "g79",
+              "ask": "কয়টি রুক আছে?",
+              "illustration": "blocks-0-7-9",
+              "options": [
+                {
+                  "label": "নব্বই"
+                },
+                {
+                  "label": "উনআশি"
+                },
+                {
+                  "label": "সাতাত্তর"
+                }
+              ],
+              "answer": 1,
+              "hint": "আগে দশ-এর দল গণনা করো, তারপর এক।",
+              "tests": "n79"
+            },
+            {
+              "id": "g83",
+              "ask": "কয়টি রুক আছে?",
+              "illustration": "blocks-0-8-3",
+              "options": [
+                {
+                  "label": "বাষট্টি"
+                },
+                {
+                  "label": "একাশি"
+                },
+                {
+                  "label": "তিরাশি"
+                }
+              ],
+              "answer": 2,
+              "hint": "আগে দশ-এর দল গণনা করো, তারপর এক।",
+              "tests": "n83"
+            },
+            {
+              "id": "g96",
+              "ask": "কয়টি রুক আছে?",
+              "illustration": "blocks-0-9-6",
+              "options": [
+                {
+                  "label": "সাতচল্লিশ"
+                },
+                {
+                  "label": "পঁচাত্তর"
+                },
+                {
+                  "label": "ছিয়ানব্বই"
+                }
+              ],
+              "answer": 2,
+              "hint": "আগে দশ-এর দল গণনা করো, তারপর এক।",
+              "tests": "n96"
+            }
+          ]
+        },
+        {
+          "id": "c1t1-game2",
+          "type": "game",
+          "kind": "match-pairs",
+          "bookActivity": "শুনে সংখ্যা বাছাই",
+          "title": "শুনে সংখ্যাটি বাছাই করো",
+          "rounds": [
+            {
+              "id": "l29",
+              "ask": "সংখ্যাটি শোনো।",
+              "speak": "উনত্রিশ",
+              "options": [
+                {
+                  "label": "৮১"
+                },
+                {
+                  "label": "৬০"
+                },
+                {
+                  "label": "২৯"
+                }
+              ],
+              "answer": 2,
+              "hint": "আরেকবার শোনো, তারপর অঙ্কে সংখ্যাটি খোঁজো।",
+              "tests": "n29"
+            },
+            {
+              "id": "l42",
+              "ask": "সংখ্যাটি শোনো।",
+              "speak": "বিয়াল্লিশ",
+              "options": [
+                {
+                  "label": "৪২"
+                },
+                {
+                  "label": "৫৬"
+                },
+                {
+                  "label": "৬৪"
+                }
+              ],
+              "answer": 0,
+              "hint": "আরেকবার শোনো, তারপর অঙ্কে সংখ্যাটি খোঁজো।",
+              "tests": "n42"
+            },
+            {
+              "id": "l54",
+              "ask": "সংখ্যাটি শোনো।",
+              "speak": "চুয়ান্ন",
+              "options": [
+                {
+                  "label": "৭৬"
+                },
+                {
+                  "label": "৫০"
+                },
+                {
+                  "label": "৫৪"
+                }
+              ],
+              "answer": 2,
+              "hint": "আরেকবার শোনো, তারপর অঙ্কে সংখ্যাটি খোঁজো।",
+              "tests": "n54"
+            },
+            {
+              "id": "l65",
+              "ask": "সংখ্যাটি শোনো।",
+              "speak": "পঁয়ষট্টি",
+              "options": [
+                {
+                  "label": "২১"
+                },
+                {
+                  "label": "৬৫"
+                },
+                {
+                  "label": "৭৫"
+                }
+              ],
+              "answer": 1,
+              "hint": "আরেকবার শোনো, তারপর অঙ্কে সংখ্যাটি খোঁজো।",
+              "tests": "n65"
+            },
+            {
+              "id": "l78",
+              "ask": "সংখ্যাটি শোনো।",
+              "speak": "আটাত্তর",
+              "options": [
+                {
+                  "label": "৩৩"
+                },
+                {
+                  "label": "৭৮"
+                },
+                {
+                  "label": "৯০"
+                }
+              ],
+              "answer": 1,
+              "hint": "আরেকবার শোনো, তারপর অঙ্কে সংখ্যাটি খোঁজো।",
+              "tests": "n78"
+            },
+            {
+              "id": "l89",
+              "ask": "সংখ্যাটি শোনো।",
+              "speak": "উননব্বই",
+              "options": [
+                {
+                  "label": "৬৭"
+                },
+                {
+                  "label": "৬৮"
+                },
+                {
+                  "label": "৮৯"
+                }
+              ],
+              "answer": 2,
+              "hint": "আরেকবার শোনো, তারপর অঙ্কে সংখ্যাটি খোঁজো।",
+              "tests": "n89"
+            }
+          ]
+        },
+        {
+          "id": "c1t1-quiz",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "রুক দেখে সংখ্যাটি বলো।",
+              "illustration": "blocks-0-5-4",
+              "options": [
+                {
+                  "label": "চল্লিশ"
+                },
+                {
+                  "label": "চুরানব্বই"
+                },
+                {
+                  "label": "চুয়ান্ন"
+                }
+              ],
+              "answer": 2,
+              "explain": "৫৪ = চুয়ান্ন",
+              "tests": "n54"
+            },
+            {
+              "id": "q2",
+              "ask": "শোনো। কোন সংখ্যাটি শুনলে?",
+              "speak": "পঁচাত্তর",
+              "options": [
+                {
+                  "label": "৪৪"
+                },
+                {
+                  "label": "৫৬"
+                },
+                {
+                  "label": "৭৫"
+                }
+              ],
+              "answer": 2,
+              "tests": "n75"
+            },
+            {
+              "id": "q3",
+              "ask": "৮৯ কে কথায় লিখলে হয়:",
+              "options": [
+                {
+                  "label": "উননব্বই"
+                },
+                {
+                  "label": "বাহাত্তর"
+                },
+                {
+                  "label": "সাতষট্টি"
+                }
+              ],
+              "answer": 0,
+              "explain": "৮৯ = উননব্বই",
+              "tests": "n89"
+            },
+            {
+              "id": "q4",
+              "ask": "১০০ সংখ্যাটিকে কথায় লিখি:",
+              "illustration": "blocks-1-0-0",
+              "options": [
+                {
+                  "label": "একশত"
+                },
+                {
+                  "label": "বিয়াল্লিশ"
+                },
+                {
+                  "label": "চুরাশি"
+                }
+              ],
+              "answer": 0,
+              "explain": "১০০ = একশত",
+              "tests": "n100"
+            },
+            {
+              "id": "q5",
+              "ask": "রুক দেখে সংখ্যাটি বলো।",
+              "illustration": "blocks-0-3-2",
+              "options": [
+                {
+                  "label": "পঁয়তাল্লিশ"
+                },
+                {
+                  "label": "বত্রিশ"
+                },
+                {
+                  "label": "উননব্বই"
+                }
+              ],
+              "answer": 1,
+              "explain": "৩২ = বত্রিশ",
+              "tests": "n32"
+            }
+          ]
+        },
+        {
+          "id": "c1t1-done",
+          "type": "done",
+          "title": "দারুণ হয়েছে!",
+          "say": "তুমি এখন ২১ থেকে ১০০ পর্যন্ত সংখ্যা পড়তে ও কথায় লিখতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "c1t2",
+      "chapterId": "c1",
+      "number": 2,
+      "title": "গণনা",
+      "shape": "number",
+      "bookPages": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "objective": "১০ ও ১০০-এর দল গঠন করে ১০০০ পর্যন্ত সংখ্যা গণনা করা এবং সংখ্যাকে ১০১-৫০০ ও ৫০১-১০০০ দলে ভাগ করা।",
+      "minutes": 10,
+      "numbers": [
+        {
+          "id": "p128",
+          "value": 128,
+          "blocks": {
+            "hundreds": 1,
+            "tens": 2,
+            "ones": 8
+          },
+          "wordBn": "একশত আটাশ",
+          "bookPage": 9
+        },
+        {
+          "id": "p206",
+          "value": 206,
+          "blocks": {
+            "hundreds": 2,
+            "tens": 0,
+            "ones": 6
+          },
+          "wordBn": "দুইশত ছয়",
+          "bookPage": 9
+        },
+        {
+          "id": "p350",
+          "value": 350,
+          "blocks": {
+            "hundreds": 3,
+            "tens": 5,
+            "ones": 0
+          },
+          "wordBn": "তিনশত পঞ্চাশ",
+          "bookPage": 9
+        },
+        {
+          "id": "p417",
+          "value": 417,
+          "blocks": {
+            "hundreds": 4,
+            "tens": 1,
+            "ones": 7
+          },
+          "wordBn": "চারশত সতেরো",
+          "bookPage": 9
+        },
+        {
+          "id": "p509",
+          "value": 509,
+          "blocks": {
+            "hundreds": 5,
+            "tens": 0,
+            "ones": 9
+          },
+          "wordBn": "পাঁচশত নয়",
+          "bookPage": 9
+        },
+        {
+          "id": "p663",
+          "value": 663,
+          "blocks": {
+            "hundreds": 6,
+            "tens": 6,
+            "ones": 3
+          },
+          "wordBn": "ছয়শত তেষট্টি",
+          "bookPage": 9
+        },
+        {
+          "id": "r112",
+          "value": 112,
+          "blocks": {
+            "hundreds": 1,
+            "tens": 1,
+            "ones": 2
+          },
+          "wordBn": "একশত বারো",
+          "bookPage": 13
+        },
+        {
+          "id": "r898",
+          "value": 898,
+          "blocks": {
+            "hundreds": 8,
+            "tens": 9,
+            "ones": 8
+          },
+          "wordBn": "আটশত আটানব্বই",
+          "bookPage": 13
+        },
+        {
+          "id": "r304",
+          "value": 304,
+          "blocks": {
+            "hundreds": 3,
+            "tens": 0,
+            "ones": 4
+          },
+          "wordBn": "তিনশত চার",
+          "bookPage": 13
+        },
+        {
+          "id": "r505",
+          "value": 505,
+          "blocks": {
+            "hundreds": 5,
+            "tens": 0,
+            "ones": 5
+          },
+          "wordBn": "পাঁচশত পাঁচ",
+          "bookPage": 13
+        },
+        {
+          "id": "r712",
+          "value": 712,
+          "blocks": {
+            "hundreds": 7,
+            "tens": 1,
+            "ones": 2
+          },
+          "wordBn": "সাতশত বারো",
+          "bookPage": 13
+        },
+        {
+          "id": "r925",
+          "value": 925,
+          "blocks": {
+            "hundreds": 9,
+            "tens": 2,
+            "ones": 5
+          },
+          "wordBn": "নয়শত পঁচিশ",
+          "bookPage": 13
+        },
+        {
+          "id": "r134",
+          "value": 134,
+          "blocks": {
+            "hundreds": 1,
+            "tens": 3,
+            "ones": 4
+          },
+          "wordBn": "একশত চৌত্রিশ",
+          "bookPage": 13
+        },
+        {
+          "id": "r998",
+          "value": 998,
+          "blocks": {
+            "hundreds": 9,
+            "tens": 9,
+            "ones": 8
+          },
+          "wordBn": "নয়শত আটানব্বই",
+          "bookPage": 13
+        },
+        {
+          "id": "r1000",
+          "value": 1000,
+          "blocks": {
+            "hundreds": 10,
+            "tens": 0,
+            "ones": 0
+          },
+          "wordBn": "এক হাজার",
+          "bookPage": 13
+        },
+        {
+          "id": "r888",
+          "value": 888,
+          "blocks": {
+            "hundreds": 8,
+            "tens": 8,
+            "ones": 8
+          },
+          "wordBn": "আটশত আটাশি",
+          "bookPage": 13
+        },
+        {
+          "id": "r382",
+          "value": 382,
+          "blocks": {
+            "hundreds": 3,
+            "tens": 8,
+            "ones": 2
+          },
+          "wordBn": "তিনশত বিরাশি",
+          "bookPage": 13
+        },
+        {
+          "id": "r750",
+          "value": 750,
+          "blocks": {
+            "hundreds": 7,
+            "tens": 5,
+            "ones": 0
+          },
+          "wordBn": "সাতশত পঞ্চাশ",
+          "bookPage": 13
+        },
+        {
+          "id": "r600",
+          "value": 600,
+          "blocks": {
+            "hundreds": 6,
+            "tens": 0,
+            "ones": 0
+          },
+          "wordBn": "ছয়শত",
+          "bookPage": 13
+        },
+        {
+          "id": "r333",
+          "value": 333,
+          "blocks": {
+            "hundreds": 3,
+            "tens": 3,
+            "ones": 3
+          },
+          "wordBn": "তিনশত তেত্রিশ",
+          "bookPage": 13
+        },
+        {
+          "id": "r101",
+          "value": 101,
+          "blocks": {
+            "hundreds": 1,
+            "tens": 0,
+            "ones": 1
+          },
+          "wordBn": "একশত এক",
+          "bookPage": 13
+        },
+        {
+          "id": "r590",
+          "value": 590,
+          "blocks": {
+            "hundreds": 5,
+            "tens": 9,
+            "ones": 0
+          },
+          "wordBn": "পাঁচশত নব্বই",
+          "bookPage": 13
+        },
+        {
+          "id": "w110",
+          "value": 110,
+          "blocks": {
+            "hundreds": 1,
+            "tens": 1,
+            "ones": 0
+          },
+          "wordBn": "একশত দশ",
+          "bookPage": 13
+        },
+        {
+          "id": "w349",
+          "value": 349,
+          "blocks": {
+            "hundreds": 3,
+            "tens": 4,
+            "ones": 9
+          },
+          "wordBn": "তিনশত ঊনপঞ্চাশ",
+          "bookPage": 13
+        },
+        {
+          "id": "w585",
+          "value": 585,
+          "blocks": {
+            "hundreds": 5,
+            "tens": 8,
+            "ones": 5
+          },
+          "wordBn": "পাঁচশত পঁচাশি",
+          "bookPage": 13
+        },
+        {
+          "id": "w672",
+          "value": 672,
+          "blocks": {
+            "hundreds": 6,
+            "tens": 7,
+            "ones": 2
+          },
+          "wordBn": "ছয়শত বাহাত্তর",
+          "bookPage": 13
+        },
+        {
+          "id": "w850",
+          "value": 850,
+          "blocks": {
+            "hundreds": 8,
+            "tens": 5,
+            "ones": 0
+          },
+          "wordBn": "আটশত পঞ্চাশ",
+          "bookPage": 13
+        },
+        {
+          "id": "w908",
+          "value": 908,
+          "blocks": {
+            "hundreds": 9,
+            "tens": 0,
+            "ones": 8
+          },
+          "wordBn": "নয়শত আট",
+          "bookPage": 13
+        }
+      ],
+      "steps": [
+        {
+          "id": "c1t2-intro",
+          "type": "intro",
+          "title": "এতগুলো ফুল গণনা করি কীভাবে?",
+          "say": "এতগুলো ফুল কীভাবে সহজে গণনা করা যায়?",
+          "illustration": "flowers"
+        },
+        {
+          "id": "c1t2-w1",
+          "type": "worked",
+          "bookActivity": "গণনা",
+          "title": "১০ এর দল গঠন করে গণনা করি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "তোমার কী মনে আছে, কীভাবে আমরা ১০ এর দল গঠন করে ১ম শ্রেণিতে গণনা করেছি?",
+              "speaker": "tuli"
+            },
+            {
+              "text": "চলো, আমরা ১০ এর দল গঠন করে গণনা করি।",
+              "speaker": "rafi"
+            }
+          ]
+        },
+        {
+          "id": "c1t2-w2",
+          "type": "worked",
+          "bookActivity": "ফুলের পরিবর্তে রুক ব্যবহার করে গণনা করি",
+          "title": "রুক দিয়ে গণনা করি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "১০ এর রুক আছে ৫টি ও ১ এর রুক আছে ৪টি।",
+              "illustration": "blocks-0-5-4"
+            },
+            {
+              "text": "সংখ্যাটি হলো: চুয়ান্ন। অঙ্কে লিখতে পারি ৫৪।",
+              "illustration": "number-54"
+            }
+          ]
+        },
+        {
+          "id": "c1t2-w3",
+          "type": "worked",
+          "bookActivity": "রুকের মাধ্যমে ১০০ ও ১০ এর দল তৈরি করে গণনা করি",
+          "title": "১০০ ও ১০ এর দল দিয়ে গণনা করি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "তিনটি একশত এর দল = তিনশত।",
+              "illustration": "blocks-3-0-0"
+            },
+            {
+              "text": "চারটি দশ এর দল = চল্লিশ।",
+              "illustration": "blocks-0-4-0"
+            },
+            {
+              "text": "একটি করে পাঁচটি রুক = পাঁচ।",
+              "illustration": "blocks-0-0-5"
+            },
+            {
+              "text": "সংখ্যাটি হলো: তিনশত পঁয়তাল্লিশ। সংখ্যাটি অঙ্কে: ৩৪৫।",
+              "illustration": "blocks-3-4-5"
+            }
+          ]
+        },
+        {
+          "id": "c1t2-game1",
+          "type": "game",
+          "kind": "count-blocks",
+          "bookActivity": "নিজে করি",
+          "title": "রুক গণনা করে অঙ্কে লিখি",
+          "rounds": [
+            {
+              "id": "c128",
+              "ask": "রুক গণনা করে সংখ্যাটি অঙ্কে লিখি।",
+              "illustration": "blocks-1-2-8",
+              "options": [
+                {
+                  "label": "১৬৮"
+                },
+                {
+                  "label": "১৮৭"
+                },
+                {
+                  "label": "১২৮"
+                }
+              ],
+              "answer": 2,
+              "hint": "আগে শত, তারপর দশ, শেষে এক গণনা করো।",
+              "tests": "p128"
+            },
+            {
+              "id": "c206",
+              "ask": "রুক গণনা করে সংখ্যাটি অঙ্কে লিখি।",
+              "illustration": "blocks-2-0-6",
+              "options": [
+                {
+                  "label": "৮১৯"
+                },
+                {
+                  "label": "২০৬"
+                },
+                {
+                  "label": "৬৪৮"
+                }
+              ],
+              "answer": 1,
+              "hint": "আগে শত, তারপর দশ, শেষে এক গণনা করো।",
+              "tests": "p206"
+            },
+            {
+              "id": "c350",
+              "ask": "রুক গণনা করে সংখ্যাটি অঙ্কে লিখি।",
+              "illustration": "blocks-3-5-0",
+              "options": [
+                {
+                  "label": "৩৫০"
+                },
+                {
+                  "label": "৭৯৩"
+                },
+                {
+                  "label": "৮২৩"
+                }
+              ],
+              "answer": 0,
+              "hint": "আগে শত, তারপর দশ, শেষে এক গণনা করো।",
+              "tests": "p350"
+            },
+            {
+              "id": "c417",
+              "ask": "রুক গণনা করে সংখ্যাটি অঙ্কে লিখি।",
+              "illustration": "blocks-4-1-7",
+              "options": [
+                {
+                  "label": "৯১২"
+                },
+                {
+                  "label": "৭৫৩"
+                },
+                {
+                  "label": "৪১৭"
+                }
+              ],
+              "answer": 2,
+              "hint": "আগে শত, তারপর দশ, শেষে এক গণনা করো।",
+              "tests": "p417"
+            },
+            {
+              "id": "c509",
+              "ask": "রুক গণনা করে সংখ্যাটি অঙ্কে লিখি।",
+              "illustration": "blocks-5-0-9",
+              "options": [
+                {
+                  "label": "৫০৯"
+                },
+                {
+                  "label": "৯১২"
+                },
+                {
+                  "label": "৩০৫"
+                }
+              ],
+              "answer": 0,
+              "hint": "আগে শত, তারপর দশ, শেষে এক গণনা করো।",
+              "tests": "p509"
+            },
+            {
+              "id": "c663",
+              "ask": "রুক গণনা করে সংখ্যাটি অঙ্কে লিখি।",
+              "illustration": "blocks-6-6-3",
+              "options": [
+                {
+                  "label": "১৮৩"
+                },
+                {
+                  "label": "২৪২"
+                },
+                {
+                  "label": "৬৬৩"
+                }
+              ],
+              "answer": 2,
+              "hint": "আগে শত, তারপর দশ, শেষে এক গণনা করো।",
+              "tests": "p663"
+            }
+          ]
+        },
+        {
+          "id": "c1t2-game2",
+          "type": "game",
+          "kind": "order",
+          "bookActivity": "১০১-৫০০ ও ৫০১-১০০০",
+          "title": "কোন দলে পড়ে?",
+          "rounds": [
+            {
+              "id": "g112",
+              "ask": "১১২ — এটি কোন দলে পড়ে?",
+              "options": [
+                {
+                  "label": "১০১ থেকে ৫০০"
+                },
+                {
+                  "label": "৫০১ থেকে ১০০০"
+                }
+              ],
+              "answer": 0,
+              "hint": "৫০০ পর্যন্ত হলে প্রথম দল, তার বেশি হলে দ্বিতীয় দল।",
+              "tests": "r112"
+            },
+            {
+              "id": "g505",
+              "ask": "৫০৫ — এটি কোন দলে পড়ে?",
+              "options": [
+                {
+                  "label": "৫০১ থেকে ১০০০"
+                },
+                {
+                  "label": "১০১ থেকে ৫০০"
+                }
+              ],
+              "answer": 0,
+              "hint": "৫০০ পর্যন্ত হলে প্রথম দল, তার বেশি হলে দ্বিতীয় দল।",
+              "tests": "r505"
+            },
+            {
+              "id": "g925",
+              "ask": "৯২৫ — এটি কোন দলে পড়ে?",
+              "options": [
+                {
+                  "label": "১০১ থেকে ৫০০"
+                },
+                {
+                  "label": "৫০১ থেকে ১০০০"
+                }
+              ],
+              "answer": 1,
+              "hint": "৫০০ পর্যন্ত হলে প্রথম দল, তার বেশি হলে দ্বিতীয় দল।",
+              "tests": "r925"
+            },
+            {
+              "id": "g1000",
+              "ask": "১০০০ — এটি কোন দলে পড়ে?",
+              "options": [
+                {
+                  "label": "১০১ থেকে ৫০০"
+                },
+                {
+                  "label": "৫০১ থেকে ১০০০"
+                }
+              ],
+              "answer": 1,
+              "hint": "৫০০ পর্যন্ত হলে প্রথম দল, তার বেশি হলে দ্বিতীয় দল।",
+              "tests": "r1000"
+            },
+            {
+              "id": "g382",
+              "ask": "৩৮২ — এটি কোন দলে পড়ে?",
+              "options": [
+                {
+                  "label": "১০১ থেকে ৫০০"
+                },
+                {
+                  "label": "৫০১ থেকে ১০০০"
+                }
+              ],
+              "answer": 0,
+              "hint": "৫০০ পর্যন্ত হলে প্রথম দল, তার বেশি হলে দ্বিতীয় দল।",
+              "tests": "r382"
+            },
+            {
+              "id": "g101",
+              "ask": "১০১ — এটি কোন দলে পড়ে?",
+              "options": [
+                {
+                  "label": "১০১ থেকে ৫০০"
+                },
+                {
+                  "label": "৫০১ থেকে ১০০০"
+                }
+              ],
+              "answer": 0,
+              "hint": "৫০০ পর্যন্ত হলে প্রথম দল, তার বেশি হলে দ্বিতীয় দল।",
+              "tests": "r101"
+            }
+          ]
+        },
+        {
+          "id": "c1t2-game3",
+          "type": "game",
+          "kind": "match-pairs",
+          "bookActivity": "পড়ি ও অঙ্কে লিখি",
+          "title": "পড়ে অঙ্কে লিখি",
+          "rounds": [
+            {
+              "id": "wq110",
+              "ask": "একশত দশ",
+              "speak": "একশত দশ",
+              "options": [
+                {
+                  "label": "১১০"
+                },
+                {
+                  "label": "২৯৮"
+                },
+                {
+                  "label": "১৫৯"
+                }
+              ],
+              "answer": 0,
+              "hint": "প্রথমে শতকের অঙ্ক, তারপর বাকি অংশ ভাবো।",
+              "tests": "w110"
+            },
+            {
+              "id": "wq349",
+              "ask": "তিনশত ঊনপঞ্চাশ",
+              "speak": "তিনশত ঊনপঞ্চাশ",
+              "options": [
+                {
+                  "label": "৩৮৭"
+                },
+                {
+                  "label": "১৯২"
+                },
+                {
+                  "label": "৩৪৯"
+                }
+              ],
+              "answer": 2,
+              "hint": "প্রথমে শতকের অঙ্ক, তারপর বাকি অংশ ভাবো।",
+              "tests": "w349"
+            },
+            {
+              "id": "wq585",
+              "ask": "পাঁচশত পঁচাশি",
+              "speak": "পাঁচশত পঁচাশি",
+              "options": [
+                {
+                  "label": "৩০৯"
+                },
+                {
+                  "label": "৫৮৫"
+                },
+                {
+                  "label": "৫৭৭"
+                }
+              ],
+              "answer": 1,
+              "hint": "প্রথমে শতকের অঙ্ক, তারপর বাকি অংশ ভাবো।",
+              "tests": "w585"
+            },
+            {
+              "id": "wq672",
+              "ask": "ছয়শত বাহাত্তর",
+              "speak": "ছয়শত বাহাত্তর",
+              "options": [
+                {
+                  "label": "৯২০"
+                },
+                {
+                  "label": "৬৭২"
+                },
+                {
+                  "label": "৬৩৬"
+                }
+              ],
+              "answer": 1,
+              "hint": "প্রথমে শতকের অঙ্ক, তারপর বাকি অংশ ভাবো।",
+              "tests": "w672"
+            },
+            {
+              "id": "wq850",
+              "ask": "আটশত পঞ্চাশ",
+              "speak": "আটশত পঞ্চাশ",
+              "options": [
+                {
+                  "label": "১৯৭"
+                },
+                {
+                  "label": "৮৫০"
+                },
+                {
+                  "label": "৩৮৭"
+                }
+              ],
+              "answer": 1,
+              "hint": "প্রথমে শতকের অঙ্ক, তারপর বাকি অংশ ভাবো।",
+              "tests": "w850"
+            },
+            {
+              "id": "wq908",
+              "ask": "নয়শত আট",
+              "speak": "নয়শত আট",
+              "options": [
+                {
+                  "label": "৯০৮"
+                },
+                {
+                  "label": "১১২"
+                },
+                {
+                  "label": "১১৪"
+                }
+              ],
+              "answer": 0,
+              "hint": "প্রথমে শতকের অঙ্ক, তারপর বাকি অংশ ভাবো।",
+              "tests": "w908"
+            }
+          ]
+        },
+        {
+          "id": "c1t2-quiz",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "রুক গণনা করে সংখ্যাটি অঙ্কে লিখি।",
+              "illustration": "blocks-0-5-4",
+              "options": [
+                {
+                  "label": "৯৪"
+                },
+                {
+                  "label": "৮০"
+                },
+                {
+                  "label": "৫৪"
+                }
+              ],
+              "answer": 2,
+              "explain": "৫ দশ ও ৪ এক = ৫৪"
+            },
+            {
+              "id": "q2",
+              "ask": "রুক গণনা করে সংখ্যাটি অঙ্কে লিখি।",
+              "illustration": "blocks-3-4-5",
+              "options": [
+                {
+                  "label": "৩৪৫"
+                },
+                {
+                  "label": "৯১০"
+                },
+                {
+                  "label": "৩৪৪"
+                }
+              ],
+              "answer": 0,
+              "explain": "৩ শত, ৪ দশ, ৫ এক = তিনশত পঁয়তাল্লিশ (৩৪৫)"
+            },
+            {
+              "id": "q3",
+              "ask": "৯২৫ — এটি কোন দলে পড়ে?",
+              "options": [
+                {
+                  "label": "১০১ থেকে ৫০০"
+                },
+                {
+                  "label": "৫০১ থেকে ১০০০"
+                }
+              ],
+              "answer": 1,
+              "explain": "৯২৫, ৫০০-এর চেয়ে বড়, তাই ৫০১ থেকে ১০০০ দলে পড়ে।",
+              "tests": "r925"
+            },
+            {
+              "id": "q4",
+              "ask": "একশত দশ",
+              "speak": "একশত দশ",
+              "options": [
+                {
+                  "label": "১১০"
+                },
+                {
+                  "label": "৬৬৬"
+                },
+                {
+                  "label": "৭০৮"
+                }
+              ],
+              "answer": 0,
+              "explain": "একশত দশ = ১১০",
+              "tests": "w110"
+            },
+            {
+              "id": "q5",
+              "ask": "১০০০ সংখ্যাটি কি ৫০১ থেকে ১০০০ দলে পড়ে?",
+              "options": [
+                {
+                  "label": "সত্যি"
+                },
+                {
+                  "label": "মিথ্যা"
+                }
+              ],
+              "answer": 0,
+              "explain": "১০০০, এই দলের শেষ সংখ্যা।",
+              "tests": "r1000"
+            }
+          ]
+        },
+        {
+          "id": "c1t2-done",
+          "type": "done",
+          "title": "দারুণ হয়েছে!",
+          "say": "তুমি এখন ১০০০ পর্যন্ত সংখ্যা রুক দিয়ে গণনা করতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "c1t3",
+      "chapterId": "c1",
+      "number": 3,
+      "title": "সংখ্যার তুলনা",
+      "shape": "number",
+      "bookPages": [
+        14,
+        15,
+        16
+      ],
+      "objective": "দুটি সংখ্যার দল (শতক ও দশক) তুলনা করে কোনটি বড়ো বা ছোটো তা বলা।",
+      "minutes": 9,
+      "numbers": [
+        {
+          "id": "cn62",
+          "value": 62,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 6,
+            "ones": 2
+          },
+          "wordBn": "বাষট্টি",
+          "bookPage": 14
+        },
+        {
+          "id": "cn45",
+          "value": 45,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 5
+          },
+          "wordBn": "পঁয়তাল্লিশ",
+          "bookPage": 14
+        },
+        {
+          "id": "cn434",
+          "value": 434,
+          "blocks": {
+            "hundreds": 4,
+            "tens": 3,
+            "ones": 4
+          },
+          "wordBn": "চারশত চৌত্রিশ",
+          "bookPage": 14
+        },
+        {
+          "id": "cn253",
+          "value": 253,
+          "blocks": {
+            "hundreds": 2,
+            "tens": 5,
+            "ones": 3
+          },
+          "wordBn": "দুইশত তিপ্পান্ন",
+          "bookPage": 14
+        },
+        {
+          "id": "cn354",
+          "value": 354,
+          "blocks": {
+            "hundreds": 3,
+            "tens": 5,
+            "ones": 4
+          },
+          "wordBn": "তিনশত চুয়ান্ন",
+          "bookPage": 14
+        },
+        {
+          "id": "cn325",
+          "value": 325,
+          "blocks": {
+            "hundreds": 3,
+            "tens": 2,
+            "ones": 5
+          },
+          "wordBn": "তিনশত পঁচিশ",
+          "bookPage": 14
+        },
+        {
+          "id": "cn85",
+          "value": 85,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 8,
+            "ones": 5
+          },
+          "wordBn": "পঁচাশি",
+          "bookPage": 16
+        },
+        {
+          "id": "cn57",
+          "value": 57,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 5,
+            "ones": 7
+          },
+          "wordBn": "সাতান্ন",
+          "bookPage": 16
+        },
+        {
+          "id": "cn524",
+          "value": 524,
+          "blocks": {
+            "hundreds": 5,
+            "tens": 2,
+            "ones": 4
+          },
+          "wordBn": "পাঁচশত চব্বিশ",
+          "bookPage": 16
+        },
+        {
+          "id": "cn348",
+          "value": 348,
+          "blocks": {
+            "hundreds": 3,
+            "tens": 4,
+            "ones": 8
+          },
+          "wordBn": "তিনশত আটচল্লিশ",
+          "bookPage": 16
+        },
+        {
+          "id": "cn634",
+          "value": 634,
+          "blocks": {
+            "hundreds": 6,
+            "tens": 3,
+            "ones": 4
+          },
+          "wordBn": "ছয়শত চৌত্রিশ",
+          "bookPage": 16
+        },
+        {
+          "id": "cn670",
+          "value": 670,
+          "blocks": {
+            "hundreds": 6,
+            "tens": 7,
+            "ones": 0
+          },
+          "wordBn": "ছয়শত সত্তর",
+          "bookPage": 16
+        },
+        {
+          "id": "cn423",
+          "value": 423,
+          "blocks": {
+            "hundreds": 4,
+            "tens": 2,
+            "ones": 3
+          },
+          "wordBn": "চারশত তেইশ",
+          "bookPage": 16
+        },
+        {
+          "id": "cn428",
+          "value": 428,
+          "blocks": {
+            "hundreds": 4,
+            "tens": 2,
+            "ones": 8
+          },
+          "wordBn": "চারশত আটাশ",
+          "bookPage": 16
+        },
+        {
+          "id": "cn823",
+          "value": 823,
+          "blocks": {
+            "hundreds": 8,
+            "tens": 2,
+            "ones": 3
+          },
+          "wordBn": "আটশত তেইশ",
+          "bookPage": 16
+        },
+        {
+          "id": "cn540",
+          "value": 540,
+          "blocks": {
+            "hundreds": 5,
+            "tens": 4,
+            "ones": 0
+          },
+          "wordBn": "পাঁচশত চল্লিশ",
+          "bookPage": 16
+        },
+        {
+          "id": "cn901",
+          "value": 901,
+          "blocks": {
+            "hundreds": 9,
+            "tens": 0,
+            "ones": 1
+          },
+          "wordBn": "নয়শত এক",
+          "bookPage": 16
+        },
+        {
+          "id": "cn972",
+          "value": 972,
+          "blocks": {
+            "hundreds": 9,
+            "tens": 7,
+            "ones": 2
+          },
+          "wordBn": "নয়শত বাহাত্তর",
+          "bookPage": 16
+        },
+        {
+          "id": "cn75",
+          "value": 75,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 7,
+            "ones": 5
+          },
+          "wordBn": "পঁচাত্তর",
+          "bookPage": 16
+        },
+        {
+          "id": "cn65",
+          "value": 65,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 6,
+            "ones": 5
+          },
+          "wordBn": "পঁয়ষট্টি",
+          "bookPage": 16
+        },
+        {
+          "id": "cn337",
+          "value": 337,
+          "blocks": {
+            "hundreds": 3,
+            "tens": 3,
+            "ones": 7
+          },
+          "wordBn": "তিনশত সাঁইত্রিশ",
+          "bookPage": 16
+        },
+        {
+          "id": "cn557",
+          "value": 557,
+          "blocks": {
+            "hundreds": 5,
+            "tens": 5,
+            "ones": 7
+          },
+          "wordBn": "পাঁচশত সাতান্ন",
+          "bookPage": 16
+        },
+        {
+          "id": "cn642",
+          "value": 642,
+          "blocks": {
+            "hundreds": 6,
+            "tens": 4,
+            "ones": 2
+          },
+          "wordBn": "ছয়শত বিয়াল্লিশ",
+          "bookPage": 16
+        },
+        {
+          "id": "cn876",
+          "value": 876,
+          "blocks": {
+            "hundreds": 8,
+            "tens": 7,
+            "ones": 6
+          },
+          "wordBn": "আটশত ছিয়াত্তর",
+          "bookPage": 16
+        },
+        {
+          "id": "cn706",
+          "value": 706,
+          "blocks": {
+            "hundreds": 7,
+            "tens": 0,
+            "ones": 6
+          },
+          "wordBn": "সাতশত ছয়",
+          "bookPage": 16
+        },
+        {
+          "id": "cn678",
+          "value": 678,
+          "blocks": {
+            "hundreds": 6,
+            "tens": 7,
+            "ones": 8
+          },
+          "wordBn": "ছয়শত আটাত্তর",
+          "bookPage": 16
+        },
+        {
+          "id": "cn948",
+          "value": 948,
+          "blocks": {
+            "hundreds": 9,
+            "tens": 4,
+            "ones": 8
+          },
+          "wordBn": "নয়শত আটচল্লিশ",
+          "bookPage": 16
+        },
+        {
+          "id": "cn785",
+          "value": 785,
+          "blocks": {
+            "hundreds": 7,
+            "tens": 8,
+            "ones": 5
+          },
+          "wordBn": "সাতশত পঁচাশি",
+          "bookPage": 16
+        },
+        {
+          "id": "cn639",
+          "value": 639,
+          "blocks": {
+            "hundreds": 6,
+            "tens": 3,
+            "ones": 9
+          },
+          "wordBn": "ছয়শত উনচল্লিশ",
+          "bookPage": 16
+        }
+      ],
+      "steps": [
+        {
+          "id": "c1t3-intro",
+          "type": "intro",
+          "title": "কোনটি বড়ো?",
+          "say": "৬২ ও ৪৫ এর মধ্যে কোন সংখ্যাটি বড়ো?",
+          "illustration": "blocks-0-6-2"
+        },
+        {
+          "id": "c1t3-w1",
+          "type": "worked",
+          "bookActivity": "সংখ্যার তুলনা",
+          "title": "দশকের দল তুলনা করি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "৬২",
+              "illustration": "blocks-0-6-2"
+            },
+            {
+              "text": "৪৫",
+              "illustration": "blocks-0-4-5"
+            },
+            {
+              "text": "চলো, আমরা আগে দশক-এর দলের তুলনা করি।",
+              "speaker": "rafi"
+            },
+            {
+              "text": "৬২ এ দশক এর দল ৬টি ও ৪৫ এ দশক এর দল ৪টি। তাই ৬২ বড়ো।",
+              "speaker": "tuli"
+            }
+          ]
+        },
+        {
+          "id": "c1t3-w2",
+          "type": "worked",
+          "bookActivity": "সংখ্যার তুলনা",
+          "title": "শতকের দল তুলনা করি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "৪৩৪",
+              "illustration": "blocks-4-3-4"
+            },
+            {
+              "text": "২৫৩",
+              "illustration": "blocks-2-5-3"
+            },
+            {
+              "text": "চলো, আমরা আগে শতক এর দলের তুলনা করি।",
+              "speaker": "rafi"
+            },
+            {
+              "text": "৪৩৪ এ শতক এর দল ৪টি ও ২৫৩ এ শতক এর দল ২টি। তাই ২৫৩ ছোটো।",
+              "speaker": "tuli"
+            }
+          ]
+        },
+        {
+          "id": "c1t3-w3",
+          "type": "worked",
+          "bookActivity": "সংখ্যার তুলনা",
+          "title": "শতক সমান হলে দশক তুলনা করি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "৩৫৪",
+              "illustration": "blocks-3-5-4"
+            },
+            {
+              "text": "৩২৫",
+              "illustration": "blocks-3-2-5"
+            },
+            {
+              "text": "যদি শতক এর দল একই হয়, তবে আমরা দশক এর দলের তুলনা করি।",
+              "speaker": "rafi"
+            },
+            {
+              "text": "এখানে শতক এর দল একই হওয়ায় আমরা দশক এর দলের তুলনা করি। ৩৫৪ ও ৩২৫ এর মধ্যে ৩৫৪ এ ৩টি দশক এর দল বেশি আছে।",
+              "speaker": "rafi"
+            },
+            {
+              "text": "তাই বড়ো সংখ্যাটি: ৩৫৪।",
+              "speaker": "tuli"
+            }
+          ]
+        },
+        {
+          "id": "c1t3-game1",
+          "type": "game",
+          "kind": "compare",
+          "bookActivity": "বড়ো সংখ্যাটিতে গোল দাগ দিই",
+          "title": "বড়ো সংখ্যাটি বেছে নাও",
+          "rounds": [
+            {
+              "id": "b85-57",
+              "ask": "কোনটি বড়ো?",
+              "options": [
+                {
+                  "label": "৫৭"
+                },
+                {
+                  "label": "৮৫"
+                }
+              ],
+              "answer": 1,
+              "hint": "প্রথমে বড়ো ঘরের (শতক/দশক) অঙ্ক তুলনা করো।",
+              "tests": "cn85"
+            },
+            {
+              "id": "b524-348",
+              "ask": "কোনটি বড়ো?",
+              "options": [
+                {
+                  "label": "৩৪৮"
+                },
+                {
+                  "label": "৫২৪"
+                }
+              ],
+              "answer": 1,
+              "hint": "প্রথমে বড়ো ঘরের (শতক/দশক) অঙ্ক তুলনা করো।",
+              "tests": "cn524"
+            },
+            {
+              "id": "b634-670",
+              "ask": "কোনটি বড়ো?",
+              "options": [
+                {
+                  "label": "৬৭০"
+                },
+                {
+                  "label": "৬৩৪"
+                }
+              ],
+              "answer": 0,
+              "hint": "প্রথমে বড়ো ঘরের (শতক/দশক) অঙ্ক তুলনা করো।",
+              "tests": "cn670"
+            },
+            {
+              "id": "b423-428",
+              "ask": "কোনটি বড়ো?",
+              "options": [
+                {
+                  "label": "৪২৮"
+                },
+                {
+                  "label": "৪২৩"
+                }
+              ],
+              "answer": 0,
+              "hint": "প্রথমে বড়ো ঘরের (শতক/দশক) অঙ্ক তুলনা করো।",
+              "tests": "cn428"
+            },
+            {
+              "id": "b823-540",
+              "ask": "কোনটি বড়ো?",
+              "options": [
+                {
+                  "label": "৮২৩"
+                },
+                {
+                  "label": "৫৪০"
+                }
+              ],
+              "answer": 0,
+              "hint": "প্রথমে বড়ো ঘরের (শতক/দশক) অঙ্ক তুলনা করো।",
+              "tests": "cn823"
+            },
+            {
+              "id": "b901-972",
+              "ask": "কোনটি বড়ো?",
+              "options": [
+                {
+                  "label": "৯৭২"
+                },
+                {
+                  "label": "৯০১"
+                }
+              ],
+              "answer": 0,
+              "hint": "প্রথমে বড়ো ঘরের (শতক/দশক) অঙ্ক তুলনা করো।",
+              "tests": "cn972"
+            }
+          ]
+        },
+        {
+          "id": "c1t3-game2",
+          "type": "game",
+          "kind": "compare",
+          "bookActivity": "ছোটো সংখ্যাটিতে গোল দাগ দিই",
+          "title": "ছোটো সংখ্যাটি বেছে নাও",
+          "rounds": [
+            {
+              "id": "s75-65",
+              "ask": "কোনটি ছোটো?",
+              "options": [
+                {
+                  "label": "৬৫"
+                },
+                {
+                  "label": "৭৫"
+                }
+              ],
+              "answer": 0,
+              "hint": "প্রথমে বড়ো ঘরের (শতক/দশক) অঙ্ক তুলনা করো।",
+              "tests": "cn65"
+            },
+            {
+              "id": "s423-337",
+              "ask": "কোনটি ছোটো?",
+              "options": [
+                {
+                  "label": "৪২৩"
+                },
+                {
+                  "label": "৩৩৭"
+                }
+              ],
+              "answer": 1,
+              "hint": "প্রথমে বড়ো ঘরের (শতক/দশক) অঙ্ক তুলনা করো।",
+              "tests": "cn337"
+            },
+            {
+              "id": "s557-642",
+              "ask": "কোনটি ছোটো?",
+              "options": [
+                {
+                  "label": "৬৪২"
+                },
+                {
+                  "label": "৫৫৭"
+                }
+              ],
+              "answer": 1,
+              "hint": "প্রথমে বড়ো ঘরের (শতক/দশক) অঙ্ক তুলনা করো।",
+              "tests": "cn557"
+            },
+            {
+              "id": "s876-706",
+              "ask": "কোনটি ছোটো?",
+              "options": [
+                {
+                  "label": "৮৭৬"
+                },
+                {
+                  "label": "৭০৬"
+                }
+              ],
+              "answer": 1,
+              "hint": "প্রথমে বড়ো ঘরের (শতক/দশক) অঙ্ক তুলনা করো।",
+              "tests": "cn706"
+            },
+            {
+              "id": "s678-948",
+              "ask": "কোনটি ছোটো?",
+              "options": [
+                {
+                  "label": "৯৪৮"
+                },
+                {
+                  "label": "৬৭৮"
+                }
+              ],
+              "answer": 1,
+              "hint": "প্রথমে বড়ো ঘরের (শতক/দশক) অঙ্ক তুলনা করো।",
+              "tests": "cn678"
+            },
+            {
+              "id": "s785-639",
+              "ask": "কোনটি ছোটো?",
+              "options": [
+                {
+                  "label": "৭৮৫"
+                },
+                {
+                  "label": "৬৩৯"
+                }
+              ],
+              "answer": 1,
+              "hint": "প্রথমে বড়ো ঘরের (শতক/দশক) অঙ্ক তুলনা করো।",
+              "tests": "cn639"
+            }
+          ]
+        },
+        {
+          "id": "c1t3-quiz",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "৬২ ও ৪৫ এর মধ্যে কোনটি বড়ো?",
+              "illustration": "blocks-0-6-2",
+              "options": [
+                {
+                  "label": "৪৫"
+                },
+                {
+                  "label": "৬২"
+                }
+              ],
+              "answer": 1,
+              "explain": "৬২ তে ৬টি দশক, ৪৫ এ ৪টি দশক। তাই ৬২ বড়ো।",
+              "tests": "cn62"
+            },
+            {
+              "id": "q2",
+              "ask": "৪৩৪ ও ২৫৩ এর মধ্যে কোনটি ছোটো?",
+              "illustration": "blocks-2-5-3",
+              "options": [
+                {
+                  "label": "৪৩৪"
+                },
+                {
+                  "label": "২৫৩"
+                }
+              ],
+              "answer": 1,
+              "explain": "২৫৩ তে ২টি শতক, ৪৩৪ এ ৪টি শতক। তাই ২৫৩ ছোটো।",
+              "tests": "cn253"
+            },
+            {
+              "id": "q3",
+              "ask": "৩৫৪ ও ৩২৫ — শতকের অঙ্ক দুটি সমান। তাহলে কীসের অঙ্ক তুলনা করব?",
+              "options": [
+                {
+                  "label": "শতকের"
+                },
+                {
+                  "label": "দশকের"
+                },
+                {
+                  "label": "এককের"
+                }
+              ],
+              "answer": 1,
+              "explain": "শতকের অঙ্ক সমান হলে দশকের অঙ্ক তুলনা করতে হয়।"
+            },
+            {
+              "id": "q4",
+              "ask": "কোনটি বড়ো?",
+              "options": [
+                {
+                  "label": "৪২৮"
+                },
+                {
+                  "label": "৪২৩"
+                }
+              ],
+              "answer": 0,
+              "explain": "৪২৮ ও ৪২৩ — শতক ও দশক সমান, একক তুলনায় ৮>৩।",
+              "tests": "cn423"
+            },
+            {
+              "id": "q5",
+              "ask": "৯০১ কি ৯৭২ এর চেয়ে বড়ো?",
+              "options": [
+                {
+                  "label": "সত্যি"
+                },
+                {
+                  "label": "মিথ্যা"
+                }
+              ],
+              "answer": 1,
+              "explain": "৯৭২ এর দশক ৭, ৯০১ এর দশক ০। তাই ৯৭২ বড়ো।"
+            }
+          ]
+        },
+        {
+          "id": "c1t3-done",
+          "type": "done",
+          "title": "দারুণ হয়েছে!",
+          "say": "তুমি এখন দুটি সংখ্যার মধ্যে কোনটি বড়ো বা ছোটো তা বলতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "c1t4",
+      "chapterId": "c1",
+      "number": 4,
+      "title": "স্থানীয় মান",
+      "shape": "number",
+      "bookPages": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "objective": "সংখ্যার প্রতিটি অঙ্কের স্থানীয় মান (শতক, দশক, একক) বলা এবং স্থানীয় মান থেকে সংখ্যা লেখা।",
+      "minutes": 11,
+      "numbers": [
+        {
+          "id": "pv14",
+          "value": 14,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 4
+          },
+          "wordBn": "চৌদ্দ",
+          "bookPage": 17
+        },
+        {
+          "id": "pv23",
+          "value": 23,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 3
+          },
+          "wordBn": "তেইশ",
+          "bookPage": 17
+        },
+        {
+          "id": "pv47",
+          "value": 47,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 7
+          },
+          "wordBn": "সাতচল্লিশ",
+          "bookPage": 20
+        },
+        {
+          "id": "pv83",
+          "value": 83,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 8,
+            "ones": 3
+          },
+          "wordBn": "তিরাশি",
+          "bookPage": 20
+        },
+        {
+          "id": "pv120",
+          "value": 120,
+          "blocks": {
+            "hundreds": 1,
+            "tens": 2,
+            "ones": 0
+          },
+          "wordBn": "একশত বিশ",
+          "bookPage": 20
+        },
+        {
+          "id": "pv356",
+          "value": 356,
+          "blocks": {
+            "hundreds": 3,
+            "tens": 5,
+            "ones": 6
+          },
+          "wordBn": "তিনশত ছাপ্পান্ন",
+          "bookPage": 17
+        },
+        {
+          "id": "pv352",
+          "value": 352,
+          "blocks": {
+            "hundreds": 3,
+            "tens": 5,
+            "ones": 2
+          },
+          "wordBn": "তিনশত বায়ান্ন",
+          "bookPage": 20
+        },
+        {
+          "id": "pv467",
+          "value": 467,
+          "blocks": {
+            "hundreds": 4,
+            "tens": 6,
+            "ones": 7
+          },
+          "wordBn": "চারশত সাতষট্টি",
+          "bookPage": 20
+        },
+        {
+          "id": "pv976",
+          "value": 976,
+          "blocks": {
+            "hundreds": 9,
+            "tens": 7,
+            "ones": 6
+          },
+          "wordBn": "নয়শত ছিয়াত্তর",
+          "bookPage": 20
+        },
+        {
+          "id": "pv1000",
+          "value": 1000,
+          "blocks": {
+            "hundreds": 10,
+            "tens": 0,
+            "ones": 0
+          },
+          "wordBn": "এক হাজার",
+          "bookPage": 20
+        },
+        {
+          "id": "pv74",
+          "value": 74,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 7,
+            "ones": 4
+          },
+          "wordBn": "চুয়াত্তর",
+          "bookPage": 21
+        },
+        {
+          "id": "pv108",
+          "value": 108,
+          "blocks": {
+            "hundreds": 1,
+            "tens": 0,
+            "ones": 8
+          },
+          "wordBn": "একশত আট",
+          "bookPage": 21
+        },
+        {
+          "id": "pv230",
+          "value": 230,
+          "blocks": {
+            "hundreds": 2,
+            "tens": 3,
+            "ones": 0
+          },
+          "wordBn": "দুইশত ত্রিশ",
+          "bookPage": 21
+        },
+        {
+          "id": "pv782",
+          "value": 782,
+          "blocks": {
+            "hundreds": 7,
+            "tens": 8,
+            "ones": 2
+          },
+          "wordBn": "সাতশত বিরাশি",
+          "bookPage": 21
+        },
+        {
+          "id": "pv24",
+          "value": 24,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 4
+          },
+          "wordBn": "চব্বিশ",
+          "bookPage": 21
+        },
+        {
+          "id": "pv56",
+          "value": 56,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 5,
+            "ones": 6
+          },
+          "wordBn": "ছাপ্পান্ন",
+          "bookPage": 21
+        },
+        {
+          "id": "pv73",
+          "value": 73,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 7,
+            "ones": 3
+          },
+          "wordBn": "তিয়াত্তর",
+          "bookPage": 21
+        },
+        {
+          "id": "pv98",
+          "value": 98,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 9,
+            "ones": 8
+          },
+          "wordBn": "আটানব্বই",
+          "bookPage": 21
+        },
+        {
+          "id": "pv105",
+          "value": 105,
+          "blocks": {
+            "hundreds": 1,
+            "tens": 0,
+            "ones": 5
+          },
+          "wordBn": "একশত পাঁচ",
+          "bookPage": 21
+        },
+        {
+          "id": "pv328",
+          "value": 328,
+          "blocks": {
+            "hundreds": 3,
+            "tens": 2,
+            "ones": 8
+          },
+          "wordBn": "তিনশত আটাশ",
+          "bookPage": 21
+        },
+        {
+          "id": "pv639",
+          "value": 639,
+          "blocks": {
+            "hundreds": 6,
+            "tens": 3,
+            "ones": 9
+          },
+          "wordBn": "ছয়শত উনচল্লিশ",
+          "bookPage": 21
+        },
+        {
+          "id": "pv840",
+          "value": 840,
+          "blocks": {
+            "hundreds": 8,
+            "tens": 4,
+            "ones": 0
+          },
+          "wordBn": "আটশত চল্লিশ",
+          "bookPage": 21
+        },
+        {
+          "id": "pv957",
+          "value": 957,
+          "blocks": {
+            "hundreds": 9,
+            "tens": 5,
+            "ones": 7
+          },
+          "wordBn": "নয়শত সাতান্ন",
+          "bookPage": 21
+        }
+      ],
+      "steps": [
+        {
+          "id": "c1t4-intro",
+          "type": "intro",
+          "title": "১০টি করে বাণ্ডিল করি",
+          "say": "১০টি কাঠি গণনা করে বাণ্ডিল তৈরি করি। ১টি বাণ্ডিল = ১ দশক।",
+          "illustration": "blocks-0-1-4"
+        },
+        {
+          "id": "c1t4-w1",
+          "type": "worked",
+          "bookActivity": "স্থানীয় মান",
+          "title": "স্থানীয় মান লিখি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "১৪ = ১ দশক ৪ একক। স্থানীয় মানে লিখি: ১ দশক ও ৪ একক।",
+              "illustration": "blocks-0-1-4"
+            },
+            {
+              "text": "২৩ = ২ দশক ৩ একক। স্থানীয় মানে লিখি: ২ দশক ও ৩ একক।",
+              "illustration": "blocks-0-2-3"
+            }
+          ]
+        },
+        {
+          "id": "c1t4-w2",
+          "type": "worked",
+          "bookActivity": "রুকের মাধ্যমে শত, দশের দল ও এক",
+          "title": "শতক, দশক ও একক দিয়ে লিখি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "৩ শত = ৩ শতক। ৫ দশ = ৫ দশক। ৬ এক = ৬ একক।",
+              "illustration": "blocks-3-5-6"
+            },
+            {
+              "text": "সংখ্যাটি: ৩ শতক ৫ দশক ৬ একক = তিনশত ছাপ্পান্ন = ৩৫৬।",
+              "illustration": "number-356"
+            }
+          ]
+        },
+        {
+          "id": "c1t4-w3",
+          "type": "worked",
+          "bookActivity": "স্থানীয় মান",
+          "title": "২৪৪২ এর প্রতিটি অঙ্কের স্থানীয় মান",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "২৪৪২ = ২ হাজার ৪ শতক ৪ দশক ২ একক।",
+              "illustration": "number-2442"
+            },
+            {
+              "text": "= ২ হাজার ৪৪২। অঙ্কে: ২৪৪২।",
+              "illustration": "number-2442"
+            }
+          ]
+        },
+        {
+          "id": "c1t4-w4",
+          "type": "worked",
+          "bookActivity": "প্রত্যেকটি অঙ্কের স্থানীয় মান লিখি",
+          "title": "৪৭, ৩৫২ ও ১০০০ এর স্থানীয় মান",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "৪৭ = ৪ দশক (৪০) ৭ একক (৭)।",
+              "illustration": "blocks-0-4-7"
+            },
+            {
+              "text": "৩৫২ = ৩ শতক (৩০০) ৫ দশক (৫০) ২ একক (২)।",
+              "illustration": "blocks-3-5-2"
+            },
+            {
+              "text": "১০০০ = ১ হাজার, ০ শতক, ০ দশক, ০ একক।",
+              "illustration": "number-1000"
+            }
+          ]
+        },
+        {
+          "id": "c1t4-game1",
+          "type": "game",
+          "kind": "place-value",
+          "bookActivity": "খালিঘর পূরণ করি",
+          "title": "স্থানীয় মান বলো",
+          "rounds": [
+            {
+              "id": "pv83",
+              "ask": "৮৩ এর স্থানীয় মান কী?",
+              "illustration": "blocks-0-8-3",
+              "options": [
+                {
+                  "label": "৭ দশক ৩ একক"
+                },
+                {
+                  "label": "৮ দশক ৩ একক"
+                },
+                {
+                  "label": "৯ দশক ৩ একক"
+                }
+              ],
+              "answer": 1,
+              "hint": "আগে শতক, তারপর দশক, শেষে একক গণনা করো।",
+              "tests": "pv83"
+            },
+            {
+              "id": "pv120",
+              "ask": "১২০ এর স্থানীয় মান কী?",
+              "illustration": "blocks-1-2-0",
+              "options": [
+                {
+                  "label": "১ শতক ২ দশক"
+                },
+                {
+                  "label": "১ শতক ৩ দশক"
+                },
+                {
+                  "label": "১ শতক ১ দশক"
+                }
+              ],
+              "answer": 0,
+              "hint": "আগে শতক, তারপর দশক, শেষে একক গণনা করো।",
+              "tests": "pv120"
+            },
+            {
+              "id": "pv467",
+              "ask": "৪৬৭ এর স্থানীয় মান কী?",
+              "illustration": "blocks-4-6-7",
+              "options": [
+                {
+                  "label": "৪ শতক ৭ দশক ৭ একক"
+                },
+                {
+                  "label": "৪ শতক ৬ দশক ৭ একক"
+                },
+                {
+                  "label": "৪ শতক ৫ দশক ৭ একক"
+                }
+              ],
+              "answer": 1,
+              "hint": "আগে শতক, তারপর দশক, শেষে একক গণনা করো।",
+              "tests": "pv467"
+            },
+            {
+              "id": "pv976",
+              "ask": "৯৭৬ এর স্থানীয় মান কী?",
+              "illustration": "blocks-9-7-6",
+              "options": [
+                {
+                  "label": "৯ শতক ৬ দশক ৬ একক"
+                },
+                {
+                  "label": "৯ শতক ৮ দশক ৬ একক"
+                },
+                {
+                  "label": "৯ শতক ৭ দশক ৬ একক"
+                }
+              ],
+              "answer": 2,
+              "hint": "আগে শতক, তারপর দশক, শেষে একক গণনা করো।",
+              "tests": "pv976"
+            },
+            {
+              "id": "pv1000",
+              "ask": "১০০০ এর স্থানীয় মান কী?",
+              "illustration": "number-1000",
+              "options": [
+                {
+                  "label": "১ হাজার"
+                },
+                {
+                  "label": "১০ শতক ১ দশক"
+                },
+                {
+                  "label": "৯ শতক ৯ দশক"
+                }
+              ],
+              "answer": 0,
+              "hint": "আগে শতক, তারপর দশক, শেষে একক গণনা করো।",
+              "tests": "pv1000"
+            }
+          ]
+        },
+        {
+          "id": "c1t4-game2",
+          "type": "game",
+          "kind": "place-value",
+          "bookActivity": "খালিঘর পূরণ করি",
+          "title": "সংখ্যাটি অঙ্কে লিখো",
+          "rounds": [
+            {
+              "id": "num74",
+              "ask": "৭ দশক ৪ একক",
+              "options": [
+                {
+                  "label": "৭৪"
+                },
+                {
+                  "label": "১১২"
+                },
+                {
+                  "label": "৬২"
+                }
+              ],
+              "answer": 0,
+              "hint": "প্রথমে শতক, তারপর দশক, শেষে একক যোগ করো।",
+              "tests": "pv74"
+            },
+            {
+              "id": "num108",
+              "ask": "১ শতক ৮ একক",
+              "options": [
+                {
+                  "label": "১১৫"
+                },
+                {
+                  "label": "৮৯"
+                },
+                {
+                  "label": "১০৮"
+                }
+              ],
+              "answer": 2,
+              "hint": "প্রথমে শতক, তারপর দশক, শেষে একক যোগ করো।",
+              "tests": "pv108"
+            },
+            {
+              "id": "num230",
+              "ask": "২ শতক ৩ দশক",
+              "options": [
+                {
+                  "label": "২১৮"
+                },
+                {
+                  "label": "২৭৭"
+                },
+                {
+                  "label": "২৩০"
+                }
+              ],
+              "answer": 2,
+              "hint": "প্রথমে শতক, তারপর দশক, শেষে একক যোগ করো।",
+              "tests": "pv230"
+            },
+            {
+              "id": "num782",
+              "ask": "৭ শতক ৮ দশক ২ একক",
+              "options": [
+                {
+                  "label": "৭৮২"
+                },
+                {
+                  "label": "৮০৭"
+                },
+                {
+                  "label": "৭৩৮"
+                }
+              ],
+              "answer": 0,
+              "hint": "প্রথমে শতক, তারপর দশক, শেষে একক যোগ করো।",
+              "tests": "pv782"
+            },
+            {
+              "id": "num1000",
+              "ask": "১ হাজার",
+              "options": [
+                {
+                  "label": "১০৩৬"
+                },
+                {
+                  "label": "১০০৭"
+                },
+                {
+                  "label": "১০০০"
+                }
+              ],
+              "answer": 2,
+              "hint": "প্রথমে শতক, তারপর দশক, শেষে একক যোগ করো।",
+              "tests": "pv1000"
+            }
+          ]
+        },
+        {
+          "id": "c1t4-quiz",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "২৪ এর স্থানীয় মান কী?",
+              "illustration": "blocks-0-2-4",
+              "options": [
+                {
+                  "label": "৩ দশক ৪ একক"
+                },
+                {
+                  "label": "২ দশক ৪ একক"
+                },
+                {
+                  "label": "৪ দশক ২ একক"
+                }
+              ],
+              "answer": 1,
+              "explain": "২৪ = ২ দশক ৪ একক।",
+              "tests": "pv24"
+            },
+            {
+              "id": "q2",
+              "ask": "৩২৮ এর স্থানীয় মান কী?",
+              "illustration": "blocks-3-2-8",
+              "options": [
+                {
+                  "label": "২ শতক ৩ দশক ৮ একক"
+                },
+                {
+                  "label": "৩ শতক ৮ দশক ২ একক"
+                },
+                {
+                  "label": "৩ শতক ২ দশক ৮ একক"
+                }
+              ],
+              "answer": 2,
+              "explain": "৩২৮ = ৩ শতক ২ দশক ৮ একক।",
+              "tests": "pv328"
+            },
+            {
+              "id": "q3",
+              "ask": "৭ শতক ৩ দশক ৯ একক = কত?",
+              "options": [
+                {
+                  "label": "৯৩৭"
+                },
+                {
+                  "label": "৭৩৯"
+                },
+                {
+                  "label": "৭৯৩"
+                }
+              ],
+              "answer": 1,
+              "explain": "৭০০+৩০+৯ = ৭৩৯।"
+            },
+            {
+              "id": "q4",
+              "ask": "১০০০ এর স্থানীয় মান কী?",
+              "illustration": "number-1000",
+              "options": [
+                {
+                  "label": "১০০ দশক"
+                },
+                {
+                  "label": "১০ শতক"
+                },
+                {
+                  "label": "১ হাজার"
+                }
+              ],
+              "answer": 2,
+              "explain": "১০০০ = ১ হাজার।",
+              "tests": "pv1000"
+            },
+            {
+              "id": "q5",
+              "ask": "৯৫৭ এর স্থানীয় মান কী?",
+              "options": [
+                {
+                  "label": "৯ শতক ৫ দশক ৭ একক"
+                },
+                {
+                  "label": "৭ শতক ৯ দশক ৫ একক"
+                },
+                {
+                  "label": "৫ শতক ৭ দশক ৯ একক"
+                }
+              ],
+              "answer": 0,
+              "explain": "৯৫৭ = ৯ শতক ৫ দশক ৭ একক।",
+              "tests": "pv957"
+            }
+          ]
+        },
+        {
+          "id": "c1t4-done",
+          "type": "done",
+          "title": "দারুণ হয়েছে!",
+          "say": "তুমি এখন সংখ্যার স্থানীয় মান বলতে ও লিখতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "c1t5",
+      "chapterId": "c1",
+      "number": 5,
+      "title": "সংখ্যার তুলনা (স্থানীয় মানের সাহায্যে)",
+      "shape": "number",
+      "bookPages": [
+        22,
+        23,
+        24
+      ],
+      "objective": "শতক, দশক ও একক স্থানের অঙ্ক তুলনা করে দুই বা তিনটি সংখ্যাকে ছোটো-বড়ো ক্রমে সাজানো।",
+      "minutes": 10,
+      "numbers": [
+        {
+          "id": "cv128",
+          "value": 128,
+          "blocks": {
+            "hundreds": 1,
+            "tens": 2,
+            "ones": 8
+          },
+          "wordBn": "একশত আটাশ",
+          "bookPage": 23
+        },
+        {
+          "id": "cv235",
+          "value": 235,
+          "blocks": {
+            "hundreds": 2,
+            "tens": 3,
+            "ones": 5
+          },
+          "wordBn": "দুইশত পঁয়ত্রিশ",
+          "bookPage": 23
+        },
+        {
+          "id": "cv248",
+          "value": 248,
+          "blocks": {
+            "hundreds": 2,
+            "tens": 4,
+            "ones": 8
+          },
+          "wordBn": "দুইশত আটচল্লিশ",
+          "bookPage": 23
+        },
+        {
+          "id": "cv226",
+          "value": 226,
+          "blocks": {
+            "hundreds": 2,
+            "tens": 2,
+            "ones": 6
+          },
+          "wordBn": "দুইশত ছাব্বিশ",
+          "bookPage": 23
+        },
+        {
+          "id": "cv496",
+          "value": 496,
+          "blocks": {
+            "hundreds": 4,
+            "tens": 9,
+            "ones": 6
+          },
+          "wordBn": "চারশত ছিয়ানব্বই",
+          "bookPage": 23
+        },
+        {
+          "id": "cv469",
+          "value": 469,
+          "blocks": {
+            "hundreds": 4,
+            "tens": 6,
+            "ones": 9
+          },
+          "wordBn": "চারশত ঊনসত্তর",
+          "bookPage": 23
+        },
+        {
+          "id": "cv692",
+          "value": 692,
+          "blocks": {
+            "hundreds": 6,
+            "tens": 9,
+            "ones": 2
+          },
+          "wordBn": "ছয়শত বিরানব্বই",
+          "bookPage": 23
+        },
+        {
+          "id": "cv594",
+          "value": 594,
+          "blocks": {
+            "hundreds": 5,
+            "tens": 9,
+            "ones": 4
+          },
+          "wordBn": "পাঁচশত চুরানব্বই",
+          "bookPage": 23
+        },
+        {
+          "id": "cv872",
+          "value": 872,
+          "blocks": {
+            "hundreds": 8,
+            "tens": 7,
+            "ones": 2
+          },
+          "wordBn": "আটশত বাহাত্তর",
+          "bookPage": 23
+        },
+        {
+          "id": "cv858",
+          "value": 858,
+          "blocks": {
+            "hundreds": 8,
+            "tens": 5,
+            "ones": 8
+          },
+          "wordBn": "আটশত আটান্ন",
+          "bookPage": 23
+        },
+        {
+          "id": "cv1000",
+          "value": 1000,
+          "blocks": {
+            "hundreds": 10,
+            "tens": 0,
+            "ones": 0
+          },
+          "wordBn": "এক হাজার",
+          "bookPage": 23
+        },
+        {
+          "id": "cv998",
+          "value": 998,
+          "blocks": {
+            "hundreds": 9,
+            "tens": 9,
+            "ones": 8
+          },
+          "wordBn": "নয়শত আটানব্বই",
+          "bookPage": 23
+        },
+        {
+          "id": "cv430",
+          "value": 430,
+          "blocks": {
+            "hundreds": 4,
+            "tens": 3,
+            "ones": 0
+          },
+          "wordBn": "চারশত ত্রিশ",
+          "bookPage": 23
+        },
+        {
+          "id": "cv428",
+          "value": 428,
+          "blocks": {
+            "hundreds": 4,
+            "tens": 2,
+            "ones": 8
+          },
+          "wordBn": "চারশত আটাশ",
+          "bookPage": 23
+        },
+        {
+          "id": "cv678",
+          "value": 678,
+          "blocks": {
+            "hundreds": 6,
+            "tens": 7,
+            "ones": 8
+          },
+          "wordBn": "ছয়শত আটাত্তর",
+          "bookPage": 23
+        },
+        {
+          "id": "cv675",
+          "value": 675,
+          "blocks": {
+            "hundreds": 6,
+            "tens": 7,
+            "ones": 5
+          },
+          "wordBn": "ছয়শত পঁচাত্তর",
+          "bookPage": 23
+        },
+        {
+          "id": "cv827",
+          "value": 827,
+          "blocks": {
+            "hundreds": 8,
+            "tens": 2,
+            "ones": 7
+          },
+          "wordBn": "আটশত সাতাশ",
+          "bookPage": 23
+        },
+        {
+          "id": "cv948",
+          "value": 948,
+          "blocks": {
+            "hundreds": 9,
+            "tens": 4,
+            "ones": 8
+          },
+          "wordBn": "নয়শত আটচল্লিশ",
+          "bookPage": 23
+        },
+        {
+          "id": "cv985",
+          "value": 985,
+          "blocks": {
+            "hundreds": 9,
+            "tens": 8,
+            "ones": 5
+          },
+          "wordBn": "নয়শত পঁচাশি",
+          "bookPage": 23
+        },
+        {
+          "id": "cv950",
+          "value": 950,
+          "blocks": {
+            "hundreds": 9,
+            "tens": 5,
+            "ones": 0
+          },
+          "wordBn": "নয়শত পঞ্চাশ",
+          "bookPage": 23
+        },
+        {
+          "id": "cv944",
+          "value": 944,
+          "blocks": {
+            "hundreds": 9,
+            "tens": 4,
+            "ones": 4
+          },
+          "wordBn": "নয়শত চুয়াল্লিশ",
+          "bookPage": 23
+        },
+        {
+          "id": "cv922",
+          "value": 922,
+          "blocks": {
+            "hundreds": 9,
+            "tens": 2,
+            "ones": 2
+          },
+          "wordBn": "নয়শত বাইশ",
+          "bookPage": 23
+        },
+        {
+          "id": "cv432",
+          "value": 432,
+          "blocks": {
+            "hundreds": 4,
+            "tens": 3,
+            "ones": 2
+          },
+          "wordBn": "চারশত বত্রিশ",
+          "bookPage": 24
+        },
+        {
+          "id": "cv328",
+          "value": 328,
+          "blocks": {
+            "hundreds": 3,
+            "tens": 2,
+            "ones": 8
+          },
+          "wordBn": "তিনশত আটাশ",
+          "bookPage": 24
+        },
+        {
+          "id": "cv540",
+          "value": 540,
+          "blocks": {
+            "hundreds": 5,
+            "tens": 4,
+            "ones": 0
+          },
+          "wordBn": "পাঁচশত চল্লিশ",
+          "bookPage": 24
+        },
+        {
+          "id": "cv529",
+          "value": 529,
+          "blocks": {
+            "hundreds": 5,
+            "tens": 2,
+            "ones": 9
+          },
+          "wordBn": "পাঁচশত উনত্রিশ",
+          "bookPage": 24
+        },
+        {
+          "id": "cv517",
+          "value": 517,
+          "blocks": {
+            "hundreds": 5,
+            "tens": 1,
+            "ones": 7
+          },
+          "wordBn": "পাঁচশত সতেরো",
+          "bookPage": 24
+        },
+        {
+          "id": "cv549",
+          "value": 549,
+          "blocks": {
+            "hundreds": 5,
+            "tens": 4,
+            "ones": 9
+          },
+          "wordBn": "পাঁচশত ঊনপঞ্চাশ",
+          "bookPage": 24
+        },
+        {
+          "id": "cv407",
+          "value": 407,
+          "blocks": {
+            "hundreds": 4,
+            "tens": 0,
+            "ones": 7
+          },
+          "wordBn": "চারশত সাত",
+          "bookPage": 24
+        },
+        {
+          "id": "cv603",
+          "value": 603,
+          "blocks": {
+            "hundreds": 6,
+            "tens": 0,
+            "ones": 3
+          },
+          "wordBn": "ছয়শত তিন",
+          "bookPage": 24
+        },
+        {
+          "id": "cv330",
+          "value": 330,
+          "blocks": {
+            "hundreds": 3,
+            "tens": 3,
+            "ones": 0
+          },
+          "wordBn": "তিনশত ত্রিশ",
+          "bookPage": 24
+        },
+        {
+          "id": "cv929",
+          "value": 929,
+          "blocks": {
+            "hundreds": 9,
+            "tens": 2,
+            "ones": 9
+          },
+          "wordBn": "নয়শত উনত্রিশ",
+          "bookPage": 24
+        },
+        {
+          "id": "cv920",
+          "value": 920,
+          "blocks": {
+            "hundreds": 9,
+            "tens": 2,
+            "ones": 0
+          },
+          "wordBn": "নয়শত বিশ",
+          "bookPage": 24
+        },
+        {
+          "id": "cv926",
+          "value": 926,
+          "blocks": {
+            "hundreds": 9,
+            "tens": 2,
+            "ones": 6
+          },
+          "wordBn": "নয়শত ছাব্বিশ",
+          "bookPage": 24
+        },
+        {
+          "id": "cv780",
+          "value": 780,
+          "blocks": {
+            "hundreds": 7,
+            "tens": 8,
+            "ones": 0
+          },
+          "wordBn": "সাতশত আশি",
+          "bookPage": 24
+        },
+        {
+          "id": "cv949",
+          "value": 949,
+          "blocks": {
+            "hundreds": 9,
+            "tens": 4,
+            "ones": 9
+          },
+          "wordBn": "নয়শত ঊনপঞ্চাশ",
+          "bookPage": 24
+        },
+        {
+          "id": "cv460",
+          "value": 460,
+          "blocks": {
+            "hundreds": 4,
+            "tens": 6,
+            "ones": 0
+          },
+          "wordBn": "চারশত ষাট",
+          "bookPage": 22
+        },
+        {
+          "id": "cv630",
+          "value": 630,
+          "blocks": {
+            "hundreds": 6,
+            "tens": 3,
+            "ones": 0
+          },
+          "wordBn": "ছয়শত ত্রিশ",
+          "bookPage": 22
+        },
+        {
+          "id": "cv562",
+          "value": 562,
+          "blocks": {
+            "hundreds": 5,
+            "tens": 6,
+            "ones": 2
+          },
+          "wordBn": "পাঁচশত বাষট্টি",
+          "bookPage": 22
+        },
+        {
+          "id": "cv548",
+          "value": 548,
+          "blocks": {
+            "hundreds": 5,
+            "tens": 4,
+            "ones": 8
+          },
+          "wordBn": "পাঁচশত আটচল্লিশ",
+          "bookPage": 22
+        },
+        {
+          "id": "cv232",
+          "value": 232,
+          "blocks": {
+            "hundreds": 2,
+            "tens": 3,
+            "ones": 2
+          },
+          "wordBn": "দুইশত বত্রিশ",
+          "bookPage": 22
+        },
+        {
+          "id": "cv223",
+          "value": 223,
+          "blocks": {
+            "hundreds": 2,
+            "tens": 2,
+            "ones": 3
+          },
+          "wordBn": "দুইশত তেইশ",
+          "bookPage": 22
+        },
+        {
+          "id": "cv239",
+          "value": 239,
+          "blocks": {
+            "hundreds": 2,
+            "tens": 3,
+            "ones": 9
+          },
+          "wordBn": "দুইশত উনচল্লিশ",
+          "bookPage": 22
+        }
+      ],
+      "steps": [
+        {
+          "id": "c1t5-intro",
+          "type": "intro",
+          "title": "কোনটি বড়ো, ৪৬০ অথবা ৬৩০?",
+          "say": "আমরা কীভাবে তুলনা করতে পারি?",
+          "illustration": "blocks-4-6-0"
+        },
+        {
+          "id": "c1t5-w1",
+          "type": "worked",
+          "bookActivity": "দুটি সংখ্যার তুলনা",
+          "title": "শতকের স্থানীয় মান তুলনা করি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "পূর্বে আমরা দল করে তুলনা করা শিখেছি। এবার স্থানীয় মানের সাহায্যে তুলনা করব।",
+              "speaker": "rafi"
+            },
+            {
+              "text": "এক্ষেত্রে শতক স্থানের ৪ থেকে ৬ বড়ো। কাজেই ৪৬০ থেকে ৬৩০ বড়ো।",
+              "speaker": "tuli"
+            },
+            {
+              "text": "তাহলে ৪৬০ ছোটো এবং ৬৩০ বড়ো।",
+              "speaker": "rafi"
+            }
+          ]
+        },
+        {
+          "id": "c1t5-w2",
+          "type": "worked",
+          "bookActivity": "দুটি সংখ্যার তুলনা",
+          "title": "শতক সমান হলে দশক তুলনা করি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "৫৬২ ও ৫৪৮ এর শতক স্থানের অঙ্ক দুটি একই (৫ এবং ৫)।",
+              "speaker": "tuli"
+            },
+            {
+              "text": "দশক স্থানের অঙ্ক তুলনা করি। ৪ থেকে ৬ বড়ো।",
+              "speaker": "rafi"
+            },
+            {
+              "text": "কাজেই আমরা বলতে পারি ৫৪৮ থেকে ৫৬২ বড়ো। তাহলে ৫৬২ বড়ো এবং ৫৪৮ ছোটো।",
+              "speaker": "tuli"
+            }
+          ]
+        },
+        {
+          "id": "c1t5-w3",
+          "type": "worked",
+          "bookActivity": "তিনটি সংখ্যার তুলনা",
+          "title": "তিনটি সংখ্যা ছোটো থেকে বড়ো সাজাই",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "২৩২, ২২৩, ২৩৯ — প্রথমে শতক স্থানের অঙ্ক তুলনা করি। শতক স্থানের সব অঙ্কই সমান।",
+              "speaker": "rafi"
+            },
+            {
+              "text": "এবার দশক স্থানের অঙ্ক তুলনা করি। ২৩২ ও ২৩৯ দুটি সংখ্যারই দশক স্থানের অঙ্ক দুটি সমান (৩)।",
+              "speaker": "tuli"
+            },
+            {
+              "text": "২২৩ এর দশক স্থানের অঙ্ক ২। তাহলে অপর দুটি সংখ্যা ২৩২, ২৩৯ এর চেয়ে ২২৩ ছোটো।",
+              "speaker": "rafi"
+            },
+            {
+              "text": "এখন ২৩২ ও ২৩৯ তুলনা করি। ২৩৯ এর একক স্থানের অঙ্ক ৯, যা ২৩২ এর একক স্থানের অঙ্ক ২ থেকে বড়ো। সুতরাং ২৩৯ সংখ্যাটি সবচেয়ে বড়ো।",
+              "speaker": "tuli"
+            },
+            {
+              "text": "তাহলে ছোটো থেকে বড়ো: ২২৩, ২৩২, ২৩৯।",
+              "speaker": "rafi"
+            }
+          ]
+        },
+        {
+          "id": "c1t5-game1",
+          "type": "game",
+          "kind": "compare",
+          "bookActivity": "ছোটো-বড়ো তুলনা করি",
+          "title": "কোনটি বড়ো?",
+          "rounds": [
+            {
+              "id": "pt128-235",
+              "ask": "কোনটি বড়ো?",
+              "options": [
+                {
+                  "label": "১২৮"
+                },
+                {
+                  "label": "২৩৫"
+                }
+              ],
+              "answer": 1,
+              "hint": "প্রথমে শতকের অঙ্ক তুলনা করো, তারপর দরকার হলে দশক।",
+              "tests": "cv235"
+            },
+            {
+              "id": "pt248-226",
+              "ask": "কোনটি বড়ো?",
+              "options": [
+                {
+                  "label": "২৪৮"
+                },
+                {
+                  "label": "২২৬"
+                }
+              ],
+              "answer": 0,
+              "hint": "প্রথমে শতকের অঙ্ক তুলনা করো, তারপর দরকার হলে দশক।",
+              "tests": "cv248"
+            },
+            {
+              "id": "pt496-469",
+              "ask": "কোনটি বড়ো?",
+              "options": [
+                {
+                  "label": "৪৬৯"
+                },
+                {
+                  "label": "৪৯৬"
+                }
+              ],
+              "answer": 1,
+              "hint": "প্রথমে শতকের অঙ্ক তুলনা করো, তারপর দরকার হলে দশক।",
+              "tests": "cv496"
+            },
+            {
+              "id": "pt692-594",
+              "ask": "কোনটি বড়ো?",
+              "options": [
+                {
+                  "label": "৫৯৪"
+                },
+                {
+                  "label": "৬৯২"
+                }
+              ],
+              "answer": 1,
+              "hint": "প্রথমে শতকের অঙ্ক তুলনা করো, তারপর দরকার হলে দশক।",
+              "tests": "cv692"
+            },
+            {
+              "id": "pt872-858",
+              "ask": "কোনটি বড়ো?",
+              "options": [
+                {
+                  "label": "৮৭২"
+                },
+                {
+                  "label": "৮৫৮"
+                }
+              ],
+              "answer": 0,
+              "hint": "প্রথমে শতকের অঙ্ক তুলনা করো, তারপর দরকার হলে দশক।",
+              "tests": "cv872"
+            },
+            {
+              "id": "pt1000-998",
+              "ask": "কোনটি বড়ো?",
+              "options": [
+                {
+                  "label": "৯৯৮"
+                },
+                {
+                  "label": "১০০০"
+                }
+              ],
+              "answer": 1,
+              "hint": "প্রথমে শতকের অঙ্ক তুলনা করো, তারপর দরকার হলে দশক।",
+              "tests": "cv1000"
+            }
+          ]
+        },
+        {
+          "id": "c1t5-game2",
+          "type": "game",
+          "kind": "compare",
+          "bookActivity": "ছোটো থেকে বড়ো ও বড়ো থেকে ছোটো সাজাই",
+          "title": "কোনটি ছোটো?",
+          "rounds": [
+            {
+              "id": "st430-428",
+              "ask": "ছোটো থেকে বড়ো সাজালে কোনটি আগে?",
+              "options": [
+                {
+                  "label": "৪৩০"
+                },
+                {
+                  "label": "৪২৮"
+                }
+              ],
+              "answer": 1,
+              "hint": "শতক সমান হলে দশক, দশক সমান হলে একক তুলনা করো।",
+              "tests": "cv428"
+            },
+            {
+              "id": "st678-675",
+              "ask": "ছোটো থেকে বড়ো সাজালে কোনটি আগে?",
+              "options": [
+                {
+                  "label": "৬৭৫"
+                },
+                {
+                  "label": "৬৭৮"
+                }
+              ],
+              "answer": 0,
+              "hint": "শতক সমান হলে দশক, দশক সমান হলে একক তুলনা করো।",
+              "tests": "cv675"
+            },
+            {
+              "id": "st827-948",
+              "ask": "ছোটো থেকে বড়ো সাজালে কোনটি আগে?",
+              "options": [
+                {
+                  "label": "৮২৭"
+                },
+                {
+                  "label": "৯৪৮"
+                }
+              ],
+              "answer": 0,
+              "hint": "শতক সমান হলে দশক, দশক সমান হলে একক তুলনা করো।",
+              "tests": "cv827"
+            },
+            {
+              "id": "st985-950",
+              "ask": "ছোটো থেকে বড়ো সাজালে কোনটি আগে?",
+              "options": [
+                {
+                  "label": "৯৮৫"
+                },
+                {
+                  "label": "৯৫০"
+                }
+              ],
+              "answer": 1,
+              "hint": "শতক সমান হলে দশক, দশক সমান হলে একক তুলনা করো।",
+              "tests": "cv950"
+            },
+            {
+              "id": "st944-922",
+              "ask": "ছোটো থেকে বড়ো সাজালে কোনটি আগে?",
+              "options": [
+                {
+                  "label": "৯৪৪"
+                },
+                {
+                  "label": "৯২২"
+                }
+              ],
+              "answer": 1,
+              "hint": "শতক সমান হলে দশক, দশক সমান হলে একক তুলনা করো।",
+              "tests": "cv922"
+            }
+          ]
+        },
+        {
+          "id": "c1t5-game3",
+          "type": "game",
+          "kind": "order",
+          "bookActivity": "ছোটো থেকে বড়ো ক্রমানুসারে সাজাই",
+          "title": "তিনটি সংখ্যা সাজাও",
+          "rounds": [
+            {
+              "id": "tmin328",
+              "ask": "সবচেয়ে ছোটো কোনটি?",
+              "options": [
+                {
+                  "label": "৩২৮"
+                },
+                {
+                  "label": "৫৪০"
+                },
+                {
+                  "label": "৪৩২"
+                }
+              ],
+              "answer": 0,
+              "hint": "প্রতিটি সংখ্যার শতক-দশক-একক তুলনা করো।",
+              "tests": "cv328"
+            },
+            {
+              "id": "tmax540",
+              "ask": "সবচেয়ে বড়ো কোনটি?",
+              "options": [
+                {
+                  "label": "৩২৮"
+                },
+                {
+                  "label": "৪৩২"
+                },
+                {
+                  "label": "৫৪০"
+                }
+              ],
+              "answer": 2,
+              "hint": "প্রতিটি সংখ্যার শতক-দশক-একক তুলনা করো।",
+              "tests": "cv540"
+            },
+            {
+              "id": "tmin517",
+              "ask": "সবচেয়ে ছোটো কোনটি?",
+              "options": [
+                {
+                  "label": "৫২৯"
+                },
+                {
+                  "label": "৫৪৯"
+                },
+                {
+                  "label": "৫১৭"
+                }
+              ],
+              "answer": 2,
+              "hint": "প্রতিটি সংখ্যার শতক-দশক-একক তুলনা করো।",
+              "tests": "cv517"
+            },
+            {
+              "id": "tmax549",
+              "ask": "সবচেয়ে বড়ো কোনটি?",
+              "options": [
+                {
+                  "label": "৫১৭"
+                },
+                {
+                  "label": "৫৪৯"
+                },
+                {
+                  "label": "৫২৯"
+                }
+              ],
+              "answer": 1,
+              "hint": "প্রতিটি সংখ্যার শতক-দশক-একক তুলনা করো।",
+              "tests": "cv549"
+            },
+            {
+              "id": "tmin330",
+              "ask": "সবচেয়ে ছোটো কোনটি?",
+              "options": [
+                {
+                  "label": "৪০৭"
+                },
+                {
+                  "label": "৩৩০"
+                },
+                {
+                  "label": "৬০৩"
+                }
+              ],
+              "answer": 1,
+              "hint": "প্রতিটি সংখ্যার শতক-দশক-একক তুলনা করো।",
+              "tests": "cv330"
+            },
+            {
+              "id": "tmax603",
+              "ask": "সবচেয়ে বড়ো কোনটি?",
+              "options": [
+                {
+                  "label": "৪০৭"
+                },
+                {
+                  "label": "৩৩০"
+                },
+                {
+                  "label": "৬০৩"
+                }
+              ],
+              "answer": 2,
+              "hint": "প্রতিটি সংখ্যার শতক-দশক-একক তুলনা করো।",
+              "tests": "cv603"
+            }
+          ]
+        },
+        {
+          "id": "c1t5-quiz",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "কোনটি বড়ো, ৪৬০ অথবা ৬৩০?",
+              "options": [
+                {
+                  "label": "৪৬০"
+                },
+                {
+                  "label": "৬৩০"
+                }
+              ],
+              "answer": 1,
+              "explain": "শতক স্থানের ৪ থেকে ৬ বড়ো। তাই ৬৩০ বড়ো।",
+              "tests": "cv630"
+            },
+            {
+              "id": "q2",
+              "ask": "৫৬২ ও ৫৪৮ — শতক সমান (৫=৫)। কোনটি বড়ো?",
+              "options": [
+                {
+                  "label": "৫৪৮"
+                },
+                {
+                  "label": "৫৬২"
+                }
+              ],
+              "answer": 1,
+              "explain": "দশক স্থানের ৪ থেকে ৬ বড়ো। তাই ৫৬২ বড়ো।",
+              "tests": "cv562"
+            },
+            {
+              "id": "q3",
+              "ask": "২৩২, ২২৩, ২৩৯ — সবচেয়ে ছোটো কোনটি?",
+              "options": [
+                {
+                  "label": "২৩২"
+                },
+                {
+                  "label": "২২৩"
+                },
+                {
+                  "label": "২৩৯"
+                }
+              ],
+              "answer": 1,
+              "explain": "দশক স্থানের ২, ৩ এর চেয়ে ছোটো। তাই ২২৩ সবচেয়ে ছোটো।"
+            },
+            {
+              "id": "q4",
+              "ask": "কোনটি বড়ো?",
+              "options": [
+                {
+                  "label": "১০০০"
+                },
+                {
+                  "label": "৯৯৮"
+                }
+              ],
+              "answer": 0,
+              "explain": "১০০০ এ ১ হাজার আছে, ৯৯৮ এ নেই। তাই ১০০০ বড়ো।",
+              "tests": "cv1000"
+            },
+            {
+              "id": "q5",
+              "ask": "৮২৭ ও ৯৪৮ — কোনটি ছোটো?",
+              "options": [
+                {
+                  "label": "৯৪৮"
+                },
+                {
+                  "label": "৮২৭"
+                }
+              ],
+              "answer": 1,
+              "explain": "শতক স্থানের ৮, ৯ এর চেয়ে ছোটো। তাই ৮২৭ ছোটো।",
+              "tests": "cv827"
+            }
+          ]
+        },
+        {
+          "id": "c1t5-done",
+          "type": "done",
+          "title": "দারুণ হয়েছে!",
+          "say": "তুমি এখন স্থানীয় মান দিয়ে সংখ্যা তুলনা ও সাজাতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "c1t6",
+      "chapterId": "c1",
+      "number": 6,
+      "title": "জোড়-বিজোড় সংখ্যা ও সংখ্যা প্যাটার্ন",
+      "shape": "pattern",
+      "bookPages": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "objective": "একটি সংখ্যা জোড় না বিজোড় তা বলা এবং সংখ্যার প্যাটার্ন দেখে পরের সংখ্যা বলা।",
+      "minutes": 11,
+      "numbers": [
+        {
+          "id": "oe8",
+          "value": 8,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 8
+          },
+          "wordBn": "আট",
+          "bookPage": 29
+        },
+        {
+          "id": "oe13",
+          "value": 13,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 3
+          },
+          "wordBn": "তেরো",
+          "bookPage": 29
+        },
+        {
+          "id": "oe20",
+          "value": 20,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 0
+          },
+          "wordBn": "বিশ",
+          "bookPage": 29
+        },
+        {
+          "id": "oe11",
+          "value": 11,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 1
+          },
+          "wordBn": "এগারো",
+          "bookPage": 29
+        },
+        {
+          "id": "oe24",
+          "value": 24,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 4
+          },
+          "wordBn": "চব্বিশ",
+          "bookPage": 29
+        },
+        {
+          "id": "oe9",
+          "value": 9,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 9
+          },
+          "wordBn": "নয়",
+          "bookPage": 29
+        },
+        {
+          "id": "oe18",
+          "value": 18,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 8
+          },
+          "wordBn": "আঠারো",
+          "bookPage": 29
+        },
+        {
+          "id": "oe7",
+          "value": 7,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 7
+          },
+          "wordBn": "সাত",
+          "bookPage": 29
+        },
+        {
+          "id": "oe21",
+          "value": 21,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 1
+          },
+          "wordBn": "একুশ",
+          "bookPage": 29
+        },
+        {
+          "id": "oe16",
+          "value": 16,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 6
+          },
+          "wordBn": "ষোলো",
+          "bookPage": 29
+        },
+        {
+          "id": "oe6",
+          "value": 6,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 6
+          },
+          "wordBn": "ছয়",
+          "bookPage": 29
+        },
+        {
+          "id": "oe15",
+          "value": 15,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 5
+          },
+          "wordBn": "পনেরো",
+          "bookPage": 29
+        },
+        {
+          "id": "oe12",
+          "value": 12,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 2
+          },
+          "wordBn": "বারো",
+          "bookPage": 29
+        },
+        {
+          "id": "oe25",
+          "value": 25,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 5
+          },
+          "wordBn": "পঁচিশ",
+          "bookPage": 29
+        },
+        {
+          "id": "oe23",
+          "value": 23,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 3
+          },
+          "wordBn": "তেইশ",
+          "bookPage": 29
+        },
+        {
+          "id": "oe32",
+          "value": 32,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 2
+          },
+          "wordBn": "বত্রিশ",
+          "bookPage": 29
+        },
+        {
+          "id": "oe39",
+          "value": 39,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 9
+          },
+          "wordBn": "উনচল্লিশ",
+          "bookPage": 29
+        },
+        {
+          "id": "oe43",
+          "value": 43,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 3
+          },
+          "wordBn": "তেতাল্লিশ",
+          "bookPage": 29
+        },
+        {
+          "id": "oe48",
+          "value": 48,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 8
+          },
+          "wordBn": "আটচল্লিশ",
+          "bookPage": 29
+        },
+        {
+          "id": "oe50",
+          "value": 50,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 5,
+            "ones": 0
+          },
+          "wordBn": "পঞ্চাশ",
+          "bookPage": 29
+        },
+        {
+          "id": "pn2-10",
+          "value": 10,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 0
+          },
+          "wordBn": "দশ",
+          "bookPage": 30
+        },
+        {
+          "id": "pn15-30",
+          "value": 30,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 0
+          },
+          "wordBn": "ত্রিশ",
+          "bookPage": 30
+        },
+        {
+          "id": "pn21-15",
+          "value": 15,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 5
+          },
+          "wordBn": "পনেরো",
+          "bookPage": 30
+        },
+        {
+          "id": "pn1-9",
+          "value": 9,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 9
+          },
+          "wordBn": "নয়",
+          "bookPage": 31
+        },
+        {
+          "id": "pn4-12",
+          "value": 12,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 2
+          },
+          "wordBn": "বারো",
+          "bookPage": 31
+        },
+        {
+          "id": "pn3-23",
+          "value": 23,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 3
+          },
+          "wordBn": "তেইশ",
+          "bookPage": 31
+        },
+        {
+          "id": "pn0-25",
+          "value": 25,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 5
+          },
+          "wordBn": "পঁচিশ",
+          "bookPage": 32
+        },
+        {
+          "id": "pn40-44",
+          "value": 44,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 4
+          },
+          "wordBn": "চুয়াল্লিশ",
+          "bookPage": 33
+        },
+        {
+          "id": "pn16-22",
+          "value": 22,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 2
+          },
+          "wordBn": "বাইশ",
+          "bookPage": 33
+        },
+        {
+          "id": "pn37-43",
+          "value": 43,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 3
+          },
+          "wordBn": "তেতাল্লিশ",
+          "bookPage": 33
+        }
+      ],
+      "steps": [
+        {
+          "id": "c1t6-intro",
+          "type": "intro",
+          "title": "২টি করে নিয়ে গোল দাগ দিই",
+          "say": "২টি করে নিয়ে গোল দাগ দিলে কী দল তৈরি হয়?",
+          "illustration": "pairs-14"
+        },
+        {
+          "id": "c1t6-w1",
+          "type": "worked",
+          "bookActivity": "জোড় ও বিজোড় এর ধারণা",
+          "title": "জোড়া তৈরি করে দেখি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "২টি কানের দুল = ১ জোড়া। এটি জোড় সংখ্যা।",
+              "illustration": "pairs-2"
+            },
+            {
+              "text": "৩টি কানের দুল = ১ জোড়া ও ১টি বিজোড়। এটি বিজোড় সংখ্যা।",
+              "illustration": "pairs-3"
+            },
+            {
+              "text": "৬টি রুক = ৩ জোড়া, কিছু বাকি থাকে না। এটি জোড় সংখ্যা।",
+              "illustration": "pairs-6"
+            },
+            {
+              "text": "৭টি রুক = ৩ জোড়া ও ১টি বিজোড়। এটি বিজোড় সংখ্যা।",
+              "illustration": "pairs-7"
+            }
+          ]
+        },
+        {
+          "id": "c1t6-rule",
+          "type": "worked",
+          "bookActivity": "জোড় ও বিজোড় সংখ্যা শনাক্ত করি",
+          "title": "নিয়মটি মনে রাখি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "কোনো সংখ্যার শেষে ২, ৪, ৬, ৮ বা ০ থাকলে তা জোড় সংখ্যা বা জোড় সংখ্যার প্যাটার্ন।"
+            },
+            {
+              "text": "কোনো সংখ্যার শেষে ১, ৩, ৫, ৭ বা ৯ থাকলে তা বিজোড় সংখ্যা বা বিজোড় সংখ্যার প্যাটার্ন।"
+            }
+          ]
+        },
+        {
+          "id": "c1t6-game1",
+          "type": "game",
+          "kind": "odd-even",
+          "bookActivity": "অনুশীলন",
+          "title": "জোড় না বিজোড়?",
+          "rounds": [
+            {
+              "id": "oe8",
+              "ask": "৮ — জোড় না বিজোড়?",
+              "options": [
+                {
+                  "label": "জোড়"
+                },
+                {
+                  "label": "বিজোড়"
+                }
+              ],
+              "answer": 0,
+              "hint": "শেষ অঙ্কটি দেখো: ০,২,৪,৬,৮ হলে জোড়; ১,৩,৫,৭,৯ হলে বিজোড়।",
+              "tests": "oe8"
+            },
+            {
+              "id": "oe13",
+              "ask": "১৩ — জোড় না বিজোড়?",
+              "options": [
+                {
+                  "label": "জোড়"
+                },
+                {
+                  "label": "বিজোড়"
+                }
+              ],
+              "answer": 1,
+              "hint": "শেষ অঙ্কটি দেখো: ০,২,৪,৬,৮ হলে জোড়; ১,৩,৫,৭,৯ হলে বিজোড়।",
+              "tests": "oe13"
+            },
+            {
+              "id": "oe20",
+              "ask": "২০ — জোড় না বিজোড়?",
+              "options": [
+                {
+                  "label": "বিজোড়"
+                },
+                {
+                  "label": "জোড়"
+                }
+              ],
+              "answer": 1,
+              "hint": "শেষ অঙ্কটি দেখো: ০,২,৪,৬,৮ হলে জোড়; ১,৩,৫,৭,৯ হলে বিজোড়।",
+              "tests": "oe20"
+            },
+            {
+              "id": "oe11",
+              "ask": "১১ — জোড় না বিজোড়?",
+              "options": [
+                {
+                  "label": "জোড়"
+                },
+                {
+                  "label": "বিজোড়"
+                }
+              ],
+              "answer": 1,
+              "hint": "শেষ অঙ্কটি দেখো: ০,২,৪,৬,৮ হলে জোড়; ১,৩,৫,৭,৯ হলে বিজোড়।",
+              "tests": "oe11"
+            },
+            {
+              "id": "oe24",
+              "ask": "২৪ — জোড় না বিজোড়?",
+              "options": [
+                {
+                  "label": "বিজোড়"
+                },
+                {
+                  "label": "জোড়"
+                }
+              ],
+              "answer": 1,
+              "hint": "শেষ অঙ্কটি দেখো: ০,২,৪,৬,৮ হলে জোড়; ১,৩,৫,৭,৯ হলে বিজোড়।",
+              "tests": "oe24"
+            },
+            {
+              "id": "oe9",
+              "ask": "৯ — জোড় না বিজোড়?",
+              "options": [
+                {
+                  "label": "বিজোড়"
+                },
+                {
+                  "label": "জোড়"
+                }
+              ],
+              "answer": 0,
+              "hint": "শেষ অঙ্কটি দেখো: ০,২,৪,৬,৮ হলে জোড়; ১,৩,৫,৭,৯ হলে বিজোড়।",
+              "tests": "oe9"
+            },
+            {
+              "id": "oe18",
+              "ask": "১৮ — জোড় না বিজোড়?",
+              "options": [
+                {
+                  "label": "বিজোড়"
+                },
+                {
+                  "label": "জোড়"
+                }
+              ],
+              "answer": 1,
+              "hint": "শেষ অঙ্কটি দেখো: ০,২,৪,৬,৮ হলে জোড়; ১,৩,৫,৭,৯ হলে বিজোড়।",
+              "tests": "oe18"
+            },
+            {
+              "id": "oe7",
+              "ask": "৭ — জোড় না বিজোড়?",
+              "options": [
+                {
+                  "label": "বিজোড়"
+                },
+                {
+                  "label": "জোড়"
+                }
+              ],
+              "answer": 0,
+              "hint": "শেষ অঙ্কটি দেখো: ০,২,৪,৬,৮ হলে জোড়; ১,৩,৫,৭,৯ হলে বিজোড়।",
+              "tests": "oe7"
+            },
+            {
+              "id": "oe21",
+              "ask": "২১ — জোড় না বিজোড়?",
+              "options": [
+                {
+                  "label": "বিজোড়"
+                },
+                {
+                  "label": "জোড়"
+                }
+              ],
+              "answer": 0,
+              "hint": "শেষ অঙ্কটি দেখো: ০,২,৪,৬,৮ হলে জোড়; ১,৩,৫,৭,৯ হলে বিজোড়।",
+              "tests": "oe21"
+            },
+            {
+              "id": "oe16",
+              "ask": "১৬ — জোড় না বিজোড়?",
+              "options": [
+                {
+                  "label": "বিজোড়"
+                },
+                {
+                  "label": "জোড়"
+                }
+              ],
+              "answer": 1,
+              "hint": "শেষ অঙ্কটি দেখো: ০,২,৪,৬,৮ হলে জোড়; ১,৩,৫,৭,৯ হলে বিজোড়।",
+              "tests": "oe16"
+            },
+            {
+              "id": "oe6",
+              "ask": "৬ — জোড় না বিজোড়?",
+              "options": [
+                {
+                  "label": "বিজোড়"
+                },
+                {
+                  "label": "জোড়"
+                }
+              ],
+              "answer": 1,
+              "hint": "শেষ অঙ্কটি দেখো: ০,২,৪,৬,৮ হলে জোড়; ১,৩,৫,৭,৯ হলে বিজোড়।",
+              "tests": "oe6"
+            },
+            {
+              "id": "oe15",
+              "ask": "১৫ — জোড় না বিজোড়?",
+              "options": [
+                {
+                  "label": "জোড়"
+                },
+                {
+                  "label": "বিজোড়"
+                }
+              ],
+              "answer": 1,
+              "hint": "শেষ অঙ্কটি দেখো: ০,২,৪,৬,৮ হলে জোড়; ১,৩,৫,৭,৯ হলে বিজোড়।",
+              "tests": "oe15"
+            },
+            {
+              "id": "oe12",
+              "ask": "১২ — জোড় না বিজোড়?",
+              "options": [
+                {
+                  "label": "জোড়"
+                },
+                {
+                  "label": "বিজোড়"
+                }
+              ],
+              "answer": 0,
+              "hint": "শেষ অঙ্কটি দেখো: ০,২,৪,৬,৮ হলে জোড়; ১,৩,৫,৭,৯ হলে বিজোড়।",
+              "tests": "oe12"
+            },
+            {
+              "id": "oe25",
+              "ask": "২৫ — জোড় না বিজোড়?",
+              "options": [
+                {
+                  "label": "জোড়"
+                },
+                {
+                  "label": "বিজোড়"
+                }
+              ],
+              "answer": 1,
+              "hint": "শেষ অঙ্কটি দেখো: ০,২,৪,৬,৮ হলে জোড়; ১,৩,৫,৭,৯ হলে বিজোড়।",
+              "tests": "oe25"
+            },
+            {
+              "id": "oe23",
+              "ask": "২৩ — জোড় না বিজোড়?",
+              "options": [
+                {
+                  "label": "জোড়"
+                },
+                {
+                  "label": "বিজোড়"
+                }
+              ],
+              "answer": 1,
+              "hint": "শেষ অঙ্কটি দেখো: ০,২,৪,৬,৮ হলে জোড়; ১,৩,৫,৭,৯ হলে বিজোড়।",
+              "tests": "oe23"
+            },
+            {
+              "id": "oe32",
+              "ask": "৩২ — জোড় না বিজোড়?",
+              "options": [
+                {
+                  "label": "জোড়"
+                },
+                {
+                  "label": "বিজোড়"
+                }
+              ],
+              "answer": 0,
+              "hint": "শেষ অঙ্কটি দেখো: ০,২,৪,৬,৮ হলে জোড়; ১,৩,৫,৭,৯ হলে বিজোড়।",
+              "tests": "oe32"
+            },
+            {
+              "id": "oe39",
+              "ask": "৩৯ — জোড় না বিজোড়?",
+              "options": [
+                {
+                  "label": "বিজোড়"
+                },
+                {
+                  "label": "জোড়"
+                }
+              ],
+              "answer": 0,
+              "hint": "শেষ অঙ্কটি দেখো: ০,২,৪,৬,৮ হলে জোড়; ১,৩,৫,৭,৯ হলে বিজোড়।",
+              "tests": "oe39"
+            },
+            {
+              "id": "oe43",
+              "ask": "৪৩ — জোড় না বিজোড়?",
+              "options": [
+                {
+                  "label": "জোড়"
+                },
+                {
+                  "label": "বিজোড়"
+                }
+              ],
+              "answer": 1,
+              "hint": "শেষ অঙ্কটি দেখো: ০,২,৪,৬,৮ হলে জোড়; ১,৩,৫,৭,৯ হলে বিজোড়।",
+              "tests": "oe43"
+            },
+            {
+              "id": "oe48",
+              "ask": "৪৮ — জোড় না বিজোড়?",
+              "options": [
+                {
+                  "label": "বিজোড়"
+                },
+                {
+                  "label": "জোড়"
+                }
+              ],
+              "answer": 1,
+              "hint": "শেষ অঙ্কটি দেখো: ০,২,৪,৬,৮ হলে জোড়; ১,৩,৫,৭,৯ হলে বিজোড়।",
+              "tests": "oe48"
+            },
+            {
+              "id": "oe50",
+              "ask": "৫০ — জোড় না বিজোড়?",
+              "options": [
+                {
+                  "label": "জোড়"
+                },
+                {
+                  "label": "বিজোড়"
+                }
+              ],
+              "answer": 0,
+              "hint": "শেষ অঙ্কটি দেখো: ০,২,৪,৬,৮ হলে জোড়; ১,৩,৫,৭,৯ হলে বিজোড়।",
+              "tests": "oe50"
+            }
+          ]
+        },
+        {
+          "id": "c1t6-w2",
+          "type": "worked",
+          "bookActivity": "পরবর্তী সংখ্যাগুলো কত হবে?",
+          "title": "সংখ্যা প্যাটার্ন",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "২, ৪, ৬, ৮ — এখানে সংখ্যা শুরু ২ দিয়ে এবং প্রতি ক্ষেত্রে ২ করে বাড়ছে।",
+              "speaker": "rafi"
+            },
+            {
+              "text": "পরপর দুটি সংখ্যার পার্থক্য সবসময়ই ২। তাই প্যাটার্ন: ২, ৪, ৬, ৮, ১০, ১২, ১৪...",
+              "speaker": "tuli"
+            },
+            {
+              "text": "২১, ১৯, ১৭, ১৫ — এখানে সংখ্যা শুরু ২১ দিয়ে এবং প্রতি ক্ষেত্রে ২ করে কমছে।",
+              "speaker": "rafi"
+            }
+          ]
+        },
+        {
+          "id": "c1t6-game2",
+          "type": "game",
+          "kind": "pattern",
+          "bookActivity": "সংখ্যার প্যাটার্ন",
+          "title": "পরের সংখ্যা কত?",
+          "rounds": [
+            {
+              "id": "pat2-10",
+              "ask": "২, ৪, ৬, ৮, ___",
+              "options": [
+                {
+                  "label": "১০"
+                },
+                {
+                  "label": "১২"
+                },
+                {
+                  "label": "৮"
+                }
+              ],
+              "answer": 0,
+              "hint": "পাশাপাশি দুটি সংখ্যার পার্থক্য সবসময় ২।",
+              "tests": "pn2-10"
+            },
+            {
+              "id": "pat15-30",
+              "ask": "১৫, ২০, ২৫, ___",
+              "options": [
+                {
+                  "label": "২৫"
+                },
+                {
+                  "label": "৩৫"
+                },
+                {
+                  "label": "৩০"
+                }
+              ],
+              "answer": 2,
+              "hint": "পাশাপাশি দুটি সংখ্যার পার্থক্য সবসময় ৫।",
+              "tests": "pn15-30"
+            },
+            {
+              "id": "pat21-15",
+              "ask": "২১, ১৯, ১৭, ___",
+              "options": [
+                {
+                  "label": "১৩"
+                },
+                {
+                  "label": "১৫"
+                },
+                {
+                  "label": "১৭"
+                }
+              ],
+              "answer": 1,
+              "hint": "পাশাপাশি দুটি সংখ্যার পার্থক্য সবসময় ২।",
+              "tests": "pn21-15"
+            },
+            {
+              "id": "pat1-9",
+              "ask": "১, ৩, ৫, ৭, ___",
+              "options": [
+                {
+                  "label": "৭"
+                },
+                {
+                  "label": "১১"
+                },
+                {
+                  "label": "৯"
+                }
+              ],
+              "answer": 2,
+              "hint": "পাশাপাশি দুটি সংখ্যার পার্থক্য সবসময় ২।",
+              "tests": "pn1-9"
+            },
+            {
+              "id": "pat4-12",
+              "ask": "৪, ৬, ৮, ১০, ___",
+              "options": [
+                {
+                  "label": "১০"
+                },
+                {
+                  "label": "১২"
+                },
+                {
+                  "label": "১৪"
+                }
+              ],
+              "answer": 1,
+              "hint": "পাশাপাশি দুটি সংখ্যার পার্থক্য সবসময় ২।",
+              "tests": "pn4-12"
+            },
+            {
+              "id": "pat3-23",
+              "ask": "৩, ৭, ১১, ১৫, ১৯, ___",
+              "options": [
+                {
+                  "label": "১৯"
+                },
+                {
+                  "label": "২৩"
+                },
+                {
+                  "label": "২৭"
+                }
+              ],
+              "answer": 1,
+              "hint": "পাশাপাশি দুটি সংখ্যার পার্থক্য সবসময় ৪।",
+              "tests": "pn3-23"
+            },
+            {
+              "id": "pat0-25",
+              "ask": "০, ৫, ১০, ১৫, ২০, ___",
+              "options": [
+                {
+                  "label": "২০"
+                },
+                {
+                  "label": "৩০"
+                },
+                {
+                  "label": "২৫"
+                }
+              ],
+              "answer": 2,
+              "hint": "পাশাপাশি দুটি সংখ্যার পার্থক্য সবসময় ৫।",
+              "tests": "pn0-25"
+            },
+            {
+              "id": "pat40-44",
+              "ask": "৪০, ৪২, ___",
+              "options": [
+                {
+                  "label": "৪৬"
+                },
+                {
+                  "label": "৪২"
+                },
+                {
+                  "label": "৪৪"
+                }
+              ],
+              "answer": 2,
+              "hint": "পাশাপাশি দুটি সংখ্যার পার্থক্য সবসময় ২।",
+              "tests": "pn40-44"
+            },
+            {
+              "id": "pat16-22",
+              "ask": "১৬, ১৮, ২০, ___",
+              "options": [
+                {
+                  "label": "২২"
+                },
+                {
+                  "label": "২০"
+                },
+                {
+                  "label": "২৪"
+                }
+              ],
+              "answer": 0,
+              "hint": "পাশাপাশি দুটি সংখ্যার পার্থক্য সবসময় ২।",
+              "tests": "pn16-22"
+            },
+            {
+              "id": "pat37-43",
+              "ask": "৩৭, ৩৯, ৪১, ___",
+              "options": [
+                {
+                  "label": "৪১"
+                },
+                {
+                  "label": "৪৩"
+                },
+                {
+                  "label": "৪৫"
+                }
+              ],
+              "answer": 1,
+              "hint": "পাশাপাশি দুটি সংখ্যার পার্থক্য সবসময় ২।",
+              "tests": "pn37-43"
+            }
+          ]
+        },
+        {
+          "id": "c1t6-quiz",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "৪৮ কি জোড় সংখ্যা?",
+              "options": [
+                {
+                  "label": "সত্যি"
+                },
+                {
+                  "label": "মিথ্যা"
+                }
+              ],
+              "answer": 0,
+              "explain": "৪৮ এর শেষ অঙ্ক ৮। তাই এটি জোড় সংখ্যা।",
+              "tests": "oe48"
+            },
+            {
+              "id": "q2",
+              "ask": "২৩ — জোড় না বিজোড়?",
+              "options": [
+                {
+                  "label": "জোড়"
+                },
+                {
+                  "label": "বিজোড়"
+                }
+              ],
+              "answer": 1,
+              "explain": "২৩ এর শেষ অঙ্ক ৩। তাই এটি বিজোড় সংখ্যা।",
+              "tests": "oe23"
+            },
+            {
+              "id": "q3",
+              "ask": "২, ৪, ৬, ৮, ___ — পরের সংখ্যা কত?",
+              "options": [
+                {
+                  "label": "১২"
+                },
+                {
+                  "label": "৯"
+                },
+                {
+                  "label": "১০"
+                }
+              ],
+              "answer": 2,
+              "explain": "প্রতি ক্ষেত্রে ২ করে বাড়ছে। তাই পরের সংখ্যা ১০।"
+            },
+            {
+              "id": "q4",
+              "ask": "২১, ১৯, ১৭, ___ — পরের সংখ্যা কত?",
+              "options": [
+                {
+                  "label": "১৯"
+                },
+                {
+                  "label": "১৩"
+                },
+                {
+                  "label": "১৫"
+                }
+              ],
+              "answer": 2,
+              "explain": "প্রতি ক্ষেত্রে ২ করে কমছে। তাই পরের সংখ্যা ১৫।"
+            },
+            {
+              "id": "q5",
+              "ask": "জোড় সংখ্যার শেষে কোন অঙ্কগুলো থাকে?",
+              "options": [
+                {
+                  "label": "০, ২, ৪, ৬ বা ৮"
+                },
+                {
+                  "label": "১, ৩, ৫, ৭ বা ৯"
+                }
+              ],
+              "answer": 0,
+              "explain": "জোড় সংখ্যার শেষে সবসময় ০, ২, ৪, ৬ বা ৮ থাকে।"
+            }
+          ]
+        },
+        {
+          "id": "c1t6-done",
+          "type": "done",
+          "title": "দারুণ হয়েছে!",
+          "say": "তুমি এখন জোড়-বিজোড় সংখ্যা চেনো আর সংখ্যার প্যাটার্ন খুঁজে বের করতে পারো!"
+        }
+      ]
+    },
+    {
+      "id": "c1t7",
+      "chapterId": "c1",
+      "number": 7,
+      "title": "ক্রমবাচক সংখ্যা",
+      "shape": "pattern",
+      "bookPages": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "objective": "১ম থেকে ১০ম পর্যন্ত ক্রমবাচক সংখ্যা বলা এবং বাম বা ডান দিক থেকে অবস্থান বলা।",
+      "minutes": 10,
+      "numbers": [
+        {
+          "id": "o1",
+          "value": 1,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 1
+          },
+          "wordBn": "প্রথম",
+          "bookPage": 34
+        },
+        {
+          "id": "o2",
+          "value": 2,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 2
+          },
+          "wordBn": "দ্বিতীয়",
+          "bookPage": 34
+        },
+        {
+          "id": "o3",
+          "value": 3,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 3
+          },
+          "wordBn": "তৃতীয়",
+          "bookPage": 34
+        },
+        {
+          "id": "o4",
+          "value": 4,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 4
+          },
+          "wordBn": "চতুর্থ",
+          "bookPage": 34
+        },
+        {
+          "id": "o5",
+          "value": 5,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 5
+          },
+          "wordBn": "পঞ্চম",
+          "bookPage": 34
+        },
+        {
+          "id": "o6",
+          "value": 6,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 6
+          },
+          "wordBn": "ষষ্ঠ",
+          "bookPage": 37
+        },
+        {
+          "id": "o7",
+          "value": 7,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 7
+          },
+          "wordBn": "সপ্তম",
+          "bookPage": 37
+        },
+        {
+          "id": "o8",
+          "value": 8,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 8
+          },
+          "wordBn": "অষ্টম",
+          "bookPage": 37
+        },
+        {
+          "id": "o9",
+          "value": 9,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 9
+          },
+          "wordBn": "নবম",
+          "bookPage": 37
+        },
+        {
+          "id": "o10",
+          "value": 10,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 0
+          },
+          "wordBn": "দশম",
+          "bookPage": 37
+        }
+      ],
+      "steps": [
+        {
+          "id": "c1t7-intro",
+          "type": "intro",
+          "title": "অবস্থান কীভাবে বলি?",
+          "say": "নিচের প্রাণীগুলোর অবস্থান কীভাবে প্রকাশ করা যায়?",
+          "illustration": "line-5-1-L"
+        },
+        {
+          "id": "c1t7-table1",
+          "type": "table",
+          "bookActivity": "ক্রমবাচক সংখ্যা (১ম-৫ম)",
+          "title": "১ম থেকে ৫ম",
+          "rows": [
+            {
+              "id": "ordrow1",
+              "illustration": "line-10-1-L",
+              "text": "১ম = প্রথম",
+              "tests": "o1"
+            },
+            {
+              "id": "ordrow2",
+              "illustration": "line-10-2-L",
+              "text": "২য় = দ্বিতীয়",
+              "tests": "o2"
+            },
+            {
+              "id": "ordrow3",
+              "illustration": "line-10-3-L",
+              "text": "৩য় = তৃতীয়",
+              "tests": "o3"
+            },
+            {
+              "id": "ordrow4",
+              "illustration": "line-10-4-L",
+              "text": "৪র্থ = চতুর্থ",
+              "tests": "o4"
+            },
+            {
+              "id": "ordrow5",
+              "illustration": "line-10-5-L",
+              "text": "৫ম = পঞ্চম",
+              "tests": "o5"
+            }
+          ]
+        },
+        {
+          "id": "c1t7-table2",
+          "type": "table",
+          "bookActivity": "ক্রমবাচক সংখ্যা (৬ষ্ঠ-১০ম)",
+          "title": "৬ষ্ঠ থেকে ১০ম",
+          "rows": [
+            {
+              "id": "ordrow6",
+              "illustration": "line-10-6-L",
+              "text": "৬ষ্ঠ = ষষ্ঠ",
+              "tests": "o6"
+            },
+            {
+              "id": "ordrow7",
+              "illustration": "line-10-7-L",
+              "text": "৭ম = সপ্তম",
+              "tests": "o7"
+            },
+            {
+              "id": "ordrow8",
+              "illustration": "line-10-8-L",
+              "text": "৮ম = অষ্টম",
+              "tests": "o8"
+            },
+            {
+              "id": "ordrow9",
+              "illustration": "line-10-9-L",
+              "text": "৯ম = নবম",
+              "tests": "o9"
+            },
+            {
+              "id": "ordrow10",
+              "illustration": "line-10-10-L",
+              "text": "১০ম = দশম",
+              "tests": "o10"
+            }
+          ]
+        },
+        {
+          "id": "c1t7-w1",
+          "type": "worked",
+          "bookActivity": "ক্রমবাচক সংখ্যা ব্যবহার করে অবস্থান বলি",
+          "title": "তুলি কোথায় বসে?",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "তুলি, তুমি শ্রেণিকক্ষে বেঞ্চের কোথায় বসো?",
+              "speaker": "rafi"
+            },
+            {
+              "text": "আমি সামনে থেকে তৃতীয় বেঞ্চের বাম থেকে দ্বিতীয় স্থানে বসি।",
+              "speaker": "tuli"
+            }
+          ]
+        },
+        {
+          "id": "c1t7-game1",
+          "type": "game",
+          "kind": "ordinal",
+          "bookActivity": "প্রাণীগুলোর অবস্থান",
+          "title": "প্রাণীটি কোথায়?",
+          "rounds": [
+            {
+              "id": "an1",
+              "ask": "বাম থেকে দ্বিতীয় কে?",
+              "options": [
+                {
+                  "label": "ঘোড়া"
+                },
+                {
+                  "label": "খরগোশ"
+                },
+                {
+                  "label": "হাতি"
+                }
+              ],
+              "answer": 0,
+              "hint": "বাম থেকে গণনা করো: হাতি, ঘোড়া..."
+            },
+            {
+              "id": "an2",
+              "ask": "ডান থেকে প্রথম কে?",
+              "options": [
+                {
+                  "label": "মোরগ"
+                },
+                {
+                  "label": "বাঘ"
+                },
+                {
+                  "label": "হাতি"
+                }
+              ],
+              "answer": 0,
+              "hint": "ডান দিকের একদম শেষেরটি।"
+            },
+            {
+              "id": "an3",
+              "ask": "ডান থেকে পঞ্চম কে?",
+              "options": [
+                {
+                  "label": "মোরগ"
+                },
+                {
+                  "label": "হাতি"
+                },
+                {
+                  "label": "খরগোশ"
+                }
+              ],
+              "answer": 1,
+              "hint": "ডান থেকে পাঁচটি গুনে দেখো।"
+            },
+            {
+              "id": "an4",
+              "ask": "বাম থেকে চতুর্থ কে?",
+              "options": [
+                {
+                  "label": "খরগোশ"
+                },
+                {
+                  "label": "বাঘ"
+                },
+                {
+                  "label": "মোরগ"
+                }
+              ],
+              "answer": 0,
+              "hint": "বাম থেকে চারটি গুনে দেখো।"
+            },
+            {
+              "id": "an5",
+              "ask": "ডান থেকে তৃতীয় কে?",
+              "options": [
+                {
+                  "label": "খরগোশ"
+                },
+                {
+                  "label": "বাঘ"
+                },
+                {
+                  "label": "ঘোড়া"
+                }
+              ],
+              "answer": 1,
+              "hint": "ডান থেকে তিনটি গুনে দেখো।"
+            }
+          ]
+        },
+        {
+          "id": "c1t7-game2",
+          "type": "game",
+          "kind": "ordinal",
+          "bookActivity": "বাম থেকে অবস্থান",
+          "title": "বাম থেকে কত তম?",
+          "rounds": [
+            {
+              "id": "ordL1",
+              "ask": "চিহ্নিত ঘরটি বাম থেকে কত তম?",
+              "illustration": "line-8-1-L",
+              "options": [
+                {
+                  "label": "চতুর্থ"
+                },
+                {
+                  "label": "ষষ্ঠ"
+                },
+                {
+                  "label": "প্রথম"
+                }
+              ],
+              "answer": 2,
+              "hint": "বাম দিক থেকে গণনা শুরু করো।",
+              "tests": "o1"
+            },
+            {
+              "id": "ordL2",
+              "ask": "চিহ্নিত ঘরটি বাম থেকে কত তম?",
+              "illustration": "line-8-2-L",
+              "options": [
+                {
+                  "label": "দ্বিতীয়"
+                },
+                {
+                  "label": "তৃতীয়"
+                },
+                {
+                  "label": "চতুর্থ"
+                }
+              ],
+              "answer": 0,
+              "hint": "বাম দিক থেকে গণনা শুরু করো।",
+              "tests": "o2"
+            },
+            {
+              "id": "ordL4",
+              "ask": "চিহ্নিত ঘরটি বাম থেকে কত তম?",
+              "illustration": "line-8-4-L",
+              "options": [
+                {
+                  "label": "চতুর্থ"
+                },
+                {
+                  "label": "অষ্টম"
+                },
+                {
+                  "label": "পঞ্চম"
+                }
+              ],
+              "answer": 0,
+              "hint": "বাম দিক থেকে গণনা শুরু করো।",
+              "tests": "o4"
+            },
+            {
+              "id": "ordL6",
+              "ask": "চিহ্নিত ঘরটি বাম থেকে কত তম?",
+              "illustration": "line-8-6-L",
+              "options": [
+                {
+                  "label": "ষষ্ঠ"
+                },
+                {
+                  "label": "প্রথম"
+                },
+                {
+                  "label": "অষ্টম"
+                }
+              ],
+              "answer": 0,
+              "hint": "বাম দিক থেকে গণনা শুরু করো।",
+              "tests": "o6"
+            },
+            {
+              "id": "ordL8",
+              "ask": "চিহ্নিত ঘরটি বাম থেকে কত তম?",
+              "illustration": "line-8-8-L",
+              "options": [
+                {
+                  "label": "প্রথম"
+                },
+                {
+                  "label": "অষ্টম"
+                },
+                {
+                  "label": "দ্বিতীয়"
+                }
+              ],
+              "answer": 1,
+              "hint": "বাম দিক থেকে গণনা শুরু করো।",
+              "tests": "o8"
+            }
+          ]
+        },
+        {
+          "id": "c1t7-game3",
+          "type": "game",
+          "kind": "ordinal",
+          "bookActivity": "ডান থেকে অবস্থান",
+          "title": "ডান থেকে কত তম?",
+          "rounds": [
+            {
+              "id": "ordR1",
+              "ask": "চিহ্নিত ঘরটি ডান থেকে কত তম?",
+              "illustration": "line-8-1-R",
+              "options": [
+                {
+                  "label": "পঞ্চম"
+                },
+                {
+                  "label": "চতুর্থ"
+                },
+                {
+                  "label": "প্রথম"
+                }
+              ],
+              "answer": 2,
+              "hint": "ডান দিক থেকে গণনা শুরু করো।",
+              "tests": "o1"
+            },
+            {
+              "id": "ordR3",
+              "ask": "চিহ্নিত ঘরটি ডান থেকে কত তম?",
+              "illustration": "line-8-3-R",
+              "options": [
+                {
+                  "label": "প্রথম"
+                },
+                {
+                  "label": "চতুর্থ"
+                },
+                {
+                  "label": "তৃতীয়"
+                }
+              ],
+              "answer": 2,
+              "hint": "ডান দিক থেকে গণনা শুরু করো।",
+              "tests": "o3"
+            },
+            {
+              "id": "ordR5",
+              "ask": "চিহ্নিত ঘরটি ডান থেকে কত তম?",
+              "illustration": "line-8-5-R",
+              "options": [
+                {
+                  "label": "চতুর্থ"
+                },
+                {
+                  "label": "প্রথম"
+                },
+                {
+                  "label": "পঞ্চম"
+                }
+              ],
+              "answer": 2,
+              "hint": "ডান দিক থেকে গণনা শুরু করো।",
+              "tests": "o5"
+            },
+            {
+              "id": "ordR7",
+              "ask": "চিহ্নিত ঘরটি ডান থেকে কত তম?",
+              "illustration": "line-8-7-R",
+              "options": [
+                {
+                  "label": "চতুর্থ"
+                },
+                {
+                  "label": "সপ্তম"
+                },
+                {
+                  "label": "প্রথম"
+                }
+              ],
+              "answer": 1,
+              "hint": "ডান দিক থেকে গণনা শুরু করো।",
+              "tests": "o7"
+            }
+          ]
+        },
+        {
+          "id": "c1t7-quiz",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "৩ সংখ্যাটির ক্রমবাচক রূপ কী?",
+              "options": [
+                {
+                  "label": "চতুর্থ"
+                },
+                {
+                  "label": "দ্বিতীয়"
+                },
+                {
+                  "label": "তৃতীয়"
+                }
+              ],
+              "answer": 2,
+              "explain": "৩ = তৃতীয় (৩য়)।",
+              "tests": "o3"
+            },
+            {
+              "id": "q2",
+              "ask": "চিহ্নিত ঘরটি বাম থেকে কত তম?",
+              "illustration": "line-8-5-L",
+              "options": [
+                {
+                  "label": "দ্বিতীয়"
+                },
+                {
+                  "label": "পঞ্চম"
+                },
+                {
+                  "label": "তৃতীয়"
+                }
+              ],
+              "answer": 1,
+              "explain": "বাম থেকে পঞ্চম ঘরটি চিহ্নিত।",
+              "tests": "o5"
+            },
+            {
+              "id": "q3",
+              "ask": "'৭ম' — এর পুরো রূপ কী?",
+              "options": [
+                {
+                  "label": "ষষ্ঠ"
+                },
+                {
+                  "label": "অষ্টম"
+                },
+                {
+                  "label": "সপ্তম"
+                }
+              ],
+              "answer": 2,
+              "explain": "৭ম-এর পুরো রূপ সপ্তম।",
+              "tests": "o7"
+            },
+            {
+              "id": "q4",
+              "ask": "চিহ্নিত ঘরটি ডান থেকে কত তম?",
+              "illustration": "line-6-2-R",
+              "options": [
+                {
+                  "label": "দ্বিতীয়"
+                },
+                {
+                  "label": "পঞ্চম"
+                },
+                {
+                  "label": "প্রথম"
+                }
+              ],
+              "answer": 0,
+              "explain": "ডান থেকে দ্বিতীয় ঘরটি চিহ্নিত।",
+              "tests": "o2"
+            },
+            {
+              "id": "q5",
+              "ask": "সারিতে প্রথম প্রাণীটি কোনটি (বাম থেকে)?",
+              "options": [
+                {
+                  "label": "হাতি"
+                },
+                {
+                  "label": "মোরগ"
+                },
+                {
+                  "label": "বাঘ"
+                }
+              ],
+              "answer": 0,
+              "explain": "বাম দিকের একদম প্রথমে হাতি।"
+            }
+          ]
+        },
+        {
+          "id": "c1t7-done",
+          "type": "done",
+          "title": "দারুণ হয়েছে!",
+          "say": "তুমি এখন ১ম থেকে ১০ম পর্যন্ত ক্রমবাচক সংখ্যা বলতে পারো!"
+        }
+      ]
+    }
+  ]
+}

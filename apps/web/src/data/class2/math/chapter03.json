@@ -1,0 +1,4269 @@
+{
+  "id": "c3",
+  "number": 3,
+  "title": "গুণ",
+  "colour": "violet",
+  "icon": "x",
+  "_source": "প্রাথমিক গণিত, দ্বিতীয় শ্রেণি (এনসিটিবি)। অধ্যায় ৩, বই পৃষ্ঠা ৭৩-১০১।",
+  "_note": "প্রতিটি নামতা (n×১ থেকে n×১০) সরাসরি গুণ করে বের করা — n×k সবসময় n*k, তাই এখানে ভুল হওয়ার সুযোগ নেই। শব্দসমস্যাগুলো বইয়ের পাতা থেকে হুবহু নেওয়া। প্রতিটি নামতার বইয়ের পাতা যতটা সম্ভব সরাসরি দেখে চিহ্নিত করা হয়েছে (১,২,৩,৫,৬,৭,৮,৯,১০ এর নামতা সরাসরি দেখা হয়েছে); ৪ এর নামতা এবং ৬ এর নামতার শুরুর পাতা বইয়ের ক্রম অনুযায়ী আনুমানিক (নির্দিষ্ট পাতা আলাদাভাবে আবার খুলে যাচাই করা হয়নি), যদিও নামতার সংখ্যাগুলো নিজেই গণিত হিসেবে যাচাইযোগ্য। ভেঙে দেখানোর (decompose) বাক্স যেখানে বইয়ে ছিল (৬,৭,৮,৯ এর নামতা) সেগুলো হুবহু রাখা হয়েছে।",
+  "topics": [
+    {
+      "id": "c3t1",
+      "chapterId": "c3",
+      "number": 1,
+      "title": "১ এর গুণ",
+      "shape": "arithmetic",
+      "bookPages": [
+        95
+      ],
+      "objective": "১ এর গুণের নামতা (১ থেকে ১০) বলা এবং ব্যবহার করা।",
+      "minutes": 9,
+      "numbers": [
+        {
+          "id": "m1-1",
+          "value": 1,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 1
+          },
+          "wordBn": "১",
+          "bookPage": 95
+        },
+        {
+          "id": "m1-2",
+          "value": 2,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 2
+          },
+          "wordBn": "২",
+          "bookPage": 95
+        },
+        {
+          "id": "m1-3",
+          "value": 3,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 3
+          },
+          "wordBn": "৩",
+          "bookPage": 95
+        },
+        {
+          "id": "m1-4",
+          "value": 4,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 4
+          },
+          "wordBn": "৪",
+          "bookPage": 95
+        },
+        {
+          "id": "m1-5",
+          "value": 5,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 5
+          },
+          "wordBn": "৫",
+          "bookPage": 95
+        },
+        {
+          "id": "m1-6",
+          "value": 6,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 6
+          },
+          "wordBn": "৬",
+          "bookPage": 95
+        },
+        {
+          "id": "m1-7",
+          "value": 7,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 7
+          },
+          "wordBn": "৭",
+          "bookPage": 95
+        },
+        {
+          "id": "m1-8",
+          "value": 8,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 8
+          },
+          "wordBn": "৮",
+          "bookPage": 95
+        },
+        {
+          "id": "m1-9",
+          "value": 9,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 9
+          },
+          "wordBn": "৯",
+          "bookPage": 95
+        },
+        {
+          "id": "m1-10",
+          "value": 10,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 0
+          },
+          "wordBn": "১০",
+          "bookPage": 95
+        }
+      ],
+      "steps": [
+        {
+          "id": "c3t1-intro",
+          "type": "intro",
+          "title": "১ এর গুণ",
+          "say": "যদি আমরা প্রতিদিন ১ টাকা করে জমা করি, তবে ৮ দিনে কত টাকা জমা করতে পারব?",
+          "illustration": "number-1"
+        },
+        {
+          "id": "c3t1-w1",
+          "type": "worked",
+          "bookActivity": "১ এর গুণের নামতা",
+          "title": "১ এর গুণের নামতা তৈরি করি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "১ × ১ = ১"
+            },
+            {
+              "text": "১ × ২ = ১ + ১ = ২"
+            },
+            {
+              "text": "১ × ৩ = ১ + ১ + ১ = ৩"
+            }
+          ]
+        },
+        {
+          "id": "c3t1-table",
+          "type": "table",
+          "bookActivity": "১ এর গুণের নামতা",
+          "title": "১ এর গুণের নামতা (১ থেকে ১০)",
+          "rows": [
+            {
+              "id": "row1",
+              "text": "১ × ১ = ১",
+              "tests": "m1-1"
+            },
+            {
+              "id": "row2",
+              "text": "১ × ২ = ২",
+              "tests": "m1-2"
+            },
+            {
+              "id": "row3",
+              "text": "১ × ৩ = ৩",
+              "tests": "m1-3"
+            },
+            {
+              "id": "row4",
+              "text": "১ × ৪ = ৪",
+              "tests": "m1-4"
+            },
+            {
+              "id": "row5",
+              "text": "১ × ৫ = ৫",
+              "tests": "m1-5"
+            },
+            {
+              "id": "row6",
+              "text": "১ × ৬ = ৬",
+              "tests": "m1-6"
+            },
+            {
+              "id": "row7",
+              "text": "১ × ৭ = ৭",
+              "tests": "m1-7"
+            },
+            {
+              "id": "row8",
+              "text": "১ × ৮ = ৮",
+              "tests": "m1-8"
+            },
+            {
+              "id": "row9",
+              "text": "১ × ৯ = ৯",
+              "tests": "m1-9"
+            },
+            {
+              "id": "row10",
+              "text": "১ × ১০ = ১০",
+              "tests": "m1-10"
+            }
+          ]
+        },
+        {
+          "id": "c3t1-game1",
+          "type": "game",
+          "kind": "arithmetic",
+          "bookActivity": "গুণ করি",
+          "title": "গুণ করি",
+          "rounds": [
+            {
+              "id": "g1-8",
+              "ask": "১ × ৮ = ?",
+              "options": [
+                {
+                  "label": "১৬"
+                },
+                {
+                  "label": "৮"
+                },
+                {
+                  "label": "১৪"
+                }
+              ],
+              "answer": 1,
+              "hint": "১ এর গুণের নামতা মনে করো।",
+              "tests": "m1-8"
+            },
+            {
+              "id": "g1-4",
+              "ask": "১ × ৪ = ?",
+              "options": [
+                {
+                  "label": "১৭"
+                },
+                {
+                  "label": "৩"
+                },
+                {
+                  "label": "৪"
+                }
+              ],
+              "answer": 2,
+              "hint": "১ এর গুণের নামতা মনে করো।",
+              "tests": "m1-4"
+            },
+            {
+              "id": "g1-2",
+              "ask": "১ × ২ = ?",
+              "options": [
+                {
+                  "label": "২০"
+                },
+                {
+                  "label": "১"
+                },
+                {
+                  "label": "২"
+                }
+              ],
+              "answer": 2,
+              "hint": "১ এর গুণের নামতা মনে করো।",
+              "tests": "m1-2"
+            },
+            {
+              "id": "g1-5",
+              "ask": "১ × ৫ = ?",
+              "options": [
+                {
+                  "label": "৫"
+                },
+                {
+                  "label": "৪"
+                },
+                {
+                  "label": "৬"
+                }
+              ],
+              "answer": 0,
+              "hint": "১ এর গুণের নামতা মনে করো।",
+              "tests": "m1-5"
+            },
+            {
+              "id": "g1-6",
+              "ask": "১ × ৬ = ?",
+              "options": [
+                {
+                  "label": "৬"
+                },
+                {
+                  "label": "৭"
+                },
+                {
+                  "label": "১৫"
+                }
+              ],
+              "answer": 0,
+              "hint": "১ এর গুণের নামতা মনে করো।",
+              "tests": "m1-6"
+            },
+            {
+              "id": "g1-1",
+              "ask": "১ × ১ = ?",
+              "options": [
+                {
+                  "label": "২০"
+                },
+                {
+                  "label": "৯"
+                },
+                {
+                  "label": "১"
+                }
+              ],
+              "answer": 2,
+              "hint": "১ এর গুণের নামতা মনে করো।",
+              "tests": "m1-1"
+            }
+          ]
+        },
+        {
+          "id": "c3t1-quiz",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "f1",
+              "ask": "১ × ৭ = ?",
+              "options": [
+                {
+                  "label": "৭"
+                },
+                {
+                  "label": "১৭"
+                },
+                {
+                  "label": "১৮"
+                }
+              ],
+              "answer": 0,
+              "tests": "m1-7"
+            },
+            {
+              "id": "f2",
+              "ask": "১ × ৯ = ?",
+              "options": [
+                {
+                  "label": "১৮"
+                },
+                {
+                  "label": "৯"
+                },
+                {
+                  "label": "৭"
+                }
+              ],
+              "answer": 1,
+              "tests": "m1-9"
+            },
+            {
+              "id": "f3",
+              "ask": "১ × ৩ = ?",
+              "options": [
+                {
+                  "label": "১১"
+                },
+                {
+                  "label": "১৮"
+                },
+                {
+                  "label": "৩"
+                }
+              ],
+              "answer": 2,
+              "tests": "m1-3"
+            },
+            {
+              "id": "wp1",
+              "ask": "যদি আমরা প্রতিদিন ১ টাকা করে জমা করি, তবে ৮ দিনে কত টাকা জমা করতে পারব?",
+              "options": [
+                {
+                  "label": "৫"
+                },
+                {
+                  "label": "২৮"
+                },
+                {
+                  "label": "৮"
+                }
+              ],
+              "answer": 2,
+              "explain": "১×৮=৮।"
+            },
+            {
+              "id": "x3",
+              "ask": "১ × ৩ = ?",
+              "options": [
+                {
+                  "label": "১০"
+                },
+                {
+                  "label": "১৮"
+                },
+                {
+                  "label": "৩"
+                }
+              ],
+              "answer": 2,
+              "tests": "m1-3"
+            }
+          ]
+        },
+        {
+          "id": "c3t1-done",
+          "type": "done",
+          "title": "দারুণ হয়েছে!",
+          "say": "তুমি এখন ১ এর গুণের নামতা জানো!"
+        }
+      ]
+    },
+    {
+      "id": "c3t2",
+      "chapterId": "c3",
+      "number": 2,
+      "title": "২ এর গুণ",
+      "shape": "arithmetic",
+      "bookPages": [
+        80,
+        81,
+        83
+      ],
+      "objective": "২ এর গুণের নামতা (১ থেকে ১০) বলা এবং ব্যবহার করা।",
+      "minutes": 9,
+      "numbers": [
+        {
+          "id": "m2-2",
+          "value": 2,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 2
+          },
+          "wordBn": "২",
+          "bookPage": 80
+        },
+        {
+          "id": "m2-4",
+          "value": 4,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 4
+          },
+          "wordBn": "৪",
+          "bookPage": 80
+        },
+        {
+          "id": "m2-6",
+          "value": 6,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 6
+          },
+          "wordBn": "৬",
+          "bookPage": 80
+        },
+        {
+          "id": "m2-8",
+          "value": 8,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 8
+          },
+          "wordBn": "৮",
+          "bookPage": 80
+        },
+        {
+          "id": "m2-10",
+          "value": 10,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 0
+          },
+          "wordBn": "১০",
+          "bookPage": 80
+        },
+        {
+          "id": "m2-12",
+          "value": 12,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 2
+          },
+          "wordBn": "১২",
+          "bookPage": 80
+        },
+        {
+          "id": "m2-14",
+          "value": 14,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 4
+          },
+          "wordBn": "১৪",
+          "bookPage": 80
+        },
+        {
+          "id": "m2-16",
+          "value": 16,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 6
+          },
+          "wordBn": "১৬",
+          "bookPage": 80
+        },
+        {
+          "id": "m2-18",
+          "value": 18,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 8
+          },
+          "wordBn": "১৮",
+          "bookPage": 80
+        },
+        {
+          "id": "m2-20",
+          "value": 20,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 0
+          },
+          "wordBn": "২০",
+          "bookPage": 80
+        }
+      ],
+      "steps": [
+        {
+          "id": "c3t2-intro",
+          "type": "intro",
+          "title": "২ এর গুণ",
+          "say": "মিনা প্রতিদিন একটি বইয়ের ২ পৃষ্ঠা পড়ে। সে ৭ দিনে কত পৃষ্ঠা পড়ে?",
+          "illustration": "number-2"
+        },
+        {
+          "id": "c3t2-w1",
+          "type": "worked",
+          "bookActivity": "২ এর গুণের নামতা",
+          "title": "২ এর গুণের নামতা তৈরি করি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "২ × ১ = ২"
+            },
+            {
+              "text": "২ × ২ = ২ + ২ = ৪"
+            },
+            {
+              "text": "২ × ৩ = ২ + ২ + ২ = ৬"
+            }
+          ]
+        },
+        {
+          "id": "c3t2-table",
+          "type": "table",
+          "bookActivity": "২ এর গুণের নামতা",
+          "title": "২ এর গুণের নামতা (১ থেকে ১০)",
+          "rows": [
+            {
+              "id": "row1",
+              "text": "২ × ১ = ২",
+              "tests": "m2-2"
+            },
+            {
+              "id": "row2",
+              "text": "২ × ২ = ৪",
+              "tests": "m2-4"
+            },
+            {
+              "id": "row3",
+              "text": "২ × ৩ = ৬",
+              "tests": "m2-6"
+            },
+            {
+              "id": "row4",
+              "text": "২ × ৪ = ৮",
+              "tests": "m2-8"
+            },
+            {
+              "id": "row5",
+              "text": "২ × ৫ = ১০",
+              "tests": "m2-10"
+            },
+            {
+              "id": "row6",
+              "text": "২ × ৬ = ১২",
+              "tests": "m2-12"
+            },
+            {
+              "id": "row7",
+              "text": "২ × ৭ = ১৪",
+              "tests": "m2-14"
+            },
+            {
+              "id": "row8",
+              "text": "২ × ৮ = ১৬",
+              "tests": "m2-16"
+            },
+            {
+              "id": "row9",
+              "text": "২ × ৯ = ১৮",
+              "tests": "m2-18"
+            },
+            {
+              "id": "row10",
+              "text": "২ × ১০ = ২০",
+              "tests": "m2-20"
+            }
+          ]
+        },
+        {
+          "id": "c3t2-game1",
+          "type": "game",
+          "kind": "arithmetic",
+          "bookActivity": "গুণ করি",
+          "title": "গুণ করি",
+          "rounds": [
+            {
+              "id": "g2-6",
+              "ask": "২ × ৬ = ?",
+              "options": [
+                {
+                  "label": "১২"
+                },
+                {
+                  "label": "২০"
+                },
+                {
+                  "label": "৪"
+                }
+              ],
+              "answer": 0,
+              "hint": "২ এর গুণের নামতা মনে করো।",
+              "tests": "m2-12"
+            },
+            {
+              "id": "g2-2",
+              "ask": "২ × ২ = ?",
+              "options": [
+                {
+                  "label": "৪"
+                },
+                {
+                  "label": "১১"
+                },
+                {
+                  "label": "১"
+                }
+              ],
+              "answer": 0,
+              "hint": "২ এর গুণের নামতা মনে করো।",
+              "tests": "m2-4"
+            },
+            {
+              "id": "g2-9",
+              "ask": "২ × ৯ = ?",
+              "options": [
+                {
+                  "label": "১৮"
+                },
+                {
+                  "label": "১৩"
+                },
+                {
+                  "label": "২০"
+                }
+              ],
+              "answer": 0,
+              "hint": "২ এর গুণের নামতা মনে করো।",
+              "tests": "m2-18"
+            },
+            {
+              "id": "g2-3",
+              "ask": "২ × ৩ = ?",
+              "options": [
+                {
+                  "label": "৩"
+                },
+                {
+                  "label": "১০"
+                },
+                {
+                  "label": "৬"
+                }
+              ],
+              "answer": 2,
+              "hint": "২ এর গুণের নামতা মনে করো।",
+              "tests": "m2-6"
+            },
+            {
+              "id": "g2-4",
+              "ask": "২ × ৪ = ?",
+              "options": [
+                {
+                  "label": "৮"
+                },
+                {
+                  "label": "২"
+                },
+                {
+                  "label": "১২"
+                }
+              ],
+              "answer": 0,
+              "hint": "২ এর গুণের নামতা মনে করো।",
+              "tests": "m2-8"
+            },
+            {
+              "id": "g2-1",
+              "ask": "২ × ১ = ?",
+              "options": [
+                {
+                  "label": "১"
+                },
+                {
+                  "label": "১৯"
+                },
+                {
+                  "label": "২"
+                }
+              ],
+              "answer": 2,
+              "hint": "২ এর গুণের নামতা মনে করো।",
+              "tests": "m2-2"
+            }
+          ]
+        },
+        {
+          "id": "c3t2-quiz",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "f1",
+              "ask": "২ × ৭ = ?",
+              "options": [
+                {
+                  "label": "১৪"
+                },
+                {
+                  "label": "৫"
+                },
+                {
+                  "label": "৩"
+                }
+              ],
+              "answer": 0,
+              "tests": "m2-14"
+            },
+            {
+              "id": "f2",
+              "ask": "২ × ৫ = ?",
+              "options": [
+                {
+                  "label": "১০"
+                },
+                {
+                  "label": "১৭"
+                },
+                {
+                  "label": "১"
+                }
+              ],
+              "answer": 0,
+              "tests": "m2-10"
+            },
+            {
+              "id": "f3",
+              "ask": "২ × ১০ = ?",
+              "options": [
+                {
+                  "label": "৩"
+                },
+                {
+                  "label": "১৮"
+                },
+                {
+                  "label": "২০"
+                }
+              ],
+              "answer": 2,
+              "tests": "m2-20"
+            },
+            {
+              "id": "wp1",
+              "ask": "মিনা প্রতিদিন একটি বইয়ের ২ পৃষ্ঠা পড়ে। সে ৭ দিনে কত পৃষ্ঠা পড়ে?",
+              "options": [
+                {
+                  "label": "২২"
+                },
+                {
+                  "label": "১৪"
+                },
+                {
+                  "label": "১৯"
+                }
+              ],
+              "answer": 1,
+              "explain": "২×৭=১৪।"
+            },
+            {
+              "id": "wp2",
+              "ask": "একটি চকলেটের দাম ২ টাকা। রাজু ৬টি চকলেট কিনল। চকলেটগুলোর দাম কত টাকা?",
+              "options": [
+                {
+                  "label": "১২"
+                },
+                {
+                  "label": "৪"
+                },
+                {
+                  "label": "১৯"
+                }
+              ],
+              "answer": 0,
+              "explain": "২×৬=১২।"
+            }
+          ]
+        },
+        {
+          "id": "c3t2-done",
+          "type": "done",
+          "title": "দারুণ হয়েছে!",
+          "say": "তুমি এখন ২ এর গুণের নামতা জানো!"
+        }
+      ]
+    },
+    {
+      "id": "c3t3",
+      "chapterId": "c3",
+      "number": 3,
+      "title": "৩ এর গুণ",
+      "shape": "arithmetic",
+      "bookPages": [
+        84
+      ],
+      "objective": "৩ এর গুণের নামতা (১ থেকে ১০) বলা এবং ব্যবহার করা।",
+      "minutes": 9,
+      "numbers": [
+        {
+          "id": "m3-3",
+          "value": 3,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 3
+          },
+          "wordBn": "৩",
+          "bookPage": 84
+        },
+        {
+          "id": "m3-6",
+          "value": 6,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 6
+          },
+          "wordBn": "৬",
+          "bookPage": 84
+        },
+        {
+          "id": "m3-9",
+          "value": 9,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 9
+          },
+          "wordBn": "৯",
+          "bookPage": 84
+        },
+        {
+          "id": "m3-12",
+          "value": 12,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 2
+          },
+          "wordBn": "১২",
+          "bookPage": 84
+        },
+        {
+          "id": "m3-15",
+          "value": 15,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 5
+          },
+          "wordBn": "১৫",
+          "bookPage": 84
+        },
+        {
+          "id": "m3-18",
+          "value": 18,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 8
+          },
+          "wordBn": "১৮",
+          "bookPage": 84
+        },
+        {
+          "id": "m3-21",
+          "value": 21,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 1
+          },
+          "wordBn": "২১",
+          "bookPage": 84
+        },
+        {
+          "id": "m3-24",
+          "value": 24,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 4
+          },
+          "wordBn": "২৪",
+          "bookPage": 84
+        },
+        {
+          "id": "m3-27",
+          "value": 27,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 7
+          },
+          "wordBn": "২৭",
+          "bookPage": 84
+        },
+        {
+          "id": "m3-30",
+          "value": 30,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 0
+          },
+          "wordBn": "৩০",
+          "bookPage": 84
+        }
+      ],
+      "steps": [
+        {
+          "id": "c3t3-intro",
+          "type": "intro",
+          "title": "৩ এর গুণ",
+          "say": "একটি বেঞ্চে ৩ জন করে শিক্ষার্থী বসে। ৪টি বেঞ্চে কতজন শিক্ষার্থী বসবে?",
+          "illustration": "number-3"
+        },
+        {
+          "id": "c3t3-w1",
+          "type": "worked",
+          "bookActivity": "৩ এর গুণের নামতা",
+          "title": "৩ এর গুণের নামতা তৈরি করি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "৩ × ১ = ৩"
+            },
+            {
+              "text": "৩ × ২ = ৩ + ৩ = ৬"
+            },
+            {
+              "text": "৩ × ৩ = ৩ + ৩ + ৩ = ৯"
+            }
+          ]
+        },
+        {
+          "id": "c3t3-table",
+          "type": "table",
+          "bookActivity": "৩ এর গুণের নামতা",
+          "title": "৩ এর গুণের নামতা (১ থেকে ১০)",
+          "rows": [
+            {
+              "id": "row1",
+              "text": "৩ × ১ = ৩",
+              "tests": "m3-3"
+            },
+            {
+              "id": "row2",
+              "text": "৩ × ২ = ৬",
+              "tests": "m3-6"
+            },
+            {
+              "id": "row3",
+              "text": "৩ × ৩ = ৯",
+              "tests": "m3-9"
+            },
+            {
+              "id": "row4",
+              "text": "৩ × ৪ = ১২",
+              "tests": "m3-12"
+            },
+            {
+              "id": "row5",
+              "text": "৩ × ৫ = ১৫",
+              "tests": "m3-15"
+            },
+            {
+              "id": "row6",
+              "text": "৩ × ৬ = ১৮",
+              "tests": "m3-18"
+            },
+            {
+              "id": "row7",
+              "text": "৩ × ৭ = ২১",
+              "tests": "m3-21"
+            },
+            {
+              "id": "row8",
+              "text": "৩ × ৮ = ২৪",
+              "tests": "m3-24"
+            },
+            {
+              "id": "row9",
+              "text": "৩ × ৯ = ২৭",
+              "tests": "m3-27"
+            },
+            {
+              "id": "row10",
+              "text": "৩ × ১০ = ৩০",
+              "tests": "m3-30"
+            }
+          ]
+        },
+        {
+          "id": "c3t3-game1",
+          "type": "game",
+          "kind": "arithmetic",
+          "bookActivity": "গুণ করি",
+          "title": "গুণ করি",
+          "rounds": [
+            {
+              "id": "g3-7",
+              "ask": "৩ × ৭ = ?",
+              "options": [
+                {
+                  "label": "২০"
+                },
+                {
+                  "label": "২৮"
+                },
+                {
+                  "label": "২১"
+                }
+              ],
+              "answer": 2,
+              "hint": "৩ এর গুণের নামতা মনে করো।",
+              "tests": "m3-21"
+            },
+            {
+              "id": "g3-3",
+              "ask": "৩ × ৩ = ?",
+              "options": [
+                {
+                  "label": "৫"
+                },
+                {
+                  "label": "৯"
+                },
+                {
+                  "label": "১৩"
+                }
+              ],
+              "answer": 1,
+              "hint": "৩ এর গুণের নামতা মনে করো।",
+              "tests": "m3-9"
+            },
+            {
+              "id": "g3-9",
+              "ask": "৩ × ৯ = ?",
+              "options": [
+                {
+                  "label": "২৭"
+                },
+                {
+                  "label": "২৯"
+                },
+                {
+                  "label": "১"
+                }
+              ],
+              "answer": 0,
+              "hint": "৩ এর গুণের নামতা মনে করো।",
+              "tests": "m3-27"
+            },
+            {
+              "id": "g3-8",
+              "ask": "৩ × ৮ = ?",
+              "options": [
+                {
+                  "label": "২৫"
+                },
+                {
+                  "label": "২১"
+                },
+                {
+                  "label": "২৪"
+                }
+              ],
+              "answer": 2,
+              "hint": "৩ এর গুণের নামতা মনে করো।",
+              "tests": "m3-24"
+            },
+            {
+              "id": "g3-10",
+              "ask": "৩ × ১০ = ?",
+              "options": [
+                {
+                  "label": "৩০"
+                },
+                {
+                  "label": "২৭"
+                },
+                {
+                  "label": "১৪"
+                }
+              ],
+              "answer": 0,
+              "hint": "৩ এর গুণের নামতা মনে করো।",
+              "tests": "m3-30"
+            },
+            {
+              "id": "g3-5",
+              "ask": "৩ × ৫ = ?",
+              "options": [
+                {
+                  "label": "১৫"
+                },
+                {
+                  "label": "২১"
+                },
+                {
+                  "label": "২৫"
+                }
+              ],
+              "answer": 0,
+              "hint": "৩ এর গুণের নামতা মনে করো।",
+              "tests": "m3-15"
+            }
+          ]
+        },
+        {
+          "id": "c3t3-quiz",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "f1",
+              "ask": "৩ × ৬ = ?",
+              "options": [
+                {
+                  "label": "১৮"
+                },
+                {
+                  "label": "২"
+                },
+                {
+                  "label": "১৭"
+                }
+              ],
+              "answer": 0,
+              "tests": "m3-18"
+            },
+            {
+              "id": "f2",
+              "ask": "৩ × ২ = ?",
+              "options": [
+                {
+                  "label": "২৭"
+                },
+                {
+                  "label": "৬"
+                },
+                {
+                  "label": "১২"
+                }
+              ],
+              "answer": 1,
+              "tests": "m3-6"
+            },
+            {
+              "id": "f3",
+              "ask": "৩ × ৪ = ?",
+              "options": [
+                {
+                  "label": "১৬"
+                },
+                {
+                  "label": "১২"
+                },
+                {
+                  "label": "৫"
+                }
+              ],
+              "answer": 1,
+              "tests": "m3-12"
+            },
+            {
+              "id": "wp1",
+              "ask": "একটি বেঞ্চে ৩ জন করে শিক্ষার্থী বসে। ৪টি বেঞ্চে কতজন শিক্ষার্থী বসবে?",
+              "options": [
+                {
+                  "label": "১৭"
+                },
+                {
+                  "label": "৪"
+                },
+                {
+                  "label": "১২"
+                }
+              ],
+              "answer": 2,
+              "explain": "৩×৪=১২।"
+            },
+            {
+              "id": "x1",
+              "ask": "৩ × ১ = ?",
+              "options": [
+                {
+                  "label": "৩"
+                },
+                {
+                  "label": "৬"
+                },
+                {
+                  "label": "৯"
+                }
+              ],
+              "answer": 0,
+              "tests": "m3-3"
+            }
+          ]
+        },
+        {
+          "id": "c3t3-done",
+          "type": "done",
+          "title": "দারুণ হয়েছে!",
+          "say": "তুমি এখন ৩ এর গুণের নামতা জানো!"
+        }
+      ]
+    },
+    {
+      "id": "c3t4",
+      "chapterId": "c3",
+      "number": 4,
+      "title": "৪ এর গুণ",
+      "shape": "arithmetic",
+      "bookPages": [
+        85,
+        86
+      ],
+      "objective": "৪ এর গুণের নামতা (১ থেকে ১০) বলা এবং ব্যবহার করা।",
+      "minutes": 9,
+      "numbers": [
+        {
+          "id": "m4-4",
+          "value": 4,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 4
+          },
+          "wordBn": "৪",
+          "bookPage": 85
+        },
+        {
+          "id": "m4-8",
+          "value": 8,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 8
+          },
+          "wordBn": "৮",
+          "bookPage": 85
+        },
+        {
+          "id": "m4-12",
+          "value": 12,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 2
+          },
+          "wordBn": "১২",
+          "bookPage": 85
+        },
+        {
+          "id": "m4-16",
+          "value": 16,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 6
+          },
+          "wordBn": "১৬",
+          "bookPage": 85
+        },
+        {
+          "id": "m4-20",
+          "value": 20,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 0
+          },
+          "wordBn": "২০",
+          "bookPage": 85
+        },
+        {
+          "id": "m4-24",
+          "value": 24,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 4
+          },
+          "wordBn": "২৪",
+          "bookPage": 85
+        },
+        {
+          "id": "m4-28",
+          "value": 28,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 8
+          },
+          "wordBn": "২৮",
+          "bookPage": 85
+        },
+        {
+          "id": "m4-32",
+          "value": 32,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 2
+          },
+          "wordBn": "৩২",
+          "bookPage": 85
+        },
+        {
+          "id": "m4-36",
+          "value": 36,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 6
+          },
+          "wordBn": "৩৬",
+          "bookPage": 85
+        },
+        {
+          "id": "m4-40",
+          "value": 40,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 0
+          },
+          "wordBn": "৪০",
+          "bookPage": 85
+        }
+      ],
+      "steps": [
+        {
+          "id": "c3t4-intro",
+          "type": "intro",
+          "title": "৪ এর গুণ",
+          "say": "একটি প্যাকেটে ৪টি করে পেন্সিল আছে। এরকম ৬টি প্যাকেটে কতগুলো পেন্সিল আছে?",
+          "illustration": "number-4"
+        },
+        {
+          "id": "c3t4-w1",
+          "type": "worked",
+          "bookActivity": "৪ এর গুণের নামতা",
+          "title": "৪ এর গুণের নামতা তৈরি করি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "৪ × ১ = ৪"
+            },
+            {
+              "text": "৪ × ২ = ৪ + ৪ = ৮"
+            },
+            {
+              "text": "৪ × ৩ = ৪ + ৪ + ৪ = ১২"
+            }
+          ]
+        },
+        {
+          "id": "c3t4-table",
+          "type": "table",
+          "bookActivity": "৪ এর গুণের নামতা",
+          "title": "৪ এর গুণের নামতা (১ থেকে ১০)",
+          "rows": [
+            {
+              "id": "row1",
+              "text": "৪ × ১ = ৪",
+              "tests": "m4-4"
+            },
+            {
+              "id": "row2",
+              "text": "৪ × ২ = ৮",
+              "tests": "m4-8"
+            },
+            {
+              "id": "row3",
+              "text": "৪ × ৩ = ১২",
+              "tests": "m4-12"
+            },
+            {
+              "id": "row4",
+              "text": "৪ × ৪ = ১৬",
+              "tests": "m4-16"
+            },
+            {
+              "id": "row5",
+              "text": "৪ × ৫ = ২০",
+              "tests": "m4-20"
+            },
+            {
+              "id": "row6",
+              "text": "৪ × ৬ = ২৪",
+              "tests": "m4-24"
+            },
+            {
+              "id": "row7",
+              "text": "৪ × ৭ = ২৮",
+              "tests": "m4-28"
+            },
+            {
+              "id": "row8",
+              "text": "৪ × ৮ = ৩২",
+              "tests": "m4-32"
+            },
+            {
+              "id": "row9",
+              "text": "৪ × ৯ = ৩৬",
+              "tests": "m4-36"
+            },
+            {
+              "id": "row10",
+              "text": "৪ × ১০ = ৪০",
+              "tests": "m4-40"
+            }
+          ]
+        },
+        {
+          "id": "c3t4-game1",
+          "type": "game",
+          "kind": "arithmetic",
+          "bookActivity": "গুণ করি",
+          "title": "গুণ করি",
+          "rounds": [
+            {
+              "id": "g4-7",
+              "ask": "৪ × ৭ = ?",
+              "options": [
+                {
+                  "label": "৩৭"
+                },
+                {
+                  "label": "৩৬"
+                },
+                {
+                  "label": "২৮"
+                }
+              ],
+              "answer": 2,
+              "hint": "৪ এর গুণের নামতা মনে করো।",
+              "tests": "m4-28"
+            },
+            {
+              "id": "g4-2",
+              "ask": "৪ × ২ = ?",
+              "options": [
+                {
+                  "label": "৮"
+                },
+                {
+                  "label": "১০"
+                },
+                {
+                  "label": "১১"
+                }
+              ],
+              "answer": 0,
+              "hint": "৪ এর গুণের নামতা মনে করো।",
+              "tests": "m4-8"
+            },
+            {
+              "id": "g4-5",
+              "ask": "৪ × ৫ = ?",
+              "options": [
+                {
+                  "label": "৩৭"
+                },
+                {
+                  "label": "২০"
+                },
+                {
+                  "label": "৪"
+                }
+              ],
+              "answer": 1,
+              "hint": "৪ এর গুণের নামতা মনে করো।",
+              "tests": "m4-20"
+            },
+            {
+              "id": "g4-6",
+              "ask": "৪ × ৬ = ?",
+              "options": [
+                {
+                  "label": "২৯"
+                },
+                {
+                  "label": "১৭"
+                },
+                {
+                  "label": "২৪"
+                }
+              ],
+              "answer": 2,
+              "hint": "৪ এর গুণের নামতা মনে করো।",
+              "tests": "m4-24"
+            },
+            {
+              "id": "g4-1",
+              "ask": "৪ × ১ = ?",
+              "options": [
+                {
+                  "label": "৪"
+                },
+                {
+                  "label": "৩৯"
+                },
+                {
+                  "label": "২৬"
+                }
+              ],
+              "answer": 0,
+              "hint": "৪ এর গুণের নামতা মনে করো।",
+              "tests": "m4-4"
+            },
+            {
+              "id": "g4-8",
+              "ask": "৪ × ৮ = ?",
+              "options": [
+                {
+                  "label": "৩২"
+                },
+                {
+                  "label": "১৩"
+                },
+                {
+                  "label": "২৭"
+                }
+              ],
+              "answer": 0,
+              "hint": "৪ এর গুণের নামতা মনে করো।",
+              "tests": "m4-32"
+            }
+          ]
+        },
+        {
+          "id": "c3t4-quiz",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "f1",
+              "ask": "৪ × ৪ = ?",
+              "options": [
+                {
+                  "label": "১৬"
+                },
+                {
+                  "label": "২৪"
+                },
+                {
+                  "label": "২০"
+                }
+              ],
+              "answer": 0,
+              "tests": "m4-16"
+            },
+            {
+              "id": "f2",
+              "ask": "৪ × ১০ = ?",
+              "options": [
+                {
+                  "label": "৪০"
+                },
+                {
+                  "label": "৩১"
+                },
+                {
+                  "label": "৬"
+                }
+              ],
+              "answer": 0,
+              "tests": "m4-40"
+            },
+            {
+              "id": "f3",
+              "ask": "৪ × ৩ = ?",
+              "options": [
+                {
+                  "label": "১৯"
+                },
+                {
+                  "label": "১২"
+                },
+                {
+                  "label": "৪"
+                }
+              ],
+              "answer": 1,
+              "tests": "m4-12"
+            },
+            {
+              "id": "wp1",
+              "ask": "একটি প্যাকেটে ৪টি করে পেন্সিল আছে। এরকম ৬টি প্যাকেটে কতগুলো পেন্সিল আছে?",
+              "options": [
+                {
+                  "label": "৯"
+                },
+                {
+                  "label": "২৪"
+                },
+                {
+                  "label": "১২"
+                }
+              ],
+              "answer": 1,
+              "explain": "৪×৬=২৪।"
+            },
+            {
+              "id": "x3",
+              "ask": "৪ × ৩ = ?",
+              "options": [
+                {
+                  "label": "১২"
+                },
+                {
+                  "label": "১৭"
+                },
+                {
+                  "label": "৪০"
+                }
+              ],
+              "answer": 0,
+              "tests": "m4-12"
+            }
+          ]
+        },
+        {
+          "id": "c3t4-done",
+          "type": "done",
+          "title": "দারুণ হয়েছে!",
+          "say": "তুমি এখন ৪ এর গুণের নামতা জানো!"
+        }
+      ]
+    },
+    {
+      "id": "c3t5",
+      "chapterId": "c3",
+      "number": 5,
+      "title": "৫ এর গুণ",
+      "shape": "arithmetic",
+      "bookPages": [
+        77,
+        78
+      ],
+      "objective": "৫ এর গুণের নামতা (১ থেকে ১০) বলা এবং ব্যবহার করা।",
+      "minutes": 9,
+      "numbers": [
+        {
+          "id": "m5-5",
+          "value": 5,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 5
+          },
+          "wordBn": "৫",
+          "bookPage": 77
+        },
+        {
+          "id": "m5-10",
+          "value": 10,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 0
+          },
+          "wordBn": "১০",
+          "bookPage": 77
+        },
+        {
+          "id": "m5-15",
+          "value": 15,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 5
+          },
+          "wordBn": "১৫",
+          "bookPage": 77
+        },
+        {
+          "id": "m5-20",
+          "value": 20,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 0
+          },
+          "wordBn": "২০",
+          "bookPage": 77
+        },
+        {
+          "id": "m5-25",
+          "value": 25,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 5
+          },
+          "wordBn": "২৫",
+          "bookPage": 77
+        },
+        {
+          "id": "m5-30",
+          "value": 30,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 0
+          },
+          "wordBn": "৩০",
+          "bookPage": 77
+        },
+        {
+          "id": "m5-35",
+          "value": 35,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 5
+          },
+          "wordBn": "৩৫",
+          "bookPage": 77
+        },
+        {
+          "id": "m5-40",
+          "value": 40,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 0
+          },
+          "wordBn": "৪০",
+          "bookPage": 77
+        },
+        {
+          "id": "m5-45",
+          "value": 45,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 5
+          },
+          "wordBn": "৪৫",
+          "bookPage": 77
+        },
+        {
+          "id": "m5-50",
+          "value": 50,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 5,
+            "ones": 0
+          },
+          "wordBn": "৫০",
+          "bookPage": 77
+        }
+      ],
+      "steps": [
+        {
+          "id": "c3t5-intro",
+          "type": "intro",
+          "title": "৫ এর গুণ",
+          "say": "৬টি থালায় প্রতিটিতে ৫টি করে লিচু আছে। একত্রে কতগুলো লিচু আছে?",
+          "illustration": "number-5"
+        },
+        {
+          "id": "c3t5-w1",
+          "type": "worked",
+          "bookActivity": "৫ এর গুণের নামতা",
+          "title": "৫ এর গুণের নামতা তৈরি করি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "৫ × ১ = ৫"
+            },
+            {
+              "text": "৫ × ২ = ৫ + ৫ = ১০"
+            },
+            {
+              "text": "৫ × ৩ = ৫ + ৫ + ৫ = ১৫"
+            }
+          ]
+        },
+        {
+          "id": "c3t5-table",
+          "type": "table",
+          "bookActivity": "৫ এর গুণের নামতা",
+          "title": "৫ এর গুণের নামতা (১ থেকে ১০)",
+          "rows": [
+            {
+              "id": "row1",
+              "text": "৫ × ১ = ৫",
+              "tests": "m5-5"
+            },
+            {
+              "id": "row2",
+              "text": "৫ × ২ = ১০",
+              "tests": "m5-10"
+            },
+            {
+              "id": "row3",
+              "text": "৫ × ৩ = ১৫",
+              "tests": "m5-15"
+            },
+            {
+              "id": "row4",
+              "text": "৫ × ৪ = ২০",
+              "tests": "m5-20"
+            },
+            {
+              "id": "row5",
+              "text": "৫ × ৫ = ২৫",
+              "tests": "m5-25"
+            },
+            {
+              "id": "row6",
+              "text": "৫ × ৬ = ৩০",
+              "tests": "m5-30"
+            },
+            {
+              "id": "row7",
+              "text": "৫ × ৭ = ৩৫",
+              "tests": "m5-35"
+            },
+            {
+              "id": "row8",
+              "text": "৫ × ৮ = ৪০",
+              "tests": "m5-40"
+            },
+            {
+              "id": "row9",
+              "text": "৫ × ৯ = ৪৫",
+              "tests": "m5-45"
+            },
+            {
+              "id": "row10",
+              "text": "৫ × ১০ = ৫০",
+              "tests": "m5-50"
+            }
+          ]
+        },
+        {
+          "id": "c3t5-game1",
+          "type": "game",
+          "kind": "arithmetic",
+          "bookActivity": "গুণ করি",
+          "title": "গুণ করি",
+          "rounds": [
+            {
+              "id": "g5-6",
+              "ask": "৫ × ৬ = ?",
+              "options": [
+                {
+                  "label": "৩০"
+                },
+                {
+                  "label": "৪৩"
+                },
+                {
+                  "label": "৫"
+                }
+              ],
+              "answer": 0,
+              "hint": "৫ এর গুণের নামতা মনে করো।",
+              "tests": "m5-30"
+            },
+            {
+              "id": "g5-7",
+              "ask": "৫ × ৭ = ?",
+              "options": [
+                {
+                  "label": "১৮"
+                },
+                {
+                  "label": "৪৭"
+                },
+                {
+                  "label": "৩৫"
+                }
+              ],
+              "answer": 2,
+              "hint": "৫ এর গুণের নামতা মনে করো।",
+              "tests": "m5-35"
+            },
+            {
+              "id": "g5-10",
+              "ask": "৫ × ১০ = ?",
+              "options": [
+                {
+                  "label": "৫০"
+                },
+                {
+                  "label": "২১"
+                },
+                {
+                  "label": "৪৬"
+                }
+              ],
+              "answer": 0,
+              "hint": "৫ এর গুণের নামতা মনে করো।",
+              "tests": "m5-50"
+            },
+            {
+              "id": "g5-2",
+              "ask": "৫ × ২ = ?",
+              "options": [
+                {
+                  "label": "৩৭"
+                },
+                {
+                  "label": "১০"
+                },
+                {
+                  "label": "৭"
+                }
+              ],
+              "answer": 1,
+              "hint": "৫ এর গুণের নামতা মনে করো।",
+              "tests": "m5-10"
+            },
+            {
+              "id": "g5-1",
+              "ask": "৫ × ১ = ?",
+              "options": [
+                {
+                  "label": "৪৪"
+                },
+                {
+                  "label": "৫"
+                },
+                {
+                  "label": "২১"
+                }
+              ],
+              "answer": 1,
+              "hint": "৫ এর গুণের নামতা মনে করো।",
+              "tests": "m5-5"
+            },
+            {
+              "id": "g5-8",
+              "ask": "৫ × ৮ = ?",
+              "options": [
+                {
+                  "label": "৪০"
+                },
+                {
+                  "label": "৩১"
+                },
+                {
+                  "label": "৪৮"
+                }
+              ],
+              "answer": 0,
+              "hint": "৫ এর গুণের নামতা মনে করো।",
+              "tests": "m5-40"
+            }
+          ]
+        },
+        {
+          "id": "c3t5-quiz",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "f1",
+              "ask": "৫ × ৯ = ?",
+              "options": [
+                {
+                  "label": "৪৬"
+                },
+                {
+                  "label": "৩"
+                },
+                {
+                  "label": "৪৫"
+                }
+              ],
+              "answer": 2,
+              "tests": "m5-45"
+            },
+            {
+              "id": "f2",
+              "ask": "৫ × ৫ = ?",
+              "options": [
+                {
+                  "label": "১১"
+                },
+                {
+                  "label": "২৫"
+                },
+                {
+                  "label": "৫০"
+                }
+              ],
+              "answer": 1,
+              "tests": "m5-25"
+            },
+            {
+              "id": "f3",
+              "ask": "৫ × ৪ = ?",
+              "options": [
+                {
+                  "label": "২০"
+                },
+                {
+                  "label": "১৮"
+                },
+                {
+                  "label": "৪২"
+                }
+              ],
+              "answer": 0,
+              "tests": "m5-20"
+            },
+            {
+              "id": "wp1",
+              "ask": "৬টি থালায় প্রতিটিতে ৫টি করে লিচু আছে। একত্রে কতগুলো লিচু আছে?",
+              "options": [
+                {
+                  "label": "৩০"
+                },
+                {
+                  "label": "৭"
+                },
+                {
+                  "label": "২৮"
+                }
+              ],
+              "answer": 0,
+              "explain": "৫×৬=৩০।"
+            },
+            {
+              "id": "x3",
+              "ask": "৫ × ৩ = ?",
+              "options": [
+                {
+                  "label": "৪৮"
+                },
+                {
+                  "label": "১৫"
+                },
+                {
+                  "label": "৮"
+                }
+              ],
+              "answer": 1,
+              "tests": "m5-15"
+            }
+          ]
+        },
+        {
+          "id": "c3t5-done",
+          "type": "done",
+          "title": "দারুণ হয়েছে!",
+          "say": "তুমি এখন ৫ এর গুণের নামতা জানো!"
+        }
+      ]
+    },
+    {
+      "id": "c3t6",
+      "chapterId": "c3",
+      "number": 6,
+      "title": "৬ এর গুণ",
+      "shape": "arithmetic",
+      "bookPages": [
+        88,
+        89
+      ],
+      "objective": "৬ এর গুণের নামতা (১ থেকে ১০) বলা এবং ব্যবহার করা।",
+      "minutes": 9,
+      "numbers": [
+        {
+          "id": "m6-6",
+          "value": 6,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 6
+          },
+          "wordBn": "৬",
+          "bookPage": 88
+        },
+        {
+          "id": "m6-12",
+          "value": 12,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 2
+          },
+          "wordBn": "১২",
+          "bookPage": 88
+        },
+        {
+          "id": "m6-18",
+          "value": 18,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 8
+          },
+          "wordBn": "১৮",
+          "bookPage": 88
+        },
+        {
+          "id": "m6-24",
+          "value": 24,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 4
+          },
+          "wordBn": "২৪",
+          "bookPage": 88
+        },
+        {
+          "id": "m6-30",
+          "value": 30,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 0
+          },
+          "wordBn": "৩০",
+          "bookPage": 88
+        },
+        {
+          "id": "m6-36",
+          "value": 36,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 6
+          },
+          "wordBn": "৩৬",
+          "bookPage": 88
+        },
+        {
+          "id": "m6-42",
+          "value": 42,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 2
+          },
+          "wordBn": "৪২",
+          "bookPage": 88
+        },
+        {
+          "id": "m6-48",
+          "value": 48,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 8
+          },
+          "wordBn": "৪৮",
+          "bookPage": 88
+        },
+        {
+          "id": "m6-54",
+          "value": 54,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 5,
+            "ones": 4
+          },
+          "wordBn": "৫৪",
+          "bookPage": 88
+        },
+        {
+          "id": "m6-60",
+          "value": 60,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 6,
+            "ones": 0
+          },
+          "wordBn": "৬০",
+          "bookPage": 88
+        }
+      ],
+      "steps": [
+        {
+          "id": "c3t6-intro",
+          "type": "intro",
+          "title": "৬ এর গুণ",
+          "say": "বাদলের বাবা এক সপ্তাহে ৫ দিন কাজ করেন। তিনি ৬ সপ্তাহে কতদিন কাজ করেন?",
+          "illustration": "number-6"
+        },
+        {
+          "id": "c3t6-w1",
+          "type": "worked",
+          "bookActivity": "৬ এর গুণের নামতা",
+          "title": "৬ এর গুণের নামতা তৈরি করি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "৬ × ১ = ৬"
+            },
+            {
+              "text": "৬ × ২ = ৬ + ৬ = ১২"
+            },
+            {
+              "text": "৬ × ৩ = ৬ + ৬ + ৬ = ১৮"
+            },
+            {
+              "text": "৬×৫=৩০, যা ২ এর গুণ ও ৪ এর গুণের যোগফল। ২×৫=১০, ৪×৫=২০, ১০+২০=৩০।"
+            }
+          ]
+        },
+        {
+          "id": "c3t6-table",
+          "type": "table",
+          "bookActivity": "৬ এর গুণের নামতা",
+          "title": "৬ এর গুণের নামতা (১ থেকে ১০)",
+          "rows": [
+            {
+              "id": "row1",
+              "text": "৬ × ১ = ৬",
+              "tests": "m6-6"
+            },
+            {
+              "id": "row2",
+              "text": "৬ × ২ = ১২",
+              "tests": "m6-12"
+            },
+            {
+              "id": "row3",
+              "text": "৬ × ৩ = ১৮",
+              "tests": "m6-18"
+            },
+            {
+              "id": "row4",
+              "text": "৬ × ৪ = ২৪",
+              "tests": "m6-24"
+            },
+            {
+              "id": "row5",
+              "text": "৬ × ৫ = ৩০",
+              "tests": "m6-30"
+            },
+            {
+              "id": "row6",
+              "text": "৬ × ৬ = ৩৬",
+              "tests": "m6-36"
+            },
+            {
+              "id": "row7",
+              "text": "৬ × ৭ = ৪২",
+              "tests": "m6-42"
+            },
+            {
+              "id": "row8",
+              "text": "৬ × ৮ = ৪৮",
+              "tests": "m6-48"
+            },
+            {
+              "id": "row9",
+              "text": "৬ × ৯ = ৫৪",
+              "tests": "m6-54"
+            },
+            {
+              "id": "row10",
+              "text": "৬ × ১০ = ৬০",
+              "tests": "m6-60"
+            }
+          ]
+        },
+        {
+          "id": "c3t6-game1",
+          "type": "game",
+          "kind": "arithmetic",
+          "bookActivity": "গুণ করি",
+          "title": "গুণ করি",
+          "rounds": [
+            {
+              "id": "g6-1",
+              "ask": "৬ × ১ = ?",
+              "options": [
+                {
+                  "label": "১৮"
+                },
+                {
+                  "label": "২৩"
+                },
+                {
+                  "label": "৬"
+                }
+              ],
+              "answer": 2,
+              "hint": "৬ এর গুণের নামতা মনে করো।",
+              "tests": "m6-6"
+            },
+            {
+              "id": "g6-8",
+              "ask": "৬ × ৮ = ?",
+              "options": [
+                {
+                  "label": "৪৮"
+                },
+                {
+                  "label": "৪৭"
+                },
+                {
+                  "label": "১"
+                }
+              ],
+              "answer": 0,
+              "hint": "৬ এর গুণের নামতা মনে করো।",
+              "tests": "m6-48"
+            },
+            {
+              "id": "g6-4",
+              "ask": "৬ × ৪ = ?",
+              "options": [
+                {
+                  "label": "২৩"
+                },
+                {
+                  "label": "৪৪"
+                },
+                {
+                  "label": "২৪"
+                }
+              ],
+              "answer": 2,
+              "hint": "৬ এর গুণের নামতা মনে করো।",
+              "tests": "m6-24"
+            },
+            {
+              "id": "g6-3",
+              "ask": "৬ × ৩ = ?",
+              "options": [
+                {
+                  "label": "২১"
+                },
+                {
+                  "label": "১৮"
+                },
+                {
+                  "label": "৩১"
+                }
+              ],
+              "answer": 1,
+              "hint": "৬ এর গুণের নামতা মনে করো।",
+              "tests": "m6-18"
+            },
+            {
+              "id": "g6-7",
+              "ask": "৬ × ৭ = ?",
+              "options": [
+                {
+                  "label": "৪৭"
+                },
+                {
+                  "label": "৪২"
+                },
+                {
+                  "label": "১৪"
+                }
+              ],
+              "answer": 1,
+              "hint": "৬ এর গুণের নামতা মনে করো।",
+              "tests": "m6-42"
+            },
+            {
+              "id": "g6-10",
+              "ask": "৬ × ১০ = ?",
+              "options": [
+                {
+                  "label": "৬০"
+                },
+                {
+                  "label": "৪৯"
+                },
+                {
+                  "label": "৫৬"
+                }
+              ],
+              "answer": 0,
+              "hint": "৬ এর গুণের নামতা মনে করো।",
+              "tests": "m6-60"
+            }
+          ]
+        },
+        {
+          "id": "c3t6-quiz",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "f1",
+              "ask": "৬ × ৬ = ?",
+              "options": [
+                {
+                  "label": "২৮"
+                },
+                {
+                  "label": "২০"
+                },
+                {
+                  "label": "৩৬"
+                }
+              ],
+              "answer": 2,
+              "tests": "m6-36"
+            },
+            {
+              "id": "f2",
+              "ask": "৬ × ২ = ?",
+              "options": [
+                {
+                  "label": "১২"
+                },
+                {
+                  "label": "১৩"
+                },
+                {
+                  "label": "৩৬"
+                }
+              ],
+              "answer": 0,
+              "tests": "m6-12"
+            },
+            {
+              "id": "f3",
+              "ask": "৬ × ৯ = ?",
+              "options": [
+                {
+                  "label": "৫১"
+                },
+                {
+                  "label": "৫৪"
+                },
+                {
+                  "label": "৩৯"
+                }
+              ],
+              "answer": 1,
+              "tests": "m6-54"
+            },
+            {
+              "id": "wp1",
+              "ask": "বাদলের বাবা এক সপ্তাহে ৫ দিন কাজ করেন। তিনি ৬ সপ্তাহে কতদিন কাজ করেন?",
+              "options": [
+                {
+                  "label": "৪৭"
+                },
+                {
+                  "label": "১৮"
+                },
+                {
+                  "label": "৩০"
+                }
+              ],
+              "answer": 2,
+              "explain": "৫×৬=৩০।"
+            },
+            {
+              "id": "x2",
+              "ask": "৬ × ২ = ?",
+              "options": [
+                {
+                  "label": "১২"
+                },
+                {
+                  "label": "৪২"
+                },
+                {
+                  "label": "৩০"
+                }
+              ],
+              "answer": 0,
+              "tests": "m6-12"
+            }
+          ]
+        },
+        {
+          "id": "c3t6-done",
+          "type": "done",
+          "title": "দারুণ হয়েছে!",
+          "say": "তুমি এখন ৬ এর গুণের নামতা জানো!"
+        }
+      ]
+    },
+    {
+      "id": "c3t7",
+      "chapterId": "c3",
+      "number": 7,
+      "title": "৭ এর গুণ",
+      "shape": "arithmetic",
+      "bookPages": [
+        90,
+        91
+      ],
+      "objective": "৭ এর গুণের নামতা (১ থেকে ১০) বলা এবং ব্যবহার করা।",
+      "minutes": 9,
+      "numbers": [
+        {
+          "id": "m7-7",
+          "value": 7,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 7
+          },
+          "wordBn": "৭",
+          "bookPage": 90
+        },
+        {
+          "id": "m7-14",
+          "value": 14,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 4
+          },
+          "wordBn": "১৪",
+          "bookPage": 90
+        },
+        {
+          "id": "m7-21",
+          "value": 21,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 1
+          },
+          "wordBn": "২১",
+          "bookPage": 90
+        },
+        {
+          "id": "m7-28",
+          "value": 28,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 8
+          },
+          "wordBn": "২৮",
+          "bookPage": 90
+        },
+        {
+          "id": "m7-35",
+          "value": 35,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 5
+          },
+          "wordBn": "৩৫",
+          "bookPage": 90
+        },
+        {
+          "id": "m7-42",
+          "value": 42,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 2
+          },
+          "wordBn": "৪২",
+          "bookPage": 90
+        },
+        {
+          "id": "m7-49",
+          "value": 49,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 9
+          },
+          "wordBn": "৪৯",
+          "bookPage": 90
+        },
+        {
+          "id": "m7-56",
+          "value": 56,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 5,
+            "ones": 6
+          },
+          "wordBn": "৫৬",
+          "bookPage": 90
+        },
+        {
+          "id": "m7-63",
+          "value": 63,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 6,
+            "ones": 3
+          },
+          "wordBn": "৬৩",
+          "bookPage": 90
+        },
+        {
+          "id": "m7-70",
+          "value": 70,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 7,
+            "ones": 0
+          },
+          "wordBn": "৭০",
+          "bookPage": 90
+        }
+      ],
+      "steps": [
+        {
+          "id": "c3t7-intro",
+          "type": "intro",
+          "title": "৭ এর গুণ",
+          "say": "৭ দিনে ১ সপ্তাহ হয়। ৮ সপ্তাহে কত দিন?",
+          "illustration": "number-7"
+        },
+        {
+          "id": "c3t7-w1",
+          "type": "worked",
+          "bookActivity": "৭ এর গুণের নামতা",
+          "title": "৭ এর গুণের নামতা তৈরি করি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "৭ × ১ = ৭"
+            },
+            {
+              "text": "৭ × ২ = ৭ + ৭ = ১৪"
+            },
+            {
+              "text": "৭ × ৩ = ৭ + ৭ + ৭ = ২১"
+            },
+            {
+              "text": "৭×৫=৩৫, এটি ৪ এর গুণ ও ৩ এর গুণে ভেঙে দেখানো যায়। ৪×৫=২০, ৩×৫=১৫, ২০+১৫=৩৫।"
+            }
+          ]
+        },
+        {
+          "id": "c3t7-table",
+          "type": "table",
+          "bookActivity": "৭ এর গুণের নামতা",
+          "title": "৭ এর গুণের নামতা (১ থেকে ১০)",
+          "rows": [
+            {
+              "id": "row1",
+              "text": "৭ × ১ = ৭",
+              "tests": "m7-7"
+            },
+            {
+              "id": "row2",
+              "text": "৭ × ২ = ১৪",
+              "tests": "m7-14"
+            },
+            {
+              "id": "row3",
+              "text": "৭ × ৩ = ২১",
+              "tests": "m7-21"
+            },
+            {
+              "id": "row4",
+              "text": "৭ × ৪ = ২৮",
+              "tests": "m7-28"
+            },
+            {
+              "id": "row5",
+              "text": "৭ × ৫ = ৩৫",
+              "tests": "m7-35"
+            },
+            {
+              "id": "row6",
+              "text": "৭ × ৬ = ৪২",
+              "tests": "m7-42"
+            },
+            {
+              "id": "row7",
+              "text": "৭ × ৭ = ৪৯",
+              "tests": "m7-49"
+            },
+            {
+              "id": "row8",
+              "text": "৭ × ৮ = ৫৬",
+              "tests": "m7-56"
+            },
+            {
+              "id": "row9",
+              "text": "৭ × ৯ = ৬৩",
+              "tests": "m7-63"
+            },
+            {
+              "id": "row10",
+              "text": "৭ × ১০ = ৭০",
+              "tests": "m7-70"
+            }
+          ]
+        },
+        {
+          "id": "c3t7-game1",
+          "type": "game",
+          "kind": "arithmetic",
+          "bookActivity": "গুণ করি",
+          "title": "গুণ করি",
+          "rounds": [
+            {
+              "id": "g7-10",
+              "ask": "৭ × ১০ = ?",
+              "options": [
+                {
+                  "label": "৩"
+                },
+                {
+                  "label": "৭০"
+                },
+                {
+                  "label": "১৬"
+                }
+              ],
+              "answer": 1,
+              "hint": "৭ এর গুণের নামতা মনে করো।",
+              "tests": "m7-70"
+            },
+            {
+              "id": "g7-9",
+              "ask": "৭ × ৯ = ?",
+              "options": [
+                {
+                  "label": "৬৩"
+                },
+                {
+                  "label": "৫২"
+                },
+                {
+                  "label": "১৯"
+                }
+              ],
+              "answer": 0,
+              "hint": "৭ এর গুণের নামতা মনে করো।",
+              "tests": "m7-63"
+            },
+            {
+              "id": "g7-6",
+              "ask": "৭ × ৬ = ?",
+              "options": [
+                {
+                  "label": "৪২"
+                },
+                {
+                  "label": "২৩"
+                },
+                {
+                  "label": "৪৫"
+                }
+              ],
+              "answer": 0,
+              "hint": "৭ এর গুণের নামতা মনে করো।",
+              "tests": "m7-42"
+            },
+            {
+              "id": "g7-1",
+              "ask": "৭ × ১ = ?",
+              "options": [
+                {
+                  "label": "২"
+                },
+                {
+                  "label": "১৮"
+                },
+                {
+                  "label": "৭"
+                }
+              ],
+              "answer": 2,
+              "hint": "৭ এর গুণের নামতা মনে করো।",
+              "tests": "m7-7"
+            },
+            {
+              "id": "g7-2",
+              "ask": "৭ × ২ = ?",
+              "options": [
+                {
+                  "label": "৫১"
+                },
+                {
+                  "label": "২৭"
+                },
+                {
+                  "label": "১৪"
+                }
+              ],
+              "answer": 2,
+              "hint": "৭ এর গুণের নামতা মনে করো।",
+              "tests": "m7-14"
+            },
+            {
+              "id": "g7-7",
+              "ask": "৭ × ৭ = ?",
+              "options": [
+                {
+                  "label": "৪৯"
+                },
+                {
+                  "label": "৬৯"
+                },
+                {
+                  "label": "১৩"
+                }
+              ],
+              "answer": 0,
+              "hint": "৭ এর গুণের নামতা মনে করো।",
+              "tests": "m7-49"
+            }
+          ]
+        },
+        {
+          "id": "c3t7-quiz",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "f1",
+              "ask": "৭ × ৮ = ?",
+              "options": [
+                {
+                  "label": "৫০"
+                },
+                {
+                  "label": "৪"
+                },
+                {
+                  "label": "৫৬"
+                }
+              ],
+              "answer": 2,
+              "tests": "m7-56"
+            },
+            {
+              "id": "f2",
+              "ask": "৭ × ৫ = ?",
+              "options": [
+                {
+                  "label": "৩৫"
+                },
+                {
+                  "label": "৫৯"
+                },
+                {
+                  "label": "৯"
+                }
+              ],
+              "answer": 0,
+              "tests": "m7-35"
+            },
+            {
+              "id": "f3",
+              "ask": "৭ × ৩ = ?",
+              "options": [
+                {
+                  "label": "৬৪"
+                },
+                {
+                  "label": "২১"
+                },
+                {
+                  "label": "১৭"
+                }
+              ],
+              "answer": 1,
+              "tests": "m7-21"
+            },
+            {
+              "id": "wp1",
+              "ask": "৭ দিনে ১ সপ্তাহ হয়। ৮ সপ্তাহে কত দিন?",
+              "options": [
+                {
+                  "label": "৫৮"
+                },
+                {
+                  "label": "৩৬"
+                },
+                {
+                  "label": "৫৬"
+                }
+              ],
+              "answer": 2,
+              "explain": "৭×৮=৫৬।"
+            },
+            {
+              "id": "x3",
+              "ask": "৭ × ৩ = ?",
+              "options": [
+                {
+                  "label": "৪০"
+                },
+                {
+                  "label": "২১"
+                },
+                {
+                  "label": "১৯"
+                }
+              ],
+              "answer": 1,
+              "tests": "m7-21"
+            }
+          ]
+        },
+        {
+          "id": "c3t7-done",
+          "type": "done",
+          "title": "দারুণ হয়েছে!",
+          "say": "তুমি এখন ৭ এর গুণের নামতা জানো!"
+        }
+      ]
+    },
+    {
+      "id": "c3t8",
+      "chapterId": "c3",
+      "number": 8,
+      "title": "৮ এর গুণ",
+      "shape": "arithmetic",
+      "bookPages": [
+        92
+      ],
+      "objective": "৮ এর গুণের নামতা (১ থেকে ১০) বলা এবং ব্যবহার করা।",
+      "minutes": 9,
+      "numbers": [
+        {
+          "id": "m8-8",
+          "value": 8,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 8
+          },
+          "wordBn": "৮",
+          "bookPage": 92
+        },
+        {
+          "id": "m8-16",
+          "value": 16,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 6
+          },
+          "wordBn": "১৬",
+          "bookPage": 92
+        },
+        {
+          "id": "m8-24",
+          "value": 24,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 4
+          },
+          "wordBn": "২৪",
+          "bookPage": 92
+        },
+        {
+          "id": "m8-32",
+          "value": 32,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 2
+          },
+          "wordBn": "৩২",
+          "bookPage": 92
+        },
+        {
+          "id": "m8-40",
+          "value": 40,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 0
+          },
+          "wordBn": "৪০",
+          "bookPage": 92
+        },
+        {
+          "id": "m8-48",
+          "value": 48,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 8
+          },
+          "wordBn": "৪৮",
+          "bookPage": 92
+        },
+        {
+          "id": "m8-56",
+          "value": 56,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 5,
+            "ones": 6
+          },
+          "wordBn": "৫৬",
+          "bookPage": 92
+        },
+        {
+          "id": "m8-64",
+          "value": 64,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 6,
+            "ones": 4
+          },
+          "wordBn": "৬৪",
+          "bookPage": 92
+        },
+        {
+          "id": "m8-72",
+          "value": 72,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 7,
+            "ones": 2
+          },
+          "wordBn": "৭২",
+          "bookPage": 92
+        },
+        {
+          "id": "m8-80",
+          "value": 80,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 8,
+            "ones": 0
+          },
+          "wordBn": "৮০",
+          "bookPage": 92
+        }
+      ],
+      "steps": [
+        {
+          "id": "c3t8-intro",
+          "type": "intro",
+          "title": "৮ এর গুণ",
+          "say": "৫টি বাক্সের প্রতিটিতে ৮টি করে চকলেট আছে। সেখানে কতগুলো চকলেট আছে?",
+          "illustration": "number-8"
+        },
+        {
+          "id": "c3t8-w1",
+          "type": "worked",
+          "bookActivity": "৮ এর গুণের নামতা",
+          "title": "৮ এর গুণের নামতা তৈরি করি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "৮ × ১ = ৮"
+            },
+            {
+              "text": "৮ × ২ = ৮ + ৮ = ১৬"
+            },
+            {
+              "text": "৮ × ৩ = ৮ + ৮ + ৮ = ২৪"
+            },
+            {
+              "text": "৪৮=৮×৬, এটি ৩ এর গুণ ও ৫ এর গুণে ভেঙে দেখানো যায়। ৩×৬=১৮, ৫×৬=৩০, ১৮+৩০=৪৮।"
+            }
+          ]
+        },
+        {
+          "id": "c3t8-table",
+          "type": "table",
+          "bookActivity": "৮ এর গুণের নামতা",
+          "title": "৮ এর গুণের নামতা (১ থেকে ১০)",
+          "rows": [
+            {
+              "id": "row1",
+              "text": "৮ × ১ = ৮",
+              "tests": "m8-8"
+            },
+            {
+              "id": "row2",
+              "text": "৮ × ২ = ১৬",
+              "tests": "m8-16"
+            },
+            {
+              "id": "row3",
+              "text": "৮ × ৩ = ২৪",
+              "tests": "m8-24"
+            },
+            {
+              "id": "row4",
+              "text": "৮ × ৪ = ৩২",
+              "tests": "m8-32"
+            },
+            {
+              "id": "row5",
+              "text": "৮ × ৫ = ৪০",
+              "tests": "m8-40"
+            },
+            {
+              "id": "row6",
+              "text": "৮ × ৬ = ৪৮",
+              "tests": "m8-48"
+            },
+            {
+              "id": "row7",
+              "text": "৮ × ৭ = ৫৬",
+              "tests": "m8-56"
+            },
+            {
+              "id": "row8",
+              "text": "৮ × ৮ = ৬৪",
+              "tests": "m8-64"
+            },
+            {
+              "id": "row9",
+              "text": "৮ × ৯ = ৭২",
+              "tests": "m8-72"
+            },
+            {
+              "id": "row10",
+              "text": "৮ × ১০ = ৮০",
+              "tests": "m8-80"
+            }
+          ]
+        },
+        {
+          "id": "c3t8-game1",
+          "type": "game",
+          "kind": "arithmetic",
+          "bookActivity": "গুণ করি",
+          "title": "গুণ করি",
+          "rounds": [
+            {
+              "id": "g8-10",
+              "ask": "৮ × ১০ = ?",
+              "options": [
+                {
+                  "label": "৮০"
+                },
+                {
+                  "label": "৭৩"
+                },
+                {
+                  "label": "১২"
+                }
+              ],
+              "answer": 0,
+              "hint": "৮ এর গুণের নামতা মনে করো।",
+              "tests": "m8-80"
+            },
+            {
+              "id": "g8-5",
+              "ask": "৮ × ৫ = ?",
+              "options": [
+                {
+                  "label": "৪০"
+                },
+                {
+                  "label": "৩"
+                },
+                {
+                  "label": "৬৬"
+                }
+              ],
+              "answer": 0,
+              "hint": "৮ এর গুণের নামতা মনে করো।",
+              "tests": "m8-40"
+            },
+            {
+              "id": "g8-4",
+              "ask": "৮ × ৪ = ?",
+              "options": [
+                {
+                  "label": "৩২"
+                },
+                {
+                  "label": "৭"
+                },
+                {
+                  "label": "৭৫"
+                }
+              ],
+              "answer": 0,
+              "hint": "৮ এর গুণের নামতা মনে করো।",
+              "tests": "m8-32"
+            },
+            {
+              "id": "g8-6",
+              "ask": "৮ × ৬ = ?",
+              "options": [
+                {
+                  "label": "৪৮"
+                },
+                {
+                  "label": "৭৭"
+                },
+                {
+                  "label": "৫০"
+                }
+              ],
+              "answer": 0,
+              "hint": "৮ এর গুণের নামতা মনে করো।",
+              "tests": "m8-48"
+            },
+            {
+              "id": "g8-9",
+              "ask": "৮ × ৯ = ?",
+              "options": [
+                {
+                  "label": "৭২"
+                },
+                {
+                  "label": "৩"
+                },
+                {
+                  "label": "৪৩"
+                }
+              ],
+              "answer": 0,
+              "hint": "৮ এর গুণের নামতা মনে করো।",
+              "tests": "m8-72"
+            },
+            {
+              "id": "g8-1",
+              "ask": "৮ × ১ = ?",
+              "options": [
+                {
+                  "label": "৮"
+                },
+                {
+                  "label": "২১"
+                },
+                {
+                  "label": "৫০"
+                }
+              ],
+              "answer": 0,
+              "hint": "৮ এর গুণের নামতা মনে করো।",
+              "tests": "m8-8"
+            }
+          ]
+        },
+        {
+          "id": "c3t8-quiz",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "f1",
+              "ask": "৮ × ৩ = ?",
+              "options": [
+                {
+                  "label": "২৪"
+                },
+                {
+                  "label": "১২"
+                },
+                {
+                  "label": "২৮"
+                }
+              ],
+              "answer": 0,
+              "tests": "m8-24"
+            },
+            {
+              "id": "f2",
+              "ask": "৮ × ৭ = ?",
+              "options": [
+                {
+                  "label": "৫৬"
+                },
+                {
+                  "label": "৩০"
+                },
+                {
+                  "label": "১৭"
+                }
+              ],
+              "answer": 0,
+              "tests": "m8-56"
+            },
+            {
+              "id": "f3",
+              "ask": "৮ × ২ = ?",
+              "options": [
+                {
+                  "label": "৫"
+                },
+                {
+                  "label": "১৬"
+                },
+                {
+                  "label": "৬০"
+                }
+              ],
+              "answer": 1,
+              "tests": "m8-16"
+            },
+            {
+              "id": "wp1",
+              "ask": "৫টি বাক্সের প্রতিটিতে ৮টি করে চকলেট আছে। সেখানে কতগুলো চকলেট আছে?",
+              "options": [
+                {
+                  "label": "১৯"
+                },
+                {
+                  "label": "৪০"
+                },
+                {
+                  "label": "৪২"
+                }
+              ],
+              "answer": 1,
+              "explain": "৮×৫=৪০।"
+            },
+            {
+              "id": "wp2",
+              "ask": "একটি শ্রেণিকক্ষে প্রতিটি দলে ৮ জন করে শিক্ষার্থী আছে। যদি ৯টি দল থাকে, তবে সেখানে কতজন শিক্ষার্থী থাকবে?",
+              "options": [
+                {
+                  "label": "৭২"
+                },
+                {
+                  "label": "২০"
+                },
+                {
+                  "label": "৮৬"
+                }
+              ],
+              "answer": 0,
+              "explain": "৮×৯=৭২।"
+            }
+          ]
+        },
+        {
+          "id": "c3t8-done",
+          "type": "done",
+          "title": "দারুণ হয়েছে!",
+          "say": "তুমি এখন ৮ এর গুণের নামতা জানো!"
+        }
+      ]
+    },
+    {
+      "id": "c3t9",
+      "chapterId": "c3",
+      "number": 9,
+      "title": "৯ এর গুণ",
+      "shape": "arithmetic",
+      "bookPages": [
+        93
+      ],
+      "objective": "৯ এর গুণের নামতা (১ থেকে ১০) বলা এবং ব্যবহার করা।",
+      "minutes": 9,
+      "numbers": [
+        {
+          "id": "m9-9",
+          "value": 9,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 0,
+            "ones": 9
+          },
+          "wordBn": "৯",
+          "bookPage": 93
+        },
+        {
+          "id": "m9-18",
+          "value": 18,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 8
+          },
+          "wordBn": "১৮",
+          "bookPage": 93
+        },
+        {
+          "id": "m9-27",
+          "value": 27,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 7
+          },
+          "wordBn": "২৭",
+          "bookPage": 93
+        },
+        {
+          "id": "m9-36",
+          "value": 36,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 6
+          },
+          "wordBn": "৩৬",
+          "bookPage": 93
+        },
+        {
+          "id": "m9-45",
+          "value": 45,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 5
+          },
+          "wordBn": "৪৫",
+          "bookPage": 93
+        },
+        {
+          "id": "m9-54",
+          "value": 54,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 5,
+            "ones": 4
+          },
+          "wordBn": "৫৪",
+          "bookPage": 93
+        },
+        {
+          "id": "m9-63",
+          "value": 63,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 6,
+            "ones": 3
+          },
+          "wordBn": "৬৩",
+          "bookPage": 93
+        },
+        {
+          "id": "m9-72",
+          "value": 72,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 7,
+            "ones": 2
+          },
+          "wordBn": "৭২",
+          "bookPage": 93
+        },
+        {
+          "id": "m9-81",
+          "value": 81,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 8,
+            "ones": 1
+          },
+          "wordBn": "৮১",
+          "bookPage": 93
+        },
+        {
+          "id": "m9-90",
+          "value": 90,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 9,
+            "ones": 0
+          },
+          "wordBn": "৯০",
+          "bookPage": 93
+        }
+      ],
+      "steps": [
+        {
+          "id": "c3t9-intro",
+          "type": "intro",
+          "title": "৯ এর গুণ",
+          "say": "প্রতিটি ঝুড়িতে ৯টি করে রুটি রাখা যায়। এরকম ৭টি ঝুড়িতে কতগুলো রুটি রাখা যায়?",
+          "illustration": "number-9"
+        },
+        {
+          "id": "c3t9-w1",
+          "type": "worked",
+          "bookActivity": "৯ এর গুণের নামতা",
+          "title": "৯ এর গুণের নামতা তৈরি করি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "৯ × ১ = ৯"
+            },
+            {
+              "text": "৯ × ২ = ৯ + ৯ = ১৮"
+            },
+            {
+              "text": "৯ × ৩ = ৯ + ৯ + ৯ = ২৭"
+            },
+            {
+              "text": "৯×৯=৮১, এটি ২, ৩ ও ৪ এর গুণে ভেঙে দেখানো যায়। ২×৯=১৮, ৩×৯=২৭, ৪×৯=৩৬, ১৮+২৭+৩৬=৮১।"
+            }
+          ]
+        },
+        {
+          "id": "c3t9-table",
+          "type": "table",
+          "bookActivity": "৯ এর গুণের নামতা",
+          "title": "৯ এর গুণের নামতা (১ থেকে ১০)",
+          "rows": [
+            {
+              "id": "row1",
+              "text": "৯ × ১ = ৯",
+              "tests": "m9-9"
+            },
+            {
+              "id": "row2",
+              "text": "৯ × ২ = ১৮",
+              "tests": "m9-18"
+            },
+            {
+              "id": "row3",
+              "text": "৯ × ৩ = ২৭",
+              "tests": "m9-27"
+            },
+            {
+              "id": "row4",
+              "text": "৯ × ৪ = ৩৬",
+              "tests": "m9-36"
+            },
+            {
+              "id": "row5",
+              "text": "৯ × ৫ = ৪৫",
+              "tests": "m9-45"
+            },
+            {
+              "id": "row6",
+              "text": "৯ × ৬ = ৫৪",
+              "tests": "m9-54"
+            },
+            {
+              "id": "row7",
+              "text": "৯ × ৭ = ৬৩",
+              "tests": "m9-63"
+            },
+            {
+              "id": "row8",
+              "text": "৯ × ৮ = ৭২",
+              "tests": "m9-72"
+            },
+            {
+              "id": "row9",
+              "text": "৯ × ৯ = ৮১",
+              "tests": "m9-81"
+            },
+            {
+              "id": "row10",
+              "text": "৯ × ১০ = ৯০",
+              "tests": "m9-90"
+            }
+          ]
+        },
+        {
+          "id": "c3t9-game1",
+          "type": "game",
+          "kind": "arithmetic",
+          "bookActivity": "গুণ করি",
+          "title": "গুণ করি",
+          "rounds": [
+            {
+              "id": "g9-7",
+              "ask": "৯ × ৭ = ?",
+              "options": [
+                {
+                  "label": "৭৮"
+                },
+                {
+                  "label": "৬৩"
+                },
+                {
+                  "label": "৮৭"
+                }
+              ],
+              "answer": 1,
+              "hint": "৯ এর গুণের নামতা মনে করো।",
+              "tests": "m9-63"
+            },
+            {
+              "id": "g9-10",
+              "ask": "৯ × ১০ = ?",
+              "options": [
+                {
+                  "label": "৭৫"
+                },
+                {
+                  "label": "৯০"
+                },
+                {
+                  "label": "৫১"
+                }
+              ],
+              "answer": 1,
+              "hint": "৯ এর গুণের নামতা মনে করো।",
+              "tests": "m9-90"
+            },
+            {
+              "id": "g9-3",
+              "ask": "৯ × ৩ = ?",
+              "options": [
+                {
+                  "label": "২৭"
+                },
+                {
+                  "label": "৪৪"
+                },
+                {
+                  "label": "৩"
+                }
+              ],
+              "answer": 0,
+              "hint": "৯ এর গুণের নামতা মনে করো।",
+              "tests": "m9-27"
+            },
+            {
+              "id": "g9-1",
+              "ask": "৯ × ১ = ?",
+              "options": [
+                {
+                  "label": "৮৩"
+                },
+                {
+                  "label": "৯"
+                },
+                {
+                  "label": "৭৯"
+                }
+              ],
+              "answer": 1,
+              "hint": "৯ এর গুণের নামতা মনে করো।",
+              "tests": "m9-9"
+            },
+            {
+              "id": "g9-5",
+              "ask": "৯ × ৫ = ?",
+              "options": [
+                {
+                  "label": "৪৫"
+                },
+                {
+                  "label": "১৪"
+                },
+                {
+                  "label": "১৬"
+                }
+              ],
+              "answer": 0,
+              "hint": "৯ এর গুণের নামতা মনে করো।",
+              "tests": "m9-45"
+            },
+            {
+              "id": "g9-4",
+              "ask": "৯ × ৪ = ?",
+              "options": [
+                {
+                  "label": "৩৬"
+                },
+                {
+                  "label": "৯"
+                },
+                {
+                  "label": "৭৮"
+                }
+              ],
+              "answer": 0,
+              "hint": "৯ এর গুণের নামতা মনে করো।",
+              "tests": "m9-36"
+            }
+          ]
+        },
+        {
+          "id": "c3t9-quiz",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "f1",
+              "ask": "৯ × ২ = ?",
+              "options": [
+                {
+                  "label": "১৮"
+                },
+                {
+                  "label": "৮৩"
+                },
+                {
+                  "label": "৪৫"
+                }
+              ],
+              "answer": 0,
+              "tests": "m9-18"
+            },
+            {
+              "id": "f2",
+              "ask": "৯ × ৬ = ?",
+              "options": [
+                {
+                  "label": "২৪"
+                },
+                {
+                  "label": "৬৯"
+                },
+                {
+                  "label": "৫৪"
+                }
+              ],
+              "answer": 2,
+              "tests": "m9-54"
+            },
+            {
+              "id": "f3",
+              "ask": "৯ × ৯ = ?",
+              "options": [
+                {
+                  "label": "৮১"
+                },
+                {
+                  "label": "৭৭"
+                },
+                {
+                  "label": "৩৩"
+                }
+              ],
+              "answer": 0,
+              "tests": "m9-81"
+            },
+            {
+              "id": "wp1",
+              "ask": "প্রতিটি ঝুড়িতে ৯টি করে রুটি রাখা যায়। এরকম ৭টি ঝুড়িতে কতগুলো রুটি রাখা যায়?",
+              "options": [
+                {
+                  "label": "১৪"
+                },
+                {
+                  "label": "৬৩"
+                },
+                {
+                  "label": "৬"
+                }
+              ],
+              "answer": 1,
+              "explain": "৯×৭=৬৩।"
+            },
+            {
+              "id": "wp2",
+              "ask": "রফিক একদিনে একটি বইয়ের ৯ পৃষ্ঠা পড়ে। সে ৮ দিনে কত পৃষ্ঠা পড়ে?",
+              "options": [
+                {
+                  "label": "৭৮"
+                },
+                {
+                  "label": "২২"
+                },
+                {
+                  "label": "৭২"
+                }
+              ],
+              "answer": 2,
+              "explain": "৯×৮=৭২।"
+            }
+          ]
+        },
+        {
+          "id": "c3t9-done",
+          "type": "done",
+          "title": "দারুণ হয়েছে!",
+          "say": "তুমি এখন ৯ এর গুণের নামতা জানো!"
+        }
+      ]
+    },
+    {
+      "id": "c3t10",
+      "chapterId": "c3",
+      "number": 10,
+      "title": "১০ এর গুণ",
+      "shape": "arithmetic",
+      "bookPages": [
+        94
+      ],
+      "objective": "১০ এর গুণের নামতা (১ থেকে ১০) বলা এবং ব্যবহার করা।",
+      "minutes": 9,
+      "numbers": [
+        {
+          "id": "m10-10",
+          "value": 10,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 1,
+            "ones": 0
+          },
+          "wordBn": "১০",
+          "bookPage": 94
+        },
+        {
+          "id": "m10-20",
+          "value": 20,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 2,
+            "ones": 0
+          },
+          "wordBn": "২০",
+          "bookPage": 94
+        },
+        {
+          "id": "m10-30",
+          "value": 30,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 3,
+            "ones": 0
+          },
+          "wordBn": "৩০",
+          "bookPage": 94
+        },
+        {
+          "id": "m10-40",
+          "value": 40,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 4,
+            "ones": 0
+          },
+          "wordBn": "৪০",
+          "bookPage": 94
+        },
+        {
+          "id": "m10-50",
+          "value": 50,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 5,
+            "ones": 0
+          },
+          "wordBn": "৫০",
+          "bookPage": 94
+        },
+        {
+          "id": "m10-60",
+          "value": 60,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 6,
+            "ones": 0
+          },
+          "wordBn": "৬০",
+          "bookPage": 94
+        },
+        {
+          "id": "m10-70",
+          "value": 70,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 7,
+            "ones": 0
+          },
+          "wordBn": "৭০",
+          "bookPage": 94
+        },
+        {
+          "id": "m10-80",
+          "value": 80,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 8,
+            "ones": 0
+          },
+          "wordBn": "৮০",
+          "bookPage": 94
+        },
+        {
+          "id": "m10-90",
+          "value": 90,
+          "blocks": {
+            "hundreds": 0,
+            "tens": 9,
+            "ones": 0
+          },
+          "wordBn": "৯০",
+          "bookPage": 94
+        },
+        {
+          "id": "m10-100",
+          "value": 100,
+          "blocks": {
+            "hundreds": 1,
+            "tens": 0,
+            "ones": 0
+          },
+          "wordBn": "১০০",
+          "bookPage": 94
+        }
+      ],
+      "steps": [
+        {
+          "id": "c3t10-intro",
+          "type": "intro",
+          "title": "১০ এর গুণ",
+          "say": "একজন মানুষের দুই হাতে মোট ১০টি আঙুল আছে। এরকম ৭ জন মানুষের হাতে কতটি আঙুল রয়েছে?",
+          "illustration": "number-10"
+        },
+        {
+          "id": "c3t10-w1",
+          "type": "worked",
+          "bookActivity": "১০ এর গুণের নামতা",
+          "title": "১০ এর গুণের নামতা তৈরি করি",
+          "source": "textbook",
+          "lines": [
+            {
+              "text": "১০ × ১ = ১০"
+            },
+            {
+              "text": "১০ × ২ = ১০ + ১০ = ২০"
+            },
+            {
+              "text": "১০ × ৩ = ১০ + ১০ + ১০ = ৩০"
+            }
+          ]
+        },
+        {
+          "id": "c3t10-table",
+          "type": "table",
+          "bookActivity": "১০ এর গুণের নামতা",
+          "title": "১০ এর গুণের নামতা (১ থেকে ১০)",
+          "rows": [
+            {
+              "id": "row1",
+              "text": "১০ × ১ = ১০",
+              "tests": "m10-10"
+            },
+            {
+              "id": "row2",
+              "text": "১০ × ২ = ২০",
+              "tests": "m10-20"
+            },
+            {
+              "id": "row3",
+              "text": "১০ × ৩ = ৩০",
+              "tests": "m10-30"
+            },
+            {
+              "id": "row4",
+              "text": "১০ × ৪ = ৪০",
+              "tests": "m10-40"
+            },
+            {
+              "id": "row5",
+              "text": "১০ × ৫ = ৫০",
+              "tests": "m10-50"
+            },
+            {
+              "id": "row6",
+              "text": "১০ × ৬ = ৬০",
+              "tests": "m10-60"
+            },
+            {
+              "id": "row7",
+              "text": "১০ × ৭ = ৭০",
+              "tests": "m10-70"
+            },
+            {
+              "id": "row8",
+              "text": "১০ × ৮ = ৮০",
+              "tests": "m10-80"
+            },
+            {
+              "id": "row9",
+              "text": "১০ × ৯ = ৯০",
+              "tests": "m10-90"
+            },
+            {
+              "id": "row10",
+              "text": "১০ × ১০ = ১০০",
+              "tests": "m10-100"
+            }
+          ]
+        },
+        {
+          "id": "c3t10-game1",
+          "type": "game",
+          "kind": "arithmetic",
+          "bookActivity": "গুণ করি",
+          "title": "গুণ করি",
+          "rounds": [
+            {
+              "id": "g10-1",
+              "ask": "১০ × ১ = ?",
+              "options": [
+                {
+                  "label": "৮৩"
+                },
+                {
+                  "label": "১০"
+                },
+                {
+                  "label": "৭"
+                }
+              ],
+              "answer": 1,
+              "hint": "১০ এর গুণের নামতা মনে করো।",
+              "tests": "m10-10"
+            },
+            {
+              "id": "g10-9",
+              "ask": "১০ × ৯ = ?",
+              "options": [
+                {
+                  "label": "৩৩"
+                },
+                {
+                  "label": "৯৯"
+                },
+                {
+                  "label": "৯০"
+                }
+              ],
+              "answer": 2,
+              "hint": "১০ এর গুণের নামতা মনে করো।",
+              "tests": "m10-90"
+            },
+            {
+              "id": "g10-7",
+              "ask": "১০ × ৭ = ?",
+              "options": [
+                {
+                  "label": "৭০"
+                },
+                {
+                  "label": "৮১"
+                },
+                {
+                  "label": "৪১"
+                }
+              ],
+              "answer": 0,
+              "hint": "১০ এর গুণের নামতা মনে করো।",
+              "tests": "m10-70"
+            },
+            {
+              "id": "g10-5",
+              "ask": "১০ × ৫ = ?",
+              "options": [
+                {
+                  "label": "৭"
+                },
+                {
+                  "label": "৫০"
+                },
+                {
+                  "label": "১৭"
+                }
+              ],
+              "answer": 1,
+              "hint": "১০ এর গুণের নামতা মনে করো।",
+              "tests": "m10-50"
+            },
+            {
+              "id": "g10-10",
+              "ask": "১০ × ১০ = ?",
+              "options": [
+                {
+                  "label": "১০০"
+                },
+                {
+                  "label": "৮৮"
+                },
+                {
+                  "label": "২৭"
+                }
+              ],
+              "answer": 0,
+              "hint": "১০ এর গুণের নামতা মনে করো।",
+              "tests": "m10-100"
+            },
+            {
+              "id": "g10-3",
+              "ask": "১০ × ৩ = ?",
+              "options": [
+                {
+                  "label": "২০"
+                },
+                {
+                  "label": "৩০"
+                },
+                {
+                  "label": "৬৩"
+                }
+              ],
+              "answer": 1,
+              "hint": "১০ এর গুণের নামতা মনে করো।",
+              "tests": "m10-30"
+            }
+          ]
+        },
+        {
+          "id": "c3t10-quiz",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "f1",
+              "ask": "১০ × ২ = ?",
+              "options": [
+                {
+                  "label": "২০"
+                },
+                {
+                  "label": "৩১"
+                },
+                {
+                  "label": "৫৭"
+                }
+              ],
+              "answer": 0,
+              "tests": "m10-20"
+            },
+            {
+              "id": "f2",
+              "ask": "১০ × ৪ = ?",
+              "options": [
+                {
+                  "label": "৬০"
+                },
+                {
+                  "label": "৯৪"
+                },
+                {
+                  "label": "৪০"
+                }
+              ],
+              "answer": 2,
+              "tests": "m10-40"
+            },
+            {
+              "id": "f3",
+              "ask": "১০ × ৬ = ?",
+              "options": [
+                {
+                  "label": "৬০"
+                },
+                {
+                  "label": "৬১"
+                },
+                {
+                  "label": "২৬"
+                }
+              ],
+              "answer": 0,
+              "tests": "m10-60"
+            },
+            {
+              "id": "wp1",
+              "ask": "একজন মানুষের দুই হাতে মোট ১০টি আঙুল আছে। এরকম ৭ জন মানুষের হাতে কতটি আঙুল রয়েছে?",
+              "options": [
+                {
+                  "label": "৫৪"
+                },
+                {
+                  "label": "৬৯"
+                },
+                {
+                  "label": "৭০"
+                }
+              ],
+              "answer": 2,
+              "explain": "১০×৭=৭০।"
+            },
+            {
+              "id": "x2",
+              "ask": "১০ × ২ = ?",
+              "options": [
+                {
+                  "label": "২০"
+                },
+                {
+                  "label": "৬১"
+                },
+                {
+                  "label": "৮৪"
+                }
+              ],
+              "answer": 0,
+              "tests": "m10-20"
+            }
+          ]
+        },
+        {
+          "id": "c3t10-done",
+          "type": "done",
+          "title": "দারুণ হয়েছে!",
+          "say": "তুমি এখন ১০ এর গুণের নামতা জানো!"
+        }
+      ]
+    }
+  ]
+}
