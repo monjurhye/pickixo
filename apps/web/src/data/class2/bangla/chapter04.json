@@ -1,0 +1,595 @@
+{
+  "id": "ch04",
+  "number": 4,
+  "title": "গল্প শুনি",
+  "colour": "accent",
+  "icon": "story",
+  "lessons": [
+    {
+      "id": "paath-04",
+      "chapterId": "ch04",
+      "number": 4,
+      "title": "ডালিমকুমার ও কঙ্কাবতী",
+      "shape": "story",
+      "bookPages": [7, 8, 9, 10, 11],
+      "objective": "রূপকথার গল্পটি ধারাবাহিকভাবে বলতে পারবে।",
+      "minutes": 12,
+      "words": [
+        {
+          "id": "w-rajputro",
+          "word": "রাজপুত্র",
+          "meaning": "রাজার ছেলে",
+          "meaningSource": "enrichment",
+          "bookPage": 7,
+          "illustration": "horse-winged",
+          "audio": null
+        },
+        {
+          "id": "w-pokkhiraj",
+          "word": "পক্ষিরাজ",
+          "meaning": "ডানাওয়ালা উড়ন্ত ঘোড়া",
+          "meaningSource": "enrichment",
+          "bookPage": 7,
+          "illustration": "horse-winged",
+          "audio": null
+        },
+        {
+          "id": "w-bondi",
+          "word": "বন্দি",
+          "meaning": "আটকে রাখা হয়েছে এমন",
+          "meaningSource": "enrichment",
+          "bookPage": 8,
+          "illustration": "house",
+          "audio": null
+        },
+        {
+          "id": "w-torbari",
+          "word": "তরবারি",
+          "meaning": "যুদ্ধের ধারালো অস্ত্র",
+          "meaningSource": "enrichment",
+          "bookPage": 10,
+          "illustration": "sword",
+          "audio": null
+        },
+        {
+          "id": "w-bhromor",
+          "word": "ভ্রমর",
+          "meaning": "কালো রঙের বড়ো মৌমাছি",
+          "meaningSource": "enrichment",
+          "bookPage": 11,
+          "illustration": "bee-swarm",
+          "audio": null
+        }
+      ],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "ডালিমকুমার ও কঙ্কাবতী",
+          "say": "এক রূপকথার গল্প। চলো শুনি।",
+          "illustration": "horse-winged"
+        },
+        {
+          "id": "s2",
+          "type": "story",
+          "title": "গল্পটি শুনি",
+          "bookActivity": "গল্প",
+          "source": "textbook",
+          "scenes": [
+            { "id": "sc01", "text": "এক ছিল রাজপুত্র। তার নাম ডালিমকুমার।", "illustration": "horse-winged", "audio": null },
+            { "id": "sc02", "text": "তার ছিল এক পক্ষিরাজ ঘোড়া। ঘোড়ায় চড়ে সে দেশ-বিদেশে ঘুরে বেড়াত।", "illustration": "horse-winged", "audio": null },
+            { "id": "sc03", "text": "একবার ঘুরতে ঘুরতে অচিনপুরে চলে এলো। সে অনেক ক্লান্ত বোধ করল। সে গাছের ছায়ায় ঘুমিয়ে পড়ল।", "illustration": "tree", "audio": null },
+            { "id": "sc04", "text": "ওই গাছে থাকত ব্যাঙ্গামা আর ব্যাঙ্গামি। তারা কথা বলছিল।", "illustration": "bird", "audio": null },
+            { "id": "sc05", "text": "ডালিমকুমারের ঘুম ভেঙে গেল। পাখিরা বলছিল — রাজকন্যা কঙ্কাবতীর কী হয়েছে জানো?", "illustration": "bird", "audio": null },
+            { "id": "sc06", "text": "সে এখন রাক্ষসপুরীতে বন্দি। রাক্ষসপুরী অনেক দূরে। সাত সাগর তেরো নদীর ওপারে।", "illustration": "river", "audio": null },
+            { "id": "sc07", "text": "কঙ্কাবতীকে বাঁচাতে হবে — ডালিমকুমার সাত সাগর তেরো নদী পার হলো।", "illustration": "horse-winged", "audio": null },
+            { "id": "sc08", "text": "তারপর রাক্ষসপুরীতে পৌঁছাল।", "illustration": "house", "audio": null },
+            { "id": "sc09", "text": "তখন রাজকন্যা কঙ্কাবতী সোনার পালঙ্কে ঘুমিয়ে আছে। কিছুতেই তার ঘুম ভাঙে না।", "illustration": "house", "audio": null },
+            { "id": "sc10", "text": "ডালিমকুমার দেখতে পেল কঙ্কাবতীর মাথার কাছে রুপার কাঠি। আর পায়ের কাছে সোনার কাঠি।", "illustration": "house", "audio": null },
+            { "id": "sc11", "text": "তখন ডালিমকুমার মাথার কাছে সোনার কাঠি নিয়ে এলো। আর পায়ের কাছে নিয়ে এলো রুপার কাঠি।", "illustration": "house", "audio": null },
+            { "id": "sc12", "text": "অমনি কঙ্কাবতী জেগে উঠল। বলল — কী সর্বনাশ! এখনি তো রাক্ষস চলে আসবে।", "illustration": "house", "audio": null },
+            { "id": "sc13", "text": "ঠিক তখনি রাক্ষস ঘরে ঢুকল। হাঁউ মাঁউ খাঁউ!", "illustration": "house", "audio": null },
+            { "id": "sc14", "text": "সাথে সাথে ডালিমকুমার তরবারি বের করল।", "illustration": "sword", "audio": null },
+            { "id": "sc15", "text": "কঙ্কাবতী বলল, এভাবে রাক্ষস মারা যাবে না! রাক্ষসের প্রাণ আছে একটা টিনের কৌটার ভেতরে।", "illustration": "pot", "audio": null },
+            { "id": "sc16", "text": "ডালিমকুমার জানে না সেই কৌটা কোথায়।", "illustration": "pot", "audio": null },
+            { "id": "sc17", "text": "কঙ্কাবতীর ছিল অনেক সাহস। সে বলল — তোমার তরবারি আমার কাছে দাও।", "illustration": "sword", "audio": null },
+            { "id": "sc18", "text": "সে তখন পালঙ্কের নিচ থেকে একটা কৌটা বের করল।", "illustration": "pot", "audio": null },
+            { "id": "sc19", "text": "কৌটা খুলতেই বেরিয়ে এলো একটা ভ্রমর। তখন কঙ্কাবতী তরবারি দিয়ে ভ্রমরটাকে কেটে ফেলল।", "illustration": "bee-swarm", "audio": null },
+            { "id": "sc20", "text": "তারপর? তারপর ডালিমকুমার ও কঙ্কাবতী বেরিয়ে এলো রাক্ষসপুরী থেকে।", "illustration": "horse-winged", "audio": null }
+          ]
+        },
+        {
+          "id": "s3",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-rajputro", "w-pokkhiraj", "w-bondi", "w-torbari", "w-bhromor"]
+        },
+        {
+          "id": "s4",
+          "type": "game",
+          "kind": "order-the-scenes",
+          "title": "গল্পের ক্রম সাজাই",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "গল্পের শুরুতে কী হয়?",
+              "illustration": "horse-winged",
+              "options": [
+                { "label": "ডালিমকুমার ঘোড়ায় চড়ে ঘুরে বেড়ায়" },
+                { "label": "রাক্ষস ঘরে ঢোকে" },
+                { "label": "কঙ্কাবতী জেগে ওঠে" }
+              ],
+              "answer": 0,
+              "hint": "সবার আগে রাজপুত্রের পরিচয় দেওয়া হয়েছে।",
+              "tests": "w-pokkhiraj"
+            },
+            {
+              "id": "g2",
+              "ask": "গাছের নিচে ঘুমানোর পর কী হলো?",
+              "illustration": "bird",
+              "options": [
+                { "label": "রাক্ষস এলো" },
+                { "label": "দুটি পাখি কথা বলছিল" },
+                { "label": "কৌটা খুলল" }
+              ],
+              "answer": 1,
+              "hint": "ব্যাঙ্গামা আর ব্যাঙ্গামি।"
+            },
+            {
+              "id": "g3",
+              "ask": "কৌটা খুলতেই কী বেরিয়ে এলো?",
+              "illustration": "bee-swarm",
+              "options": [{ "label": "একটি পাখি" }, { "label": "একটি সাপ" }, { "label": "একটি ভ্রমর" }],
+              "answer": 2,
+              "hint": "কালো রঙের একটি বড়ো মৌমাছি।",
+              "tests": "w-bhromor"
+            }
+          ]
+        },
+        {
+          "id": "s5",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "রাজপুত্রের নাম কী?",
+              "illustration": "horse-winged",
+              "options": [{ "label": "ডালিমকুমার" }, { "label": "রাজু" }, { "label": "কঙ্কাবতী" }],
+              "answer": 0,
+              "explain": "এক ছিল রাজপুত্র। তার নাম ডালিমকুমার।",
+              "tests": "w-rajputro"
+            },
+            {
+              "id": "q2",
+              "ask": "কঙ্কাবতী কোথায় বন্দি ছিল?",
+              "illustration": "house",
+              "options": [{ "label": "অচিনপুরে" }, { "label": "রাক্ষসপুরীতে" }, { "label": "বনে" }],
+              "answer": 1,
+              "explain": "সে এখন রাক্ষসপুরীতে বন্দি — পাখিরা তাই বলেছিল।",
+              "tests": "w-bondi"
+            },
+            {
+              "id": "q3",
+              "ask": "রাক্ষসের প্রাণ কোথায় ছিল?",
+              "illustration": "pot",
+              "options": [
+                { "label": "একটি টিনের কৌটার ভেতরে" },
+                { "label": "গাছের ভেতরে" },
+                { "label": "নদীর নিচে" }
+              ],
+              "answer": 0,
+              "explain": "কঙ্কাবতী বলল, রাক্ষসের প্রাণ আছে একটা টিনের কৌটার ভেতরে।"
+            },
+            {
+              "id": "q4",
+              "ask": "রাক্ষসকে শেষ পর্যন্ত কে শেষ করল?",
+              "illustration": "sword",
+              "options": [{ "label": "ডালিমকুমার" }, { "label": "ব্যাঙ্গামা" }, { "label": "কঙ্কাবতী" }],
+              "answer": 2,
+              "explain": "কঙ্কাবতী তরবারি দিয়ে ভ্রমরটাকে কেটে ফেলল। তার ছিল অনেক সাহস।",
+              "tests": "w-torbari"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "done",
+          "title": "পাঠ ৪ শেষ!",
+          "say": "সাহস থাকলে বিপদ জয় করা যায়। দারুণ পড়েছ!"
+        }
+      ]
+    },
+    {
+      "id": "paath-08",
+      "chapterId": "ch04",
+      "number": 8,
+      "title": "সিংহ আর ইঁদুরের গল্প",
+      "shape": "story",
+      "bookPages": [18, 19],
+      "objective": "গল্পটি পড়ে বুঝতে ও ছোটোদেরও শক্তি আছে তা বলতে পারবে।",
+      "minutes": 11,
+      "words": [
+        {
+          "id": "w-punchke",
+          "word": "পুঁচকে",
+          "meaning": "ছোট",
+          "meaningSource": "textbook",
+          "bookPage": 19,
+          "illustration": "mouse",
+          "audio": null
+        },
+        {
+          "id": "w-gorjon",
+          "word": "গর্জন",
+          "meaning": "সিংহের জোরে ডাক",
+          "meaningSource": "enrichment",
+          "bookPage": 19,
+          "illustration": "lion",
+          "audio": null
+        },
+        {
+          "id": "w-fnad",
+          "word": "ফাঁদ",
+          "meaning": "যাতে আটকা পড়ে যায়",
+          "meaningSource": "enrichment",
+          "bookPage": 19,
+          "illustration": "net",
+          "audio": null
+        },
+        {
+          "id": "w-upokar",
+          "word": "উপকার",
+          "meaning": "ভালো কিছু করে দেওয়া",
+          "meaningSource": "enrichment",
+          "bookPage": 19,
+          "illustration": "sign-together",
+          "audio": null
+        }
+      ],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "সিংহ আর ইঁদুরের গল্প",
+          "say": "এক বনে এক বড়ো সিংহ বাস করত। চলো গল্পটি শুনি।",
+          "illustration": "lion"
+        },
+        {
+          "id": "s2",
+          "type": "read",
+          "title": "গল্পের শুরু",
+          "bookActivity": "গল্প",
+          "source": "textbook",
+          "illustration": "lion",
+          "paragraphs": [
+            "এক বনে এক বড়ো সিংহ বাস করত। একদিন সে ঘুমিয়ে ছিল। গভীর ঘুম। তখন তার পাশে একটি ছোটো ইঁদুর খেলা করছিল। খেলা করতে করতে সে সিংহের নাকের ভিতর ঢুকে গেল। সাথে সাথে সিংহের ঘুম ভেঙে গেল। সে খুব রেগে গেল। তারপর থাবা দিয়ে খপ করে ইঁদুরটাকে ধরে ফেলল।",
+            "সিংহ বলল, আমি হলাম বনের রাজা। তোর এত বড়ো সাহস, আমার ঘুম ভাঙিয়ে দিস! এখনি তোকে মেরে ফেলব।"
+          ]
+        },
+        {
+          "id": "s3",
+          "type": "read",
+          "title": "গল্পের শেষ",
+          "bookActivity": "গল্প",
+          "source": "textbook",
+          "illustration": "mouse",
+          "paragraphs": [
+            "ইঁদুরটি ভয়ে কাঁপতে কাঁপতে বলল, মহারাজ, আমার ভুল হয়েছে। আমি ছোটো। আমাকে মারবেন না। একদিন আমি আপনার উপকারও করতে পারি।",
+            "এই কথা শুনে সিংহটি হাসতে হাসতে বলল, তুই এত পুঁচকে জীব! তুই আমার কী উপকার করবি?",
+            "এই বলে সে ইঁদুরটাকে ছেড়ে দিল।",
+            "এরপর অনেকদিন চলে গেছে। একদিন ইঁদুরটি সিংহের গর্জন শুনতে পেল। সে ভাবল, নিশ্চয়ই সিংহটা কোনো বিপদে পড়েছে। সে ছুটতে ছুটতে সেখানে গেল। গিয়ে দেখল, সিংহটি একটা জালের ফাঁদে আটকা পড়েছে।",
+            "সে সিংহকে বলল, মহারাজ ভয় পাবেন না। আমি এখনই জাল কেটে দিচ্ছি।",
+            "এই বলে সে জালের দড়িগুলো কুট কুট করে কেটে দিল। আর সাথে সাথে সিংহটি মুক্তি পেল।",
+            "মুক্তি পেয়ে সিংহটি খুব খুশি হলো। সে ইঁদুরকে বলল, ছোটোরাও বড়োদের অনেক উপকার করতে পারে।",
+            "এরপর সিংহ আর ইঁদুর দুজনে খুব ভালো বন্ধু হয়ে গেল।"
+          ]
+        },
+        {
+          "id": "s4",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-punchke", "w-gorjon", "w-fnad", "w-upokar"]
+        },
+        {
+          "id": "s5",
+          "type": "game",
+          "kind": "picture-to-word",
+          "title": "ছবি দেখে বলি",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "বনের রাজা কে?",
+              "illustration": "lion",
+              "options": [{ "label": "সিংহ" }, { "label": "ইঁদুর" }, { "label": "বাঘ" }],
+              "answer": 0,
+              "hint": "সে নিজেই বলেছিল — আমি হলাম বনের রাজা।"
+            },
+            {
+              "id": "g2",
+              "ask": "সিংহ কীসে আটকা পড়েছিল?",
+              "illustration": "net",
+              "options": [{ "label": "গর্তে" }, { "label": "জালের ফাঁদে" }, { "label": "নদীতে" }],
+              "answer": 1,
+              "hint": "দড়ি দিয়ে বোনা একটা জিনিস।",
+              "tests": "w-fnad"
+            },
+            {
+              "id": "g3",
+              "ask": "কে সিংহকে বাঁচাল?",
+              "illustration": "mouse",
+              "options": [{ "label": "ইঁদুর" }, { "label": "শিকারি" }, { "label": "হরিণ" }],
+              "answer": 0,
+              "hint": "যাকে সিংহ পুঁচকে বলেছিল।",
+              "tests": "w-punchke"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "সিংহের ঘুম ভেঙে গেল কেন?",
+              "illustration": "lion",
+              "options": [
+                { "label": "ইঁদুর তার নাকের ভিতর ঢুকে গিয়েছিল" },
+                { "label": "ঝড় হয়েছিল" },
+                { "label": "শিকারি এসেছিল" }
+              ],
+              "answer": 0,
+              "explain": "খেলা করতে করতে ইঁদুরটি সিংহের নাকের ভিতর ঢুকে গিয়েছিল।"
+            },
+            {
+              "id": "q2",
+              "ask": "ইঁদুর কীভাবে সিংহকে বাঁচাল?",
+              "illustration": "net",
+              "options": [
+                { "label": "ডেকে সাহায্য এনে" },
+                { "label": "জালের দড়িগুলো কেটে দিয়ে" },
+                { "label": "লুকিয়ে রেখে" }
+              ],
+              "answer": 1,
+              "explain": "সে জালের দড়িগুলো কুট কুট করে কেটে দিল।",
+              "tests": "w-fnad"
+            },
+            {
+              "id": "q3",
+              "ask": "গল্পটি আমাদের কী শেখায়?",
+              "illustration": "sign-together",
+              "options": [
+                { "label": "ছোটোরাও বড়োদের অনেক উপকার করতে পারে" },
+                { "label": "ছোটোদের কোনো শক্তি নেই" },
+                { "label": "বনে যাওয়া উচিত নয়" }
+              ],
+              "answer": 0,
+              "explain": "সিংহ নিজেই বলল — ছোটোরাও বড়োদের অনেক উপকার করতে পারে।",
+              "tests": "w-upokar"
+            },
+            {
+              "id": "q4",
+              "ask": "শেষে সিংহ আর ইঁদুরের কী হলো?",
+              "illustration": "friends",
+              "options": [{ "label": "শত্রু হলো" }, { "label": "ভালো বন্ধু হলো" }, { "label": "আলাদা হয়ে গেল" }],
+              "answer": 1,
+              "explain": "এরপর সিংহ আর ইঁদুর দুজনে খুব ভালো বন্ধু হয়ে গেল।"
+            }
+          ]
+        },
+        {
+          "id": "s7",
+          "type": "done",
+          "title": "পাঠ ৮ শেষ!",
+          "say": "ছোটোরাও বড়ো উপকার করতে পারে। মনে রেখো!"
+        }
+      ]
+    },
+    {
+      "id": "paath-20",
+      "chapterId": "ch04",
+      "number": 20,
+      "title": "বিড়াল ছানা",
+      "shape": "story",
+      "bookPages": [40, 41, 42],
+      "objective": "গল্পটি পড়ে বুঝতে ও পশুপাখির প্রতি যত্নশীল হতে শিখবে।",
+      "minutes": 12,
+      "words": [
+        {
+          "id": "w-udhao",
+          "word": "উধাও",
+          "meaning": "হারিয়ে যাওয়া",
+          "meaningSource": "textbook",
+          "bookPage": 41,
+          "illustration": "cat-black",
+          "audio": null
+        },
+        {
+          "id": "w-khoto",
+          "word": "ক্ষত",
+          "meaning": "ঘা, আঘাতের দাগ",
+          "meaningSource": "textbook",
+          "bookPage": 41,
+          "illustration": "cat-black",
+          "audio": null
+        },
+        {
+          "id": "w-palon",
+          "word": "পালন",
+          "meaning": "যত্ন করে বাড়িতে রাখা",
+          "meaningSource": "enrichment",
+          "bookPage": 42,
+          "illustration": "cow",
+          "audio": null
+        }
+      ],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "বিড়াল ছানা",
+          "say": "ঝিলি ও মিলি দুই বোন। তাদের দুটি বিড়াল।",
+          "illustration": "cat-white"
+        },
+        {
+          "id": "s2",
+          "type": "read",
+          "title": "দুই বোন, দুটি বিড়াল",
+          "bookActivity": "গল্প",
+          "source": "textbook",
+          "illustration": "cat-white",
+          "paragraphs": [
+            "ঝিলি ও মিলি দুই বোন। তারা দেখতে একই রকম। সবাই ডাকে ঝিলিমিলি। দুজনের দুটি বিড়াল। ঝিলির বিড়াল সাদা। মিলির বিড়াল কালো।",
+            "বিড়াল দুটির খুব বন্ধুত্ব। এক সাথে ঘুরে বেড়ায়। দুষ্টুমি করে। ঝিলি-মিলি স্কুল থেকে ফিরলে দৌড়ে কোলে ওঠে। ওরা খেতে বসলে বিড়াল দুটি পাশে বসে। ঝিলি-মিলি মাছ খেতে দেয়। বাটিতে করে দুধ দেয়। বিড়াল দুটি মজা করে খায়।"
+          ]
+        },
+        {
+          "id": "s3",
+          "type": "read",
+          "title": "কালো বিড়াল উধাও",
+          "bookActivity": "গল্প",
+          "source": "textbook",
+          "illustration": "cat-black",
+          "paragraphs": [
+            "একদিন হঠাৎ করে কালো বিড়ালটা উধাও। ঝিলি-মিলির ভীষণ মন খারাপ। এ-বাড়ি ও-বাড়ি খোঁজ করে। কিন্তু কোথাও নেই। সাদা বিড়াল মন খারাপ করে বসে থাকে। মিলি কাঁদে। ভাবে, কোথায় হারিয়ে গেল বিড়ালটি?",
+            "দুদিন পর। সন্ধ্যাবেলা। হঠাৎ শোনা গেল, মিউ মিউ। ঝিলি-মিলি দৌড়ে এলো। দেখে, বারান্দায় দাঁড়িয়ে আছে কালো বিড়ালটি। দুজন কী খুশি! সাদা বিড়ালও খুশিতে লাফিয়ে উঠল। কিন্তু এ কি! কালো বিড়াল খুঁড়িয়ে খুঁড়িয়ে হাঁটছে কেন?",
+            "মিলি কোলে নিয়ে দেখে বিড়ালটার পায়ে ক্ষত। হয়তো কেউ মেরেছে। মা বললেন, এভাবে কেউ মারে! বাবা বললেন, চিন্তা কোরো না। আমি ওষুধ লাগিয়ে দিচ্ছি।",
+            "কয়েক দিন পর পা ঠিক হয়ে গেল। কালো বিড়াল আবার আগের মতো হাঁটে। দৌড়ে গিয়ে মিলির কোলে ওঠে। ঝিলি-মিলির পাশে বসে থাকে দুটি বিড়াল। মিলি গান গায়—"
+          ]
+        },
+        {
+          "id": "s4",
+          "type": "rhyme",
+          "title": "মিলির গান",
+          "bookActivity": "গান",
+          "source": "textbook",
+          "verses": [
+            ["মিষ্টি বিড়াল ছানা", "দুষ্টুমি তার মানা।", "ঘরের ভেতর নাচে গায়,", "তাই রে না না না না।"]
+          ]
+        },
+        {
+          "id": "s5",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-udhao", "w-khoto", "w-palon"]
+        },
+        {
+          "id": "s6",
+          "type": "game",
+          "kind": "sort-words",
+          "title": "কোন পশু-পাখি বাড়িতে পালন করি?",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "এই প্রাণীটিকে কি মানুষ বাড়িতে পালন করে?",
+              "illustration": "cow",
+              "options": [{ "label": "হ্যাঁ" }, { "label": "না" }],
+              "answer": 0,
+              "hint": "এটি আমাদের দুধ দেয়।",
+              "tests": "w-palon"
+            },
+            {
+              "id": "g2",
+              "ask": "এই প্রাণীটিকে কি মানুষ বাড়িতে পালন করে?",
+              "illustration": "deer",
+              "options": [{ "label": "হ্যাঁ" }, { "label": "না" }],
+              "answer": 1,
+              "hint": "এটি বনে থাকে।"
+            },
+            {
+              "id": "g3",
+              "ask": "এই প্রাণীটিকে কি মানুষ বাড়িতে পালন করে?",
+              "illustration": "duck",
+              "options": [{ "label": "হ্যাঁ" }, { "label": "না" }],
+              "answer": 0,
+              "hint": "এটি পুকুরে সাঁতার কাটে, প্যাঁক প্যাঁক করে ডাকে।"
+            },
+            {
+              "id": "g4",
+              "ask": "এই প্রাণীটিকে কি মানুষ বাড়িতে পালন করে?",
+              "illustration": "tiger",
+              "options": [{ "label": "হ্যাঁ" }, { "label": "না" }],
+              "answer": 1,
+              "hint": "এটি বনের হিংস্র প্রাণী।"
+            },
+            {
+              "id": "g5",
+              "ask": "এই প্রাণীটিকে কি মানুষ বাড়িতে পালন করে?",
+              "illustration": "dog",
+              "options": [{ "label": "হ্যাঁ" }, { "label": "না" }],
+              "answer": 0,
+              "hint": "এটি বাড়ি পাহারা দেয়।"
+            },
+            {
+              "id": "g6",
+              "ask": "এই প্রাণীটিকে কি মানুষ বাড়িতে পালন করে?",
+              "illustration": "fox",
+              "options": [{ "label": "হ্যাঁ" }, { "label": "না" }],
+              "answer": 1,
+              "hint": "এটি বনে থাকে, মুরগি ধরে খায়।"
+            }
+          ]
+        },
+        {
+          "id": "s7",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "গল্পের দুই বোনের নাম কী?",
+              "illustration": "friends",
+              "options": [{ "label": "ঝিলি ও মিলি" }, { "label": "তুলি ও তিথি" }, { "label": "মিতু ও ঝিমিত" }],
+              "answer": 0,
+              "explain": "ঝিলি ও মিলি দুই বোন। সবাই ডাকে ঝিলিমিলি।"
+            },
+            {
+              "id": "q2",
+              "ask": "ঝিলি-মিলির মন খারাপ হয়েছিল কেন?",
+              "illustration": "cat-black",
+              "options": [
+                { "label": "স্কুল বন্ধ ছিল" },
+                { "label": "কালো বিড়ালটা উধাও হয়েছিল" },
+                { "label": "বৃষ্টি হয়েছিল" }
+              ],
+              "answer": 1,
+              "explain": "একদিন হঠাৎ করে কালো বিড়ালটা উধাও হয়ে যায়।",
+              "tests": "w-udhao"
+            },
+            {
+              "id": "q3",
+              "ask": "কালো বিড়ালের কী হয়েছিল?",
+              "illustration": "cat-black",
+              "options": [{ "label": "পায়ে ক্ষত হয়েছিল" }, { "label": "চোখে ব্যথা" }, { "label": "কিছুই না" }],
+              "answer": 0,
+              "explain": "মিলি কোলে নিয়ে দেখে বিড়ালটার পায়ে ক্ষত।",
+              "tests": "w-khoto"
+            },
+            {
+              "id": "q4",
+              "ask": "কালো বিড়ালের পা কীভাবে ঠিক হলো?",
+              "illustration": "baba",
+              "options": [
+                { "label": "নিজে নিজেই" },
+                { "label": "বাবা ওষুধ লাগিয়ে দিলেন" },
+                { "label": "মা ব্যান্ডেজ করলেন" }
+              ],
+              "answer": 1,
+              "explain": "বাবা বললেন, চিন্তা কোরো না। আমি ওষুধ লাগিয়ে দিচ্ছি।"
+            }
+          ]
+        },
+        {
+          "id": "s8",
+          "type": "done",
+          "title": "পাঠ ২০ শেষ!",
+          "say": "পশুপাখির সাথে সবসময় ভালো আচরণ করব। মনে রেখো!"
+        }
+      ]
+    }
+  ]
+}

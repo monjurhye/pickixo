@@ -1,0 +1,418 @@
+{
+  "id": "ch03",
+  "number": 3,
+  "title": "ফলা ও রেফ",
+  "colour": "accent",
+  "icon": "fola",
+  "lessons": [
+    {
+      "id": "paath-12",
+      "chapterId": "ch03",
+      "number": 12,
+      "title": "ফলাচিহ্ন শিখি",
+      "shape": "fola",
+      "bookPages": [23, 24, 25, 26],
+      "objective": "ব-ফলা, ম-ফলা, য-ফলা ও র-ফলা চিনতে ও সেগুলো দিয়ে শব্দ পড়তে পারবে।",
+      "minutes": 12,
+      "words": [
+        {
+          "id": "w-shadhin",
+          "word": "স্বাধীন",
+          "meaning": "নিজের দেশ নিজে চালায় এমন",
+          "meaningSource": "enrichment",
+          "bookPage": 23,
+          "illustration": "flag",
+          "audio": null
+        },
+        {
+          "id": "w-bondhutto",
+          "word": "বন্ধুত্ব",
+          "meaning": "বন্ধুর মতো সম্পর্ক",
+          "meaningSource": "enrichment",
+          "bookPage": 23,
+          "illustration": "friends",
+          "audio": null
+        },
+        {
+          "id": "w-sroron",
+          "word": "স্মরণ",
+          "meaning": "মনে করা",
+          "meaningSource": "enrichment",
+          "bookPage": 24,
+          "illustration": "shaheed-minar",
+          "audio": null
+        },
+        {
+          "id": "w-atmiyo",
+          "word": "আত্মীয়",
+          "meaning": "নিজের পরিবারের বা কাছের লোক",
+          "meaningSource": "enrichment",
+          "bookPage": 24,
+          "illustration": "house",
+          "audio": null
+        },
+        {
+          "id": "w-byoy",
+          "word": "ব্যয়",
+          "meaning": "খরচ",
+          "meaningSource": "enrichment",
+          "bookPage": 25,
+          "illustration": "market",
+          "audio": null
+        },
+        {
+          "id": "w-srom",
+          "word": "শ্রম",
+          "meaning": "পরিশ্রম, খাটুনি",
+          "meaningSource": "enrichment",
+          "bookPage": 26,
+          "illustration": "field",
+          "audio": null
+        }
+      ],
+      "builds": [
+        { "id": "b-sba", "parts": ["স", "ব"], "result": "স্ব", "join": "fola", "bookPage": 23, "example": "স্বাধীন", "exampleSource": "textbook" },
+        { "id": "b-dba", "parts": ["দ", "ব"], "result": "দ্ব", "join": "fola", "bookPage": 23, "example": "দ্বিতীয়", "exampleSource": "textbook" },
+        { "id": "b-tba", "parts": ["ত", "ব"], "result": "ত্ব", "join": "fola", "bookPage": 23, "example": "বন্ধুত্ব", "exampleSource": "textbook" },
+        { "id": "b-sma", "parts": ["স", "ম"], "result": "স্ম", "join": "fola", "bookPage": 24, "example": "স্মরণ", "exampleSource": "textbook" },
+        { "id": "b-dma", "parts": ["দ", "ম"], "result": "দ্ম", "join": "fola", "bookPage": 24, "example": "পদ্মা", "exampleSource": "textbook" },
+        { "id": "b-tma", "parts": ["ত", "ম"], "result": "ত্ম", "join": "fola", "bookPage": 24, "example": "আত্মীয়", "exampleSource": "textbook" },
+        { "id": "b-bya", "parts": ["ব", "য"], "result": "ব্য", "join": "fola", "bookPage": 25, "example": "ব্যয়", "exampleSource": "textbook" },
+        { "id": "b-nya", "parts": ["ন", "য"], "result": "ন্য", "join": "fola", "bookPage": 25, "example": "ধন্যবাদ", "exampleSource": "textbook" },
+        { "id": "b-tya", "parts": ["ত", "য"], "result": "ত্য", "join": "fola", "bookPage": 25, "example": "সত্য", "exampleSource": "textbook" },
+        { "id": "b-shra", "parts": ["শ", "র"], "result": "শ্র", "join": "fola", "bookPage": 26, "example": "শ্রম", "exampleSource": "textbook" },
+        { "id": "b-mra", "parts": ["ম", "র"], "result": "ম্র", "join": "fola", "bookPage": 26, "example": "নম্র", "exampleSource": "textbook" },
+        { "id": "b-dra", "parts": ["দ", "র"], "result": "দ্র", "join": "fola", "bookPage": 26, "example": "ভদ্র", "exampleSource": "textbook" }
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "ফলাচিহ্ন শিখি",
+          "say": "কোনো বর্ণ অন্য বর্ণের নিচে বসলে তাকে ফলা বলে।",
+          "illustration": "flag"
+        },
+        {
+          "id": "s2",
+          "type": "build",
+          "title": "ব-ফলা",
+          "bookActivity": "ব-ফলা",
+          "items": ["b-sba", "b-dba", "b-tba"]
+        },
+        {
+          "id": "s3",
+          "type": "read",
+          "title": "ব-ফলা দিয়ে পড়ি",
+          "bookActivity": "পড়ি",
+          "source": "textbook",
+          "paragraphs": [
+            "স্বাধীন — আমরা স্বাধীন দেশের মানুষ।",
+            "দ্বিতীয় — আমি দ্বিতীয় শ্রেণিতে পড়ি।",
+            "বন্ধুত্ব — এসো বন্ধুত্ব করি।"
+          ]
+        },
+        {
+          "id": "s4",
+          "type": "build",
+          "title": "ম-ফলা",
+          "bookActivity": "ম-ফলা",
+          "items": ["b-sma", "b-dma", "b-tma"]
+        },
+        {
+          "id": "s5",
+          "type": "read",
+          "title": "ম-ফলা দিয়ে পড়ি",
+          "bookActivity": "পড়ি",
+          "source": "textbook",
+          "paragraphs": [
+            "স্মরণ — বীর শহিদদের স্মরণ করি।",
+            "পদ্মা — পদ্মা একটি বড়ো নদী।",
+            "আত্মীয় — আত্মীয় এসেছে। বসতে দিই।"
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "build",
+          "title": "য-ফলা",
+          "bookActivity": "য-ফলা",
+          "items": ["b-bya", "b-nya", "b-tya"]
+        },
+        {
+          "id": "s7",
+          "type": "read",
+          "title": "য-ফলা দিয়ে পড়ি",
+          "bookActivity": "পড়ি",
+          "source": "textbook",
+          "paragraphs": [
+            "ব্যয় — আয় বুঝে ব্যয় করি।",
+            "ধন্যবাদ — তোমাকে অনেক ধন্যবাদ।",
+            "সত্য — সত্য কথা বলি।"
+          ]
+        },
+        {
+          "id": "s8",
+          "type": "build",
+          "title": "র-ফলা",
+          "bookActivity": "র-ফলা",
+          "items": ["b-shra", "b-mra", "b-dra"]
+        },
+        {
+          "id": "s9",
+          "type": "read",
+          "title": "র-ফলা দিয়ে পড়ি",
+          "bookActivity": "পড়ি",
+          "source": "textbook",
+          "paragraphs": [
+            "শ্রম — শ্রম বৃথা যায় না।",
+            "নম্র — নম্র থাকি।",
+            "ভদ্র — ভদ্র হয়ে চলি।"
+          ]
+        },
+        {
+          "id": "s10",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-shadhin", "w-bondhutto", "w-sroron", "w-atmiyo", "w-byoy", "w-srom"]
+        },
+        {
+          "id": "s11",
+          "type": "game",
+          "kind": "join-letters",
+          "title": "কোন ফলা?",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "স্বাধীন শব্দে কোন ফলা আছে?",
+              "options": [{ "label": "ব-ফলা" }, { "label": "ম-ফলা" }, { "label": "র-ফলা" }],
+              "answer": 0,
+              "hint": "স-এর নিচে ব বসেছে।",
+              "tests": "b-sba"
+            },
+            {
+              "id": "g2",
+              "ask": "পদ্মা শব্দে কোন ফলা আছে?",
+              "options": [{ "label": "য-ফলা" }, { "label": "ম-ফলা" }, { "label": "ব-ফলা" }],
+              "answer": 1,
+              "hint": "দ-এর নিচে ম বসেছে।",
+              "tests": "b-dma"
+            },
+            {
+              "id": "g3",
+              "ask": "সত্য শব্দে কোন ফলা আছে?",
+              "options": [{ "label": "র-ফলা" }, { "label": "ব-ফলা" }, { "label": "য-ফলা" }],
+              "answer": 2,
+              "hint": "ত-এর নিচে য বসেছে।",
+              "tests": "b-tya"
+            },
+            {
+              "id": "g4",
+              "ask": "ভদ্র শব্দে কোন ফলা আছে?",
+              "options": [{ "label": "র-ফলা" }, { "label": "ম-ফলা" }, { "label": "য-ফলা" }],
+              "answer": 0,
+              "hint": "দ-এর নিচে র বসেছে।",
+              "tests": "b-dra"
+            }
+          ]
+        },
+        {
+          "id": "s12",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "আমি কোন শ্রেণিতে পড়ি?",
+              "illustration": "school",
+              "options": [{ "label": "প্রথম" }, { "label": "দ্বিতীয়" }, { "label": "তৃতীয়" }],
+              "answer": 1,
+              "explain": "বইয়ে আছে — আমি দ্বিতীয় শ্রেণিতে পড়ি।",
+              "tests": "b-dba"
+            },
+            {
+              "id": "q2",
+              "ask": "পদ্মা কী?",
+              "illustration": "river",
+              "options": [{ "label": "একটি বড়ো নদী" }, { "label": "একটি পাখি" }, { "label": "একটি ফুল" }],
+              "answer": 0,
+              "explain": "পদ্মা একটি বড়ো নদী।",
+              "tests": "b-dma"
+            },
+            {
+              "id": "q3",
+              "ask": "শ্রম সম্পর্কে বইয়ে কী বলা হয়েছে?",
+              "illustration": "field",
+              "options": [
+                { "label": "শ্রম বৃথা যায় না" },
+                { "label": "শ্রম করা উচিত নয়" },
+                { "label": "শ্রম কঠিন" }
+              ],
+              "answer": 0,
+              "explain": "শ্রম বৃথা যায় না — পরিশ্রম কখনো বৃথা যায় না।",
+              "tests": "w-srom"
+            },
+            {
+              "id": "q4",
+              "ask": "শহিদদের আমরা কী করি?",
+              "illustration": "shaheed-minar",
+              "options": [{ "label": "ভুলে যাই" }, { "label": "স্মরণ করি" }, { "label": "খুঁজি" }],
+              "answer": 1,
+              "explain": "বীর শহিদদের স্মরণ করি।",
+              "tests": "w-sroron"
+            }
+          ]
+        },
+        {
+          "id": "s13",
+          "type": "done",
+          "title": "পাঠ ১২ শেষ!",
+          "say": "চার রকম ফলা চিনতে শিখেছ। দারুণ!"
+        }
+      ]
+    },
+    {
+      "id": "paath-13",
+      "chapterId": "ch03",
+      "number": 13,
+      "title": "রেফ চিনি",
+      "shape": "fola",
+      "bookPages": [27],
+      "objective": "রেফ চিনতে ও রেফ আছে এমন শব্দ পড়তে পারবে।",
+      "minutes": 8,
+      "words": [
+        {
+          "id": "w-march",
+          "word": "মার্চ",
+          "meaning": "ইংরেজি বছরের তৃতীয় মাস",
+          "meaningSource": "enrichment",
+          "bookPage": 27,
+          "illustration": "shaheed-minar",
+          "audio": null
+        },
+        {
+          "id": "w-borno",
+          "word": "বর্ণ",
+          "meaning": "অক্ষর",
+          "meaningSource": "enrichment",
+          "bookPage": 27,
+          "illustration": "book",
+          "audio": null
+        },
+        {
+          "id": "w-surjo",
+          "word": "সূর্য",
+          "meaning": "যে আলো ও তাপ দেয়",
+          "meaningSource": "enrichment",
+          "bookPage": 27,
+          "illustration": "season-grishmo",
+          "audio": null
+        }
+      ],
+      "builds": [
+        { "id": "b-rcha", "parts": ["র", "চ"], "result": "র্চ", "join": "ref", "bookPage": 27, "example": "মার্চ", "exampleSource": "textbook" },
+        { "id": "b-rna", "parts": ["র", "ণ"], "result": "র্ণ", "join": "ref", "bookPage": 27, "example": "বর্ণ", "exampleSource": "textbook" },
+        { "id": "b-rja", "parts": ["র", "য"], "result": "র্য", "join": "ref", "bookPage": 27, "example": "সূর্য", "exampleSource": "textbook" }
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "রেফ চিনি",
+          "say": "রেফ বর্ণের উপরে বসে।",
+          "illustration": "season-grishmo"
+        },
+        {
+          "id": "s2",
+          "type": "build",
+          "title": "রেফ ভেঙে দেখি",
+          "bookActivity": "পড়ি",
+          "items": ["b-rcha", "b-rna", "b-rja"]
+        },
+        {
+          "id": "s3",
+          "type": "read",
+          "title": "রেফ দিয়ে পড়ি",
+          "bookActivity": "পড়ি",
+          "source": "textbook",
+          "paragraphs": ["মার্চ মাস।", "বর্ণ লিখি।", "সূর্য ওঠে।"]
+        },
+        {
+          "id": "s4",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-march", "w-borno", "w-surjo"]
+        },
+        {
+          "id": "s5",
+          "type": "game",
+          "kind": "join-letters",
+          "title": "রেফ খুঁজি",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "মার্চ শব্দে র-এর সাথে কোন বর্ণ আছে?",
+              "options": [{ "label": "চ" }, { "label": "ণ" }, { "label": "য" }],
+              "answer": 0,
+              "hint": "র + চ = র্চ।",
+              "tests": "b-rcha"
+            },
+            {
+              "id": "g2",
+              "ask": "বর্ণ শব্দে র-এর সাথে কোন বর্ণ আছে?",
+              "options": [{ "label": "য" }, { "label": "ণ" }, { "label": "চ" }],
+              "answer": 1,
+              "hint": "র + ণ = র্ণ।",
+              "tests": "b-rna"
+            },
+            {
+              "id": "g3",
+              "ask": "সূর্য শব্দে র-এর সাথে কোন বর্ণ আছে?",
+              "options": [{ "label": "চ" }, { "label": "ণ" }, { "label": "য" }],
+              "answer": 2,
+              "hint": "র + য = র্য।",
+              "tests": "b-rja"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "রেফ বর্ণের কোথায় বসে?",
+              "illustration": "book",
+              "options": [{ "label": "উপরে" }, { "label": "নিচে" }, { "label": "ডানে" }],
+              "answer": 0,
+              "explain": "বইয়ে আছে — রেফ বর্ণের উপরে বসে।"
+            },
+            {
+              "id": "q2",
+              "ask": "কোন শব্দে রেফ আছে?",
+              "illustration": "season-grishmo",
+              "options": [{ "label": "সূর্য" }, { "label": "সরল" }, { "label": "সকাল" }],
+              "answer": 0,
+              "explain": "সূর্য শব্দে র্য আছে — এটিই রেফ।",
+              "tests": "w-surjo"
+            },
+            {
+              "id": "q3",
+              "ask": "বর্ণ মানে কী?",
+              "illustration": "letter-ক",
+              "options": [{ "label": "রং" }, { "label": "অক্ষর" }, { "label": "শব্দ" }],
+              "answer": 1,
+              "explain": "এখানে বর্ণ মানে অক্ষর — যেমন ক, খ, গ।",
+              "tests": "w-borno"
+            }
+          ]
+        },
+        {
+          "id": "s7",
+          "type": "done",
+          "title": "পাঠ ১৩ শেষ!",
+          "say": "রেফ চিনতে শিখেছ। খুব ভালো!"
+        }
+      ]
+    }
+  ]
+}

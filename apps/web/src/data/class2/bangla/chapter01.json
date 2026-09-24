@@ -1,0 +1,741 @@
+{
+  "id": "ch01",
+  "number": 1,
+  "title": "আমরা ও আমাদের কাজ",
+  "colour": "accent",
+  "icon": "school",
+  "lessons": [
+    {
+      "id": "paath-01",
+      "chapterId": "ch01",
+      "number": 1,
+      "title": "আমার পরিচয়",
+      "shape": "dialogue",
+      "bookPages": [1, 2],
+      "objective": "নিজের নাম, বয়স, শ্রেণি ও বিদ্যালয়ের নাম বলতে পারবে।",
+      "minutes": 8,
+      "words": [
+        {
+          "id": "w-bidyaloy",
+          "word": "বিদ্যালয়",
+          "meaning": "স্কুল",
+          "meaningSource": "enrichment",
+          "bookPage": 1,
+          "illustration": "school",
+          "audio": null
+        },
+        {
+          "id": "w-porichoy",
+          "word": "পরিচয়",
+          "meaning": "নিজের সম্পর্কে যা বলি",
+          "meaningSource": "enrichment",
+          "bookPage": 1,
+          "illustration": "friends",
+          "audio": null
+        },
+        {
+          "id": "w-bondhu",
+          "word": "বন্ধু",
+          "meaning": "যার সাথে মিলেমিশে থাকি",
+          "meaningSource": "enrichment",
+          "bookPage": 1,
+          "illustration": "friends",
+          "audio": null
+        }
+      ],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "আমার পরিচয়",
+          "say": "বিদ্যালয় খুলেছে। চলো, যার যার পরিচয় বলি।",
+          "illustration": "school"
+        },
+        {
+          "id": "s2",
+          "type": "read",
+          "title": "শুনি",
+          "bookActivity": "শুনি",
+          "source": "textbook",
+          "illustration": "school",
+          "paragraphs": [
+            "বিদ্যালয় খুলেছে। আজ আমাদের নতুন ক্লাস শুরু। আবার বন্ধুদের সাথে দেখা হবে।",
+            "কী মজা, তাই না? নতুন বন্ধুরাও এসে গেছে।",
+            "চলো, এবার যার যার পরিচয় বলি।"
+          ]
+        },
+        {
+          "id": "s3",
+          "type": "dialogue",
+          "title": "বলি",
+          "bookActivity": "বলি",
+          "source": "textbook",
+          "lines": [
+            { "speaker": "আমি", "text": "আমার নাম।", "blanks": true },
+            { "speaker": "আমি", "text": "আমার বয়স।", "blanks": true },
+            { "speaker": "আমি", "text": "আমি যে শ্রেণিতে পড়ি।", "blanks": true },
+            { "speaker": "আমি", "text": "আমার বিদ্যালয়ের নাম।", "blanks": true }
+          ]
+        },
+        {
+          "id": "s4",
+          "type": "read",
+          "title": "নাম বলার খেলা",
+          "bookActivity": "খেলি",
+          "source": "textbook",
+          "illustration": "ball",
+          "paragraphs": [
+            "বন্ধুরা মিলে এবার একটা খেলা খেলি। নাম বলার খেলা। গোল হয়ে দাঁড়াই।",
+            "হাতে একটা বল নিই। নিজের নাম বলি। এরপর যে কোনো একজন বন্ধুর নাম বলি। ওই বন্ধুর হাতে বলটা দিই।",
+            "বল হাতে নিয়ে বন্ধু তার নিজের নাম বলবে। একই সাথে আরো একজন বন্ধুর নাম বলবে। যার নাম বলবে, তার হতে বলটা দেবে।",
+            "এভাবে খেলাটি চলতে থাকবে।"
+          ]
+        },
+        {
+          "id": "s5",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-bidyaloy", "w-porichoy", "w-bondhu"]
+        },
+        {
+          "id": "s6",
+          "type": "game",
+          "kind": "picture-to-word",
+          "title": "ছবি দেখে বলি",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "এটি কোন জায়গা?",
+              "illustration": "school",
+              "options": [{ "label": "বিদ্যালয়" }, { "label": "বাজার" }, { "label": "নদী" }],
+              "answer": 0,
+              "hint": "এখানে আমরা পড়তে আসি।",
+              "tests": "w-bidyaloy"
+            },
+            {
+              "id": "g2",
+              "ask": "নাম বলার খেলায় হাতে কী নিই?",
+              "illustration": "ball",
+              "options": [{ "label": "বই" }, { "label": "বল" }, { "label": "ব্যাগ" }],
+              "answer": 1,
+              "hint": "গোল হয়ে দাঁড়িয়ে এটি হাতে হাতে যায়।"
+            },
+            {
+              "id": "g3",
+              "ask": "যার সাথে মিলেমিশে থাকি, সে কে?",
+              "illustration": "friends",
+              "options": [{ "label": "বন্ধু" }, { "label": "শিক্ষক" }, { "label": "মাঝি" }],
+              "answer": 0,
+              "hint": "ক্লাসে তোমার পাশে যে বসে।",
+              "tests": "w-bondhu"
+            }
+          ]
+        },
+        {
+          "id": "s7",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "পাঠে কী খুলেছে?",
+              "illustration": "school",
+              "options": [{ "label": "বিদ্যালয়" }, { "label": "দোকান" }, { "label": "বাড়ি" }],
+              "answer": 0,
+              "explain": "বিদ্যালয় খুলেছে, তাই নতুন ক্লাস শুরু হয়েছে।",
+              "tests": "w-bidyaloy"
+            },
+            {
+              "id": "q2",
+              "ask": "পরিচয়ে আমরা কী কী বলি?",
+              "illustration": "friends",
+              "options": [
+                { "label": "নাম, বয়স, শ্রেণি ও বিদ্যালয়ের নাম" },
+                { "label": "শুধু নাম" },
+                { "label": "কিছুই না" }
+              ],
+              "answer": 0,
+              "explain": "বইয়ে চারটি কথাই বলতে বলা হয়েছে।",
+              "tests": "w-porichoy"
+            },
+            {
+              "id": "q3",
+              "ask": "খেলায় বল কাকে দিই?",
+              "illustration": "ball",
+              "options": [
+                { "label": "যার নাম বলি, তাকে" },
+                { "label": "শিক্ষককে" },
+                { "label": "কাউকে না" }
+              ],
+              "answer": 0,
+              "explain": "যার নাম বলবে, তার হাতে বলটা দেবে।"
+            },
+            {
+              "id": "q4",
+              "ask": "খেলায় বন্ধুরা কীভাবে দাঁড়ায়?",
+              "illustration": "friends",
+              "options": [{ "label": "গোল হয়ে" }, { "label": "এক লাইনে" }, { "label": "বসে" }],
+              "answer": 0,
+              "explain": "গোল হয়ে দাঁড়ালে সবাই সবাইকে দেখতে পায়।"
+            }
+          ]
+        },
+        {
+          "id": "s8",
+          "type": "done",
+          "title": "পাঠ ১ শেষ!",
+          "say": "তুমি নিজের পরিচয় বলতে শিখেছ। দারুণ!"
+        }
+      ]
+    },
+    {
+      "id": "paath-02",
+      "chapterId": "ch01",
+      "number": 2,
+      "title": "স্কুলে কেমন লাগছে",
+      "shape": "dialogue",
+      "bookPages": [3, 4, 5],
+      "objective": "নিজের অনুভূতি ও পছন্দের কথা বলতে পারবে।",
+      "minutes": 9,
+      "words": [
+        {
+          "id": "w-anondo",
+          "word": "আনন্দ",
+          "meaning": "খুব খুশি লাগা",
+          "meaningSource": "enrichment",
+          "bookPage": 3,
+          "illustration": "mood-joy",
+          "audio": null
+        },
+        {
+          "id": "w-obak",
+          "word": "অবাক",
+          "meaning": "অবাক হওয়া, ভাবনায় পড়া",
+          "meaningSource": "enrichment",
+          "bookPage": 3,
+          "illustration": "mood-surprise",
+          "audio": null
+        },
+        {
+          "id": "w-dukkho",
+          "word": "দুঃখ",
+          "meaning": "মন খারাপ লাগা",
+          "meaningSource": "enrichment",
+          "bookPage": 3,
+          "illustration": "mood-sad",
+          "audio": null
+        },
+        {
+          "id": "w-moja",
+          "word": "মজা",
+          "meaning": "ভালো লাগা, হাসি পাওয়া",
+          "meaningSource": "enrichment",
+          "bookPage": 3,
+          "illustration": "mood-fun",
+          "audio": null
+        },
+        {
+          "id": "w-protijogita",
+          "word": "প্রতিযোগিতা",
+          "meaning": "কে ভালো পারে তার খেলা",
+          "meaningSource": "enrichment",
+          "bookPage": 5,
+          "illustration": "run",
+          "audio": null
+        }
+      ],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "স্কুলে কেমন লাগছে",
+          "say": "স্কুলে এসে তোমার কেমন লাগছে?",
+          "illustration": "mood-joy"
+        },
+        {
+          "id": "s2",
+          "type": "words",
+          "title": "কেমন লাগছে",
+          "bookActivity": "বলি",
+          "items": ["w-anondo", "w-obak", "w-dukkho", "w-moja"]
+        },
+        {
+          "id": "s3",
+          "type": "dialogue",
+          "title": "কে কী করতে পছন্দ করি",
+          "bookActivity": "বলি",
+          "source": "textbook",
+          "lines": [
+            { "speaker": "মিতু", "text": "আমি মিতু। আমি গান গাইতে পছন্দ করি।" },
+            { "speaker": "রাজু", "text": "আমি রাজু। আমার ছবি আঁকতে ভালো লাগে।" },
+            { "speaker": "তিথি", "text": "আমি তিথি। আমি খেলতে পছন্দ করি।" },
+            { "speaker": "ঝিমিত", "text": "আমি ঝিমিত। আমি পড়তে ভালোবাসি।" }
+          ]
+        },
+        {
+          "id": "s4",
+          "type": "dialogue",
+          "title": "বন্ধুদের কথা শুনি",
+          "bookActivity": "বন্ধুদের কথা শুনি",
+          "source": "textbook",
+          "lines": [
+            { "speaker": "তিথি", "text": "আমি তিথি। তুমি?" },
+            { "speaker": "ঝিমিত", "text": "আমি ঝিমিত।" },
+            { "speaker": "তিথি", "text": "আর তুমি?" },
+            { "speaker": "রাজু", "text": "আমি রাজু।" },
+            { "speaker": "তিথি", "text": "ওর নাম মিতু। ভালো গান গায়।" },
+            { "speaker": "মিতু", "text": "জানো, বিদ্যালয়ে খেলাধুলার প্রতিযোগিতা হবে?" },
+            { "speaker": "রাজু", "text": "গান আর ছবি আঁকার প্রতিযোগিতাও হবে।" },
+            { "speaker": "তিথি", "text": "আমি দড়ি লাফ দেব। তুমি?" },
+            { "speaker": "ঝিমিত", "text": "আমি ছবি আঁকব। পাহাড়ের ছবি।" },
+            { "speaker": "মিতু", "text": "আমি একটা দেশের গান গাইব।" },
+            { "speaker": "রাজু", "text": "আমি ছড়া বলব।" },
+            { "speaker": "তিথি", "text": "দারুণ, খুব ভালো হবে।" },
+            { "speaker": "মিতু", "text": "ওই যে ঘণ্টা পড়ল। চলো, ক্লাসে যাই।" }
+          ]
+        },
+        {
+          "id": "s5",
+          "type": "game",
+          "kind": "picture-to-word",
+          "title": "মুখ দেখে অনুভূতি বলি",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "এই মুখটি কেমন লাগার ছবি?",
+              "illustration": "mood-joy",
+              "options": [{ "label": "আনন্দ" }, { "label": "দুঃখ" }, { "label": "অবাক" }],
+              "answer": 0,
+              "hint": "হাসিমুখ দেখে বোঝা যায়।",
+              "tests": "w-anondo"
+            },
+            {
+              "id": "g2",
+              "ask": "এই মুখটি কেমন লাগার ছবি?",
+              "illustration": "mood-sad",
+              "options": [{ "label": "মজা" }, { "label": "দুঃখ" }, { "label": "আনন্দ" }],
+              "answer": 1,
+              "hint": "মুখটি নিচের দিকে বাঁকা।",
+              "tests": "w-dukkho"
+            },
+            {
+              "id": "g3",
+              "ask": "এই মুখটি কেমন লাগার ছবি?",
+              "illustration": "mood-surprise",
+              "options": [{ "label": "অবাক" }, { "label": "দুঃখ" }, { "label": "মজা" }],
+              "answer": 0,
+              "hint": "চোখ দুটো বড়ো বড়ো।",
+              "tests": "w-obak"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "মিতু কী করতে পছন্দ করে?",
+              "illustration": "mitu",
+              "options": [{ "label": "গান গাইতে" }, { "label": "ছবি আঁকতে" }, { "label": "খেলতে" }],
+              "answer": 0,
+              "explain": "মিতু বলেছে — আমি গান গাইতে পছন্দ করি।"
+            },
+            {
+              "id": "q2",
+              "ask": "রাজুর কী করতে ভালো লাগে?",
+              "illustration": "raju",
+              "options": [{ "label": "পড়তে" }, { "label": "ছবি আঁকতে" }, { "label": "গান গাইতে" }],
+              "answer": 1,
+              "explain": "রাজু বলেছে — আমার ছবি আঁকতে ভালো লাগে।"
+            },
+            {
+              "id": "q3",
+              "ask": "তিথি প্রতিযোগিতায় কী করবে?",
+              "illustration": "rope-jump",
+              "options": [{ "label": "দড়ি লাফ" }, { "label": "ছড়া বলা" }, { "label": "ছবি আঁকা" }],
+              "answer": 0,
+              "explain": "তিথি বলেছে — আমি দড়ি লাফ দেব।"
+            },
+            {
+              "id": "q4",
+              "ask": "ঝিমিত কীসের ছবি আঁকবে?",
+              "illustration": "jhimit",
+              "options": [{ "label": "নদীর" }, { "label": "পাহাড়ের" }, { "label": "গাছের" }],
+              "answer": 1,
+              "explain": "ঝিমিত বলেছে — আমি ছবি আঁকব। পাহাড়ের ছবি।"
+            }
+          ]
+        },
+        {
+          "id": "s7",
+          "type": "done",
+          "title": "পাঠ ২ শেষ!",
+          "say": "তুমি নিজের পছন্দের কথা বলতে শিখেছ। দারুণ!"
+        }
+      ]
+    },
+    {
+      "id": "paath-03",
+      "chapterId": "ch01",
+      "number": 3,
+      "title": "আমার বাড়ি আমার কাজ",
+      "shape": "dialogue",
+      "bookPages": [6],
+      "objective": "ঘরের কাজের কথা বলতে ও ক্রিয়াপদ ঠিকভাবে ব্যবহার করতে পারবে।",
+      "minutes": 9,
+      "words": [
+        {
+          "id": "w-gochano",
+          "word": "গোছানো",
+          "meaning": "ঠিকঠাক করে সাজিয়ে রাখা",
+          "meaningSource": "enrichment",
+          "bookPage": 6,
+          "illustration": "house",
+          "audio": null
+        },
+        {
+          "id": "w-milemishe",
+          "word": "মিলেমিশে",
+          "meaning": "সবাই একসাথে",
+          "meaningSource": "enrichment",
+          "bookPage": 6,
+          "illustration": "sign-together",
+          "audio": null
+        },
+        {
+          "id": "w-bajar",
+          "word": "বাজার",
+          "meaning": "যেখানে জিনিস কেনা-বেচা হয়",
+          "meaningSource": "enrichment",
+          "bookPage": 6,
+          "illustration": "market",
+          "audio": null
+        }
+      ],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "আমার বাড়ি আমার কাজ",
+          "say": "আজ বাড়িতে অনেক কাজ। চলো শুনি কে কী করবে।",
+          "illustration": "house"
+        },
+        {
+          "id": "s2",
+          "type": "dialogue",
+          "title": "শুনি",
+          "bookActivity": "শুনি",
+          "source": "textbook",
+          "lines": [
+            { "speaker": "মা", "text": "আজ অনেক কাজ করতে হবে।" },
+            { "speaker": "তুলি", "text": "কী কাজ, মা?" },
+            { "speaker": "মা", "text": "ঘর-বাড়ি পরিষ্কার করতে হবে। কাপড় গোছাতে হবে।" },
+            { "speaker": "তপু", "text": "আমিও কাজ করব।" },
+            { "speaker": "বাবা", "text": "আজ তো বাজারেও যেতে হবে।" },
+            { "speaker": "তপু", "text": "আমি তাহলে বাবার সাথে বাজারে যাই।" },
+            { "speaker": "তুলি", "text": "আমি তবে মার সাথে কাজ করি।" },
+            { "speaker": "বাবা", "text": "কী করবে?" },
+            { "speaker": "তুলি", "text": "ঘর পরিষ্কার করব। কাপড় গোছাব।" },
+            { "speaker": "মা", "text": "ঠিক আছে। সবাই মিলে কাজ করব।" },
+            { "speaker": "বাবা", "text": "মিলেমিশে করলে কাজ সহজ হয়।" }
+          ]
+        },
+        {
+          "id": "s3",
+          "type": "read",
+          "title": "ঠিকভাবে বলি",
+          "bookActivity": "ঠিকভাবে বলি",
+          "source": "textbook",
+          "paragraphs": [
+            "আমি ভাত খাই।",
+            "তুমি বই পড়ো।",
+            "সে বল খেলে।",
+            "তুলি বাজারে যায়।",
+            "বাবা কাজ করেন।"
+          ]
+        },
+        {
+          "id": "s4",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-gochano", "w-milemishe", "w-bajar"]
+        },
+        {
+          "id": "s5",
+          "type": "game",
+          "kind": "missing-word",
+          "title": "ঠিক শব্দটি বসাই",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "আমি ভাত ____।",
+              "options": [{ "label": "খাই" }, { "label": "খাও" }, { "label": "খায়" }],
+              "answer": 0,
+              "hint": "\"আমি\" দিয়ে শুরু হলে শেষে ই বসে।"
+            },
+            {
+              "id": "g2",
+              "ask": "তুমি বই ____।",
+              "options": [{ "label": "পড়ি" }, { "label": "পড়ো" }, { "label": "পড়ে" }],
+              "answer": 1,
+              "hint": "\"তুমি\" দিয়ে শুরু হলে শেষে ও বসে।"
+            },
+            {
+              "id": "g3",
+              "ask": "বাবা কাজ ____।",
+              "options": [{ "label": "করি" }, { "label": "করো" }, { "label": "করেন" }],
+              "answer": 2,
+              "hint": "বড়োদের কথা বললে \"করেন\" বলি।"
+            },
+            {
+              "id": "g4",
+              "ask": "তুলি বাজারে ____।",
+              "illustration": "market",
+              "options": [{ "label": "যাই" }, { "label": "যাও" }, { "label": "যায়" }],
+              "answer": 2,
+              "hint": "অন্য কারো কথা বললে শেষে য় বসে।",
+              "tests": "w-bajar"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "তুলি কী কাজ করবে?",
+              "illustration": "tuli",
+              "options": [
+                { "label": "ঘর পরিষ্কার করবে ও কাপড় গোছাবে" },
+                { "label": "বাজারে যাবে" },
+                { "label": "রান্না করবে" }
+              ],
+              "answer": 0,
+              "explain": "তুলি বলেছে — ঘর পরিষ্কার করব। কাপড় গোছাব।"
+            },
+            {
+              "id": "q2",
+              "ask": "তপু কী করতে চাইল?",
+              "illustration": "tapu",
+              "options": [
+                { "label": "বাবার সাথে বাজারে যেতে" },
+                { "label": "ঘর পরিষ্কার করতে" },
+                { "label": "খেলতে" }
+              ],
+              "answer": 0,
+              "explain": "তপু বলেছে — আমি তাহলে বাবার সাথে বাজারে যাই।",
+              "tests": "w-bajar"
+            },
+            {
+              "id": "q3",
+              "ask": "এ পাঠ থেকে আমরা কী শিখলাম?",
+              "illustration": "sign-together",
+              "options": [
+                { "label": "মিলেমিশে করলে কাজ সহজ হয়" },
+                { "label": "একা কাজ করা ভালো" },
+                { "label": "কাজ না করা ভালো" }
+              ],
+              "answer": 0,
+              "explain": "বাবা বলেছেন — মিলেমিশে করলে কাজ সহজ হয়।",
+              "tests": "w-milemishe"
+            },
+            {
+              "id": "q4",
+              "ask": "মা কী কী কাজের কথা বললেন?",
+              "illustration": "house",
+              "options": [
+                { "label": "ঘর-বাড়ি পরিষ্কার ও কাপড় গোছানো" },
+                { "label": "শুধু রান্না" },
+                { "label": "শুধু বাজার" }
+              ],
+              "answer": 0,
+              "explain": "মা বলেছেন — ঘর-বাড়ি পরিষ্কার করতে হবে। কাপড় গোছাতে হবে।",
+              "tests": "w-gochano"
+            }
+          ]
+        },
+        {
+          "id": "s7",
+          "type": "done",
+          "title": "পাঠ ৩ শেষ!",
+          "say": "সবাই মিলে কাজ করলে কাজ সহজ হয়। মনে রেখো!"
+        }
+      ]
+    },
+    {
+      "id": "paath-09",
+      "chapterId": "ch01",
+      "number": 9,
+      "title": "দেখে বুঝে কাজ করি",
+      "shape": "reading",
+      "bookPages": [20],
+      "objective": "চারপাশের চিহ্ন দেখে বুঝে ঠিক কাজটি করতে পারবে।",
+      "minutes": 7,
+      "words": [
+        {
+          "id": "w-moyla",
+          "word": "ময়লা",
+          "meaning": "ফেলে দেওয়ার মতো নোংরা জিনিস",
+          "meaningSource": "enrichment",
+          "bookPage": 20,
+          "illustration": "sign-bin",
+          "audio": null
+        },
+        {
+          "id": "w-poricchonno",
+          "word": "পরিচ্ছন্ন",
+          "meaning": "পরিষ্কার",
+          "meaningSource": "enrichment",
+          "bookPage": 20,
+          "illustration": "sign-handwash",
+          "audio": null
+        },
+        {
+          "id": "w-jebra",
+          "word": "জেব্রা ক্রসিং",
+          "meaning": "রাস্তা পার হওয়ার সাদা দাগের জায়গা",
+          "meaningSource": "enrichment",
+          "bookPage": 20,
+          "illustration": "sign-zebra",
+          "audio": null
+        }
+      ],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "দেখে বুঝে কাজ করি",
+          "say": "চারপাশে অনেক চিহ্ন আছে। চিহ্ন দেখে বুঝি কী করতে হবে।",
+          "illustration": "sign-zebra"
+        },
+        {
+          "id": "s2",
+          "type": "read",
+          "title": "চিহ্ন দেখে বুঝি",
+          "bookActivity": "দেখে বুঝে কাজ করি",
+          "source": "textbook",
+          "paragraphs": [
+            "ঝুড়িতে ময়লা ফেলি।",
+            "টয়লেট ব্যবহার করি।",
+            "হাত ধুই। পরিচ্ছন্ন থাকি।",
+            "জেব্রা ক্রসিং দিয়ে রাস্তা পার হই।",
+            "মিলেমিশে থাকি।"
+          ]
+        },
+        {
+          "id": "s3",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-moyla", "w-poricchonno", "w-jebra"]
+        },
+        {
+          "id": "s4",
+          "type": "game",
+          "kind": "picture-to-word",
+          "title": "চিহ্নটি কী বলছে?",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "এই চিহ্নটি কী বলছে?",
+              "illustration": "sign-bin",
+              "options": [
+                { "label": "ঝুড়িতে ময়লা ফেলি" },
+                { "label": "হাত ধুই" },
+                { "label": "রাস্তা পার হই" }
+              ],
+              "answer": 0,
+              "hint": "ছবিতে একটি ঝুড়ি আছে।",
+              "tests": "w-moyla"
+            },
+            {
+              "id": "g2",
+              "ask": "এই চিহ্নটি কী বলছে?",
+              "illustration": "sign-handwash",
+              "options": [
+                { "label": "ময়লা ফেলি" },
+                { "label": "হাত ধুই, পরিচ্ছন্ন থাকি" },
+                { "label": "মিলেমিশে থাকি" }
+              ],
+              "answer": 1,
+              "hint": "ছবিতে পানি আর দুটো হাত আছে।",
+              "tests": "w-poricchonno"
+            },
+            {
+              "id": "g3",
+              "ask": "এই চিহ্নটি কী বলছে?",
+              "illustration": "sign-zebra",
+              "options": [
+                { "label": "জেব্রা ক্রসিং দিয়ে রাস্তা পার হই" },
+                { "label": "টয়লেট ব্যবহার করি" },
+                { "label": "ময়লা ফেলি" }
+              ],
+              "answer": 0,
+              "hint": "সাদা দাগের উপর দিয়ে হাঁটছে।",
+              "tests": "w-jebra"
+            },
+            {
+              "id": "g4",
+              "ask": "এই চিহ্নটি কী বলছে?",
+              "illustration": "sign-together",
+              "options": [
+                { "label": "হাত ধুই" },
+                { "label": "মিলেমিশে থাকি" },
+                { "label": "রাস্তা পার হই" }
+              ],
+              "answer": 1,
+              "hint": "চারটি হাত একসাথে ধরে আছে।"
+            }
+          ]
+        },
+        {
+          "id": "s5",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "ময়লা কোথায় ফেলব?",
+              "illustration": "sign-bin",
+              "options": [{ "label": "ঝুড়িতে" }, { "label": "রাস্তায়" }, { "label": "মাঠে" }],
+              "answer": 0,
+              "explain": "ঝুড়িতে ময়লা ফেললে চারপাশ পরিষ্কার থাকে।",
+              "tests": "w-moyla"
+            },
+            {
+              "id": "q2",
+              "ask": "রাস্তা পার হব কোথা দিয়ে?",
+              "illustration": "sign-zebra",
+              "options": [{ "label": "যেখানে খুশি" }, { "label": "জেব্রা ক্রসিং দিয়ে" }, { "label": "দৌড়ে" }],
+              "answer": 1,
+              "explain": "জেব্রা ক্রসিং দিয়ে পার হলে নিরাপদ থাকি।",
+              "tests": "w-jebra"
+            },
+            {
+              "id": "q3",
+              "ask": "পরিচ্ছন্ন থাকতে কী করি?",
+              "illustration": "sign-handwash",
+              "options": [{ "label": "হাত ধুই" }, { "label": "দৌড়াই" }, { "label": "ঘুমাই" }],
+              "answer": 0,
+              "explain": "হাত ধুলে রোগ থেকে দূরে থাকি।",
+              "tests": "w-poricchonno"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "done",
+          "title": "পাঠ ৯ শেষ!",
+          "say": "চিহ্ন দেখে বুঝে কাজ করতে শিখেছ। খুব ভালো!"
+        }
+      ]
+    }
+  ]
+}
