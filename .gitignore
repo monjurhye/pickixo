@@ -31,6 +31,7 @@ __pycache__/
 .tmp-test/
 .tmp-kids/
 .tmp-payscale/
+.tmp-class2-bangla/
 
 # --- runtime data (not source) ---
 storage/

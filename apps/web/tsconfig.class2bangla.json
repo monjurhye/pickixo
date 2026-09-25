@@ -1,0 +1,25 @@
+{
+  // Build config for the Class 2 Bangla content test. The schema and the
+  // illustration registry are plain TypeScript with no React and no Next.js
+  // runtime, so they compile to CommonJS and are exercised directly by node —
+  // see src/data/class2/bangla/content.test.mjs.
+  //
+  // A separate config rather than files on the tsc command line because tsc
+  // refuses to load tsconfig.json at all when files are named there, which
+  // would silently drop the project's compiler options from this build.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": ".tmp-class2-bangla",
+    "rootDir": "src/data/class2/bangla",
+    "incremental": false,
+    "types": ["node"]
+  },
+  "include": [
+    "src/data/class2/bangla/schema.ts",
+    "src/data/class2/bangla/illustrations.ts"
+  ],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,624 @@
+{
+  "id": "ch07",
+  "number": 7,
+  "title": "দেশ ও প্রকৃতি",
+  "colour": "accent",
+  "icon": "season",
+  "lessons": [
+    {
+      "id": "paath-18",
+      "chapterId": "ch07",
+      "number": 18,
+      "title": "গ্রাম ও শহর",
+      "shape": "reading",
+      "bookPages": [35, 36, 37],
+      "objective": "গ্রাম ও শহরের মিল-অমিল বলতে পারবে।",
+      "minutes": 11,
+      "words": [
+        {
+          "id": "w-chiriyakhana",
+          "word": "চিড়িয়াখানা",
+          "meaning": "যেখানে দেখানোর জন্য পশুপাখি রাখা হয়",
+          "meaningSource": "textbook",
+          "bookPage": 36,
+          "illustration": "zoo",
+          "audio": null
+        },
+        {
+          "id": "w-shishupark",
+          "word": "শিশুপার্ক",
+          "meaning": "শিশুদের বিনোদনের জায়গা",
+          "meaningSource": "textbook",
+          "bookPage": 36,
+          "illustration": "park",
+          "audio": null
+        },
+        {
+          "id": "w-kumor",
+          "word": "কুমোর",
+          "meaning": "যারা মাটি দিয়ে জিনিস বানায়",
+          "meaningSource": "textbook",
+          "bookPage": 36,
+          "illustration": "potter",
+          "audio": null
+        },
+        {
+          "id": "w-chashi",
+          "word": "চাষি",
+          "meaning": "যারা চাষ করে",
+          "meaningSource": "textbook",
+          "bookPage": 36,
+          "illustration": "field",
+          "audio": null
+        },
+        {
+          "id": "w-dalan",
+          "word": "দালান",
+          "meaning": "ইট-সিমেন্টের বড়ো বাড়ি",
+          "meaningSource": "enrichment",
+          "bookPage": 35,
+          "illustration": "city",
+          "audio": null
+        }
+      ],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "গ্রাম ও শহর",
+          "say": "আমিন গ্রামে থাকে। শহরে এসে সে অবাক হয়ে গেল।",
+          "illustration": "city"
+        },
+        {
+          "id": "s2",
+          "type": "read",
+          "title": "আমিন শহরে এলো",
+          "bookActivity": "পড়ি",
+          "source": "textbook",
+          "illustration": "city",
+          "paragraphs": [
+            "আমিন গ্রামে থাকে। শহরে এসে সে অবাক হয়ে গেল। শহরে এত গাড়ি, আর এত মানুষ! চারদিকে কত রকমের দোকান। শহরে কত কিছু যে রয়েছে!",
+            "আমিন এসেছে ওর ফুপুর বাড়ি। আমিনের ফুপু বড়ো একটা দালানে থাকেন। সেই দালানে আরো অনেক পরিবার থাকে।",
+            "আমিনের ফুপাতো বোন তিথি। আমিন আর তিথিকে নিয়ে ফুপু একদিন চিড়িয়াখানায় গেলেন। আমিন সেখানে বাঘ, হরিণ, জিরাফসহ অনেক প্রাণী দেখল। আরেক দিন তাদের নিয়ে ফুপু শিশুপার্কে গেলেন। শিশুপার্কে ঘুরতে আমিনের অনেক ভালো লাগল।"
+          ]
+        },
+        {
+          "id": "s3",
+          "type": "read",
+          "title": "তিথি গ্রামে এলো",
+          "bookActivity": "পড়ি",
+          "source": "textbook",
+          "illustration": "village",
+          "paragraphs": [
+            "এর কয়েক মাস পরের ঘটনা। তিথি মার সাথে মামার বাড়িতে বেড়াতে গেল। তিথির মামা গ্রামে থাকেন। তাঁদের বাড়ির পাশে পুকুর। পুকুরে অনেক হাঁস ভেসে বেড়ায় আর প্যাঁক প্যাঁক করে ডাকে। দেখে তিথির আনন্দ হয়।",
+            "তিথির মামাতো ভাই আমিন। আমিন তিথিকে নিয়ে কুমোরপাড়ায় যায়। কুমোররা মাটি দিয়ে হাঁড়ি-পাতিল ও পুতুল বানায়। তিথি মাটি দিয়ে হাঁড়ি বানানোর চেষ্টা করে।",
+            "গ্রামে কত গাছ! গাছে গাছে কত পাখি! রাস্তার দুপাশে ফসলের খেত। সেখানে চাষি চাষ করে। গ্রামের পরিবেশ তিথির দারুণ ভালো লাগে।",
+            "আমিনদের গ্রাম এক রকম। তিথিদের শহর আরেক রকম।"
+          ]
+        },
+        {
+          "id": "s4",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-chiriyakhana", "w-shishupark", "w-kumor", "w-chashi", "w-dalan"]
+        },
+        {
+          "id": "s5",
+          "type": "game",
+          "kind": "missing-word",
+          "title": "খালি জায়গা পূরণ করি",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "তিথির মামা ____ থাকেন।",
+              "illustration": "village",
+              "options": [{ "label": "শহরে" }, { "label": "গ্রামে" }, { "label": "বিদেশে" }],
+              "answer": 1,
+              "hint": "যেখানে পুকুর আর ফসলের খেত আছে।"
+            },
+            {
+              "id": "g2",
+              "ask": "তাঁদের বাড়ির পাশে ____।",
+              "illustration": "pond",
+              "options": [{ "label": "পুকুর" }, { "label": "দালান" }, { "label": "দোকান" }],
+              "answer": 0,
+              "hint": "এখানে হাঁস ভেসে বেড়ায়।"
+            },
+            {
+              "id": "g3",
+              "ask": "সেখানে হাঁস ____ করে ঘুরে বেড়ায়।",
+              "illustration": "duck",
+              "options": [{ "label": "কিচিমিচি" }, { "label": "মিউ মিউ" }, { "label": "প্যাঁক প্যাঁক" }],
+              "answer": 2,
+              "hint": "হাঁস যেভাবে ডাকে।"
+            },
+            {
+              "id": "g4",
+              "ask": "মাটি দিয়ে হাঁড়ি-পাতিল কারা বানায়?",
+              "illustration": "potter",
+              "options": [{ "label": "কুমোর" }, { "label": "চাষি" }, { "label": "মাঝি" }],
+              "answer": 0,
+              "hint": "কুমোরপাড়ায় এরা থাকে।",
+              "tests": "w-kumor"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "আমিন শহরে এসে কী দেখে অবাক হলো?",
+              "illustration": "city",
+              "options": [
+                { "label": "এত গাড়ি আর এত মানুষ" },
+                { "label": "এত গাছ আর পাখি" },
+                { "label": "এত নদী" }
+              ],
+              "answer": 0,
+              "explain": "শহরে এত গাড়ি, আর এত মানুষ! চারদিকে কত রকমের দোকান।",
+              "tests": "w-dalan"
+            },
+            {
+              "id": "q2",
+              "ask": "চিড়িয়াখানায় আমিন কী দেখল?",
+              "illustration": "zoo",
+              "options": [{ "label": "নৌকা" }, { "label": "বাঘ, হরিণ, জিরাফ" }, { "label": "হাঁড়ি-পাতিল" }],
+              "answer": 1,
+              "explain": "আমিন সেখানে বাঘ, হরিণ, জিরাফসহ অনেক প্রাণী দেখল।",
+              "tests": "w-chiriyakhana"
+            },
+            {
+              "id": "q3",
+              "ask": "তিথির কেন গ্রাম ভালো লাগে?",
+              "illustration": "village",
+              "options": [
+                { "label": "অনেক দোকান আছে" },
+                { "label": "অনেক গাড়ি আছে" },
+                { "label": "গাছ, পাখি, পুকুর আর ফসলের খেত আছে" }
+              ],
+              "answer": 2,
+              "explain": "গ্রামে কত গাছ! গাছে গাছে কত পাখি! গ্রামের পরিবেশ তিথির দারুণ ভালো লাগে।"
+            },
+            {
+              "id": "q4",
+              "ask": "ফসলের খেতে কে কাজ করে?",
+              "illustration": "field",
+              "options": [{ "label": "চাষি" }, { "label": "কুমোর" }, { "label": "জেলে" }],
+              "answer": 0,
+              "explain": "রাস্তার দুপাশে ফসলের খেত। সেখানে চাষি চাষ করে।",
+              "tests": "w-chashi"
+            }
+          ]
+        },
+        {
+          "id": "s7",
+          "type": "done",
+          "title": "পাঠ ১৮ শেষ!",
+          "say": "গ্রাম এক রকম, শহর আরেক রকম — দুটোই সুন্দর।"
+        }
+      ]
+    },
+    {
+      "id": "paath-21",
+      "chapterId": "ch07",
+      "number": 21,
+      "title": "ছয় ঋতু",
+      "shape": "reading",
+      "bookPages": [43, 44, 45, 46, 47],
+      "objective": "ছয়টি ঋতু, তাদের মাস ও রূপ বলতে পারবে।",
+      "minutes": 13,
+      "words": [
+        {
+          "id": "w-shor",
+          "word": "ষড়",
+          "meaning": "ছয়",
+          "meaningSource": "textbook",
+          "bookPage": 46,
+          "illustration": "season-bosonto",
+          "audio": null
+        },
+        {
+          "id": "w-kalboishakhi",
+          "word": "কালবৈশাখি",
+          "meaning": "বৈশাখ মাসের ঝড়",
+          "meaningSource": "textbook",
+          "bookPage": 46,
+          "illustration": "season-grishmo",
+          "audio": null
+        },
+        {
+          "id": "w-nobanno",
+          "word": "নবান্ন",
+          "meaning": "পিঠা-পায়েস খাওয়ার উৎসব",
+          "meaningSource": "textbook",
+          "bookPage": 46,
+          "illustration": "season-hemonto",
+          "audio": null
+        },
+        {
+          "id": "w-kuyasha",
+          "word": "কুয়াশা",
+          "meaning": "বাতাসে ভাসা পানির কণা",
+          "meaningSource": "textbook",
+          "bookPage": 46,
+          "illustration": "season-sheet",
+          "audio": null
+        }
+      ],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "ছয় ঋতু",
+          "say": "বাংলাদেশ ছয় ঋতুর দেশ। প্রতি দুই মাস নিয়ে এক ঋতু।",
+          "illustration": "season-bosonto"
+        },
+        {
+          "id": "s2",
+          "type": "read",
+          "title": "গ্রীষ্ম ও বর্ষা",
+          "bookActivity": "পড়ি",
+          "source": "textbook",
+          "illustration": "season-grishmo",
+          "paragraphs": [
+            "বাংলাদেশ ছয় ঋতুর দেশ। প্রতি দুই মাস নিয়ে এক ঋতু। একেক ঋতুর একেক রকম রূপ। ছয়টি ঋতুকে বলা হয় ষড়ঋতু।",
+            "গ্রীষ্ম — বাংলা বছরের প্রথম দুই মাস বৈশাখ ও জ্যৈষ্ঠ। এই দুই মাস নিয়ে গ্রীষ্ম ঋতু। এ সময় খুব গরম পড়ে। খাল-বিল শুকিয়ে যায়। মাঝে মাঝে কালবৈশাখি ঝড় হয়। এ ঋতুতে আম, জাম, কাঁঠাল পাকে।",
+            "বর্ষা — আষাঢ় ও শ্রাবণ মাস নিয়ে বর্ষা ঋতু। এ সময় আকাশে কালো মেঘ জমে। ঝরঝর করে বৃষ্টি ঝরে। খাল-বিল পানিতে ভরে যায়। ব্যাঙ ডাকে। এ ঋতুতে কদম ও দোলনচাঁপা ফোটে।"
+          ]
+        },
+        {
+          "id": "s3",
+          "type": "read",
+          "title": "শরৎ ও হেমন্ত",
+          "bookActivity": "পড়ি",
+          "source": "textbook",
+          "illustration": "season-shorot",
+          "paragraphs": [
+            "শরৎ — ভাদ্র ও আশ্বিন মাস মিলে শরৎ ঋতু। এ ঋতুতে আকাশ নীল থাকে। আকাশে তুলার মতো সাদা মেঘ ভেসে বেড়ায়। নদীর ধারে কাশফুল ফোটে।",
+            "হেমন্ত — কার্তিক ও অগ্রহায়ণ মাস নিয়ে হেমন্ত ঋতু। মাঠে দোলে সোনালি পাকা ধান। এ ঋতুতে নবান্ন উৎসব হয়। তৈরি হয় মজার মজার পিঠা-পায়েস।"
+          ]
+        },
+        {
+          "id": "s4",
+          "type": "read",
+          "title": "শীত ও বসন্ত",
+          "bookActivity": "পড়ি",
+          "source": "textbook",
+          "illustration": "season-sheet",
+          "paragraphs": [
+            "শীত — পৌষ ও মাঘ মাস নিয়ে শীত ঋতু। সকালে চারদিক ঢাকা থাকে কুয়াশায়। প্রকৃতিতে শীত নামে। এ ঋতুতে পাওয়া যায় তাজা শাকসবজি। শীতে গাছের পাতা ঝরে পড়ে।",
+            "বসন্ত — বছরের শেষ দুই মাস ফাল্গুন ও চৈত্র। এই দুই মাস নিয়ে বসন্ত ঋতু। প্রকৃতি তখন ফুলে ফুলে সাজে। কোকিল ডাকে। এ ঋতু সবচেয়ে রঙিন। তাই বসন্তকে বলা হয় ঋতুর রাজা।"
+          ]
+        },
+        {
+          "id": "s5",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-shor", "w-kalboishakhi", "w-nobanno", "w-kuyasha"]
+        },
+        {
+          "id": "s6",
+          "type": "game",
+          "kind": "picture-to-word",
+          "title": "কোনটি কোন ঋতু?",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "এটি কোন ঋতুর ছবি?",
+              "illustration": "season-grishmo",
+              "options": [{ "label": "গ্রীষ্ম" }, { "label": "শীত" }, { "label": "বর্ষা" }],
+              "answer": 0,
+              "hint": "খুব গরম পড়ে, খাল-বিল শুকিয়ে যায়।",
+              "tests": "w-kalboishakhi"
+            },
+            {
+              "id": "g2",
+              "ask": "এটি কোন ঋতুর ছবি?",
+              "illustration": "season-borsha",
+              "options": [{ "label": "শরৎ" }, { "label": "বর্ষা" }, { "label": "হেমন্ত" }],
+              "answer": 1,
+              "hint": "আকাশে কালো মেঘ, ঝরঝর বৃষ্টি।"
+            },
+            {
+              "id": "g3",
+              "ask": "এটি কোন ঋতুর ছবি?",
+              "illustration": "season-shorot",
+              "options": [{ "label": "বসন্ত" }, { "label": "গ্রীষ্ম" }, { "label": "শরৎ" }],
+              "answer": 2,
+              "hint": "নীল আকাশ আর নদীর ধারে সাদা কাশফুল।"
+            },
+            {
+              "id": "g4",
+              "ask": "এটি কোন ঋতুর ছবি?",
+              "illustration": "season-hemonto",
+              "options": [{ "label": "হেমন্ত" }, { "label": "শীত" }, { "label": "বর্ষা" }],
+              "answer": 0,
+              "hint": "মাঠে সোনালি পাকা ধান, নবান্ন উৎসব।",
+              "tests": "w-nobanno"
+            },
+            {
+              "id": "g5",
+              "ask": "এটি কোন ঋতুর ছবি?",
+              "illustration": "season-sheet",
+              "options": [{ "label": "বসন্ত" }, { "label": "শীত" }, { "label": "শরৎ" }],
+              "answer": 1,
+              "hint": "সকালে চারদিক কুয়াশায় ঢাকা, গাছের পাতা ঝরে।",
+              "tests": "w-kuyasha"
+            },
+            {
+              "id": "g6",
+              "ask": "এটি কোন ঋতুর ছবি?",
+              "illustration": "season-bosonto",
+              "options": [{ "label": "গ্রীষ্ম" }, { "label": "হেমন্ত" }, { "label": "বসন্ত" }],
+              "answer": 2,
+              "hint": "ফুলে ফুলে সাজে, কোকিল ডাকে — ঋতুর রাজা।"
+            }
+          ]
+        },
+        {
+          "id": "s7",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "কোন ঋতুতে কালবৈশাখি ঝড় হয়?",
+              "illustration": "season-grishmo",
+              "options": [{ "label": "গ্রীষ্ম" }, { "label": "শীত" }, { "label": "শরৎ" }],
+              "answer": 0,
+              "explain": "গ্রীষ্ম ঋতুতে মাঝে মাঝে কালবৈশাখি ঝড় হয়।",
+              "tests": "w-kalboishakhi"
+            },
+            {
+              "id": "q2",
+              "ask": "বর্ষাকালে কী কী ফুল ফোটে?",
+              "illustration": "season-borsha",
+              "options": [{ "label": "কাশফুল" }, { "label": "কদম ও দোলনচাঁপা" }, { "label": "গোলাপ" }],
+              "answer": 1,
+              "explain": "এ ঋতুতে কদম ও দোলনচাঁপা ফোটে।"
+            },
+            {
+              "id": "q3",
+              "ask": "হেমন্ত ঋতুতে কোন উৎসব হয়?",
+              "illustration": "season-hemonto",
+              "options": [{ "label": "নবান্ন" }, { "label": "নববর্ষ" }, { "label": "একুশে" }],
+              "answer": 0,
+              "explain": "এ ঋতুতে নবান্ন উৎসব হয়। তৈরি হয় পিঠা-পায়েস।",
+              "tests": "w-nobanno"
+            },
+            {
+              "id": "q4",
+              "ask": "বসন্ত ঋতুকে কেন ঋতুর রাজা বলা হয়?",
+              "illustration": "season-bosonto",
+              "options": [
+                { "label": "সবচেয়ে গরম বলে" },
+                { "label": "সবচেয়ে ঠান্ডা বলে" },
+                { "label": "সবচেয়ে রঙিন বলে" }
+              ],
+              "answer": 2,
+              "explain": "এ ঋতু সবচেয়ে রঙিন। তাই বসন্তকে বলা হয় ঋতুর রাজা।"
+            },
+            {
+              "id": "q5",
+              "ask": "ষড় মানে কী?",
+              "illustration": "book",
+              "options": [{ "label": "ছয়" }, { "label": "চার" }, { "label": "দুই" }],
+              "answer": 0,
+              "explain": "ষড় মানে ছয় — তাই ছয়টি ঋতুকে বলা হয় ষড়ঋতু।",
+              "tests": "w-shor"
+            }
+          ]
+        },
+        {
+          "id": "s8",
+          "type": "done",
+          "title": "পাঠ ২১ শেষ!",
+          "say": "ছয়টি ঋতুই তুমি চিনে ফেলেছ। দারুণ!"
+        }
+      ]
+    },
+    {
+      "id": "paath-22",
+      "chapterId": "ch07",
+      "number": 22,
+      "title": "নববর্ষ",
+      "shape": "reading",
+      "bookPages": [48, 49],
+      "objective": "পহেলা বৈশাখে কী কী হয় তা বলতে পারবে।",
+      "minutes": 11,
+      "words": [
+        {
+          "id": "w-pohela",
+          "word": "পহেলা",
+          "meaning": "প্রথম",
+          "meaningSource": "textbook",
+          "bookPage": 49,
+          "illustration": "boishakh",
+          "audio": null
+        },
+        {
+          "id": "w-nobaborsho",
+          "word": "নববর্ষ",
+          "meaning": "নতুন বছর",
+          "meaningSource": "textbook",
+          "bookPage": 49,
+          "illustration": "boishakh",
+          "audio": null
+        },
+        {
+          "id": "w-halkhata",
+          "word": "হালখাতা",
+          "meaning": "পুরনো বছরের দেনা-পাওনা মেটানোর উৎসব",
+          "meaningSource": "textbook",
+          "bookPage": 49,
+          "illustration": "market",
+          "audio": null
+        },
+        {
+          "id": "w-noukabaich",
+          "word": "নৌকা বাইচ",
+          "meaning": "নৌকা চালানোর প্রতিযোগিতা",
+          "meaningSource": "textbook",
+          "bookPage": 49,
+          "illustration": "nouka-baich",
+          "audio": null
+        },
+        {
+          "id": "w-nagordola",
+          "word": "নাগরদোলা",
+          "meaning": "মেলার ঘোরানো দোলনা",
+          "meaningSource": "enrichment",
+          "bookPage": 49,
+          "illustration": "nagordola",
+          "audio": null
+        }
+      ],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "নববর্ষ",
+          "say": "বৈশাখ মাসের প্রথম দিন আমাদের নববর্ষ।",
+          "illustration": "boishakh"
+        },
+        {
+          "id": "s2",
+          "type": "read",
+          "title": "পহেলা বৈশাখ",
+          "bookActivity": "পড়ি",
+          "source": "textbook",
+          "illustration": "boishakh",
+          "paragraphs": [
+            "বাংলা বছরের প্রথম মাস হলো বৈশাখ। বৈশাখ মাসের প্রথম দিন হলো পহেলা বৈশাখ। এদিন আমাদের নববর্ষ। নববর্ষে অনেক মেলা হয়, অনেক খেলাধুলা হয়, অনেক গানবাজনা হয়, শোভাযাত্রা হয়, অনেক মানুষ সুন্দর পোশাক পরে ঘুরে বেড়ায়। সেদিন অনেক মজা হয়। আমাদের খুব ভালো লাগে।",
+            "নববর্ষের সময় দোকানে দোকানে হালখাতা হয়। সেদিন সুন্দর করে দোকান সাজানো হয়। হালখাতা হলো পুরনো বছরের সব দেনা-পাওনা মিটিয়ে দেওয়ার অনুষ্ঠান। হালখাতা অনুষ্ঠানে মিষ্টান্ন ও ফলমূল দিয়ে আপ্যায়ন করা হয়।",
+            "নববর্ষে নদী, হাওড় ও বিলে নৌকাবাইচ হয়। নৌকাবাইচ হলো নৌকা চালানোর প্রতিযোগিতা। নৌকার মাঝিরা নানা রঙের পোশাক পরে ঢোল বাজিয়ে নৌকা চালায়।",
+            "নববর্ষে গ্রাম ও শহরে ঘুড়ি ওড়ানোর প্রতিযোগিতা হয়। অনেক রঙের ঘুড়ি আকাশে ওড়ে। দেখতে খুব সুন্দর লাগে।"
+          ]
+        },
+        {
+          "id": "s3",
+          "type": "read",
+          "title": "নববর্ষের মেলা",
+          "bookActivity": "পড়ি",
+          "source": "textbook",
+          "illustration": "nagordola",
+          "paragraphs": [
+            "কোথাও ফুটবল, ক্রিকেট, হাডুডু, দাঁড়িয়াবান্ধা বা লাঠি খেলার আয়োজন হয়। অনেক মানুষ ভিড় করে খেলা দেখে।",
+            "নদীর ধারে, হাট-বাজারের পাশে ও বড়ো গাছের নিচে মেলা বসে। মেলায় অনেক পণ্যের পসরা বসে। মাটির তৈরি পুতুল, হাতি, ঘোড়া ও ফলমূল পাওয়া যায়। বাঁশ ও বেতের তৈরি জিনিস পাওয়া যায়। অনেক রকমের মিষ্টি ও খাবার পাওয়া যায়।",
+            "নববর্ষের মেলার অন্যতম আকর্ষণ নাগরদোলা। ছোটো-বড়ো সবাই নাগরদোলায় চড়ে। নাগরদোলায় চড়তে খুব মজা।"
+          ]
+        },
+        {
+          "id": "s4",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-pohela", "w-nobaborsho", "w-halkhata", "w-noukabaich", "w-nagordola"]
+        },
+        {
+          "id": "s5",
+          "type": "game",
+          "kind": "picture-to-word",
+          "title": "নববর্ষে কী কী হয়?",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "এটি কী?",
+              "illustration": "nouka-baich",
+              "options": [{ "label": "নৌকা বাইচ" }, { "label": "হালখাতা" }, { "label": "নাগরদোলা" }],
+              "answer": 0,
+              "hint": "নদীতে নৌকা চালানোর প্রতিযোগিতা।",
+              "tests": "w-noukabaich"
+            },
+            {
+              "id": "g2",
+              "ask": "এটি কী?",
+              "illustration": "nagordola",
+              "options": [{ "label": "ঘুড়ি" }, { "label": "নাগরদোলা" }, { "label": "ঢোল" }],
+              "answer": 1,
+              "hint": "মেলার অন্যতম আকর্ষণ, ঘুরতে ঘুরতে ওঠে-নামে।",
+              "tests": "w-nagordola"
+            },
+            {
+              "id": "g3",
+              "ask": "মাঝিরা কী বাজিয়ে নৌকা চালায়?",
+              "illustration": "dhol",
+              "options": [{ "label": "বাঁশি" }, { "label": "হারমোনিয়াম" }, { "label": "ঢোল" }],
+              "answer": 2,
+              "hint": "হাতে চাপড় দিয়ে বাজানো হয়।"
+            },
+            {
+              "id": "g4",
+              "ask": "নববর্ষে আকাশে কী ওড়ানোর প্রতিযোগিতা হয়?",
+              "illustration": "kite",
+              "options": [{ "label": "ঘুড়ি" }, { "label": "পাখি" }, { "label": "বেলুন" }],
+              "answer": 0,
+              "hint": "সুতোয় বাঁধা, নানা রঙের।"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "আমাদের নববর্ষ কোন দিন?",
+              "illustration": "boishakh",
+              "options": [{ "label": "পহেলা বৈশাখ" }, { "label": "পহেলা ফাল্গুন" }, { "label": "একুশে ফেব্রুয়ারি" }],
+              "answer": 0,
+              "explain": "বৈশাখ মাসের প্রথম দিন হলো পহেলা বৈশাখ। এদিন আমাদের নববর্ষ।",
+              "tests": "w-pohela"
+            },
+            {
+              "id": "q2",
+              "ask": "হালখাতা কী?",
+              "illustration": "market",
+              "options": [
+                { "label": "নতুন বই কেনার দিন" },
+                { "label": "পুরনো বছরের দেনা-পাওনা মেটানোর অনুষ্ঠান" },
+                { "label": "নৌকা চালানোর প্রতিযোগিতা" }
+              ],
+              "answer": 1,
+              "explain": "হালখাতা হলো পুরনো বছরের সব দেনা-পাওনা মিটিয়ে দেওয়ার অনুষ্ঠান।",
+              "tests": "w-halkhata"
+            },
+            {
+              "id": "q3",
+              "ask": "মেলায় কী কী পাওয়া যায়?",
+              "illustration": "market",
+              "options": [
+                { "label": "মাটির পুতুল, হাতি, ঘোড়া ও মিষ্টি" },
+                { "label": "শুধু বই" },
+                { "label": "শুধু কাপড়" }
+              ],
+              "answer": 0,
+              "explain": "মাটির তৈরি পুতুল, হাতি, ঘোড়া ও ফলমূল পাওয়া যায়। বাঁশ ও বেতের জিনিসও পাওয়া যায়।"
+            },
+            {
+              "id": "q4",
+              "ask": "নববর্ষ মানে কী?",
+              "illustration": "boishakh",
+              "options": [{ "label": "পুরনো বছর" }, { "label": "নতুন বছর" }, { "label": "নতুন মাস" }],
+              "answer": 1,
+              "explain": "নববর্ষ – নতুন বছর।",
+              "tests": "w-nobaborsho"
+            }
+          ]
+        },
+        {
+          "id": "s7",
+          "type": "done",
+          "title": "পাঠ ২২ শেষ!",
+          "say": "শুভ নববর্ষ! সবাইকে শুভেচ্ছা জানাও।"
+        }
+      ]
+    }
+  ]
+}

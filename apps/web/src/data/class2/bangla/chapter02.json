@@ -1,0 +1,530 @@
+{
+  "id": "ch02",
+  "number": 2,
+  "title": "বর্ণ, কার ও যুক্তবর্ণ",
+  "colour": "accent",
+  "icon": "letter",
+  "lessons": [
+    {
+      "id": "paath-05",
+      "chapterId": "ch02",
+      "number": 5,
+      "title": "আবার পড়ি বর্ণমালা",
+      "shape": "alphabet",
+      "bookPages": [12, 13, 14],
+      "objective": "স্বরবর্ণ ও ব্যঞ্জনবর্ণ চিনতে ও ক্রম অনুযায়ী বলতে পারবে।",
+      "minutes": 10,
+      "words": [],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "আবার পড়ি বর্ণমালা",
+          "say": "চলো আবার বর্ণমালা পড়ি। প্রথমে স্বরবর্ণ, তারপর ব্যঞ্জনবর্ণ।",
+          "illustration": "book"
+        },
+        {
+          "id": "s2",
+          "type": "letters",
+          "title": "স্বরবর্ণ",
+          "bookActivity": "স্বরবর্ণ",
+          "source": "textbook",
+          "perRow": 4,
+          "letters": ["অ", "আ", "ই", "ঈ", "উ", "ঊ", "ঋ", "এ", "ঐ", "ও", "ঔ"]
+        },
+        {
+          "id": "s3",
+          "type": "letters",
+          "title": "ব্যঞ্জনবর্ণ",
+          "bookActivity": "ব্যঞ্জনবর্ণ",
+          "source": "textbook",
+          "perRow": 5,
+          "letters": [
+            "ক", "খ", "গ", "ঘ", "ঙ",
+            "চ", "ছ", "জ", "ঝ", "ঞ",
+            "ট", "ঠ", "ড", "ঢ", "ণ",
+            "ত", "থ", "দ", "ধ", "ন",
+            "প", "ফ", "ব", "ভ", "ম",
+            "য", "র", "ল",
+            "শ", "ষ", "স", "হ",
+            "ড়", "ঢ়", "য়", "ৎ",
+            "ং", "ঃ", "ঁ"
+          ]
+        },
+        {
+          "id": "s4",
+          "type": "game",
+          "kind": "pick-letter",
+          "title": "খালি ঘরে বর্ণ বসাই",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "অ, ___, ই, ঈ — খালি ঘরে কোন বর্ণ বসবে?",
+              "illustration": "letter-আ",
+              "options": [{ "label": "আ" }, { "label": "উ" }, { "label": "এ" }],
+              "answer": 0,
+              "hint": "অ-এর ঠিক পরেই আসে।"
+            },
+            {
+              "id": "g2",
+              "ask": "___, ঊ, ঋ — খালি ঘরে কোন বর্ণ বসবে?",
+              "illustration": "letter-উ",
+              "options": [{ "label": "ও" }, { "label": "উ" }, { "label": "ঈ" }],
+              "answer": 1,
+              "hint": "ঊ-এর ঠিক আগে আসে।"
+            },
+            {
+              "id": "g3",
+              "ask": "এ, ঐ, ___, ঔ — খালি ঘরে কোন বর্ণ বসবে?",
+              "illustration": "letter-ও",
+              "options": [{ "label": "অ" }, { "label": "ঋ" }, { "label": "ও" }],
+              "answer": 2,
+              "hint": "ঔ-এর ঠিক আগে আসে।"
+            },
+            {
+              "id": "g4",
+              "ask": "ক, ___, গ, ঘ — খালি ঘরে কোন বর্ণ বসবে?",
+              "illustration": "letter-খ",
+              "options": [{ "label": "খ" }, { "label": "চ" }, { "label": "ঙ" }],
+              "answer": 0,
+              "hint": "ক-এর ঠিক পরেই আসে।"
+            },
+            {
+              "id": "g5",
+              "ask": "___, ছ, জ, ঝ, ঞ — খালি ঘরে কোন বর্ণ বসবে?",
+              "illustration": "letter-চ",
+              "options": [{ "label": "ট" }, { "label": "চ" }, { "label": "ত" }],
+              "answer": 1,
+              "hint": "ছ-এর ঠিক আগে আসে।"
+            }
+          ]
+        },
+        {
+          "id": "s5",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "স্বরবর্ণ কয়টি?",
+              "illustration": "book",
+              "options": [{ "label": "১১টি" }, { "label": "৯টি" }, { "label": "৩৯টি" }],
+              "answer": 0,
+              "explain": "অ থেকে ঔ পর্যন্ত মোট ১১টি স্বরবর্ণ।"
+            },
+            {
+              "id": "q2",
+              "ask": "ব্যঞ্জনবর্ণ কয়টি?",
+              "illustration": "book",
+              "options": [{ "label": "১১টি" }, { "label": "৩৯টি" }, { "label": "৫০টি" }],
+              "answer": 1,
+              "explain": "ক থেকে ঁ পর্যন্ত মোট ৩৯টি ব্যঞ্জনবর্ণ।"
+            },
+            {
+              "id": "q3",
+              "ask": "কোনটি স্বরবর্ণ?",
+              "illustration": "letter-ঈ",
+              "options": [{ "label": "ক" }, { "label": "ঈ" }, { "label": "ম" }],
+              "answer": 1,
+              "explain": "ঈ স্বরবর্ণের ঘরে আছে, ক আর ম ব্যঞ্জনবর্ণ।"
+            },
+            {
+              "id": "q4",
+              "ask": "কোনটি ব্যঞ্জনবর্ণ?",
+              "illustration": "letter-ণ",
+              "options": [{ "label": "ঋ" }, { "label": "ঔ" }, { "label": "ণ" }],
+              "answer": 2,
+              "explain": "ণ ব্যঞ্জনবর্ণের ঘরে আছে, ঋ আর ঔ স্বরবর্ণ।"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "done",
+          "title": "পাঠ ৫ শেষ!",
+          "say": "তুমি পুরো বর্ণমালা আবার পড়েছ। দারুণ!"
+        }
+      ]
+    },
+    {
+      "id": "paath-07",
+      "chapterId": "ch02",
+      "number": 7,
+      "title": "কারচিহ্ন দিয়ে শব্দ বানাই",
+      "shape": "kar",
+      "bookPages": [16, 17],
+      "objective": "বর্ণের সাথে কারচিহ্ন যোগ করে শব্দ বানাতে পারবে।",
+      "minutes": 11,
+      "words": [
+        {
+          "id": "w-kak",
+          "word": "কাক",
+          "meaning": "কালো রঙের একটি পাখি",
+          "meaningSource": "enrichment",
+          "bookPage": 16,
+          "illustration": "crow",
+          "audio": null
+        },
+        {
+          "id": "w-trin",
+          "word": "তৃণ",
+          "meaning": "ঘাস",
+          "meaningSource": "enrichment",
+          "bookPage": 16,
+          "illustration": "field",
+          "audio": null
+        },
+        {
+          "id": "w-nolok",
+          "word": "নোলক",
+          "meaning": "নাকে পরার গয়না",
+          "meaningSource": "enrichment",
+          "bookPage": 17,
+          "illustration": "ma",
+          "audio": null
+        },
+        {
+          "id": "w-moumachi",
+          "word": "মৌমাছি",
+          "meaning": "যে পোকা ফুল থেকে মধু আনে",
+          "meaningSource": "enrichment",
+          "bookPage": 17,
+          "illustration": "bee",
+          "audio": null
+        }
+      ],
+      "builds": [
+        { "id": "b-ka", "parts": ["ক", "া"], "result": "কা", "join": "kar", "bookPage": 16, "example": "কাক", "exampleSource": "textbook" },
+        { "id": "b-ki", "parts": ["ক", "ি"], "result": "কি", "join": "kar", "bookPage": 16, "example": null, "exampleSource": null },
+        { "id": "b-kee", "parts": ["ক", "ী"], "result": "কী", "join": "kar", "bookPage": 16, "example": null, "exampleSource": null },
+        { "id": "b-ku", "parts": ["ক", "ু"], "result": "কু", "join": "kar", "bookPage": 16, "example": null, "exampleSource": null },
+        { "id": "b-koo", "parts": ["ক", "ূ"], "result": "কূ", "join": "kar", "bookPage": 16, "example": null, "exampleSource": null },
+        { "id": "b-kri", "parts": ["ক", "ৃ"], "result": "কৃ", "join": "kar", "bookPage": 16, "example": null, "exampleSource": null },
+        { "id": "b-ke", "parts": ["ক", "ে"], "result": "কে", "join": "kar", "bookPage": 16, "example": null, "exampleSource": null },
+        { "id": "b-koi", "parts": ["ক", "ৈ"], "result": "কৈ", "join": "kar", "bookPage": 16, "example": null, "exampleSource": null },
+        { "id": "b-ko", "parts": ["ক", "ো"], "result": "কো", "join": "kar", "bookPage": 16, "example": null, "exampleSource": null },
+        { "id": "b-kou", "parts": ["ক", "ৌ"], "result": "কৌ", "join": "kar", "bookPage": 16, "example": null, "exampleSource": null },
+        { "id": "b-tri", "parts": ["ত", "ৃ"], "result": "তৃ", "join": "kar", "bookPage": 16, "example": "তৃণ", "exampleSource": "textbook" },
+        { "id": "b-no", "parts": ["ন", "ো"], "result": "নো", "join": "kar", "bookPage": 17, "example": "নোলক", "exampleSource": "textbook" },
+        { "id": "b-nou", "parts": ["ন", "ৌ"], "result": "নৌ", "join": "kar", "bookPage": 17, "example": null, "exampleSource": null },
+        { "id": "b-ni", "parts": ["ন", "ি"], "result": "নি", "join": "kar", "bookPage": 17, "example": null, "exampleSource": null },
+        { "id": "b-nu", "parts": ["ন", "ু"], "result": "নু", "join": "kar", "bookPage": 17, "example": null, "exampleSource": null },
+        { "id": "b-me", "parts": ["ম", "ে"], "result": "মে", "join": "kar", "bookPage": 17, "example": null, "exampleSource": null },
+        { "id": "b-moi", "parts": ["ম", "ৈ"], "result": "মৈ", "join": "kar", "bookPage": 17, "example": null, "exampleSource": null },
+        { "id": "b-mo", "parts": ["ম", "ো"], "result": "মো", "join": "kar", "bookPage": 17, "example": null, "exampleSource": null },
+        { "id": "b-mou", "parts": ["ম", "ৌ"], "result": "মৌ", "join": "kar", "bookPage": 17, "example": "মৌমাছি", "exampleSource": "textbook" }
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "কারচিহ্ন দিয়ে শব্দ বানাই",
+          "say": "বর্ণের সাথে কার যোগ করলে নতুন শব্দ তৈরি হয়।",
+          "illustration": "crow"
+        },
+        {
+          "id": "s2",
+          "type": "build",
+          "title": "ক-এর সাথে কার যোগ করি",
+          "bookActivity": "কার যোগ করি",
+          "items": ["b-ka", "b-ki", "b-kee", "b-ku", "b-koo", "b-kri", "b-ke", "b-koi", "b-ko", "b-kou"]
+        },
+        {
+          "id": "s3",
+          "type": "build",
+          "title": "ন ও ম-এর সাথে কার যোগ করি",
+          "bookActivity": "কার যোগ করি",
+          "items": ["b-no", "b-nou", "b-ni", "b-nu", "b-me", "b-moi", "b-mo", "b-mou"]
+        },
+        {
+          "id": "s4",
+          "type": "build",
+          "title": "কার যোগ করে শব্দ বানাই",
+          "bookActivity": "কার যোগ করে শব্দ বানাই",
+          "items": ["b-ka", "b-tri", "b-no", "b-mou"]
+        },
+        {
+          "id": "s5",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-kak", "w-trin", "w-nolok", "w-moumachi"]
+        },
+        {
+          "id": "s6",
+          "type": "game",
+          "kind": "join-letters",
+          "title": "কার যোগ করি",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "ক + া = ?",
+              "options": [{ "label": "কা" }, { "label": "কি" }, { "label": "কু" }],
+              "answer": 0,
+              "hint": "া চিহ্নটি বর্ণের ডান পাশে বসে।",
+              "tests": "b-ka"
+            },
+            {
+              "id": "g2",
+              "ask": "ন + ো = ?",
+              "options": [{ "label": "নু" }, { "label": "নো" }, { "label": "নৌ" }],
+              "answer": 1,
+              "hint": "নোলক শব্দের প্রথম অংশ।",
+              "tests": "b-no"
+            },
+            {
+              "id": "g3",
+              "ask": "ম + ৌ = ?",
+              "options": [{ "label": "মো" }, { "label": "মে" }, { "label": "মৌ" }],
+              "answer": 2,
+              "hint": "মৌমাছি শব্দের প্রথম অংশ।",
+              "tests": "b-mou"
+            },
+            {
+              "id": "g4",
+              "ask": "ত + ৃ = ?",
+              "options": [{ "label": "তৃ" }, { "label": "তু" }, { "label": "তো" }],
+              "answer": 0,
+              "hint": "তৃণ শব্দের প্রথম অংশ।",
+              "tests": "b-tri"
+            }
+          ]
+        },
+        {
+          "id": "s7",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "ক + া + ক মিলে কোন শব্দ হয়?",
+              "illustration": "crow",
+              "options": [{ "label": "কাক" }, { "label": "কোক" }, { "label": "কুক" }],
+              "answer": 0,
+              "explain": "কা-এর সাথে ক বসলে হয় কাক — একটি কালো পাখি।",
+              "tests": "w-kak"
+            },
+            {
+              "id": "q2",
+              "ask": "মৌমাছি শব্দে ম-এর সাথে কোন কার আছে?",
+              "illustration": "bee",
+              "options": [{ "label": "ো" }, { "label": "ৌ" }, { "label": "ে" }],
+              "answer": 1,
+              "explain": "ম + ৌ = মৌ, তাই মৌমাছি।",
+              "tests": "b-mou"
+            },
+            {
+              "id": "q3",
+              "ask": "তৃণ মানে কী?",
+              "illustration": "field",
+              "options": [{ "label": "পাখি" }, { "label": "ঘাস" }, { "label": "নদী" }],
+              "answer": 1,
+              "explain": "তৃণ মানে ঘাস।",
+              "tests": "w-trin"
+            },
+            {
+              "id": "q4",
+              "ask": "নোলক কোথায় পরা হয়?",
+              "illustration": "ma",
+              "options": [{ "label": "নাকে" }, { "label": "হাতে" }, { "label": "পায়ে" }],
+              "answer": 0,
+              "explain": "নোলক নাকে পরার গয়না।",
+              "tests": "w-nolok"
+            }
+          ]
+        },
+        {
+          "id": "s8",
+          "type": "done",
+          "title": "পাঠ ৭ শেষ!",
+          "say": "কার যোগ করে শব্দ বানাতে শিখেছ। খুব ভালো!"
+        }
+      ]
+    },
+    {
+      "id": "paath-10",
+      "chapterId": "ch02",
+      "number": 10,
+      "title": "যুক্তবর্ণ শিখি",
+      "shape": "jukto",
+      "bookPages": [21],
+      "objective": "দুটি বর্ণ মিলে যুক্তবর্ণ হয় — তা চিনতে ও পড়তে পারবে।",
+      "minutes": 11,
+      "words": [
+        {
+          "id": "w-falgun",
+          "word": "ফাল্গুন",
+          "meaning": "বাংলা বছরের এগারোতম মাস",
+          "meaningSource": "enrichment",
+          "bookPage": 21,
+          "illustration": "season-bosonto",
+          "audio": null
+        },
+        {
+          "id": "w-skul",
+          "word": "স্কুল",
+          "meaning": "বিদ্যালয়",
+          "meaningSource": "enrichment",
+          "bookPage": 21,
+          "illustration": "school",
+          "audio": null
+        },
+        {
+          "id": "w-ghonta",
+          "word": "ঘণ্টা",
+          "meaning": "সময় জানানোর জন্য যা বাজে",
+          "meaningSource": "enrichment",
+          "bookPage": 21,
+          "illustration": "school",
+          "audio": null
+        }
+      ],
+      "builds": [
+        { "id": "b-lga", "parts": ["ল", "গ"], "result": "ল্গ", "join": "jukto", "bookPage": 21, "example": "ফাল্গুন", "exampleSource": "textbook" },
+        { "id": "b-ska", "parts": ["স", "ক"], "result": "স্ক", "join": "jukto", "bookPage": 21, "example": "স্কুল", "exampleSource": "textbook" },
+        { "id": "b-ndha", "parts": ["ন", "ধ"], "result": "ন্ধ", "join": "jukto", "bookPage": 21, "example": "বন্ধু", "exampleSource": "textbook" },
+        { "id": "b-nda", "parts": ["ন", "দ"], "result": "ন্দ", "join": "jukto", "bookPage": 21, "example": "পছন্দ", "exampleSource": "textbook" },
+        { "id": "b-nta", "parts": ["ণ", "ট"], "result": "ণ্ট", "join": "jukto", "bookPage": 21, "example": "ঘণ্টা", "exampleSource": "textbook" },
+        { "id": "b-sta", "parts": ["স", "ত"], "result": "স্ত", "join": "jukto", "bookPage": 21, "example": "রাস্তা", "exampleSource": "textbook" },
+        { "id": "b-nna", "parts": ["ন", "ন"], "result": "ন্ন", "join": "jukto", "bookPage": 21, "example": "রান্না", "exampleSource": "textbook" },
+        { "id": "b-shka", "parts": ["ষ", "ক"], "result": "ষ্ক", "join": "jukto", "bookPage": 21, "example": "পরিষ্কার", "exampleSource": "textbook" }
+      ],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "যুক্তবর্ণ শিখি",
+          "say": "দুটি বর্ণ মিলে এক হয়ে গেলে তাকে যুক্তবর্ণ বলে।",
+          "illustration": "book"
+        },
+        {
+          "id": "s2",
+          "type": "read",
+          "title": "বাক্যে যুক্তবর্ণ খুঁজি",
+          "bookActivity": "যুক্তবর্ণ শিখি",
+          "source": "textbook",
+          "paragraphs": [
+            "ফাল্গুনে অনেক ফুল ফোটে।",
+            "স্কুল খুলেছে।",
+            "রাজু ও মিতু বন্ধু।",
+            "তিথি খেলতে পছন্দ করে।",
+            "ছুটির ঘণ্টা বাজল।",
+            "রাস্তায় অনেক গাড়ি।",
+            "সবাই মিলে রান্না করি।",
+            "বাগান পরিষ্কার করি।"
+          ]
+        },
+        {
+          "id": "s3",
+          "type": "build",
+          "title": "যুক্তবর্ণ ভেঙে দেখি",
+          "bookActivity": "যুক্তবর্ণ শিখি",
+          "items": ["b-lga", "b-ska", "b-ndha", "b-nda", "b-nta", "b-sta", "b-nna", "b-shka"]
+        },
+        {
+          "id": "s4",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-falgun", "w-skul", "w-ghonta"]
+        },
+        {
+          "id": "s5",
+          "type": "game",
+          "kind": "join-letters",
+          "title": "কোন দুটি বর্ণ মিলেছে?",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "বন্ধু শব্দে কোন দুটি বর্ণ মিলেছে?",
+              "options": [{ "label": "ন + ধ" }, { "label": "ন + দ" }, { "label": "ন + ন" }],
+              "answer": 0,
+              "hint": "ন্ধ — দ্বিতীয় বর্ণটির মাথায় একটি লেজ আছে।",
+              "tests": "b-ndha"
+            },
+            {
+              "id": "g2",
+              "ask": "স্কুল শব্দে কোন দুটি বর্ণ মিলেছে?",
+              "options": [{ "label": "স + ত" }, { "label": "স + ক" }, { "label": "ষ + ক" }],
+              "answer": 1,
+              "hint": "স্ক — স-এর নিচে ক বসেছে।",
+              "tests": "b-ska"
+            },
+            {
+              "id": "g3",
+              "ask": "ঘণ্টা শব্দে কোন দুটি বর্ণ মিলেছে?",
+              "options": [{ "label": "ন + ট" }, { "label": "ণ + ত" }, { "label": "ণ + ট" }],
+              "answer": 2,
+              "hint": "ণ্ট — মূর্ধন্য ণ আর ট।",
+              "tests": "b-nta"
+            },
+            {
+              "id": "g4",
+              "ask": "রান্না শব্দে কোন দুটি বর্ণ মিলেছে?",
+              "options": [{ "label": "ন + ন" }, { "label": "ন + দ" }, { "label": "ল + গ" }],
+              "answer": 0,
+              "hint": "একই বর্ণ দুবার।",
+              "tests": "b-nna"
+            },
+            {
+              "id": "g5",
+              "ask": "পরিষ্কার শব্দে কোন দুটি বর্ণ মিলেছে?",
+              "options": [{ "label": "স + ক" }, { "label": "ষ + ক" }, { "label": "স + ত" }],
+              "answer": 1,
+              "hint": "ষ্ক — মূর্ধন্য ষ আর ক।",
+              "tests": "b-shka"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "ন + দ মিলে কোন যুক্তবর্ণ হয়?",
+              "illustration": "book",
+              "options": [{ "label": "ন্ধ" }, { "label": "ন্দ" }, { "label": "ন্ন" }],
+              "answer": 1,
+              "explain": "ন + দ = ন্দ, যেমন পছন্দ।",
+              "tests": "b-nda"
+            },
+            {
+              "id": "q2",
+              "ask": "ফাল্গুন শব্দে কোন যুক্তবর্ণ আছে?",
+              "illustration": "season-bosonto",
+              "options": [{ "label": "ল্গ" }, { "label": "স্ত" }, { "label": "ণ্ট" }],
+              "answer": 0,
+              "explain": "ল + গ = ল্গ, তাই ফাল্গুন।",
+              "tests": "w-falgun"
+            },
+            {
+              "id": "q3",
+              "ask": "রাস্তা শব্দে কোন যুক্তবর্ণ আছে?",
+              "illustration": "city",
+              "options": [{ "label": "ষ্ক" }, { "label": "স্ক" }, { "label": "স্ত" }],
+              "answer": 2,
+              "explain": "স + ত = স্ত, তাই রাস্তা।",
+              "tests": "b-sta"
+            },
+            {
+              "id": "q4",
+              "ask": "ছুটির কী বাজল?",
+              "illustration": "school",
+              "options": [{ "label": "ঘণ্টা" }, { "label": "ঢোল" }, { "label": "বাঁশি" }],
+              "answer": 0,
+              "explain": "ছুটির ঘণ্টা বাজল — ঘণ্টায় ণ্ট যুক্তবর্ণ আছে।",
+              "tests": "w-ghonta"
+            }
+          ]
+        },
+        {
+          "id": "s7",
+          "type": "done",
+          "title": "পাঠ ১০ শেষ!",
+          "say": "যুক্তবর্ণ চিনতে শিখেছ। দারুণ হয়েছে!"
+        }
+      ]
+    }
+  ]
+}

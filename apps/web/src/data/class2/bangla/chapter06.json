@@ -1,0 +1,736 @@
+{
+  "id": "ch06",
+  "number": 6,
+  "title": "লিখি ও বলি",
+  "colour": "accent",
+  "icon": "pencil",
+  "lessons": [
+    {
+      "id": "paath-14",
+      "chapterId": "ch06",
+      "number": 14,
+      "title": "নানা রকম লেখা",
+      "shape": "reading",
+      "bookPages": [28, 29],
+      "objective": "চারপাশের নানা রকম লেখা চিনতে ও সুন্দর হাতের লেখার কথা বলতে পারবে।",
+      "minutes": 9,
+      "words": [
+        {
+          "id": "w-hater-lekha",
+          "word": "হাতের লেখা",
+          "meaning": "হাতে যা লিখি",
+          "meaningSource": "enrichment",
+          "bookPage": 28,
+          "illustration": "handwriting",
+          "audio": null
+        },
+        {
+          "id": "w-sign-board",
+          "word": "সাইন বোর্ড",
+          "meaning": "দোকানের নাম লেখা যে বোর্ড",
+          "meaningSource": "enrichment",
+          "bookPage": 28,
+          "illustration": "signboard",
+          "audio": null
+        },
+        {
+          "id": "w-jatiyo-sangeet",
+          "word": "জাতীয় সংগীত",
+          "meaning": "দেশের গান — আমার সোনার বাংলা",
+          "meaningSource": "enrichment",
+          "bookPage": 28,
+          "illustration": "flag",
+          "audio": null
+        }
+      ],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "নানা রকম লেখা",
+          "say": "রাস্তায় নানা ধরনের লেখা থাকে। চলো দেখি।",
+          "illustration": "signboard"
+        },
+        {
+          "id": "s2",
+          "type": "read",
+          "title": "লেখা কত রকম",
+          "bookActivity": "পড়ি",
+          "source": "textbook",
+          "illustration": "handwriting",
+          "paragraphs": [
+            "রাস্তায় নানা ধরনের লেখা থাকে। ঝিমিত সেগুলো পড়ে খুব মজা পায়।",
+            "হাতের লেখা নানা রকম হয়। কেউ লেখে বাঁকা করে। কারো লেখা গোল গোল। ঝিমিত সুন্দর করে লেখে।",
+            "ঝিমিত দেখেছে, কম্পিউটারে লেখা যায়। বাবা মোবাইলে লিখতে পারেন। মোবাইলে পড়া যায়। মা খবর পড়েন।",
+            "টিভির পর্দায় কত রকম লেখা দেখা যায়। একদিন ঝিমিত টিভির পর্দায় ‘আমার সোনার বাংলা’ লেখা দেখল।",
+            "স্কুলের পাশের দোকানের নাম মামার দোকান। ঝিমিত হাতে লেখা সাইন বোর্ডটা পড়ে। বেশ মজার নাম, তাই না?"
+          ]
+        },
+        {
+          "id": "s3",
+          "type": "read",
+          "title": "পড়ি ও লিখি",
+          "bookActivity": "পড়ি ও লিখি",
+          "source": "textbook",
+          "paragraphs": [
+            "কাঁঠাল আমাদের জাতীয় ফল।",
+            "সত্য কথা বলি, নম্র হয়ে চলি।",
+            "দেখা হয় নাই চক্ষু মেলিয়া / ঘর হতে শুধু দুই পা ফেলিয়া"
+          ]
+        },
+        {
+          "id": "s4",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-hater-lekha", "w-sign-board", "w-jatiyo-sangeet"]
+        },
+        {
+          "id": "s5",
+          "type": "game",
+          "kind": "picture-to-word",
+          "title": "কোথায় লেখা দেখি?",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "এখানে কীভাবে লেখা যায়?",
+              "illustration": "phone",
+              "options": [{ "label": "মোবাইলে" }, { "label": "কাগজে" }, { "label": "বোর্ডে" }],
+              "answer": 0,
+              "hint": "বাবা এটিতে লিখতে পারেন, মা এটিতে খবর পড়েন।"
+            },
+            {
+              "id": "g2",
+              "ask": "দোকানের নাম কোথায় লেখা থাকে?",
+              "illustration": "signboard",
+              "options": [{ "label": "বইয়ে" }, { "label": "সাইন বোর্ডে" }, { "label": "টিভিতে" }],
+              "answer": 1,
+              "hint": "মামার দোকানের নামটি এখানেই লেখা।",
+              "tests": "w-sign-board"
+            },
+            {
+              "id": "g3",
+              "ask": "এটি কী রকম লেখা?",
+              "illustration": "handwriting",
+              "options": [{ "label": "হাতের লেখা" }, { "label": "কম্পিউটারের লেখা" }, { "label": "টিভির লেখা" }],
+              "answer": 0,
+              "hint": "কলম দিয়ে নিজের হাতে লেখা।",
+              "tests": "w-hater-lekha"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "ঝিমিত টিভির পর্দায় কী লেখা দেখল?",
+              "illustration": "flag",
+              "options": [{ "label": "আমার সোনার বাংলা" }, { "label": "মামার দোকান" }, { "label": "কাঁঠাল" }],
+              "answer": 0,
+              "explain": "ঝিমিত টিভির পর্দায় ‘আমার সোনার বাংলা’ লেখা দেখল।",
+              "tests": "w-jatiyo-sangeet"
+            },
+            {
+              "id": "q2",
+              "ask": "স্কুলের পাশের দোকানের নাম কী?",
+              "illustration": "signboard",
+              "options": [{ "label": "ভাইয়ের দোকান" }, { "label": "মামার দোকান" }, { "label": "বাবার দোকান" }],
+              "answer": 1,
+              "explain": "স্কুলের পাশের দোকানের নাম মামার দোকান।",
+              "tests": "w-sign-board"
+            },
+            {
+              "id": "q3",
+              "ask": "আমাদের জাতীয় ফল কী?",
+              "illustration": "tree",
+              "options": [{ "label": "আম" }, { "label": "কলা" }, { "label": "কাঁঠাল" }],
+              "answer": 2,
+              "explain": "কাঁঠাল আমাদের জাতীয় ফল।"
+            },
+            {
+              "id": "q4",
+              "ask": "হাতের লেখা সুন্দর করার জন্য কী করব?",
+              "illustration": "handwriting",
+              "options": [
+                { "label": "রোজ অনুশীলন করব" },
+                { "label": "তাড়াতাড়ি লিখব" },
+                { "label": "কিছুই করব না" }
+              ],
+              "answer": 0,
+              "explain": "রোজ একটু একটু করে অনুশীলন করলেই হাতের লেখা সুন্দর হয়।",
+              "tests": "w-hater-lekha"
+            }
+          ]
+        },
+        {
+          "id": "s7",
+          "type": "done",
+          "title": "পাঠ ১৪ শেষ!",
+          "say": "রোজ একটু করে লিখলে হাতের লেখা সুন্দর হবে।"
+        }
+      ]
+    },
+    {
+      "id": "paath-16",
+      "chapterId": "ch06",
+      "number": 16,
+      "title": "বাক্য লিখি",
+      "shape": "sentence",
+      "bookPages": [33],
+      "objective": "অনুরোধের বাক্য ও প্রশ্নবাক্য তৈরি করতে পারবে।",
+      "minutes": 8,
+      "words": [
+        {
+          "id": "w-bakko",
+          "word": "বাক্য",
+          "meaning": "পুরো একটি কথা",
+          "meaningSource": "enrichment",
+          "bookPage": 33,
+          "illustration": "book",
+          "audio": null
+        },
+        {
+          "id": "w-proshno",
+          "word": "প্রশ্ন",
+          "meaning": "যা জানতে চাওয়া হয়",
+          "meaningSource": "enrichment",
+          "bookPage": 33,
+          "illustration": "question",
+          "audio": null
+        }
+      ],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "বাক্য লিখি",
+          "say": "চলো নানা রকম বাক্য বানাই।",
+          "illustration": "book"
+        },
+        {
+          "id": "s2",
+          "type": "read",
+          "title": "পড়ি — দাও, খাও, দিন",
+          "bookActivity": "পড়ি",
+          "source": "textbook",
+          "paragraphs": ["দাও — মা, ভাত দাও।", "খাও — বাবা, দুধ খাও।", "দিন — আমাকে বই দিন।"]
+        },
+        {
+          "id": "s3",
+          "type": "read",
+          "title": "পড়ি — কী, কে, কখন",
+          "bookActivity": "পড়ি",
+          "source": "textbook",
+          "paragraphs": ["কী — তোমার নাম কী?", "কে — তিনি কে?", "কখন — কখন এসেছেন?"]
+        },
+        {
+          "id": "s4",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-bakko", "w-proshno"]
+        },
+        {
+          "id": "s5",
+          "type": "game",
+          "kind": "missing-word",
+          "title": "ঠিক শব্দটি বসাই",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "তোমার নাম ____?",
+              "options": [{ "label": "কে" }, { "label": "কী" }, { "label": "কখন" }],
+              "answer": 1,
+              "hint": "নাম জানতে চাইলে এই শব্দটি বসে।",
+              "tests": "w-proshno"
+            },
+            {
+              "id": "g2",
+              "ask": "তিনি ____?",
+              "options": [{ "label": "কে" }, { "label": "কী" }, { "label": "কখন" }],
+              "answer": 0,
+              "hint": "মানুষের পরিচয় জানতে চাইলে এই শব্দটি বসে।"
+            },
+            {
+              "id": "g3",
+              "ask": "____ এসেছেন?",
+              "options": [{ "label": "কী" }, { "label": "কে" }, { "label": "কখন" }],
+              "answer": 2,
+              "hint": "সময় জানতে চাইলে এই শব্দটি বসে।"
+            },
+            {
+              "id": "g4",
+              "ask": "আমাকে বই ____।",
+              "illustration": "book",
+              "options": [{ "label": "দিন" }, { "label": "খাও" }, { "label": "কখন" }],
+              "answer": 0,
+              "hint": "বড়োদের কাছে কিছু চাইলে এভাবে বলি।",
+              "tests": "w-bakko"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "কোনটি প্রশ্নবাক্য?",
+              "illustration": "question",
+              "options": [{ "label": "মা, ভাত দাও।" }, { "label": "তিনি কে?" }, { "label": "বাবা, দুধ খাও।" }],
+              "answer": 1,
+              "explain": "প্রশ্নবাক্যের শেষে প্রশ্নবোধক চিহ্ন (?) বসে।",
+              "tests": "w-proshno"
+            },
+            {
+              "id": "q2",
+              "ask": "বড়োদের কাছে বই চাইলে কীভাবে বলব?",
+              "illustration": "book",
+              "options": [{ "label": "আমাকে বই দাও।" }, { "label": "আমাকে বই দে।" }, { "label": "আমাকে বই দিন।" }],
+              "answer": 2,
+              "explain": "বড়োদের সম্মান করে বলি — আমাকে বই দিন।",
+              "tests": "w-bakko"
+            },
+            {
+              "id": "q3",
+              "ask": "\"____ এসেছেন?\" — সময় জানতে কোন শব্দ বসবে?",
+              "illustration": "question",
+              "options": [{ "label": "কখন" }, { "label": "কী" }, { "label": "কে" }],
+              "answer": 0,
+              "explain": "সময় জানতে চাইলে \"কখন\" বসে।"
+            }
+          ]
+        },
+        {
+          "id": "s7",
+          "type": "done",
+          "title": "পাঠ ১৬ শেষ!",
+          "say": "তুমি নিজেই এখন বাক্য বানাতে পারো। দারুণ!"
+        }
+      ]
+    },
+    {
+      "id": "paath-17",
+      "chapterId": "ch06",
+      "number": 17,
+      "title": "রাজুর আঁকা ছবি",
+      "shape": "sentence",
+      "bookPages": [34],
+      "objective": "ছবি দেখে নিজের ভাষায় বাক্য বলতে পারবে।",
+      "minutes": 7,
+      "words": [
+        {
+          "id": "w-majhi",
+          "word": "মাঝি",
+          "meaning": "যে নৌকা চালায়",
+          "meaningSource": "enrichment",
+          "bookPage": 34,
+          "illustration": "boat",
+          "audio": null
+        },
+        {
+          "id": "w-jele",
+          "word": "জেলে",
+          "meaning": "যে মাছ ধরে",
+          "meaningSource": "enrichment",
+          "bookPage": 34,
+          "illustration": "net",
+          "audio": null
+        }
+      ],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "রাজুর আঁকা ছবি",
+          "say": "রাজু একটি ছবি এঁকেছে। দেখি ছবিতে সে কী কী এঁকেছে।",
+          "illustration": "village"
+        },
+        {
+          "id": "s2",
+          "type": "read",
+          "title": "ছবি দেখে বাক্য বলি",
+          "bookActivity": "রাজুর আঁকা ছবি দেখে বাক্য লিখি",
+          "source": "textbook",
+          "illustration": "village",
+          "paragraphs": [
+            "রাজু একটি ছবি এঁকেছে। দেখি ছবিতে সে কী কী এঁকেছে।",
+            "পাখি উড়ছে।"
+          ]
+        },
+        {
+          "id": "s3",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-majhi", "w-jele"]
+        },
+        {
+          "id": "s4",
+          "type": "game",
+          "kind": "picture-to-word",
+          "title": "ছবিতে কী দেখছি?",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "ছবিতে এটি কী?",
+              "illustration": "bird",
+              "options": [{ "label": "পাখি উড়ছে" }, { "label": "গরু চরছে" }, { "label": "নৌকা ভাসছে" }],
+              "answer": 0,
+              "hint": "আকাশে ডানা মেলে আছে।"
+            },
+            {
+              "id": "g2",
+              "ask": "ছবিতে এটি কী?",
+              "illustration": "boat",
+              "options": [{ "label": "গাছ দাঁড়িয়ে আছে" }, { "label": "নৌকা ভাসছে" }, { "label": "পাখি উড়ছে" }],
+              "answer": 1,
+              "hint": "নদীর উপরে ভেসে আছে।",
+              "tests": "w-majhi"
+            },
+            {
+              "id": "g3",
+              "ask": "ছবিতে এটি কী?",
+              "illustration": "cow",
+              "options": [{ "label": "নৌকা" }, { "label": "পাখি" }, { "label": "গরু" }],
+              "answer": 2,
+              "hint": "মাঠে ঘাস খায়, দুধ দেয়।"
+            },
+            {
+              "id": "g4",
+              "ask": "জাল দিয়ে কে মাছ ধরে?",
+              "illustration": "net",
+              "options": [{ "label": "জেলে" }, { "label": "কুমোর" }, { "label": "চাষি" }],
+              "answer": 0,
+              "hint": "নদীতে জাল ফেলে।",
+              "tests": "w-jele"
+            }
+          ]
+        },
+        {
+          "id": "s5",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "রাজু কী করেছে?",
+              "illustration": "raju",
+              "options": [{ "label": "একটি ছবি এঁকেছে" }, { "label": "একটি গান গেয়েছে" }, { "label": "একটি ছড়া বলেছে" }],
+              "answer": 0,
+              "explain": "রাজু একটি ছবি এঁকেছে।"
+            },
+            {
+              "id": "q2",
+              "ask": "মাঝি কী করে?",
+              "illustration": "boat",
+              "options": [{ "label": "মাছ ধরে" }, { "label": "নৌকা চালায়" }, { "label": "চাষ করে" }],
+              "answer": 1,
+              "explain": "মাঝি নৌকা চালায়।",
+              "tests": "w-majhi"
+            },
+            {
+              "id": "q3",
+              "ask": "বইয়ে লেখা প্রথম বাক্যটি কী?",
+              "illustration": "bird",
+              "options": [{ "label": "নৌকা ভাসছে।" }, { "label": "গরু চরছে।" }, { "label": "পাখি উড়ছে।" }],
+              "answer": 2,
+              "explain": "বইয়ে প্রথম বাক্যটি লেখা আছে — পাখি উড়ছে।"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "done",
+          "title": "পাঠ ১৭ শেষ!",
+          "say": "ছবি দেখে বাক্য বলতে শিখেছ। খুব ভালো!"
+        }
+      ]
+    },
+    {
+      "id": "paath-24",
+      "chapterId": "ch06",
+      "number": 24,
+      "title": "নিজের মতো লিখি",
+      "shape": "sentence",
+      "bookPages": [52, 53],
+      "objective": "মিল রেখে শব্দ বসিয়ে নিজের মতো বাক্য লিখতে পারবে।",
+      "minutes": 9,
+      "words": [
+        {
+          "id": "w-ghuri",
+          "word": "ঘুড়ি",
+          "meaning": "সুতোয় বেঁধে আকাশে ওড়ানো হয় যা",
+          "meaningSource": "enrichment",
+          "bookPage": 52,
+          "illustration": "kite",
+          "audio": null
+        },
+        {
+          "id": "w-akash",
+          "word": "আকাশ",
+          "meaning": "মাথার উপরে যে বিশাল ফাঁকা জায়গা",
+          "meaningSource": "enrichment",
+          "bookPage": 52,
+          "illustration": "kite",
+          "audio": null
+        }
+      ],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "নিজের মতো লিখি",
+          "say": "নীল ঘুড়ি লাল ঘুড়ি উড়ে যায় আকাশে।",
+          "illustration": "kite"
+        },
+        {
+          "id": "s2",
+          "type": "rhyme",
+          "title": "ঘুড়ির ছড়া",
+          "bookActivity": "পড়ি",
+          "source": "textbook",
+          "verses": [
+            ["নীল ঘুড়ি লাল ঘুড়ি", "উড়ে যায় আকাশে।", "উড়ে উড়ে দূরে যায়", "কোথা পেলো পাখা সে।"]
+          ]
+        },
+        {
+          "id": "s3",
+          "type": "read",
+          "title": "পাখি ও ঘুড়ি",
+          "bookActivity": "পড়ি",
+          "source": "textbook",
+          "illustration": "bird",
+          "paragraphs": [
+            "পাখি দেখতে আমার ভালো লাগে। পাখি আকাশে ওড়ে। ঘুড়িও আকাশে ওড়ে। পাখি সুন্দর। ঘুড়িও সুন্দর। আমি যদি পাখির মতো উড়তে পারতাম!"
+          ]
+        },
+        {
+          "id": "s4",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-ghuri", "w-akash"]
+        },
+        {
+          "id": "s5",
+          "type": "game",
+          "kind": "missing-word",
+          "title": "মিল রেখে শব্দ বসাই",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "নীল ঘুড়ি উড়ে যায়। উড়ে উড়ে দূরে ____।",
+              "illustration": "kite",
+              "options": [{ "label": "যায়" }, { "label": "খায়" }],
+              "answer": 0,
+              "hint": "\"যায়\" শব্দের সাথে মিল রেখে বসাও।",
+              "tests": "w-ghuri"
+            },
+            {
+              "id": "g2",
+              "ask": "প্রজাপতির রঙিন পাখা। নানা রঙের ছবি ____।",
+              "illustration": "butterfly",
+              "options": [{ "label": "ডাকা" }, { "label": "আঁকা" }],
+              "answer": 1,
+              "hint": "\"পাখা\" শব্দের সাথে মিল আছে।"
+            },
+            {
+              "id": "g3",
+              "ask": "নদীর বুকে নৌকা ভাসে। আকাশ জুড়ে সূর্য ____।",
+              "illustration": "boat",
+              "options": [{ "label": "আসে" }, { "label": "হাসে" }],
+              "answer": 1,
+              "hint": "\"ভাসে\" শব্দের সাথে মিল রেখে বসাও।",
+              "tests": "w-akash"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "ছড়ায় কী উড়ে যায়?",
+              "illustration": "kite",
+              "options": [{ "label": "ঘুড়ি" }, { "label": "পাখি" }, { "label": "মেঘ" }],
+              "answer": 0,
+              "explain": "নীল ঘুড়ি লাল ঘুড়ি উড়ে যায় আকাশে।",
+              "tests": "w-ghuri"
+            },
+            {
+              "id": "q2",
+              "ask": "পাখি আর ঘুড়ি — দুটোই কোথায় ওড়ে?",
+              "illustration": "bird",
+              "options": [{ "label": "পানিতে" }, { "label": "আকাশে" }, { "label": "মাঠে" }],
+              "answer": 1,
+              "explain": "পাখি আকাশে ওড়ে। ঘুড়িও আকাশে ওড়ে।",
+              "tests": "w-akash"
+            },
+            {
+              "id": "q3",
+              "ask": "\"ভাসে\" শব্দের সাথে কোনটির মিল আছে?",
+              "illustration": "boat",
+              "options": [{ "label": "আঁকা" }, { "label": "যায়" }, { "label": "হাসে" }],
+              "answer": 2,
+              "explain": "ভাসে আর হাসে — দুটোর শেষটা একই রকম শোনায়।"
+            }
+          ]
+        },
+        {
+          "id": "s7",
+          "type": "done",
+          "title": "পাঠ ২৪ শেষ!",
+          "say": "এবার নিজের মতো করে কিছু লিখে ফেলো!"
+        }
+      ]
+    },
+    {
+      "id": "paath-29",
+      "chapterId": "ch06",
+      "number": 29,
+      "title": "বাক্য নিয়ে খেলা",
+      "shape": "sentence",
+      "bookPages": [62],
+      "objective": "একটি শব্দ নিয়ে নিজে বাক্য বানিয়ে খেলা চালিয়ে যেতে পারবে।",
+      "minutes": 7,
+      "words": [
+        {
+          "id": "w-kul",
+          "word": "কূল",
+          "meaning": "নদীর পাড়",
+          "meaningSource": "enrichment",
+          "bookPage": 62,
+          "illustration": "river",
+          "audio": null
+        },
+        {
+          "id": "w-purono",
+          "word": "পুরনো",
+          "meaning": "অনেক দিনের, নতুন নয়",
+          "meaningSource": "enrichment",
+          "bookPage": 62,
+          "illustration": "house",
+          "audio": null
+        }
+      ],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "বাক্য নিয়ে খেলা",
+          "say": "একটি শব্দ দিয়ে বাক্য বলি, তারপর বন্ধুকে নতুন শব্দ দিই।",
+          "illustration": "friends"
+        },
+        {
+          "id": "s2",
+          "type": "read",
+          "title": "খেলাটি কেমন",
+          "bookActivity": "বাক্য নিয়ে খেলা",
+          "source": "textbook",
+          "illustration": "friends",
+          "paragraphs": [
+            "নদী শব্দটি দিয়ে ঝিমিত একটি বাক্য বলল। বাক্যটি হলো – নদীর কূলে নৌকা ভাসে। ঝিমিত এরপর মিলিকে বলল, নৌকা দিয়ে একটি বাক্য বলো।",
+            "মিলি বলল, নৌকায় করে বাড়িতে যাই। তারপর মিলি বাড়ি দিয়ে রাফিকে একটি বাক্য বলতে বলল।",
+            "রাফি বলল, বাড়িটা অনেক পুরনো। রাফি এবার তিথিকে পুরনো শব্দ দিয়ে বাক্য বলতে বলল।",
+            "ঝিমিতদের মতো করে আমরাও খেলাটি চালিয়ে যেতে পারি।"
+          ]
+        },
+        {
+          "id": "s3",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-kul", "w-purono"]
+        },
+        {
+          "id": "s4",
+          "type": "game",
+          "kind": "which-line",
+          "title": "কোন শব্দ থেকে পরের বাক্য?",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "ঝিমিত কোন শব্দ দিয়ে বাক্য বলল?",
+              "illustration": "river",
+              "options": [{ "label": "নদী" }, { "label": "বাড়ি" }, { "label": "পুরনো" }],
+              "answer": 0,
+              "hint": "নদীর কূলে নৌকা ভাসে।",
+              "tests": "w-kul"
+            },
+            {
+              "id": "g2",
+              "ask": "ঝিমিত মিলিকে কোন শব্দ দিল?",
+              "illustration": "boat",
+              "options": [{ "label": "নদী" }, { "label": "নৌকা" }, { "label": "বাড়ি" }],
+              "answer": 1,
+              "hint": "ঝিমিতের বাক্যের শেষ শব্দটি।"
+            },
+            {
+              "id": "g3",
+              "ask": "রাফি কোন শব্দ দিয়ে বাক্য বলল?",
+              "illustration": "house",
+              "options": [{ "label": "নৌকা" }, { "label": "নদী" }, { "label": "বাড়ি" }],
+              "answer": 2,
+              "hint": "বাড়িটা অনেক পুরনো।",
+              "tests": "w-purono"
+            }
+          ]
+        },
+        {
+          "id": "s5",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "ঝিমিতের বাক্যটি কী ছিল?",
+              "illustration": "river",
+              "options": [
+                { "label": "নদীর কূলে নৌকা ভাসে।" },
+                { "label": "নৌকায় করে বাড়িতে যাই।" },
+                { "label": "বাড়িটা অনেক পুরনো।" }
+              ],
+              "answer": 0,
+              "explain": "নদী শব্দটি দিয়ে ঝিমিত বলল — নদীর কূলে নৌকা ভাসে।",
+              "tests": "w-kul"
+            },
+            {
+              "id": "q2",
+              "ask": "মিলির বাক্যটি কী ছিল?",
+              "illustration": "boat",
+              "options": [
+                { "label": "বাড়িটা অনেক পুরনো।" },
+                { "label": "নৌকায় করে বাড়িতে যাই।" },
+                { "label": "নদীর কূলে নৌকা ভাসে।" }
+              ],
+              "answer": 1,
+              "explain": "মিলি বলল, নৌকায় করে বাড়িতে যাই।"
+            },
+            {
+              "id": "q3",
+              "ask": "রাফি শেষে তিথিকে কোন শব্দ দিল?",
+              "illustration": "house",
+              "options": [{ "label": "নদী" }, { "label": "নৌকা" }, { "label": "পুরনো" }],
+              "answer": 2,
+              "explain": "রাফি এবার তিথিকে পুরনো শব্দ দিয়ে বাক্য বলতে বলল।",
+              "tests": "w-purono"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "done",
+          "title": "পাঠ ২৯ শেষ!",
+          "say": "বন্ধুদের সাথে এই খেলাটি চালিয়ে যেতে পারো!"
+        }
+      ]
+    }
+  ]
+}

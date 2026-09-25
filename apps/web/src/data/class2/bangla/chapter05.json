@@ -1,0 +1,976 @@
+{
+  "id": "ch05",
+  "number": 5,
+  "title": "ছড়া ও কবিতা",
+  "colour": "accent",
+  "icon": "rhyme",
+  "lessons": [
+    {
+      "id": "paath-06",
+      "chapterId": "ch05",
+      "number": 6,
+      "title": "আয় দেখে যা নাচ",
+      "shape": "rhyme",
+      "bookPages": [15],
+      "objective": "ছড়াটি সুর করে বলতে ও নদীর কথা বুঝতে পারবে।",
+      "minutes": 7,
+      "words": [
+        {
+          "id": "w-gang",
+          "word": "গাঙ",
+          "meaning": "নদী",
+          "meaningSource": "enrichment",
+          "bookPage": 15,
+          "illustration": "river",
+          "audio": null
+        },
+        {
+          "id": "w-ilish",
+          "word": "ইলিশ",
+          "meaning": "আমাদের জাতীয় মাছ",
+          "meaningSource": "enrichment",
+          "bookPage": 15,
+          "illustration": "fish",
+          "audio": null
+        }
+      ],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "আয় দেখে যা নাচ",
+          "say": "সুফিয়া কামালের একটি ছড়া। চলো শুনি।",
+          "illustration": "river"
+        },
+        {
+          "id": "s2",
+          "type": "rhyme",
+          "title": "আয় দেখে যা নাচ",
+          "bookActivity": "শুনি ও বলি",
+          "poet": "সুফিয়া কামাল",
+          "source": "textbook",
+          "verses": [
+            [
+              "গাঙের পানি ছলছলায়",
+              "খোকন সোনা কলকলায়",
+              "গাঙের ইলিশ মাছ –",
+              "বলে ডেকে, খোকন মণি",
+              "আয় দেখে যা নাচ।"
+            ]
+          ]
+        },
+        {
+          "id": "s3",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-gang", "w-ilish"]
+        },
+        {
+          "id": "s4",
+          "type": "game",
+          "kind": "picture-to-word",
+          "title": "ছড়ার ছবি",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "গাঙ মানে কী?",
+              "illustration": "river",
+              "options": [{ "label": "নদী" }, { "label": "মাঠ" }, { "label": "গাছ" }],
+              "answer": 0,
+              "hint": "যেখানে পানি ছলছল করে বয়ে যায়।",
+              "tests": "w-gang"
+            },
+            {
+              "id": "g2",
+              "ask": "ছড়ায় কোন মাছের কথা আছে?",
+              "illustration": "fish",
+              "options": [{ "label": "রুই" }, { "label": "ইলিশ" }, { "label": "কাতলা" }],
+              "answer": 1,
+              "hint": "গাঙের ___ মাছ।",
+              "tests": "w-ilish"
+            },
+            {
+              "id": "g3",
+              "ask": "ছড়ায় কাকে ডাকা হয়েছে?",
+              "illustration": "rafi",
+              "options": [{ "label": "খোকন মণি" }, { "label": "মাঝি" }, { "label": "মা" }],
+              "answer": 0,
+              "hint": "বলে ডেকে, ___ মণি।"
+            }
+          ]
+        },
+        {
+          "id": "s5",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "ছড়াটি কে লিখেছেন?",
+              "illustration": "book",
+              "options": [{ "label": "সুফিয়া কামাল" }, { "label": "রবীন্দ্রনাথ ঠাকুর" }, { "label": "কাজী নজরুল ইসলাম" }],
+              "answer": 0,
+              "explain": "ছড়াটির কবি সুফিয়া কামাল।"
+            },
+            {
+              "id": "q2",
+              "ask": "গাঙের পানি কী করে?",
+              "illustration": "river",
+              "options": [{ "label": "কলকলায়" }, { "label": "ছলছলায়" }, { "label": "ঝরে" }],
+              "answer": 1,
+              "explain": "গাঙের পানি ছলছলায়, আর খোকন সোনা কলকলায়।",
+              "tests": "w-gang"
+            },
+            {
+              "id": "q3",
+              "ask": "ইলিশ মাছ খোকনকে কী বলে ডাকে?",
+              "illustration": "fish",
+              "options": [{ "label": "আয় দেখে যা নাচ" }, { "label": "আয় খেলি" }, { "label": "আয় ঘুমাই" }],
+              "answer": 0,
+              "explain": "আয় দেখে যা নাচ — এটিই ছড়ার নাম।",
+              "tests": "w-ilish"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "done",
+          "title": "পাঠ ৬ শেষ!",
+          "say": "ছড়াটি সুর করে আবার বলো। দারুণ!"
+        }
+      ]
+    },
+    {
+      "id": "paath-11",
+      "chapterId": "ch05",
+      "number": 11,
+      "title": "একুশের গান",
+      "shape": "rhyme",
+      "bookPages": [22],
+      "objective": "একুশে ফেব্রুয়ারির গানটি বলতে ও ভাষাশহিদদের স্মরণ করতে শিখবে।",
+      "minutes": 8,
+      "words": [
+        {
+          "id": "w-ekushe",
+          "word": "একুশে ফেব্রুয়ারি",
+          "meaning": "ভাষা শহিদদের স্মরণের দিন",
+          "meaningSource": "enrichment",
+          "bookPage": 22,
+          "illustration": "shaheed-minar",
+          "audio": null
+        },
+        {
+          "id": "w-ostru",
+          "word": "অশ্রু",
+          "meaning": "চোখের পানি",
+          "meaningSource": "enrichment",
+          "bookPage": 22,
+          "illustration": "mood-sad",
+          "audio": null
+        }
+      ],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "একুশের গান",
+          "say": "একুশে ফেব্রুয়ারিতে আমরা এই গান গাই।",
+          "illustration": "shaheed-minar"
+        },
+        {
+          "id": "s2",
+          "type": "rhyme",
+          "title": "একুশের গান",
+          "bookActivity": "গান",
+          "poet": "আবদুল গাফফার চৌধুরী",
+          "source": "textbook",
+          "verses": [
+            [
+              "আমার ভাইয়ের রক্তে রাঙানো একুশে ফেব্রুয়ারি",
+              "আমি কি ভুলিতে পারি",
+              "ছেলেহারা শত মায়ের অশ্রু-গড়া এ ফেব্রুয়ারি",
+              "আমি কি ভুলিতে পারি",
+              "আমার সোনার দেশের রক্তে রাঙানো ফেব্রুয়ারি",
+              "আমি কি ভুলিতে পারি ॥"
+            ]
+          ]
+        },
+        {
+          "id": "s3",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-ekushe", "w-ostru"]
+        },
+        {
+          "id": "s4",
+          "type": "game",
+          "kind": "which-line",
+          "title": "গানের কথা",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "গানটি কোন মাসের কথা বলে?",
+              "illustration": "shaheed-minar",
+              "options": [{ "label": "ফেব্রুয়ারি" }, { "label": "মার্চ" }, { "label": "ডিসেম্বর" }],
+              "answer": 0,
+              "hint": "একুশে ___।",
+              "tests": "w-ekushe"
+            },
+            {
+              "id": "g2",
+              "ask": "\"আমি কি ভুলিতে ___\" — খালি জায়গায় কী বসবে?",
+              "options": [{ "label": "চাই" }, { "label": "পারি" }, { "label": "যাই" }],
+              "answer": 1,
+              "hint": "প্রতিটি চরণের পরেই এই কথাটি ফিরে আসে।"
+            },
+            {
+              "id": "g3",
+              "ask": "অশ্রু মানে কী?",
+              "illustration": "mood-sad",
+              "options": [{ "label": "হাসি" }, { "label": "গান" }, { "label": "চোখের পানি" }],
+              "answer": 2,
+              "hint": "কাঁদলে চোখ থেকে যা পড়ে।",
+              "tests": "w-ostru"
+            }
+          ]
+        },
+        {
+          "id": "s5",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "এ গান আমরা কখন গাই?",
+              "illustration": "shaheed-minar",
+              "options": [{ "label": "একুশে ফেব্রুয়ারিতে" }, { "label": "নববর্ষে" }, { "label": "ঈদে" }],
+              "answer": 0,
+              "explain": "একুশে ফেব্রুয়ারিতে আমরা এই গান গাই।",
+              "tests": "w-ekushe"
+            },
+            {
+              "id": "q2",
+              "ask": "গানটি আমরা কাদের স্মরণে গাই?",
+              "illustration": "shaheed-minar",
+              "options": [{ "label": "কবিদের" }, { "label": "ভাষাশহিদদের" }, { "label": "শিক্ষকদের" }],
+              "answer": 1,
+              "explain": "ভাষার জন্য যাঁরা জীবন দিয়েছেন, তাঁদের স্মরণে।"
+            },
+            {
+              "id": "q3",
+              "ask": "গানটি কে লিখেছেন?",
+              "illustration": "book",
+              "options": [{ "label": "সুকুমার বড়ুয়া" }, { "label": "সুফিয়া কামাল" }, { "label": "আবদুল গাফফার চৌধুরী" }],
+              "answer": 2,
+              "explain": "গানটির রচয়িতা আবদুল গাফফার চৌধুরী।"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "done",
+          "title": "পাঠ ১১ শেষ!",
+          "say": "ভাষাশহিদদের আমরা কখনো ভুলব না।"
+        }
+      ]
+    },
+    {
+      "id": "paath-15",
+      "chapterId": "ch05",
+      "number": 15,
+      "title": "কাজের আনন্দ",
+      "shape": "rhyme",
+      "bookPages": [30, 31, 32],
+      "objective": "কবিতাটি আবৃত্তি করতে ও কাজের আনন্দের কথা বলতে পারবে।",
+      "minutes": 12,
+      "words": [
+        {
+          "id": "w-ahoron",
+          "word": "আহরণ",
+          "meaning": "সংগ্রহ করা",
+          "meaningSource": "textbook",
+          "bookPage": 31,
+          "illustration": "bee",
+          "audio": null
+        },
+        {
+          "id": "w-trinolota",
+          "word": "তৃণলতা",
+          "meaning": "ঘাস ও লতা",
+          "meaningSource": "textbook",
+          "bookPage": 31,
+          "illustration": "field",
+          "audio": null
+        },
+        {
+          "id": "w-buni",
+          "word": "বুনি",
+          "meaning": "বানাই",
+          "meaningSource": "textbook",
+          "bookPage": 31,
+          "illustration": "bird",
+          "audio": null
+        },
+        {
+          "id": "w-sonchoy",
+          "word": "সঞ্চয়",
+          "meaning": "জমা",
+          "meaningSource": "textbook",
+          "bookPage": 31,
+          "illustration": "ant",
+          "audio": null
+        },
+        {
+          "id": "w-khaddo",
+          "word": "খাদ্য",
+          "meaning": "খাবার",
+          "meaningSource": "textbook",
+          "bookPage": 31,
+          "illustration": "ant",
+          "audio": null
+        }
+      ],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "কাজের আনন্দ",
+          "say": "মৌমাছি, পাখি আর পিপীলিকা — সবাই কাজে ব্যস্ত।",
+          "illustration": "bee"
+        },
+        {
+          "id": "s2",
+          "type": "rhyme",
+          "title": "কাজের আনন্দ",
+          "bookActivity": "কবিতা",
+          "poet": "নবকৃষ্ণ ভট্টাচার্য",
+          "source": "textbook",
+          "verses": [
+            ["মৌমাছি, মৌমাছি", "কোথা যাও নাচি নাচি", "দাঁড়াও না একবার ভাই।"],
+            ["ওই ফুল ফোটে বনে", "যাই মধু আহরণে", "দাঁড়াবার সময় তো নাই।"],
+            ["ছোটো পাখি, ছোটো পাখি", "কিচিমিচি ডাকি ডাকি", "কোথা যাও, বলে যাও শুনি।"],
+            ["এখন না কব কথা", "আনিয়াছি তৃণলতা", "আপনার বাসা আগে বুনি।"],
+            ["পিপীলিকা, পিপীলিকা", "দলবল ছাড়ি একা", "কোথা যাও, যাও ভাই বলি।"],
+            ["শীতের সঞ্চয় চাই", "খাদ্য খুঁজিতেছি তাই", "ছয় পায়ে পিলপিল চলি।"]
+          ]
+        },
+        {
+          "id": "s3",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-ahoron", "w-trinolota", "w-buni", "w-sonchoy", "w-khaddo"]
+        },
+        {
+          "id": "s4",
+          "type": "game",
+          "kind": "missing-word",
+          "title": "খালি জায়গায় শব্দ বসাই",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "মৌমাছি ____ আহরণ করে।",
+              "illustration": "bee",
+              "options": [{ "label": "মধু" }, { "label": "পাখির" }, { "label": "পিপীলিকা" }],
+              "answer": 0,
+              "hint": "ফুল থেকে যা আনে।",
+              "tests": "w-ahoron"
+            },
+            {
+              "id": "g2",
+              "ask": "শালিকগুলো ____ করছে।",
+              "illustration": "bird",
+              "options": [{ "label": "নেচে নেচে" }, { "label": "কিচির মিচির" }, { "label": "মধু" }],
+              "answer": 1,
+              "hint": "পাখিরা যেভাবে ডাকে।"
+            },
+            {
+              "id": "g3",
+              "ask": "গাছের মধ্যে ____ বাসা।",
+              "illustration": "tree",
+              "options": [{ "label": "পিপীলিকা" }, { "label": "মধু" }, { "label": "পাখির" }],
+              "answer": 2,
+              "hint": "ছোটো পাখি তৃণলতা দিয়ে এটি বোনে।",
+              "tests": "w-buni"
+            },
+            {
+              "id": "g4",
+              "ask": "____ দল বেঁধে চলে।",
+              "illustration": "ant",
+              "options": [{ "label": "পিপীলিকা" }, { "label": "মধু" }, { "label": "নেচে নেচে" }],
+              "answer": 0,
+              "hint": "ছয় পায়ে পিলপিল করে চলে।",
+              "tests": "w-sonchoy"
+            }
+          ]
+        },
+        {
+          "id": "s5",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "মৌমাছি কেন বনে যায়?",
+              "illustration": "bee",
+              "options": [{ "label": "মধু আহরণ করতে" }, { "label": "বাসা বুনতে" }, { "label": "খেলতে" }],
+              "answer": 0,
+              "explain": "ওই ফুল ফোটে বনে, যাই মধু আহরণে।",
+              "tests": "w-ahoron"
+            },
+            {
+              "id": "q2",
+              "ask": "ছোটো পাখি তৃণলতা দিয়ে কী বানাবে?",
+              "illustration": "bird",
+              "options": [{ "label": "খাবার" }, { "label": "বাসা" }, { "label": "গান" }],
+              "answer": 1,
+              "explain": "আনিয়াছি তৃণলতা, আপনার বাসা আগে বুনি।",
+              "tests": "w-trinolota"
+            },
+            {
+              "id": "q3",
+              "ask": "পিপীলিকা কীভাবে চলে?",
+              "illustration": "ant",
+              "options": [{ "label": "উড়ে উড়ে" }, { "label": "লাফিয়ে" }, { "label": "ছয় পায়ে পিলপিল করে" }],
+              "answer": 2,
+              "explain": "ছয় পায়ে পিলপিল চলি — কবিতায় তাই বলা আছে।"
+            },
+            {
+              "id": "q4",
+              "ask": "কে শীতের সঞ্চয় খুঁজছে?",
+              "illustration": "ant",
+              "options": [{ "label": "পিপীলিকা" }, { "label": "মৌমাছি" }, { "label": "ছোটো পাখি" }],
+              "answer": 0,
+              "explain": "শীতের সঞ্চয় চাই, খাদ্য খুঁজিতেছি তাই — বলেছে পিপীলিকা।",
+              "tests": "w-khaddo"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "done",
+          "title": "পাঠ ১৫ শেষ!",
+          "say": "সবাই কাজ করে আনন্দ পায়। তুমিও কাজ করো!"
+        }
+      ]
+    },
+    {
+      "id": "paath-19",
+      "chapterId": "ch05",
+      "number": 19,
+      "title": "প্রজাপতি",
+      "shape": "rhyme",
+      "bookPages": [38, 39],
+      "objective": "কবিতাটি আবৃত্তি করতে ও রঙের শব্দ চিনতে পারবে।",
+      "minutes": 10,
+      "words": [
+        {
+          "id": "w-pakha",
+          "word": "পাখা",
+          "meaning": "ডানা",
+          "meaningSource": "textbook",
+          "bookPage": 38,
+          "illustration": "butterfly",
+          "audio": null
+        },
+        {
+          "id": "w-sonali",
+          "word": "সোনালি",
+          "meaning": "সোনার মতো রং",
+          "meaningSource": "textbook",
+          "bookPage": 38,
+          "illustration": "season-grishmo",
+          "audio": null
+        },
+        {
+          "id": "w-parag",
+          "word": "পরাগ",
+          "meaning": "ফুলের রেণু",
+          "meaningSource": "textbook",
+          "bookPage": 38,
+          "illustration": "flower",
+          "audio": null
+        }
+      ],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "প্রজাপতি",
+          "say": "কাজী নজরুল ইসলামের একটি কবিতা। প্রজাপতির রঙিন পাখা!",
+          "illustration": "butterfly"
+        },
+        {
+          "id": "s2",
+          "type": "rhyme",
+          "title": "প্রজাপতি",
+          "bookActivity": "কবিতা",
+          "poet": "কাজী নজরুল ইসলাম",
+          "source": "textbook",
+          "verses": [
+            [
+              "প্রজাপতি! প্রজাপতি! কোথায় পেলে ভাই!",
+              "এমন রঙিন পাখা!",
+              "টুকটুকে লাল নীল ঝিলিমিলি আঁকাবাঁকা",
+              "কোথায় পেলে এমন রঙিন পাখা!"
+            ],
+            [
+              "তুমি টুলটুলে বন-ফুলে মধু খাও,",
+              "মোর বন্ধু হয়ে সেই মধু দাও, মধু দাও,",
+              "দাও পাখা দাও সোনালি-রুপালি পরাগ-মাখা।",
+              "কোথায় পেলে ভাই এমন রঙিন পাখা ॥"
+            ]
+          ]
+        },
+        {
+          "id": "s3",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-pakha", "w-sonali", "w-parag"]
+        },
+        {
+          "id": "s4",
+          "type": "game",
+          "kind": "match-pairs",
+          "title": "দাগ টেনে মিল করি",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "টুকটুকে — কোন শব্দটির সাথে মিল?",
+              "options": [{ "label": "লাল" }, { "label": "পাখা" }, { "label": "বন-ফুল" }],
+              "answer": 0,
+              "hint": "টুকটুকে ___ জামা।"
+            },
+            {
+              "id": "g2",
+              "ask": "টুলটুলে — কোন শব্দটির সাথে মিল?",
+              "options": [{ "label": "পাখা" }, { "label": "বন-ফুল" }, { "label": "লাল" }],
+              "answer": 1,
+              "hint": "তুমি টুলটুলে ___ মধু খাও।"
+            },
+            {
+              "id": "g3",
+              "ask": "রঙিন — কোন শব্দটির সাথে মিল?",
+              "options": [{ "label": "বন-ফুল" }, { "label": "লাল" }, { "label": "পাখা" }],
+              "answer": 2,
+              "hint": "এমন রঙিন ___!",
+              "tests": "w-pakha"
+            },
+            {
+              "id": "g4",
+              "ask": "ফুলে ফুলে ____ উড়ছে।",
+              "illustration": "butterfly",
+              "options": [{ "label": "প্রজাপতি" }, { "label": "বনে" }, { "label": "টুকটুকে" }],
+              "answer": 0,
+              "hint": "কবিতার নামই এটি।"
+            }
+          ]
+        },
+        {
+          "id": "s5",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "প্রজাপতির পাখা কেমন?",
+              "illustration": "butterfly",
+              "options": [{ "label": "সাদা" }, { "label": "রঙিন" }, { "label": "কালো" }],
+              "answer": 1,
+              "explain": "টুকটুকে লাল নীল ঝিলিমিলি আঁকাবাঁকা — এমন রঙিন পাখা।",
+              "tests": "w-pakha"
+            },
+            {
+              "id": "q2",
+              "ask": "প্রজাপতি কোথা থেকে মধু খায়?",
+              "illustration": "flower",
+              "options": [{ "label": "বন-ফুল থেকে" }, { "label": "গাছ থেকে" }, { "label": "নদী থেকে" }],
+              "answer": 0,
+              "explain": "তুমি টুলটুলে বন-ফুলে মধু খাও।"
+            },
+            {
+              "id": "q3",
+              "ask": "পরাগ মানে কী?",
+              "illustration": "flower",
+              "options": [{ "label": "ফুলের রেণু" }, { "label": "ফুলের পাতা" }, { "label": "ফুলের গন্ধ" }],
+              "answer": 0,
+              "explain": "পরাগ – ফুলের রেণু।",
+              "tests": "w-parag"
+            },
+            {
+              "id": "q4",
+              "ask": "কবিতাটি কে লিখেছেন?",
+              "illustration": "nazrul",
+              "options": [{ "label": "রবীন্দ্রনাথ ঠাকুর" }, { "label": "কাজী নজরুল ইসলাম" }, { "label": "সুফিয়া কামাল" }],
+              "answer": 1,
+              "explain": "কবিতাটির কবি কাজী নজরুল ইসলাম — আমাদের জাতীয় কবি।"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "done",
+          "title": "পাঠ ১৯ শেষ!",
+          "say": "প্রজাপতির মতো রঙিন হোক তোমার দিন!"
+        }
+      ]
+    },
+    {
+      "id": "paath-23",
+      "chapterId": "ch05",
+      "number": 23,
+      "title": "আমাদের ছোটো নদী",
+      "shape": "rhyme",
+      "bookPages": [50, 51],
+      "objective": "কবিতাটি আবৃত্তি করতে ও গ্রামের নদীর রূপ বলতে পারবে।",
+      "minutes": 10,
+      "words": [
+        {
+          "id": "w-hantujol",
+          "word": "হাঁটুজল",
+          "meaning": "হাঁটু সমান পানি",
+          "meaningSource": "textbook",
+          "bookPage": 51,
+          "illustration": "river",
+          "audio": null
+        },
+        {
+          "id": "w-dhar",
+          "word": "ধার",
+          "meaning": "তীর",
+          "meaningSource": "textbook",
+          "bookPage": 51,
+          "illustration": "river",
+          "audio": null
+        },
+        {
+          "id": "w-dhalu",
+          "word": "ঢালু",
+          "meaning": "নিচু",
+          "meaningSource": "textbook",
+          "bookPage": 51,
+          "illustration": "river",
+          "audio": null
+        },
+        {
+          "id": "w-jhnak",
+          "word": "ঝাঁক",
+          "meaning": "দল",
+          "meaningSource": "textbook",
+          "bookPage": 51,
+          "illustration": "bird",
+          "audio": null
+        },
+        {
+          "id": "w-hnak",
+          "word": "হাঁক",
+          "meaning": "ডাক",
+          "meaningSource": "textbook",
+          "bookPage": 51,
+          "illustration": "fox",
+          "audio": null
+        }
+      ],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "আমাদের ছোটো নদী",
+          "say": "রবীন্দ্রনাথ ঠাকুরের একটি বিখ্যাত কবিতা।",
+          "illustration": "river"
+        },
+        {
+          "id": "s2",
+          "type": "rhyme",
+          "title": "আমাদের ছোটো নদী",
+          "bookActivity": "কবিতা",
+          "poet": "রবীন্দ্রনাথ ঠাকুর",
+          "source": "textbook",
+          "verses": [
+            [
+              "আমাদের ছোটো নদী চলে বাঁকে বাঁকে,",
+              "বৈশাখ মাসে তার হাঁটুজল থাকে।",
+              "পার হয়ে যায় গরু, পার হয় গাড়ি,",
+              "দুই ধার উঁচু তার, ঢালু তার পাড়ি।"
+            ],
+            [
+              "চিকচিক করে বালি, কোথা নাই কাদা,",
+              "এক ধারে কাশবন ফুলে ফুলে সাদা।",
+              "কিচিমিচি করে সেথা শালিকের ঝাঁক,",
+              "রাতে ওঠে থেকে থেকে শেয়ালের হাঁক।"
+            ]
+          ]
+        },
+        {
+          "id": "s3",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-hantujol", "w-dhar", "w-dhalu", "w-jhnak", "w-hnak"]
+        },
+        {
+          "id": "s4",
+          "type": "game",
+          "kind": "word-to-meaning",
+          "title": "শব্দের অর্থ বলি",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "ঝাঁক মানে কী?",
+              "options": [{ "label": "দল" }, { "label": "ডাক" }, { "label": "তীর" }],
+              "answer": 0,
+              "hint": "শালিকের ___।",
+              "tests": "w-jhnak"
+            },
+            {
+              "id": "g2",
+              "ask": "ঢালু মানে কী?",
+              "options": [{ "label": "উঁচু" }, { "label": "নিচু" }, { "label": "সাদা" }],
+              "answer": 1,
+              "hint": "নদীর পাড় নিচের দিকে নেমে গেছে।",
+              "tests": "w-dhalu"
+            },
+            {
+              "id": "g3",
+              "ask": "হাঁক মানে কী?",
+              "options": [{ "label": "দল" }, { "label": "পানি" }, { "label": "ডাক" }],
+              "answer": 2,
+              "hint": "রাতে শেয়াল যা দেয়।",
+              "tests": "w-hnak"
+            },
+            {
+              "id": "g4",
+              "ask": "হাঁটুজল মানে কী?",
+              "illustration": "river",
+              "options": [{ "label": "হাঁটু সমান পানি" }, { "label": "অনেক গভীর পানি" }, { "label": "কাদা" }],
+              "answer": 0,
+              "hint": "নদীতে নামলে পানি হাঁটু পর্যন্ত ওঠে।",
+              "tests": "w-hantujol"
+            }
+          ]
+        },
+        {
+          "id": "s5",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "কোন মাসে নদীতে হাঁটুজল থাকে?",
+              "illustration": "river",
+              "options": [{ "label": "আষাঢ়" }, { "label": "বৈশাখ" }, { "label": "পৌষ" }],
+              "answer": 1,
+              "explain": "বৈশাখ মাসে তার হাঁটুজল থাকে।",
+              "tests": "w-hantujol"
+            },
+            {
+              "id": "q2",
+              "ask": "শালিকের ঝাঁক কোথায় কিচিমিচি করে?",
+              "illustration": "bird",
+              "options": [{ "label": "নদীর ধারে" }, { "label": "শহরে" }, { "label": "বাজারে" }],
+              "answer": 0,
+              "explain": "কিচিমিচি করে সেথা শালিকের ঝাঁক — নদীর ধারেই।",
+              "tests": "w-jhnak"
+            },
+            {
+              "id": "q3",
+              "ask": "কাশবন দেখতে কেমন?",
+              "illustration": "season-shorot",
+              "options": [{ "label": "লাল" }, { "label": "নীল" }, { "label": "ফুলে ফুলে সাদা" }],
+              "answer": 2,
+              "explain": "এক ধারে কাশবন ফুলে ফুলে সাদা।"
+            },
+            {
+              "id": "q4",
+              "ask": "রাতে কার হাঁক শোনা যায়?",
+              "illustration": "fox",
+              "options": [{ "label": "শেয়ালের" }, { "label": "গরুর" }, { "label": "পাখির" }],
+              "answer": 0,
+              "explain": "রাতে ওঠে থেকে থেকে শেয়ালের হাঁক।",
+              "tests": "w-hnak"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "done",
+          "title": "পাঠ ২৩ শেষ!",
+          "say": "কবিতাটি আবৃত্তি করে দেখো। খুব সুন্দর!"
+        }
+      ]
+    },
+    {
+      "id": "paath-26",
+      "chapterId": "ch05",
+      "number": 26,
+      "title": "মুক্তিসেনা",
+      "shape": "rhyme",
+      "bookPages": [56, 57],
+      "objective": "কবিতাটি বলতে ও মুক্তিযোদ্ধাদের কথা জানতে পারবে।",
+      "minutes": 10,
+      "words": [
+        {
+          "id": "w-muktisena",
+          "word": "মুক্তিসেনা",
+          "meaning": "মুক্তিযোদ্ধা",
+          "meaningSource": "textbook",
+          "bookPage": 57,
+          "illustration": "muktijoddha",
+          "audio": null
+        },
+        {
+          "id": "w-matribhumi",
+          "word": "মাতৃভূমি",
+          "meaning": "স্বদেশ",
+          "meaningSource": "textbook",
+          "bookPage": 57,
+          "illustration": "flag",
+          "audio": null
+        },
+        {
+          "id": "w-shohid",
+          "word": "শহিদ",
+          "meaning": "দেশের জন্য যুদ্ধ করে যাঁরা জীবন দেন",
+          "meaningSource": "textbook",
+          "bookPage": 57,
+          "illustration": "shaheed-minar",
+          "audio": null
+        },
+        {
+          "id": "w-gaji",
+          "word": "গাজি",
+          "meaning": "যুদ্ধ করে যাঁরা জয়ী হয়ে ফেরেন",
+          "meaningSource": "textbook",
+          "bookPage": 57,
+          "illustration": "muktijoddha",
+          "audio": null
+        },
+        {
+          "id": "w-hanadar",
+          "word": "হানাদার",
+          "meaning": "আক্রমণকারী",
+          "meaningSource": "textbook",
+          "bookPage": 57,
+          "illustration": "muktijoddha",
+          "audio": null
+        }
+      ],
+      "builds": [],
+      "steps": [
+        {
+          "id": "s1",
+          "type": "intro",
+          "title": "মুক্তিসেনা",
+          "say": "যাঁরা দেশের জন্য যুদ্ধ করেছেন, এই কবিতা তাঁদের নিয়ে।",
+          "illustration": "muktijoddha"
+        },
+        {
+          "id": "s2",
+          "type": "rhyme",
+          "title": "মুক্তিসেনা",
+          "bookActivity": "কবিতা",
+          "poet": "সুকুমার বড়ুয়া",
+          "source": "textbook",
+          "verses": [
+            ["ধন্য সবাই ধন্য", "অস্ত্র ধরে যুদ্ধ করে", "মাতৃভূমির জন্য।"],
+            ["ধরল যারা জীবন বাজি", "হলেন যারা শহিদ গাজি", "লোভের টানে হয়নি যারা", "ভিনদেশিদের পণ্য।"],
+            ["দেশের তরে ঝাঁপিয়ে পড়ে", "শক্ত হাতে ঘায়েল করে", "সব হানাদার সৈন্য –", "ধন্য ওরাই ধন্য।"]
+          ]
+        },
+        {
+          "id": "s3",
+          "type": "words",
+          "title": "শব্দ শিখি",
+          "items": ["w-muktisena", "w-matribhumi", "w-shohid", "w-gaji", "w-hanadar"]
+        },
+        {
+          "id": "s4",
+          "type": "game",
+          "kind": "word-to-meaning",
+          "title": "শব্দের অর্থ বলি",
+          "rounds": [
+            {
+              "id": "g1",
+              "ask": "মাতৃভূমি মানে কী?",
+              "options": [{ "label": "স্বদেশ" }, { "label": "বিদেশ" }, { "label": "শহর" }],
+              "answer": 0,
+              "hint": "যে দেশে আমরা জন্মেছি।",
+              "tests": "w-matribhumi"
+            },
+            {
+              "id": "g2",
+              "ask": "হানাদার কারা?",
+              "options": [{ "label": "বন্ধু" }, { "label": "আক্রমণকারী" }, { "label": "শিক্ষক" }],
+              "answer": 1,
+              "hint": "যারা আমাদের দেশে আক্রমণ করেছিল।",
+              "tests": "w-hanadar"
+            },
+            {
+              "id": "g3",
+              "ask": "গাজি কারা?",
+              "options": [{ "label": "যাঁরা জীবন দেন" }, { "label": "যাঁরা পালিয়ে যান" }, { "label": "যাঁরা জয়ী হয়ে ফেরেন" }],
+              "answer": 2,
+              "hint": "যুদ্ধ শেষে যাঁরা ফিরে আসেন।",
+              "tests": "w-gaji"
+            }
+          ]
+        },
+        {
+          "id": "s5",
+          "type": "quiz",
+          "title": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "ask": "অস্ত্র ধরে যুদ্ধ করল কারা?",
+              "illustration": "muktijoddha",
+              "options": [{ "label": "মুক্তিসেনারা" }, { "label": "হানাদাররা" }, { "label": "ছাত্ররা" }],
+              "answer": 0,
+              "explain": "মুক্তিসেনারা অস্ত্র ধরে যুদ্ধ করেছিলেন।",
+              "tests": "w-muktisena"
+            },
+            {
+              "id": "q2",
+              "ask": "মুক্তিসেনারা কেন যুদ্ধ করল?",
+              "illustration": "flag",
+              "options": [{ "label": "টাকার জন্য" }, { "label": "মাতৃভূমির জন্য" }, { "label": "নামের জন্য" }],
+              "answer": 1,
+              "explain": "অস্ত্র ধরে যুদ্ধ করে মাতৃভূমির জন্য।",
+              "tests": "w-matribhumi"
+            },
+            {
+              "id": "q3",
+              "ask": "কাদের শহিদ বলে?",
+              "illustration": "shaheed-minar",
+              "options": [
+                { "label": "দেশের জন্য যুদ্ধ করে যাঁরা জীবন দেন" },
+                { "label": "যাঁরা জয়ী হয়ে ফেরেন" },
+                { "label": "যাঁরা যুদ্ধ করেননি" }
+              ],
+              "answer": 0,
+              "explain": "শহিদ – দেশের জন্য যুদ্ধ করে যাঁরা জীবন দেন।",
+              "tests": "w-shohid"
+            },
+            {
+              "id": "q4",
+              "ask": "কবিতাটি কে লিখেছেন?",
+              "illustration": "book",
+              "options": [{ "label": "সুকুমার বড়ুয়া" }, { "label": "নবকৃষ্ণ ভট্টাচার্য" }, { "label": "রবীন্দ্রনাথ ঠাকুর" }],
+              "answer": 0,
+              "explain": "কবিতাটির কবি সুকুমার বড়ুয়া।"
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "type": "done",
+          "title": "পাঠ ২৬ শেষ!",
+          "say": "মুক্তিযোদ্ধাদের আমরা শ্রদ্ধা করি। ধন্য ওরাই ধন্য!"
+        }
+      ]
+    }
+  ]
+}

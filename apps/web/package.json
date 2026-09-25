@@ -11,6 +11,7 @@
     "typecheck": "tsc --noEmit",
     "test:kids": "tsc src/lib/kids/content.ts src/lib/kids/mastery.ts src/lib/kids/adaptive.ts src/lib/kids/revision.ts src/lib/kids/art-keys.ts src/lib/kids/rounds.ts --outDir .tmp-kids --module commonjs --target es2020 --skipLibCheck && node src/data/kids/content.test.mjs .tmp-kids/content.js && node src/lib/kids/engine.test.mjs .tmp-kids",
     "test:payscale": "tsc -p tsconfig.payscale.json && node src/lib/payscale/engine.test.mjs .tmp-payscale",
+    "test:class2bangla": "tsc -p tsconfig.class2bangla.json && node src/data/class2/bangla/content.test.mjs .tmp-class2-bangla",
     "cert": "bash ../../scripts/make-dev-cert.sh",
     "sync:ort": "node scripts/sync-ort-assets.mjs",
     "prebuild": "node scripts/sync-ort-assets.mjs && node scripts/clear-data-cache.mjs",
