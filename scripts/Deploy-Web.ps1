@@ -125,6 +125,14 @@ try {
             # all of them is therefore how the database is made to match the
             # repo, not a risk. A future file that is not idempotent would
             # break this, which is a reason to keep writing them this way.
+            # psql on Windows takes client_encoding from the console codepage,
+            # which is WIN1252 here, and every migration is UTF-8 with Bangla
+            # in it. Left alone the server decodes those bytes as WIN1252:
+            # 017 aborts on a byte WIN1252 has no mapping for, and the files
+            # whose bytes it *can* map would insert mojibake without a word.
+            # The newer files also set this themselves; this covers the rest.
+            $env:PGCLIENTENCODING = 'UTF8'
+
             $applied = 0
             Get-ChildItem (Join-Path $RepoRoot 'database\schema\*.sql') |
                 Sort-Object Name |
