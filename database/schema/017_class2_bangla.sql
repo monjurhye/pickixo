@@ -30,10 +30,12 @@ VALUES (
     'every letter is tappable. Children work through a chapter, play a game, '
     'answer a short quiz and collect stars. No account needed.',
     'book-open', '/education/class-2/bangla',
-    -- Beta, not live: all eight chapters and twenty-nine lessons are complete
-    -- and working, but it has just shipped and has not yet had real classroom
-    -- use the way Class 2 English has.
-    'beta', true, true, true, true, false,
+    -- Live, unlike 013 and 016, because the reason those two are beta does not
+    -- apply here: English ships 2 of its 10 units and Maths had not been used
+    -- in a classroom yet, whereas this covers all 29 পাঠ of its book, with
+    -- every lesson citing the page it came from and every বর্ণযোগ verified.
+    -- There is no part of the book a child can reach and find missing.
+    'live', true, true, true, true, false,
     'Class 2 Bangla - Read, Learn and Play Free',
     'Free interactive Bangla lessons for Class 2, following the Bangladesh '
     'NCTB textbook "আমার বাংলা বই". Alphabet, kar signs, conjunct letters, '
