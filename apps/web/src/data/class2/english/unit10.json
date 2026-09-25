@@ -1,0 +1,797 @@
+{
+  "id": "u10",
+  "number": 10,
+  "title": "Story Time",
+  "titleBn": "গল্পের সময়",
+  "colour": "indigo",
+  "icon": "book",
+  "lessons": [
+    {
+      "id": "u10l1",
+      "unitId": "u10",
+      "number": 1,
+      "title": "The crow and the jar",
+      "titleBn": "কাক আর কলসি",
+      "shape": "story",
+      "bookPages": [
+        93,
+        94,
+        95
+      ],
+      "objective": "Follow the crow's story and say how it solved its problem.",
+      "objectiveBn": "কাকের গল্প অনুসরণ করে বলা, কীভাবে সে তার সমস্যার সমাধান করেছিল।",
+      "minutes": 10,
+      "vocabulary": [
+        {
+          "id": "thirsty",
+          "word": "thirsty",
+          "bangla": "তৃষ্ণার্ত",
+          "banglaPronunciation": "থার্স্টি",
+          "banglaSource": "enrichment",
+          "bookPage": 93,
+          "category": "expression",
+          "image": "thirsty",
+          "audio": null,
+          "example": "It is tired and thirsty.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "branch",
+          "word": "branch",
+          "bangla": "ডাল",
+          "banglaPronunciation": "ব্রাঞ্চ",
+          "banglaSource": "enrichment",
+          "bookPage": 93,
+          "category": "nature",
+          "image": "branch",
+          "audio": null,
+          "example": "A crow is sitting on a branch of a tree.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "jar",
+          "word": "jar",
+          "bangla": "কলসি",
+          "banglaPronunciation": "জার",
+          "banglaSource": "enrichment",
+          "bookPage": 93,
+          "category": "object",
+          "image": "jar-under-tree",
+          "audio": null,
+          "example": "The crow suddenly sees a jar.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "pebbles",
+          "word": "pebbles",
+          "bangla": "নুড়িপাথর",
+          "banglaPronunciation": "পেবলস",
+          "banglaSource": "enrichment",
+          "bookPage": 94,
+          "category": "nature",
+          "image": "pebbles",
+          "audio": null,
+          "example": "It sees some pebbles near the jar.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "brim",
+          "word": "brim",
+          "bangla": "কানা",
+          "banglaPronunciation": "ব্রিম",
+          "banglaSource": "enrichment",
+          "bookPage": 95,
+          "category": "object",
+          "image": "brim",
+          "audio": null,
+          "example": "The water rises to the brim of the jar.",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u10l1-intro",
+          "type": "intro",
+          "title": "A thirsty crow",
+          "titleBn": "তৃষ্ণার্ত কাক",
+          "say": "A thirsty crow finds a jar with very little water. What will it do?",
+          "sayBn": "তৃষ্ণার্ত কাক একটা কলসি খুঁজে পায়, তাতে সামান্য জল। এখন সে কী করবে?",
+          "illustration": "crow-thirsty"
+        },
+        {
+          "id": "u10l1-words",
+          "type": "vocab",
+          "title": "New words",
+          "titleBn": "নতুন শব্দ",
+          "items": [
+            "thirsty",
+            "branch",
+            "jar",
+            "pebbles",
+            "brim"
+          ]
+        },
+        {
+          "id": "u10l1-story",
+          "type": "story",
+          "bookActivity": "A",
+          "title": "The crow and the jar",
+          "titleBn": "কাক আর কলসি",
+          "source": "textbook",
+          "scenes": [
+            {
+              "id": "s1",
+              "text": "It is a hot summer day. A crow is sitting on a branch of a tree. It is tired and thirsty.",
+              "illustration": "crow-thirsty",
+              "audio": null
+            },
+            {
+              "id": "s2",
+              "text": "It flies here and there. It is looking for water.",
+              "illustration": "crow-searching",
+              "audio": null
+            },
+            {
+              "id": "s3",
+              "text": "The crow suddenly sees a jar. It is under a nearby tree.",
+              "illustration": "jar-under-tree",
+              "audio": null
+            },
+            {
+              "id": "s4",
+              "text": "The crow flies to it quickly.",
+              "illustration": "crow-to-jar",
+              "audio": null
+            },
+            {
+              "id": "s5",
+              "text": "The crow flies down to it at last.",
+              "illustration": "crow-to-jar",
+              "audio": null
+            },
+            {
+              "id": "s6",
+              "text": "The crow sits on the edge of the jar. It looks inside the jar. The water is at the bottom of it.",
+              "illustration": "crow-on-jar",
+              "audio": null
+            },
+            {
+              "id": "s7",
+              "text": "The crow looks around.",
+              "illustration": "crow-on-jar",
+              "audio": null
+            },
+            {
+              "id": "s8",
+              "text": "It sees some pebbles near the jar. The crow picks up the pebbles one by one with its beak.",
+              "illustration": "crow-pebble",
+              "audio": null
+            },
+            {
+              "id": "s9",
+              "text": "Then it drops them into the jar. The water rises to the brim of the jar.",
+              "illustration": "jar-rising",
+              "audio": null
+            },
+            {
+              "id": "s10",
+              "text": "The crow drinks the water.",
+              "illustration": "crow-drinks",
+              "audio": null
+            },
+            {
+              "id": "s11",
+              "text": "Then it flies away happily.",
+              "illustration": "crow-happy",
+              "audio": null
+            }
+          ]
+        },
+        {
+          "id": "u10l1-speak",
+          "type": "speak",
+          "bookActivity": "B",
+          "title": "Tell it back",
+          "titleBn": "আবার বলো",
+          "prompt": "What did the crow do to drink the water?",
+          "promptBn": "জল খেতে কাক কী করেছিল?",
+          "modelAnswer": "It dropped pebbles into the jar."
+        },
+        {
+          "id": "u10l1-game1",
+          "type": "game",
+          "kind": "order-the-scenes",
+          "bookActivity": "C",
+          "title": "Put the story in order",
+          "titleBn": "গল্পটি সাজাও",
+          "rounds": [
+            {
+              "id": "c1",
+              "ask": "Which sentence is number 1?",
+              "askBn": "১ নম্বর বাক্যটি কোনটি?",
+              "options": [
+                {
+                  "label": "The crow sees a jar under a tree."
+                },
+                {
+                  "label": "The crow is thirsty on a branch."
+                },
+                {
+                  "label": "The crow drinks the water."
+                }
+              ],
+              "answer": 1,
+              "hint": "Follow the crow's story from the hot day."
+            },
+            {
+              "id": "c2",
+              "ask": "Which sentence is number 2?",
+              "askBn": "২ নম্বর বাক্যটি কোনটি?",
+              "options": [
+                {
+                  "label": "The crow is thirsty on a branch."
+                },
+                {
+                  "label": "The crow picks up pebbles."
+                },
+                {
+                  "label": "The crow sees a jar under a tree."
+                }
+              ],
+              "answer": 2,
+              "hint": "Follow the crow's story from the hot day."
+            },
+            {
+              "id": "c3",
+              "ask": "Which sentence is number 3?",
+              "askBn": "৩ নম্বর বাক্যটি কোনটি?",
+              "options": [
+                {
+                  "label": "The crow drinks the water."
+                },
+                {
+                  "label": "The crow sees a jar under a tree."
+                },
+                {
+                  "label": "The crow picks up pebbles."
+                }
+              ],
+              "answer": 2,
+              "hint": "Follow the crow's story from the hot day."
+            },
+            {
+              "id": "c4",
+              "ask": "Which sentence is number 4?",
+              "askBn": "৪ নম্বর বাক্যটি কোনটি?",
+              "options": [
+                {
+                  "label": "The crow picks up pebbles."
+                },
+                {
+                  "label": "The crow drinks the water."
+                },
+                {
+                  "label": "The crow is thirsty on a branch."
+                }
+              ],
+              "answer": 1,
+              "hint": "Follow the crow's story from the hot day."
+            }
+          ]
+        },
+        {
+          "id": "u10l1-game2",
+          "type": "game",
+          "kind": "true-false",
+          "title": "True or false?",
+          "titleBn": "সত্যি নাকি মিথ্যা?",
+          "rounds": [
+            {
+              "id": "t1",
+              "ask": "The crow finds water at the top of the jar.",
+              "askBn": "কাক কলসির উপরে জল খুঁজে পায়।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 1,
+              "hint": "Look inside the jar again.",
+              "tests": "jar"
+            },
+            {
+              "id": "t2",
+              "ask": "The crow uses pebbles to raise the water.",
+              "askBn": "কাক পাথর দিয়ে জল উপরে তোলে।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "hint": "What does the crow drop into the jar?",
+              "tests": "pebbles"
+            }
+          ]
+        },
+        {
+          "id": "u10l1-quiz",
+          "type": "quiz",
+          "title": "Quick quiz",
+          "titleBn": "ছোট্ট কুইজ",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-picture",
+              "ask": "What does the crow do at the jar?",
+              "askBn": "কলসির কাছে কাক কী করে?",
+              "image": "crow-drinks",
+              "options": [
+                {
+                  "label": "It drinks water."
+                },
+                {
+                  "label": "It sleeps."
+                },
+                {
+                  "label": "It sings."
+                }
+              ],
+              "answer": 0,
+              "explain": "The crow drinks the water."
+            },
+            {
+              "id": "q2",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "jar",
+              "options": [
+                {
+                  "label": "jar"
+                },
+                {
+                  "label": "jam"
+                },
+                {
+                  "label": "jug"
+                }
+              ],
+              "answer": 0,
+              "tests": "jar"
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "ask": "The crow picks up ___ .",
+              "askBn": "The crow picks up ___ .",
+              "options": [
+                {
+                  "label": "pebbles"
+                },
+                {
+                  "label": "leaves"
+                },
+                {
+                  "label": "flowers"
+                }
+              ],
+              "answer": 0,
+              "explain": "It sees some pebbles near the jar.",
+              "tests": "pebbles"
+            },
+            {
+              "id": "q4",
+              "type": "true-false",
+              "ask": "The water rises to the brim of the jar.",
+              "askBn": "কলসির কানা পর্যন্ত জল ওঠে।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 0,
+              "explain": "The water rises to the brim of the jar.",
+              "tests": "brim"
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "How does the crow feel at first?",
+              "askBn": "প্রথমে কাকের কেমন লাগে?",
+              "options": [
+                {
+                  "label": "thirsty"
+                },
+                {
+                  "label": "happy"
+                },
+                {
+                  "label": "angry"
+                }
+              ],
+              "answer": 0,
+              "explain": "It is tired and thirsty.",
+              "tests": "thirsty"
+            }
+          ]
+        },
+        {
+          "id": "u10l1-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You know how the crow solved its problem. If there is a will, there is a way!",
+          "sayBn": "তুমি জানো কীভাবে কাক তার সমস্যার সমাধান করেছিল। ইচ্ছা থাকলে উপায় হয়!"
+        }
+      ]
+    },
+    {
+      "id": "u10l2",
+      "unitId": "u10",
+      "number": 2,
+      "title": "The boys and the frogs",
+      "titleBn": "ছেলেরা আর ব্যাঙেরা",
+      "shape": "story",
+      "bookPages": [
+        96,
+        97,
+        98
+      ],
+      "objective": "Follow the story and say why the boys were wrong to hurt the frogs.",
+      "objectiveBn": "গল্পটি অনুসরণ করে বলা, কেন ছেলেদের ব্যাঙদের আঘাত করা ঠিক হয়নি।",
+      "minutes": 10,
+      "vocabulary": [
+        {
+          "id": "pond",
+          "word": "pond",
+          "bangla": "পুকুর",
+          "banglaPronunciation": "পন্ড",
+          "banglaSource": "enrichment",
+          "bookPage": 96,
+          "category": "place",
+          "image": "pond-frogs",
+          "audio": null,
+          "example": "There is a pond in a village.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "stones",
+          "word": "stones",
+          "bangla": "পাথর",
+          "banglaPronunciation": "স্টোনস",
+          "banglaSource": "enrichment",
+          "bookPage": 96,
+          "category": "nature",
+          "image": "stones",
+          "audio": null,
+          "example": "The boys find some stones near the road.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "laughing",
+          "word": "laughing",
+          "bangla": "হাসছে",
+          "banglaPronunciation": "লাফিং",
+          "banglaSource": "enrichment",
+          "bookPage": 96,
+          "category": "expression",
+          "image": "laughing",
+          "audio": null,
+          "example": "They are laughing and clapping.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "shout",
+          "word": "shout",
+          "bangla": "চিৎকার করা",
+          "banglaPronunciation": "শাউট",
+          "banglaSource": "enrichment",
+          "bookPage": 96,
+          "category": "action",
+          "image": "shout",
+          "audio": null,
+          "example": "The other frogs shout against the killing.",
+          "exampleSource": "textbook"
+        },
+        {
+          "id": "sorry",
+          "word": "sorry",
+          "bangla": "দুঃখিত",
+          "banglaPronunciation": "সরি",
+          "banglaSource": "enrichment",
+          "bookPage": 97,
+          "category": "expression",
+          "image": "sorry",
+          "audio": null,
+          "example": "Sorry, dear Frog. We will never do it again.",
+          "exampleSource": "textbook"
+        }
+      ],
+      "steps": [
+        {
+          "id": "u10l2-intro",
+          "type": "intro",
+          "title": "Frogs in the pond",
+          "titleBn": "পুকুরে ব্যাঙ",
+          "say": "Some boys find frogs playing in a pond. What happens next?",
+          "sayBn": "কিছু ছেলে দেখে পুকুরে ব্যাঙেরা খেলা করছে। এরপর কী হয়?",
+          "illustration": "pond-frogs"
+        },
+        {
+          "id": "u10l2-words",
+          "type": "vocab",
+          "title": "New words",
+          "titleBn": "নতুন শব্দ",
+          "items": [
+            "pond",
+            "stones",
+            "laughing",
+            "shout",
+            "sorry"
+          ]
+        },
+        {
+          "id": "u10l2-story",
+          "type": "story",
+          "bookActivity": "A",
+          "title": "The boys and the frogs",
+          "titleBn": "ছেলেরা আর ব্যাঙেরা",
+          "source": "textbook",
+          "scenes": [
+            {
+              "id": "s1",
+              "text": "There is a pond in a village. Some boys are passing by the pond. They look at the frogs in the pond and stop there.",
+              "illustration": "pond-frogs",
+              "audio": null
+            },
+            {
+              "id": "s2",
+              "text": "Some frogs are playing in the water. The boys find some stones near the road.",
+              "illustration": "boys-pond-stones",
+              "audio": null
+            },
+            {
+              "id": "s3",
+              "text": "Taking the stones they begin to throw them at the frogs. They are laughing and clapping.",
+              "illustration": "boys-throw-stones",
+              "audio": null
+            },
+            {
+              "id": "s4",
+              "text": "But their cruel play kills one of the frogs. The other frogs shout against the killing.",
+              "illustration": "frog-dead-shout",
+              "audio": null
+            },
+            {
+              "id": "s5",
+              "text": "A brave frog raises its head and cries out, \"Stop! Stop!\" The boys say, \"We are just playing.\" The frog says, \"Look at the dead frog. What is play to you is death to us.\"",
+              "illustration": "frog-speaks",
+              "audio": null
+            },
+            {
+              "id": "s6",
+              "text": "The boys become very sad. They say, \"Sorry, dear Frog. We will never do it again.\"",
+              "illustration": "boys-sorry",
+              "audio": null
+            }
+          ]
+        },
+        {
+          "id": "u10l2-speak",
+          "type": "speak",
+          "bookActivity": "B",
+          "title": "Tell it back",
+          "titleBn": "আবার বলো",
+          "prompt": "What does the brave frog say to the boys?",
+          "promptBn": "সাহসী ব্যাঙটি ছেলেদের কী বলে?",
+          "modelAnswer": "Look at the dead frog. What is play to you is death to us."
+        },
+        {
+          "id": "u10l2-game1",
+          "type": "game",
+          "kind": "order-the-scenes",
+          "bookActivity": "C",
+          "title": "Put the story in order",
+          "titleBn": "গল্পটি সাজাও",
+          "rounds": [
+            {
+              "id": "c1",
+              "ask": "What happens first?",
+              "askBn": "প্রথমে কী ঘটে?",
+              "options": [
+                {
+                  "label": "The boys throw stones at the frogs."
+                },
+                {
+                  "label": "The boys see frogs playing in the pond."
+                },
+                {
+                  "label": "A frog dies."
+                }
+              ],
+              "answer": 1,
+              "hint": "Start with the pond."
+            },
+            {
+              "id": "c2",
+              "ask": "What happens next?",
+              "askBn": "এরপর কী ঘটে?",
+              "options": [
+                {
+                  "label": "The boys throw stones at the frogs."
+                },
+                {
+                  "label": "A frog dies and the others shout."
+                },
+                {
+                  "label": "The boys say sorry."
+                }
+              ],
+              "answer": 0,
+              "hint": "Start with the pond."
+            },
+            {
+              "id": "c3",
+              "ask": "What happens after that?",
+              "askBn": "তারপর কী ঘটে?",
+              "options": [
+                {
+                  "label": "The boys say sorry."
+                },
+                {
+                  "label": "A frog dies and the others shout."
+                },
+                {
+                  "label": "The boys see frogs playing."
+                }
+              ],
+              "answer": 1,
+              "hint": "Start with the pond."
+            },
+            {
+              "id": "c4",
+              "ask": "What happens last?",
+              "askBn": "সবশেষে কী ঘটে?",
+              "options": [
+                {
+                  "label": "A frog dies and the others shout."
+                },
+                {
+                  "label": "The boys see frogs playing."
+                },
+                {
+                  "label": "The boys say sorry."
+                }
+              ],
+              "answer": 2,
+              "hint": "Start with the pond."
+            }
+          ]
+        },
+        {
+          "id": "u10l2-quiz",
+          "type": "quiz",
+          "bookActivity": "E",
+          "title": "Tick the correct answers",
+          "titleBn": "সঠিক উত্তর বেছে নাও",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tap-word",
+              "ask": "What do the boys see in the pond?",
+              "askBn": "পুকুরে ছেলেরা কী দেখে?",
+              "options": [
+                {
+                  "label": "some stones"
+                },
+                {
+                  "label": "a dead frog"
+                },
+                {
+                  "label": "some frogs"
+                }
+              ],
+              "answer": 2,
+              "explain": "They look at the frogs in the pond and stop there.",
+              "tests": "pond"
+            },
+            {
+              "id": "q2",
+              "type": "tap-word",
+              "ask": "What do the boys do when they see the stones? They begin to",
+              "askBn": "পাথর দেখে ছেলেরা কী করে?",
+              "options": [
+                {
+                  "label": "clap their hands with joy."
+                },
+                {
+                  "label": "throw the stones at each other."
+                },
+                {
+                  "label": "throw the stones at the frogs."
+                }
+              ],
+              "answer": 2,
+              "explain": "Taking the stones they begin to throw them at the frogs.",
+              "tests": "stones"
+            },
+            {
+              "id": "q3",
+              "type": "true-false",
+              "ask": "When the boys kill a frog, the other frogs stay silent.",
+              "askBn": "ব্যাঙ মারা গেলে অন্য ব্যাঙেরা চুপ থাকে।",
+              "options": [
+                {
+                  "label": "True"
+                },
+                {
+                  "label": "False"
+                }
+              ],
+              "answer": 1,
+              "explain": "The other frogs shout against the killing.",
+              "tests": "shout"
+            },
+            {
+              "id": "q4",
+              "type": "listen-choose",
+              "ask": "Listen. Which word did you hear?",
+              "askBn": "শোনো। কোন শব্দটি শুনলে?",
+              "speak": "sorry",
+              "options": [
+                {
+                  "label": "sorry"
+                },
+                {
+                  "label": "story"
+                },
+                {
+                  "label": "sunny"
+                }
+              ],
+              "answer": 0,
+              "tests": "sorry"
+            },
+            {
+              "id": "q5",
+              "type": "tap-word",
+              "ask": "What is the moral of the story?",
+              "askBn": "গল্পের নীতিশিক্ষা কী?",
+              "options": [
+                {
+                  "label": "Honesty is the best policy."
+                },
+                {
+                  "label": "Boys should not play any game."
+                },
+                {
+                  "label": "A thing can be good to you but bad to others."
+                }
+              ],
+              "answer": 2,
+              "explain": "What is play to you is death to us."
+            }
+          ]
+        },
+        {
+          "id": "u10l2-done",
+          "type": "done",
+          "title": "Great job!",
+          "titleBn": "দারুণ হয়েছে!",
+          "say": "You understand why we must be kind to animals.",
+          "sayBn": "তুমি বোঝো কেন আমাদের প্রাণীদের প্রতি সদয় হতে হবে।"
+        }
+      ]
+    }
+  ]
+}

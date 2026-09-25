@@ -24,6 +24,7 @@ import { UNIT6_DRAWINGS } from './unit6Drawings';
 import { UNIT7_DRAWINGS } from './unit7Drawings';
 import { UNIT8_DRAWINGS } from './unit8Drawings';
 import { UNIT9_DRAWINGS } from './unit9Drawings';
+import { UNIT10_DRAWINGS } from './unit10Drawings';
 
 const C = {
   ink: '#2b3440',
@@ -365,7 +366,8 @@ export function Illustration({
     ?? UNIT3_DRAWINGS[name] ?? UNIT4_DRAWINGS[name] ?? UNIT5_DRAWINGS[name]
     ?? UNIT6_DRAWINGS[name] ?? UNIT7_DRAWINGS[name]
     ?? UNIT8_DRAWINGS[name]
-    ?? UNIT9_DRAWINGS[name];
+    ?? UNIT9_DRAWINGS[name]
+    ?? UNIT10_DRAWINGS[name];
   const generated = draw ? null : dynamicDrawing(name);
   const style: CSSProperties = { width: size, height: size, flexShrink: 0 };
 
@@ -390,5 +392,6 @@ export function hasIllustration(name: string | null | undefined): boolean {
     || name in UNIT6_DRAWINGS || name in UNIT7_DRAWINGS
     || name in UNIT8_DRAWINGS
     || name in UNIT9_DRAWINGS
+    || name in UNIT10_DRAWINGS
     || dynamicDrawing(name) !== null;
 }

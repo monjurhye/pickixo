@@ -17,6 +17,7 @@ import unit06 from '@/data/class2/english/unit06.json';
 import unit07 from '@/data/class2/english/unit07.json';
 import unit08 from '@/data/class2/english/unit08.json';
 import unit09 from '@/data/class2/english/unit09.json';
+import unit10 from '@/data/class2/english/unit10.json';
 
 /**
  * Class 2 English — the child's learning app.
@@ -49,7 +50,9 @@ export const metadata: Metadata = buildMetadata({
  * catches the mistakes that actually happen (a bad answer index, a dangling
  * vocabulary id) and which a structural type could not catch anyway.
  */
-const UNITS = [unit01, unit02, unit03, unit04, unit05, unit06, unit07, unit08, unit09] as unknown as Unit[];
+const UNITS = [
+  unit01, unit02, unit03, unit04, unit05, unit06, unit07, unit08, unit09, unit10,
+] as unknown as Unit[];
 
 const FAQ = [
   {
@@ -142,9 +145,8 @@ export default async function Class2EnglishPage() {
           </p>
 
           <p className="mt-3 text-body text-ink-muted">
-            {lessonCount} lesson{lessonCount === 1 ? '' : 's'} and {wordCount} words
-            are available now. More units are being added, following the same
-            book.
+            All {UNITS.length} units of the book are here: {lessonCount} lesson
+            {lessonCount === 1 ? '' : 's'} and {wordCount} words.
           </p>
 
           <h2 className="mt-10 text-heading text-ink">How a lesson works</h2>

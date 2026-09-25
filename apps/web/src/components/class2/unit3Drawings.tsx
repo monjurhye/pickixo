@@ -28,15 +28,16 @@ export function Bg({ tint, children }: { tint: string; children: React.ReactNode
 const HAIR = '#2f2a28';
 
 /**
- * One child, drawn from the front. Only the arms, the legs and the mouth
- * vary, so a set of these reads as the same child doing different things.
+ * One child, drawn from the front. Only the arms, the legs, the eyes and the
+ * mouth vary, so a set of these reads as the same child doing different things.
  */
 export function Person({
   shirt = C.red, armL = 'M38 54 q-8 8 -8 20', armR = 'M62 54 q8 8 8 20',
-  sit = false, mouth = 'smile', dx = 0, dy = 0, armClass, hair = HAIR,
+  sit = false, mouth = 'smile', eyes = 'open', dx = 0, dy = 0, armClass, hair = HAIR,
 }: {
   shirt?: string; armL?: string; armR?: string; sit?: boolean;
-  mouth?: 'smile' | 'flat'; dx?: number; dy?: number; armClass?: string; hair?: string;
+  mouth?: 'smile' | 'flat' | 'laugh'; eyes?: 'open' | 'happy';
+  dx?: number; dy?: number; armClass?: string; hair?: string;
 }) {
   return (
     <g transform={`translate(${dx} ${dy})`}>
@@ -57,11 +58,23 @@ export function Person({
             className={armClass} />
       <circle cx="50" cy="32" r="15" fill={C.skin} />
       <path d="M35 30 q2 -16 15 -16 q13 0 15 16 q-7 -6 -15 -6 q-8 0 -15 6 Z" fill={hair} />
-      <circle cx="44" cy="34" r="2.2" fill={C.ink} />
-      <circle cx="56" cy="34" r="2.2" fill={C.ink} />
+      {eyes === 'happy' ? (
+        <path d="M40 35 q4 -6 8 0 M52 35 q4 -6 8 0" stroke={C.ink} strokeWidth="2.4"
+              strokeLinecap="round" fill="none" />
+      ) : (
+        <>
+          <circle cx="44" cy="34" r="2.2" fill={C.ink} />
+          <circle cx="56" cy="34" r="2.2" fill={C.ink} />
+        </>
+      )}
       {mouth === 'smile' ? (
         <path d="M45 40 q5 5 10 0" stroke={C.ink} strokeWidth="2.2"
               strokeLinecap="round" fill="none" />
+      ) : mouth === 'laugh' ? (
+        <>
+          <path d="M43 39 q7 10 14 0 Z" fill="#7a2f34" />
+          <path d="M45 40 q5 2 10 0" stroke={C.white} strokeWidth="2" fill="none" />
+        </>
       ) : (
         <path d="M46 41 h8" stroke={C.ink} strokeWidth="2.2" strokeLinecap="round" />
       )}
