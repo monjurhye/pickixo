@@ -36,10 +36,11 @@ import httpx  # noqa: E402
 
 from app.facebook_agent import actions  # noqa: E402
 from app.facebook_agent.decision import (  # noqa: E402
-    DecisionParseError, parse_reel_script,
+    DecisionParseError, apply_fact_check, parse_reel_script,
 )
 from app.services.facebook import FacebookClient, PageRef  # noqa: E402
 from app.services.video import captions, compose, hook  # noqa: E402
+from app.services.video.reel import MIN_SCENE_SECONDS, let_clip_play  # noqa: E402
 
 
 def good_script(**overrides) -> dict:
@@ -124,6 +125,125 @@ class ScriptParsing(unittest.TestCase):
         self.assertIn("#octopus", caption)
         self.assertTrue(caption.endswith(actions.AI_DISCLOSURE),
                         "the AI disclosure is always there")
+
+
+# ===========================================================================
+# Fact-check: the second pass that doubts
+# ===========================================================================
+def mantis() -> dict:
+    """The script that prompted this: true beats under a false hook."""
+    return good_script(
+        topic="Mantis shrimp strike", animal="mantis shrimp",
+        hook_line="A shrimp can strike faster than a bullet.",
+        caption="A shrimp can strike faster than a bullet.",
+    )
+
+
+class FactCheck(unittest.TestCase):
+    def test_ok_passes_the_script_through_unchanged(self) -> None:
+        script = parse_reel_script(mantis())
+        checked = apply_fact_check(script, {"verdict": "ok", "issues": []})
+        self.assertEqual(checked.hook_line, script.hook_line)
+        self.assertIn("no issues", checked.fact_check)
+
+    def test_fixed_rewrites_the_words_and_keeps_the_pictures(self) -> None:
+        script = parse_reel_script(mantis())
+        checked = apply_fact_check(script, {
+            "verdict": "fixed",
+            "issues": ["speed confused with acceleration"],
+            "hook_line": "This shrimp punches with the acceleration of a bullet.",
+            "beats": [b.line for b in script.beats],
+            "question": script.question,
+            "caption": "This shrimp punches with the acceleration of a bullet.",
+        })
+        self.assertNotIn("faster than a bullet", checked.hook_line)
+        self.assertNotIn("faster than a bullet", checked.caption)
+        self.assertEqual([b.visual for b in checked.beats],
+                         [b.visual for b in script.beats])
+        self.assertEqual(checked.hook_visual, script.hook_visual)
+        self.assertIn("speed confused with acceleration", checked.fact_check)
+
+    def test_reject_stops_the_reel_and_says_why(self) -> None:
+        script = parse_reel_script(mantis())
+        with self.assertRaises(DecisionParseError) as ctx:
+            apply_fact_check(script, {"verdict": "reject",
+                                      "issues": ["the central claim is a myth"]})
+        self.assertIn("myth", str(ctx.exception))
+
+    def test_a_fix_must_keep_the_shape(self) -> None:
+        script = parse_reel_script(mantis())
+        base = {"verdict": "fixed", "issues": ["x"], "question": script.question,
+                "caption": script.caption}
+        bad = [
+            {**base, "hook_line": script.hook_line, "beats": ["only one"]},
+            {**base, "hook_line": " ".join(["long"] * 30),
+             "beats": [b.line for b in script.beats]},
+        ]
+        for payload in bad:
+            with self.subTest(payload=str(payload)[:60]):
+                with self.assertRaises(DecisionParseError):
+                    apply_fact_check(script, payload)
+
+    def test_no_verdict_is_not_a_pass(self) -> None:
+        script = parse_reel_script(mantis())
+        for payload in ({}, {"verdict": "probably fine"}):
+            with self.assertRaises(DecisionParseError):
+                apply_fact_check(script, payload)
+
+    def test_draft_reel_always_runs_the_check(self) -> None:
+        """Two calls, in order: write, then doubt. The check's correction is
+        what comes back."""
+        from app.facebook_agent import decision
+        from app.facebook_agent.state import (
+            AgentState, AutomationState, PageSnapshot, TodayActivity,
+        )
+        calls: list[str] = []
+        replies = [
+            json.dumps(mantis()),
+            json.dumps({"verdict": "fixed", "issues": ["speed vs acceleration"],
+                        "hook_line": "This shrimp hits with a bullet's acceleration.",
+                        "beats": [b["line"] for b in mantis()["beats"]],
+                        "question": mantis()["question"],
+                        "caption": "This shrimp hits with a bullet's acceleration."}),
+        ]
+
+        async def fake_generate(*, prompt, system, max_tokens, capability):
+            calls.append(capability)
+            return replies[len(calls) - 1]
+
+        original = decision.ai_service.generate_for_system
+        decision.ai_service.generate_for_system = fake_generate
+        try:
+            from datetime import datetime, timezone
+            state = AgentState(page=PageSnapshot(name="X", page_id="1"),
+                               automation=AutomationState(),
+                               today=TodayActivity(),
+                               observed_at=datetime.now(timezone.utc))
+            script = asyncio.run(decision.draft_reel(state, topic=None, animal=None))
+        finally:
+            decision.ai_service.generate_for_system = original
+
+        self.assertEqual(calls, ["agent_content", "agent_fact_check"])
+        self.assertNotIn("faster than a bullet", script.hook_line)
+        self.assertTrue(script.fact_check.startswith("corrected"))
+
+
+class HookTiming(unittest.TestCase):
+    def test_the_clip_plays_out_under_the_next_line(self) -> None:
+        for got, want in zip(let_clip_play([2.8, 4.0, 3.0], 5.0), [5.0, 1.8, 3.0]):
+            self.assertAlmostEqual(got, want)
+
+    def test_total_length_is_unchanged(self) -> None:
+        before = [2.8, 4.0, 3.0, 2.5]
+        self.assertAlmostEqual(sum(let_clip_play(before, 5.0)), sum(before))
+
+    def test_the_next_scene_keeps_its_minimum(self) -> None:
+        stretched = let_clip_play([1.0, 2.0, 3.0], 5.0)
+        self.assertAlmostEqual(stretched[1], MIN_SCENE_SECONDS)
+        self.assertAlmostEqual(stretched[0], 1.5)
+
+    def test_a_long_hook_line_is_left_alone(self) -> None:
+        self.assertEqual(let_clip_play([6.0, 4.0], 5.0), [6.0, 4.0])
 
 
 # ===========================================================================

@@ -261,13 +261,21 @@ Accuracy is not negotiable — this Page is educational:
 - Only well-established facts you are confident about. If a striking claim
   might be folklore, drop it.
 - No invented numbers. A figure is allowed only if it is widely documented,
-  and then as a rounded, hedged value ("around 100 km/h", "up to 3 metres").
+  and then as a rounded, hedged value ("around 80 km/h", "up to 3 metres").
+- Do not stretch a comparison. "As fast as a bullet" and "accelerates like a
+  bullet" are different claims; use only the one that is true.
 - No scientific names, conservation statuses or locations unless certain.
 
+Choose animals an image generator draws recognisably: well-known, visually
+distinctive species (tiger, octopus, bald eagle, chameleon, elephant,
+peacock). Avoid obscure, microscopic or look-alike species — a viewer who
+cannot tell the picture is the animal being described stops trusting the reel.
+
 Each beat's `visual` describes ONE photorealistic still for an image
-generator: the animal, what it is doing, the habitat, the light, the framing.
-No text, no people, no logos. For "versus", each beat shows the animal that
-line is about.
+generator: name the animal and spell out its most distinctive visible
+features (colours, markings, body shape), then what it is doing, the habitat,
+the light, the framing. No text, no people, no logos. For "versus", each beat
+shows the animal that line is about.
 
 `hook_motion` describes five seconds of movement for a video model, starting
 from the hook picture: what the animal does and how the camera moves. Keep it
@@ -401,6 +409,98 @@ def parse_reel_script(payload: dict[str, Any]):
         caption=text("caption", 1500),
         hashtags=tags,
     )
+
+
+_FACT_SYSTEM = """\
+You are a strict fact-checker for an educational wildlife Page. A script for a
+short narrated video is about to be published to ten thousand people. Your
+job is to stop anything false or exaggerated from reaching them.
+
+Check every factual claim in the hook, each line, the question and the caption:
+- Is it true, and well established — not folklore, not a popular myth?
+- Is every number right and appropriately hedged ("around", "up to")?
+- Is every comparison literally true? Watch for speed vs. acceleration,
+  strength vs. strength-for-its-size, "the only" vs. "one of the few",
+  and superlatives ("fastest", "deadliest", "largest") that are not settled.
+- Does the caption say the same true things as the narration?
+
+Then answer with one verdict:
+- "ok": every claim holds as written.
+- "fixed": something was wrong or overstated, and a true version keeps the
+  reel working. Rewrite ONLY the lines that need it, keep the same number of
+  beats, keep each line as short as the original, and keep the hook a
+  surprising statement (not a question).
+- "reject": the reel's central claim is false and no true version of it
+  would still be interesting. Say why.
+
+Reply with ONE JSON object and nothing else.
+"""
+
+_FACT_SHAPE = """\
+{
+  "verdict": "ok" | "fixed" | "reject",
+  "issues": ["<each problem found, one short sentence each; empty if ok>"],
+  "hook_line": "<the hook, corrected if needed>",
+  "beats": ["<line 1>", "<line 2>", "..."],
+  "question": "<the closing question>",
+  "caption": "<the caption, corrected if needed>"
+}"""
+
+
+def build_fact_check_prompt(script) -> str:
+    payload = {
+        "topic": script.topic,
+        "animal": script.animal,
+        "hook_line": script.hook_line,
+        "beats": [b.line for b in script.beats],
+        "question": script.question,
+        "caption": script.caption,
+    }
+    return (
+        f"Script to check:\n{json.dumps(payload, indent=2, ensure_ascii=False)}\n\n"
+        f"Respond with exactly this JSON shape:\n{_FACT_SHAPE}"
+    )
+
+
+def apply_fact_check(script, payload: dict[str, Any]):
+    """Apply the fact-checker's verdict to a script, or refuse it.
+
+    Only the words change; the pictures do not, because a corrected line is
+    still about the same animal doing the same thing. The corrected script
+    goes back through parse_reel_script, so a "fix" that breaks the length or
+    shape rules is refused exactly as a bad first draft would be.
+    """
+    verdict = str(payload.get("verdict") or "").strip().lower()
+    issues = [str(i).strip()[:300] for i in (payload.get("issues") or []) if str(i).strip()]
+
+    if verdict == "ok":
+        script.fact_check = "checked: no issues"
+        return script
+    if verdict == "reject":
+        reason = "; ".join(issues) or "no reason given"
+        raise DecisionParseError(f"fact-check rejected the reel: {reason}"[:500])
+    if verdict != "fixed":
+        raise DecisionParseError(f"fact-check returned no usable verdict ({verdict!r})")
+
+    lines = payload.get("beats")
+    if not isinstance(lines, list) or len(lines) != len(script.beats):
+        raise DecisionParseError("fact-check changed the number of beats")
+
+    corrected = parse_reel_script({
+        "format": script.format,
+        "topic": script.topic,
+        "animal": script.animal,
+        "hook_line": payload.get("hook_line") or script.hook_line,
+        "hook_visual": script.hook_visual,
+        "hook_motion": script.hook_motion,
+        "beats": [{"line": str(line), "visual": beat.visual}
+                  for line, beat in zip(lines, script.beats)],
+        "question": payload.get("question") or script.question,
+        "caption": payload.get("caption") or script.caption,
+        "hashtags": script.hashtags,
+    })
+    corrected.fact_check = "corrected: " + ("; ".join(issues) or "unspecified")
+    return corrected
 
 
 _COMMENT_SYSTEM = """\
@@ -654,14 +754,34 @@ async def draft_content(
 
 
 async def draft_reel(state: AgentState, *, topic: str | None, animal: str | None):
-    """Write a reel script. Raises DecisionParseError on anything unusable."""
+    """Write a reel script, then have it fact-checked.
+
+    Two calls, deliberately. Told not to state false things, a writer still
+    reached for "faster than a bullet" about the mantis shrimp — its strike
+    accelerates like one, and is nowhere near as fast. A second pass whose
+    only job is to doubt catches that class of error, and costs a fraction of
+    a cent against a false claim in front of the whole Page.
+
+    Raises DecisionParseError on anything unusable, including a rejection.
+    """
     text = await ai_service.generate_for_system(
         prompt=build_reel_prompt(state, topic=topic, animal=animal),
         system=_REEL_SYSTEM,
         max_tokens=1500,
         capability="agent_content",
     )
-    return parse_reel_script(extract_json(text))
+    script = parse_reel_script(extract_json(text))
+
+    verdict = await ai_service.generate_for_system(
+        prompt=build_fact_check_prompt(script),
+        system=_FACT_SYSTEM,
+        max_tokens=1200,
+        capability="agent_fact_check",
+    )
+    checked = apply_fact_check(script, extract_json(verdict))
+    log.info("agent.reel_fact_check", topic=script.topic[:80],
+             result=checked.fact_check[:300])
+    return checked
 
 
 async def triage_comments(

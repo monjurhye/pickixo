@@ -438,6 +438,7 @@ async def publish_reel(
         action_id, status="succeeded", external_id=video_id,
         result={"seconds": round(rendered.seconds, 1), "hook": rendered.hook_used,
                 "hook_note": rendered.hook_note[:300], "format": script.format,
+                "fact_check": script.fact_check[:300],
                 "image_providers": rendered.image_providers},
     )
     await remember_content(page_uuid=page_uuid, topic=script.topic,

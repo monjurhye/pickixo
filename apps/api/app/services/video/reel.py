@@ -55,6 +55,8 @@ class ReelScript:
     question: str
     caption: str
     hashtags: list[str] = field(default_factory=list)
+    #: What the fact-check pass concluded, for the action record.
+    fact_check: str = ""
 
     @property
     def lines(self) -> list[str]:
@@ -77,6 +79,26 @@ class ReelResult:
 
 
 ImageFn = Callable[..., Awaitable[object]]
+
+#: The shortest a scene may be left after the hook clip borrows its time —
+#: long enough to register the picture, not a flash.
+MIN_SCENE_SECONDS = 1.5
+
+
+def let_clip_play(seconds: list[float], clip_seconds: float) -> list[float]:
+    """Stretch the opening scene so the paid clip plays out, where it can.
+
+    The hook line is usually shorter than the clip — about 2.5 s of speech
+    against 5 s of video — and cutting to a still at the end of the line threw
+    away half of what was paid for. The clip now runs on under the start of
+    the next line, which gives up that time from its own still. Only the
+    pictures move: narration and captions keep their own timing, so the total
+    length is unchanged. The next scene always keeps MIN_SCENE_SECONDS.
+    """
+    if len(seconds) < 2 or seconds[0] >= clip_seconds:
+        return list(seconds)
+    borrow = min(clip_seconds - seconds[0], max(0.0, seconds[1] - MIN_SCENE_SECONDS))
+    return [seconds[0] + borrow, seconds[1] - borrow, *seconds[2:]]
 
 
 async def _generate_stills(script: ReelScript, *, workdir: pathlib.Path,
@@ -139,6 +161,8 @@ async def build_reel(script: ReelScript, *, settings: Settings,
     starts = narration.starts
     ends = [*starts[1:], narration.total + TAIL_SECONDS]
     seconds = [end - start for start, end in zip(starts, ends)]
+    if hook_clip is not None:
+        seconds = let_clip_play(seconds, float(settings.reel_hook_seconds))
 
     # Scene pictures: hook (clip or still), each beat's still, and the hook
     # still again under the closing question — a bookend, and one image fewer
