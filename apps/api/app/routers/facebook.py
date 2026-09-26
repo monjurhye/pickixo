@@ -155,6 +155,40 @@ async def connect(user: CurrentUser, settings: SettingsDep) -> dict:
     }
 
 
+def choose_page(pages: list[dict], target_id: str) -> dict:
+    """The one Page to connect, out of every Page the consent screen granted.
+
+    Never "the first one": an account that runs two Pages had the wrong one
+    connected that way. With FACEBOOK_PAGE_ID set, only that Page is accepted;
+    without it, a single granted Page is unambiguous and anything more is
+    refused. Refusals name what *was* granted, with ids, because the fix is
+    either ticking the right Page on Facebook's screen or setting the id —
+    and neither is possible without knowing which Pages came back.
+    """
+    if not pages:
+        raise AppError(ErrorCode.NOT_FOUND,
+                       detail="this account manages no Pages that the app can see")
+
+    granted = ", ".join(f"{p.get('name') or '?'} ({p.get('id')})" for p in pages)
+    if target_id:
+        for page in pages:
+            if str(page.get("id")) == str(target_id):
+                return page
+        raise AppError(
+            ErrorCode.NOT_FOUND,
+            detail=(f"the configured Page {target_id} was not among the Pages "
+                    f"granted ({granted}); connect again and tick it on "
+                    "Facebook's screen"),
+        )
+    if len(pages) == 1:
+        return pages[0]
+    raise AppError(
+        ErrorCode.INVALID_REQUEST,
+        detail=(f"several Pages were granted ({granted}); set FACEBOOK_PAGE_ID "
+                "to the one this agent should manage, then connect again"),
+    )
+
+
 def dialog_url(settings, state: str) -> str:
     """Facebook's OAuth dialog URL for this deployment.
 
@@ -232,14 +266,7 @@ async def callback(
             user_token = long_lived["access_token"]
 
             pages = await client.list_pages(user_token=user_token)
-            if not pages:
-                raise AppError(
-                    ErrorCode.NOT_FOUND,
-                    detail="this account manages no Pages that the app can see",
-                )
-
-            # Single-Page for now: the first Page the user manages.
-            chosen = pages[0]
+            chosen = choose_page(pages, settings.facebook_page_id)
             page_token = chosen["access_token"]
             debug = await client.debug_token(token=page_token)
         except GraphFailure as failure:

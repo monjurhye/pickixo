@@ -163,6 +163,11 @@ class Settings(BaseSettings):
     # ("scope can still be included, [but] we recommend that you do not use
     # it"). Empty keeps the classic scope list from capabilities.py.
     meta_login_config_id: str = ""
+    # The Facebook Page this deployment manages, by numeric Page ID. The
+    # consent screen can grant several Pages, and the account that connects
+    # may run more than one; without this the first one Facebook lists would
+    # be taken, which is how a different Page once got connected. Not a secret.
+    facebook_page_id: str = ""
 
     # Encrypts Page access tokens at rest (AES-256-GCM). A Page token is a
     # bearer credential for someone's Facebook Page, so it is never stored in
