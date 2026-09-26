@@ -157,6 +157,12 @@ class Settings(BaseSettings):
     # without checking the changelog: an older version silently loses fields,
     # and a newer one can drop an endpoint this code depends on.
     meta_graph_version: str = "v25.0"
+    # A Facebook Login for Business configuration ID. When set, the OAuth
+    # dialog is opened with config_id and the permissions come from that
+    # configuration, which is what Meta recommends for Login for Business
+    # ("scope can still be included, [but] we recommend that you do not use
+    # it"). Empty keeps the classic scope list from capabilities.py.
+    meta_login_config_id: str = ""
 
     # Encrypts Page access tokens at rest (AES-256-GCM). A Page token is a
     # bearer credential for someone's Facebook Page, so it is never stored in

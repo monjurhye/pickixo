@@ -49,6 +49,27 @@ That redirect URI must match **exactly** — scheme, host, path, no trailing
 slash. Meta compares it as a string, and a mismatch fails at the last step of
 the flow with a message that does not say which character is wrong.
 
+### If you added *Facebook Login for Business*: create a configuration
+
+Login for Business is meant to be driven by a **configuration** rather than a
+permission list — Meta's docs: "scope can still be included, [but] we
+recommend that you do not use it". So:
+
+1. **Facebook Login for Business → Configurations → Create configuration.**
+2. Name it (e.g. *Pickixo agent*). Login variation: **General**.
+3. Access token: **User access token** — the code exchanges it for a Page
+   token itself. *Not* "System user access token", which this flow does not use.
+4. Assets: **Pages**.
+5. Permissions: the six in the table below.
+6. Create, then copy the **Configuration ID** into `.env`:
+
+   ```
+   META_LOGIN_CONFIG_ID=<the configuration id>
+   ```
+
+It is not a secret. With it set, the login dialog sends `config_id` instead of
+`scope`; empty, it falls back to the scope list.
+
 ## 3. Permissions
 
 The app requests five permissions, and the OAuth screen asks for all of them

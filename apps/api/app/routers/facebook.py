@@ -149,17 +149,33 @@ async def connect(user: CurrentUser, settings: SettingsDep) -> dict:
                     "t": int(time.time())}).encode("utf-8")
     ).decode("ascii").rstrip("=")
     state = sign_state(claims, settings)
-    query = urllib.parse.urlencode({
+    return {
+        "url": dialog_url(settings, state),
+        "scopes": list(caps.REQUESTED_SCOPES),
+    }
+
+
+def dialog_url(settings, state: str) -> str:
+    """Facebook's OAuth dialog URL for this deployment.
+
+    With a Login for Business configuration, config_id replaces scope: the
+    permissions were chosen when the configuration was created, and Meta
+    recommends not sending scope alongside it. Without one, the classic scope
+    list is sent. Either way the callback reads what was actually granted from
+    debug_token, so the capability flags stay truthful.
+    """
+    params = {
         "client_id": settings.meta_app_id,
         "redirect_uri": settings.meta_redirect_uri,
         "state": state,
         "response_type": "code",
-        "scope": ",".join(caps.REQUESTED_SCOPES),
-    })
-    return {
-        "url": f"https://www.facebook.com/{settings.meta_graph_version}/dialog/oauth?{query}",
-        "scopes": list(caps.REQUESTED_SCOPES),
     }
+    if settings.meta_login_config_id:
+        params["config_id"] = settings.meta_login_config_id
+    else:
+        params["scope"] = ",".join(caps.REQUESTED_SCOPES)
+    query = urllib.parse.urlencode(params)
+    return f"https://www.facebook.com/{settings.meta_graph_version}/dialog/oauth?{query}"
 
 
 @router.get("/callback")
