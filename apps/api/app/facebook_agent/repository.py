@@ -175,7 +175,26 @@ async def record_decision(
 # Limits and activity
 # ---------------------------------------------------------------------------
 async def activity_today(page_uuid: str) -> dict:
-    row = await db.fetch_one("SELECT * FROM agent_activity_today(%s)", (page_uuid,))
+    """Today's counts, plus reels.
+
+    Reels are counted here rather than inside agent_activity_today because
+    that function's return columns must stay as 012 defined them: the deploy
+    script re-applies every migration, and changing a function's columns makes
+    the older file's CREATE OR REPLACE fail. See 020_facebook_reels.sql.
+    """
+    row = await db.fetch_one(
+        """
+        SELECT a.*,
+               (SELECT count(*)::integer FROM facebook_agent_actions
+                 WHERE page_id = %s
+                   AND action_type = 'publish_reel'
+                   AND status = 'succeeded'
+                   AND (started_at AT TIME ZONE 'utc')::date
+                       = (now() AT TIME ZONE 'utc')::date) AS reels
+          FROM agent_activity_today(%s) a
+        """,
+        (page_uuid, page_uuid),
+    )
     return row or {}
 
 

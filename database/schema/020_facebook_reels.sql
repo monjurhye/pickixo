@@ -50,24 +50,38 @@ ALTER TABLE facebook_agent_settings
         CHECK (max_reels_per_day BETWEEN 0 AND 10);
 
 -- ---------------------------------------------------------------------------
--- agent_activity_today — now counts reels
+-- agent_activity_today — reels now count toward spacing
 --
--- The return type changes, so the function has to be dropped rather than
--- replaced. agent_may_act calls it from plpgsql, which Postgres does not track
--- as a dependency; it is recreated below in the same transaction anyway.
+-- Same signature as 012, deliberately. scripts/Deploy-Web.ps1 re-applies every
+-- migration in order on each deploy, so 012 runs again before this file does;
+-- had this changed the return columns, 012's CREATE OR REPLACE would fail with
+-- "cannot change return type of existing function" and stop the deploy. The
+-- reel *count* therefore lives outside this function (agent_may_act below
+-- counts it inline, and the API reads it in repository.activity_today).
 --
--- Reels count toward spacing (last_feed_post_at, minutes_since_feed_post) but
--- not toward feed_posts, which stays the text/photo budget.
+-- The one change: reels count toward spacing (last_feed_post_at,
+-- minutes_since_feed_post), not toward feed_posts, which stays the text/photo
+-- budget.
+--
+-- An earlier draft of this file (pushed, never applied on the server) did add
+-- a `reels` column. Where that draft did run, drop its version first so the
+-- CREATE OR REPLACE below can succeed, and restore the grant the drop took.
 -- ---------------------------------------------------------------------------
-DROP FUNCTION IF EXISTS agent_activity_today(uuid);
+DO $$
+BEGIN
+    IF EXISTS (SELECT 1 FROM pg_proc
+                WHERE proname = 'agent_activity_today'
+                  AND 'reels' = ANY (proargnames)) THEN
+        DROP FUNCTION agent_activity_today(uuid);
+    END IF;
+END $$;
 
-CREATE FUNCTION agent_activity_today(p_page_id uuid)
+CREATE OR REPLACE FUNCTION agent_activity_today(p_page_id uuid)
 RETURNS TABLE (
     feed_posts           integer,
     image_posts          integer,
     text_posts           integer,
     stories              integer,
-    reels                integer,
     comment_replies      integer,
     replies_last_hour    integer,
     last_feed_post_at    timestamptz,
@@ -99,7 +113,6 @@ LANGUAGE sql STABLE AS $$
         (SELECT count(*) FROM acts WHERE action_type = 'publish_image_post')::integer,
         (SELECT count(*) FROM acts WHERE action_type = 'publish_text_post')::integer,
         (SELECT count(*) FROM acts WHERE action_type = 'publish_story')::integer,
-        (SELECT count(*) FROM acts WHERE action_type = 'publish_reel')::integer,
         (SELECT count(*) FROM acts WHERE action_type = 'reply_to_comment')::integer,
         (SELECT count(*) FROM facebook_agent_actions
           WHERE page_id = p_page_id
@@ -125,6 +138,7 @@ LANGUAGE plpgsql STABLE AS $$
 DECLARE
     s        facebook_agent_settings%ROWTYPE;
     a        record;
+    v_reels  integer;
 BEGIN
     SELECT * INTO s FROM facebook_agent_settings WHERE page_id = p_page_id;
     IF NOT FOUND THEN
@@ -169,12 +183,19 @@ BEGIN
         RETURN;
     END IF;
 
-    IF p_action_type = 'publish_reel'
-       AND a.reels >= s.max_reels_per_day THEN
-        RETURN QUERY SELECT false,
-            format('daily reel limit reached (%s/%s)',
-                   a.reels, s.max_reels_per_day);
-        RETURN;
+    IF p_action_type = 'publish_reel' THEN
+        SELECT count(*)::integer INTO v_reels
+          FROM facebook_agent_actions
+         WHERE page_id = p_page_id
+           AND action_type = 'publish_reel'
+           AND status = 'succeeded'
+           AND (started_at AT TIME ZONE 'utc')::date = (now() AT TIME ZONE 'utc')::date;
+        IF v_reels >= s.max_reels_per_day THEN
+            RETURN QUERY SELECT false,
+                format('daily reel limit reached (%s/%s)',
+                       v_reels, s.max_reels_per_day);
+            RETURN;
+        END IF;
     END IF;
 
     IF p_action_type = 'publish_story'
@@ -197,9 +218,7 @@ BEGIN
 END;
 $$;
 
--- A dropped function loses its grants. 006's default privileges would cover
--- the recreation only if it ran as the same role that set them, so say it
--- outright rather than depend on who applied this file.
+-- Harmless when nothing was dropped; needed when the guard above did drop.
 GRANT EXECUTE ON FUNCTION agent_activity_today(uuid) TO pickixo_app;
 
 COMMIT;
