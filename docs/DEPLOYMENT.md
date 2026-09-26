@@ -154,6 +154,7 @@ Everything runs as a Windows service and starts automatically at boot.
 | `Pickixo-API` | FastAPI, :8010 loopback | NSSM, LocalSystem |
 | `Pickixo-Web` | Next.js, :3010 loopback | NSSM, LocalSystem |
 | `Pickixo-Ollama` | local model server, :11434 loopback | NSSM, LocalSystem |
+| `Pickixo-Agent` | Facebook agent worker, no port | NSSM, LocalSystem — stays stopped (exit 78) until configured; see FACEBOOK_SETUP.md §10 |
 
 ```powershell
 Get-Service Pickixo-*, nginx

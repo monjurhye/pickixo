@@ -239,11 +239,36 @@ appearing healthy while never acting.
 
 To survive reboots, alongside the existing `Pickixo-API` and `Pickixo-Web`:
 
-```bash
+**Already installed on this server** as `Pickixo-Agent` (auto-start, depends on
+`Pickixo-Postgres`, logs to `C:\Pickixo\logs\agent.out.log`). Once steps 1–7b
+are done, just:
+
+```powershell
+Start-Service Pickixo-Agent
+```
+
+Until then it starts, logs why it cannot run, and stops — it does not loop.
+That is deliberate: a configuration refusal exits with status **78**
+(`EX_CONFIG`) and the service is set to stay stopped on 78, while any other
+exit, i.e. a crash, is restarted after the usual 10 s throttle. After a reboot
+it tries again on its own, so fixing `.env` needs only the one command above.
+
+To recreate it elsewhere:
+
+```powershell
 nssm install Pickixo-Agent "C:\Users\Administrator\Desktop\Pickixo\apps\api\.venv\Scripts\python.exe" worker.py
 nssm set Pickixo-Agent AppDirectory "C:\Users\Administrator\Desktop\Pickixo\apps\api"
 nssm set Pickixo-Agent Start SERVICE_AUTO_START
-nssm start Pickixo-Agent
+nssm set Pickixo-Agent DependOnService Pickixo-Postgres
+nssm set Pickixo-Agent AppStdout C:\Pickixo\logs\agent.out.log
+nssm set Pickixo-Agent AppStderr C:\Pickixo\logs\agent.err.log
+nssm set Pickixo-Agent AppRotateFiles 1
+nssm set Pickixo-Agent AppRotateBytes 16777216
+nssm set Pickixo-Agent AppExit Default Restart
+nssm set Pickixo-Agent AppExit 78 Exit
+# Ctrl+C, then up to 100 s for the current cycle to finish — a reel mid-upload
+# should complete rather than be killed.
+nssm set Pickixo-Agent AppStopMethodConsole 100000
 ```
 
 ---

@@ -35,6 +35,13 @@ from app.services import ai as ai_service  # noqa: E402
 
 log = get_logger(__name__)
 
+#: Exit status for "not configured, so not starting" — BSD sysexits' EX_CONFIG.
+#: Distinct from 1, which is what an unhandled exception exits with, so the
+#: service manager can tell them apart: the service is set to stay stopped on
+#: 78 (restarting cannot fix a missing key, and would loop every ten seconds)
+#: and to restart on anything else, because a crash is worth retrying.
+EX_CONFIG = 78
+
 
 async def main() -> int:
     settings = get_settings()
@@ -44,7 +51,7 @@ async def main() -> int:
     if problems:
         for problem in problems:
             log.error("config.problem", problem=problem)
-        return 1
+        return EX_CONFIG
 
     if not settings.facebook_agent_enabled:
         # Refuse to start rather than run and do nothing: a worker that appears
@@ -54,7 +61,7 @@ async def main() -> int:
             "FACEBOOK_AGENT_ENABLED is not set — refusing to start a worker "
             "that would never act"
         )
-        return 1
+        return EX_CONFIG
 
     if not settings.meta_configured:
         log.error(
@@ -62,7 +69,7 @@ async def main() -> int:
             "META_REDIRECT_URI and FACEBOOK_TOKEN_KEY must all be set before "
             "the agent can reach a Page."
         )
-        return 1
+        return EX_CONFIG
 
     await db.init_pool(settings)
 
@@ -80,7 +87,7 @@ async def main() -> int:
     if ai_service.providers_ready() == 0:
         log.error("no AI provider is enabled and configured — the agent cannot think")
         await db.close_pool()
-        return 1
+        return EX_CONFIG
 
     supervisor = Supervisor(settings)
     stopping = asyncio.Event()
