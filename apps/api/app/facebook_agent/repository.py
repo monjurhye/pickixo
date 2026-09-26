@@ -262,6 +262,28 @@ async def upsert_post(
     return str(row["id"])
 
 
+async def adopt_post_id(page_uuid: str, *, old_id: str, new_id: str) -> bool:
+    """Move our record of a post onto the id Facebook's feed uses for it.
+
+    Reels are published as videos and come back from the Reels API with a
+    video id, while the feed — where comments and engagement live — knows them
+    by a post id. Renaming the row keeps one record per reel, so its comments
+    attach to it and it is measured once. A no-op if the new id is already
+    recorded, so running it on every sync is safe.
+    """
+    changed = await db.execute(
+        """
+        UPDATE facebook_posts
+           SET fb_post_id = %s, observed_at = now()
+         WHERE page_id = %s AND fb_post_id = %s
+           AND NOT EXISTS (SELECT 1 FROM facebook_posts
+                            WHERE page_id = %s AND fb_post_id = %s)
+        """,
+        (new_id, page_uuid, old_id, page_uuid, new_id),
+    )
+    return changed > 0
+
+
 async def recent_posts(page_uuid: str, limit: int = 15) -> list[dict]:
     return await db.fetch_all(
         """

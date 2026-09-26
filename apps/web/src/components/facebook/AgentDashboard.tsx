@@ -209,7 +209,9 @@ export function AgentDashboard() {
       </section>
 
       {/* --- today -------------------------------------------------------- */}
-      <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+        <Meter label="Reels today" used={agent.today.reels}
+               max={agent.limits.max_reels_per_day} />
         <Meter label="Posts today" used={agent.today.feed_posts}
                max={agent.limits.max_feed_posts_per_day} />
         <Meter label="Images" used={agent.today.image_posts}
@@ -427,6 +429,7 @@ function AgentSettings({ agent, busy, onSave }: {
     max_feed_posts_per_day: agent.limits.max_feed_posts_per_day,
     max_image_posts_per_day: agent.limits.max_image_posts_per_day,
     max_stories_per_day: agent.limits.max_stories_per_day,
+    max_reels_per_day: agent.limits.max_reels_per_day,
     max_comment_replies_per_hour: agent.limits.max_comment_replies_per_hour,
     min_minutes_between_feed_posts: agent.limits.min_minutes_between_feed_posts,
     comment_reply_confidence: agent.comment_reply_confidence,
@@ -482,6 +485,8 @@ function AgentSettings({ agent, busy, onSave }: {
       </div>
 
       <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {field('max_reels_per_day', 'Reels per day', 0, 10, 1,
+               'Rendered on this server; the optional hook clip is the only paid step.')}
         {field('max_feed_posts_per_day', 'Feed posts per day', 0, 20)}
         {field('max_image_posts_per_day', 'Image posts per day', 0, 20)}
         {field('max_stories_per_day', 'Stories per day', 0, 30)}

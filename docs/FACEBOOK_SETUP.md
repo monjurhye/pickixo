@@ -134,6 +134,65 @@ image provider (`POLLINATIONS_IMAGE_ENABLED` or `CLOUDFLARE_IMAGE_ENABLED`);
 without one the agent can still publish text posts and handle comments, and
 will simply not choose image posts.
 
+## 7b. Reels
+
+Reels are how the Page reaches people who do not follow it yet, so they are
+the agent's main format: up to **2 a day** by default, with their own budget
+separate from photo posts. Photo posts are written as quizzes.
+
+A reel is made on this server: an AI-written script (hook, 3–5 facts, a
+closing question), one AI still per scene with a slow zoom or pan, English
+narration by Piper, and burned-in captions — all stitched by ffmpeg into a
+720x1280 video of 20–40 seconds. Rendering takes one to three minutes of CPU.
+The caption always ends with *"🎨 Visuals are AI-generated."*
+
+**Three things to do, once:**
+
+1. Apply the migration (as the owner). Until it is applied the agent simply
+   never offers a reel:
+
+   ```powershell
+   C:\Pickixo\pgsql\bin\psql.exe -h 127.0.0.1 -U pickixo_admin -d pickixo `
+     -v ON_ERROR_STOP=1 -f database\schema\020_facebook_reels.sql
+   ```
+
+2. Install Piper and the narrator voice (free, offline, ~120 MB):
+
+   ```bash
+   cd C:\Users\Administrator\Desktop\Pickixo\apps\api
+   .venv\Scripts\python.exe -m pip install -r requirements.txt
+   .venv\Scripts\python.exe -m piper.download_voices en_US-ryan-high --download-dir storage\voices
+   ```
+
+3. ffmpeg must be on the PATH of the account the worker runs as (it is
+   installed system-wide via Chocolatey on this server).
+
+Without an image provider (step 7) a reel cannot be rendered; the agent
+records why and does nothing.
+
+### Optional: a moving opening (the only paid step)
+
+The first seconds decide whether anyone watches, so the opening can be a real
+five-second video clip made by **Wan 2.6 Flash** on fal.ai, animated from the
+first still. Everything after it stays free.
+
+Cost: silent 720p is about **$0.025 per second**, so about **$0.13 per reel**,
+or roughly **$8 a month** at two reels a day. Check the price on
+fal.ai/models/wan/v2.6/image-to-video/flash before relying on that.
+
+1. Create a key at fal.ai → *Dashboard → Keys*, and add credit.
+2. In `.env` — never anywhere else:
+
+   ```
+   FAL_KEY=<your key>
+   REEL_HOOK_ENABLED=true
+   ```
+
+If the clip fails for any reason — no credit, a timeout, fal being down — the
+reel opens on a moving still instead and is published anyway. The run record
+says which opening each reel got. A job abandoned after
+`REEL_HOOK_TIMEOUT_SECONDS` may still be billed by fal.
+
 ## 8. Restart
 
 ```bash

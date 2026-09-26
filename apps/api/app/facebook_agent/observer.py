@@ -26,6 +26,7 @@ from typing import Any
 from ..logging_config import get_logger
 from ..services.crypto import CryptoNotConfigured, DecryptionFailed, decrypt
 from ..services.facebook import FacebookClient, PageRef
+from ..services.facebook import capabilities as caps
 from ..services.facebook.errors import FailureKind, GraphFailure
 from . import repository as repo
 from .memory import extract_subject
@@ -107,17 +108,28 @@ async def _sync_from_graph(
             if created is None:
                 continue
             summary = _engagement(post)
+            fb_post_id = str(post["id"])
+            ours = await _is_ours(page_uuid, fb_post_id)
+
+            # A reel is published as a video and recorded under the video id,
+            # but it reaches the feed as a post with its own id. Without this
+            # it would be counted a second time, as somebody's manual video
+            # post, and eat the feed budget.
+            target = _attachment_target(post)
+            if not ours and target and await _is_ours(page_uuid, target):
+                ours = True
+                await repo.adopt_post_id(page_uuid, old_id=target, new_id=fb_post_id)
+
             post_id = await repo.upsert_post(
                 page_uuid=page_uuid,
-                fb_post_id=str(post["id"]),
+                fb_post_id=fb_post_id,
                 post_type=_post_type(post),
                 message=post.get("message"),
                 published_at=created,
                 permalink=post.get("permalink_url"),
                 # Anything we did not create is somebody posting by hand. It
                 # still counts towards the day's activity.
-                created_by="agent" if await _is_ours(page_uuid, str(post["id"]))
-                           else "human",
+                created_by="agent" if ours else "human",
             )
             # Store engagement as an age-bucketed snapshot so the evaluator can
             # compare posts fairly later.
@@ -172,13 +184,16 @@ async def _is_ours(page_uuid: str, fb_post_id: str) -> bool:
     """Did this system publish that post?
 
     Answered from the action ledger, which records the external id of every
-    publish we performed.
+    publish we performed. Any status, not only 'succeeded': an external id is
+    only ever written once Facebook has handed one back, and a reel whose
+    finish call timed out is recorded as failed with its video id — and may
+    well be live. It is still ours, and must not be counted as a human's post.
     """
     from .. import db
     return bool(await db.fetch_value(
         """
         SELECT 1 FROM facebook_agent_actions
-         WHERE page_id = %s AND external_id = %s AND status = 'succeeded'
+         WHERE page_id = %s AND external_id = %s
          LIMIT 1
         """,
         (page_uuid, fb_post_id),
@@ -238,6 +253,7 @@ async def observe(
         image_posts=int(activity.get("image_posts") or 0),
         text_posts=int(activity.get("text_posts") or 0),
         stories=int(activity.get("stories") or 0),
+        reels=int(activity.get("reels") or 0),
         comment_replies=int(activity.get("comment_replies") or 0),
         replies_last_hour=int(activity.get("replies_last_hour") or 0),
         minutes_since_feed_post=(
@@ -248,6 +264,12 @@ async def observe(
         max_feed_posts=int(settings_row.get("max_feed_posts_per_day") or 2),
         max_image_posts=int(settings_row.get("max_image_posts_per_day") or 2),
         max_stories=int(settings_row.get("max_stories_per_day") or 5),
+        # `is not None` rather than `or 2`: zero is how the owner switches
+        # reels off, and `or` would quietly turn it back into two. A missing
+        # column means migration 020 has not been applied, and the database
+        # would reject a reel decision — so no reels until it is.
+        max_reels=(int(settings_row["max_reels_per_day"])
+                   if settings_row.get("max_reels_per_day") is not None else 0),
         max_replies_per_hour=int(settings_row.get("max_comment_replies_per_hour") or 10),
         min_minutes_between_feed_posts=int(
             settings_row.get("min_minutes_between_feed_posts") or 180
@@ -264,7 +286,7 @@ async def observe(
             enabled=bool(settings_row.get("enabled")),
             mode=str(settings_row.get("mode") or "PAUSED"),
             emergency_stopped=bool(settings_row.get("emergency_stopped")),
-            capabilities=page_row.get("capabilities") or {},
+            capabilities=_capabilities(page_row),
             connection_status=connection_status,
         ),
         today=today,
@@ -369,6 +391,31 @@ def _engagement(post: dict) -> dict[str, int]:
         "comments": summary_count("comments"),
         "shares": int(shares.get("count") or 0),
     }
+
+
+def _attachment_target(post: dict) -> str | None:
+    """The id of the object a post carries — for a reel, the video id."""
+    attachments = (post.get("attachments") or {}).get("data") or []
+    if not attachments:
+        return None
+    target = (attachments[0].get("target") or {}).get("id")
+    return str(target) if target else None
+
+
+def _capabilities(page_row: dict) -> dict[str, Any]:
+    """Capability flags, recomputed from what Meta granted.
+
+    The stored `capabilities` column is a snapshot from connection time. When
+    the rules in capabilities.py change — reels were added after the Page was
+    first connected — recomputing from the stored scopes and tasks lets an
+    existing connection pick that up without a reconnect. The snapshot is the
+    fallback for a row that somehow lacks the raw lists.
+    """
+    scopes = page_row.get("granted_scopes")
+    if scopes:
+        return caps.detect(granted_scopes=list(scopes),
+                           page_tasks=list(page_row.get("page_tasks") or []))
+    return page_row.get("capabilities") or {}
 
 
 def _post_type(post: dict) -> str:

@@ -96,6 +96,12 @@ Rules you must not break:
 - Never write as if you personally saw, photographed or experienced anything.
 - Images on this Page are AI-generated. Never describe one as a photograph,
   and never state where or when it was taken.
+
+About formats: short narrated reels are how this Page reaches new people —
+Facebook recommends reels to non-followers, and photo posts mostly reach
+existing followers. When publish_reel is allowed and nothing more urgent is
+waiting, it is usually the right choice. Image posts are quizzes, good for
+getting existing followers to comment.
 """
 
 _DECISION_SCHEMA = """\
@@ -120,6 +126,15 @@ def build_decision_prompt(state: AgentState, allowed: frozenset[Decision]) -> st
     observation = state.for_model()
     options = sorted(d.value for d in allowed)
 
+    # Only when a reel is actually on offer: describing an option the rules
+    # have ruled out invites the model to pick it and be refused.
+    reel_step = (
+        "5. If you choose publish_reel, pick a topic that works as a short "
+        "narrated video: one surprising fact, a two-animal comparison, or the "
+        "next entry in a numbered series already in the recent topics.\n"
+        if Decision.PUBLISH_REEL in allowed else ""
+    )
+
     return (
         f"Current situation:\n{json.dumps(observation, indent=2)}\n\n"
         f"Allowed decisions: {options}\n\n"
@@ -129,7 +144,8 @@ def build_decision_prompt(state: AgentState, allowed: frozenset[Decision]) -> st
         "2. Has the Page posted recently, and is that post still doing well? "
         "If so, posting again buries it.\n"
         "3. Would another post today be useful, or just noise?\n"
-        "4. If you publish, what has NOT been covered recently?\n\n"
+        "4. If you publish, what has NOT been covered recently?\n"
+        f"{reel_step}\n"
         f"Respond with exactly this JSON shape:\n{_DECISION_SCHEMA}"
     )
 
@@ -154,8 +170,27 @@ Reply with ONE JSON object and nothing else.
 """
 
 
+_QUIZ_BRIEF = """\
+This post is a QUIZ. The image shows the animal; the caption asks one
+question about it that has a single, well-established answer.
+
+Caption layout, exactly:
+  line 1: the question (one short sentence)
+  lines 2-4: three options, "A) ...", "B) ...", "C) ..."
+  line 5: "Comment your answer 👇"
+  then a line containing only "."  repeated on five separate lines
+  then: "✅ Answer: <letter>) <answer> — <one sentence explaining why>"
+
+The dots push the answer below Facebook's "See more" fold, so people guess
+before they see it. The question must be answerable from general knowledge,
+and the explanation must be something you are sure of.
+
+"""
+
+
 def build_content_prompt(
-    state: AgentState, *, topic: str | None, animal: str | None, want_image: bool
+    state: AgentState, *, topic: str | None, animal: str | None, want_image: bool,
+    quiz: bool = False,
 ) -> str:
     recent = {
         "topics": state.recent_topics[:25],
@@ -164,7 +199,8 @@ def build_content_prompt(
     shape = {
         "topic": "<the specific topic covered>",
         "animal": "<main subject, or null>",
-        "caption": "<the post text, 40-90 words>",
+        "caption": ("<the quiz caption, laid out as described>" if quiz
+                    else "<the post text, 40-90 words>"),
     }
     if want_image:
         shape["visual_prompt"] = (
@@ -194,10 +230,176 @@ def build_content_prompt(
         )
 
     return (
-        f"{steer}{performance}"
+        f"{_QUIZ_BRIEF if quiz else ''}{steer}{performance}"
         f"Do NOT repeat anything from these recent posts:\n"
         f"{json.dumps(recent, indent=2)}\n\n"
         f"Respond with exactly this JSON shape:\n{json.dumps(shape, indent=2)}"
+    )
+
+
+_REEL_SYSTEM = """\
+You write scripts for short narrated vertical videos (Facebook Reels) on a
+wildlife Page called The World Frame. English, for adults scrolling on a phone.
+
+A reel is: a hook line over the opening shot, three to five beats (one
+narrated line and one picture each), and a closing question. Spoken, it runs
+20 to 40 seconds.
+
+Choose one format:
+- "facts": one surprising thing about one animal, unpacked beat by beat.
+- "versus": two animals compared on ONE measurable thing (speed, bite, size,
+  lifespan). Fair, factual, and say who comes out ahead and why.
+- "series": the next entry in a numbered series, e.g. "Deadliest Animals #4"
+  or "Animals You Didn't Know Existed #2". If the recent topics contain a
+  series, continue it with the next number; otherwise start one at #1.
+
+The hook is everything. It is the first thing heard, over the first picture,
+and decides whether anyone stays. It must be a surprising claim that is TRUE,
+in 12 words or fewer. Never a question like "Did you know...?".
+
+Accuracy is not negotiable — this Page is educational:
+- Only well-established facts you are confident about. If a striking claim
+  might be folklore, drop it.
+- No invented numbers. A figure is allowed only if it is widely documented,
+  and then as a rounded, hedged value ("around 100 km/h", "up to 3 metres").
+- No scientific names, conservation statuses or locations unless certain.
+
+Each beat's `visual` describes ONE photorealistic still for an image
+generator: the animal, what it is doing, the habitat, the light, the framing.
+No text, no people, no logos. For "versus", each beat shows the animal that
+line is about.
+
+`hook_motion` describes five seconds of movement for a video model, starting
+from the hook picture: what the animal does and how the camera moves. Keep it
+natural and physically plausible — slow and real beats fast and strange.
+
+Never write as if you filmed or saw anything. The visuals are AI-generated.
+
+Reply with ONE JSON object and nothing else.
+"""
+
+_REEL_SHAPE = """\
+{
+  "format": "facts" | "versus" | "series",
+  "topic": "<short topic; for a series, include its name and number>",
+  "animal": "<main animal, or the two joined with ' vs '>",
+  "hook_line": "<spoken first line, a true surprising claim, max 12 words>",
+  "hook_visual": "<the opening still>",
+  "hook_motion": "<five seconds of motion from that still>",
+  "beats": [
+    {"line": "<one narrated sentence, max 22 words>", "visual": "<its still>"}
+  ],
+  "question": "<closing question inviting a comment, max 14 words>",
+  "caption": "<post text, 25-60 words: restate the hook, add one line, end with the question. No hashtags here.>",
+  "hashtags": ["#animalfacts", "<3 to 5 specific tags in total>"]
+}"""
+
+#: Hard caps in words. Past these a line is not a caption-length line any
+#: more, and the script is refused rather than cut mid-sentence.
+_HOOK_MAX_WORDS = 18
+_BEAT_MAX_WORDS = 32
+_QUESTION_MAX_WORDS = 20
+_REEL_FORMATS = {"facts", "versus", "series"}
+_HASHTAG = re.compile(r"^#[A-Za-z][A-Za-z0-9_]{1,40}$")
+
+
+def build_reel_prompt(state: AgentState, *, topic: str | None,
+                      animal: str | None) -> str:
+    recent = {
+        "topics": state.recent_topics[:25],
+        "animals": state.recent_animals[:25],
+    }
+    if topic:
+        steer = f"Write a reel about: {topic}"
+        if animal:
+            steer += f" (subject: {animal})"
+        steer += "\n\n"
+    else:
+        steer = "Choose a subject that is NOT in the recent lists below.\n\n"
+
+    performance = ""
+    if state.performance.is_meaningful and state.performance.top_topics:
+        performance = (
+            "These topics have measurably performed well on this Page "
+            f"(real numbers): {json.dumps(state.performance.top_topics[:4])}\n\n"
+        )
+
+    return (
+        f"{steer}{performance}"
+        f"Do NOT repeat anything from these recent posts:\n"
+        f"{json.dumps(recent, indent=2)}\n\n"
+        f"Respond with exactly this JSON shape (3 to 5 beats):\n{_REEL_SHAPE}"
+    )
+
+
+def _words(text: str) -> int:
+    return len(text.split())
+
+
+def parse_reel_script(payload: dict[str, Any]):
+    """Turn the model's object into a ReelScript, or refuse it.
+
+    Strict about structure, because every field becomes something on screen or
+    in someone's ear: a missing visual is a black scene, an overlong line is a
+    caption nobody can read. Nothing is repaired — a script that fails here is
+    a failed generation, and the agent does nothing this cycle.
+    """
+    from ..services.video.reel import Beat, ReelScript
+
+    def text(key: str, limit: int = 1000) -> str:
+        value = " ".join(str(payload.get(key) or "").split())
+        if not value:
+            raise DecisionParseError(f"reel script has no {key}")
+        return value[:limit]
+
+    fmt = str(payload.get("format") or "").strip().lower()
+    if fmt not in _REEL_FORMATS:
+        raise DecisionParseError(f"unknown reel format {fmt!r}")
+
+    hook_line = text("hook_line", 300)
+    if _words(hook_line) > _HOOK_MAX_WORDS:
+        raise DecisionParseError("hook line is too long to work as a hook")
+
+    raw_beats = payload.get("beats")
+    if not isinstance(raw_beats, list) or not 3 <= len(raw_beats) <= 5:
+        raise DecisionParseError("a reel needs 3 to 5 beats")
+    beats = []
+    for index, entry in enumerate(raw_beats):
+        if not isinstance(entry, dict):
+            raise DecisionParseError(f"beat {index} is not an object")
+        line = " ".join(str(entry.get("line") or "").split())
+        visual = " ".join(str(entry.get("visual") or "").split())
+        if not line or not visual:
+            raise DecisionParseError(f"beat {index} lacks a line or a visual")
+        if _words(line) > _BEAT_MAX_WORDS:
+            raise DecisionParseError(f"beat {index} is too long to narrate")
+        beats.append(Beat(line=line[:400], visual=visual[:800]))
+
+    question = text("question", 300)
+    if _words(question) > _QUESTION_MAX_WORDS:
+        raise DecisionParseError("closing question is too long")
+
+    tags: list[str] = []
+    for tag in payload.get("hashtags") or []:
+        tag = str(tag).strip()
+        if not tag.startswith("#"):
+            tag = f"#{tag}"
+        if _HASHTAG.match(tag) and tag.lower() not in {t.lower() for t in tags}:
+            tags.append(tag)
+    tags = tags[:5] or ["#animalfacts", "#wildlife"]
+
+    animal = str(payload.get("animal") or "").strip()[:100] or None
+    return ReelScript(
+        format=fmt,
+        topic=text("topic", 200),
+        animal=animal,
+        hook_line=hook_line,
+        hook_visual=text("hook_visual", 800),
+        hook_motion=text("hook_motion", 800),
+        beats=beats,
+        question=question,
+        caption=text("caption", 1500),
+        hashtags=tags,
     )
 
 
@@ -422,12 +624,13 @@ async def decide(state: AgentState, allowed: frozenset[Decision]) -> ModelDecisi
 
 
 async def draft_content(
-    state: AgentState, *, topic: str | None, animal: str | None, want_image: bool
+    state: AgentState, *, topic: str | None, animal: str | None, want_image: bool,
+    quiz: bool = False,
 ) -> dict[str, Any]:
     """Write the post. Returns caption, topic, animal and optional visual prompt."""
     text = await ai_service.generate_for_system(
         prompt=build_content_prompt(
-            state, topic=topic, animal=animal, want_image=want_image
+            state, topic=topic, animal=animal, want_image=want_image, quiz=quiz,
         ),
         system=_CONTENT_SYSTEM,
         max_tokens=800,
@@ -448,6 +651,17 @@ async def draft_content(
         "visual_prompt": (str(payload.get("visual_prompt")).strip()[:1000]
                           if payload.get("visual_prompt") else None),
     }
+
+
+async def draft_reel(state: AgentState, *, topic: str | None, animal: str | None):
+    """Write a reel script. Raises DecisionParseError on anything unusable."""
+    text = await ai_service.generate_for_system(
+        prompt=build_reel_prompt(state, topic=topic, animal=animal),
+        system=_REEL_SYSTEM,
+        max_tokens=1500,
+        capability="agent_content",
+    )
+    return parse_reel_script(extract_json(text))
 
 
 async def triage_comments(

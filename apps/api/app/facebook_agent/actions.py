@@ -31,6 +31,8 @@ from ..logging_config import get_logger
 from ..services import ai as ai_service
 from ..services.facebook import FacebookClient, PageRef
 from ..services.facebook.errors import FailureKind, GraphFailure
+from ..services.video import reel as video_reel
+from ..services.video.reel import ReelScript
 from . import repository as repo
 from .memory import content_hash, extract_subject, looks_repetitive, normalize, topic_key
 from .state import AgentState
@@ -328,6 +330,123 @@ async def publish_story(
                            caption=visual_prompt[:200], visual_prompt=visual_prompt,
                            post_id=None)
     return {"story_id": story_id, "image_path": image_path}
+
+
+#: Appended to every reel caption. The visuals are generated; saying so is the
+#: honest default, and Meta's own "AI info" label is not something to rely on
+#: being applied.
+AI_DISCLOSURE = "🎨 Visuals are AI-generated."
+
+
+def reel_caption(script: ReelScript) -> str:
+    """What appears under the reel: the caption, its hashtags, the disclosure."""
+    tags = " ".join(script.hashtags)
+    return f"{script.caption}\n\n{tags}\n\n{AI_DISCLOSURE}".strip()
+
+
+def _reel_workdir(settings: Settings, page_uuid: str) -> pathlib.Path:
+    root = pathlib.Path(settings.storage_root) / "facebook" / page_uuid / "reels"
+    return root / f"{datetime.now(timezone.utc):%Y%m%d-%H%M%S}-{uuid.uuid4().hex[:8]}"
+
+
+def _tidy_workdir(workdir: pathlib.Path, keep: set[str]) -> None:
+    """Drop the intermediates; keep the reel and its opening still.
+
+    Segments and narration are a few megabytes per reel and are never read
+    again. The finished reel stays for the dashboard and for a human to check
+    what was actually published.
+    """
+    for path in workdir.iterdir():
+        if path.name not in keep:
+            path.unlink(missing_ok=True)
+
+
+async def publish_reel(
+    *, page_uuid: str, ref: PageRef, settings: Settings, run_id: str | None,
+    script: ReelScript,
+) -> dict[str, Any]:
+    """Render and publish a reel.
+
+    The ledger gets one extra write compared with a photo post, and it is the
+    important one. The Reels API publishes in three calls, and only the last —
+    finish — can make the reel public. Just before it, the video id is written
+    to the claim as in progress. If finish then times out, the claim carries an
+    external id, and claim_agent_action will not reopen a failed action that
+    has one: the agent gives up on that reel rather than risk posting it twice.
+    A missing reel is invisible; a duplicate one is not.
+    """
+    caption = reel_caption(script)
+    action_id = await _guard_claim(
+        page_uuid=page_uuid, action_type="publish_reel",
+        idempotency_key=_key(page_uuid, "publish_reel", content_hash(script.caption)),
+        run_id=run_id,
+        request={"topic": script.topic, "animal": script.animal,
+                 "format": script.format},
+    )
+
+    # --- render (free, local; the hook is the only paid step) ---------------
+    workdir = _reel_workdir(settings, page_uuid)
+    try:
+        rendered = await video_reel.build_reel(
+            script, settings=settings, workdir=workdir,
+            image_fn=ai_service.generate_image_for_system,
+        )
+    except Exception as exc:  # noqa: BLE001
+        # Nothing reached Facebook, so the claim is left retryable.
+        await repo.finish_action(action_id, status="failed",
+                                 error=f"reel rendering failed: {exc}"[:500])
+        log.warning("agent.reel_render_failed", error=f"{type(exc).__name__}: {exc}"[:300])
+        raise ActionSkipped(f"the reel could not be rendered: {exc}"[:300]) from exc
+
+    video = rendered.path.read_bytes()
+
+    # --- publish -------------------------------------------------------------
+    async with FacebookClient(
+        graph_base_url=settings.graph_base_url,
+        app_id=settings.meta_app_id, app_secret=settings.meta_app_secret,
+    ) as client:
+        try:
+            video_id, upload_url = await client.start_reel(ref)
+            await client.upload_reel(ref, upload_url=upload_url, video=video)
+            # From here on the reel may go public. Record which one it is.
+            await repo.finish_action(action_id, status="in_progress",
+                                     external_id=video_id)
+            await client.finish_reel(ref, video_id=video_id, description=caption)
+        except GraphFailure as failure:
+            await _fail(action_id, failure)
+            raise
+
+        permalink = None
+        try:
+            obj = await client.get_object(ref, object_id=video_id,
+                                          fields="id,permalink_url")
+            link = obj.get("permalink_url")
+            if link:
+                permalink = link if str(link).startswith("http") \
+                    else f"https://www.facebook.com{link}"
+        except GraphFailure:
+            # Reels are processed after finish; a permalink may not exist yet.
+            log.info("agent.reel_permalink_pending", video_id=video_id)
+
+    post_id = await repo.upsert_post(
+        page_uuid=page_uuid, fb_post_id=video_id, post_type="reel",
+        message=caption, published_at=datetime.now(timezone.utc),
+        topic=script.topic, animal=script.animal,
+        image_path=str(rendered.path), permalink=permalink, created_by="agent",
+    )
+    await repo.finish_action(
+        action_id, status="succeeded", external_id=video_id,
+        result={"seconds": round(rendered.seconds, 1), "hook": rendered.hook_used,
+                "hook_note": rendered.hook_note[:300], "format": script.format,
+                "image_providers": rendered.image_providers},
+    )
+    await remember_content(page_uuid=page_uuid, topic=script.topic,
+                           animal=script.animal, caption=script.caption,
+                           visual_prompt=script.hook_visual, post_id=post_id)
+    _tidy_workdir(workdir, keep={rendered.path.name, "still-00.png"})
+    return {"fb_post_id": video_id, "post_id": post_id, "video_path": str(rendered.path),
+            "hook_used": rendered.hook_used, "hook_note": rendered.hook_note,
+            "seconds": rendered.seconds}
 
 
 # ---------------------------------------------------------------------------

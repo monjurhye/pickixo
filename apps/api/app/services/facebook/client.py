@@ -244,7 +244,9 @@ class FacebookClient:
             params={
                 "fields": (
                     "id,message,created_time,permalink_url,status_type,"
-                    "attachments{media_type},"
+                    # target{id} is the video id for a reel's feed post — how
+                    # the observer recognises a reel this system published.
+                    "attachments{media_type,target{id}},"
                     "comments.summary(true).limit(0),"
                     "reactions.summary(true).limit(0),"
                     "shares"
@@ -346,6 +348,101 @@ class FacebookClient:
             token=page.access_token,
             data={"photo_id": photo_id},
         )
+
+    # -- reels -------------------------------------------------------------
+    #
+    # Meta's Reels Publishing API, three calls:
+    #
+    #   POST /{page-id}/video_reels  upload_phase=start   -> video_id, upload_url
+    #   POST <upload_url>            the bytes (rupload.facebook.com)
+    #   POST /{page-id}/video_reels  upload_phase=finish, video_state=PUBLISHED
+    #
+    # Kept as three methods rather than one because the caller must record the
+    # video id *between* upload and finish: finish is the call that can publish,
+    # and a finish that times out may well have. See actions.publish_reel.
+    #
+    # Publishing is asynchronous on Meta's side, and the feed post that
+    # eventually appears has its own id; the observer maps it back to the video
+    # id (observer._attachment_target).
+    async def start_reel(self, page: PageRef) -> tuple[str, str]:
+        """Open an upload session. Returns (video_id, upload_url)."""
+        start = await self._request(
+            "POST", f"/{page.page_id}/video_reels",
+            token=page.access_token,
+            data={"upload_phase": "start"},
+        )
+        video_id = str(start.get("video_id") or "")
+        upload_url = str(start.get("upload_url") or "")
+        if not video_id or not upload_url:
+            raise GraphFailure(
+                kind=classify(http_status=200, payload=None).kind,
+                message="reel upload session returned no video id",
+            )
+        return video_id, upload_url
+
+    async def upload_reel(self, page: PageRef, *, upload_url: str, video: bytes) -> None:
+        """Send the bytes. Nothing is published by this call."""
+        await self._upload_bytes(upload_url, token=page.access_token, data=video)
+
+    async def finish_reel(
+        self, page: PageRef, *, video_id: str, description: str
+    ) -> None:
+        """Publish the uploaded reel."""
+        finish = await self._request(
+            "POST", f"/{page.page_id}/video_reels",
+            token=page.access_token,
+            data={
+                "upload_phase": "finish",
+                "video_id": video_id,
+                "video_state": "PUBLISHED",
+                "description": description,
+            },
+            timeout=UPLOAD_TIMEOUT,
+        )
+        if finish.get("success") is False:
+            raise GraphFailure(
+                kind=classify(http_status=200, payload=None).kind,
+                message="reel finish phase reported failure",
+            )
+
+    async def _upload_bytes(self, upload_url: str, *, token: str, data: bytes) -> None:
+        """The binary half of a resumable upload.
+
+        rupload wants `Authorization: OAuth <token>` rather than Bearer, plus
+        offset and file_size headers, and a raw body — none of which fits
+        `_request`, so it is done here with the same error classification.
+        """
+        if self._client is None:
+            raise RuntimeError("FacebookClient must be used as an async context manager")
+        try:
+            response = await self._client.post(
+                upload_url,
+                headers={
+                    "Authorization": f"OAuth {token}",
+                    "offset": "0",
+                    "file_size": str(len(data)),
+                },
+                content=data,
+                timeout=UPLOAD_TIMEOUT,
+            )
+        except httpx.HTTPError as exc:
+            log.warning("facebook.network_error", path="rupload",
+                        error=type(exc).__name__)
+            raise from_network_error(exc) from exc
+
+        try:
+            payload = response.json()
+        except ValueError:
+            payload = None
+        if response.status_code >= 400 or (isinstance(payload, dict) and "error" in payload):
+            failure = classify(
+                http_status=response.status_code,
+                payload=payload if isinstance(payload, dict) else None,
+                retry_after_header=response.headers.get("Retry-After"),
+            )
+            log.warning("facebook.api_error", path="rupload", kind=failure.kind.value,
+                        code=failure.code, status=response.status_code)
+            raise failure
 
     async def reply_to_comment(
         self, page: PageRef, *, comment_id: str, message: str

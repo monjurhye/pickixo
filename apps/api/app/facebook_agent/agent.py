@@ -279,11 +279,22 @@ async def _execute(
 
     # --- a publishing decision -------------------------------------------
     await repo.set_run_state(run_id, "generating")
+
+    if decision is Decision.PUBLISH_REEL:
+        await _execute_reel(
+            choice=choice, state=state, ref=ref, settings_row=settings_row,
+            settings=settings, page_uuid=page_uuid, run_id=run_id, outcome=outcome,
+        )
+        return
+
     want_image = decision in (Decision.PUBLISH_IMAGE_POST, Decision.PUBLISH_STORY)
 
     try:
         draft = await reasoning.draft_content(
-            state, topic=choice.topic, animal=choice.animal, want_image=want_image
+            state, topic=choice.topic, animal=choice.animal, want_image=want_image,
+            # Photo posts are quizzes: they reach existing followers, and a
+            # question is what gets them to comment.
+            quiz=decision is Decision.PUBLISH_IMAGE_POST,
         )
     except (reasoning.DecisionParseError, AppError) as exc:
         outcome.decision = "do_nothing"
@@ -374,6 +385,81 @@ async def _execute(
     )
     outcome.actions_taken += 1
     outcome.note(f"published {decision.value} ({result.get('fb_post_id') or result.get('story_id')})")
+
+
+async def _execute_reel(
+    *, choice: reasoning.ModelDecision, state: AgentState, ref, settings_row: dict,
+    settings: Settings, page_uuid: str, run_id: str, outcome: RunOutcome,
+) -> None:
+    """Write, check, render and publish one reel.
+
+    Same order as a photo post, for the same reason: the cheap steps (writing
+    and the duplicate check) come before the expensive one. For a reel the
+    expensive step is minutes of rendering and possibly a paid hook clip.
+    """
+    try:
+        script = await reasoning.draft_reel(state, topic=choice.topic,
+                                            animal=choice.animal)
+    except (reasoning.DecisionParseError, AppError) as exc:
+        outcome.decision = "do_nothing"
+        outcome.reason = (
+            "no AI text provider is available to write the reel"
+            if isinstance(exc, AppError)
+            else f"the reel script was unusable ({exc})"
+        )
+        return
+
+    try:
+        await actions.check_freshness(
+            page_uuid=page_uuid, topic=script.topic, animal=script.animal,
+            caption=script.caption, recent_captions=state.recent_captions,
+        )
+    except actions.ActionSkipped as skip:
+        outcome.decision = "do_nothing"
+        outcome.reason = str(skip)
+        outcome.note("reel rejected as a duplicate before rendering")
+        return
+
+    plan_id = await repo.create_plan(
+        page_uuid=page_uuid, run_id=run_id, content_type="reel",
+        topic=script.topic, animal=script.animal,
+        caption=actions.reel_caption(script), visual_prompt=script.hook_visual,
+        status="ready",
+    )
+
+    if str(settings_row.get("mode")) == "APPROVAL_REQUIRED":
+        await repo.set_plan_status(plan_id, "needs_review",
+                                   detail="waiting for approval")
+        outcome.reason = (f"{choice.reason} — reel scripted and waiting for "
+                          "approval (APPROVAL_REQUIRED mode)")
+        outcome.note("reel scripted; not rendered because approval is required")
+        return
+
+    await repo.set_run_state(run_id, "publishing")
+    try:
+        result = await actions.publish_reel(
+            page_uuid=page_uuid, ref=ref, settings=settings, run_id=run_id,
+            script=script,
+        )
+    except actions.ActionSkipped as skip:
+        await repo.set_plan_status(plan_id, "cancelled", detail=str(skip)[:500])
+        outcome.decision = "do_nothing"
+        outcome.reason = str(skip)
+        return
+    except GraphFailure as failure:
+        await repo.set_plan_status(plan_id, "failed", detail=failure.message[:500])
+        outcome.error = f"{failure.kind.value}: {failure.message}"
+        outcome.note(f"reel publishing failed ({failure.kind.value})")
+        return
+
+    await repo.set_run_state(run_id, "verifying")
+    await repo.set_plan_status(plan_id, "published",
+                               published_post_id=result.get("post_id"))
+    outcome.actions_taken += 1
+    outcome.note(
+        f"published a {script.format} reel ({result['fb_post_id']}, "
+        f"{result['seconds']:.0f}s; {result['hook_note']})"
+    )
 
 
 async def _handle_comments(

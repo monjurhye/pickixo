@@ -179,6 +179,32 @@ class Settings(BaseSettings):
     facebook_agent_max_feed_posts_per_day: int = 6
     facebook_agent_max_stories_per_day: int = 10
     facebook_agent_max_replies_per_hour: int = 30
+    facebook_agent_max_reels_per_day: int = 4
+
+    # --- reels --------------------------------------------------------------
+    # A reel is: an AI-written script, Piper narration, AI stills with slow
+    # zoom, burned-in captions — and optionally a short Wan clip up front,
+    # because the first seconds decide whether anyone stays.
+    #
+    # Everything except the hook runs on this machine and costs nothing. The
+    # hook is the one paid step, so it needs both a key and the flag; without
+    # either, reels are still made, with a still-image opening instead.
+    reel_voice_model: str = "./storage/voices/en_US-ryan-high.onnx"
+    reel_ffmpeg: str = "ffmpeg"
+    reel_hook_enabled: bool = False
+    # fal.ai. Silent 720p Wan 2.6 Flash is roughly $0.025/s, so a 5 s hook is
+    # about $0.13 — check fal's model page before changing model or resolution.
+    fal_key: str = ""
+    reel_hook_model: str = "wan/v2.6/image-to-video/flash"
+    reel_hook_resolution: str = "720p"
+    reel_hook_seconds: int = 5
+    # A queued fal job that has not finished in this long is abandoned and the
+    # reel falls back to a still opening. The spend may still happen.
+    reel_hook_timeout_seconds: int = 480
+
+    @property
+    def reel_hook_configured(self) -> bool:
+        return bool(self.reel_hook_enabled and self.fal_key)
 
     # --- storage ------------------------------------------------------------
     storage_root: str = "./storage"

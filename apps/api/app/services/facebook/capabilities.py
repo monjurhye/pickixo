@@ -78,6 +78,11 @@ def detect(
         # see developers.facebook.com/docs/page-stories-api/. They need the same
         # publishing permission and the CREATE_CONTENT task.
         "can_publish_stories": ({SCOPE_MANAGE_POSTS}, {TASK_CREATE_CONTENT}),
+        # Reels publishing (POST /{page-id}/video_reels) needs pages_show_list,
+        # pages_read_engagement and pages_manage_posts, per Meta's Reels
+        # Publishing API — the first two are what reading the Page already needs.
+        "can_publish_reels": ({SCOPE_SHOW_LIST, SCOPE_READ_ENGAGEMENT,
+                               SCOPE_MANAGE_POSTS}, {TASK_CREATE_CONTENT}),
         "can_manage_comments": ({SCOPE_MANAGE_ENGAGEMENT}, {TASK_MODERATE}),
         "can_read_insights": ({SCOPE_READ_INSIGHTS}, set()),
     }
@@ -117,6 +122,7 @@ def blocks_action(capabilities: dict[str, Any], action_type: str) -> str | None:
         "publish_text_post": "can_publish_posts",
         "publish_image_post": "can_publish_images",
         "publish_story": "can_publish_stories",
+        "publish_reel": "can_publish_reels",
         "reply_to_comment": "can_manage_comments",
         "reply_to_comments": "can_manage_comments",
         "fetch_insights": "can_read_insights",

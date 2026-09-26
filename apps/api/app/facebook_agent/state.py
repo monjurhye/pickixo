@@ -77,6 +77,7 @@ class TodayActivity:
     image_posts: int = 0
     text_posts: int = 0
     stories: int = 0
+    reels: int = 0
     comment_replies: int = 0
     replies_last_hour: int = 0
     minutes_since_feed_post: int | None = None
@@ -87,6 +88,11 @@ class TodayActivity:
     max_feed_posts: int = 2
     max_image_posts: int = 2
     max_stories: int = 5
+    #: Reels have their own budget, separate from max_feed_posts: they are the
+    #: Page's growth format, and each one costs minutes of rendering. Zero by
+    #: default — the observer fills in the Page's setting (2 unless changed),
+    #: and a state built without one should not be able to render a reel.
+    max_reels: int = 0
     max_replies_per_hour: int = 10
     #: Minimum gap between feed posts. Carried here so policies.py needs no
     #: database access and stays a pure function of the state.
@@ -186,20 +192,26 @@ class AgentState:
         the state object, so a field added later cannot reach a third-party
         model by accident.
         """
+        today: dict[str, Any] = {
+            "feed_posts": f"{self.today.feed_posts}/{self.today.max_feed_posts}",
+            "image_posts": f"{self.today.image_posts}/{self.today.max_image_posts}",
+            "stories": f"{self.today.stories}/{self.today.max_stories}",
+            "comment_replies_this_hour":
+                f"{self.today.replies_last_hour}/{self.today.max_replies_per_hour}",
+            "minutes_since_last_feed_post": self.today.minutes_since_feed_post,
+        }
+        # Only when reels are switched on. "0/0" tells the model nothing, and
+        # mentioning a format it cannot choose invites it to try.
+        if self.today.max_reels:
+            today["reels"] = f"{self.today.reels}/{self.today.max_reels}"
+
         return {
             "page": {
                 "name": self.page.name,
                 "followers": self.page.followers,
             },
             "now_utc": self.observed_at.strftime("%Y-%m-%d %H:%M"),
-            "today": {
-                "feed_posts": f"{self.today.feed_posts}/{self.today.max_feed_posts}",
-                "image_posts": f"{self.today.image_posts}/{self.today.max_image_posts}",
-                "stories": f"{self.today.stories}/{self.today.max_stories}",
-                "comment_replies_this_hour":
-                    f"{self.today.replies_last_hour}/{self.today.max_replies_per_hour}",
-                "minutes_since_last_feed_post": self.today.minutes_since_feed_post,
-            },
+            "today": today,
             "recent_posts": [
                 {
                     "minutes_ago": p.age_minutes,

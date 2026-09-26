@@ -107,6 +107,9 @@ async def status(user: CurrentUser, settings: SettingsDep) -> dict:
             "max_feed_posts_per_day": settings_row["max_feed_posts_per_day"],
             "max_image_posts_per_day": settings_row["max_image_posts_per_day"],
             "max_stories_per_day": settings_row["max_stories_per_day"],
+            # .get: absent until migration 020 is applied, and reels are off
+            # until then (see observer.observe).
+            "max_reels_per_day": settings_row.get("max_reels_per_day", 0),
             "max_comment_replies_per_hour": settings_row["max_comment_replies_per_hour"],
             "min_minutes_between_feed_posts": settings_row["min_minutes_between_feed_posts"],
         },
@@ -117,6 +120,7 @@ async def status(user: CurrentUser, settings: SettingsDep) -> dict:
             "feed_posts": int(activity.get("feed_posts") or 0),
             "image_posts": int(activity.get("image_posts") or 0),
             "stories": int(activity.get("stories") or 0),
+            "reels": int(activity.get("reels") or 0),
             "comment_replies": int(activity.get("comment_replies") or 0),
             "replies_last_hour": int(activity.get("replies_last_hour") or 0),
             "minutes_since_feed_post": activity.get("minutes_since_feed_post"),
@@ -327,6 +331,7 @@ async def update_settings(
         "max_feed_posts_per_day": settings.facebook_agent_max_feed_posts_per_day,
         "max_image_posts_per_day": settings.facebook_agent_max_feed_posts_per_day,
         "max_stories_per_day": settings.facebook_agent_max_stories_per_day,
+        "max_reels_per_day": settings.facebook_agent_max_reels_per_day,
         "max_comment_replies_per_hour": settings.facebook_agent_max_replies_per_hour,
     }
     for column, ceiling in ceilings.items():

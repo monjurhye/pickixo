@@ -63,12 +63,34 @@ class ParseDecision(unittest.TestCase):
         with self.assertRaises(DecisionParseError):
             parse_decision({"decision": "delete_the_page", "reason": "x"}, ALL)
 
-    def test_reels_cannot_be_chosen(self) -> None:
-        """Reels are a later phase. A model suggesting one must be refused."""
-        for reel in ("publish_reel", "generate_reel", "schedule_reel"):
-            with self.subTest(reel=reel):
+    def test_a_reel_is_chosen_only_when_offered(self) -> None:
+        """publish_reel is a real decision now — but only when the rules
+        offered it, and the made-up variants are still refused."""
+        chosen = parse_decision({"decision": "publish_reel", "reason": "x"}, ALL)
+        self.assertIs(chosen.decision, Decision.PUBLISH_REEL)
+        with self.assertRaises(DecisionParseError):
+            parse_decision({"decision": "publish_reel", "reason": "x"}, POSTING_ONLY)
+        for invented in ("generate_reel", "schedule_reel", "publish_video"):
+            with self.subTest(reel=invented):
                 with self.assertRaises(DecisionParseError):
-                    parse_decision({"decision": reel, "reason": "x"}, ALL)
+                    parse_decision({"decision": invented, "reason": "x"}, ALL)
+
+    def test_the_reel_step_appears_only_when_a_reel_is_allowed(self) -> None:
+        from datetime import datetime, timezone
+        from app.facebook_agent.decision import build_decision_prompt
+        from app.facebook_agent.state import (
+            AgentState, AutomationState, PageSnapshot, TodayActivity,
+        )
+        state = AgentState(
+            page=PageSnapshot(name="X", page_id="1"),
+            automation=AutomationState(enabled=True, mode="FULL_AUTO",
+                                       connection_status="connected"),
+            today=TodayActivity(),
+            observed_at=datetime.now(timezone.utc),
+        )
+        with_reel = build_decision_prompt(
+            state, frozenset({Decision.PUBLISH_REEL, Decision.DO_NOTHING}))
+        self.assertIn("If you choose publish_reel", with_reel)
 
     def test_a_decision_not_offered_is_refused(self) -> None:
         """The limits already ruled this out before the prompt was built."""

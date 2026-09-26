@@ -9,3 +9,5 @@ cryptography==44.0.0
 httpx==0.28.1
 python-multipart==0.0.20
 Pillow==11.1.0
+# Offline narration for Facebook reels (app/services/video/tts.py).
+piper-tts==1.8.0

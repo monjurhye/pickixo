@@ -338,6 +338,94 @@ class Validation(unittest.TestCase):
 
 
 # ===========================================================================
+# Reels: their own budget, the feed's spacing
+# ===========================================================================
+#: Feed and stories spent, so the only thing that could be offered is a reel.
+FEED_SPENT = {"feed_posts": 2, "max_feed_posts": 2, "image_posts": 2,
+              "stories": 5, "max_stories": 5}
+
+
+class Reels(unittest.TestCase):
+    def test_reel_offered_when_its_budget_is_free_even_if_feed_is_spent(self) -> None:
+        """Reels do not share the feed quota — that is the point of their own."""
+        state = make_state(today={**FEED_SPENT, "reels": 0, "max_reels": 2,
+                                  "minutes_since_feed_post": 400})
+        verdict = assess(state)
+        self.assertTrue(verdict.needs_reasoning)
+        self.assertIn(Decision.PUBLISH_REEL, verdict.allowed)
+        self.assertNotIn(Decision.PUBLISH_IMAGE_POST, verdict.allowed)
+        self.assertIn("0/2", verdict.reason)
+
+    def test_reel_budget_spent_costs_no_ai(self) -> None:
+        state = make_state(today={**FEED_SPENT, "reels": 2, "max_reels": 2,
+                                  "minutes_since_feed_post": 400})
+        verdict = assess(state)
+        self.assertIs(verdict.decision, Decision.DO_NOTHING)
+        self.assertFalse(verdict.needs_reasoning)
+        self.assertIn("reels 2/2", verdict.reason)
+
+    def test_reel_respects_feed_spacing(self) -> None:
+        """A reel is a feed item; one right after a post buries one of them."""
+        state = make_state(today={**FEED_SPENT, "reels": 0, "max_reels": 2,
+                                  "minutes_since_feed_post": 30,
+                                  "min_minutes_between_feed_posts": 180})
+        verdict = assess(state)
+        self.assertIs(verdict.decision, Decision.DO_NOTHING)
+        self.assertFalse(verdict.needs_reasoning)
+        self.assertIn("30 minutes", verdict.reason)
+
+    def test_zero_reel_budget_means_no_reels(self) -> None:
+        """Zero is the off switch, and the default before migration 020."""
+        state = make_state(today={"feed_posts": 0, "minutes_since_feed_post": 400,
+                                  "reels": 0, "max_reels": 0})
+        self.assertNotIn(Decision.PUBLISH_REEL, assess(state).allowed)
+
+    def test_reel_needs_its_capability(self) -> None:
+        no_reels = caps.detect(
+            granted_scopes=[s for s in caps.REQUESTED_SCOPES
+                            if s != caps.SCOPE_SHOW_LIST],
+            page_tasks=["CREATE_CONTENT", "MODERATE"],
+        )
+        self.assertFalse(no_reels["can_publish_reels"])
+        state = make_state(capabilities=no_reels,
+                           today={**FEED_SPENT, "reels": 0, "max_reels": 2,
+                                  "minutes_since_feed_post": 400})
+        self.assertNotIn(Decision.PUBLISH_REEL, assess(state).allowed)
+
+    def test_engaging_post_holds_back_a_reel_too(self) -> None:
+        state = make_state(
+            today={**FEED_SPENT, "reels": 0, "max_reels": 2,
+                   "minutes_since_feed_post": 200},
+            recent_posts=[post(30, engagement=25)],
+        )
+        verdict = assess(state)
+        self.assertIs(verdict.decision, Decision.DO_NOTHING)
+        self.assertIn("bury", verdict.reason)
+
+    def test_validate_refuses_a_reel_past_its_limit(self) -> None:
+        """A decision made before a concurrent run published is re-checked."""
+        allowed = frozenset({Decision.PUBLISH_REEL, Decision.DO_NOTHING})
+        state = make_state(today={"reels": 2, "max_reels": 2,
+                                  "minutes_since_feed_post": 400})
+        refusal = validate(Decision.PUBLISH_REEL, state, allowed)
+        self.assertIsNotNone(refusal)
+        self.assertIn("2/2", refusal)
+
+    def test_validate_refuses_a_reel_inside_spacing(self) -> None:
+        allowed = frozenset({Decision.PUBLISH_REEL})
+        state = make_state(today={"reels": 0, "max_reels": 2,
+                                  "minutes_since_feed_post": 10,
+                                  "min_minutes_between_feed_posts": 180})
+        self.assertIsNotNone(validate(Decision.PUBLISH_REEL, state, allowed))
+
+    def test_validate_allows_a_reel_within_limits(self) -> None:
+        allowed = frozenset({Decision.PUBLISH_REEL})
+        state = make_state(today={**FEED_SPENT, "reels": 1, "max_reels": 2,
+                                  "minutes_since_feed_post": 400})
+        self.assertIsNone(validate(Decision.PUBLISH_REEL, state, allowed))
+
+
+# ===========================================================================
 # The state object must never carry a credential
 # ===========================================================================
 class NoSecrets(unittest.TestCase):
@@ -356,10 +444,38 @@ class NoSecrets(unittest.TestCase):
         for forbidden in ("access_token", "appsecret", "secret", "bearer"):
             self.assertNotIn(forbidden, blob)
 
-    def test_reels_are_not_a_possible_decision(self) -> None:
-        """Reels are a later phase; the enum is what keeps them out."""
+    def test_decisions_match_the_database_check(self) -> None:
+        """The enum and the decisions CHECK are the same list.
+
+        Two gates guard the dispatcher: this enum, and the CHECK constraint on
+        facebook_agent_decisions. A decision in the enum but not the CHECK
+        fails every run that picks it; one in the CHECK but not the enum is a
+        door nobody meant to open. Read from the newest migration that
+        redefines the constraint, so the test moves with the schema.
+        """
+        import re
+        schema = pathlib.Path(__file__).resolve().parents[3] / "database" / "schema"
+        definitions = []
+        for path in sorted(schema.glob("*.sql")):
+            text = path.read_text(encoding="utf-8")
+            definitions += re.findall(
+                r"facebook_agent_decisions_decision_check\s+CHECK\s*\(decision IN\s*\(([^)]*)\)",
+                text,
+            )
+            definitions += re.findall(
+                r"CREATE TABLE IF NOT EXISTS facebook_agent_decisions.*?"
+                r"CHECK \(decision IN \(([^)]*)\)", text, re.S,
+            )
+        self.assertTrue(definitions, "no decisions CHECK found in the schema")
+        # Files are read in numeric order, and within 020 the ALTER comes
+        # after nothing else, so the last match is the one in force.
+        in_database = set(re.findall(r"'([a-z_]+)'", definitions[-1]))
+        self.assertEqual({d.value for d in Decision}, in_database)
+
+    def test_unsupported_media_is_not_a_possible_decision(self) -> None:
         values = {d.value for d in Decision}
-        for forbidden in ("publish_reel", "generate_reel", "schedule_reel"):
+        for forbidden in ("publish_video", "generate_reel", "schedule_reel",
+                          "publish_live"):
             self.assertNotIn(forbidden, values)
 
 

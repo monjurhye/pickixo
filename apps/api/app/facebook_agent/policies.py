@@ -26,17 +26,17 @@ from .state import AgentState
 
 
 class Decision(str, Enum):
-    """Everything the agent is allowed to decide in this phase.
+    """Everything the agent is allowed to decide.
 
-    Reels are deliberately absent. They are a later phase, and leaving them out
-    of the enum means a model that suggests one produces an invalid decision
-    that is rejected, rather than reaching an action dispatcher that might try.
+    Anything not in this enum — a model suggesting "publish_video", say — is an
+    invalid decision and is rejected before it can reach the dispatcher.
     """
     DO_NOTHING = "do_nothing"
     WAIT = "wait"
     PUBLISH_TEXT_POST = "publish_text_post"
     PUBLISH_IMAGE_POST = "publish_image_post"
     PUBLISH_STORY = "publish_story"
+    PUBLISH_REEL = "publish_reel"
     REPLY_TO_COMMENTS = "reply_to_comments"
     FLAG_FOR_REVIEW = "flag_for_review"
 
@@ -46,6 +46,7 @@ PUBLISHING_DECISIONS = frozenset({
     Decision.PUBLISH_TEXT_POST,
     Decision.PUBLISH_IMAGE_POST,
     Decision.PUBLISH_STORY,
+    Decision.PUBLISH_REEL,
 })
 
 
@@ -102,8 +103,9 @@ def assess(state: AgentState) -> Verdict:
     can_post_text = caps.blocks_action(automation.capabilities, "publish_text_post") is None
     can_post_image = caps.blocks_action(automation.capabilities, "publish_image_post") is None
     can_story = caps.blocks_action(automation.capabilities, "publish_story") is None
+    can_reel = caps.blocks_action(automation.capabilities, "publish_reel") is None
 
-    if not any((can_reply, can_post_text, can_post_image, can_story)):
+    if not any((can_reply, can_post_text, can_post_image, can_story, can_reel)):
         return Verdict(
             Decision.FLAG_FOR_REVIEW,
             "this connection has no publishing or moderation permissions",
@@ -151,15 +153,24 @@ def assess(state: AgentState) -> Verdict:
         can_story and story_quota_left and story_spacing_ok
         and not _cooling_down(state, "publish_story")
     )
+    # A reel is a feed item, so it shares the feed spacing; it has its own
+    # daily budget, so it does not share the feed quota.
+    reel_quota_left = today.reels < today.max_reels
+    can_publish_reel = (
+        can_reel and reel_quota_left and spacing_ok
+        and not _cooling_down(state, "publish_reel")
+    )
 
     # --- nothing to do ----------------------------------------------------
     #
     # The single most common outcome, and it must cost nothing. No model call,
     # no Graph call beyond what the observer already did.
-    if not comments_actionable and not can_publish_feed and not can_publish_story:
+    if (not comments_actionable and not can_publish_feed
+            and not can_publish_story and not can_publish_reel):
         return Verdict(Decision.DO_NOTHING, _why_nothing(
             state, pending_comments, can_reply, replies_available,
             feed_quota_left, spacing_ok, reply_cooldown or post_cooldown,
+            reel_quota_left,
         ))
 
     # --- a recent post that is still working ------------------------------
@@ -167,7 +178,8 @@ def assess(state: AgentState) -> Verdict:
     # Deterministic because it needs no judgement: something published in the
     # last hour that is collecting engagement is a reason not to publish over
     # it. Comments are still handled — that is not "posting over" anything.
-    if can_publish_feed and not comments_actionable and state.engagement_still_active:
+    if ((can_publish_feed or can_publish_reel) and not comments_actionable
+            and state.engagement_still_active):
         last = state.last_post
         return Verdict(
             Decision.DO_NOTHING,
@@ -186,17 +198,21 @@ def assess(state: AgentState) -> Verdict:
         allowed.add(Decision.PUBLISH_IMAGE_POST)
     if can_publish_story:
         allowed.add(Decision.PUBLISH_STORY)
+    if can_publish_reel:
+        allowed.add(Decision.PUBLISH_REEL)
     allowed.add(Decision.FLAG_FOR_REVIEW)
 
     parts = []
     if comments_actionable:
         parts.append(f"{len(pending_comments)} unanswered comment(s)")
-    if can_publish_feed:
+    if can_publish_feed or can_publish_reel:
         since = today.minutes_since_feed_post
         parts.append(
             "no feed post yet today" if since is None
             else f"{since} minutes since the last feed post"
         )
+    if can_publish_reel:
+        parts.append(f"reels today {today.reels}/{today.max_reels}")
     if can_publish_story:
         parts.append("story slots available")
 
@@ -221,6 +237,7 @@ def _why_nothing(
     feed_quota_left: bool,
     spacing_ok: bool,
     cooling: datetime | None,
+    reel_quota_left: bool = False,
 ) -> str:
     """A specific reason, not "nothing to do".
 
@@ -244,10 +261,13 @@ def _why_nothing(
             f"reached ({state.today.replies_last_hour}/"
             f"{state.today.max_replies_per_hour})"
         )
-    if not feed_quota_left:
+    if not feed_quota_left and not (reel_quota_left and not spacing_ok):
+        reels = ""
+        if state.today.max_reels:
+            reels = f", reels {state.today.reels}/{state.today.max_reels}"
         return (
             f"daily post limit reached ({state.today.feed_posts}/"
-            f"{state.today.max_feed_posts}) and no comments need a reply"
+            f"{state.today.max_feed_posts}{reels}) and no comments need a reply"
         )
     if (state.today.minutes_since_story is not None
             and state.today.minutes_since_story
@@ -290,6 +310,13 @@ def validate(decision: Decision, state: AgentState, allowed: frozenset[Decision]
         if decision is Decision.PUBLISH_STORY:
             if today.stories >= today.max_stories:
                 return f"story limit reached ({today.stories}/{today.max_stories})"
+        elif decision is Decision.PUBLISH_REEL:
+            if today.reels >= today.max_reels:
+                return f"daily reel limit reached ({today.reels}/{today.max_reels})"
+            if (today.minutes_since_feed_post is not None
+                    and today.minutes_since_feed_post < _min_spacing(state)):
+                return (f"only {today.minutes_since_feed_post} minutes since the "
+                        f"last post")
         else:
             if today.feed_posts >= today.max_feed_posts:
                 return (f"daily post limit reached "

@@ -19,6 +19,7 @@ export interface Capabilities {
   can_publish_posts?: boolean;
   can_publish_images?: boolean;
   can_publish_stories?: boolean;
+  can_publish_reels?: boolean;
   can_manage_comments?: boolean;
   can_read_insights?: boolean;
   /** Why each false capability is false, naming the exact missing permission. */
@@ -51,6 +52,7 @@ export interface AgentStatus {
       max_feed_posts_per_day: number;
       max_image_posts_per_day: number;
       max_stories_per_day: number;
+      max_reels_per_day: number;
       max_comment_replies_per_hour: number;
       min_minutes_between_feed_posts: number;
     };
@@ -61,6 +63,7 @@ export interface AgentStatus {
       feed_posts: number;
       image_posts: number;
       stories: number;
+      reels: number;
       comment_replies: number;
       replies_last_hour: number;
       minutes_since_feed_post: number | null;
@@ -159,6 +162,7 @@ export const CAPABILITY_LABELS: Record<string, string> = {
   can_publish_posts: 'Publish posts',
   can_publish_images: 'Publish images',
   can_publish_stories: 'Publish stories',
+  can_publish_reels: 'Publish reels',
   can_manage_comments: 'Reply to comments',
   can_read_insights: 'Read insights',
 };
