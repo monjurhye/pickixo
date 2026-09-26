@@ -18,7 +18,7 @@ limit is spent must not be able to publish anything.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from enum import Enum
 
 from ..services.facebook import capabilities as caps
@@ -188,6 +188,24 @@ def assess(state: AgentState) -> Verdict:
             "would bury it",
         )
 
+    # --- the model already said not now ------------------------------------
+    #
+    # Its answer stands until the pause runs out, unless something arrived
+    # that it has not seen: a comment newer than the decision. Anything else —
+    # a free story slot, spacing that has just elapsed — is exactly the
+    # situation it already judged.
+    until = pause_until(state)
+    if until is not None:
+        decided_at = state.model_pause.decided_at
+        news = [c for c in pending_comments if c.created_time > decided_at]
+        if not (news and comments_actionable):
+            return Verdict(
+                Decision.DO_NOTHING,
+                f"the agent decided at {decided_at:%H:%M} UTC to "
+                f"{'wait' if state.model_pause.decision == 'wait' else 'hold off'}; "
+                f"not asking again until {until:%H:%M} UTC",
+            )
+
     # --- genuine judgement required ---------------------------------------
     allowed: set[Decision] = {Decision.DO_NOTHING, Decision.WAIT}
     if comments_actionable:
@@ -222,6 +240,32 @@ def assess(state: AgentState) -> Verdict:
         needs_reasoning=True,
         allowed=frozenset(allowed),
     )
+
+
+#: How long the model's "not now" stands. "do_nothing" carries no duration, so
+#: it gets the default; "wait" gets what the model asked for, within bounds —
+#: under ten minutes is the tick asking again, over four hours is a Page that
+#: goes quiet for the afternoon on one call.
+DEFAULT_PAUSE_MINUTES = 30
+MIN_PAUSE_MINUTES = 10
+MAX_PAUSE_MINUTES = 240
+
+
+def pause_until(state: AgentState, now: datetime | None = None) -> datetime | None:
+    """When the model's last "not now" expires, or None if it has.
+
+    A pure function of the state, like everything else in this module, so
+    the pause is tested without a database or a clock.
+    """
+    pause = state.model_pause
+    if pause is None or pause.decision not in {"wait", "do_nothing"}:
+        return None
+    if pause.decision == "wait" and pause.wait_minutes:
+        minutes = max(MIN_PAUSE_MINUTES, min(pause.wait_minutes, MAX_PAUSE_MINUTES))
+    else:
+        minutes = DEFAULT_PAUSE_MINUTES
+    until = pause.decided_at + timedelta(minutes=minutes)
+    return until if until > (now or datetime.now(timezone.utc)) else None
 
 
 def _min_spacing(state: AgentState) -> int:

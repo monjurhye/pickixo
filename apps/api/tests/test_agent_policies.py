@@ -24,11 +24,12 @@ from datetime import datetime, timedelta, timezone
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 
 from app.facebook_agent.policies import (  # noqa: E402
-    Decision, assess, validate,
+    DEFAULT_PAUSE_MINUTES, MAX_PAUSE_MINUTES, MIN_PAUSE_MINUTES, Decision,
+    assess, pause_until, validate,
 )
 from app.facebook_agent.state import (  # noqa: E402
-    AgentState, AutomationState, CommentSnapshot, PageSnapshot, PostSnapshot,
-    TodayActivity,
+    AgentState, AutomationState, CommentSnapshot, ModelPause, PageSnapshot,
+    PostSnapshot, TodayActivity,
 )
 from app.services.facebook import capabilities as caps  # noqa: E402
 
@@ -423,6 +424,96 @@ class Reels(unittest.TestCase):
         state = make_state(today={**FEED_SPENT, "reels": 1, "max_reels": 2,
                                   "minutes_since_feed_post": 400})
         self.assertIsNone(validate(Decision.PUBLISH_REEL, state, allowed))
+
+
+# ===========================================================================
+# "Wait" means wait
+# ===========================================================================
+#: Nothing published, a story slot free: the situation that used to buy a
+#: reasoning call on every five-minute tick for as long as the model declined.
+OPEN_SLOT = {"feed_posts": 0, "minutes_since_feed_post": 400,
+             "stories": 0, "max_stories": 5, "minutes_since_story": None}
+
+
+def paused(decision: str, minutes_ago: int, wait_minutes: int | None = None):
+    return ModelPause(decision=decision,
+                      decided_at=now() - timedelta(minutes=minutes_ago),
+                      wait_minutes=wait_minutes)
+
+
+class ModelPauses(unittest.TestCase):
+    def test_without_a_pause_the_open_slot_needs_reasoning(self) -> None:
+        """The baseline the pause is measured against."""
+        self.assertTrue(assess(make_state(today=OPEN_SLOT)).needs_reasoning)
+
+    def test_do_nothing_holds_for_the_default(self) -> None:
+        state = make_state(today=OPEN_SLOT, model_pause=paused("do_nothing", 5))
+        verdict = assess(state)
+        self.assertIs(verdict.decision, Decision.DO_NOTHING)
+        self.assertFalse(verdict.needs_reasoning, "no second call for the same question")
+        self.assertIn("not asking again until", verdict.reason)
+
+    def test_do_nothing_expires(self) -> None:
+        state = make_state(today=OPEN_SLOT,
+                           model_pause=paused("do_nothing", DEFAULT_PAUSE_MINUTES + 1))
+        self.assertTrue(assess(state).needs_reasoning)
+
+    def test_wait_uses_the_models_own_duration(self) -> None:
+        held = make_state(today=OPEN_SLOT, model_pause=paused("wait", 50, wait_minutes=60))
+        self.assertFalse(assess(held).needs_reasoning)
+        over = make_state(today=OPEN_SLOT, model_pause=paused("wait", 61, wait_minutes=60))
+        self.assertTrue(assess(over).needs_reasoning)
+
+    def test_wait_duration_is_bounded(self) -> None:
+        now_ = now()
+        short = make_state(model_pause=paused("wait", 0, wait_minutes=1))
+        self.assertAlmostEqual(
+            (pause_until(short, now_) - short.model_pause.decided_at).total_seconds(),
+            MIN_PAUSE_MINUTES * 60, delta=1)
+        long = make_state(model_pause=paused("wait", 0, wait_minutes=10_000))
+        self.assertAlmostEqual(
+            (pause_until(long, now_) - long.model_pause.decided_at).total_seconds(),
+            MAX_PAUSE_MINUTES * 60, delta=1)
+
+    def test_a_publishing_decision_is_not_a_pause(self) -> None:
+        state = make_state(today=OPEN_SLOT,
+                           model_pause=paused("publish_image_post", 2))
+        self.assertIsNone(pause_until(state))
+        self.assertTrue(assess(state).needs_reasoning)
+
+    def test_a_new_comment_breaks_the_pause(self) -> None:
+        """The model cannot have weighed a comment that arrived after it spoke."""
+        state = make_state(today=OPEN_SLOT, model_pause=paused("do_nothing", 20),
+                           unanswered_comments=[comment(5)])
+        verdict = assess(state)
+        self.assertTrue(verdict.needs_reasoning)
+        self.assertIn(Decision.REPLY_TO_COMMENTS, verdict.allowed)
+
+    def test_a_comment_it_already_saw_does_not(self) -> None:
+        state = make_state(today=OPEN_SLOT, model_pause=paused("do_nothing", 5),
+                           unanswered_comments=[comment(20)])
+        self.assertFalse(assess(state).needs_reasoning)
+
+    def test_hard_stops_still_come_first(self) -> None:
+        state = make_state(emergency_stopped=True, model_pause=paused("wait", 1, 60))
+        self.assertIn("emergency", assess(state).reason.lower())
+
+    def test_a_days_worth_of_ticks_costs_little(self) -> None:
+        """The number this exists for. Tick every five minutes for a day with
+        a model that always declines: at most one call per default pause."""
+        calls = 0
+        pause = None
+        start = now() - timedelta(hours=24)
+        for tick in range(288):
+            moment = start + timedelta(minutes=5 * tick)
+            state = make_state(today=OPEN_SLOT, model_pause=pause)
+            state.model_pause = pause
+            until = pause_until(state, moment)
+            if until is None:
+                calls += 1
+                pause = ModelPause("do_nothing", moment)
+        self.assertLessEqual(calls, 24 * 60 // DEFAULT_PAUSE_MINUTES + 1)
+        self.assertGreater(calls, 0)
 
 
 # ===========================================================================

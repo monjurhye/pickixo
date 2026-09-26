@@ -31,7 +31,7 @@ from ..services.facebook.errors import FailureKind, GraphFailure
 from . import repository as repo
 from .memory import extract_subject
 from .state import (
-    AgentState, AutomationState, CommentSnapshot, PageSnapshot,
+    AgentState, AutomationState, CommentSnapshot, ModelPause, PageSnapshot,
     PerformanceSummary, PostSnapshot, TodayActivity,
 )
 
@@ -239,6 +239,7 @@ async def observe(
     posts = await repo.recent_posts(page_uuid, limit=15)
     pending = await repo.pending_comments(page_uuid, limit=25)
     cooling = await repo.cooldowns(page_uuid)
+    model_pause = _model_pause(await repo.last_model_decision(page_uuid))
 
     diversity_days = int(settings_row.get("diversity_days") or 14)
     topics = await repo.recent_memory(page_uuid, "topic", days=diversity_days)
@@ -324,6 +325,7 @@ async def observe(
         recent_captions=captions,
         performance=performance,
         cooling_down=cooling,
+        model_pause=model_pause,
     )
 
 
@@ -391,6 +393,24 @@ def _engagement(post: dict) -> dict[str, int]:
         "comments": summary_count("comments"),
         "shares": int(shares.get("count") or 0),
     }
+
+
+def _model_pause(row: dict | None) -> ModelPause | None:
+    """The model's last decision, if it was a decision not to act."""
+    if not row or row.get("decision") not in {"wait", "do_nothing"}:
+        return None
+    decided_at = row.get("created_at")
+    if not isinstance(decided_at, datetime):
+        return None
+    if decided_at.tzinfo is None:
+        decided_at = decided_at.replace(tzinfo=timezone.utc)
+    payload = row.get("payload") or {}
+    try:
+        minutes = int(payload.get("wait_minutes")) if payload.get("wait_minutes") else None
+    except (TypeError, ValueError):
+        minutes = None
+    return ModelPause(decision=str(row["decision"]), decided_at=decided_at,
+                      wait_minutes=minutes)
 
 
 def _attachment_target(post: dict) -> str | None:

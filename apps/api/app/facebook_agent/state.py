@@ -137,6 +137,19 @@ class PerformanceSummary:
 
 
 @dataclass(slots=True)
+class ModelPause:
+    """The reasoning model's last answer, when that answer was not to act.
+
+    Kept so the next wake can honour it. Without this, "wait an hour" meant
+    "ask me again in five minutes" — the scheduler's tick — and a Page with a
+    free story slot asked the model the same question 288 times a day.
+    """
+    decision: str               # "wait" or "do_nothing"
+    decided_at: datetime
+    wait_minutes: int | None = None
+
+
+@dataclass(slots=True)
 class AgentState:
     """Everything the agent knows when it decides."""
     page: PageSnapshot
@@ -151,6 +164,8 @@ class AgentState:
     #: Action types currently backed off after a rate limit, with the time they
     #: may be tried again.
     cooling_down: dict[str, datetime] = field(default_factory=dict)
+    #: Set when the model's most recent decision was to wait or do nothing.
+    model_pause: ModelPause | None = None
     observed_at: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
 
     # -- derived, used by the deterministic pass ---------------------------

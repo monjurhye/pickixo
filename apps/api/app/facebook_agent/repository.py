@@ -198,6 +198,26 @@ async def activity_today(page_uuid: str) -> dict:
     return row or {}
 
 
+async def last_model_decision(page_uuid: str) -> dict | None:
+    """The reasoning model's most recent decision for this Page.
+
+    Only model-sourced rows: a rule's "do nothing" (limit reached, spacing)
+    is recomputed every wake and must not be mistaken for the model choosing
+    to wait. Includes the "could not think" rows the agent records when no
+    provider answers, so a dead provider is also not asked every five minutes.
+    """
+    return await db.fetch_one(
+        """
+        SELECT decision, created_at, payload
+          FROM facebook_agent_decisions
+         WHERE page_id = %s AND source = 'model'
+         ORDER BY created_at DESC
+         LIMIT 1
+        """,
+        (page_uuid,),
+    )
+
+
 async def may_act(page_uuid: str, action_type: str) -> tuple[bool, str]:
     row = await db.fetch_one(
         "SELECT allowed, reason FROM agent_may_act(%s, %s)", (page_uuid, action_type)
