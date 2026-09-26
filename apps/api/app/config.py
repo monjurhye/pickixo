@@ -62,6 +62,14 @@ class Settings(BaseSettings):
     login_max_attempts: int = 8
     login_lockout_seconds: int = 900
 
+    # --- pickbot ------------------------------------------------------------
+    # Absolute paths to the snapshot the bot writes and to the wrapper script the
+    # Run button invokes. Either one empty disables that half: the product then
+    # reports itself unconfigured instead of looking broken, and cannot be run
+    # from the browser at all.
+    pickbot_snapshot_path: str = ""
+    pickbot_command: str = ""
+
     # --- google sign-in -----------------------------------------------------
     # Ships empty and therefore disabled. The sign-in page hides the Google
     # button when these are absent rather than showing a button that fails.

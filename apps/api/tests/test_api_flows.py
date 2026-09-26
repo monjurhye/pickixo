@@ -482,6 +482,40 @@ class MyApps(unittest.TestCase):
         self.assertEqual(recent[0]["app"]["slug"], "ai-chat")
 
 
+class Pickbot(unittest.TestCase):
+    """Who may make this machine spawn a trading process.
+
+    Only the refusals are tested, and deliberately so: a successful POST to
+    /markets/pickbot/run starts a real pass against the real market, which is
+    not something a test suite should do on its way past. The property worth
+    protecting is the boundary — reading needs a session, running needs an
+    admin — and every case below stops at the door.
+    """
+
+    def test_reading_the_snapshot_requires_a_session(self) -> None:
+        status, _ = Client().get("/markets/pickbot")
+        self.assertEqual(status, 401, "the snapshot was readable signed out")
+
+    def test_running_requires_a_session(self) -> None:
+        anonymous = Client()
+        for action in ("run", "resume"):
+            status, _ = anonymous.post(f"/markets/pickbot/{action}")
+            self.assertEqual(
+                status, 401, f"/markets/pickbot/{action} was reachable signed out",
+            )
+
+    def test_running_is_refused_to_an_ordinary_account(self) -> None:
+        member = Client()
+        member.sign_up(unique_email("pickbot"))
+        for action in ("run", "resume"):
+            status, body = member.post(f"/markets/pickbot/{action}", auth=True)
+            self.assertEqual(
+                status, 403,
+                f"a signed-in non-admin could invoke /markets/pickbot/{action}",
+            )
+            self.assertEqual(body["error"]["code"], "forbidden")
+
+
 class Quota(unittest.TestCase):
     def test_guest_and_signed_in_allowances_are_separate(self) -> None:
         guest = Client()

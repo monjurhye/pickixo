@@ -39,7 +39,7 @@ from . import db
 from .config import get_settings
 from .errors import AppError, ErrorCode
 from .logging_config import configure_logging, get_logger
-from .routers import admin, ai, apps, auth, facebook, health, me, tools
+from .routers import admin, ai, apps, auth, facebook, health, markets, me, tools
 from .services import ai as ai_service
 
 settings = get_settings()
@@ -181,6 +181,7 @@ app.include_router(me.router, prefix=prefix)
 app.include_router(apps.router, prefix=prefix)
 app.include_router(ai.router, prefix=prefix)
 app.include_router(tools.router, prefix=prefix)
+app.include_router(markets.router, prefix=prefix)
 app.include_router(facebook.router, prefix=prefix)
 app.include_router(admin.router, prefix=prefix)
 
