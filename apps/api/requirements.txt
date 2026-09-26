@@ -13,3 +13,6 @@ Pillow==11.1.0
 piper-tts==1.8.0
 # Paid fallback text provider (app/providers/text/anthropic_provider.py).
 anthropic==1.8.0
+# IANA time zones for zoneinfo; Windows has none of its own. The Facebook
+# agent reads its posting hours on the audience's clock (facebook_agent/state.py).
+tzdata==2026.3

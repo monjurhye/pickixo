@@ -264,6 +264,11 @@ async def observe(
         minutes_since_story=await _minutes_since_story(page_uuid),
         max_feed_posts=int(settings_row.get("max_feed_posts_per_day") or 2),
         max_image_posts=int(settings_row.get("max_image_posts_per_day") or 2),
+        # `is not None` for the same reason as reels below: zero switches text
+        # posts off. Absent before migration 021; one is what 021 defaults to.
+        max_text_posts=(int(settings_row["max_text_posts_per_day"])
+                        if settings_row.get("max_text_posts_per_day") is not None
+                        else 1),
         max_stories=int(settings_row.get("max_stories_per_day") or 5),
         # `is not None` rather than `or 2`: zero is how the owner switches
         # reels off, and `or` would quietly turn it back into two. A missing
@@ -275,6 +280,11 @@ async def observe(
         min_minutes_between_feed_posts=int(
             settings_row.get("min_minutes_between_feed_posts") or 180
         ),
+        posting_timezone=str(settings_row.get("posting_timezone") or "UTC"),
+        posting_hours=tuple(sorted(
+            int(h) for h in (settings_row.get("preferred_hours") or [])
+            if 0 <= int(h) <= 23
+        )),
     )
 
     return AgentState(

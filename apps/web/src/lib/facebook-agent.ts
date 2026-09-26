@@ -51,17 +51,23 @@ export interface AgentStatus {
     limits: {
       max_feed_posts_per_day: number;
       max_image_posts_per_day: number;
+      max_text_posts_per_day: number;
       max_stories_per_day: number;
       max_reels_per_day: number;
       max_comment_replies_per_hour: number;
       min_minutes_between_feed_posts: number;
     };
+    /** IANA zone the day and preferred_hours are read in. */
+    posting_timezone: string;
+    /** Hours (0-23) publishing may happen in; empty means any hour. */
+    preferred_hours: number[];
     content_mix: { text: number; image: number; story: number };
     comment_reply_confidence: number;
     diversity_days: number;
     today: {
       feed_posts: number;
       image_posts: number;
+      text_posts: number;
       stories: number;
       reels: number;
       comment_replies: number;

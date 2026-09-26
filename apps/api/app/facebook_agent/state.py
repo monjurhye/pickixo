@@ -18,6 +18,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field, asdict
 from datetime import datetime, timezone
 from typing import Any
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 
 @dataclass(slots=True)
@@ -87,6 +88,10 @@ class TodayActivity:
     #: "1 of 2" rather than a bare number it has to look the limit up for.
     max_feed_posts: int = 2
     max_image_posts: int = 2
+    #: Text posts have their own budget inside max_feed_posts, so that a text
+    #: post can never take a quiz's place: with a feed budget of three, two
+    #: quizzes and one text post is the only way to spend it.
+    max_text_posts: int = 1
     max_stories: int = 5
     #: Reels have their own budget, separate from max_feed_posts: they are the
     #: Page's growth format, and each one costs minutes of rendering. Zero by
@@ -102,6 +107,11 @@ class TodayActivity:
     #: would make the cheap pass hand over to the reasoning model on virtually
     #: every wake, which is exactly the cost the cheap pass exists to avoid.
     min_minutes_between_stories: int = 120
+    #: The audience's clock. "Today" and posting_hours are both read on it.
+    posting_timezone: str = "UTC"
+    #: Hours (0-23, in posting_timezone) publishing may happen in. Empty means
+    #: any hour. Comment replies are never held back by it.
+    posting_hours: tuple[int, ...] = ()
 
 
 @dataclass(slots=True)
@@ -179,6 +189,36 @@ class AgentState:
         return post.age_minutes if post else None
 
     @property
+    def local_now(self) -> datetime:
+        """The observation time on the audience's clock."""
+        try:
+            zone = ZoneInfo(self.today.posting_timezone)
+        except (ZoneInfoNotFoundError, ValueError):
+            zone = timezone.utc
+        return self.observed_at.astimezone(zone)
+
+    @property
+    def in_posting_hours(self) -> bool:
+        hours = self.today.posting_hours
+        return not hours or self.local_now.hour in hours
+
+    @property
+    def posting_hours_left(self) -> float | None:
+        """Hours of today's posting window still to come, or None if unbounded.
+
+        What the model needs to pace the day: three posts left and two hours
+        to go is a different decision from three left and ten to go.
+        """
+        hours = self.today.posting_hours
+        if not hours:
+            return None
+        local = self.local_now
+        left = sum(1 for h in set(hours) if h > local.hour)
+        if local.hour in hours:
+            left += (60 - local.minute) / 60
+        return round(left, 1)
+
+    @property
     def has_unanswered_comments(self) -> bool:
         return bool(self.unanswered_comments)
 
@@ -209,7 +249,8 @@ class AgentState:
         """
         today: dict[str, Any] = {
             "feed_posts": f"{self.today.feed_posts}/{self.today.max_feed_posts}",
-            "image_posts": f"{self.today.image_posts}/{self.today.max_image_posts}",
+            "quizzes": f"{self.today.image_posts}/{self.today.max_image_posts}",
+            "text_posts": f"{self.today.text_posts}/{self.today.max_text_posts}",
             "stories": f"{self.today.stories}/{self.today.max_stories}",
             "comment_replies_this_hour":
                 f"{self.today.replies_last_hour}/{self.today.max_replies_per_hour}",
@@ -226,6 +267,8 @@ class AgentState:
                 "followers": self.page.followers,
             },
             "now_utc": self.observed_at.strftime("%Y-%m-%d %H:%M"),
+            "now_audience_local": self.local_now.strftime("%Y-%m-%d %H:%M %Z"),
+            "posting_hours_left_today": self.posting_hours_left,
             "today": today,
             "recent_posts": [
                 {

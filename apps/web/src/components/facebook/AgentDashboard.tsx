@@ -209,13 +209,15 @@ export function AgentDashboard() {
       </section>
 
       {/* --- today -------------------------------------------------------- */}
-      <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+      <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
         <Meter label="Reels today" used={agent.today.reels}
                max={agent.limits.max_reels_per_day} />
         <Meter label="Posts today" used={agent.today.feed_posts}
                max={agent.limits.max_feed_posts_per_day} />
-        <Meter label="Images" used={agent.today.image_posts}
+        <Meter label="Quizzes" used={agent.today.image_posts}
                max={agent.limits.max_image_posts_per_day} />
+        <Meter label="Text posts" used={agent.today.text_posts}
+               max={agent.limits.max_text_posts_per_day} />
         <Meter label="Stories" used={agent.today.stories}
                max={agent.limits.max_stories_per_day} />
         <Meter label="Replies this hour" used={agent.today.replies_last_hour}
@@ -428,6 +430,7 @@ function AgentSettings({ agent, busy, onSave }: {
     mode: agent.mode,
     max_feed_posts_per_day: agent.limits.max_feed_posts_per_day,
     max_image_posts_per_day: agent.limits.max_image_posts_per_day,
+    max_text_posts_per_day: agent.limits.max_text_posts_per_day,
     max_stories_per_day: agent.limits.max_stories_per_day,
     max_reels_per_day: agent.limits.max_reels_per_day,
     max_comment_replies_per_hour: agent.limits.max_comment_replies_per_hour,
@@ -488,7 +491,10 @@ function AgentSettings({ agent, busy, onSave }: {
         {field('max_reels_per_day', 'Reels per day', 0, 10, 1,
                'Rendered on this server; the optional hook clip is the only paid step.')}
         {field('max_feed_posts_per_day', 'Feed posts per day', 0, 20)}
-        {field('max_image_posts_per_day', 'Image posts per day', 0, 20)}
+        {field('max_image_posts_per_day', 'Quizzes per day', 0, 20, 1,
+               'Photo posts are always quizzes.')}
+        {field('max_text_posts_per_day', 'Text posts per day', 0, 20, 1,
+               'Counted inside feed posts, so text can never take a quiz slot.')}
         {field('max_stories_per_day', 'Stories per day', 0, 30)}
         {field('max_comment_replies_per_hour', 'Replies per hour', 0, 60)}
         {field('min_minutes_between_feed_posts', 'Minutes between posts', 0, 1440, 15)}
@@ -497,6 +503,14 @@ function AgentSettings({ agent, busy, onSave }: {
         {field('comment_reply_confidence', 'Reply confidence', 0, 1, 0.05,
                'Below this the agent does not reply on its own.')}
       </div>
+
+      <p className="mt-4 text-small text-ink-muted">
+        Publishes {agent.preferred_hours.length
+          ? `${String(Math.min(...agent.preferred_hours)).padStart(2, '0')}:00–`
+            + `${String(Math.max(...agent.preferred_hours) + 1).padStart(2, '0')}:00`
+          : 'at any hour'} {agent.posting_timezone} time. Replies go out at any
+        hour. Days are counted on the same clock.
+      </p>
 
       <Button className="mt-5" loading={busy === 'settings'}
               onClick={() => onSave(draft)}>

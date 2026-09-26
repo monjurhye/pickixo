@@ -132,6 +132,9 @@ def assess(state: AgentState) -> Verdict:
     # --- can anything be published right now? -----------------------------
     feed_quota_left = today.feed_posts < today.max_feed_posts
     image_quota_left = today.image_posts < today.max_image_posts
+    # Its own budget, so a text post can only ever fill a text slot and never
+    # one meant for a quiz.
+    text_quota_left = today.text_posts < today.max_text_posts
     story_quota_left = today.stories < today.max_stories
     post_cooldown = _cooling_down(state, "publish_text_post") or \
         _cooling_down(state, "publish_image_post")
@@ -141,23 +144,28 @@ def assess(state: AgentState) -> Verdict:
         or today.minutes_since_feed_post >= _min_spacing(state)
     )
 
+    # Publishing waits for the audience's hours; replies do not. Somebody who
+    # asked a question at 2 AM Eastern is owed an answer whatever the time.
+    in_hours = state.in_posting_hours
+
     can_publish_feed = (
-        feed_quota_left and spacing_ok and not post_cooldown
-        and (can_post_text or (can_post_image and image_quota_left))
+        in_hours and feed_quota_left and spacing_ok and not post_cooldown
+        and ((can_post_text and text_quota_left)
+             or (can_post_image and image_quota_left))
     )
     story_spacing_ok = (
         today.minutes_since_story is None
         or today.minutes_since_story >= today.min_minutes_between_stories
     )
     can_publish_story = (
-        can_story and story_quota_left and story_spacing_ok
+        in_hours and can_story and story_quota_left and story_spacing_ok
         and not _cooling_down(state, "publish_story")
     )
     # A reel is a feed item, so it shares the feed spacing; it has its own
     # daily budget, so it does not share the feed quota.
     reel_quota_left = today.reels < today.max_reels
     can_publish_reel = (
-        can_reel and reel_quota_left and spacing_ok
+        in_hours and can_reel and reel_quota_left and spacing_ok
         and not _cooling_down(state, "publish_reel")
     )
 
@@ -170,7 +178,7 @@ def assess(state: AgentState) -> Verdict:
         return Verdict(Decision.DO_NOTHING, _why_nothing(
             state, pending_comments, can_reply, replies_available,
             feed_quota_left, spacing_ok, reply_cooldown or post_cooldown,
-            reel_quota_left,
+            reel_quota_left, in_hours,
         ))
 
     # --- a recent post that is still working ------------------------------
@@ -210,7 +218,7 @@ def assess(state: AgentState) -> Verdict:
     allowed: set[Decision] = {Decision.DO_NOTHING, Decision.WAIT}
     if comments_actionable:
         allowed.add(Decision.REPLY_TO_COMMENTS)
-    if can_publish_feed and can_post_text:
+    if can_publish_feed and can_post_text and text_quota_left:
         allowed.add(Decision.PUBLISH_TEXT_POST)
     if can_publish_feed and can_post_image and image_quota_left:
         allowed.add(Decision.PUBLISH_IMAGE_POST)
@@ -282,6 +290,7 @@ def _why_nothing(
     spacing_ok: bool,
     cooling: datetime | None,
     reel_quota_left: bool = False,
+    in_hours: bool = True,
 ) -> str:
     """A specific reason, not "nothing to do".
 
@@ -294,6 +303,8 @@ def _why_nothing(
             "backing off after a Facebook rate limit until "
             f"{cooling.strftime('%H:%M')} UTC"
         )
+    if not in_hours and not (pending and can_reply and replies_available):
+        return _outside_hours(state)
     if pending and not can_reply:
         return (
             f"{len(pending)} comment(s) are waiting but this connection cannot "
@@ -328,6 +339,16 @@ def _why_nothing(
     return "nothing needs attention"
 
 
+def _outside_hours(state: AgentState) -> str:
+    local = state.local_now
+    hours = state.today.posting_hours
+    return (
+        f"outside posting hours: it is {local:%H:%M} "
+        f"{state.today.posting_timezone}, and the Page publishes "
+        f"{min(hours):02d}:00-{max(hours) + 1:02d}:00"
+    )
+
+
 def validate(decision: Decision, state: AgentState, allowed: frozenset[Decision]) -> str | None:
     """Re-check a decision that came back from the model.
 
@@ -349,6 +370,8 @@ def validate(decision: Decision, state: AgentState, allowed: frozenset[Decision]
         blocked = caps.blocks_action(state.automation.capabilities, decision.value)
         if blocked:
             return blocked
+        if not state.in_posting_hours:
+            return _outside_hours(state)
 
         today = state.today
         if decision is Decision.PUBLISH_STORY:
@@ -369,6 +392,10 @@ def validate(decision: Decision, state: AgentState, allowed: frozenset[Decision]
                     and today.minutes_since_feed_post < _min_spacing(state)):
                 return (f"only {today.minutes_since_feed_post} minutes since the "
                         f"last post")
+            if (decision is Decision.PUBLISH_TEXT_POST
+                    and today.text_posts >= today.max_text_posts):
+                return (f"daily text post limit reached "
+                        f"({today.text_posts}/{today.max_text_posts})")
             if (decision is Decision.PUBLISH_IMAGE_POST
                     and today.image_posts >= today.max_image_posts):
                 return (f"daily image limit reached "

@@ -175,22 +175,16 @@ async def record_decision(
 # Limits and activity
 # ---------------------------------------------------------------------------
 async def activity_today(page_uuid: str) -> dict:
-    """Today's counts, plus reels.
+    """Today's counts, plus reels. "Today" is the Page's posting-time-zone day.
 
-    Reels are counted here rather than inside agent_activity_today because
-    that function's return columns must stay as 012 defined them: the deploy
-    script re-applies every migration, and changing a function's columns makes
-    the older file's CREATE OR REPLACE fail. See 020_facebook_reels.sql.
+    Reels are counted outside agent_activity_today because that function's
+    return columns must stay as 012 defined them: the deploy script re-applies
+    every migration, and changing a function's columns makes the older file's
+    CREATE OR REPLACE fail. See 020_facebook_reels.sql and 021.
     """
     row = await db.fetch_one(
         """
-        SELECT a.*,
-               (SELECT count(*)::integer FROM facebook_agent_actions
-                 WHERE page_id = %s
-                   AND action_type = 'publish_reel'
-                   AND status = 'succeeded'
-                   AND (started_at AT TIME ZONE 'utc')::date
-                       = (now() AT TIME ZONE 'utc')::date) AS reels
+        SELECT a.*, agent_reels_today(%s) AS reels
           FROM agent_activity_today(%s) a
         """,
         (page_uuid, page_uuid),
@@ -531,6 +525,8 @@ async def topic_performance(page_uuid: str, days: int = 60) -> list[dict]:
 async def best_posting_hours(page_uuid: str, days: int = 60) -> list[int]:
     """Hours that have actually performed, measured from stored metrics.
 
+    Hours of the Page's posting time zone, the same clock preferred_hours uses.
+
     Returns an empty list when there is not enough history — which the caller
     must treat as "no opinion", not as "midnight". An agent that invents a best
     time from three posts is guessing with extra steps.
@@ -546,7 +542,8 @@ async def best_posting_hours(page_uuid: str, days: int = 60) -> list[int]:
                AND p.published_at > now() - make_interval(days => %s)
              ORDER BY m.post_id, abs(m.age_hours - 24)
         )
-        SELECT EXTRACT(HOUR FROM p.published_at AT TIME ZONE 'utc')::int AS hour,
+        SELECT EXTRACT(HOUR FROM p.published_at
+                       AT TIME ZONE agent_page_timezone(p.page_id))::int AS hour,
                avg(COALESCE(s.reactions,0) + COALESCE(s.comments,0)
                    + COALESCE(s.shares,0)) AS score,
                count(*) AS n

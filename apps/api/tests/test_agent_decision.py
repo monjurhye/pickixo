@@ -387,5 +387,29 @@ class DraftContentChecks(unittest.TestCase):
         self.assertEqual(calls, ["agent_content"])
 
 
+class AmericanAudience(unittest.TestCase):
+    """Everything the Page says is for a US audience, in US units first."""
+
+    def test_every_writing_prompt_asks_for_american_english(self) -> None:
+        from app.facebook_agent import decision as d
+        for name in ("_CONTENT_SYSTEM", "_REEL_SYSTEM", "_COMMENT_SYSTEM"):
+            prompt = getattr(d, name)
+            self.assertIn("American English", prompt, name)
+            self.assertNotIn("commenter's language", prompt, name)
+
+    def test_us_units_come_first(self) -> None:
+        from app.facebook_agent import decision as d
+        for name in ("_CONTENT_SYSTEM", "_REEL_SYSTEM"):
+            prompt = getattr(d, name)
+            self.assertIn("mph (80 km/h)", prompt, name)
+            self.assertIn("pounds (180 kg)", prompt, name)
+            self.assertNotIn("metres", prompt, name)
+
+    def test_the_fact_checkers_check_the_units(self) -> None:
+        from app.facebook_agent import decision as d
+        for name in ("_FACT_SYSTEM", "_POST_FACT_SYSTEM"):
+            self.assertIn("conversion", getattr(d, name), name)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

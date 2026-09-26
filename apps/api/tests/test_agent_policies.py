@@ -570,5 +570,128 @@ class NoSecrets(unittest.TestCase):
             self.assertNotIn(forbidden, values)
 
 
+#: The Page's live plan: two quizzes and one text post inside three feed posts,
+#: one story, two reels, published 9 AM-10 PM Eastern.
+US_HOURS = tuple(range(9, 22))
+EASTERN = "America/New_York"
+
+
+def mix_state(*, at: datetime | None = None, **today) -> AgentState:
+    defaults = dict(max_feed_posts=3, max_image_posts=2, max_text_posts=1,
+                    max_stories=1, max_reels=2,
+                    posting_timezone=EASTERN, posting_hours=US_HOURS)
+    state = make_state(today={**defaults, **today})
+    # 17:00 UTC is 1 PM Eastern in September — inside the window.
+    state.observed_at = at or datetime(2026, 9, 26, 17, 0, tzinfo=timezone.utc)
+    return state
+
+
+class DailyMix(unittest.TestCase):
+    """A text post can fill only the text slot, never a quiz's."""
+
+    def test_text_is_offered_while_its_slot_is_free(self) -> None:
+        verdict = assess(mix_state())
+        self.assertIn(Decision.PUBLISH_TEXT_POST, verdict.allowed)
+        self.assertIn(Decision.PUBLISH_IMAGE_POST, verdict.allowed)
+
+    def test_text_is_not_offered_once_its_slot_is_used(self) -> None:
+        verdict = assess(mix_state(feed_posts=1, text_posts=1))
+        self.assertTrue(verdict.needs_reasoning)
+        self.assertNotIn(Decision.PUBLISH_TEXT_POST, verdict.allowed)
+        self.assertIn(Decision.PUBLISH_IMAGE_POST, verdict.allowed)
+
+    def test_a_second_text_post_is_refused_even_with_feed_budget_left(self) -> None:
+        state = mix_state(feed_posts=1, text_posts=1)
+        refusal = validate(Decision.PUBLISH_TEXT_POST, state,
+                           frozenset({Decision.PUBLISH_TEXT_POST}))
+        self.assertIsNotNone(refusal)
+        self.assertIn("text post limit", refusal)
+
+    def test_quizzes_still_fit_after_the_text_post(self) -> None:
+        state = mix_state(feed_posts=2, text_posts=1, image_posts=1)
+        self.assertIsNone(validate(Decision.PUBLISH_IMAGE_POST, state,
+                                   frozenset({Decision.PUBLISH_IMAGE_POST})))
+
+    def test_the_full_plan_leaves_nothing_to_publish(self) -> None:
+        state = mix_state(feed_posts=3, text_posts=1, image_posts=2,
+                          stories=1, reels=2)
+        verdict = assess(state)
+        self.assertFalse(verdict.needs_reasoning)
+        self.assertIs(verdict.decision, Decision.DO_NOTHING)
+
+    def test_zero_text_posts_switches_text_off(self) -> None:
+        verdict = assess(mix_state(max_text_posts=0))
+        self.assertNotIn(Decision.PUBLISH_TEXT_POST, verdict.allowed)
+
+
+class PostingHours(unittest.TestCase):
+    """Publishing waits for the US audience; replies do not."""
+
+    def test_nothing_is_published_at_night_eastern(self) -> None:
+        # 07:00 UTC is 3 AM Eastern.
+        state = mix_state(at=datetime(2026, 9, 26, 7, 0, tzinfo=timezone.utc))
+        verdict = assess(state)
+        self.assertFalse(verdict.needs_reasoning)
+        self.assertIs(verdict.decision, Decision.DO_NOTHING)
+        self.assertIn("outside posting hours", verdict.reason)
+        self.assertIn(EASTERN, verdict.reason)
+
+    def test_a_publishing_decision_is_refused_outside_hours(self) -> None:
+        state = mix_state(at=datetime(2026, 9, 26, 7, 0, tzinfo=timezone.utc))
+        for decision in (Decision.PUBLISH_REEL, Decision.PUBLISH_IMAGE_POST,
+                         Decision.PUBLISH_STORY, Decision.PUBLISH_TEXT_POST):
+            refusal = validate(decision, state, frozenset({decision}))
+            self.assertIsNotNone(refusal, decision)
+            self.assertIn("outside posting hours", refusal)
+
+    def test_comments_are_still_answered_at_night(self) -> None:
+        state = mix_state(at=datetime(2026, 9, 26, 7, 0, tzinfo=timezone.utc))
+        state.unanswered_comments = [CommentSnapshot(
+            comment_id="c1", fb_post_id="p1", message="How fast is it?",
+            created_time=now() - timedelta(minutes=5),
+        )]
+        verdict = assess(state)
+        self.assertTrue(verdict.needs_reasoning)
+        self.assertIn(Decision.REPLY_TO_COMMENTS, verdict.allowed)
+        self.assertFalse(verdict.allowed & {
+            Decision.PUBLISH_REEL, Decision.PUBLISH_IMAGE_POST,
+            Decision.PUBLISH_STORY, Decision.PUBLISH_TEXT_POST,
+        })
+
+    def test_the_window_follows_daylight_saving(self) -> None:
+        # 13:30 UTC is 9:30 AM EDT in July but 8:30 AM EST in January.
+        summer = mix_state(at=datetime(2026, 7, 1, 13, 30, tzinfo=timezone.utc))
+        winter = mix_state(at=datetime(2026, 1, 15, 13, 30, tzinfo=timezone.utc))
+        self.assertTrue(summer.in_posting_hours)
+        self.assertFalse(winter.in_posting_hours)
+
+    def test_the_last_hour_is_nine_pm(self) -> None:
+        # 01:59 UTC on 27 Sep is 9:59 PM EDT; 02:00 UTC is 10 PM.
+        self.assertTrue(mix_state(
+            at=datetime(2026, 9, 27, 1, 59, tzinfo=timezone.utc)).in_posting_hours)
+        self.assertFalse(mix_state(
+            at=datetime(2026, 9, 27, 2, 0, tzinfo=timezone.utc)).in_posting_hours)
+
+    def test_no_hours_means_any_hour(self) -> None:
+        state = mix_state(posting_hours=(),
+                          at=datetime(2026, 9, 26, 7, 0, tzinfo=timezone.utc))
+        self.assertTrue(state.in_posting_hours)
+        self.assertIsNone(state.posting_hours_left)
+
+    def test_hours_left_are_given_to_the_model(self) -> None:
+        # 1 PM Eastern: the rest of the 1 PM hour plus 2 PM-9 PM.
+        state = mix_state()
+        self.assertEqual(state.posting_hours_left, 9.0)
+        observation = state.for_model()
+        self.assertEqual(observation["posting_hours_left_today"], 9.0)
+        self.assertIn("EDT", observation["now_audience_local"])
+        self.assertEqual(observation["today"]["quizzes"], "0/2")
+        self.assertEqual(observation["today"]["text_posts"], "0/1")
+
+    def test_an_unknown_zone_falls_back_to_utc(self) -> None:
+        state = mix_state(posting_timezone="Mars/Olympus_Mons")
+        self.assertEqual(state.local_now.utcoffset(), timedelta(0))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

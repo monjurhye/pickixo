@@ -20,6 +20,7 @@ import secrets
 import time
 import urllib.parse
 from typing import Any
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 from fastapi import APIRouter, Query, Request, Response
 
@@ -106,6 +107,8 @@ async def status(user: CurrentUser, settings: SettingsDep) -> dict:
         "limits": {
             "max_feed_posts_per_day": settings_row["max_feed_posts_per_day"],
             "max_image_posts_per_day": settings_row["max_image_posts_per_day"],
+            # .get: absent until migration 021 is applied.
+            "max_text_posts_per_day": settings_row.get("max_text_posts_per_day", 1),
             "max_stories_per_day": settings_row["max_stories_per_day"],
             # .get: absent until migration 020 is applied, and reels are off
             # until then (see observer.observe).
@@ -113,12 +116,15 @@ async def status(user: CurrentUser, settings: SettingsDep) -> dict:
             "max_comment_replies_per_hour": settings_row["max_comment_replies_per_hour"],
             "min_minutes_between_feed_posts": settings_row["min_minutes_between_feed_posts"],
         },
+        "posting_timezone": settings_row.get("posting_timezone", "UTC"),
+        "preferred_hours": list(settings_row.get("preferred_hours") or []),
         "content_mix": settings_row["content_mix"],
         "comment_reply_confidence": float(settings_row["comment_reply_confidence"]),
         "diversity_days": settings_row["diversity_days"],
         "today": {
             "feed_posts": int(activity.get("feed_posts") or 0),
             "image_posts": int(activity.get("image_posts") or 0),
+            "text_posts": int(activity.get("text_posts") or 0),
             "stories": int(activity.get("stories") or 0),
             "reels": int(activity.get("reels") or 0),
             "comment_replies": int(activity.get("comment_replies") or 0),
@@ -373,6 +379,7 @@ async def update_settings(
     ceilings = {
         "max_feed_posts_per_day": settings.facebook_agent_max_feed_posts_per_day,
         "max_image_posts_per_day": settings.facebook_agent_max_feed_posts_per_day,
+        "max_text_posts_per_day": settings.facebook_agent_max_feed_posts_per_day,
         "max_stories_per_day": settings.facebook_agent_max_stories_per_day,
         "max_reels_per_day": settings.facebook_agent_max_reels_per_day,
         "max_comment_replies_per_hour": settings.facebook_agent_max_replies_per_hour,
@@ -389,6 +396,19 @@ async def update_settings(
             max(0.0, min(float(body["comment_reply_confidence"]), 1.0)))
     if "diversity_days" in body:
         add("diversity_days", max(1, min(int(body["diversity_days"]), 365)))
+    if "posting_timezone" in body:
+        zone = str(body["posting_timezone"]).strip()
+        try:
+            ZoneInfo(zone)
+        except (ZoneInfoNotFoundError, ValueError):
+            raise AppError(ErrorCode.INVALID_REQUEST, detail="unknown time zone")
+        add("posting_timezone", zone)
+    if "preferred_hours" in body:
+        hours = body["preferred_hours"]
+        if not isinstance(hours, list):
+            raise AppError(ErrorCode.INVALID_REQUEST,
+                           detail="preferred_hours must be a list of hours")
+        add("preferred_hours", sorted({int(h) for h in hours if 0 <= int(h) <= 23}))
     if "content_mix" in body and isinstance(body["content_mix"], dict):
         add("content_mix", json.dumps(body["content_mix"]))
 

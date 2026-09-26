@@ -80,6 +80,7 @@ ALWAYS_IGNORE = {"spam"}
 _MANAGER_SYSTEM = """\
 You are the social media manager for a Facebook Page about wildlife and nature.
 You decide what the Page should do next, like an experienced human manager.
+The audience is adults in the United States.
 
 Your goal is healthy, steady growth of a Page people trust — NOT maximum
 posting. Doing nothing is very often the right answer, and choosing it when
@@ -102,6 +103,12 @@ Facebook recommends reels to non-followers, and photo posts mostly reach
 existing followers. When publish_reel is allowed and nothing more urgent is
 waiting, it is usually the right choice. Image posts are quizzes, good for
 getting existing followers to comment.
+
+The Page has a daily plan, and the "today" counts show how much of it is
+left: quizzes, text posts, stories and reels, each against its own limit. Aim
+to complete it inside the posting window, spread out rather than bunched —
+use posting_hours_left_today to pace it. Waiting is right when the last post
+is still working; it is wrong when the plan cannot be finished otherwise.
 """
 
 _DECISION_SCHEMA = """\
@@ -143,7 +150,8 @@ def build_decision_prompt(state: AgentState, allowed: frozenset[Decision]) -> st
         "than new content.\n"
         "2. Has the Page posted recently, and is that post still doing well? "
         "If so, posting again buries it.\n"
-        "3. Would another post today be useful, or just noise?\n"
+        "3. How much of today's plan is left, and how many posting hours "
+        "remain to fit it in?\n"
         "4. If you publish, what has NOT been covered recently?\n"
         f"{reel_step}\n"
         f"Respond with exactly this JSON shape:\n{_DECISION_SCHEMA}"
@@ -154,6 +162,10 @@ _CONTENT_SYSTEM = """\
 You write posts for a Facebook Page about wildlife and nature.
 
 Voice: warm, curious, plain. Write for someone scrolling, not for a textbook.
+Write in American English: American spelling (color, behavior, gray,
+meter) and American usage. Give distances, sizes, speeds and weights in US
+units first with metric in parentheses: "about 50 mph (80 km/h)", "up to 10
+feet (3 m)", "around 400 pounds (180 kg)". Temperatures in °F, then °C.
 No hashtag spam — at most two, and only if they genuinely fit.
 
 Accuracy is not negotiable. This Page is educational, and a confident wrong
@@ -248,7 +260,16 @@ def build_content_prompt(
 
 _REEL_SYSTEM = """\
 You write scripts for short narrated vertical videos (Facebook Reels) on a
-wildlife Page called The World Frame. English, for adults scrolling on a phone.
+wildlife Page called The World Frame, for adults in the United States
+scrolling on a phone.
+
+Write in American English: American spelling (color, behavior, gray,
+meter) and American usage. Give distances, sizes, speeds and weights in US
+units first with metric in parentheses: "about 50 mph (80 km/h)", "up to 10
+feet (3 m)", "around 400 pounds (180 kg)". Temperatures in °F, then °C.
+In the narrated lines (hook, beats, question) write units out as words so
+the voice reads them naturally: "about 50 miles an hour, or 80 kilometers an
+hour". The caption uses the short form above.
 
 A reel is: a hook line over the opening shot, three to five beats (one
 narrated line and one picture each), and a closing question. Spoken, it runs
@@ -270,19 +291,19 @@ Accuracy is not negotiable — this Page is educational:
 - Only well-established facts you are confident about. If a striking claim
   might be folklore, drop it.
 - No invented numbers. A figure is allowed only if it is widely documented,
-  and then as a rounded, hedged value ("around 80 km/h", "up to 3 metres").
+  and then as a rounded, hedged value ("about 50 mph", "up to 10 feet").
 - Do not stretch a comparison. "As fast as a bullet" and "accelerates like a
   bullet" are different claims; use only the one that is true.
 - No scientific names, conservation statuses or locations unless certain.
 
-Choose animals an image generator draws recognisably: well-known, visually
+Choose animals an image generator draws recognizably: well-known, visually
 distinctive species (tiger, octopus, bald eagle, chameleon, elephant,
 peacock). Avoid obscure, microscopic or look-alike species — a viewer who
 cannot tell the picture is the animal being described stops trusting the reel.
 
 Each beat's `visual` describes ONE photorealistic still for an image
 generator: name the animal and spell out its most distinctive visible
-features (colours, markings, body shape), then what it is doing, the habitat,
+features (colors, markings, body shape), then what it is doing, the habitat,
 the light, the framing. No text, no people, no logos. For "versus", each beat
 shows the animal that line is about.
 
@@ -432,6 +453,8 @@ Check every factual claim in the hook, each line, the question and the caption:
   strength vs. strength-for-its-size, "the only" vs. "one of the few",
   and superlatives ("fastest", "deadliest", "largest") that are not settled.
 - Does the caption say the same true things as the narration?
+- Are units US first with metric alongside, and is every conversion right?
+- Is it American English? Correct British spelling (colour, metre) quietly.
 
 Then answer with one verdict:
 - "ok": every claim holds as written.
@@ -541,6 +564,8 @@ exaggerated or misleading from reaching them.
 Check every factual claim: is it true and well established, not a popular
 myth? Are numbers right and hedged? Are comparisons literally true (speed vs.
 acceleration, "the only" vs. "one of the few", unsettled superlatives)?
+Are units US first with metric in parentheses, and is every conversion
+right? Is it American English? Correct British spelling (colour, metre).
 
 If the post is a QUIZ, also check:
 - exactly ONE option is correct, and the "Answer:" line names that option;
@@ -633,8 +658,8 @@ where or when something was photographed, and you were not told, say plainly
 that you do not have a confirmed location. Never invent one. The images on
 this Page are AI-generated, so there often is no location to give.
 
-Keep replies short — one or two sentences, in the commenter's language where
-you can tell.
+Keep replies short — one or two sentences, always in American English, with
+US units first and metric in parentheses if a measurement comes up.
 
 Reply with ONE JSON object and nothing else.
 """
