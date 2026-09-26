@@ -405,6 +405,28 @@ class AmericanAudience(unittest.TestCase):
             self.assertIn("pounds (180 kg)", prompt, name)
             self.assertNotIn("metres", prompt, name)
 
+    def test_metric_is_added_where_the_model_left_it_out(self) -> None:
+        from app.facebook_agent.units import add_metric
+        cases = {
+            # The Page's first reel, verbatim.
+            "They cover roughly 2,500 miles from Canada to Mexico.":
+                "They cover roughly 2,500 miles (4,000 km) from Canada to Mexico.",
+            "It can run 70 miles per hour.": "It can run 70 miles per hour (110 km/h).",
+            "up to 10 feet long": "up to 10 feet (3 m) long",
+            "weighs 400 pounds": "weighs 400 pounds (180 kg)",
+            "a 3-foot snake": "a 3-foot (0.9 m) snake",
+            "2,500 to 3,000 miles": "2,500 to 3,000 miles (4,000-4,800 km)",
+            "100°F days": "100°F (38°C) days",
+        }
+        for given, expected in cases.items():
+            self.assertEqual(add_metric(given), expected)
+
+    def test_metric_already_given_is_left_alone(self) -> None:
+        from app.facebook_agent.units import add_metric
+        for text in ("about 50 mph (80 km/h)", "5 in the morning",
+                     "tons of fun", "Answer: B) 3 hearts"):
+            self.assertEqual(add_metric(text), text)
+
     def test_the_fact_checkers_check_the_units(self) -> None:
         from app.facebook_agent import decision as d
         for name in ("_FACT_SYSTEM", "_POST_FACT_SYSTEM"):

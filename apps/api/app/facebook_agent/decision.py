@@ -28,6 +28,7 @@ from ..logging_config import get_logger
 from ..services import ai as ai_service
 from .policies import Decision
 from .state import AgentState
+from .units import add_metric
 
 log = get_logger(__name__)
 
@@ -834,7 +835,7 @@ def parse_comment_judgements(
             classification=classification,
             action=action,
             confidence=confidence,
-            reply=reply[:800] if reply else None,
+            reply=add_metric(reply)[:800] if reply else None,
             reason=str(entry.get("reason") or "")[:300],
         ))
     return out
@@ -903,6 +904,7 @@ async def draft_content(
     checked = apply_post_fact_check(draft, extract_json(verdict), quiz=quiz)
     log.info("agent.post_fact_check", topic=str(draft["topic"])[:80],
              quiz=quiz, result=checked["fact_check"][:300])
+    checked["caption"] = add_metric(checked["caption"])
     return checked
 
 
@@ -937,6 +939,9 @@ async def draft_reel(state: AgentState, *, topic: str | None, animal: str | None
     checked = apply_fact_check(script, extract_json(verdict))
     log.info("agent.reel_fact_check", topic=script.topic[:80],
              result=checked.fact_check[:300])
+    # The caption only: narrated lines are spoken, and a parenthesis read
+    # aloud is noise (see units.py).
+    checked.caption = add_metric(checked.caption)
     return checked
 
 
