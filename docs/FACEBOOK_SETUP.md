@@ -155,8 +155,17 @@ ANTHROPIC_API_KEY=<from console.anthropic.com → API Keys>
 ANTHROPIC_ENABLED=true
 ```
 
-Set a monthly spend limit on the Anthropic console as well; a limit there is
-enforced by Anthropic, whatever this code does.
+Set a monthly spend limit on both consoles; a limit there is enforced by the
+vendor, whatever this code does.
+
+- **Groq** (paid Developer plan, about $0.15 / $0.60 per million tokens for
+  gpt-oss-120b, so roughly $1 a month here): console.groq.com →
+  Settings → Billing → **Limits** → *Add Limit* — the Billing page's Limits,
+  not the left-hand *Limits* page, which holds rate limits.
+  When the limit is reached Groq answers every call with HTTP 400
+  `blocked_api_access`; the provider reads that as quota exhausted, so the
+  agent moves to Claude for the rest of the month instead of stopping.
+- **Anthropic**: console.anthropic.com → Settings → Limits.
 
 ## 7b. Reels
 

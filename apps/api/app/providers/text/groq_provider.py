@@ -24,6 +24,25 @@ from ..http import classify_status, get_client, parse_retry_after
 
 ENDPOINT = "https://api.groq.com/openai/v1/chat/completions"
 
+#: The error code Groq returns, with HTTP 400, once the organisation's monthly
+#: spend limit is reached (console.groq.com/docs/spend-limits).
+SPEND_LIMIT_CODE = "blocked_api_access"
+
+
+def _spend_limit_reached(response: httpx.Response) -> bool:
+    """Whether a failed response is the spend limit rather than a bad request.
+
+    Read from the structured error first; the substring check is the fallback
+    for a body that is not the usual {"error": {"code": ...}} shape.
+    """
+    try:
+        error = (response.json() or {}).get("error") or {}
+        if isinstance(error, dict) and error.get("code") == SPEND_LIMIT_CODE:
+            return True
+    except ValueError:
+        pass
+    return SPEND_LIMIT_CODE in response.text
+
 
 class GroqTextProvider(TextProvider):
     slug = "groq"
@@ -77,6 +96,17 @@ class GroqTextProvider(TextProvider):
         latency_ms = int((time.perf_counter() - started) * 1000)
 
         if response.status_code != 200:
+            if _spend_limit_reached(response):
+                # The organisation's monthly spend limit is spent. Groq says
+                # so with a 400, and classify_status would call a 400 our own
+                # bad request — which the manager never fails over. It is a
+                # quota: cool Groq down and let the next provider answer.
+                raise ProviderError(
+                    ProviderFailure.QUOTA_EXHAUSTED,
+                    provider=self.slug,
+                    detail="monthly spend limit reached (blocked_api_access)",
+                    http_status=response.status_code,
+                )
             raise ProviderError(
                 classify_status(response.status_code),
                 provider=self.slug,
