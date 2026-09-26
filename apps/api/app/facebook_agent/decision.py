@@ -717,7 +717,8 @@ async def decide(state: AgentState, allowed: frozenset[Decision]) -> ModelDecisi
     text = await ai_service.generate_for_system(
         prompt=build_decision_prompt(state, allowed),
         system=_MANAGER_SYSTEM,
-        max_tokens=500,
+        # Room for a reasoning model's thinking before the JSON; see draft_reel.
+        max_tokens=1500,
         capability="agent_decision",
     )
     return parse_decision(extract_json(text), allowed)
@@ -733,7 +734,7 @@ async def draft_content(
             state, topic=topic, animal=animal, want_image=want_image, quiz=quiz,
         ),
         system=_CONTENT_SYSTEM,
-        max_tokens=800,
+        max_tokens=2000,
         capability="agent_content",
     )
     payload = extract_json(text)
@@ -767,7 +768,10 @@ async def draft_reel(state: AgentState, *, topic: str | None, animal: str | None
     text = await ai_service.generate_for_system(
         prompt=build_reel_prompt(state, topic=topic, animal=animal),
         system=_REEL_SYSTEM,
-        max_tokens=1500,
+        # Generous on purpose: reasoning models (gpt-oss on Groq) spend part
+        # of this on thinking before the JSON, and a 1,500 cap cut a script
+        # off mid-string. Only what is used is billed.
+        max_tokens=4000,
         capability="agent_content",
     )
     script = parse_reel_script(extract_json(text))
@@ -775,7 +779,7 @@ async def draft_reel(state: AgentState, *, topic: str | None, animal: str | None
     verdict = await ai_service.generate_for_system(
         prompt=build_fact_check_prompt(script),
         system=_FACT_SYSTEM,
-        max_tokens=1200,
+        max_tokens=3000,
         capability="agent_fact_check",
     )
     checked = apply_fact_check(script, extract_json(verdict))
@@ -794,7 +798,7 @@ async def triage_comments(
     text = await ai_service.generate_for_system(
         prompt=build_comment_prompt(comments),
         system=_COMMENT_SYSTEM,
-        max_tokens=1200,
+        max_tokens=3000,
         capability="agent_comments",
     )
     return parse_comment_judgements(
