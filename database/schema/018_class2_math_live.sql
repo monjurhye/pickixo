@@ -18,6 +18,13 @@
 -- Only `status` moves. Everything else 016 set stays as it is.
 -- ============================================================================
 
+-- psql on Windows defaults client_encoding to the console codepage (WIN1252),
+-- and every file here is UTF-8 with Bangla in it. Without this line the server
+-- decodes those bytes as WIN1252: bytes it has no mapping for abort the run,
+-- and — worse — bytes it *does* map are silently inserted as mojibake. Setting
+-- it in the file means the run is correct however psql was invoked.
+SET client_encoding TO 'UTF8';
+
 UPDATE apps
    SET status     = 'live',
        updated_at = now()

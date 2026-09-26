@@ -12,6 +12,13 @@
 -- by topic." Class 2 Bangla is the third subject in that growth.
 -- ============================================================================
 
+-- psql on Windows defaults client_encoding to the console codepage (WIN1252),
+-- and every file here is UTF-8 with Bangla in it. Without this line the server
+-- decodes those bytes as WIN1252: bytes it has no mapping for abort the run,
+-- and — worse — bytes it *does* map are silently inserted as mojibake. Setting
+-- it in the file means the run is correct however psql was invoked.
+SET client_encoding TO 'UTF8';
+
 INSERT INTO apps (
     slug, vertical, category_id, name, name_bn, tagline, description, icon, route,
     status, is_featured, is_public, is_indexable, supports_my_apps, requires_auth,
