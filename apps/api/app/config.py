@@ -87,13 +87,22 @@ class Settings(BaseSettings):
     # is enabled, keyed, and not cooling down. Every name must match a provider
     # slug registered in providers/registry.py.
     text_provider_priority: str = (
-        "groq,cerebras,openrouter,mistral,nvidia_nim,gemini,pollinations_text,ollama"
+        "groq,anthropic,cerebras,openrouter,mistral,nvidia_nim,gemini,"
+        "pollinations_text,ollama"
     )
     image_provider_priority: str = "cloudflare_image,pollinations_image"
 
     groq_api_key: str = ""
     groq_model: str = "openai/gpt-oss-120b"
     groq_enabled: bool = False
+
+    # Paid, and second on purpose: it answers when Groq's free tier is spent or
+    # down. Haiku 4.5 is the cheapest current Claude model ($1 / $5 per million
+    # tokens in / out, checked 2026-09) and plenty for the agent's short JSON
+    # jobs. The key is a credential: .env only.
+    anthropic_api_key: str = ""
+    anthropic_model: str = "claude-haiku-4-5"
+    anthropic_enabled: bool = False
 
     cerebras_api_key: str = ""
     cerebras_model: str = "gpt-oss-120b"

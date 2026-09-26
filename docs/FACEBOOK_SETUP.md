@@ -134,6 +134,30 @@ image provider (`POLLINATIONS_IMAGE_ENABLED` or `CLOUDFLARE_IMAGE_ENABLED`);
 without one the agent can still publish text posts and handle comments, and
 will simply not choose image posts.
 
+### Recommended: Groq first, Claude Haiku as the backup
+
+Groq's free tier (`openai/gpt-oss-120b`: 1,000 requests and 200,000 tokens a
+day, per organisation — console.groq.com/docs/rate-limits, checked 2026-09)
+covers the agent's normal day, which is roughly 150,000 tokens now that a
+"wait" from the model is honoured instead of re-asked every tick.
+
+For the days it is not enough — or Groq is down — add Claude Haiku 4.5 as the
+paid fallback. It is second in `TEXT_PROVIDER_PRIORITY`, so it is only called
+when Groq cannot answer. At $1 / $5 per million tokens in / out, a whole day
+on Claude would be about $0.25 (~$7 a month); as a fallback it is usually
+cents.
+
+```
+GROQ_API_KEY=<from console.groq.com → API Keys>
+GROQ_ENABLED=true
+
+ANTHROPIC_API_KEY=<from console.anthropic.com → API Keys>
+ANTHROPIC_ENABLED=true
+```
+
+Set a monthly spend limit on the Anthropic console as well; a limit there is
+enforced by Anthropic, whatever this code does.
+
 ## 7b. Reels
 
 Reels are how the Page reaches people who do not follow it yet, so they are

@@ -8,6 +8,7 @@ from .base import ImageProvider, TextProvider
 from .image.cloudflare_provider import CloudflareImageProvider
 from .image.pollinations_provider import PollinationsImageProvider
 from .manager import ProviderManager, UsageRecorder
+from .text.anthropic_provider import AnthropicTextProvider
 from .text.gemini_provider import GeminiTextProvider
 from .text.groq_provider import GroqTextProvider
 from .text.ollama_provider import OllamaTextProvider
@@ -82,6 +83,10 @@ def build_text_manager(
 ) -> ProviderManager[TextProvider]:
     providers: list[TextProvider] = [
         GroqTextProvider(settings.groq_api_key, settings.groq_model, settings.groq_enabled),
+        AnthropicTextProvider(
+            settings.anthropic_api_key, settings.anthropic_model,
+            settings.anthropic_enabled,
+        ),
         OllamaTextProvider(
             settings.ollama_model,
             settings.ollama_enabled,
