@@ -659,3 +659,37 @@ running, not half-built.
   that contradicts the source teaches the wrong word.
 - **Learning areas 1, 2, 3 and 9 are carried, not assessed.** A screen cannot
   judge whether a child shares nicely.
+
+---
+
+## Appendix — competitor feature research (2026-09-18)
+
+Recovered from an early session branch (`claude/exciting-clarke-mkc8w0`) that
+recorded it in a `CLAUDE.md` before any Kids code existed. That file's other
+claims — "no Kids code in this repo" — are long out of date and were not kept;
+this list is the part still worth having. It is a **backlog of ideas, not a
+record of what is built**, and it has not been re-checked item by item against
+the current app.
+
+Source: web research on Khan Academy Kids, Duolingo ABC, Endless Alphabet,
+ABCmouse, SplashLearn, Lingokids, and two Bangla alphabet apps ("বর্ণমালা: পড়ি
+লিখি শিখি", "Bangla Alphabet"). Ranked by how few competitors offer them:
+
+1. **NCTB-sourced curriculum mapping** — no competitor traceably maps to the
+   actual textbook. *Built: this is the foundation of section A.*
+2. **Several pictures per letter** (from the Bangla apps) — two or three
+   word/picture contexts per letter, so recognition is not memorised to one
+   image.
+3. **Animated letters that assemble into words** (Endless Alphabet) — e.g.
+   ক + ল = কল, with the letters moving into place.
+4. **No score, no fail, no timer for the youngest tier** (Endless Alphabet) —
+   matches the "আবার চেষ্টা করি" tone.
+5. **Parent dashboard that flags the specific stuck skill** (SplashLearn,
+   ABCmouse) — not a progress percentage, but which letter or skill needs help.
+   See section I.
+6. **Optional, never mandatory, speech recognition** (Duolingo ABC). *Already
+   the rule here — see "What is deliberately not claimed".*
+7. **Word highlighting synced to narration** in story and rhyme mode (Khan
+   Academy Kids).
+8. **No ads and no in-app purchases inside the learning flow** — the norm among
+   the credible competitors.
