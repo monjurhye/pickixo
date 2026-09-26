@@ -20,7 +20,8 @@ import unittest
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 
 from app.facebook_agent.decision import (  # noqa: E402
-    DecisionParseError, extract_json, parse_comment_judgements, parse_decision,
+    DecisionParseError, apply_post_fact_check, extract_json,
+    parse_comment_judgements, parse_decision, validate_quiz_caption,
 )
 from app.facebook_agent.policies import Decision  # noqa: E402
 
@@ -267,6 +268,123 @@ class PromptHygiene(unittest.TestCase):
         self.assertIn("publish_text_post", prompt)
         self.assertNotIn("publish_story", prompt)
         self.assertNotIn("reel", prompt.lower())
+
+
+# ===========================================================================
+# Quizzes: layout checked in code, content checked by a second call
+# ===========================================================================
+QUIZ = ("How many hearts does an octopus have?\n"
+        "A) One\nB) Two\nC) Three\n"
+        "Comment your answer 👇\n.\n.\n.\n.\n.\n"
+        "✅ Answer: C) Three — two pump blood through the gills, one to the body.")
+
+
+class QuizLayout(unittest.TestCase):
+    def test_a_well_formed_quiz_passes(self) -> None:
+        validate_quiz_caption(QUIZ)
+
+    def test_layout_faults_are_refused(self) -> None:
+        cases = {
+            "missing option C": QUIZ.replace("C) Three\n", ""),
+            "a fourth option": QUIZ.replace("C) Three\n", "C) Three\nD) Four\n"),
+            "no answer line": QUIZ.split("✅")[0],
+            "answer names no option": QUIZ.replace("Answer: C)", "Answer: D)"),
+        }
+        for name, caption in cases.items():
+            with self.subTest(name):
+                with self.assertRaises(DecisionParseError):
+                    validate_quiz_caption(caption)
+
+
+class PostFactCheck(unittest.TestCase):
+    DRAFT = {"topic": "Octopus hearts", "animal": "octopus", "caption": QUIZ,
+             "visual_prompt": "an octopus on a reef", "fact_check": ""}
+
+    def test_ok_keeps_the_post(self) -> None:
+        out = apply_post_fact_check(dict(self.DRAFT), {"verdict": "ok"}, quiz=True)
+        self.assertEqual(out["caption"], QUIZ)
+        self.assertIn("no issues", out["fact_check"])
+
+    def test_fixed_replaces_caption_and_picture(self) -> None:
+        """The picture fix is the point: a WHICH-animal quiz over a clear
+        photo of the answer gets its image description rewritten."""
+        fixed = QUIZ.replace("Answer: C)", "Answer: C)")
+        out = apply_post_fact_check(dict(self.DRAFT), {
+            "verdict": "fixed", "issues": ["image gave the answer away"],
+            "caption": fixed, "visual_prompt": "extreme close-up of an octopus eye",
+        }, quiz=True)
+        self.assertEqual(out["visual_prompt"], "extreme close-up of an octopus eye")
+        self.assertIn("gave the answer away", out["fact_check"])
+
+    def test_reject_stops_the_post(self) -> None:
+        with self.assertRaises(DecisionParseError) as ctx:
+            apply_post_fact_check(dict(self.DRAFT), {
+                "verdict": "reject", "issues": ["two options are arguably right"]},
+                quiz=True)
+        self.assertIn("arguably right", str(ctx.exception))
+
+    def test_a_fix_that_breaks_the_quiz_is_refused(self) -> None:
+        with self.assertRaises(DecisionParseError):
+            apply_post_fact_check(dict(self.DRAFT), {
+                "verdict": "fixed", "issues": ["x"],
+                "caption": "How many hearts? Three."}, quiz=True)
+
+    def test_no_verdict_is_not_a_pass(self) -> None:
+        for payload in ({}, {"verdict": "looks fine"}):
+            with self.assertRaises(DecisionParseError):
+                apply_post_fact_check(dict(self.DRAFT), payload, quiz=True)
+
+
+class DraftContentChecks(unittest.TestCase):
+    def run_draft(self, replies: list[str], **kwargs) -> tuple[dict, list[str]]:
+        import asyncio
+        from datetime import datetime, timezone
+        from app.facebook_agent import decision
+        from app.facebook_agent.state import (
+            AgentState, AutomationState, PageSnapshot, TodayActivity,
+        )
+        calls: list[str] = []
+
+        async def fake(*, prompt, system, max_tokens, capability):
+            calls.append(capability)
+            return replies[len(calls) - 1]
+
+        original = decision.ai_service.generate_for_system
+        decision.ai_service.generate_for_system = fake
+        try:
+            state = AgentState(page=PageSnapshot(name="X", page_id="1"),
+                               automation=AutomationState(), today=TodayActivity(),
+                               observed_at=datetime.now(timezone.utc))
+            draft = asyncio.run(decision.draft_content(state, topic=None, animal=None,
+                                                       **kwargs))
+        finally:
+            decision.ai_service.generate_for_system = original
+        return draft, calls
+
+    def test_a_quiz_is_written_then_checked(self) -> None:
+        written = json.dumps({"topic": "Octopus hearts", "animal": "octopus",
+                              "caption": QUIZ, "visual_prompt": "an octopus"})
+        draft, calls = self.run_draft([written, json.dumps({"verdict": "ok"})],
+                                      want_image=True, quiz=True)
+        self.assertEqual(calls, ["agent_content", "agent_fact_check"])
+        self.assertIn("no issues", draft["fact_check"])
+
+    def test_a_malformed_quiz_is_refused_before_the_check_is_paid_for(self) -> None:
+        written = json.dumps({"topic": "t", "caption": "Guess the animal!",
+                              "visual_prompt": "x"})
+        with self.assertRaises(DecisionParseError):
+            self.run_draft([written], want_image=True, quiz=True)
+
+    def test_a_text_post_is_checked_too(self) -> None:
+        written = json.dumps({"topic": "t", "caption": "Octopuses have three hearts."})
+        _, calls = self.run_draft([written, json.dumps({"verdict": "ok"})],
+                                  want_image=False)
+        self.assertEqual(calls, ["agent_content", "agent_fact_check"])
+
+    def test_a_story_has_no_caption_to_check(self) -> None:
+        written = json.dumps({"topic": "t", "caption": "c", "visual_prompt": "v"})
+        _, calls = self.run_draft([written], want_image=True, quiz=False)
+        self.assertEqual(calls, ["agent_content"])
 
 
 if __name__ == "__main__":

@@ -171,8 +171,17 @@ Reply with ONE JSON object and nothing else.
 
 
 _QUIZ_BRIEF = """\
-This post is a QUIZ. The image shows the animal; the caption asks one
-question about it that has a single, well-established answer.
+This post is a QUIZ: one question with a single, well-established answer.
+
+The picture must never give the answer away. Two ways to get that right:
+- Ask ABOUT the pictured animal ("How many hearts does an octopus have?"
+  over an octopus). The picture names the animal; the answer is a fact about
+  it that the picture cannot show.
+- Or, if the question is WHICH animal, the picture must not show it whole:
+  an extreme close-up of one feature (an eye, a patch of skin or feathers)
+  or a dark silhouette against the sky. Never a clear full view of the answer.
+Never ask "which animal" over a picture of that animal, and never picture
+any of the options side by side with a label.
 
 Caption layout, exactly:
   line 1: the question (one short sentence)
@@ -503,6 +512,103 @@ def apply_fact_check(script, payload: dict[str, Any]):
     return corrected
 
 
+_QUIZ_OPTION = re.compile(r"^\s*([A-Z])\)\s*\S", re.M)
+_QUIZ_ANSWER = re.compile(r"Answer:\s*([A-Z])\)", re.I)
+
+
+def validate_quiz_caption(caption: str) -> None:
+    """The quiz layout, checked in code rather than trusted.
+
+    Three options A-C, and an answer line naming one of them. A quiz whose
+    answer letter points at an option that does not exist — or that has no
+    answer at all — is refused before any image is generated.
+    """
+    options = {m.group(1) for m in _QUIZ_OPTION.finditer(caption)}
+    if options != {"A", "B", "C"}:
+        raise DecisionParseError("a quiz needs exactly the options A), B) and C)")
+    answer = _QUIZ_ANSWER.search(caption)
+    if not answer:
+        raise DecisionParseError("the quiz has no 'Answer: X)' line")
+    if answer.group(1).upper() not in options:
+        raise DecisionParseError("the quiz answer names an option that does not exist")
+
+
+_POST_FACT_SYSTEM = """\
+You are a strict fact-checker for an educational wildlife Page with ten
+thousand followers. A post is about to be published. Stop anything false,
+exaggerated or misleading from reaching them.
+
+Check every factual claim: is it true and well established, not a popular
+myth? Are numbers right and hedged? Are comparisons literally true (speed vs.
+acceleration, "the only" vs. "one of the few", unsettled superlatives)?
+
+If the post is a QUIZ, also check:
+- exactly ONE option is correct, and the "Answer:" line names that option;
+- the explanation after the answer is true;
+- the other options are genuinely wrong, not arguably right;
+- the image description does not give the answer away. A question about
+  WHICH animal must not be pictured by a clear full view of that animal —
+  if it is, rewrite the image description as an extreme close-up of one
+  feature or a silhouette.
+
+Verdicts:
+- "ok": everything holds.
+- "fixed": something was wrong and a corrected post still works. Return the
+  whole corrected caption in the same layout, and the image description
+  (corrected or unchanged).
+- "reject": the post's central claim or question is unsound. Say why.
+
+Reply with ONE JSON object and nothing else.
+"""
+
+_POST_FACT_SHAPE = """\
+{
+  "verdict": "ok" | "fixed" | "reject",
+  "issues": ["<each problem, one short sentence; empty if ok>"],
+  "caption": "<the full caption, corrected if needed>",
+  "visual_prompt": "<the image description, corrected if needed, or null>"
+}"""
+
+
+def build_post_fact_check_prompt(*, caption: str, visual_prompt: str | None,
+                                  quiz: bool) -> str:
+    payload = {"kind": "quiz" if quiz else "post", "caption": caption,
+               "image_description": visual_prompt}
+    return (
+        f"Post to check:\n{json.dumps(payload, indent=2, ensure_ascii=False)}\n\n"
+        f"Respond with exactly this JSON shape:\n{_POST_FACT_SHAPE}"
+    )
+
+
+def apply_post_fact_check(draft: dict[str, Any], payload: dict[str, Any], *,
+                          quiz: bool) -> dict[str, Any]:
+    """Apply the checker's verdict to a drafted post, or refuse it.
+
+    A "fixed" quiz goes back through validate_quiz_caption, so a correction
+    that breaks the layout is refused like a bad first draft.
+    """
+    verdict = str(payload.get("verdict") or "").strip().lower()
+    issues = [str(i).strip()[:300] for i in (payload.get("issues") or []) if str(i).strip()]
+
+    if verdict == "ok":
+        return {**draft, "fact_check": "checked: no issues"}
+    if verdict == "reject":
+        reason = "; ".join(issues) or "no reason given"
+        raise DecisionParseError(f"fact-check rejected the post: {reason}"[:500])
+    if verdict != "fixed":
+        raise DecisionParseError(f"fact-check returned no usable verdict ({verdict!r})")
+
+    caption = str(payload.get("caption") or "").strip()
+    if not caption:
+        raise DecisionParseError("fact-check fixed the post but returned no caption")
+    if quiz:
+        validate_quiz_caption(caption)
+    visual = payload.get("visual_prompt")
+    visual = str(visual).strip()[:1000] if visual else draft.get("visual_prompt")
+    return {**draft, "caption": caption[:2000], "visual_prompt": visual,
+            "fact_check": "corrected: " + ("; ".join(issues) or "unspecified")}
+
+
 _COMMENT_SYSTEM = """\
 You triage comments on a wildlife Facebook Page and decide which deserve a
 reply from the Page.
@@ -742,8 +848,10 @@ async def draft_content(
     caption = str(payload.get("caption") or "").strip()
     if not caption:
         raise DecisionParseError("no caption was produced")
+    if quiz:
+        validate_quiz_caption(caption)
 
-    return {
+    draft = {
         "topic": (str(payload.get("topic")).strip()[:200]
                   if payload.get("topic") else topic),
         "animal": (str(payload.get("animal")).strip()[:100]
@@ -751,7 +859,26 @@ async def draft_content(
         "caption": caption[:2000],
         "visual_prompt": (str(payload.get("visual_prompt")).strip()[:1000]
                           if payload.get("visual_prompt") else None),
+        "fact_check": "",
     }
+
+    # Stories carry no caption on the Page — only the picture — so there is
+    # nothing to fact-check there. Feed posts, quiz or plain, are checked the
+    # same way reels are: a second call whose only job is to doubt.
+    if want_image and not quiz:
+        return draft
+    verdict = await ai_service.generate_for_system(
+        prompt=build_post_fact_check_prompt(
+            caption=draft["caption"], visual_prompt=draft["visual_prompt"], quiz=quiz,
+        ),
+        system=_POST_FACT_SYSTEM,
+        max_tokens=3000,
+        capability="agent_fact_check",
+    )
+    checked = apply_post_fact_check(draft, extract_json(verdict), quiz=quiz)
+    log.info("agent.post_fact_check", topic=str(draft["topic"])[:80],
+             quiz=quiz, result=checked["fact_check"][:300])
+    return checked
 
 
 async def draft_reel(state: AgentState, *, topic: str | None, animal: str | None):
