@@ -202,7 +202,13 @@ export default async function PickbotPage() {
                     <th className="pb-2 font-medium">Symbol</th>
                     <th className="pb-2 font-medium">Since</th>
                     <th className="pb-2 text-right font-medium">Entry</th>
-                    <th className="pb-2 text-right font-medium">Last</th>
+                    {/*
+                      "Close", not "Last": every figure in this table is the last CLOSED daily
+                      candle, which is the only world the bot makes decisions in. Intraday it can
+                      be several percent from the live price. The card description above says which
+                      day that is.
+                    */}
+                    <th className="pb-2 text-right font-medium">Close</th>
                     <th className="pb-2 text-right font-medium">Value</th>
                     <th className="pb-2 text-right font-medium">P&amp;L</th>
                   </tr>
@@ -324,8 +330,10 @@ export default async function PickbotPage() {
             Bangladesh among them.
           </p>
           <p className="text-micro text-ink-subtle">
-            Snapshot generated {snap.generatedAt}. Mode: {snap.mode}. Pickbot also runs itself once
-            an hour on a schedule, so this page stays current without anyone pressing anything.
+            Snapshot generated {snap.generatedAt}. Mode: {snap.mode}. Pickbot refreshes itself once
+            an hour without anyone pressing anything, but the figures above only move when a new
+            daily candle closes — prices here are {snap.lastClosedDay}&rsquo;s closes, not the
+            market right now.
           </p>
         </CardBody>
       </Card>
