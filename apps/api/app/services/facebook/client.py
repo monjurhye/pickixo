@@ -17,6 +17,7 @@ Two rules this file exists to enforce:
 """
 from __future__ import annotations
 
+import asyncio
 import hashlib
 import hmac
 from dataclasses import dataclass
@@ -33,6 +34,17 @@ log = get_logger(__name__)
 #: connection does not hold an agent run open indefinitely.
 DEFAULT_TIMEOUT = httpx.Timeout(connect=10.0, read=60.0, write=60.0, pool=10.0)
 UPLOAD_TIMEOUT = httpx.Timeout(connect=10.0, read=180.0, write=180.0, pool=10.0)
+
+#: Pauses before each retry of a connection that could not be opened. From this
+#: server roughly one connect in five to Meta stalls, and without a retry each
+#: stall throws away a reel that took minutes to render.
+CONNECT_RETRY_DELAYS: tuple[float, ...] = (1.0, 3.0)
+
+#: Failures that happen before a single byte of the request is sent. Only these
+#: are retried here: Meta never saw the request, so sending it again cannot
+#: publish anything twice. A read or write timeout is not in this list — by
+#: then the request may have landed.
+_NOT_SENT = (httpx.ConnectError, httpx.ConnectTimeout)
 
 
 @dataclass(slots=True)
@@ -88,6 +100,20 @@ class FacebookClient:
             self._app_secret.encode("utf-8"), token.encode("utf-8"), hashlib.sha256
         ).hexdigest()
 
+    async def _send(self, method: str, url: str, *, path: str, **kwargs: Any) -> httpx.Response:
+        """One HTTP call, retried only when the connection never opened."""
+        assert self._client is not None
+        for delay in (*CONNECT_RETRY_DELAYS, None):
+            try:
+                return await self._client.request(method, url, **kwargs)
+            except _NOT_SENT as exc:
+                if delay is None:
+                    raise
+                log.warning("facebook.connect_retry", path=path,
+                            error=type(exc).__name__, wait_seconds=delay)
+                await asyncio.sleep(delay)
+        raise AssertionError("unreachable")
+
     async def _request(
         self,
         method: str,
@@ -115,8 +141,8 @@ class FacebookClient:
         headers = {"Authorization": f"Bearer {token}"}
 
         try:
-            response = await self._client.request(
-                method, url,
+            response = await self._send(
+                method, url, path=path,
                 params=query or None,
                 data=data or None,
                 files=files or None,
@@ -415,8 +441,8 @@ class FacebookClient:
         if self._client is None:
             raise RuntimeError("FacebookClient must be used as an async context manager")
         try:
-            response = await self._client.post(
-                upload_url,
+            response = await self._send(
+                "POST", upload_url, path="rupload",
                 headers={
                     "Authorization": f"OAuth {token}",
                     "offset": "0",

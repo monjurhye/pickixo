@@ -38,7 +38,7 @@ from app.facebook_agent import actions  # noqa: E402
 from app.facebook_agent.decision import (  # noqa: E402
     DecisionParseError, apply_fact_check, parse_reel_script,
 )
-from app.services.facebook import FacebookClient, PageRef  # noqa: E402
+from app.services.facebook import FacebookClient, GraphFailure, PageRef  # noqa: E402
 from app.services.video import captions, compose, hook  # noqa: E402
 from app.services.video.reel import MIN_SCENE_SECONDS, let_clip_play  # noqa: E402
 
@@ -444,6 +444,65 @@ class ReelUpload(unittest.TestCase):
         # The token is a header, never part of a URL a log could keep.
         for request in calls:
             self.assertNotIn("PAGE-TOKEN", str(request.url))
+
+    def _upload_with(self, handler) -> None:
+        from app.services.facebook import client as client_module
+
+        ref = PageRef(page_id="42", access_token="PAGE-TOKEN")
+
+        async def go():
+            client = FacebookClient(graph_base_url="https://graph.facebook.com/v25.0",
+                                    client=httpx.AsyncClient(
+                                        transport=httpx.MockTransport(handler)))
+            async with client:
+                await client.start_reel(ref)
+                await client.upload_reel(
+                    ref, upload_url="https://rupload.facebook.com/v", video=b"x")
+
+        saved = client_module.CONNECT_RETRY_DELAYS
+        client_module.CONNECT_RETRY_DELAYS = (0.0, 0.0)
+        try:
+            asyncio.run(go())
+        finally:
+            client_module.CONNECT_RETRY_DELAYS = saved
+
+    def test_a_connection_that_never_opened_is_retried(self) -> None:
+        attempts = {"start": 0, "rupload": 0}
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            key = "rupload" if "rupload" in str(request.url) else "start"
+            attempts[key] += 1
+            if attempts[key] == 1:
+                raise httpx.ConnectTimeout("stalled", request=request)
+            if key == "rupload":
+                return httpx.Response(200, json={"success": True})
+            return httpx.Response(200, json={
+                "video_id": "v1", "upload_url": "https://rupload.facebook.com/v"})
+
+        self._upload_with(handler)
+        self.assertEqual(attempts, {"start": 2, "rupload": 2})
+
+    def test_connect_retries_are_bounded(self) -> None:
+        attempts: list[httpx.Request] = []
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            attempts.append(request)
+            raise httpx.ConnectError("refused", request=request)
+
+        with self.assertRaises(GraphFailure):
+            self._upload_with(handler)
+        self.assertEqual(len(attempts), 3)
+
+    def test_a_request_that_may_have_landed_is_not_retried(self) -> None:
+        attempts: list[httpx.Request] = []
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            attempts.append(request)
+            raise httpx.ReadTimeout("no answer", request=request)
+
+        with self.assertRaises(GraphFailure):
+            self._upload_with(handler)
+        self.assertEqual(len(attempts), 1)
 
 
 # ===========================================================================

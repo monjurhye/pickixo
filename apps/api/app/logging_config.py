@@ -77,6 +77,11 @@ def get_logger(name: str) -> BoundLogger:
 
 
 def configure_logging(level: str = "info", json_output: bool = True) -> None:
+    # Under NSSM stdout is a file in the Windows ANSI code page (cp1252), which
+    # cannot hold the non-breaking hyphens and curly quotes models write. Each
+    # such line failed to log at all.
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="backslashreplace")
     handler = logging.StreamHandler(sys.stdout)
     handler.setFormatter(
         JsonFormatter() if json_output
