@@ -531,9 +531,15 @@ async def best_posting_hours(page_uuid: str, days: int = 60) -> list[int]:
     must treat as "no opinion", not as "midnight". An agent that invents a best
     time from three posts is guessing with extra steps.
     """
+    # The time zone is looked up once, in `tz`, not once per post: before
+    # migration 022 each lookup scanned pg_timezone_names (~0.5 s), and 17
+    # posts were enough to take this query to 9 s of a 15 s statement timeout.
     rows = await db.fetch_all(
         """
-        WITH snapshot AS (
+        WITH tz AS MATERIALIZED (
+            SELECT agent_page_timezone(%s) AS name
+        ),
+        snapshot AS (
             SELECT DISTINCT ON (m.post_id)
                    m.post_id, m.reactions, m.comments, m.shares
               FROM facebook_post_metrics m
@@ -542,20 +548,20 @@ async def best_posting_hours(page_uuid: str, days: int = 60) -> list[int]:
                AND p.published_at > now() - make_interval(days => %s)
              ORDER BY m.post_id, abs(m.age_hours - 24)
         )
-        SELECT EXTRACT(HOUR FROM p.published_at
-                       AT TIME ZONE agent_page_timezone(p.page_id))::int AS hour,
+        SELECT EXTRACT(HOUR FROM p.published_at AT TIME ZONE tz.name)::int AS hour,
                avg(COALESCE(s.reactions,0) + COALESCE(s.comments,0)
                    + COALESCE(s.shares,0)) AS score,
                count(*) AS n
           FROM facebook_posts p
           JOIN snapshot s ON s.post_id = p.id
+         CROSS JOIN tz
          WHERE p.page_id = %s
          GROUP BY 1
         HAVING count(*) >= 2
          ORDER BY 2 DESC
          LIMIT 5
         """,
-        (page_uuid, days, page_uuid),
+        (page_uuid, page_uuid, days, page_uuid),
     )
     return [int(r["hour"]) for r in rows]
 
