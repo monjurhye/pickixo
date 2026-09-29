@@ -170,6 +170,20 @@ down with it. Verified both directions.
 so a crash-loop cannot spin the CPU. Verified by killing each process and
 watching it come back under a new PID.
 
+**Postgres start timeout**: `Pickixo-Postgres` runs `pg_ctl runservice ... -w -t 300`.
+The default 60 s was not enough after the 2026-09-26 reboot: pg_ctl gave up,
+SCM marked the service failed while postgres.exe kept running orphaned, and
+API and Web (which depend on it) never started. The site served 502 for three
+days. If you re-register the service, keep `-t 300`:
+
+```powershell
+sc.exe qc Pickixo-Postgres    # BINARY_PATH_NAME must end in -w -t 300
+```
+
+If it happens anyway (all Pickixo services stopped but port 5432 is in use),
+stop the orphan with `pg_ctl -D C:\Pickixo\pgdata stop -m fast`, then
+`Start-Service Pickixo-Web, Pickixo-Agent`.
+
 nginx deliberately does **not** depend on the others. If the app failed to start,
 a running nginx returning 502 is a better outcome than no listener at all.
 
