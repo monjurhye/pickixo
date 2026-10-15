@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · WiFi Detective</title>
+<meta name="description" content="How the WiFi Detective Android app handles your information.">
+<link rel="canonical" href="https://pickixo.com/wifi-detective/privacy">
+<style>
+  :root {
+    --bg: #f7f9fc; --card: #ffffff; --text: #18202a; --muted: #5f6b7a;
+    --line: #d7e3f4; --accent: #1565c0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #101418; --card: #1b2129; --text: #e6edf5; --muted: #a3b0bf; --line: #2c3642; --accent: #90caf9; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Bengali", sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 56px; }
+  article { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px 24px; }
+  article + article { margin-top: 24px; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 4px; }
+  h2 { font-size: 1.15rem; margin: 28px 0 8px; }
+  p, li { color: var(--text); }
+  .meta { color: var(--muted); margin: 0 0 20px; font-size: .95rem; }
+  .lang { margin: 0 0 16px; font-size: .95rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); overflow-wrap: anywhere; }
+  code { font-size: .9em; overflow-wrap: anywhere; }
+  footer { color: var(--muted); font-size: .875rem; text-align: center; margin-top: 20px; }
+</style>
+</head>
+<body>
+<main>
+<p class="lang"><a href="#bn">বাংলায় পড়ুন</a></p>
+<article>
+  <h1>Privacy Policy for WiFi Detective</h1>
+  <p class="meta">Effective date: October 15, 2026 · Android app <code>com.pickixo.wifidetective</code> · Developer: Pickixo</p>
+
+  <p>WiFi Detective (the "app") is a network diagnostics app for Android: internet troubleshooter, speed test,
+  Wi-Fi analyzer, local network scanner, popular services check and network tools. This policy explains what
+  information the app uses, where it goes, and the choices you have.</p>
+
+  <p>The short version: the app has no accounts and no servers of its own. Test results are stored only on your
+  device and leave it only when you choose to share or export them. Data leaves your device in two cases: network
+  tests you start, which contact public test servers, and Google AdMob, which shows the ads.</p>
+
+  <h2>Data stored on your device</h2>
+  <ul>
+    <li><strong>Saved reports</strong> (diagnosis, speed test, network scan, services check, Wi-Fi survey): the newest 50.</li>
+    <li><strong>Devices seen by the network scanner:</strong> IP address, name, MAC address (Android 9 and older
+      only), and when each was first and last seen, so new devices can be highlighted.</li>
+    <li><strong>Connection monitor results</strong> (if you turn it on): whether each check worked, the network
+      type and the response time, kept for 14 days.</li>
+    <li><strong>Settings</strong> such as theme, language, timeouts, data budget and a custom speed test server.</li>
+  </ul>
+  <p>This data stays in the app's private storage, is excluded from Android cloud backup and device-to-device
+  transfer, and the developer cannot access it. Delete a report, use "Clear history", or uninstall the app to
+  remove it.</p>
+
+  <h2>Network requests made by tests</h2>
+  <p>Only when you start a test, the app connects to:</p>
+  <ul>
+    <li><strong>Google:</strong> <code>www.google.com/generate_204</code>, <code>connectivitycheck.gstatic.com</code>,
+      <code>8.8.8.8</code>, <code>2001:4860:4860::8888</code>.</li>
+    <li><strong>Cloudflare:</strong> <code>cp.cloudflare.com</code>, <code>www.cloudflare.com</code>,
+      <code>speed.cloudflare.com</code> (speed test), <code>1.1.1.1</code>, <code>2606:4700:4700::1111</code>.</li>
+    <li><strong>ipify:</strong> <code>api.ipify.org</code> and <code>api6.ipify.org</code> (Public IP tool).</li>
+    <li><strong>A speed test server you configure yourself</strong>, if you enter one.</li>
+    <li><strong>Popular services check:</strong> one small HTTPS request (at most 16 KB read) to the public home
+      page of each of: Google, Cloudflare, YouTube, Facebook, Instagram, TikTok, Netflix, Spotify, WhatsApp Web,
+      Messenger, Telegram, Discord, Gmail, Zoom, Microsoft Teams, Free Fire (Garena), PUBG Mobile, Roblox, Steam,
+      PlayStation, Xbox, bKash and Daraz. No account or personal data is sent.</li>
+    <li><strong>Hosts you type</strong> into the DNS, TCP, HTTPS or traceroute tools.</li>
+    <li><strong>Devices on your own local network</strong> (network scanner and local tools; private address ranges only).</li>
+  </ul>
+  <p>Like any website, these servers see your <strong>public IP address</strong> and the request itself (for
+  example the URL and a standard User-Agent). The app sends no personal information, identifiers, reports or Wi-Fi
+  names to them. The speed test uploads random data generated on your device.</p>
+
+  <h2>Optional background features (off until you turn them on)</h2>
+  <ul>
+    <li><strong>Connection monitor:</strong> about every 15 minutes, one small HTTPS request to
+      <code>www.google.com/generate_204</code> (falling back to <code>cp.cloudflare.com/generate_204</code>).</li>
+    <li><strong>New-device alerts:</strong> about every 6 hours, on unmetered Wi-Fi, a scan of your own local
+      network; a notification appears if a never-seen device joins. Nothing leaves your local network.</li>
+  </ul>
+
+  <h2>Local network discovery</h2>
+  <p>The network scanner makes short connection attempts to devices on your own private network and asks them to
+  describe themselves with standard local protocols (mDNS/Bonjour, SSDP/UPnP and NetBIOS). These requests never
+  leave your network, and the answers are stored only in the device list on your phone. The scanner refuses public
+  address ranges.</p>
+
+  <h2>Location permission</h2>
+  <p>Android requires location permission for any app to list nearby Wi-Fi networks. WiFi Detective asks for it only
+  in the Wi-Fi Analyzer, after explaining why, and uses it only to show nearby networks and channel congestion. The
+  app never reads your GPS position, and nearby-network lists are not stored or transmitted. You can refuse or revoke
+  the permission; all other features keep working.</p>
+
+  <h2>Notifications, widget and Wi-Fi QR codes</h2>
+  <ul>
+    <li><strong>Notifications</strong> are used only for new-device alerts, after you turn them on and grant permission.</li>
+    <li>The <strong>widget and Quick Settings tile</strong> read the connection status from Android and the latest
+      saved speed test. They make no network requests.</li>
+    <li>The <strong>Wi-Fi QR code</strong> encodes a network name and password that you type. Android does not let
+      apps read saved Wi-Fi passwords, and the app never stores or sends the password.</li>
+  </ul>
+
+  <h2>Advertising (Google AdMob)</h2>
+  <p>The app shows a banner on the Home screen and, at most once every 3 minutes after a finished test, a
+  full-screen ad, both provided by Google AdMob. The Google Mobile Ads SDK automatically collects and shares the
+  following with Google for advertising, analytics and fraud prevention:</p>
+  <ul>
+    <li>the IP address, which may be used to estimate general location;</li>
+    <li>product interactions, such as ad views and taps;</li>
+    <li>diagnostic information;</li>
+    <li>device identifiers, including the Android advertising ID.</li>
+  </ul>
+  <p>The app does not enable the SDK's optional precise-location features. Where required by law (for example in
+  the EEA, the UK and Switzerland), the app asks for your consent through Google's User Messaging Platform before
+  ads are requested, and you can change your choice later in <strong>Settings → Ads and privacy</strong>. You can
+  reset or delete your advertising ID in Android settings. Google's policy:
+  <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
+
+  <h2>Sharing</h2>
+  <p>The developer does not receive, sell or share your data. Reports are shared only when you use Share or Export,
+  and then only with the app you pick.</p>
+
+  <h2>Security</h2>
+  <p>All internet tests use HTTPS with normal certificate validation. The single plain-HTTP request goes to
+  Google's sign-in-page check (<code>connectivitycheck.gstatic.com</code>), which is needed to detect hotel and
+  airport login pages and carries no personal data.</p>
+
+  <h2>Children</h2>
+  <p>WiFi Detective is a general-audience utility and is not directed at children under 13. It does not knowingly
+  collect personal information from children.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the updated version will be posted on this page with a new effective date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy or your data:
+  <a href="mailto:monjurhye@gmail.com">monjurhye@gmail.com</a></p>
+</article>
+
+<article id="bn" lang="bn">
+  <h1>WiFi Detective — গোপনীয়তা নীতি</h1>
+  <p class="meta">কার্যকর তারিখ: ১৫ অক্টোবর ২০২৬ · Android অ্যাপ <code>com.pickixo.wifidetective</code> · ডেভেলপার: Pickixo</p>
+
+  <h2>সংক্ষেপে</h2>
+  <p>WiFi Detective একটি নেটওয়ার্ক ডায়াগনস্টিক অ্যাপ। এতে কোনো অ্যাকাউন্ট বা নিজস্ব সার্ভার নেই। টেস্টের ফলাফল শুধু আপনার
+  ডিভাইসে থাকে, আর আপনি নিজে শেয়ার বা এক্সপোর্ট করলে তবেই বাইরে যায়। দুটি ক্ষেত্রে ডেটা ডিভাইসের বাইরে যায়: আপনার শুরু
+  করা নেটওয়ার্ক টেস্ট, এবং Google AdMob বিজ্ঞাপন।</p>
+
+  <h2>আপনার ডিভাইসে সংরক্ষিত ডেটা</h2>
+  <ul>
+    <li>সংরক্ষিত রিপোর্ট (সর্বশেষ ৫০টি)।</li>
+    <li>নেটওয়ার্ক স্ক্যানারে দেখা ডিভাইসের তালিকা: আইপি, নাম, এবং শুধু Android 9 ও আগের সংস্করণে MAC ঠিকানা।</li>
+    <li>সংযোগ মনিটরের ফলাফল (চালু করলে), ১৪ দিন পর্যন্ত।</li>
+    <li>সেটিংস।</li>
+  </ul>
+  <p>এগুলো অ্যাপের প্রাইভেট স্টোরেজে থাকে, ক্লাউড ব্যাকআপে যায় না, আর ডেভেলপার এগুলো দেখতে পারেন না। রিপোর্ট মুছে,
+  "ইতিহাস মুছুন" ব্যবহার করে, অথবা অ্যাপ আনইনস্টল করে এগুলো মুছতে পারেন।</p>
+
+  <h2>টেস্টের নেটওয়ার্ক অনুরোধ</h2>
+  <p>আপনি টেস্ট শুরু করলে অ্যাপ যোগাযোগ করে:</p>
+  <ul>
+    <li>Google ও Cloudflare-এর কানেক্টিভিটি ও স্পিড টেস্ট সার্ভার।</li>
+    <li>পাবলিক আইপি টুলের জন্য ipify।</li>
+    <li>আপনার নিজের সেট করা স্পিড টেস্ট সার্ভার।</li>
+    <li>জনপ্রিয় সেবা পরীক্ষা: YouTube, Facebook, WhatsApp Web, Gmail, Zoom, গেম প্রকাশক, bKash, Daraz-সহ ২৩টি সেবার
+      পাবলিক হোম পেজে একটি করে ছোট HTTPS অনুরোধ। কোনো অ্যাকাউন্ট বা ব্যক্তিগত তথ্য পাঠানো হয় না।</li>
+    <li>টুলে আপনার লেখা হোস্ট।</li>
+    <li>শুধু আপনার নিজের লোকাল নেটওয়ার্কের ডিভাইস (স্ক্যানার ও লোকাল টুল)।</li>
+  </ul>
+  <p>যেকোনো ওয়েবসাইটের মতোই এই সার্ভারগুলো আপনার পাবলিক আইপি ঠিকানা ও অনুরোধটি দেখতে পায়। অ্যাপ কোনো ব্যক্তিগত তথ্য,
+  শনাক্তকারী, রিপোর্ট বা ওয়াই-ফাইয়ের নাম পাঠায় না।</p>
+
+  <h2>ঐচ্ছিক ব্যাকগ্রাউন্ড ফিচার (আপনি চালু না করা পর্যন্ত বন্ধ)</h2>
+  <ul>
+    <li>সংযোগ মনিটর: প্রায় প্রতি ১৫ মিনিটে একটি ছোট HTTPS অনুরোধ।</li>
+    <li>নতুন ডিভাইসের সতর্কতা: প্রায় প্রতি ৬ ঘণ্টায় ওয়াই-ফাইতে আপনার নিজের লোকাল নেটওয়ার্ক স্ক্যান; কিছুই লোকাল নেটওয়ার্কের বাইরে যায় না।</li>
+  </ul>
+
+  <h2>লোকেশন অনুমতি</h2>
+  <p>আশেপাশের ওয়াই-ফাই নেটওয়ার্কের তালিকা দেখাতে Android লোকেশন অনুমতি চায়। অ্যাপ এটি শুধু সেই তালিকার জন্য ব্যবহার করে।
+  এটি GPS অবস্থান পড়ে না, আর নেটওয়ার্কের তালিকা সংরক্ষণ বা পাঠানো হয় না। অনুমতি না দিলেও অন্যান্য ফিচার কাজ করে।</p>
+
+  <h2>ওয়াই-ফাই QR কোড ও নোটিফিকেশন</h2>
+  <p>ওয়াই-ফাই QR কোড আপনার নিজের লেখা পাসওয়ার্ড দিয়ে ফোনেই তৈরি হয়; পাসওয়ার্ড কোথাও সংরক্ষণ বা পাঠানো হয় না। নোটিফিকেশন
+  শুধু নতুন ডিভাইসের সতর্কতার জন্য, আপনার অনুমতিতে।</p>
+
+  <h2>বিজ্ঞাপন (Google AdMob)</h2>
+  <p>অ্যাপ হোম স্ক্রিনে একটি ব্যানার এবং টেস্ট শেষে ৩ মিনিটে সর্বোচ্চ একবার একটি পূর্ণ-স্ক্রিন বিজ্ঞাপন দেখায়। Google Mobile
+  Ads SDK বিজ্ঞাপন, বিশ্লেষণ ও প্রতারণা প্রতিরোধের জন্য স্বয়ংক্রিয়ভাবে আইপি ঠিকানা (যা থেকে আনুমানিক অবস্থান বোঝা যেতে
+  পারে), বিজ্ঞাপনের সাথে আপনার কাজকর্ম, ডায়াগনস্টিক তথ্য এবং বিজ্ঞাপন আইডিসহ ডিভাইস শনাক্তকারী সংগ্রহ করে Google-এর সাথে
+  শেয়ার করে। যেখানে আইন অনুযায়ী প্রয়োজন (যেমন EEA ও যুক্তরাজ্য), সেখানে বিজ্ঞাপনের আগে সম্মতি চাওয়া হয়, আর
+  <strong>সেটিংস → বিজ্ঞাপন ও গোপনীয়তা</strong> থেকে পছন্দ বদলাতে পারেন।</p>
+
+  <h2>শেয়ারিং</h2>
+  <p>ডেভেলপার আপনার কোনো ডেটা পান না, বিক্রি করেন না বা শেয়ার করেন না। আপনি শেয়ার বা এক্সপোর্ট করলে তবেই রিপোর্ট আপনার বেছে
+  নেওয়া অ্যাপে যায়।</p>
+
+  <h2>শিশু</h2>
+  <p>এটি সবার জন্য একটি ইউটিলিটি অ্যাপ, ১৩ বছরের কম বয়সী শিশুদের উদ্দেশ্যে তৈরি নয়।</p>
+
+  <h2>যোগাযোগ</h2>
+  <p>প্রশ্ন থাকলে লিখুন: <a href="mailto:monjurhye@gmail.com">monjurhye@gmail.com</a></p>
+</article>
+<footer>WiFi Detective · <a href="https://pickixo.com/">pickixo.com</a></footer>
+</main>
+</body>
+</html>
