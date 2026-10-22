@@ -11,6 +11,8 @@ import { PRIMARY_NAV, SUBMENUS, submenuHref } from '@/lib/verticals';
 import type { User } from '@/lib/api';
 import { cn } from '@/lib/utils';
 
+const SHOP_HREF = '/pay/shop/ios-ebook';
+
 /**
  * The one header, on every page (§6): the user should always know where they
  * are, how to search, and how to get back.
@@ -100,6 +102,16 @@ export function SiteHeader({ user }: { user: User | null }) {
               </div>
             );
           })}
+          {/* The shop is a separate service behind /pay, not a Next.js route,
+              so this is a plain anchor and not a <Link>. */}
+          <a
+            href={SHOP_HREF}
+            className="inline-flex items-center whitespace-nowrap rounded-control px-2 py-1.5
+                       text-small font-medium text-ink-muted transition-colors
+                       hover:bg-surface-sunken hover:text-ink lg:px-3"
+          >
+            Shop
+          </a>
         </nav>
 
         <div className="ml-auto flex items-center gap-2">
@@ -210,6 +222,13 @@ export function SiteHeader({ user }: { user: User | null }) {
                   ) : null}
                 </div>
               ))}
+              <a
+                href={SHOP_HREF}
+                className="block rounded-control px-3 py-2 text-body text-ink-muted
+                           hover:bg-surface-sunken hover:text-ink"
+              >
+                Shop
+              </a>
             </nav>
             <div className="flex gap-2 border-t border-border pt-3">
               {user ? (
