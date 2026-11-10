@@ -4,6 +4,7 @@ import { SalaryCalculator } from '@/components/payscale/SalaryCalculator';
 import { PayScaleShell, Faq } from '@/components/payscale/PayScaleShell';
 import { MythBusters } from '@/components/payscale/BenefitAdjustment';
 import { MAIN_FAQ } from '@/lib/payscale/faq';
+import { IS_STATIC_SITE } from '@/lib/static-site';
 import { gradeLabel } from '@/lib/payscale/format';
 import {
   absoluteUrl, breadcrumbSchema, buildMetadata, jsonLd, softwareApplicationSchema,
@@ -30,7 +31,10 @@ type Props = { searchParams?: Record<string, string | string[] | undefined> };
 
 export default function Page({ searchParams }: Props) {
   const query: Record<string, string> = {};
-  for (const [key, value] of Object.entries(searchParams ?? {})) {
+  // The static site cannot read the query on the server — touching
+  // searchParams is what would make this page per-request — so there the
+  // calculator reads a shared link from the address bar itself.
+  for (const [key, value] of Object.entries(IS_STATIC_SITE ? {} : (searchParams ?? {}))) {
     if (typeof value === 'string') query[key] = value;
     else if (Array.isArray(value) && value[0] !== undefined) query[key] = value[0];
   }

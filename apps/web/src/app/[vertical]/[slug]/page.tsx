@@ -8,6 +8,8 @@ import { AddToMyApps } from '@/components/apps/AddToMyApps';
 import { apiFetchOrNull, type AppDetail, type AppSummary } from '@/lib/api';
 import { getCurrentUser, forwardCookies } from '@/lib/session';
 import { getVertical, isVertical } from '@/lib/verticals';
+import { IS_STATIC_SITE } from '@/lib/static-site';
+import { staticCatalogueApps } from '@/lib/static-catalogue';
 import {
   buildMetadata, jsonLd, breadcrumbSchema, softwareApplicationSchema,
 } from '@/lib/seo';
@@ -56,6 +58,28 @@ export async function generateMetadata(
 }
 
 export const revalidate = 300;
+
+/**
+ * Which landing pages to write out, for the static site.
+ *
+ * A static build can only contain pages it is told about in advance, so every
+ * catalogue entry is listed here. Only two-segment routes belong to this file
+ * (/ai/image, not /kids or /education/class-2/math), and a product that has a
+ * page of its own (/tools/background-remover) is left to that page.
+ *
+ * The server build renders these on request, as before, so it lists none.
+ */
+export function generateStaticParams() {
+  if (!IS_STATIC_SITE) return [];
+  return staticCatalogueApps()
+    .map((app) => app.route.split('/').filter(Boolean))
+    .filter((parts): parts is [string, string] => parts.length === 2)
+    .filter(([vertical, slug]) => !OWN_PAGES.has(`/${vertical}/${slug}`))
+    .map(([vertical, slug]) => ({ vertical, slug }));
+}
+
+/** Products in the catalogue that are served by their own page, not this one. */
+const OWN_PAGES = new Set(['/tools/background-remover', '/tools/youtube-transcript']);
 
 export default async function AppLandingPage(
   { params }: { params: { vertical: string; slug: string } },
@@ -138,7 +162,7 @@ export default async function AppLandingPage(
             ) : null}
           </div>
 
-          {app.supports_my_apps && !planned ? (
+          {app.supports_my_apps && !planned && !IS_STATIC_SITE ? (
             <AddToMyApps
               slug={app.slug}
               appId={app.id}

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { IS_STATIC_SITE } from './static-site';
 
 /**
  * One place that decides what every page tells a search engine.
@@ -149,15 +150,20 @@ export function websiteSchema() {
     publisher: { '@id': ORGANIZATION_ID },
     inLanguage: 'en',
     // Declared because the site really does have a working search at /search
-    // that accepts this parameter. It is not decoration.
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
+    // that accepts this parameter. It is not decoration — which is also why the
+    // static site, which has no search, does not declare it.
+    ...(IS_STATIC_SITE
+      ? {}
+      : {
+          potentialAction: {
+            '@type': 'SearchAction',
+            target: {
+              '@type': 'EntryPoint',
+              urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
+            },
+            'query-input': 'required name=search_term_string',
+          },
+        }),
   };
 }
 

@@ -7,6 +7,7 @@ import { AddToMyApps } from '@/components/apps/AddToMyApps';
 import { BackgroundRemover } from '@/components/tools/BackgroundRemover';
 import { apiFetchOrNull, type AppDetail, type AppSummary } from '@/lib/api';
 import { getCurrentUser, forwardCookies } from '@/lib/session';
+import { IS_STATIC_SITE } from '@/lib/static-site';
 import {
   buildMetadata, jsonLd, breadcrumbSchema, softwareApplicationSchema, absoluteUrl,
 } from '@/lib/seo';
@@ -32,7 +33,10 @@ export const metadata: Metadata = buildMetadata({
   path: '/tools/background-remover',
 });
 
-export const dynamic = 'force-dynamic';
+// No `dynamic = 'force-dynamic'` here. Reading the visitor's cookies below
+// already makes this page per-request on the server build, and stating it
+// outright is the one thing that would stop the static build writing this page
+// to a file.
 
 const FAQ = [
   {
@@ -180,7 +184,7 @@ export default async function BackgroundRemoverPage() {
               Remove the background from a photo and download a transparent PNG.
             </p>
           </div>
-          {app ? (
+          {app && !IS_STATIC_SITE ? (
             <AddToMyApps
               slug={app.slug}
               appId={app.id}

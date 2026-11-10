@@ -11,6 +11,8 @@
  * so the UI decides the wording and the user never sees an upstream error.
  */
 
+import { IS_STATIC_SITE } from './static-site';
+
 export const INTERNAL_API =
   process.env.INTERNAL_API_URL ?? 'http://127.0.0.1:8010';
 
@@ -58,6 +60,19 @@ export async function apiFetch<T>(
   options: RequestOptions = {},
 ): Promise<T> {
   const { method = 'GET', body, cookie, revalidate, signal } = options;
+
+  // The static site has no API. Public catalogue reads made while the pages
+  // are being built are answered from a file; everything else fails here, at
+  // once, instead of as a request to an /api path that does not exist.
+  if (IS_STATIC_SITE) {
+    if (typeof window === 'undefined' && method === 'GET') {
+      // Imported on demand so the catalogue file stays out of browser bundles.
+      const { resolveStaticCatalogue } = await import('./static-catalogue');
+      const found = resolveStaticCatalogue(path);
+      if (found !== undefined) return found as T;
+    }
+    throw new ApiError(503, 'static_site', 'errors.internalError');
+  }
 
   const headers: Record<string, string> = {};
   if (body !== undefined) headers['Content-Type'] = 'application/json';
