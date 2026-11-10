@@ -18,7 +18,7 @@
 <body>
 <main>
 <h1>Pickixo VPN Privacy Policy</h1>
-<p class="muted">Effective date: 20 October 2026 · App: Pickixo VPN (com.pickixo.vpn) · Developer: Pickixo · <a href="https://pickixo.com">pickixo.com</a></p>
+<p class="muted">Effective date: 20 October 2026 (updated for version 1.1) · App: Pickixo VPN (com.pickixo.vpn) · Developer: Pickixo · <a href="https://pickixo.com">pickixo.com</a></p>
 
 <div class="box">
 <p><strong>In short:</strong> Pickixo VPN routes your internet traffic through free public VPN servers run by volunteers of the
@@ -36,10 +36,23 @@ the server list) is excluded from the tunnel and uses your normal connection.</p
 <table>
 <tr><th>Data</th><th>Where it stays</th><th>Why</th></tr>
 <tr><td>Your chosen location and app settings</td><td>Only on your phone</td><td>To remember your choice</td></tr>
-<tr><td>The public VPN Gate server list</td><td>Only on your phone (cache)</td><td>To show countries and connect</td></tr>
+<tr><td>The public VPN Gate server list, and Pickixo's list of servers that passed a recent connection test (downloaded from pickixo.com)</td><td>Only on your phone (cache)</td><td>To show countries and connect to working servers first</td></tr>
+<tr><td>Apps you choose to keep outside the VPN (split tunneling)</td><td>Only on your phone</td><td>To route those apps over your normal connection</td></tr>
 <tr><td>Your internet traffic</td><td>Passes through the tunnel; never stored or inspected by Pickixo</td><td>To provide the VPN</td></tr>
 </table>
-<p>Pickixo has no user accounts and runs no servers of its own. We do not log the websites you visit, your IP address, or your connection times.</p>
+<p>Pickixo has no user accounts. When the app downloads the server list from pickixo.com, our web server necessarily sees your IP address
+for that request; it is not logged or stored. We do not log the websites you visit, your IP address, or your connection times.</p>
+
+<h2>2a. Pickixo Premium (only if you subscribe)</h2>
+<p>Premium is an optional Google Play subscription that connects you to servers run by Pickixo using WireGuard, without ads.</p>
+<table>
+<tr><th>Data</th><th>Where it stays</th><th>Why</th></tr>
+<tr><td>Google Play purchase token and product</td><td>Your phone and the Pickixo Premium service</td><td>To check with Google Play that your subscription is active. Payment details are handled by Google, never by Pickixo</td></tr>
+<tr><td>Your device's WireGuard public key and the private tunnel address assigned to it</td><td>Your phone, the Pickixo Premium service and the server you use, until the subscription ends</td><td>To let your device connect (up to 3 devices per subscription)</td></tr>
+<tr><td>Your IP address while connected</td><td>Only in the WireGuard server's memory, not written to disk</td><td>Needed to send traffic back to you</td></tr>
+</table>
+<p>Pickixo Premium servers do not log the websites you visit, DNS queries, traffic content or connection times. The WireGuard private key never leaves your phone.
+When your subscription ends, your device's key and address are deleted from our servers.</p>
 
 <h2>3. VPN Gate (third-party servers)</h2>
 <p>The VPN servers are operated by volunteers of the <a href="https://www.vpngate.net/">VPN Gate Academic Experiment Project</a>
@@ -66,7 +79,10 @@ You can change your choice at any time from the menu → "Ad privacy settings". 
 <ul>
 <li><strong>VPN (system dialog)</strong>: needed to create the VPN tunnel.</li>
 <li><strong>Internet / network state</strong>: needed to connect.</li>
-<li><strong>Notifications</strong> (optional): shows that the VPN is on and a Disconnect button.</li>
+<li><strong>Notifications</strong> (optional): shows that the VPN is on, the current speed and a Disconnect button.</li>
+<li><strong>Foreground service</strong>: keeps the VPN running while you use other apps.</li>
+<li><strong>Visible apps list</strong>: the split tunneling screen lists your installed apps (launcher apps only) so you can choose which ones skip the VPN. The list never leaves your phone.</li>
+<li><strong>Billing</strong>: only used if you buy Premium through Google Play.</li>
 </ul>
 
 <h2>6. Children</h2>
@@ -90,7 +106,8 @@ For data held by Google, use your Google account and ad settings. For VPN Gate l
 <h2>সংক্ষেপে (বাংলা)</h2>
 <p>Pickixo VPN আপনার ইন্টারনেট ট্রাফিক VPN Gate-এর স্বেচ্ছাসেবকদের ফ্রি সার্ভারের মাধ্যমে পাঠায়। <strong>Pickixo আপনার ব্রাউজিং তথ্য সংগ্রহ, সংরক্ষণ, শেয়ার বা বিক্রি করে না।</strong>
 VPN Gate কমপক্ষে ৩ মাস সংযোগের লগ রাখে: আপনার IP, সময়, আর কোন সাইট বা IP-তে গেছেন। আইন অনুযায়ী এই লগ কর্তৃপক্ষকে দেওয়া হতে পারে। ব্যাংকিংয়ে এই VPN ব্যবহার করবেন না।
-অ্যাপে Google AdMob-এর বিজ্ঞাপন দেখানো হয়, যা IP, ডিভাইস আইডেন্টিফায়ার ও অ্যাপ ব্যবহারের তথ্য সংগ্রহ করে।</p>
+অ্যাপে Google AdMob-এর বিজ্ঞাপন দেখানো হয়, যা IP, ডিভাইস আইডেন্টিফায়ার ও অ্যাপ ব্যবহারের তথ্য সংগ্রহ করে।
+Premium নিলে Pickixo শুধু আপনার Google Play purchase token আর ডিভাইসের WireGuard public key রাখে, সাবস্ক্রিপশন চালু আছে কিনা যাচাই আর সংযোগ দেওয়ার জন্য। Premium সার্ভার কোনো ব্রাউজিং লগ রাখে না।</p>
 </main>
 </body>
 </html>

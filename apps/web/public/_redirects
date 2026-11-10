@@ -1,0 +1,16 @@
+# Cloudflare Pages routing for the store-listing pages in this folder.
+#
+# Most of them need no rule at all: Pages serves `archivex/privacy.html` at
+# /archivex/privacy by itself, which is the address Google Play has on file.
+# Only an address that does not match its file's location needs a line here.
+#
+# Status 200 serves the file at the requested address without redirecting, so
+# the URL Google Play checks answers directly.
+#
+# nginx (config/nginx/pickixo.com.conf) ignores this file; it has its own
+# `location` block for each page.
+
+# Maaz Bangla Keyboard: the Play listing points at a root-level .html address,
+# while the file lives in the app's own folder.
+/maaz-privacy-policy.html  /maaz-bangla-keyboard/privacy  200
+/maaz-privacy-policy       /maaz-bangla-keyboard/privacy  200
