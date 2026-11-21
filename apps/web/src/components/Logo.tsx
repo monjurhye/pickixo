@@ -15,7 +15,7 @@ export function LogoMark({ className }: { className?: string }) {
       aria-hidden="true"
       focusable="false"
     >
-      <rect width="32" height="32" rx="8" className="fill-accent" />
+      <rect width="32" height="32" rx="6" className="fill-accent" />
       {/* A pointer: "pick" the thing you need. */}
       <path
         d="M11 8.5 L23 15.4 L17.6 17.2 L15.1 22.6 Z"
@@ -47,7 +47,7 @@ export function Logo({
     >
       <LogoMark />
       {showWordmark ? (
-        <span className="text-subheading font-semibold tracking-tight text-ink">
+        <span className="font-display text-[1.3rem] font-medium leading-none tracking-tight text-ink">
           Pickixo
         </span>
       ) : null}

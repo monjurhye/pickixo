@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter, Noto_Sans_Bengali } from 'next/font/google';
+import { Fraunces, Inter, Noto_Sans_Bengali } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { SITE_URL, SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION } from '@/lib/seo';
@@ -8,6 +8,15 @@ const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
+});
+
+// The display face for headings: a soft, slightly old-style serif, which is
+// most of what keeps the site from looking like a template.
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-display',
+  display: 'swap',
+  axes: ['opsz', 'SOFT'],
 });
 
 // Bengali needs its own face: Inter has no Bengali coverage, so without this
@@ -70,8 +79,8 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#faf8f5' },
-    { media: '(prefers-color-scheme: dark)', color: '#14171c' },
+    { media: '(prefers-color-scheme: light)', color: '#f8f5ef' },
+    { media: '(prefers-color-scheme: dark)', color: '#16130f' },
   ],
 };
 
@@ -79,7 +88,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${notoBengali.variable} min-h-screen bg-canvas
+        className={`${inter.variable} ${fraunces.variable} ${notoBengali.variable} min-h-screen bg-canvas
                     font-sans text-body text-ink antialiased`}
       >
         <ThemeProvider>{children}</ThemeProvider>

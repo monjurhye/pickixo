@@ -2,12 +2,9 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
-import { AppCard } from '@/components/apps/AppCard';
-import { Button } from '@/components/ui/Button';
-import { apiFetchOrNull, type AppSummary } from '@/lib/api';
 import { getCurrentUser } from '@/lib/session';
-import { IS_STATIC_SITE } from '@/lib/static-site';
 import { VERTICALS } from '@/lib/verticals';
+import { PLAY_APPS, PLAY_DEVELOPER_URL, playUrl } from '@/lib/play-apps';
 import {
   buildMetadata, jsonLd, organizationSchema, websiteSchema,
   SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION,
@@ -19,24 +16,69 @@ export const metadata: Metadata = buildMetadata({
   path: '/',
 });
 
-/**
- * The homepage is a discovery surface, not a feature list (§11).
- *
- * Rendered on the server so the headings, copy and every product link are in
- * the HTML a crawler receives, rather than appearing after JavaScript runs
- * (§61).
- */
+/** Things on this site that work today, in the browser, with no sign-up. */
+const ON_THE_WEB = [
+  {
+    href: '/pay-scale-2026',
+    name: 'Pay scale 2026',
+    nameBn: 'বেতন স্কেল ২০২৬',
+    note: 'Salary, pay fixation and increment calculators for every grade, from the gazette.',
+  },
+  {
+    href: '/kids',
+    name: 'Pickixo Kids',
+    nameBn: 'শিশুদের শেখা',
+    note: 'The Bangla alphabet and numbers for 4- and 5-year-olds, as games.',
+  },
+  {
+    href: '/education/class-2/math',
+    name: 'Class 2 Maths',
+    nameBn: 'দ্বিতীয় শ্রেণির গণিত',
+    note: 'Learn, play and practise, chapter by chapter.',
+  },
+  {
+    href: '/education/class-2/bangla',
+    name: 'Class 2 Bangla',
+    nameBn: 'দ্বিতীয় শ্রেণির বাংলা',
+    note: 'Reading and word games from the textbook.',
+  },
+  {
+    href: '/education/class-2/english',
+    name: 'Class 2 English',
+    nameBn: 'দ্বিতীয় শ্রেণির ইংরেজি',
+    note: 'English lessons with Bangla meanings.',
+  },
+  {
+    href: '/banking/calculators',
+    name: 'Banking calculators',
+    nameBn: 'ব্যাংকিং ক্যালকুলেটর',
+    note: 'Loan, savings and deposit sums, worked out in the open.',
+  },
+];
+
+function Arrow() {
+  return (
+    <svg viewBox="0 0 20 20" className="h-4 w-4 shrink-0" aria-hidden="true">
+      <path d="M5 10h10M11 6l4 4-4 4" stroke="currentColor" strokeWidth="1.6"
+            strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    </svg>
+  );
+}
+
+function SectionLabel({ n, children }: { n: string; children: React.ReactNode }) {
+  return (
+    <p className="flex items-baseline gap-3 text-micro font-semibold uppercase tracking-[0.14em] text-ink-subtle">
+      <span className="font-display text-small normal-case tracking-normal text-accent-ink">{n}</span>
+      {children}
+    </p>
+  );
+}
+
 export default async function HomePage() {
-  const [user, featured] = await Promise.all([
-    getCurrentUser(),
-    apiFetchOrNull<AppSummary[]>('/apps?featured=true&limit=6', { revalidate: 300 }),
-  ]);
+  const user = await getCurrentUser();
 
   return (
     <>
-      {/* Organization and WebSite, linked by @id. Both describe things that
-          genuinely exist: the site, its publisher, and a search box that really
-          works at /search. Nothing here is a claim the page does not make. */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -48,126 +90,155 @@ export default async function HomePage() {
 
       <main id="main">
         {/* --- hero ------------------------------------------------------- */}
-        <section className="mx-auto max-w-6xl px-4 pb-14 pt-16 sm:pt-24">
-          <h1 className="max-w-3xl text-display text-ink">
-            AI, Apps, Tools, Games, Jobs &amp; Education — all in one place.
+        <section className="mx-auto max-w-6xl px-4 pb-16 pt-16 sm:pt-24">
+          <p className="text-small text-ink-muted">Pickixo · Bangladesh</p>
+          <h1 className="mt-5 max-w-4xl text-display text-ink">
+            Small, useful software, made in Bangladesh.
           </h1>
-          <p className="mt-5 max-w-xl text-subheading font-normal text-ink-muted">
-            One Pickixo account. Use AI, get a job done, find work, keep
-            studying — and keep the things you use most in My Apps.
+          <p className="mt-6 max-w-2xl text-subheading font-normal text-ink-muted">
+            We make Android apps and games, free calculators and learning games
+            that run in the browser, and a shop of hand-picked products.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            {/* No accounts on the static site, so no button offering one. */}
-            {IS_STATIC_SITE ? null : (
-              <Link href={user ? '/dashboard' : '/sign-up'}>
-                <Button size="lg">
-                  {user ? 'Go to your dashboard' : 'Create a free account'}
-                </Button>
-              </Link>
-            )}
-            <Link href="/tools">
-              <Button size="lg" variant="secondary">Browse tools</Button>
+          <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3">
+            <a
+              href="#apps"
+              className="inline-flex h-12 items-center gap-2 rounded-control bg-accent px-6
+                         text-subheading font-medium text-white hover:bg-accent-hover"
+            >
+              See our apps <Arrow />
+            </a>
+            <Link
+              href="/pay-scale-2026"
+              className="inline-flex items-center gap-2 text-subheading font-medium text-ink
+                         underline decoration-border-strong underline-offset-4 hover:decoration-accent"
+            >
+              Pay scale 2026 calculator
             </Link>
           </div>
-
-          <p className="mt-4 text-small text-ink-subtle">
-            Free to use. No card, and no paid plan to decline.
-          </p>
         </section>
 
-        {/* --- the seven sections ----------------------------------------- */}
-        <section
-          aria-labelledby="sections-heading"
-          className="mx-auto max-w-6xl px-4 py-10"
-        >
-          <h2 id="sections-heading" className="text-title text-ink">
-            What is on Pickixo
-          </h2>
-          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {VERTICALS.map((v) => (
-              <Link
-                key={v.slug}
-                href={`/${v.slug}`}
-                className="group rounded-card border border-border bg-surface p-5
-                           transition-shadow hover:shadow-raised
-                           focus-visible:outline-none focus-visible:ring-2
-                           focus-visible:ring-accent focus-visible:ring-offset-2"
-              >
-                <p className="text-subheading text-ink">{v.name}</p>
-                <p className="mt-1.5 text-small text-ink-muted">{v.description}</p>
-              </Link>
-            ))}
+        {/* --- android apps ----------------------------------------------- */}
+        <section id="apps" aria-labelledby="apps-heading"
+                 className="scroll-mt-20 border-t border-border">
+          <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 lg:grid-cols-[1fr_2fr]">
+            <div>
+              <SectionLabel n="01">On Google Play</SectionLabel>
+              <h2 id="apps-heading" className="mt-4 text-title text-ink">Our Android apps</h2>
+              <p className="mt-3 max-w-sm text-body text-ink-muted">
+                Games and everyday tools, most of them in Bangla.
+              </p>
+              <a href={PLAY_DEVELOPER_URL}
+                 className="mt-5 inline-flex items-center gap-1.5 text-small font-medium text-accent-ink hover:underline">
+                All apps on Google Play <Arrow />
+              </a>
+            </div>
+
+            <ol className="divide-y divide-border border-y border-border">
+              {PLAY_APPS.map((app, i) => (
+                <li key={app.id}>
+                  <a
+                    href={playUrl(app.id)}
+                    className="group grid grid-cols-[2.25rem_1fr_auto] items-baseline gap-3 py-4
+                               hover:bg-surface-sunken/60 sm:px-2"
+                  >
+                    <span className="font-display text-small text-ink-subtle">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <span>
+                      <span className="text-subheading text-ink">{app.name}</span>
+                      {app.nameBn ? (
+                        <span lang="bn" className="ml-2 text-small text-ink-muted">{app.nameBn}</span>
+                      ) : null}
+                      <span className="mt-0.5 block text-small text-ink-muted">{app.blurb}</span>
+                    </span>
+                    <span className="flex items-center gap-1 text-micro font-medium text-ink-subtle
+                                     group-hover:text-accent-ink">
+                      <span className="hidden sm:inline">Google Play</span> <Arrow />
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ol>
           </div>
         </section>
 
-        {/* --- featured products ------------------------------------------ */}
-        {featured && featured.length > 0 ? (
-          <section
-            aria-labelledby="featured-heading"
-            className="mx-auto max-w-6xl px-4 py-10"
-          >
-            <h2 id="featured-heading" className="text-title text-ink">
-              Start here
+        {/* --- in the browser --------------------------------------------- */}
+        <section aria-labelledby="web-heading" className="border-t border-border bg-surface">
+          <div className="mx-auto max-w-6xl px-4 py-16">
+            <SectionLabel n="02">In your browser</SectionLabel>
+            <h2 id="web-heading" className="mt-4 max-w-2xl text-title text-ink">
+              Free to use, no account needed
             </h2>
-            <p className="mt-2 text-body text-ink-muted">
-              Products marked <em>Coming soon</em> are not built yet — they are
-              listed so you can see where Pickixo is going.
-            </p>
-            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {featured.map((app) => (
-                <AppCard key={app.id} app={app} />
+
+            <div className="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+              {ON_THE_WEB.map((item) => (
+                <Link key={item.href} href={item.href} className="group block border-t-2 border-ink pt-4">
+                  <p className="flex items-center justify-between gap-2 text-subheading text-ink
+                                group-hover:text-accent-ink">
+                    {item.name} <Arrow />
+                  </p>
+                  <p lang="bn" className="text-small text-ink-subtle">{item.nameBn}</p>
+                  <p className="mt-2 text-small text-ink-muted">{item.note}</p>
+                </Link>
               ))}
             </div>
-          </section>
-        ) : null}
-
-        {/* --- why ---------------------------------------------------------- */}
-        <section
-          aria-labelledby="why-heading"
-          className="mx-auto max-w-6xl px-4 py-10"
-        >
-          <h2 id="why-heading" className="text-title text-ink">Why Pickixo</h2>
-          <dl className="mt-6 grid gap-6 sm:grid-cols-3">
-            <div>
-              <dt className="text-subheading text-ink">One account</dt>
-              <dd className="mt-1.5 text-small text-ink-muted">
-                The same sign-in across AI, tools, games, jobs and education —
-                with one place to find what you used last.
-              </dd>
-            </div>
-            <div>
-              <dt className="text-subheading text-ink">AI that keeps answering</dt>
-              <dd className="mt-1.5 text-small text-ink-muted">
-                Several providers sit behind one AI. When one is rate limited or
-                down, Pickixo moves to the next instead of showing you an error.
-              </dd>
-            </div>
-            <div>
-              <dt className="text-subheading text-ink">Honest about limits</dt>
-              <dd className="mt-1.5 text-small text-ink-muted">
-                Free AI runs on shared free-tier capacity, so there is a daily
-                limit. We tell you what it is rather than calling it unlimited.
-              </dd>
-            </div>
-          </dl>
+          </div>
         </section>
 
-        {/* --- cta ---------------------------------------------------------- */}
-        {!user && !IS_STATIC_SITE ? (
-          <section className="mx-auto max-w-6xl px-4 py-14">
-            <div className="rounded-card border border-border bg-surface p-8 text-center">
-              <h2 className="text-title text-ink">Keep what you use</h2>
-              <p className="mx-auto mt-2 max-w-md text-body text-ink-muted">
-                Create an account to pin the products you come back to, and pick
-                up where you left off on any device.
+        {/* --- shop -------------------------------------------------------- */}
+        <section aria-labelledby="shop-heading" className="border-t border-border">
+          <div className="mx-auto grid max-w-6xl items-end gap-8 px-4 py-16 md:grid-cols-[2fr_1fr]">
+            <div>
+              <SectionLabel n="03">Shop</SectionLabel>
+              <h2 id="shop-heading" className="mt-4 text-title text-ink">Pickixo Shop</h2>
+              <p className="mt-3 max-w-xl text-body text-ink-muted">
+                Products for the home, kitchen and everyday use, picked from
+                Amazon with a short note on each. When you buy through it we
+                earn a small commission, at no extra cost to you.
               </p>
-              <Link href="/sign-up" className="mt-6 inline-block">
-                <Button size="lg">Create a free account</Button>
-              </Link>
             </div>
-          </section>
-        ) : null}
+            <a
+              href="https://shop.pickixo.com"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-control border
+                         border-ink px-6 text-subheading font-medium text-ink hover:bg-ink
+                         hover:text-ink-inverted md:justify-self-end"
+            >
+              shop.pickixo.com <Arrow />
+            </a>
+          </div>
+        </section>
+
+        {/* --- everything else -------------------------------------------- */}
+        <section aria-labelledby="sections-heading" className="border-t border-border">
+          <div className="mx-auto max-w-6xl px-4 py-16">
+            <SectionLabel n="04">Everything on Pickixo</SectionLabel>
+            <h2 id="sections-heading" className="sr-only">Sections</h2>
+            <ul className="mt-6 grid gap-x-10 sm:grid-cols-2">
+              {VERTICALS.map((v) => (
+                <li key={v.slug} className="border-b border-border">
+                  <Link href={`/${v.slug}`}
+                        className="flex items-baseline justify-between gap-4 py-3 hover:text-accent-ink">
+                    <span className="text-subheading text-ink">
+                      {v.name} <span lang="bn" className="ml-1 text-small font-normal text-ink-subtle">{v.nameBn}</span>
+                    </span>
+                    <span className="text-right text-small text-ink-subtle">{v.tagline}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* --- contact ------------------------------------------------------ */}
+        <section className="mx-auto max-w-6xl px-4 pt-4">
+          <p className="max-w-2xl font-display text-heading font-normal text-ink">
+            Questions, a bug in one of our apps, or something you wish we made?{' '}
+            <Link href="/contact" className="text-accent-ink underline decoration-accent/40 underline-offset-4 hover:decoration-accent">
+              Write to us
+            </Link>.
+          </p>
+        </section>
       </main>
 
       <SiteFooter />

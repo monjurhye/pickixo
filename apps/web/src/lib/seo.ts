@@ -21,12 +21,11 @@ export const SITE_URL = (
 
 export const SITE_NAME = 'Pickixo';
 
-export const SITE_TAGLINE =
-  'AI, Apps, Tools, Games, Jobs & Education — All in One Place';
+export const SITE_TAGLINE = 'Apps, games and useful tools from Bangladesh';
 
 export const SITE_DESCRIPTION =
-  'One account for AI, apps, tools, games, jobs and education. Free to use, ' +
-  'with the products you use most kept together in My Apps.';
+  'Pickixo makes Android apps and games, free pay-scale and banking ' +
+  'calculators, learning games for children, and a shop of hand-picked products.';
 
 /** Absolute URL for a site-relative path. Sitemap, canonical and og:url must
  *  all agree, so they all come through this. */

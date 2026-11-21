@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { apiFetchOrNull } from '@/lib/api';
 import { SITE_URL, absoluteUrl } from '@/lib/seo';
 import { SUBMENUS, VERTICALS } from '@/lib/verticals';
+import { PRODUCTS } from '@/lib/business';
 
 type SitemapData = {
   apps: { route: string; updated_at: string; vertical: string }[];
@@ -88,6 +89,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(GAZETTE_DATE),
       changeFrequency: 'yearly' as const,
       priority: route.priority,
+    })),
+    // Company and policy pages. /pricing joins once it lists something: an
+    // empty price list is noindex, and the sitemap must agree with that.
+    ...['/about', '/our-apps', '/contact', '/terms', '/privacy', '/refund-policy',
+        ...(PRODUCTS.length > 0 ? ['/pricing'] : [])].map((path) => ({
+      url: absoluteUrl(path),
+      changeFrequency: 'monthly' as const,
+      priority: 0.4,
     })),
   ];
 

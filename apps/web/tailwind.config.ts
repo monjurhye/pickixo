@@ -2,8 +2,9 @@ import type { Config } from 'tailwindcss';
 
 /**
  * The palette is intentionally restrained: a warm paper canvas, near-black ink,
- * and a single deep-teal accent. No gradients, no neon — the brief asked for a
- * product that reads as a mature tool rather than an "AI app".
+ * and a single terracotta accent, with a serif display face for headings. No
+ * gradients, no neon — it should read like something made by hand, not a
+ * template.
  *
  * Colours are declared as HSL channel triplets in globals.css so that opacity
  * modifiers (bg-accent/10) work and the dark theme is a variable swap only.
@@ -41,14 +42,15 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['var(--font-display)', 'var(--font-bengali)', 'Georgia', 'serif'],
         bengali: ['var(--font-bengali)', 'var(--font-sans)', 'sans-serif'],
         mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },
       fontSize: {
         // A modest type scale — 1.2 ratio. Big enough to establish hierarchy,
         // restrained enough not to shout.
-        'display': ['clamp(2.25rem, 1.6rem + 2.6vw, 3.5rem)', { lineHeight: '1.08', letterSpacing: '-0.025em', fontWeight: '600' }],
-        'title': ['clamp(1.75rem, 1.4rem + 1.4vw, 2.25rem)', { lineHeight: '1.18', letterSpacing: '-0.02em', fontWeight: '600' }],
+        'display': ['clamp(2.5rem, 1.7rem + 3.2vw, 4.25rem)', { lineHeight: '1.04', letterSpacing: '-0.02em', fontWeight: '500' }],
+        'title': ['clamp(1.75rem, 1.4rem + 1.4vw, 2.375rem)', { lineHeight: '1.15', letterSpacing: '-0.015em', fontWeight: '500' }],
         'heading': ['1.375rem', { lineHeight: '1.3', letterSpacing: '-0.014em', fontWeight: '600' }],
         'subheading': ['1.0625rem', { lineHeight: '1.45', letterSpacing: '-0.008em', fontWeight: '600' }],
         'body': ['0.9375rem', { lineHeight: '1.6' }],
@@ -56,8 +58,8 @@ const config: Config = {
         'micro': ['0.75rem', { lineHeight: '1.45', letterSpacing: '0.01em' }],
       },
       borderRadius: {
-        card: '0.75rem',
-        control: '0.5rem',
+        card: '0.375rem',
+        control: '0.3125rem',
       },
       boxShadow: {
         // Shadows carry a hint of the ink hue rather than pure black, which
