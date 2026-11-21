@@ -35,15 +35,15 @@ export type Business = {
 };
 
 export const BUSINESS: Business = {
-  legalName: null,
-  proprietor: null,
-  address: null,
-  phone: null,
+  legalName: 'Pickixo (পিকিক্সো)',
+  proprietor: 'Md. Monjurul Hye (মোঃ মনজুরুল হাই)',
+  address: ['Tengaora, Mohanganj', 'Netrokona 2446, Bangladesh'],
+  phone: '+880 1616-467360',
   email: 'support@pickixo.com',
-  hours: null,
-  tradeLicenceNo: null,
-  refundWindowDays: null,
-  refundProcessingDays: null,
+  hours: 'Every day, 6:00 pm – 11:00 pm (Bangladesh time)',
+  tradeLicenceNo: '77343802260236',
+  refundWindowDays: 7,
+  refundProcessingDays: 7,
   policiesUpdated: '2026-11-21',
 };
 
@@ -67,7 +67,16 @@ export type Product = {
  * Digital products sold on pickixo.com. Empty until the owner adds them —
  * the pricing page says so honestly rather than showing sample prices.
  */
-export const PRODUCTS: Product[] = [];
+export const PRODUCTS: Product[] = [
+  {
+    slug: 'ios-app-without-mac-bangla',
+    name: 'Publish an iOS App Without a Mac — Bangla edition (PDF)',
+    description:
+      'A step-by-step guide, in Bangla, to putting an app on the Apple App Store from a Windows computer, with no Mac and no iPhone: Codemagic, App Store Connect, TestFlight, AdMob and App Review.',
+    priceBdt: 199,
+    delivery: 'PDF download link sent to your email after payment',
+  },
+];
 
 export function formatBdt(amount: number): string {
   return `৳${amount.toLocaleString('en-IN')}`;
