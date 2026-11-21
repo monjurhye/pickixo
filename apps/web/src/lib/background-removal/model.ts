@@ -6,8 +6,15 @@
  * forever. Changing the model means changing this constant and deploying the
  * file to C:/Pickixo/models — see docs/MODELS.md for the build chain and the
  * acceptance gate an artifact has to pass first.
+ *
+ * NEXT_PUBLIC_MODEL_URL overrides where the same file is fetched from. The
+ * static site needs it: at 88 MB the model is over the per-file limit of the
+ * hosts that serve the rest of the site, so it has to live somewhere else. The
+ * host must send CORS headers, and the file must be this exact one —
+ * MODEL_BYTES below is checked against what arrives.
  */
-export const MODEL_URL = '/models/ormbg-fp16-43cfb436.onnx';
+export const MODEL_URL =
+  process.env.NEXT_PUBLIC_MODEL_URL || '/models/ormbg-fp16-43cfb436.onnx';
 
 /**
  * Exact size of that file. Used to show a real percentage before the first

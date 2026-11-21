@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { Logo } from '@/components/Logo';
 import { VERTICALS } from '@/lib/verticals';
+import { IS_STATIC_SITE } from '@/lib/static-site';
 
 /**
  * No canonical here, deliberately.
@@ -40,12 +41,13 @@ export default function NotFound() {
           else.
         </p>
 
+        {/* The static site has no search page to send anyone to. */}
         <Link
-          href="/search"
+          href={IS_STATIC_SITE ? '/' : '/search'}
           className="mt-6 inline-block w-fit rounded-control bg-accent px-5 py-2.5
                      text-body font-medium text-white hover:bg-accent-hover"
         >
-          Search Pickixo
+          {IS_STATIC_SITE ? 'Go to the home page' : 'Search Pickixo'}
         </Link>
 
         <nav aria-label="Sections" className="mt-10">

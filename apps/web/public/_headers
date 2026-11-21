@@ -1,0 +1,21 @@
+# Response headers for the static site on Cloudflare Pages.
+#
+# The server build sets these in next.config.mjs (headers()), which a static
+# build cannot use, so they are restated here. nginx and `next start` ignore
+# this file. Keep the two in step.
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Build output: every file name contains a hash of its contents.
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# The background-remover worker is addressed with ?v=<hash>, but a rule here
+# cannot see the query string, so the worker is revalidated on each visit
+# instead of cached forever. It is 12 KB; the check is cheap.
+/workers/*
+  Cache-Control: public, max-age=0, must-revalidate

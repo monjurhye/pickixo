@@ -6,6 +6,7 @@ import { AppCard } from '@/components/apps/AppCard';
 import { Button } from '@/components/ui/Button';
 import { apiFetchOrNull, type AppSummary } from '@/lib/api';
 import { getCurrentUser } from '@/lib/session';
+import { IS_STATIC_SITE } from '@/lib/static-site';
 import { VERTICALS } from '@/lib/verticals';
 import {
   buildMetadata, jsonLd, organizationSchema, websiteSchema,
@@ -57,11 +58,14 @@ export default async function HomePage() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href={user ? '/dashboard' : '/sign-up'}>
-              <Button size="lg">
-                {user ? 'Go to your dashboard' : 'Create a free account'}
-              </Button>
-            </Link>
+            {/* No accounts on the static site, so no button offering one. */}
+            {IS_STATIC_SITE ? null : (
+              <Link href={user ? '/dashboard' : '/sign-up'}>
+                <Button size="lg">
+                  {user ? 'Go to your dashboard' : 'Create a free account'}
+                </Button>
+              </Link>
+            )}
             <Link href="/tools">
               <Button size="lg" variant="secondary">Browse tools</Button>
             </Link>
@@ -150,7 +154,7 @@ export default async function HomePage() {
         </section>
 
         {/* --- cta ---------------------------------------------------------- */}
-        {!user ? (
+        {!user && !IS_STATIC_SITE ? (
           <section className="mx-auto max-w-6xl px-4 py-14">
             <div className="rounded-card border border-border bg-surface p-8 text-center">
               <h2 className="text-title text-ink">Keep what you use</h2>

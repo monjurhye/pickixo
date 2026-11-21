@@ -154,4 +154,17 @@ const nextConfig = {
   },
 };
 
+// The static site (scripts/build-static.mjs): files in out/, no server.
+//
+// rewrites() and headers() only exist while a Next server is answering
+// requests, and a static build rejects them rather than ignore them. The
+// headers are restated for the file host in public/_headers; the /api rewrite
+// has no counterpart, because the static site has no API.
+if (process.env.NEXT_PUBLIC_STATIC_SITE === '1') {
+  nextConfig.output = 'export';
+  nextConfig.images = { unoptimized: true };
+  delete nextConfig.rewrites;
+  delete nextConfig.headers;
+}
+
 export default nextConfig;

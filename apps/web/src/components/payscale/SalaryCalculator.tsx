@@ -5,6 +5,7 @@ import { fixSalary } from '@/lib/payscale/salaryFixation';
 import { getScale2015, specialFixedPay, GRADES_LIST } from '@/lib/payscale/payScale';
 import { findGradesForBasic } from '@/lib/payscale/validation';
 import { encodeFixation, decodeFixation } from '@/lib/payscale/share';
+import { IS_STATIC_SITE } from '@/lib/static-site';
 import { formatBn, fromBnDigits, gradeLabel, taka, toBnDigits } from '@/lib/payscale/format';
 import { SalaryResult } from './SalaryResult';
 import { FirstAppointmentCalculator } from './FirstAppointmentCalculator';
@@ -72,6 +73,34 @@ export function SalaryCalculator({ initialQuery }: { initialQuery?: Record<strin
       });
     }
   }, [shared]);
+
+  // On the static site the page is a file, so the server never sees the query
+  // and `initialQuery` arrives empty. A shared link is read from the address
+  // bar instead, once the page is running in the browser.
+  useEffect(() => {
+    if (!IS_STATIC_SITE) return;
+    const link = decodeFixation(new URLSearchParams(window.location.search));
+    if (!link.grade) return;
+    setGrade(String(link.grade));
+    if (link.currentBasic) setBasic(String(link.currentBasic));
+    if (link.category) setCategory(link.category);
+    if (link.specialFixedPayId) setFixedPost(link.specialFixedPayId);
+    if (link.specialBenefitAmount) setSpecialBenefit(String(link.specialBenefitAmount));
+    if (link.qualifyingServiceMonths !== undefined) {
+      setQualifying(String(link.qualifyingServiceMonths));
+    }
+    if (link.currentBasic) {
+      setSubmitted({
+        grade: link.grade,
+        currentBasic: link.currentBasic,
+        category: link.category ?? 'regular',
+        ...(link.specialFixedPayId ? { specialFixedPayId: link.specialFixedPayId } : {}),
+        ...(link.specialBenefitAmount ? { specialBenefitAmount: link.specialBenefitAmount } : {}),
+        ...(link.qualifyingServiceMonths !== undefined
+          ? { qualifyingServiceMonths: link.qualifyingServiceMonths } : {}),
+      });
+    }
+  }, []);
 
   const gradeNumber = grade === '' ? null : Number(grade);
   const scale = gradeNumber ? getScale2015(gradeNumber) : null;

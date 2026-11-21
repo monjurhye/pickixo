@@ -36,8 +36,12 @@ const WORKER_CONFIG = {
   modelUrl: MODEL_URL,
   modelBytes: MODEL_BYTES,
   cacheName: MODEL_CACHE,
-  /** Where sync-ort-assets.mjs puts the runtime. Trailing slash required. */
-  ortBase: `/ort/${process.env.NEXT_PUBLIC_ORT_VERSION}/`,
+  /**
+   * Where sync-ort-assets.mjs puts the runtime. Trailing slash required.
+   * The static build points this at a CDN copy of the same version instead,
+   * because one of the runtime's files is over its host's per-file limit.
+   */
+  ortBase: process.env.NEXT_PUBLIC_ORT_BASE || `/ort/${process.env.NEXT_PUBLIC_ORT_VERSION}/`,
 } as const;
 
 interface Pending {

@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/Button';
 import { PRIMARY_NAV, SUBMENUS, submenuHref } from '@/lib/verticals';
 import type { User } from '@/lib/api';
 import { cn } from '@/lib/utils';
+import { IS_STATIC_SITE } from '@/lib/static-site';
 
 const SHOP_HREF = '/pay/shop/ios-ebook';
 
@@ -115,12 +116,16 @@ export function SiteHeader({ user }: { user: User | null }) {
         </nav>
 
         <div className="ml-auto flex items-center gap-2">
-          <div className="hidden sm:block sm:w-56 md:w-28 lg:w-52 xl:w-72">
-            <SearchBox />
-          </div>
+          {/* Search and accounts both need the API, which the static site does
+              not have; there they are left out rather than shown broken. */}
+          {IS_STATIC_SITE ? null : (
+            <div className="hidden sm:block sm:w-56 md:w-28 lg:w-52 xl:w-72">
+              <SearchBox />
+            </div>
+          )}
           <ThemeToggle />
 
-          {user ? (
+          {IS_STATIC_SITE ? null : user ? (
             <>
               <Link
                 href="/my-apps"
@@ -189,7 +194,7 @@ export function SiteHeader({ user }: { user: User | null }) {
       {mobileOpen ? (
         <div id="mobile-menu" className="border-t border-border bg-surface md:hidden">
           <div className="space-y-3 px-4 py-4">
-            <SearchBox onNavigate={() => setMobileOpen(false)} />
+            {IS_STATIC_SITE ? null : <SearchBox onNavigate={() => setMobileOpen(false)} />}
             <nav aria-label="Sections" className="grid grid-cols-2 gap-1">
               {PRIMARY_NAV.map((v) => (
                 <div
@@ -230,7 +235,7 @@ export function SiteHeader({ user }: { user: User | null }) {
                 Shop
               </a>
             </nav>
-            <div className="flex gap-2 border-t border-border pt-3">
+            <div className={cn('flex gap-2 border-t border-border pt-3', IS_STATIC_SITE && 'hidden')}>
               {user ? (
                 <>
                   <Link href="/dashboard" className="flex-1" onClick={() => setMobileOpen(false)}>
