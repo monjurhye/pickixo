@@ -44,6 +44,13 @@ export const PLAY_APPS: PlayApp[] = [
     privacy: '/survival-tiger/privacy',
   },
   {
+    id: 'com.hyelabs.bdraillive',
+    name: 'pathik',
+    nameBn: 'ট্রেনের সময়সূচি',
+    blurb: 'Bangladesh train schedules, off days and estimated train positions.',
+    privacy: '/pathik-api/privacy',
+  },
+  {
     id: 'com.pickixo.polyscan',
     name: 'Polyscan',
     blurb: 'An offline document scanner with OCR.',
