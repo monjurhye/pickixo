@@ -1,3 +1,5 @@
+import productsJson from '@/data/products.json';
+
 /**
  * Who runs Pickixo, and what it sells — the one file the merchant pages read.
  *
@@ -51,6 +53,8 @@ export const BUSINESS: Business = {
 export const BUSINESS_NAME = BUSINESS.legalName ?? 'Pickixo';
 
 export type Product = {
+  /** File name in the R2 bucket bound as PRODUCT_FILES (the PDF itself). */
+  file?: string;
   slug: string;
   name: string;
   /** One or two plain sentences: what the buyer actually gets. */
@@ -67,16 +71,10 @@ export type Product = {
  * Digital products sold on pickixo.com. Empty until the owner adds them —
  * the pricing page says so honestly rather than showing sample prices.
  */
-export const PRODUCTS: Product[] = [
-  {
-    slug: 'ios-app-without-mac-bangla',
-    name: 'Publish an iOS App Without a Mac — Bangla edition (PDF)',
-    description:
-      'A step-by-step guide, in Bangla, to putting an app on the Apple App Store from a Windows computer, with no Mac and no iPhone: Codemagic, App Store Connect, TestFlight, AdMob and App Review.',
-    priceBdt: 199,
-    delivery: 'PDF download link sent to your email after payment',
-  },
-];
+// The list lives in src/data/products.json so the payment functions in
+// functions/api/eps read the same names and prices: the price charged is always
+// the one on this page, never one sent by the browser.
+export const PRODUCTS: Product[] = productsJson;
 
 export function formatBdt(amount: number): string {
   return `৳${amount.toLocaleString('en-IN')}`;

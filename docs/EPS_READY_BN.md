@@ -67,3 +67,31 @@ EPS লিখেছে ব্যবসার ধরন অনুযায়ী 
 3. অনুমোদনের পর তারা sandbox ক্রেডেনশিয়াল দেবে; তখন চেকআউট জোড়া লাগানো হবে (GitHub: EPS-PG)।
 
 আবেদন, ফর্ম পূরণ আর পেমেন্ট আপনাকেই করতে হবে — এগুলো আমি করিনি।
+
+## পেমেন্ট সিস্টেম (২০২৬-১১-২১-এ যোগ হয়েছে, EPS ক্রেডেনশিয়াল না দেওয়া পর্যন্ত বন্ধ)
+
+কীভাবে কাজ করে:
+1. /pricing-এ "Buy now" → নাম, ইমেইল, মোবাইল, শহর → `/api/eps/checkout`
+2. সার্ভার দাম নেয় `apps/web/src/data/products.json` থেকে (ব্রাউজার থেকে নয়), অর্ডার রাখে, EPS-এর পেমেন্ট পেজে পাঠায়
+3. পেমেন্টের পর EPS ক্রেতাকে ফেরত পাঠায় `/api/eps/return`-এ; সার্ভার EPS-কে সরাসরি জিজ্ঞেস করে পেমেন্ট হয়েছে কিনা, টাকার অঙ্ক মেলায়
+4. মিললে ডাউনলোড লিংক দেখায় (৭ দিন, ৫ বার) আর ইমেইলে পাঠায়
+5. EPS-এর IPN ঠিকানা: `https://pickixo.com/api/eps/ipn` — আবেদনের সময় EPS-কে এটা দেবেন
+
+কোড: `apps/web/functions/api/eps/`, `apps/web/functions/api/download/`, `apps/web/functions-lib/`
+
+### চালু করতে Cloudflare-এ যা করতে হবে (Workers & Pages → pickixo → Settings)
+
+| কী | কোথায় | মান |
+|---|---|---|
+| `EPS_USERNAME`, `EPS_PASSWORD`, `EPS_HASH_KEY`, `EPS_MERCHANT_ID`, `EPS_STORE_ID` | Variables and secrets (Secret হিসেবে) | EPS যা দেবে |
+| `EPS_SANDBOX` | Variables | পরীক্ষার সময় `1`, আসল টাকার সময় মুছে দিন |
+| `ORDERS` | Bindings → KV namespace | নতুন KV namespace বানিয়ে বাঁধুন |
+| `PRODUCT_FILES` | Bindings → R2 bucket | নতুন R2 bucket, তাতে `ios-app-without-mac-bangla.pdf` আপলোড |
+| `RESEND_API_KEY`, `MAIL_FROM` (ঐচ্ছিক) | Variables and secrets | resend.com অ্যাকাউন্ট — না দিলে লিংক শুধু পেমেন্টের পরের পেজে দেখাবে |
+| `OWNER_EMAIL` (ঐচ্ছিক) | Variables | প্রতিটা বিক্রির খবর আপনার ইমেইলে |
+
+পরিবর্তনের পর একবার Retry deployment দিতে হয়।
+
+### EPS প্যানেলের সুবিধা (সাইটে কোড লাগে না)
+- পেমেন্ট লিংক আর ইনভয়েস: EPS মার্চেন্ট প্যানেল থেকে বানিয়ে ফেসবুক/মেসেঞ্জারে পাঠাবেন
+- Bangla QR: EPS প্যানেল থেকে QR নিয়ে দোকানে/পোস্টারে দেবেন
