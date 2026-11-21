@@ -7,7 +7,7 @@ import { AppCard } from '@/components/apps/AppCard';
 import { EmptyState } from '@/components/ui/States';
 import { apiFetchOrNull, type AppSummary } from '@/lib/api';
 import { getCurrentUser } from '@/lib/session';
-import { SUBMENUS, VERTICALS, getVertical, isVertical, submenuHref } from '@/lib/verticals';
+import { SHOWN_VERTICALS, SUBMENUS, getVertical, isVertical, submenuHref } from '@/lib/verticals';
 import { buildMetadata, jsonLd, breadcrumbSchema } from '@/lib/seo';
 
 /**
@@ -19,7 +19,7 @@ import { buildMetadata, jsonLd, breadcrumbSchema } from '@/lib/seo';
  */
 
 export function generateStaticParams() {
-  return VERTICALS.map((v) => ({ vertical: v.slug }));
+  return SHOWN_VERTICALS.map((v) => ({ vertical: v.slug }));
 }
 
 export async function generateMetadata(
@@ -101,14 +101,14 @@ export default async function VerticalPage(
           </section>
         ) : null}
 
-        {list.length === 0 ? (
+        {list.length === 0 && submenu ? null : list.length === 0 ? (
           <EmptyState
             className="mt-10 rounded-card border border-border bg-surface"
             title="Nothing here yet"
             body={`${vertical.name} is part of the plan but has nothing built yet. The rest of Pickixo is ready to use.`}
             action={
-              <Link href="/tools" className="text-small text-accent-ink underline">
-                Browse tools instead
+              <Link href="/" className="text-small text-accent-ink underline">
+                Go to the home page
               </Link>
             }
           />

@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { getCurrentUser } from '@/lib/session';
-import { VERTICALS } from '@/lib/verticals';
+import { SHOWN_VERTICALS } from '@/lib/verticals';
 import { PLAY_APPS, PLAY_DEVELOPER_URL, playUrl } from '@/lib/play-apps';
 import {
   buildMetadata, jsonLd, organizationSchema, websiteSchema,
@@ -215,7 +215,7 @@ export default async function HomePage() {
             <SectionLabel n="04">Everything on Pickixo</SectionLabel>
             <h2 id="sections-heading" className="sr-only">Sections</h2>
             <ul className="mt-6 grid gap-x-10 sm:grid-cols-2">
-              {VERTICALS.map((v) => (
+              {SHOWN_VERTICALS.map((v) => (
                 <li key={v.slug} className="border-b border-border">
                   <Link href={`/${v.slug}`}
                         className="flex items-baseline justify-between gap-4 py-3 hover:text-accent-ink">

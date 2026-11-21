@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { apiFetchOrNull } from '@/lib/api';
 import { SITE_URL, absoluteUrl } from '@/lib/seo';
-import { SUBMENUS, VERTICALS } from '@/lib/verticals';
+import { SHOWN_VERTICALS, SUBMENUS } from '@/lib/verticals';
 import { PRODUCTS } from '@/lib/business';
 
 type SitemapData = {
@@ -62,7 +62,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
       ...(siteChanged ? { lastModified: new Date(siteChanged) } : {}),
     },
-    ...VERTICALS.map((v) => {
+    ...SHOWN_VERTICALS.map((v) => {
       const changed = perVertical[v.slug];
       return {
         url: absoluteUrl(`/${v.slug}`),

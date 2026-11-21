@@ -1,4 +1,5 @@
 import type { Vertical } from './api';
+import { IS_STATIC_SITE } from './static-site';
 
 /**
  * The seven top-level sections, in navigation order.
@@ -45,7 +46,7 @@ export const VERTICALS = [
     nameBn: 'চাকরি',
     tagline: 'Find work, and get ready for it',
     description:
-      'Government, private and remote listings, with the CV tools to actually apply.',
+      'Pay scale and salary calculators for government jobs in Bangladesh.',
   },
   {
     slug: 'education',
@@ -74,6 +75,19 @@ export const VERTICALS = [
 ] as const;
 
 export const VERTICAL_SLUGS = VERTICALS.map((v) => v.slug) as readonly string[];
+
+/**
+ * Sections with nothing usable on the static site (pickixo.com) — every product
+ * in them is either "Coming soon" or needs the API. They are left out of its
+ * menus, homepage, sitemap and build, and public/_redirects sends their old
+ * addresses home with a 301. The server build still has them all.
+ */
+const EMPTY_ON_STATIC_SITE = new Set(['ai', 'apps', 'tools', 'games']);
+
+/** The sections this build actually shows. Use this for anything a visitor sees. */
+export const SHOWN_VERTICALS = IS_STATIC_SITE
+  ? VERTICALS.filter((v) => !EMPTY_ON_STATIC_SITE.has(v.slug))
+  : VERTICALS;
 
 export function isVertical(value: string): value is Vertical {
   return VERTICAL_SLUGS.includes(value);
@@ -182,6 +196,6 @@ export function getSubMenu(vertical: string, slug: string) {
 
 /** Sections shown in the main navigation. Bangladesh and Apps live in the
  *  footer until they have enough behind them to earn a top-level slot. */
-export const PRIMARY_NAV = VERTICALS.filter((v) =>
+export const PRIMARY_NAV = SHOWN_VERTICALS.filter((v) =>
   ['ai', 'tools', 'games', 'jobs', 'education', 'banking'].includes(v.slug),
 );

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { Logo } from '@/components/Logo';
-import { VERTICALS } from '@/lib/verticals';
+import { SHOWN_VERTICALS } from '@/lib/verticals';
 import { IS_STATIC_SITE } from '@/lib/static-site';
 
 /**
@@ -53,7 +53,7 @@ export default function NotFound() {
         <nav aria-label="Sections" className="mt-10">
           <p className="text-small font-medium text-ink">Or start from a section</p>
           <ul className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3">
-            {VERTICALS.map((v) => (
+            {SHOWN_VERTICALS.map((v) => (
               <li key={v.slug}>
                 <Link
                   href={`/${v.slug}`}

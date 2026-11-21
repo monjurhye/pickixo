@@ -48,6 +48,11 @@ const SERVER_ONLY = [
   'src/app/t',                         // closed-testing tester links
   'src/app/apps/pickbot',
   'src/app/tools/youtube-transcript',
+  // The generic product landing page. Since "Coming soon" products were taken
+  // off the static site (src/lib/static-catalogue.ts), no product it serves is
+  // left, and `output: export` refuses a dynamic route with no params. If a
+  // live /<section>/<slug> product without its own page is added, drop this.
+  'src/app/[vertical]/[slug]',
 ];
 
 // The background remover runs in the browser, but its model is an 88 MB file

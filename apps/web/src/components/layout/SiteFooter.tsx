@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { LogoMark } from '@/components/Logo';
-import { VERTICALS } from '@/lib/verticals';
+import { SHOWN_VERTICALS } from '@/lib/verticals';
 import { BUSINESS, BUSINESS_NAME } from '@/lib/business';
 
 const COMPANY = [
@@ -83,7 +83,7 @@ export function SiteFooter() {
 
           <FooterList
             title="Sections"
-            items={VERTICALS.map((v) => ({ href: `/${v.slug}`, label: v.name }))}
+            items={SHOWN_VERTICALS.map((v) => ({ href: `/${v.slug}`, label: v.name }))}
           />
           <FooterList title="Company" items={COMPANY} />
           <FooterList title="Policies" items={LEGAL} />

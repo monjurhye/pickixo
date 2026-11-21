@@ -14,3 +14,24 @@
 # while the file lives in the app's own folder.
 /maaz-privacy-policy.html  /maaz-bangla-keyboard/privacy  200
 /maaz-privacy-policy       /maaz-bangla-keyboard/privacy  200
+
+# Sections and "Coming soon" products removed from the static site on
+# 2026-11-21 (nothing in them worked). 301 so search engines drop the old
+# addresses cleanly instead of reporting 404s. Keep these rules until Search
+# Console no longer lists the old URLs.
+/ai                         /                301
+/ai/*                       /                301
+/apps                       /                301
+/apps/*                     /                301
+/tools                      /                301
+/tools/*                    /                301
+/games                      /                301
+/games/*                    /                301
+/jobs/cv-builder            /jobs            301
+/jobs/cv-analyzer           /jobs            301
+/jobs/government            /jobs            301
+/education/scholarships     /education       301
+/education/study-planner    /education       301
+
+# The header's old Shop link.
+/pay/shop/*                 https://shop.pickixo.com/  301

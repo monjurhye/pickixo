@@ -31,7 +31,12 @@ const UNAVAILABLE = new Set<string>([
   ...(process.env.NEXT_PUBLIC_MODEL_URL ? [] : ['background-remover']),
 ]);
 
-const listed = apps.filter((app) => !UNAVAILABLE.has(app.slug));
+// "Coming soon" products are left off the static site altogether: a page that
+// says "nothing here works today" is not worth a visitor's click. Their old
+// addresses redirect in public/_redirects.
+const listed = apps.filter(
+  (app) => !UNAVAILABLE.has(app.slug) && app.status !== 'planned',
+);
 
 function toSummary(app: AppDetail): AppSummary {
   return {
