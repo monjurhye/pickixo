@@ -85,8 +85,8 @@ EPS লিখেছে ব্যবসার ধরন অনুযায়ী 
 |---|---|---|
 | `EPS_USERNAME`, `EPS_PASSWORD`, `EPS_HASH_KEY`, `EPS_MERCHANT_ID`, `EPS_STORE_ID` | Variables and secrets (Secret হিসেবে) | EPS যা দেবে |
 | `EPS_SANDBOX` | Variables | পরীক্ষার সময় `1`, আসল টাকার সময় মুছে দিন |
-| `ORDERS` | Bindings → KV namespace | নতুন KV namespace বানিয়ে বাঁধুন |
-| `PRODUCT_FILES` | Bindings → R2 bucket | নতুন R2 bucket, তাতে `ios-app-without-mac-bangla.pdf` আপলোড |
+| `ORDERS` | Bindings → KV namespace | ✅ করা হয়েছে (২০২৬-১১-২১): `pickixo-orders`, শুধু production |
+| `PRODUCT_FILES` | Bindings → R2 bucket | ✅ করা হয়েছে: private bucket `pickixo-products`, তাতে বাংলা PDF (Mac-chara-iOS-App-Prokash.pdf, ৪৪ পাতা) আপলোড; লাইভ সাইটে টেস্ট অর্ডার দিয়ে ডাউনলোড যাচাই করা |
 | `RESEND_API_KEY`, `MAIL_FROM` (ঐচ্ছিক) | Variables and secrets | resend.com অ্যাকাউন্ট — না দিলে লিংক শুধু পেমেন্টের পরের পেজে দেখাবে |
 | `OWNER_EMAIL` (ঐচ্ছিক) | Variables | প্রতিটা বিক্রির খবর আপনার ইমেইলে |
 
