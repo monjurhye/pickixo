@@ -65,6 +65,8 @@ export type Product = {
   delivery: string;
   /** Optional page with more detail. */
   href?: string;
+  /** Shelf on /shop: an ebook (PDF) or a tool (app, template, script). */
+  kind?: 'ebook' | 'tool';
 };
 
 /**
@@ -74,7 +76,7 @@ export type Product = {
 // The list lives in src/data/products.json so the payment functions in
 // functions/api/eps read the same names and prices: the price charged is always
 // the one on this page, never one sent by the browser.
-export const PRODUCTS: Product[] = productsJson;
+export const PRODUCTS: Product[] = productsJson as Product[];
 
 export function formatBdt(amount: number): string {
   return `৳${amount.toLocaleString('en-IN')}`;

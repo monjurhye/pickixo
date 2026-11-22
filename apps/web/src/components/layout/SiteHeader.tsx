@@ -14,7 +14,7 @@ import { IS_STATIC_SITE } from '@/lib/static-site';
 
 /** The product-picks shop is its own site. The old /pay/shop path 404s on the
  *  static site, so the link goes straight there. */
-const SHOP_HREF = 'https://shop.pickixo.com';
+const SHOP_HREF = '/shop';
 
 /**
  * The one header, on every page (§6): the user should always know where they
@@ -105,7 +105,7 @@ export function SiteHeader({ user }: { user: User | null }) {
               </div>
             );
           })}
-          {/* The shop is a separate site, so a plain anchor and not a <Link>. */}
+          {/* Our own ebooks and tools (/shop). A plain anchor keeps it identical in both menus. */}
           <a
             href={SHOP_HREF}
             className="inline-flex items-center whitespace-nowrap rounded-control px-2 py-1.5

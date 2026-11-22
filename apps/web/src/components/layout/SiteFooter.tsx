@@ -8,7 +8,8 @@ const COMPANY = [
   { href: '/our-apps', label: 'Our Android apps' },
   { href: '/pricing', label: 'Products & pricing' },
   { href: '/contact', label: 'Contact' },
-  { href: 'https://shop.pickixo.com', label: 'Shop', external: true },
+  { href: '/shop', label: 'Shop: ebooks & tools' },
+  { href: 'https://shop.pickixo.com', label: 'Amazon finds', external: true },
 ];
 
 const LEGAL = [

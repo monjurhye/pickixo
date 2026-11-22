@@ -193,18 +193,18 @@ export default async function HomePage() {
               <SectionLabel n="03">Shop</SectionLabel>
               <h2 id="shop-heading" className="mt-4 text-title text-ink">Pickixo Shop</h2>
               <p className="mt-3 max-w-xl text-body text-ink-muted">
-                Products for the home, kitchen and everyday use, picked from
-                Amazon with a short note on each. When you buy through it we
-                earn a small commission, at no extra cost to you.
+                Our own ebooks and tools, written and built by us, priced in taka
+                and paid with bKash, Nagad, Rocket or card. Looking for things for
+                the home? See our <a href="https://shop.pickixo.com">Amazon finds</a>.
               </p>
             </div>
             <a
-              href="https://shop.pickixo.com"
+              href="/shop"
               className="inline-flex h-12 items-center justify-center gap-2 rounded-control border
                          border-ink px-6 text-subheading font-medium text-ink hover:bg-ink
                          hover:text-ink-inverted md:justify-self-end"
             >
-              shop.pickixo.com <Arrow />
+              Open the shop <Arrow />
             </a>
           </div>
         </section>
