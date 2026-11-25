@@ -90,7 +90,23 @@ export function SiteFooter() {
           <FooterList title="Policies" items={LEGAL} />
         </div>
 
-        <div className="mt-12 flex flex-col gap-2 border-t border-border pt-6
+        {/* EPS's own "Pay with … Verified by EPS" banner, as EPS asks merchants to show it. */}
+        <div className="mt-12">
+          {/* eslint-disable @next/next/no-img-element */}
+          <picture className="block dark:hidden">
+            <source media="(min-width: 768px)" srcSet="/eps/footer-desktop-light.png" />
+            <img src="/eps/footer-mobile-light.png" loading="lazy" decoding="async" className="h-auto w-full"
+                 alt="Pay with Visa, Mastercard, American Express, DBBL Nexus, Rocket, Cellfin, mobile banking and more. Verified by EPS (Easy Payment System)." />
+          </picture>
+          <picture className="hidden dark:block">
+            <source media="(min-width: 768px)" srcSet="/eps/footer-desktop-dark.png" />
+            <img src="/eps/footer-mobile-dark.png" loading="lazy" decoding="async" className="h-auto w-full"
+                 alt="Pay with Visa, Mastercard, American Express, DBBL Nexus, Rocket, Cellfin, mobile banking and more. Verified by EPS (Easy Payment System)." />
+          </picture>
+          {/* eslint-enable @next/next/no-img-element */}
+        </div>
+
+        <div className="mt-8 flex flex-col gap-2 border-t border-border pt-6
                         text-micro text-ink-subtle sm:flex-row sm:items-center
                         sm:justify-between">
           <p>© {new Date().getFullYear()} {BUSINESS_NAME}</p>

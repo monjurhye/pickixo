@@ -49,6 +49,10 @@ export function BuyForm({ slug, price }: { slug: string; price: string }) {
           <p className="mt-2 text-micro text-ink-subtle">
             You will be taken to EPS&apos;s secure payment page.
           </p>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/eps/pay-with-eps.png" width={500} height={86} loading="lazy"
+               alt="Pay with EPS: Visa, Mastercard, American Express, Rocket and others"
+               className="mt-3 h-auto w-full max-w-sm" />
         </div>
       </form>
     </details>
