@@ -95,3 +95,22 @@ EPS লিখেছে ব্যবসার ধরন অনুযায়ী 
 ### EPS প্যানেলের সুবিধা (সাইটে কোড লাগে না)
 - পেমেন্ট লিংক আর ইনভয়েস: EPS মার্চেন্ট প্যানেল থেকে বানিয়ে ফেসবুক/মেসেঞ্জারে পাঠাবেন
 - Bangla QR: EPS প্যানেল থেকে QR নিয়ে দোকানে/পোস্টারে দেবেন
+
+## ২০২৬-১১-২৫: ক্রেডেনশিয়াল এসেছে — অবস্থা
+
+- EPS zip (পাসওয়ার্ড: EPS) এসেছে। Sandbox (Eps_Demo) দিয়ে পুরো ফ্লো পরীক্ষা সফল।
+- ফুটারে আর Buy ফর্মে EPS ব্যানার লাইভ (EPS-এর শর্ত)।
+- Cloudflare production-এ বসানো হয়েছে: `EPS_MERCHANT_ID`, `EPS_STORE_ID`, `EPS_USERNAME`, `EPS_HASH_KEY`। `EPS_SANDBOX` বসানো হয়নি (মানে live)।
+- **বাকি: `EPS_PASSWORD`** — Dashboard-এ বদলানো নতুন পাসওয়ার্ড, আপনি নিজে বসাবেন।
+- zip-এ "HOSTIXE" নামে অন্য মার্চেন্টের ক্রেডেনশিয়াল আছে — ব্যবহার করা হয়নি, করা যাবে না।
+
+### নিজে হাতে চেক করার ধাপ
+1. dash.cloudflare.com → Workers & Pages → pickixo → Settings → Variables and secrets → Production → Add → Type: **Secret**, নাম `EPS_PASSWORD`, মান: নতুন পাসওয়ার্ড → Save।
+2. Deployments ট্যাব → সবচেয়ে ওপরের Production deployment → ⋯ → **Retry deployment** (secret নতুন deployment ছাড়া কাজ করে না)। ২–৩ মিনিট অপেক্ষা।
+3. https://pickixo.com/pricing → Buy now → নিজের নাম, ইমেইল, মোবাইল, শহর → টিক → "Pay ৳199 with EPS"।
+4. ফলাফল:
+   - **EPS-এর পেমেন্ট পেজ খুলল** → লগইন ঠিক আছে। এখানে Cancel করলে টাকা কাটবে না; "cancelled" অর্ডার পেজ আসবে।
+   - পুরো পরীক্ষা চাইলে ৳১৯৯ দিয়ে কিনুন → ডাউনলোড লিংক দেখাবে → PDF নামান। (EPS ফি ~২% কাটবে।)
+   - **"The payment could not start"** → EPS লগইন নিচ্ছে না। Customer Care 09609377377-এ জানান: GetToken "An error occurred while processing the request" দিচ্ছে।
+   - **"Online payment is not open yet"** → পাসওয়ার্ড বসেনি বা deployment retry হয়নি।
+5. বন্ধ করতে চাইলে: `EPS_PASSWORD` secret মুছে Retry deployment — সাইট আবার "not open yet" দেখাবে।
