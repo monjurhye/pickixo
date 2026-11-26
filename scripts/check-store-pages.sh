@@ -26,6 +26,8 @@ PAGES='
 /khatian-sohayika/privacy-policy|khatian-sohayika/privacy-policy.html|text/html
 /khamar-bondhu/privacy-policy|khamar-bondhu/privacy-policy.html|text/html
 /archivex/privacy|archivex/privacy.html|text/html
+/musicplayer/privacy|musicplayer/privacy.html|text/html
+/musicplayer/support|musicplayer/support.html|text/html
 /archivex/support|archivex/support.html|text/html
 /archivex/samples|archivex/samples.html|text/html
 /archivex/samples/Sample.zip|archivex/samples/Sample.zip|-

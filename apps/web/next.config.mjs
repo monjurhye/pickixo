@@ -117,6 +117,11 @@ const nextConfig = {
         source: '/api/:path*',
         destination: `${process.env.INTERNAL_API_URL ?? 'http://127.0.0.1:8010'}/api/:path*`,
       },
+      // Pickixo Music Player (com.pickixo.musicplayer): App Store Connect and the
+      // app's Settings link to these clean addresses. Static files in
+      // public/musicplayer/, served by Next, so no nginx change is needed.
+      { source: '/musicplayer/privacy', destination: '/musicplayer/privacy.html' },
+      { source: '/musicplayer/support', destination: '/musicplayer/support.html' },
     ];
   },
 
