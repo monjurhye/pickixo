@@ -90,6 +90,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'yearly' as const,
       priority: route.priority,
     })),
+    // Land-services helper: static links, converter and checklist.
+    { url: absoluteUrl('/bhumi-seba'), changeFrequency: 'monthly' as const, priority: 0.7 },
     // Company and policy pages. /shop and each product page join once there is
     // something to sell: an empty shop is noindex, and the sitemap must agree.
     ...['/about', '/our-apps', '/contact', '/terms', '/privacy', '/refund-policy',

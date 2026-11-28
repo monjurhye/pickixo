@@ -120,6 +120,15 @@ export function submenuHref(vertical: string, item: SubMenuItem): string {
  * Services has any today; a section without an entry here is a plain link.
  */
 export const SUBMENUS: Partial<Record<Vertical, readonly SubMenuItem[]>> = {
+  bangladesh: [
+    {
+      slug: 'bhumi-seba',
+      name: 'Land Services',
+      nameBn: 'ভূমি সেবা',
+      description: 'Official land-service links, a land-unit converter and an ownership-check list.',
+      href: '/bhumi-seba',
+    },
+  ],
   jobs: [
     {
       slug: 'salary-calculator',
