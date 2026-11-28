@@ -17,6 +17,7 @@
  */
 
 import products from '../src/data/products.json';
+import pixel from '../src/data/meta-pixel.json';
 import { checkPayment, epsConfig } from './eps.js';
 
 export const DOWNLOAD_DAYS = 7;
@@ -131,6 +132,15 @@ async function sendEmails(env, order, origin, fetchImpl) {
 
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
+// Meta Pixel Purchase event for the paid-order page; empty while no pixel ID is set.
+const PIXEL_ID = /^\d{5,20}$/.test(String(pixel?.pixelId ?? '').trim()) ? String(pixel.pixelId).trim() : '';
+function purchasePixel(order) {
+  if (!PIXEL_ID) return '';
+  const data = JSON.stringify({ value: Number(order.amount) || 0, currency: 'BDT', content_ids: [order.product], content_type: 'product' });
+  return `<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','${PIXEL_ID}');fbq('track','PageView');fbq('track','Purchase',${data},{eventID:${JSON.stringify(String(order.id))}});</script>`;
+}
+
 export function page(title, bodyHtml, status = 200) {
   const html = `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -156,7 +166,7 @@ export function orderPage(order, origin) {
     return page('Payment received', `<h1>Thank you — payment received</h1>${facts}
 <p><a class="btn" href="${esc(downloadUrl(origin, order))}">Download your PDF</a></p>
 <p>The link works for ${DOWNLOAD_DAYS} days and up to ${MAX_DOWNLOADS} downloads${order.emailed ? `, and we have emailed it to ${esc(order.email)}` : ''}. Please save the file on your device.</p>
-<p>A problem with the file? Email <a href="mailto:support@pickixo.com">support@pickixo.com</a> with your order number.</p>`);
+<p>A problem with the file? Email <a href="mailto:support@pickixo.com">support@pickixo.com</a> with your order number.</p>${purchasePixel(order)}`);
   }
   if (order.status === 'failed' || order.status === 'cancelled') {
     return page('Payment not completed', `<h1>Payment ${order.status === 'failed' ? 'failed' : 'cancelled'}</h1>${facts}

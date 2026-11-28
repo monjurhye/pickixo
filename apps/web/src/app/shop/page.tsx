@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { TextPage } from '@/components/layout/TextPage';
 import { BuyForm } from '@/components/BuyForm';
+import { MetaPixel } from '@/components/MetaPixel';
 import { buildMetadata } from '@/lib/seo';
 import { PRODUCTS, formatBdt, type Product } from '@/lib/business';
 
@@ -46,6 +47,7 @@ export default function ShopPage() {
         </p>
       }
     >
+      <MetaPixel />
       {SHELVES.map((shelf) => {
         const items = PRODUCTS.filter((p) => (p.kind ?? 'ebook') === shelf.kind);
         return (

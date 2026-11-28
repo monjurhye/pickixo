@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { TextPage } from '@/components/layout/TextPage';
 import { buildMetadata } from '@/lib/seo';
 import { BUSINESS, BUSINESS_NAME } from '@/lib/business';
+import { PIXEL_ID } from '@/components/MetaPixel';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Privacy policy',
@@ -25,8 +26,10 @@ export default function PrivacyPage() {
     >
       <h2>The short version</h2>
       <p>
-        You can use the tools on this site without an account. We do not run
-        advertising trackers or analytics on it, and we do not sell anyone’s data.
+        You can use the tools on this site without an account. {PIXEL_ID
+          ? 'We do not run analytics on it. The only advertising tracker is the Meta Pixel on our shop pages (see below).'
+          : 'We do not run advertising trackers or analytics on it.'}{' '}
+        We do not sell anyone’s data.
       </p>
 
       <h2>What stays on your device</h2>
@@ -51,6 +54,20 @@ export default function PrivacyPage() {
         or wallet PIN go to the gateway and are never seen by us. We keep order
         records for as long as the law requires for accounts.
       </p>
+
+      {PIXEL_ID ? (
+        <>
+          <h2>Facebook (Meta) Pixel on the shop</h2>
+          <p>
+            Our shop pages (/shop) and the page you see after paying use the Meta Pixel, so we can tell
+            which of our Facebook and Instagram ads lead to visits and purchases. It lets Meta set cookies
+            and receive the page address, your browser details and, after a purchase, the product and price.
+            We do not send Meta your name, email or phone number. Meta’s use of this data is covered by
+            Meta’s own privacy policy; you can limit ad tracking in your Facebook ad settings or by blocking
+            third-party cookies. The rest of the site has no pixel.
+          </p>
+        </>
+      ) : null}
 
       <h2>When you email us</h2>
       <p>We keep your message and our reply so we can help you. We do not add you to any mailing list.</p>
