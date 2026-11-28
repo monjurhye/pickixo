@@ -107,7 +107,7 @@ EPS লিখেছে ব্যবসার ধরন অনুযায়ী 
 ### নিজে হাতে চেক করার ধাপ
 1. dash.cloudflare.com → Workers & Pages → pickixo → Settings → Variables and secrets → Production → Add → Type: **Secret**, নাম `EPS_PASSWORD`, মান: নতুন পাসওয়ার্ড → Save।
 2. Deployments ট্যাব → সবচেয়ে ওপরের Production deployment → ⋯ → **Retry deployment** (secret নতুন deployment ছাড়া কাজ করে না)। ২–৩ মিনিট অপেক্ষা।
-3. https://pickixo.com/shop/ios-app-without-mac-bangla → Buy now → নিজের নাম, ইমেইল, মোবাইল, শহর → টিক → "Pay ৳199 with EPS"।
+3. https://pickixo.com/shop/ios-app-without-mac-bangla → Buy now → নিজের নাম, ইমেইল, মোবাইল, শহর → টিক → "Pay ৳299 with EPS"।
 4. ফলাফল:
    - **EPS-এর পেমেন্ট পেজ খুলল** → লগইন ঠিক আছে। এখানে Cancel করলে টাকা কাটবে না; "cancelled" অর্ডার পেজ আসবে।
    - পুরো পরীক্ষা চাইলে ৳১৯৯ দিয়ে কিনুন → ডাউনলোড লিংক দেখাবে → PDF নামান। (EPS ফি ~২% কাটবে।)
