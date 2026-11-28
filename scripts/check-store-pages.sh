@@ -36,6 +36,7 @@ PAGES='
 /polyscan/privacy|polyscan/privacy.html|text/html
 /polyscan/support|polyscan/support.html|text/html
 /plantally/privacy|plantally/privacy.html|text/html
+/plantally/support|plantally/support.html|text/html
 /app-ads.txt|app-ads.txt|text/plain
 /google700d9b513a5db788.html|google700d9b513a5db788.html|text/html
 '
