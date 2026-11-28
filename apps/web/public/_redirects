@@ -35,3 +35,7 @@
 
 # The header's old Shop link.
 /pay/shop/*                 https://shop.pickixo.com/  301
+
+# The old price list (2026-11-28): every product now has its own page under /shop.
+/pricing                    /shop            301
+/pricing/                   /shop            301

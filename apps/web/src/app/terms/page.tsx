@@ -40,7 +40,7 @@ export default function TermsPage() {
 
       <h2>3. Buying a product</h2>
       <ul>
-        <li>Products and their prices in Bangladeshi taka are listed on <Link href="/pricing">Products &amp; pricing</Link>. The price shown when you pay is the price you are charged.</li>
+        <li>Products and their prices in Bangladeshi taka are listed in the <Link href="/shop">shop</Link>. The price shown when you pay is the price you are charged.</li>
         <li>Payment is taken by a third-party payment gateway. Your card, bank or mobile-wallet details go to the gateway, not to us.</li>
         <li>An order is complete when the payment is confirmed. We then deliver the product as described on its listing.</li>
         <li>Refunds follow our <Link href="/refund-policy">refund &amp; return policy</Link>.</li>

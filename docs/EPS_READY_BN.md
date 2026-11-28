@@ -8,7 +8,7 @@
 |---|---|---|
 | About | /about | তৈরি — নাম/লাইসেন্স নম্বর দিলে নিজে থেকে দেখাবে |
 | Contact | /contact | ইমেইল আছে; ফোন, ঠিকানা, সময় দিলে দেখাবে |
-| Products & pricing | /pricing | ফাঁকা — প্রোডাক্ট যোগ না করা পর্যন্ত "Nothing is on sale yet" দেখায় আর noindex থাকে |
+| Shop (দাম সহ) | /shop, প্রতিটা প্রোডাক্ট /shop/<slug> | ২০২৬-১১-২৮ থেকে /pricing → /shop 301 |
 | Terms of service | /terms | খসড়া তৈরি — একবার পড়ে নিন |
 | Privacy policy (ওয়েবসাইট) | /privacy | তৈরি (অ্যাপগুলোর privacy আলাদা, অপরিবর্তিত) |
 | Refund & return policy | /refund-policy | খসড়া তৈরি — দিনের সংখ্যা আপনি ঠিক করবেন |
@@ -71,7 +71,7 @@ EPS লিখেছে ব্যবসার ধরন অনুযায়ী 
 ## পেমেন্ট সিস্টেম (২০২৬-১১-২১-এ যোগ হয়েছে, EPS ক্রেডেনশিয়াল না দেওয়া পর্যন্ত বন্ধ)
 
 কীভাবে কাজ করে:
-1. /pricing-এ "Buy now" → নাম, ইমেইল, মোবাইল, শহর → `/api/eps/checkout`
+1. /shop/<slug>-এ "Buy now" → নাম, ইমেইল, মোবাইল, শহর → `/api/eps/checkout`
 2. সার্ভার দাম নেয় `apps/web/src/data/products.json` থেকে (ব্রাউজার থেকে নয়), অর্ডার রাখে, EPS-এর পেমেন্ট পেজে পাঠায়
 3. পেমেন্টের পর EPS ক্রেতাকে ফেরত পাঠায় `/api/eps/return`-এ; সার্ভার EPS-কে সরাসরি জিজ্ঞেস করে পেমেন্ট হয়েছে কিনা, টাকার অঙ্ক মেলায়
 4. মিললে ডাউনলোড লিংক দেখায় (৭ দিন, ৫ বার) আর ইমেইলে পাঠায়
@@ -107,7 +107,7 @@ EPS লিখেছে ব্যবসার ধরন অনুযায়ী 
 ### নিজে হাতে চেক করার ধাপ
 1. dash.cloudflare.com → Workers & Pages → pickixo → Settings → Variables and secrets → Production → Add → Type: **Secret**, নাম `EPS_PASSWORD`, মান: নতুন পাসওয়ার্ড → Save।
 2. Deployments ট্যাব → সবচেয়ে ওপরের Production deployment → ⋯ → **Retry deployment** (secret নতুন deployment ছাড়া কাজ করে না)। ২–৩ মিনিট অপেক্ষা।
-3. https://pickixo.com/pricing → Buy now → নিজের নাম, ইমেইল, মোবাইল, শহর → টিক → "Pay ৳199 with EPS"।
+3. https://pickixo.com/shop/ios-app-without-mac-bangla → Buy now → নিজের নাম, ইমেইল, মোবাইল, শহর → টিক → "Pay ৳199 with EPS"।
 4. ফলাফল:
    - **EPS-এর পেমেন্ট পেজ খুলল** → লগইন ঠিক আছে। এখানে Cancel করলে টাকা কাটবে না; "cancelled" অর্ডার পেজ আসবে।
    - পুরো পরীক্ষা চাইলে ৳১৯৯ দিয়ে কিনুন → ডাউনলোড লিংক দেখাবে → PDF নামান। (EPS ফি ~২% কাটবে।)

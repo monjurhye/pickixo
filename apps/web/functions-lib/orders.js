@@ -160,7 +160,7 @@ export function orderPage(order, origin) {
   }
   if (order.status === 'failed' || order.status === 'cancelled') {
     return page('Payment not completed', `<h1>Payment ${order.status === 'failed' ? 'failed' : 'cancelled'}</h1>${facts}
-<p>No money was taken for this order. You can <a href="/pricing">try again</a>.</p>`);
+<p>No money was taken for this order. You can <a href="/shop">try again</a>.</p>`);
   }
   if (order.status === 'review') {
     return page('Payment being checked', `<h1>We are checking your payment</h1>${facts}

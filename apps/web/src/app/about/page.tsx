@@ -21,7 +21,7 @@ export default function AboutPage() {
       <ul>
         <li><strong>Android apps and games</strong> on Google Play — <Link href="/our-apps">see the list</Link>.</li>
         <li><strong>Free tools in the browser</strong> — the 2026 pay-scale and salary calculators, banking calculators, and learning games for young children and Class 2.</li>
-        <li><strong>Digital products</strong> — listed with their prices on <Link href="/pricing">Products &amp; pricing</Link>.</li>
+        <li><strong>Digital products</strong> — listed with their prices in the <Link href="/shop">shop</Link>.</li>
         <li><strong>Pickixo Shop</strong> — hand-picked products at <a href="https://shop.pickixo.com">shop.pickixo.com</a>, bought on Amazon.</li>
       </ul>
 

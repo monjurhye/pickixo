@@ -6,7 +6,6 @@ import { BUSINESS, BUSINESS_NAME } from '@/lib/business';
 const COMPANY = [
   { href: '/about', label: 'About' },
   { href: '/our-apps', label: 'Our Android apps' },
-  { href: '/pricing', label: 'Products & pricing' },
   { href: '/contact', label: 'Contact' },
   { href: '/shop', label: 'Shop: ebooks & tools' },
   { href: 'https://shop.pickixo.com', label: 'Amazon finds', external: true },

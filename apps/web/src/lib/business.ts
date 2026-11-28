@@ -67,11 +67,15 @@ export type Product = {
   href?: string;
   /** Shelf on /shop: an ebook (PDF) or a tool (app, template, script). */
   kind?: 'ebook' | 'tool';
+  /** Ebooks: page count, language and table of contents, shown on the product page. */
+  pages?: number;
+  language?: string;
+  contents?: string[];
 };
 
 /**
  * Digital products sold on pickixo.com. Empty until the owner adds them —
- * the pricing page says so honestly rather than showing sample prices.
+ * the shop says so honestly rather than showing sample prices.
  */
 // The list lives in src/data/products.json so the payment functions in
 // functions/api/eps read the same names and prices: the price charged is always

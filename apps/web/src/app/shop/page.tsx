@@ -27,6 +27,7 @@ function ProductCard({ p }: { p: Product }) {
       </div>
       <p className="text-small text-ink-muted">{p.description}</p>
       <p className="text-small text-ink-subtle">Delivery: {p.delivery}</p>
+      {p.href ? <Link href={p.href} className="text-small font-medium text-accent">What&apos;s inside and details →</Link> : null}
       <BuyForm slug={p.slug} price={price} />
     </article>
   );
@@ -65,8 +66,7 @@ export default function ShopPage() {
       <p>
         Download links work for 7 days and up to 5 downloads. Please read the{' '}
         <Link href="/refund-policy">refund &amp; return policy</Link> and{' '}
-        <Link href="/terms">terms</Link>. All prices are also listed on{' '}
-        <Link href="/pricing">products &amp; pricing</Link>.
+        <Link href="/terms">terms</Link>.
       </p>
       <p>
         Looking for things for the home and kitchen? Our{' '}

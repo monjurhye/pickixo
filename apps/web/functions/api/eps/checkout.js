@@ -1,5 +1,5 @@
 /**
- * POST /api/eps/checkout — the Buy form on /pricing posts here.
+ * POST /api/eps/checkout — the Buy form on /shop and /shop/<slug> posts here.
  *
  * Creates an order with the price from products.json (never from the form),
  * starts an EPS payment, and sends the buyer to EPS's payment page.
@@ -12,7 +12,7 @@ import { findProduct, newOrderId, page, saveOrder } from '../../../functions-lib
 const notOpen = () => page('Online payment not open yet', `<h1>Online payment is not open yet</h1>
 <p>We are still setting up card and mobile-wallet payments. To buy now, email
 <a href="mailto:support@pickixo.com">support@pickixo.com</a> and we will help you.</p>
-<p><a href="/pricing">Back to products</a></p>`, 503);
+<p><a href="/shop">Back to the shop</a></p>`, 503);
 
 const bad = (msg) => page('Please check the form', `<h1>Please check the form</h1><p>${msg}</p>
 <p><a href="javascript:history.back()">Go back</a></p>`, 400);
@@ -70,4 +70,4 @@ export async function onRequestPost({ request, env }) {
   }
 }
 
-export const onRequestGet = () => Response.redirect('https://pickixo.com/pricing', 302);
+export const onRequestGet = () => Response.redirect('https://pickixo.com/shop', 302);

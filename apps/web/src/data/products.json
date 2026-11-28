@@ -6,6 +6,29 @@
     "priceBdt": 199,
     "delivery": "Download link shown right after payment, and sent to your email",
     "file": "ios-app-without-mac-bangla.pdf",
-    "kind": "ebook"
+    "kind": "ebook",
+    "href": "/shop/ios-app-without-mac-bangla",
+    "pages": 43,
+    "language": "Bangla",
+    "contents": [
+      "অধ্যায় ১ — শুরুর কথা",
+      "অধ্যায় ২ — Mac ছাড়া iOS অ্যাপ: কীভাবে সম্ভব",
+      "অধ্যায় ৩ — Apple Developer অ্যাকাউন্ট",
+      "অধ্যায় ৪ — প্রজেক্ট প্রস্তুত করা",
+      "অধ্যায় ৫ — Codemagic সেটআপ",
+      "অধ্যায় ৬ — App Store Connect",
+      "অধ্যায় ৭ — AdMob আর ওয়েবসাইট",
+      "অধ্যায় ৮ — Store Listing আর স্ক্রিনশট",
+      "অধ্যায় ৯ — TestFlight আর iPhone ছাড়া পরীক্ষা",
+      "অধ্যায় ১০ — Review-এ জমা দেওয়া",
+      "অধ্যায় ১১ — রিজেকশন সামলানো",
+      "অধ্যায় ১২ — প্রকাশের পর",
+      "অধ্যায় ১৩ — Update দেওয়া",
+      "অধ্যায় ১৪ — রক্ষণাবেক্ষণ আর নিরাপত্তা",
+      "অধ্যায় ১৫ — সমস্যা সমাধান (প্রশ্নোত্তর)",
+      "অধ্যায় ১৬ — Claude দিয়ে নিজে নিজে অ্যাপ বানানো ও প্রকাশ",
+      "পরিশিষ্ট ক — সম্পূর্ণ চেকলিস্ট",
+      "পরিশিষ্ট খ — শব্দকোষ"
+    ]
   }
 ]

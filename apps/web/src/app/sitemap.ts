@@ -90,10 +90,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'yearly' as const,
       priority: route.priority,
     })),
-    // Company and policy pages. /pricing joins once it lists something: an
-    // empty price list is noindex, and the sitemap must agree with that.
+    // Company and policy pages. /shop and each product page join once there is
+    // something to sell: an empty shop is noindex, and the sitemap must agree.
     ...['/about', '/our-apps', '/contact', '/terms', '/privacy', '/refund-policy',
-        ...(PRODUCTS.length > 0 ? ['/pricing', '/shop'] : [])].map((path) => ({
+        ...(PRODUCTS.length > 0 ? ['/shop', ...PRODUCTS.map((p) => `/shop/${p.slug}`)] : [])].map((path) => ({
       url: absoluteUrl(path),
       changeFrequency: 'monthly' as const,
       priority: 0.4,
