@@ -11,14 +11,20 @@ export const PIXEL_ID: string = (pixel as { pixelId?: string }).pixelId?.trim() 
 
 export function MetaPixel({ viewContent }: { viewContent?: { id: string; name: string; value: number } }) {
   if (!/^\d{5,20}$/.test(PIXEL_ID)) return null;
-  const extra = viewContent
-    ? `fbq('track','ViewContent',${JSON.stringify({
+  const data = viewContent
+    ? JSON.stringify({
         content_ids: [viewContent.id],
         content_name: viewContent.name,
         content_type: 'product',
         value: viewContent.value,
         currency: 'BDT',
-      })});`
+      })
+    : '';
+  // InitiateCheckout when the buy form (BuyForm, a plain POST form) is sent:
+  // hold the submit a moment so the event leaves before the page navigates.
+  const extra = viewContent
+    ? `fbq('track','ViewContent',${data});
+document.addEventListener('submit',function(e){var f=e.target;if(!f||f.getAttribute('action')!=='/api/eps/checkout'||f.dataset.ic)return;e.preventDefault();f.dataset.ic='1';try{fbq('track','InitiateCheckout',${data})}catch(_){}setTimeout(function(){f.submit()},400)});`
     : '';
   return (
     <Script id="meta-pixel" strategy="afterInteractive">
