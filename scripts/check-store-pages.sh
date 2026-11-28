@@ -35,6 +35,7 @@ PAGES='
 /maaz-privacy-policy.html|maaz-bangla-keyboard/privacy.html|text/html
 /polyscan/privacy|polyscan/privacy.html|text/html
 /polyscan/support|polyscan/support.html|text/html
+/plantally/privacy|plantally/privacy.html|text/html
 /app-ads.txt|app-ads.txt|text/plain
 /google700d9b513a5db788.html|google700d9b513a5db788.html|text/html
 '
